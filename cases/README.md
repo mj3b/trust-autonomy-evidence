@@ -16,7 +16,20 @@ Each directory contains a source manifest, machine-readable assessment, narrativ
 
 A case may enter this directory when it contains a declared decision boundary, contemporaneous records, source provenance, publication authority, redaction statement, missing-evidence register, protocol version, independent reviewer results, and limits on interpretation.
 
-These public cases are retrospective and single-assessor. They do not establish independent reliability or represent a sampled decision population. Synthetic or simulated additions must identify which properties are constructed and which conclusions cannot transfer to operational deployments.
+## What this case set can and cannot tell us
+
+The three public cases were purposefully selected under a frozen order and stopping rule to test the method under contrasting evidence conditions. They can show whether the framework produces traceable, bounded findings for documented pre-action intervention, formal authority without practical force, and incomplete or conflicting evidence.
+
+They do not tell us:
+
+- how often these conditions occur;
+- whether these cases represent AI systems generally;
+- whether human intervention usually improves outcomes;
+- whether historical military systems behave like current learned AI systems.
+
+The cases are retrospective and single-assessor. They do not establish independent reliability, causal effects, outcome improvement, or population representativeness. See the [public-case reconstruction protocol](../protocols/public-case-reconstruction-protocol.md) and [selection register](public-case-selection-register.md) for the governing rules and screening record.
+
+Synthetic or simulated additions must identify which properties are constructed and which conclusions cannot transfer to operational deployments.
 
 ## Privacy and authority
 
