@@ -100,11 +100,11 @@ Contributions should identify the proposition being changed, the evidence suppor
 
 ## Citation
 
-Version 0.3.0 is prepared for a fixed Zenodo record. Until its version-specific DOI is issued, use the all-versions DOI:
+Version 0.3.0 has a fixed Zenodo record:
 
-> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.3.0) [Computer software]. Zenodo. [https://doi.org/10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127)
+> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.3.0) [Computer software]. Zenodo. [https://doi.org/10.5281/zenodo.21843843](https://doi.org/10.5281/zenodo.21843843)
 
-The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata appears in [CITATION.cff](CITATION.cff). The release notes will record the version-specific DOI when Zenodo issues it.
+Use [10.5281/zenodo.21843843](https://doi.org/10.5281/zenodo.21843843) to cite this exact release. The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata appears in [CITATION.cff](CITATION.cff).
 
 ## Author
 
