@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mj3b/trust-autonomy-evidence/schemas/practical-control-assessment.schema.json",
+  "title": "Practical human control assessment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "access",
+    "comprehension",
+    "authority",
+    "feasibility",
+    "exercise",
+    "effect",
+    "correction",
+    "repair",
+    "reform"
+  ],
+  "properties": {
+    "access": {"$ref": "#/$defs/state"},
+    "comprehension": {"$ref": "#/$defs/state"},
+    "authority": {"$ref": "#/$defs/state"},
+    "feasibility": {"$ref": "#/$defs/state"},
+    "exercise": {"$ref": "#/$defs/state"},
+    "effect": {"$ref": "#/$defs/state"},
+    "correction": {"$ref": "#/$defs/state"},
+    "repair": {"$ref": "#/$defs/state"},
+    "reform": {"$ref": "#/$defs/state"}
+  },
+  "$defs": {
+    "state": {
+      "enum": ["supported", "partially_supported", "unsupported", "indeterminate", "outside_scope"]
+    }
+  }
+}

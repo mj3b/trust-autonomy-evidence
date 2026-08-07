@@ -1,0 +1,9 @@
+{
+  "version": "0.2.0",
+  "algorithm": "sha256",
+  "sha256": {
+    "fixtures/synthetic/cases.json": "1d7f9ba49d80b384cc3c78b188c96627b2419cf8739e0d468d31d19de01a5713",
+    "fixtures/mutations/mutations.json": "ac02425e825c0d14714c8adb2540e39c118493b4ad8834b0d68cc21385c7d94b",
+    "oracles/solo-validation-v0.2.0.json": "0d1eb3591ed794d59ea5c20de8970295a38b753b0aa105d3d871b9476ddb5c00"
+  }
+}

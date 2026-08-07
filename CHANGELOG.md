@@ -2,6 +2,19 @@
 
 All material changes to concepts, claims, protocols, and evidence requirements are recorded here.
 
+## 0.2.0, 7 August 2026
+
+Adds a solo-validation release with bounded internal evidence.
+
+- Publishes five JSON Schemas for case, autonomy, mutation, trust-assessment, and practical-control contracts.
+- Freezes twelve synthetic cases spanning supported, partially supported, unsupported, indeterminate, and outside-scope states.
+- Seals cases, mutations, and the explicit oracle using SHA-256 hashes.
+- Reproduces 252 prespecified case determinations under the v0.2.0 assessment contract.
+- Passes twelve mutation tests containing eleven expected classification changes and three invariance conditions.
+- Publishes deterministic results, a generated validation report, and a solo-validation protocol.
+- Records author-oracle circularity, synthetic-case limits, and unresolved independent and operational claims.
+- Adds contribution rules, repository governance, a pull-request evidence checklist, and structured case and ambiguity issue forms.
+
 ## 0.1.0, 7 August 2026
 
 Initial working research release.

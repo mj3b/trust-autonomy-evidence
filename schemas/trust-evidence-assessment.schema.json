@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mj3b/trust-autonomy-evidence/schemas/trust-evidence-assessment.schema.json",
+  "title": "Trust evidence assessment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "identity",
+    "scope",
+    "capability",
+    "reliability",
+    "uncertainty",
+    "evidence_completeness",
+    "monitoring",
+    "human_authority",
+    "integrity",
+    "reconstructability",
+    "harm_correction",
+    "governance_update"
+  ],
+  "properties": {
+    "identity": {"$ref": "#/$defs/state"},
+    "scope": {"$ref": "#/$defs/state"},
+    "capability": {"$ref": "#/$defs/state"},
+    "reliability": {"$ref": "#/$defs/state"},
+    "uncertainty": {"$ref": "#/$defs/state"},
+    "evidence_completeness": {"$ref": "#/$defs/state"},
+    "monitoring": {"$ref": "#/$defs/state"},
+    "human_authority": {"$ref": "#/$defs/state"},
+    "integrity": {"$ref": "#/$defs/state"},
+    "reconstructability": {"$ref": "#/$defs/state"},
+    "harm_correction": {"$ref": "#/$defs/state"},
+    "governance_update": {"$ref": "#/$defs/state"}
+  },
+  "$defs": {
+    "state": {
+      "enum": ["supported", "partially_supported", "unsupported", "indeterminate", "outside_scope"]
+    }
+  }
+}
