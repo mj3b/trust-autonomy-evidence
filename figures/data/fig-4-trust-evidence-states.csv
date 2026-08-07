@@ -1,0 +1,37 @@
+case_id,case_title,proposition,state,evidence_refs
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",identity,partially_supported,O2;O3
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",identity,partially_supported,T2;T3
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",identity,partially_supported,F2;F3;F4
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",scope,partially_supported,O2;O3
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",scope,partially_supported,T2;T3;T4
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",scope,partially_supported,F3;F4;F5
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",capability,indeterminate,O2;O3
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",capability,partially_supported,T2;T3
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",capability,partially_supported,F4;F5
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",reliability,unsupported,O2;O3;O4
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",reliability,unsupported,T2;T3;T4
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",reliability,unsupported,F3;F4;F5
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",uncertainty,unsupported,O2;O3;O4
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",uncertainty,unsupported,T2;T3;T4
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",uncertainty,unsupported,F3;F4;F5
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",evidence_completeness,unsupported,O2;O3
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",evidence_completeness,partially_supported,T2;T3;T4
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",evidence_completeness,unsupported,F2;F3;F4;F6
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",monitoring,partially_supported,O2;O3
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",monitoring,partially_supported,T2;T3
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",monitoring,partially_supported,F3;F4
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",human_authority,supported,O2;O3;O4
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",human_authority,partially_supported,T2;T3;T4
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",human_authority,partially_supported,F3;F4;F5
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",integrity,indeterminate,O2;O3
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",integrity,indeterminate,T2;T3
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",integrity,indeterminate,F2;F3;F4
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",reconstructability,partially_supported,O2;O3;O4
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",reconstructability,partially_supported,T2;T3;T4
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",reconstructability,partially_supported,F2;F3;F4
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",harm_correction,outside_scope,O2;O3
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",harm_correction,unsupported,T2;T3
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",harm_correction,unsupported,F2;F3
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",governance_update,partially_supported,O2;O3
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",governance_update,supported,T3;T4;T7
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",governance_update,supported,F4;F5;F6

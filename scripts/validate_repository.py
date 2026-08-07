@@ -64,9 +64,35 @@ REQUIRED_FILES = (
     "oracles/manifest.json",
     "analysis/assessment.py",
     "analysis/run_solo_validation.py",
+    "analysis/build_figures.py",
     "assessments/generated-results.json",
     "reports/solo-validation-v0.2.0.md",
     "reports/public-case-reconstruction-v0.3.0.md",
+    "reports/figure-methods.md",
+    "figures/README.md",
+    "figures/manifest.json",
+    "figures/specifications/figure-register.json",
+    "figures/specifications/selection-decisions.json",
+    "figures/specifications/decision-paths.json",
+    "figures/specifications/reproducibility-lineage.json",
+    "figures/data/fig-1-selection-and-stopping.csv",
+    "figures/data/fig-2-practical-control-chain.csv",
+    "figures/data/fig-3-decision-paths.csv",
+    "figures/data/fig-4-trust-evidence-states.csv",
+    "figures/data/fig-a1-mutation-response.csv",
+    "figures/data/fig-a2-reproducibility-lineage.csv",
+    "figures/generated/fig-1-selection-and-stopping.png",
+    "figures/generated/fig-1-selection-and-stopping.svg",
+    "figures/generated/fig-2-practical-control-chain.png",
+    "figures/generated/fig-2-practical-control-chain.svg",
+    "figures/generated/fig-3-decision-paths.png",
+    "figures/generated/fig-3-decision-paths.svg",
+    "figures/generated/fig-4-trust-evidence-states.png",
+    "figures/generated/fig-4-trust-evidence-states.svg",
+    "figures/generated/fig-a1-mutation-response.png",
+    "figures/generated/fig-a1-mutation-response.svg",
+    "figures/generated/fig-a2-reproducibility-lineage.png",
+    "figures/generated/fig-a2-reproducibility-lineage.svg",
     "release/v0.3.0-manifest.json",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
@@ -314,6 +340,35 @@ def validate_solo_suite(failures: list[str]) -> str:
     return result.stdout.strip()
 
 
+def validate_figure_set(failures: list[str]) -> str:
+    register = json.loads(
+        (ROOT / "figures/specifications/figure-register.json").read_text(encoding="utf-8")
+    )
+    figures = register.get("figures", [])
+    identifiers = [row.get("figure_id") for row in figures]
+    stubs = [row.get("file_stub") for row in figures]
+    expected_identifiers = ["FIG-1", "FIG-2", "FIG-3", "FIG-4", "FIG-A1", "FIG-A2"]
+    if register.get("version") != "0.1.0" or register.get("source_release") != VERSION:
+        fail("figure register version or source release mismatch", failures)
+    if identifiers != expected_identifiers:
+        fail(f"figure register identifier mismatch: {identifiers}", failures)
+    if len(stubs) != len(set(stubs)):
+        fail("duplicate figure file stub", failures)
+
+    result = subprocess.run(
+        [sys.executable, "analysis/build_figures.py", "--check"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        detail = (result.stdout + result.stderr).strip()
+        fail(f"figure set failed: {detail}", failures)
+        return ""
+    return result.stdout.strip()
+
+
 def main() -> int:
     failures: list[str] = []
     validate_required_files(failures)
@@ -327,6 +382,7 @@ def main() -> int:
     validate_case_interactions(failures)
     validate_release_manifest(failures)
     solo_result = validate_solo_suite(failures)
+    figure_result = validate_figure_set(failures)
 
     if failures:
         for failure in failures:
@@ -336,6 +392,8 @@ def main() -> int:
 
     if solo_result:
         print(solo_result)
+    if figure_result:
+        print(figure_result)
     print("repository validation: PASS")
     return 0
 

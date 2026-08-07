@@ -1,0 +1,16 @@
+case_id,case_title,order,event,kind,evidence_refs,case_annotation
+TAE-PUB-001,"Oko, 1983",1,Oko displays a launch warning,system_output,O2;O3;O4,Public sources give no defensible elapsed-time estimate for this bounded sequence.
+TAE-PUB-001,"Oko, 1983",2,Petrov checks context and ground radar,evidence_check,O2;O3;O4,Public sources give no defensible elapsed-time estimate for this bounded sequence.
+TAE-PUB-001,"Oko, 1983",3,Petrov classifies the warning as false,human_decision,O2;O3;O4,Public sources give no defensible elapsed-time estimate for this bounded sequence.
+TAE-PUB-001,"Oko, 1983",4,The false-alarm judgment is communicated,human_action,O2;O3;O4,Public sources give no defensible elapsed-time estimate for this bounded sequence.
+TAE-PUB-001,"Oko, 1983",5,The warning does not advance as confirmed,bounded_effect,O2;O3,Public sources give no defensible elapsed-time estimate for this bounded sequence.
+TAE-PUB-002,"Patriot ZG710, 2003",1,Patriot classifies the aircraft as hostile,system_output,T2;T3,The public record describes about one minute for the decision.
+TAE-PUB-002,"Patriot ZG710, 2003",2,Identification and air-picture evidence remain incomplete,evidence_check,T2;T3,The public record describes about one minute for the decision.
+TAE-PUB-002,"Patriot ZG710, 2003",3,The crew authorizes engagement,human_decision,T2;T4,The public record describes about one minute for the decision.
+TAE-PUB-002,"Patriot ZG710, 2003",4,Patriot launches a missile,system_action,T2;T3,The public record describes about one minute for the decision.
+TAE-PUB-002,"Patriot ZG710, 2003",5,ZG710 is destroyed; both aircrew die,harm_outcome,T2;T3,The public record describes about one minute for the decision.
+TAE-PUB-003,"Patriot F/A-18C, 2003",1,Two batteries report a missile track,system_output,F3,"Timing, display state, report independence, and feasible intervention remain unresolved."
+TAE-PUB-003,"Patriot F/A-18C, 2003",2,The command center correlates the reports,system_output,F3,"Timing, display state, report independence, and feasible intervention remain unresolved."
+TAE-PUB-003,"Patriot F/A-18C, 2003",3,A human engagement order is issued,human_decision,F3;F4,"Timing, display state, report independence, and feasible intervention remain unresolved."
+TAE-PUB-003,"Patriot F/A-18C, 2003",4,Patriot launches a missile,system_action,F3;F4,"Timing, display state, report independence, and feasible intervention remain unresolved."
+TAE-PUB-003,"Patriot F/A-18C, 2003",5,The F/A-18C is destroyed; the pilot dies,harm_outcome,F2;F3;F4,"Timing, display state, report independence, and feasible intervention remain unresolved."

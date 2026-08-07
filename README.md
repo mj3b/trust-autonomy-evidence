@@ -32,6 +32,16 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 All 252 determinations and 12 mutation tests pass under the committed contract. The v0.3.0 validator also checks source references, packet hashes, frozen selection invariants, and three cross-case control interactions. These results establish deterministic behavior and traceable bounded assessments for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, or improved outcomes.
 
+An unreleased publication package adds four main figures and two appendix figures generated from the committed v0.3.0 and v0.2.0 artifacts. Each image has a derived CSV, an SVG for paper production, a PNG preview, a formal caption, and an explicit interpretation boundary. The package changes no release finding.
+
+## Featured figure
+
+Figure 2 shows the repository's central cross-case result. All three cases contain formal human authority. The remaining pre-action conditions determine whether that authority can change the system's path before execution.
+
+[![Practical-control chain across three public cases](figures/generated/fig-2-practical-control-chain.png)](figures/generated/fig-2-practical-control-chain.svg)
+
+The [publication figure set](figures/) contains the remaining main figures, both appendix figures, their derived data, and short descriptions.
+
 ## Repository map
 
 | Path | Purpose |
@@ -58,6 +68,8 @@ All 252 determinations and 12 mutation tests pass under the committed contract. 
 | [`analysis/`](analysis/) | Implements the deterministic assessment logic and solo-validation runner. |
 | [`assessments/`](assessments/) | Stores generated machine-readable assessment results. |
 | [`reports/`](reports/) | Publishes the solo-validation and three-case reconstruction results with explicit claim boundaries. |
+| [`figures/`](figures/) | Publishes four main figures, two appendix figures, their derived data, plotting specifications, and short descriptions. |
+| [`reports/figure-methods.md`](reports/figure-methods.md) | Records formal captions, transformations, missingness treatment, and prohibited interpretations for the figure set. |
 | [`scripts/`](scripts/) | Contains candidate-search, packet-sealing, release-manifest, and repository-validation utilities. |
 | [`release/`](release/) | Seals the v0.3.0 research artifacts and their SHA-256 digests. |
 | [`mappings/`](mappings/) | Relates this work to GDI, HIT, CDFI, and CDCF governance artifacts. |
@@ -79,7 +91,7 @@ python -m pip install -r requirements-dev.txt
 python scripts/validate_repository.py
 ```
 
-The validator checks required files, internal Markdown links, version alignment, duplicate claim identifiers, exclusion of private candidacy language, JSON Schema conformance, source references, sealed packet and release hashes, selection invariants, three public-case interactions, 252 oracle comparisons, 12 mutation tests, and generated-output freshness. A successful run ends with `repository validation: PASS`.
+The validator checks required files, internal Markdown links, version alignment, duplicate claim identifiers, exclusion of private candidacy language, JSON Schema conformance, source references, sealed packet and release hashes, selection invariants, three public-case interactions, 252 oracle comparisons, 12 mutation tests, and figure data and artifact integrity. A successful run ends with `repository validation: PASS`.
 
 ## Research boundaries
 

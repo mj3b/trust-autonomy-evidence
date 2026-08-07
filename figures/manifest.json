@@ -1,0 +1,169 @@
+{
+  "version": "0.1.0",
+  "source_release": "0.3.0",
+  "hash_algorithm": "sha256",
+  "artifacts": [
+    {
+      "path": "figures/data/fig-1-selection-and-stopping.csv",
+      "bytes": 542,
+      "sha256": "9e680be4341ef43a3306061c0d196c9c802673016ad89f3ff5e8789f024449d4"
+    },
+    {
+      "path": "figures/data/fig-2-practical-control-chain.csv",
+      "bytes": 2598,
+      "sha256": "fda745556f8b0186aed98a7598de36ffce3734f3e71037cdd2544bccd8c4d4ce"
+    },
+    {
+      "path": "figures/data/fig-3-decision-paths.csv",
+      "bytes": 2632,
+      "sha256": "3c8a6e5587e8e09e202d913d6a129ba2e73947cfde61b2e95c4376abb5e85444"
+    },
+    {
+      "path": "figures/data/fig-4-trust-evidence-states.csv",
+      "bytes": 3736,
+      "sha256": "edd3850ebd90b327b7aabdba4d955fc9bd2a306abfddfb4503b18bf5d600d726"
+    },
+    {
+      "path": "figures/data/fig-a1-mutation-response.csv",
+      "bytes": 1934,
+      "sha256": "2637b81ea19e2dfce0277265879acdbba8b452c1527af2757a47aaba07cbdca5"
+    },
+    {
+      "path": "figures/data/fig-a2-reproducibility-lineage.csv",
+      "bytes": 1229,
+      "sha256": "47b8272ecaa1ec88df491d8cb8dc312b1111624d716fd21ade0605edc36f2d3d"
+    },
+    {
+      "path": "figures/generated/fig-1-selection-and-stopping.png",
+      "bytes": 217021,
+      "sha256": "7f4026b9cb32e6f9bae5acec5eab99eaff8cf74d19782408768b227538547050"
+    },
+    {
+      "path": "figures/generated/fig-1-selection-and-stopping.svg",
+      "bytes": 83315,
+      "sha256": "43188054b6e26e841683129919aecd8a0e8527d1e4ebc69e903582d5b7e7e8c0"
+    },
+    {
+      "path": "figures/generated/fig-2-practical-control-chain.png",
+      "bytes": 168092,
+      "sha256": "beae0b81f496a4f8f0ae7cd75063786051818d6dc222d32f62730b8ac3abfccc"
+    },
+    {
+      "path": "figures/generated/fig-2-practical-control-chain.svg",
+      "bytes": 78717,
+      "sha256": "db7596c2c90007f83014e6d8e466fbd9154a1f9b62ee8d52c34a0ddae131ae79"
+    },
+    {
+      "path": "figures/generated/fig-3-decision-paths.png",
+      "bytes": 266631,
+      "sha256": "e6106b211c8a95c7b11d4cc50b2412319c5ef3cac32bc7745439d54187f0e97e"
+    },
+    {
+      "path": "figures/generated/fig-3-decision-paths.svg",
+      "bytes": 124592,
+      "sha256": "94c37f8c6f1bcf35964aadf23a3254f2db3691dac68466ebaa99832d9197ec42"
+    },
+    {
+      "path": "figures/generated/fig-4-trust-evidence-states.png",
+      "bytes": 186986,
+      "sha256": "09a9227650139209dcde5f7ab5514b7732510f734cbfa35d410d4f21a26cc9bd"
+    },
+    {
+      "path": "figures/generated/fig-4-trust-evidence-states.svg",
+      "bytes": 84473,
+      "sha256": "747d586a27d4591fd1bd03d0a357ed010ee01a9cee00182c29c5a7e2ce519ed5"
+    },
+    {
+      "path": "figures/generated/fig-a1-mutation-response.png",
+      "bytes": 151066,
+      "sha256": "3d1221a7c6a96c95c479e7bccbcba17618a35a6e1063d9d755d8344c0dc4a6f5"
+    },
+    {
+      "path": "figures/generated/fig-a1-mutation-response.svg",
+      "bytes": 78028,
+      "sha256": "c3a4a5edb169b75888cbafe49699d185efe2d64a33f205ec6a5a692e6a7f595d"
+    },
+    {
+      "path": "figures/generated/fig-a2-reproducibility-lineage.png",
+      "bytes": 208919,
+      "sha256": "76bdd923109975ef44e3b9a876c0687ea443e2803bbc7a452cf3a6453ac0b12f"
+    },
+    {
+      "path": "figures/generated/fig-a2-reproducibility-lineage.svg",
+      "bytes": 96221,
+      "sha256": "c207272e7ce4dba6c6cc91578495fc28ec90fccacff95dc1f12481988ba78ef7"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "analysis/build_figures.py",
+      "bytes": 39725,
+      "sha256": "f4ac5f6cb733997a1fb18e678a44db4dc3f5f5e9e68de9c004e977e4ecae7b97"
+    },
+    {
+      "path": "figures/specifications/decision-paths.json",
+      "bytes": 3431,
+      "sha256": "ceadbf1ece47cb3878a081a35abac8af7127f9bf1ec0d65d48fe28e4042cc680"
+    },
+    {
+      "path": "figures/specifications/reproducibility-lineage.json",
+      "bytes": 2457,
+      "sha256": "615e8d63dfe6234bcbc56e646ca0aa60632946e1ac6c8d5c8d7c0f0300c55e3f"
+    },
+    {
+      "path": "figures/specifications/selection-decisions.json",
+      "bytes": 1031,
+      "sha256": "e9cae3c028c1660274414db7461c9ac1576eedd19afbd28508086f6b5a37523f"
+    },
+    {
+      "path": "assessments/generated-results.json",
+      "bytes": 18799,
+      "sha256": "22b9d31c115321fdd2725ee361c3cea8f0e150ee9261cbce6d54fdbf376dcd33"
+    },
+    {
+      "path": "fixtures/mutations/mutations.json",
+      "bytes": 4927,
+      "sha256": "ac02425e825c0d14714c8adb2540e39c118493b4ad8834b0d68cc21385c7d94b"
+    },
+    {
+      "path": "cases/data/candidate-search-output.json",
+      "bytes": 2402606,
+      "sha256": "e6f58acb16361cccc861cbe1215e37a41507655261f7094ec60ab157dab62af2"
+    },
+    {
+      "path": "cases/public-case-selection-register.md",
+      "bytes": 5721,
+      "sha256": "5dee37c58bd7338739742efc0d8dc99c7773f252743da8c6d2a0c538f040495c"
+    },
+    {
+      "path": "cases/TAE-PUB-001-oko-1983/assessment.json",
+      "bytes": 6432,
+      "sha256": "27c1da1a0e7596cbfae08ed98024935c70b3a58a7d7870614dde0534f638a353"
+    },
+    {
+      "path": "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
+      "bytes": 6746,
+      "sha256": "e0a06afec1dd0220d47414ecf07f14a68a2207bda7f0c1a8019737d8384bf41e"
+    },
+    {
+      "path": "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json",
+      "bytes": 6843,
+      "sha256": "df79de4f7724481765ed2cba77be02d52802a273c8b7231151bafcd314dda94f"
+    },
+    {
+      "path": "cases/TAE-PUB-001-oko-1983/case-report.md",
+      "bytes": 4683,
+      "sha256": "06a53900aad2398aded8a27e7d8692e8a715efd78aaf8c58a37a6b8097d980d7"
+    },
+    {
+      "path": "cases/TAE-PUB-002-patriot-zg710-2003/case-report.md",
+      "bytes": 4878,
+      "sha256": "39799fde17aaf693f57dbd5006f5179e1508993ea2ee3442c8f703c5fcd5f0e8"
+    },
+    {
+      "path": "cases/TAE-PUB-003-patriot-fa18-2003/case-report.md",
+      "bytes": 4991,
+      "sha256": "60fb20c346d2fea7ac96229980caff279de580450996606d2e0a6d67d56b8f55"
+    }
+  ]
+}

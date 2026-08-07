@@ -1,0 +1,118 @@
+{
+  "version": "0.1.0",
+  "source_release": "0.3.0",
+  "scale": "relative_sequence",
+  "cases": [
+    {
+      "case_id": "TAE-PUB-001",
+      "short_title": "Oko, 1983",
+      "events": [
+        {
+          "order": 1,
+          "event": "Oko displays a launch warning",
+          "kind": "system_output",
+          "evidence_refs": ["O2", "O3", "O4"]
+        },
+        {
+          "order": 2,
+          "event": "Petrov checks context and ground radar",
+          "kind": "evidence_check",
+          "evidence_refs": ["O2", "O3", "O4"]
+        },
+        {
+          "order": 3,
+          "event": "Petrov classifies the warning as false",
+          "kind": "human_decision",
+          "evidence_refs": ["O2", "O3", "O4"]
+        },
+        {
+          "order": 4,
+          "event": "The false-alarm judgment is communicated",
+          "kind": "human_action",
+          "evidence_refs": ["O2", "O3", "O4"]
+        },
+        {
+          "order": 5,
+          "event": "The warning does not advance as confirmed",
+          "kind": "bounded_effect",
+          "evidence_refs": ["O2", "O3"]
+        }
+      ],
+      "annotation": "Public sources give no defensible elapsed-time estimate for this bounded sequence."
+    },
+    {
+      "case_id": "TAE-PUB-002",
+      "short_title": "Patriot ZG710, 2003",
+      "events": [
+        {
+          "order": 1,
+          "event": "Patriot classifies the aircraft as hostile",
+          "kind": "system_output",
+          "evidence_refs": ["T2", "T3"]
+        },
+        {
+          "order": 2,
+          "event": "Identification and air-picture evidence remain incomplete",
+          "kind": "evidence_check",
+          "evidence_refs": ["T2", "T3"]
+        },
+        {
+          "order": 3,
+          "event": "The crew authorizes engagement",
+          "kind": "human_decision",
+          "evidence_refs": ["T2", "T4"]
+        },
+        {
+          "order": 4,
+          "event": "Patriot launches a missile",
+          "kind": "system_action",
+          "evidence_refs": ["T2", "T3"]
+        },
+        {
+          "order": 5,
+          "event": "ZG710 is destroyed; both aircrew die",
+          "kind": "harm_outcome",
+          "evidence_refs": ["T2", "T3"]
+        }
+      ],
+      "annotation": "The public record describes about one minute for the decision."
+    },
+    {
+      "case_id": "TAE-PUB-003",
+      "short_title": "Patriot F/A-18C, 2003",
+      "events": [
+        {
+          "order": 1,
+          "event": "Two batteries report a missile track",
+          "kind": "system_output",
+          "evidence_refs": ["F3"]
+        },
+        {
+          "order": 2,
+          "event": "The command center correlates the reports",
+          "kind": "system_output",
+          "evidence_refs": ["F3"]
+        },
+        {
+          "order": 3,
+          "event": "A human engagement order is issued",
+          "kind": "human_decision",
+          "evidence_refs": ["F3", "F4"]
+        },
+        {
+          "order": 4,
+          "event": "Patriot launches a missile",
+          "kind": "system_action",
+          "evidence_refs": ["F3", "F4"]
+        },
+        {
+          "order": 5,
+          "event": "The F/A-18C is destroyed; the pilot dies",
+          "kind": "harm_outcome",
+          "evidence_refs": ["F2", "F3", "F4"]
+        }
+      ],
+      "annotation": "Timing, display state, report independence, and feasible intervention remain unresolved."
+    }
+  ]
+}
