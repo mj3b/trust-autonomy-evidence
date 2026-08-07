@@ -2,6 +2,12 @@
 
 All material changes to concepts, claims, protocols, and evidence requirements are recorded here.
 
+## Unreleased
+
+- Adds the Zenodo all-versions DOI badge and links version 0.2.0 to its GitHub release.
+- Records the version-specific DOI in the README and machine-readable citation metadata.
+- Replaces the directory tree with a repository map that describes the purpose of each major file and directory.
+
 ## 0.2.0, 7 August 2026
 
 Adds a solo-validation release with bounded internal evidence.
