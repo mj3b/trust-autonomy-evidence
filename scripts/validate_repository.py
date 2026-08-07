@@ -3,14 +3,18 @@
 
 from __future__ import annotations
 
+import hashlib
+import json
 import re
 import subprocess
 import sys
 from pathlib import Path
 
+from jsonschema import Draft202012Validator, FormatChecker
+
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.2.0"
+VERSION = "0.3.0"
 
 REQUIRED_FILES = (
     "README.md",
@@ -25,6 +29,7 @@ REQUIRED_FILES = (
     "LICENSE",
     "requirements-dev.txt",
     "research/trust-autonomy-and-evidence.md",
+    "research/frozen-research-agenda.md",
     "evidence/trust-evidence-register.md",
     "protocols/independent-review-protocol.md",
     "protocols/practical-human-control-test.md",
@@ -32,11 +37,27 @@ REQUIRED_FILES = (
     "protocols/public-case-reconstruction-protocol.md",
     "cases/README.md",
     "cases/public-case-selection-register.md",
+    "cases/data/candidate-search-output.json",
+    "cases/public-case-packet-index.json",
+    "cases/TAE-PUB-001-oko-1983/case-report.md",
+    "cases/TAE-PUB-001-oko-1983/source-manifest.json",
+    "cases/TAE-PUB-001-oko-1983/assessment.json",
+    "cases/TAE-PUB-001-oko-1983/packet-manifest.json",
+    "cases/TAE-PUB-002-patriot-zg710-2003/case-report.md",
+    "cases/TAE-PUB-002-patriot-zg710-2003/source-manifest.json",
+    "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
+    "cases/TAE-PUB-002-patriot-zg710-2003/packet-manifest.json",
+    "cases/TAE-PUB-003-patriot-fa18-2003/case-report.md",
+    "cases/TAE-PUB-003-patriot-fa18-2003/source-manifest.json",
+    "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json",
+    "cases/TAE-PUB-003-patriot-fa18-2003/packet-manifest.json",
     "schemas/autonomy-profile.schema.json",
     "schemas/solo-case.schema.json",
     "schemas/trust-evidence-assessment.schema.json",
     "schemas/practical-control-assessment.schema.json",
     "schemas/mutation-suite.schema.json",
+    "schemas/public-case-assessment.schema.json",
+    "schemas/source-manifest.schema.json",
     "fixtures/synthetic/cases.json",
     "fixtures/mutations/mutations.json",
     "oracles/solo-validation-v0.2.0.json",
@@ -45,6 +66,11 @@ REQUIRED_FILES = (
     "analysis/run_solo_validation.py",
     "assessments/generated-results.json",
     "reports/solo-validation-v0.2.0.md",
+    "reports/public-case-reconstruction-v0.3.0.md",
+    "release/v0.3.0-manifest.json",
+    "scripts/build_public_case_candidates.py",
+    "scripts/seal_public_case_packets.py",
+    "scripts/build_release_manifest.py",
     ".github/pull_request_template.md",
     ".github/ISSUE_TEMPLATE/case-proposal.yml",
     ".github/ISSUE_TEMPLATE/construct-ambiguity.yml",
@@ -63,6 +89,11 @@ PRIVATE_TERMS = (
 
 MARKDOWN_LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
 CLAIM_ID = re.compile(r"\bTAE-C\d{2}\b")
+CASE_DIRECTORIES = (
+    "cases/TAE-PUB-001-oko-1983",
+    "cases/TAE-PUB-002-patriot-zg710-2003",
+    "cases/TAE-PUB-003-patriot-fa18-2003",
+)
 
 
 def fail(message: str, failures: list[str]) -> None:
@@ -127,6 +158,147 @@ def validate_public_boundary(failures: list[str]) -> None:
                 fail(f"private term found in {relative}: {term}", failures)
 
 
+def digest(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def validate_public_case_schemas(failures: list[str]) -> None:
+    format_checker = FormatChecker()
+    assessment_schema = json.loads(
+        (ROOT / "schemas/public-case-assessment.schema.json").read_text(encoding="utf-8")
+    )
+    source_schema = json.loads(
+        (ROOT / "schemas/source-manifest.schema.json").read_text(encoding="utf-8")
+    )
+    assessment_validator = Draft202012Validator(assessment_schema, format_checker=format_checker)
+    source_validator = Draft202012Validator(source_schema, format_checker=format_checker)
+
+    for relative in CASE_DIRECTORIES:
+        case_dir = ROOT / relative
+        assessment = json.loads((case_dir / "assessment.json").read_text(encoding="utf-8"))
+        sources = json.loads((case_dir / "source-manifest.json").read_text(encoding="utf-8"))
+        for error in assessment_validator.iter_errors(assessment):
+            fail(f"assessment schema failure in {relative}: {error.message}", failures)
+        for error in source_validator.iter_errors(sources):
+            fail(f"source schema failure in {relative}: {error.message}", failures)
+
+        source_ids = {source["source_id"] for source in sources["sources"]}
+        refs = set(assessment["autonomy"]["evidence_refs"])
+        for section in ("trust_evidence", "practical_control"):
+            for finding in assessment[section].values():
+                refs.update(finding["evidence_refs"])
+        missing = sorted(refs - source_ids)
+        if missing:
+            fail(f"unknown source references in {relative}: {', '.join(missing)}", failures)
+
+
+def validate_packet_hashes(failures: list[str]) -> None:
+    index = json.loads(
+        (ROOT / "cases/public-case-packet-index.json").read_text(encoding="utf-8")
+    )
+    if index.get("version") != VERSION or len(index.get("packets", [])) != 3:
+        fail("public-case packet index must contain three v0.3.0 packets", failures)
+        return
+
+    indexed = {row["directory"]: row for row in index["packets"]}
+    for relative in CASE_DIRECTORIES:
+        case_dir = ROOT / relative
+        manifest_path = case_dir / "packet-manifest.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if manifest.get("protocol_freeze_commit") != "180ddda1d70f0ee36faaf8875e839bbc99cbbec2":
+            fail(f"protocol freeze commit mismatch in {relative}", failures)
+        for name, expected in manifest.get("artifacts", {}).items():
+            actual = digest(case_dir / name)
+            if actual != expected:
+                fail(f"packet hash mismatch in {relative}/{name}", failures)
+        row = indexed.get(relative)
+        if row is None:
+            fail(f"packet missing from index: {relative}", failures)
+        elif row.get("manifest_sha256") != digest(manifest_path):
+            fail(f"packet index hash mismatch: {relative}", failures)
+
+
+def validate_candidate_search(failures: list[str]) -> None:
+    data = json.loads(
+        (ROOT / "cases/data/candidate-search-output.json").read_text(encoding="utf-8")
+    )
+    aiid = data.get("inputs", {}).get("aiid", {})
+    oecd = data.get("inputs", {}).get("oecd", [])
+    expected = {
+        "version": VERSION,
+        "candidate_count": 928,
+        "aiid_sha256": "97fe770b0e92730c98fbb05bca8f9e2df6803f0f386d94404a19a7677d70f240",
+        "aiid_candidates": 828,
+        "oecd_sha256": "741bcde4c920a0501589637368831c6242641738a176588312b24056fc27207e",
+    }
+    if data.get("version") != expected["version"]:
+        fail("candidate output version mismatch", failures)
+    if data.get("candidate_count") != expected["candidate_count"]:
+        fail("candidate output count mismatch", failures)
+    if aiid.get("sha256") != expected["aiid_sha256"]:
+        fail("AIID input hash mismatch", failures)
+    if aiid.get("counts", {}).get("candidate_records") != expected["aiid_candidates"]:
+        fail("AIID candidate count mismatch", failures)
+    if not oecd or oecd[0].get("sha256") != expected["oecd_sha256"]:
+        fail("OECD input hash mismatch", failures)
+
+    first_five = [row.get("candidate_id") for row in data.get("candidates", [])[:5]]
+    if first_five != ["AIID-27", "AIID-42", "AIID-79", "AIID-444", "AIID-445"]:
+        fail(f"frozen screening order mismatch: {first_five}", failures)
+    forbidden_fields = {"text", "article_text", "report_text"}
+    for candidate in data.get("candidates", []):
+        if forbidden_fields.intersection(candidate):
+            fail(f"redistributed article text field in {candidate.get('candidate_id')}", failures)
+
+    register = (ROOT / "cases/public-case-selection-register.md").read_text(encoding="utf-8")
+    for marker in ("AIID-27", "INCLUDE-PRE", "AIID-42", "EX-SOURCE", "AIID-79", "EX-BOUNDARY", "AIID-444", "INCLUDE-FORCE", "AIID-445", "INCLUDE-GAP"):
+        if marker not in register:
+            fail(f"selection register marker missing: {marker}", failures)
+
+
+def validate_case_interactions(failures: list[str]) -> None:
+    assessments = {}
+    for relative in CASE_DIRECTORIES:
+        data = json.loads((ROOT / relative / "assessment.json").read_text(encoding="utf-8"))
+        assessments[data["case_id"]] = data
+
+    oko = assessments["TAE-PUB-001"]["practical_control"]
+    for field in ("access", "authority", "feasibility", "exercise", "effect"):
+        if oko[field]["state"] != "supported":
+            fail(f"TAE-PUB-001 interaction mismatch: {field}", failures)
+
+    tornado = assessments["TAE-PUB-002"]["practical_control"]
+    if tornado["authority"]["state"] != "supported":
+        fail("TAE-PUB-002 must preserve formal authority", failures)
+    for field in ("feasibility", "exercise", "effect"):
+        if tornado[field]["state"] != "unsupported":
+            fail(f"TAE-PUB-002 interaction mismatch: {field}", failures)
+
+    fa18 = assessments["TAE-PUB-003"]
+    if fa18["trust_evidence"]["evidence_completeness"]["state"] != "unsupported":
+        fail("TAE-PUB-003 must preserve incomplete evidence", failures)
+    for field in ("comprehension", "feasibility", "exercise"):
+        if fa18["practical_control"][field]["state"] != "indeterminate":
+            fail(f"TAE-PUB-003 missing-evidence mismatch: {field}", failures)
+
+
+def validate_release_manifest(failures: list[str]) -> None:
+    manifest = json.loads(
+        (ROOT / "release/v0.3.0-manifest.json").read_text(encoding="utf-8")
+    )
+    if manifest.get("version") != VERSION:
+        fail("release manifest version mismatch", failures)
+    for artifact in manifest.get("artifacts", []):
+        path = ROOT / artifact["path"]
+        if not path.is_file():
+            fail(f"release artifact missing: {artifact['path']}", failures)
+            continue
+        if path.stat().st_size != artifact["bytes"]:
+            fail(f"release artifact size mismatch: {artifact['path']}", failures)
+        if digest(path) != artifact["sha256"]:
+            fail(f"release artifact hash mismatch: {artifact['path']}", failures)
+
+
 def validate_solo_suite(failures: list[str]) -> str:
     result = subprocess.run(
         [sys.executable, "analysis/run_solo_validation.py", "--check"],
@@ -149,6 +321,11 @@ def main() -> int:
     validate_versions(failures)
     validate_claim_ids(failures)
     validate_public_boundary(failures)
+    validate_public_case_schemas(failures)
+    validate_packet_hashes(failures)
+    validate_candidate_search(failures)
+    validate_case_interactions(failures)
+    validate_release_manifest(failures)
     solo_result = validate_solo_suite(failures)
 
     if failures:

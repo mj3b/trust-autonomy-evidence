@@ -18,6 +18,20 @@ The source register identifies the contribution each source makes to the model. 
 | [Anthropic Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy) | Provides an example of capability thresholds, safeguards, risk reports, external review, monitoring, incidents, and revision |
 | [OpenAI Preparedness Framework](https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf) | Provides an example of capability tracking, safeguard evaluation, risk thresholds, and deployment decision processes |
 
+## Public-case sources
+
+| Source | Contribution used in this repository |
+|---|---|
+| [OECD explanatory memorandum on the updated definition of an AI system](https://doi.org/10.1787/623da898-en) | Supplies a functional definition covering machine-based inference, predictions, recommendations, decisions, and knowledge-based approaches |
+| [AI Incident Database snapshots](https://incidentdatabase.ai/research/snapshots/) | Supplies the first frozen candidate collection and incident-report relationships |
+| [OECD AI Incidents and Hazards Monitor methodology](https://oecd.ai/en/incidents-methodology) | Supplies the second candidate collection's scope and inclusion method |
+| [Chatham House, Too Close for Comfort](https://www.chathamhouse.org/sites/default/files/field/field_document/20140428TooCloseforComfortNuclearUseLewisWilliamsPelopidasAghlani.pdf) | Reconstructs the Oko warning chain and preserves uncertainty about higher-level counterfactual decisions |
+| [UK Ministry of Defence, RAF Tornado ZG710 accident summary](https://assets.publishing.service.gov.uk/media/5a78e39b40f0b62b22cbd9a5/maas03_02_tornado_zg710_22mar03.pdf) | Supplies the primary public record for the classification, decision window, information gaps, launch, and loss |
+| [U.S. Defense Science Board, Patriot System Performance](https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-LPS66633/pdf/GOVPUB-D-PURL-LPS66633.pdf) | Supplies official system-level findings about identification, situational awareness, automatic operation, operator control, and missing causal evidence |
+| [U.S. Army Research Laboratory, Looking Back at 20 Years of MANPRINT on Patriot](https://www.govinfo.gov/content/pkg/GOVPUB-D101-PURL-gpo58824/pdf/GOVPUB-D101-PURL-gpo58824.pdf) | Supplies human-systems findings about automation bias, training, vigilance, residual operator roles, and reform |
+| [U.S. Air Force, Friendly fire incidents will be investigated](https://www.af.mil/News/Article-Display/Article/139557/friendly-fire-incidents-will-be-investigated/) | Supplies a contemporaneous official record of the F/A-18C incident and investigation scope |
+| [Washington Post, Investigation Finds U.S. Missiles Downed Navy Jet](https://www.washingtonpost.com/archive/politics/2004/12/11/investigation-finds-us-missiles-downed-navy-jet/323e76f1-31d5-49c1-a27a-df9f389b0532/) | Reports the Central Command sequence and the public summary's unexplained causal gap |
+
 ## Adjacent public artifacts
 
 | Artifact | Relationship |
@@ -26,4 +40,3 @@ The source register identifies the contribution each source makes to the model. 
 | [Human Influence Telemetry](https://github.com/mj3b/human-influence-telemetry) | Defines a documentary assessment of whether formal human authority retained practical force |
 | [CDFI Framework](https://github.com/mj3b/cdfi-framework) | Supplies an evaluation-governance case involving reliability gates and bounded publication claims |
 | [CDCF Foundation Governance Frameworks](https://github.com/CatholicOS/foundation-docs) | Supplies an institutional governance context involving project vetting and human accountability criteria |
-

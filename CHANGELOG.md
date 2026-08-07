@@ -4,11 +4,20 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
-- Adds the Zenodo all-versions DOI badge and links version 0.2.0 to its GitHub release.
-- Records the version-specific DOI in the README and machine-readable citation metadata.
-- Replaces the directory tree with a repository map that describes the purpose of each major file and directory.
-- Freezes the public-case evidence cutoff, candidate collections, eligibility rules, screening order, source-packet contract, and interpretation boundary before case selection.
-- Adds an empty public-case selection register that must preserve every later inclusion and exclusion.
+No unreleased changes.
+
+## 0.3.0, 7 August 2026
+
+Adds frozen public-case reconstruction and source traceability.
+
+- Preserves the AI Incident Database and OECD collection metadata, hashes, fixed search vocabulary, and generated candidate output.
+- Records five screening decisions and selects the first eligible case in each of three prespecified strata.
+- Publishes three source manifests, narrative reports, machine-readable assessments, and packet hashes.
+- Adds two JSON Schemas for public-case sources and assessments.
+- Adds cross-case interaction checks for successful intervention, formal authority without practical force, and incomplete evidence.
+- Freezes three research topics and one project question for the next research cycle.
+- Adds a release manifest, source-reference validation, and public-case integrity checks.
+- Records single-assessor, historical-system, paired-system, public-source, and transfer limits.
 
 ## 0.2.0, 7 August 2026
 

@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mj3b/trust-autonomy-evidence/schemas/public-case-assessment.schema.json",
+  "title": "Trust, Autonomy, and Evidence public-case assessment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "case_id",
+    "title",
+    "assessment_date",
+    "protocol",
+    "selection_stratum",
+    "boundary",
+    "autonomy",
+    "trust_evidence",
+    "practical_control",
+    "supported_proposition",
+    "excluded_conclusions",
+    "limitations"
+  ],
+  "properties": {
+    "version": {"const": "0.3.0"},
+    "case_id": {"type": "string", "pattern": "^TAE-PUB-[0-9]{3}$"},
+    "title": {"type": "string", "minLength": 1},
+    "assessment_date": {"type": "string", "format": "date"},
+    "protocol": {"type": "string", "minLength": 1},
+    "selection_stratum": {
+      "enum": [
+        "pre_action_intervention",
+        "incomplete_or_conflicting_evidence",
+        "authority_without_practical_force"
+      ]
+    },
+    "boundary": {"type": "string", "minLength": 1},
+    "autonomy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "goal_scope",
+        "action_authority",
+        "temporal_horizon",
+        "impact_radius",
+        "oversight_distance",
+        "reversibility",
+        "evidence_refs",
+        "rationale"
+      ],
+      "properties": {
+        "goal_scope": {"enum": ["narrow", "bounded", "open_ended"]},
+        "action_authority": {"enum": ["observe", "recommend", "execute_limited", "execute_broad"]},
+        "temporal_horizon": {"enum": ["single_step", "multi_step", "long_horizon"]},
+        "impact_radius": {"enum": ["local", "team", "institutional", "public"]},
+        "oversight_distance": {"enum": ["pre_action", "batched", "post_hoc", "none"]},
+        "reversibility": {"enum": ["reversible", "partially_reversible", "irreversible"]},
+        "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+        "rationale": {"type": "string", "minLength": 1}
+      }
+    },
+    "trust_evidence": {
+      "$ref": "#/$defs/trust_findings"
+    },
+    "practical_control": {
+      "$ref": "#/$defs/control_findings"
+    },
+    "supported_proposition": {"type": "string", "minLength": 1},
+    "excluded_conclusions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "$defs": {
+    "state": {
+      "enum": ["supported", "partially_supported", "unsupported", "indeterminate", "outside_scope"]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[OTF][0-9]+$"}
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "evidence_refs", "rationale"],
+      "properties": {
+        "state": {"$ref": "#/$defs/state"},
+        "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+        "rationale": {"type": "string", "minLength": 1}
+      }
+    },
+    "trust_findings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "scope",
+        "capability",
+        "reliability",
+        "uncertainty",
+        "evidence_completeness",
+        "monitoring",
+        "human_authority",
+        "integrity",
+        "reconstructability",
+        "harm_correction",
+        "governance_update"
+      ],
+      "properties": {
+        "identity": {"$ref": "#/$defs/finding"},
+        "scope": {"$ref": "#/$defs/finding"},
+        "capability": {"$ref": "#/$defs/finding"},
+        "reliability": {"$ref": "#/$defs/finding"},
+        "uncertainty": {"$ref": "#/$defs/finding"},
+        "evidence_completeness": {"$ref": "#/$defs/finding"},
+        "monitoring": {"$ref": "#/$defs/finding"},
+        "human_authority": {"$ref": "#/$defs/finding"},
+        "integrity": {"$ref": "#/$defs/finding"},
+        "reconstructability": {"$ref": "#/$defs/finding"},
+        "harm_correction": {"$ref": "#/$defs/finding"},
+        "governance_update": {"$ref": "#/$defs/finding"}
+      }
+    },
+    "control_findings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "access",
+        "comprehension",
+        "authority",
+        "feasibility",
+        "exercise",
+        "effect",
+        "correction",
+        "repair",
+        "reform"
+      ],
+      "properties": {
+        "access": {"$ref": "#/$defs/finding"},
+        "comprehension": {"$ref": "#/$defs/finding"},
+        "authority": {"$ref": "#/$defs/finding"},
+        "feasibility": {"$ref": "#/$defs/finding"},
+        "exercise": {"$ref": "#/$defs/finding"},
+        "effect": {"$ref": "#/$defs/finding"},
+        "correction": {"$ref": "#/$defs/finding"},
+        "repair": {"$ref": "#/$defs/finding"},
+        "reform": {"$ref": "#/$defs/finding"}
+      }
+    }
+  }
+}
