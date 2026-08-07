@@ -1,7 +1,8 @@
 # Trust, Autonomy, and Evidence
 
 [![Status: Working Research](https://img.shields.io/badge/status-working%20research-5b6cff)](RESEARCH_STATUS.md)
-[![Version: 0.2.0](https://img.shields.io/badge/version-0.2.0-blue)](CHANGELOG.md)
+[![Version: 0.2.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.2.0)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21841127.svg)](https://doi.org/10.5281/zenodo.21841127)
 [![Validation](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml/badge.svg)](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0001--8121--2878-brightgreen)](https://orcid.org/0009-0001-8121-2878)
@@ -18,7 +19,7 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 ## Current contribution
 
-Version 0.2.0 contributes five connected artifacts:
+[Version 0.2.0](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.2.0) contributes five connected artifacts:
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
@@ -30,43 +31,30 @@ All 252 determinations and 12 mutation tests pass under the committed v0.2.0 con
 
 ## Repository map
 
-```text
-trust-autonomy-evidence/
-├── README.md
-├── RESEARCH_STATUS.md
-├── CLAIMS.md
-├── LIMITATIONS.md
-├── SOURCES.md
-├── CITATION.cff
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── GOVERNANCE.md
-├── LICENSE
-├── requirements-dev.txt
-├── scripts/
-│   └── validate_repository.py
-├── schemas/
-├── fixtures/
-├── oracles/
-├── assessments/
-├── analysis/
-├── reports/
-├── research/
-│   └── trust-autonomy-and-evidence.md
-├── evidence/
-│   └── trust-evidence-register.md
-├── protocols/
-│   ├── independent-review-protocol.md
-│   ├── practical-human-control-test.md
-│   └── solo-validation-protocol.md
-├── cases/
-│   └── README.md
-└── mappings/
-    ├── governed-decision-intelligence.md
-    ├── human-influence-telemetry.md
-    ├── cdfi-framework.md
-    └── cdcf-governance.md
-```
+| Path | Purpose |
+| --- | --- |
+| [`README.md`](README.md) | States the research question, current result, reading order, and validation commands. |
+| [`RESEARCH_STATUS.md`](RESEARCH_STATUS.md) | Records the release state, completed artifacts, active work, and open empirical questions. |
+| [`CLAIMS.md`](CLAIMS.md) | Lists each proposition with its evidence, confidence, limits, and reversal conditions. |
+| [`LIMITATIONS.md`](LIMITATIONS.md) | Names validity threats and conclusions outside the current evidence. |
+| [`SOURCES.md`](SOURCES.md) | Records the standards, papers, and public repositories used by the project. |
+| [`CITATION.cff`](CITATION.cff) | Provides machine-readable authorship, release, license, and DOI metadata. |
+| [`CHANGELOG.md`](CHANGELOG.md) | Tracks material changes to concepts, protocols, claims, and evidence requirements. |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`GOVERNANCE.md`](GOVERNANCE.md) | Define contribution evidence, review rules, decision authority, and change records. |
+| [`research/`](research/) | Contains the main conceptual paper on justified reliance, autonomy, and practical control. |
+| [`evidence/`](evidence/) | Contains the trust evidence register that converts reliance claims into inspectable records. |
+| [`protocols/`](protocols/) | Defines solo validation, independent review, and practical-control assessment procedures. |
+| [`cases/`](cases/) | Specifies the public case-submission contract and admissibility requirements. |
+| [`schemas/`](schemas/) | Contains five JSON Schemas that define the machine-readable assessment contracts. |
+| [`fixtures/`](fixtures/) | Contains 12 synthetic cases and the controlled mutation suite. |
+| [`oracles/`](oracles/) | Stores prespecified expected decisions and the SHA-256 manifest that seals them. |
+| [`analysis/`](analysis/) | Implements the deterministic assessment logic and solo-validation runner. |
+| [`assessments/`](assessments/) | Stores generated machine-readable assessment results. |
+| [`reports/`](reports/) | Publishes the human-readable solo-validation result and evidence boundary. |
+| [`scripts/`](scripts/) | Contains the repository validator used locally and in GitHub Actions. |
+| [`mappings/`](mappings/) | Relates this work to GDI, HIT, CDFI, and CDCF governance artifacts. |
+| [`.github/`](.github/) | Defines automated validation, the pull-request checklist, and structured issue forms. |
+| [`requirements-dev.txt`](requirements-dev.txt) and [`LICENSE`](LICENSE) | Pin the validation dependency and state the Apache-2.0 license. |
 
 ## How to read the repository
 
@@ -104,7 +92,11 @@ Contributions should identify the proposition being changed, the evidence suppor
 
 ## Citation
 
-Machine-readable citation metadata appears in [CITATION.cff](CITATION.cff). Cite an archived release once one is available.
+Version 0.2.0 has a fixed Zenodo record:
+
+> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.2.0) [Computer software]. Zenodo. [https://doi.org/10.5281/zenodo.21841128](https://doi.org/10.5281/zenodo.21841128)
+
+Use [10.5281/zenodo.21841128](https://doi.org/10.5281/zenodo.21841128) to cite this exact release. The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata appears in [CITATION.cff](CITATION.cff).
 
 ## Author
 
