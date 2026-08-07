@@ -7,6 +7,8 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 - Adds the Zenodo all-versions DOI badge and links version 0.2.0 to its GitHub release.
 - Records the version-specific DOI in the README and machine-readable citation metadata.
 - Replaces the directory tree with a repository map that describes the purpose of each major file and directory.
+- Freezes the public-case evidence cutoff, candidate collections, eligibility rules, screening order, source-packet contract, and interpretation boundary before case selection.
+- Adds an empty public-case selection register that must preserve every later inclusion and exclusion.
 
 ## 0.2.0, 7 August 2026
 
