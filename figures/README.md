@@ -20,6 +20,46 @@ The figures follow four measurement rules drawn from the repository's use of MET
 | Figure A1 | Maps all 12 controlled mutations to 11 prespecified state changes and three invariance tests. | [PNG](generated/fig-a1-mutation-response.png) · [SVG](generated/fig-a1-mutation-response.svg) · [data](data/fig-a1-mutation-response.csv) |
 | Figure A2 | Traces the research and figure-generation artifacts from frozen collections through repository validation. | [PNG](generated/fig-a2-reproducibility-lineage.png) · [SVG](generated/fig-a2-reproducibility-lineage.svg) · [data](data/fig-a2-reproducibility-lineage.csv) |
 
+## How to read the figures
+
+Each reading guide separates four steps: what the figure directly shows, how the comparison supports an inference, what conclusion follows, and where the evidence ends. Categorical states are findings about declared propositions. They are not numeric scores.
+
+### Figure 1. Frozen selection and stopping
+
+The figure directly shows 928 preserved candidate records, five completed screening decisions, three selected cases, two exclusions, and 923 unscreened records. The procedure stopped when the three prespecified strata were filled. No decision was assigned to the 923 records that remained.
+
+The counts support a procedural conclusion: the published cases follow the frozen order and stopping rule. They do not support a conclusion about the prevalence of eligible cases because almost all preserved records were left unscreened.
+
+### Figure 2. Practical-control chain
+
+The figure directly shows 27 categorical findings: nine practical-control conditions across three cases. Authority is supported in every case. Protective effect is supported only for Oko, where access, comprehension, feasibility, and exercised challenge are also supported. ZG710 records supported authority alongside unsupported comprehension, feasibility, exercise, and effect. F/A-18C records supported authority, partially supported access, an unsupported effect, and unresolved comprehension, feasibility, and exercise.
+
+Authority has the same supported state across the three columns. The remaining pre-action conditions vary with protective effect. This pattern supports a bounded mechanism claim: practical control requires an evidence path from access through effect. The figure does not estimate the causal contribution of any individual condition.
+
+### Figure 3. Reconstructed decision paths
+
+The figure directly shows five source-linked events in each case. Oko contains a documented human challenge before escalation. ZG710 contains an approximately one-minute decision window followed by authorization, engagement, and loss. F/A-18C contains detection, correlation, an engagement order, launch, and loss. Timing and display evidence remain incomplete.
+
+The ordered events show where a human judgment entered each sequence and where the public record stops supporting further reconstruction. Horizontal position records order only. It supplies no common elapsed-time scale.
+
+### Figure 4. Trust-evidence states
+
+The figure directly shows 36 categorical findings: 12 trust-evidence propositions across three cases. Conditional reliability and calibrated uncertainty are unsupported in every packet. Record integrity is indeterminate in every packet. Evidence completeness is unsupported or partially supported.
+
+Those shared gaps limit the reliance claims that the packets can support. The matrix permits proposition-level comparison. It supplies no aggregate trust score, system ranking, or claim that one system is generally trustworthy.
+
+### Figure A1. Mutation-response map
+
+The figure directly shows that 11 prespecified state changes occurred and three declared invariance conditions remained unchanged across 12 controlled mutation tests. The observed responses match the committed oracle.
+
+The result shows that the assessment code follows its declared rules for the included synthetic fixtures. The author designed the fixtures, code, mutations, and oracle, so the result supplies no independent-reviewer agreement or field-validity estimate.
+
+### Figure A2. Reproducibility lineage
+
+The figure directly shows the path from frozen collections through candidate selection, case packets, assessments, derived tables, rendered figures, and integrity checks. File hashes and the manifest can detect a changed committed input or artifact.
+
+This lineage supports reconstruction of how each plotted state was produced. It establishes ordering and file integrity. It makes no claim that a source is true, complete, or sufficient for an institutional decision.
+
 ## Regeneration
 
 Install the development dependencies and rebuild the full set:
