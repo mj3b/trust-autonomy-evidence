@@ -18,6 +18,7 @@ Adds frozen public-case reconstruction and source traceability.
 - Freezes three research topics and one project question for the next research cycle.
 - Adds a release manifest, source-reference validation, and public-case integrity checks.
 - Records single-assessor, historical-system, paired-system, public-source, and transfer limits.
+- Records the version-specific Zenodo DOI, `10.5281/zenodo.21843843`.
 
 ## 0.2.0, 7 August 2026
 
