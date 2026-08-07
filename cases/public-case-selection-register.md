@@ -8,7 +8,7 @@
 
 **Screening state:** No candidates screened
 
-**Freeze commit:** To be recorded after the initial protocol reaches `main`
+**Freeze commit:** [`180ddda1d70f0ee36faaf8875e839bbc99cbbec2`](https://github.com/mj3b/trust-autonomy-evidence/commit/180ddda1d70f0ee36faaf8875e839bbc99cbbec2)
 
 Candidate discovery, screening, and source acquisition begin only after the freeze commit is recorded here. This empty register establishes that the case outcomes were unknown when the selection procedure was published.
 
