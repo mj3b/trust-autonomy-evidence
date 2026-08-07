@@ -1,0 +1,615 @@
+{
+  "version": "0.2.0",
+  "method": "deterministic synthetic and mutation validation",
+  "sealed_artifacts": {
+    "fixtures/synthetic/cases.json": "1d7f9ba49d80b384cc3c78b188c96627b2419cf8739e0d468d31d19de01a5713",
+    "fixtures/mutations/mutations.json": "ac02425e825c0d14714c8adb2540e39c118493b4ad8834b0d68cc21385c7d94b",
+    "oracles/solo-validation-v0.2.0.json": "0d1eb3591ed794d59ea5c20de8970295a38b753b0aa105d3d871b9476ddb5c00"
+  },
+  "summary": {
+    "synthetic_cases": 12,
+    "trust_determinations": 144,
+    "control_determinations": 108,
+    "oracle_comparisons": 252,
+    "mutation_tests": 12,
+    "mutation_delta_assertions": 11,
+    "invariance_tests": 3,
+    "failures": 0
+  },
+  "case_results": [
+    {
+      "case_id": "TAE-SYN-001",
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "institutional",
+        "oversight_distance": "pre_action",
+        "reversibility": "partially_reversible"
+      },
+      "trust": {
+        "identity": "supported",
+        "scope": "supported",
+        "capability": "supported",
+        "reliability": "supported",
+        "uncertainty": "supported",
+        "evidence_completeness": "supported",
+        "monitoring": "supported",
+        "human_authority": "supported",
+        "integrity": "supported",
+        "reconstructability": "supported",
+        "harm_correction": "supported",
+        "governance_update": "supported"
+      },
+      "control": {
+        "access": "supported",
+        "comprehension": "supported",
+        "authority": "supported",
+        "feasibility": "supported",
+        "exercise": "supported",
+        "effect": "supported",
+        "correction": "supported",
+        "repair": "supported",
+        "reform": "supported"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-002",
+      "autonomy": {
+        "goal_scope": "narrow",
+        "action_authority": "recommend",
+        "temporal_horizon": "single_step",
+        "impact_radius": "local",
+        "oversight_distance": "pre_action",
+        "reversibility": "reversible"
+      },
+      "trust": {
+        "identity": "partially_supported",
+        "scope": "partially_supported",
+        "capability": "partially_supported",
+        "reliability": "partially_supported",
+        "uncertainty": "partially_supported",
+        "evidence_completeness": "partially_supported",
+        "monitoring": "partially_supported",
+        "human_authority": "partially_supported",
+        "integrity": "partially_supported",
+        "reconstructability": "partially_supported",
+        "harm_correction": "partially_supported",
+        "governance_update": "partially_supported"
+      },
+      "control": {
+        "access": "partially_supported",
+        "comprehension": "partially_supported",
+        "authority": "partially_supported",
+        "feasibility": "partially_supported",
+        "exercise": "partially_supported",
+        "effect": "partially_supported",
+        "correction": "partially_supported",
+        "repair": "partially_supported",
+        "reform": "partially_supported"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-003",
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "recommend",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "team",
+        "oversight_distance": "batched",
+        "reversibility": "reversible"
+      },
+      "trust": {
+        "identity": "indeterminate",
+        "scope": "indeterminate",
+        "capability": "indeterminate",
+        "reliability": "indeterminate",
+        "uncertainty": "indeterminate",
+        "evidence_completeness": "indeterminate",
+        "monitoring": "indeterminate",
+        "human_authority": "indeterminate",
+        "integrity": "indeterminate",
+        "reconstructability": "indeterminate",
+        "harm_correction": "indeterminate",
+        "governance_update": "indeterminate"
+      },
+      "control": {
+        "access": "indeterminate",
+        "comprehension": "indeterminate",
+        "authority": "indeterminate",
+        "feasibility": "indeterminate",
+        "exercise": "indeterminate",
+        "effect": "indeterminate",
+        "correction": "indeterminate",
+        "repair": "indeterminate",
+        "reform": "indeterminate"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-004",
+      "autonomy": {
+        "goal_scope": "open_ended",
+        "action_authority": "execute_broad",
+        "temporal_horizon": "long_horizon",
+        "impact_radius": "public",
+        "oversight_distance": "none",
+        "reversibility": "irreversible"
+      },
+      "trust": {
+        "identity": "unsupported",
+        "scope": "unsupported",
+        "capability": "unsupported",
+        "reliability": "unsupported",
+        "uncertainty": "unsupported",
+        "evidence_completeness": "unsupported",
+        "monitoring": "unsupported",
+        "human_authority": "unsupported",
+        "integrity": "unsupported",
+        "reconstructability": "unsupported",
+        "harm_correction": "unsupported",
+        "governance_update": "unsupported"
+      },
+      "control": {
+        "access": "unsupported",
+        "comprehension": "unsupported",
+        "authority": "unsupported",
+        "feasibility": "unsupported",
+        "exercise": "unsupported",
+        "effect": "unsupported",
+        "correction": "unsupported",
+        "repair": "unsupported",
+        "reform": "unsupported"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-005",
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "institutional",
+        "oversight_distance": "batched",
+        "reversibility": "partially_reversible"
+      },
+      "trust": {
+        "identity": "supported",
+        "scope": "supported",
+        "capability": "supported",
+        "reliability": "supported",
+        "uncertainty": "supported",
+        "evidence_completeness": "partially_supported",
+        "monitoring": "partially_supported",
+        "human_authority": "partially_supported",
+        "integrity": "supported",
+        "reconstructability": "supported",
+        "harm_correction": "partially_supported",
+        "governance_update": "partially_supported"
+      },
+      "control": {
+        "access": "partially_supported",
+        "comprehension": "partially_supported",
+        "authority": "partially_supported",
+        "feasibility": "unsupported",
+        "exercise": "unsupported",
+        "effect": "unsupported",
+        "correction": "partially_supported",
+        "repair": "partially_supported",
+        "reform": "partially_supported"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-006",
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "institutional",
+        "oversight_distance": "post_hoc",
+        "reversibility": "partially_reversible"
+      },
+      "trust": {
+        "identity": "supported",
+        "scope": "supported",
+        "capability": "supported",
+        "reliability": "supported",
+        "uncertainty": "supported",
+        "evidence_completeness": "supported",
+        "monitoring": "partially_supported",
+        "human_authority": "unsupported",
+        "integrity": "supported",
+        "reconstructability": "supported",
+        "harm_correction": "supported",
+        "governance_update": "supported"
+      },
+      "control": {
+        "access": "unsupported",
+        "comprehension": "supported",
+        "authority": "partially_supported",
+        "feasibility": "unsupported",
+        "exercise": "supported",
+        "effect": "unsupported",
+        "correction": "supported",
+        "repair": "supported",
+        "reform": "supported"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-007",
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "team",
+        "oversight_distance": "pre_action",
+        "reversibility": "reversible"
+      },
+      "trust": {
+        "identity": "supported",
+        "scope": "supported",
+        "capability": "supported",
+        "reliability": "supported",
+        "uncertainty": "supported",
+        "evidence_completeness": "partially_supported",
+        "monitoring": "supported",
+        "human_authority": "supported",
+        "integrity": "unsupported",
+        "reconstructability": "partially_supported",
+        "harm_correction": "partially_supported",
+        "governance_update": "partially_supported"
+      },
+      "control": {
+        "access": "supported",
+        "comprehension": "supported",
+        "authority": "supported",
+        "feasibility": "supported",
+        "exercise": "supported",
+        "effect": "supported",
+        "correction": "partially_supported",
+        "repair": "partially_supported",
+        "reform": "partially_supported"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-008",
+      "autonomy": {
+        "goal_scope": "narrow",
+        "action_authority": "recommend",
+        "temporal_horizon": "single_step",
+        "impact_radius": "local",
+        "oversight_distance": "pre_action",
+        "reversibility": "reversible"
+      },
+      "trust": {
+        "identity": "partially_supported",
+        "scope": "partially_supported",
+        "capability": "partially_supported",
+        "reliability": "partially_supported",
+        "uncertainty": "indeterminate",
+        "evidence_completeness": "partially_supported",
+        "monitoring": "indeterminate",
+        "human_authority": "partially_supported",
+        "integrity": "partially_supported",
+        "reconstructability": "partially_supported",
+        "harm_correction": "partially_supported",
+        "governance_update": "indeterminate"
+      },
+      "control": {
+        "access": "partially_supported",
+        "comprehension": "partially_supported",
+        "authority": "partially_supported",
+        "feasibility": "partially_supported",
+        "exercise": "partially_supported",
+        "effect": "partially_supported",
+        "correction": "partially_supported",
+        "repair": "partially_supported",
+        "reform": "indeterminate"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-009",
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "institutional",
+        "oversight_distance": "pre_action",
+        "reversibility": "partially_reversible"
+      },
+      "trust": {
+        "identity": "supported",
+        "scope": "supported",
+        "capability": "supported",
+        "reliability": "supported",
+        "uncertainty": "supported",
+        "evidence_completeness": "supported",
+        "monitoring": "supported",
+        "human_authority": "supported",
+        "integrity": "supported",
+        "reconstructability": "supported",
+        "harm_correction": "supported",
+        "governance_update": "supported"
+      },
+      "control": {
+        "access": "supported",
+        "comprehension": "supported",
+        "authority": "supported",
+        "feasibility": "supported",
+        "exercise": "supported",
+        "effect": "supported",
+        "correction": "supported",
+        "repair": "supported",
+        "reform": "supported"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-010",
+      "autonomy": {
+        "goal_scope": "open_ended",
+        "action_authority": "execute_broad",
+        "temporal_horizon": "long_horizon",
+        "impact_radius": "public",
+        "oversight_distance": "none",
+        "reversibility": "irreversible"
+      },
+      "trust": {
+        "identity": "supported",
+        "scope": "unsupported",
+        "capability": "partially_supported",
+        "reliability": "partially_supported",
+        "uncertainty": "unsupported",
+        "evidence_completeness": "partially_supported",
+        "monitoring": "unsupported",
+        "human_authority": "unsupported",
+        "integrity": "partially_supported",
+        "reconstructability": "partially_supported",
+        "harm_correction": "unsupported",
+        "governance_update": "unsupported"
+      },
+      "control": {
+        "access": "unsupported",
+        "comprehension": "unsupported",
+        "authority": "unsupported",
+        "feasibility": "unsupported",
+        "exercise": "unsupported",
+        "effect": "unsupported",
+        "correction": "unsupported",
+        "repair": "unsupported",
+        "reform": "unsupported"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-011",
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "institutional",
+        "oversight_distance": "post_hoc",
+        "reversibility": "partially_reversible"
+      },
+      "trust": {
+        "identity": "supported",
+        "scope": "supported",
+        "capability": "supported",
+        "reliability": "supported",
+        "uncertainty": "supported",
+        "evidence_completeness": "supported",
+        "monitoring": "supported",
+        "human_authority": "supported",
+        "integrity": "supported",
+        "reconstructability": "supported",
+        "harm_correction": "supported",
+        "governance_update": "unsupported"
+      },
+      "control": {
+        "access": "supported",
+        "comprehension": "supported",
+        "authority": "supported",
+        "feasibility": "supported",
+        "exercise": "supported",
+        "effect": "supported",
+        "correction": "supported",
+        "repair": "supported",
+        "reform": "unsupported"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-012",
+      "autonomy": {
+        "goal_scope": "narrow",
+        "action_authority": "recommend",
+        "temporal_horizon": "single_step",
+        "impact_radius": "local",
+        "oversight_distance": "pre_action",
+        "reversibility": "reversible"
+      },
+      "trust": {
+        "identity": "supported",
+        "scope": "supported",
+        "capability": "supported",
+        "reliability": "supported",
+        "uncertainty": "supported",
+        "evidence_completeness": "supported",
+        "monitoring": "supported",
+        "human_authority": "supported",
+        "integrity": "supported",
+        "reconstructability": "supported",
+        "harm_correction": "outside_scope",
+        "governance_update": "outside_scope"
+      },
+      "control": {
+        "access": "supported",
+        "comprehension": "supported",
+        "authority": "supported",
+        "feasibility": "supported",
+        "exercise": "supported",
+        "effect": "supported",
+        "correction": "outside_scope",
+        "repair": "outside_scope",
+        "reform": "outside_scope"
+      }
+    }
+  ],
+  "mutation_results": [
+    {
+      "mutation_id": "TAE-MUT-001",
+      "base_case_id": "TAE-SYN-001",
+      "delta_count": 1,
+      "deltas": [
+        {
+          "assessment": "control",
+          "field": "access",
+          "from": "supported",
+          "to": "unsupported"
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "mutation_id": "TAE-MUT-002",
+      "base_case_id": "TAE-SYN-001",
+      "delta_count": 1,
+      "deltas": [
+        {
+          "assessment": "control",
+          "field": "authority",
+          "from": "supported",
+          "to": "unsupported"
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "mutation_id": "TAE-MUT-003",
+      "base_case_id": "TAE-SYN-001",
+      "delta_count": 1,
+      "deltas": [
+        {
+          "assessment": "trust",
+          "field": "human_authority",
+          "from": "supported",
+          "to": "unsupported"
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "mutation_id": "TAE-MUT-004",
+      "base_case_id": "TAE-SYN-001",
+      "delta_count": 1,
+      "deltas": [
+        {
+          "assessment": "trust",
+          "field": "integrity",
+          "from": "supported",
+          "to": "unsupported"
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "mutation_id": "TAE-MUT-005",
+      "base_case_id": "TAE-SYN-001",
+      "delta_count": 2,
+      "deltas": [
+        {
+          "assessment": "control",
+          "field": "correction",
+          "from": "supported",
+          "to": "partially_supported"
+        },
+        {
+          "assessment": "trust",
+          "field": "harm_correction",
+          "from": "supported",
+          "to": "partially_supported"
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "mutation_id": "TAE-MUT-006",
+      "base_case_id": "TAE-SYN-001",
+      "delta_count": 1,
+      "deltas": [
+        {
+          "assessment": "trust",
+          "field": "monitoring",
+          "from": "supported",
+          "to": "unsupported"
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "mutation_id": "TAE-MUT-007",
+      "base_case_id": "TAE-SYN-001",
+      "delta_count": 0,
+      "deltas": [],
+      "status": "pass"
+    },
+    {
+      "mutation_id": "TAE-MUT-008",
+      "base_case_id": "TAE-SYN-008",
+      "delta_count": 0,
+      "deltas": [],
+      "status": "pass"
+    },
+    {
+      "mutation_id": "TAE-MUT-009",
+      "base_case_id": "TAE-SYN-001",
+      "delta_count": 0,
+      "deltas": [],
+      "status": "pass"
+    },
+    {
+      "mutation_id": "TAE-MUT-010",
+      "base_case_id": "TAE-SYN-001",
+      "delta_count": 1,
+      "deltas": [
+        {
+          "assessment": "trust",
+          "field": "evidence_completeness",
+          "from": "supported",
+          "to": "indeterminate"
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "mutation_id": "TAE-MUT-011",
+      "base_case_id": "TAE-SYN-001",
+      "delta_count": 1,
+      "deltas": [
+        {
+          "assessment": "control",
+          "field": "repair",
+          "from": "supported",
+          "to": "unsupported"
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "mutation_id": "TAE-MUT-012",
+      "base_case_id": "TAE-SYN-001",
+      "delta_count": 2,
+      "deltas": [
+        {
+          "assessment": "control",
+          "field": "reform",
+          "from": "supported",
+          "to": "unsupported"
+        },
+        {
+          "assessment": "trust",
+          "field": "governance_update",
+          "from": "supported",
+          "to": "unsupported"
+        }
+      ],
+      "status": "pass"
+    }
+  ],
+  "claim_boundary": "The results establish deterministic behavior for committed synthetic fixtures and mutation properties. They do not establish independent reliability, field validity, institutional effectiveness, or improved outcomes."
+}

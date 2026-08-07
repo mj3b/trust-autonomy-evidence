@@ -1,0 +1,138 @@
+{
+  "version": "0.2.0",
+  "case_source": "fixtures/synthetic/cases.json",
+  "expected": {
+    "TAE-SYN-001": {
+      "trust": {
+        "identity": "supported", "scope": "supported", "capability": "supported", "reliability": "supported",
+        "uncertainty": "supported", "evidence_completeness": "supported", "monitoring": "supported", "human_authority": "supported",
+        "integrity": "supported", "reconstructability": "supported", "harm_correction": "supported", "governance_update": "supported"
+      },
+      "control": {
+        "access": "supported", "comprehension": "supported", "authority": "supported", "feasibility": "supported",
+        "exercise": "supported", "effect": "supported", "correction": "supported", "repair": "supported", "reform": "supported"
+      }
+    },
+    "TAE-SYN-002": {
+      "trust": {
+        "identity": "partially_supported", "scope": "partially_supported", "capability": "partially_supported", "reliability": "partially_supported",
+        "uncertainty": "partially_supported", "evidence_completeness": "partially_supported", "monitoring": "partially_supported", "human_authority": "partially_supported",
+        "integrity": "partially_supported", "reconstructability": "partially_supported", "harm_correction": "partially_supported", "governance_update": "partially_supported"
+      },
+      "control": {
+        "access": "partially_supported", "comprehension": "partially_supported", "authority": "partially_supported", "feasibility": "partially_supported",
+        "exercise": "partially_supported", "effect": "partially_supported", "correction": "partially_supported", "repair": "partially_supported", "reform": "partially_supported"
+      }
+    },
+    "TAE-SYN-003": {
+      "trust": {
+        "identity": "indeterminate", "scope": "indeterminate", "capability": "indeterminate", "reliability": "indeterminate",
+        "uncertainty": "indeterminate", "evidence_completeness": "indeterminate", "monitoring": "indeterminate", "human_authority": "indeterminate",
+        "integrity": "indeterminate", "reconstructability": "indeterminate", "harm_correction": "indeterminate", "governance_update": "indeterminate"
+      },
+      "control": {
+        "access": "indeterminate", "comprehension": "indeterminate", "authority": "indeterminate", "feasibility": "indeterminate",
+        "exercise": "indeterminate", "effect": "indeterminate", "correction": "indeterminate", "repair": "indeterminate", "reform": "indeterminate"
+      }
+    },
+    "TAE-SYN-004": {
+      "trust": {
+        "identity": "unsupported", "scope": "unsupported", "capability": "unsupported", "reliability": "unsupported",
+        "uncertainty": "unsupported", "evidence_completeness": "unsupported", "monitoring": "unsupported", "human_authority": "unsupported",
+        "integrity": "unsupported", "reconstructability": "unsupported", "harm_correction": "unsupported", "governance_update": "unsupported"
+      },
+      "control": {
+        "access": "unsupported", "comprehension": "unsupported", "authority": "unsupported", "feasibility": "unsupported",
+        "exercise": "unsupported", "effect": "unsupported", "correction": "unsupported", "repair": "unsupported", "reform": "unsupported"
+      }
+    },
+    "TAE-SYN-005": {
+      "trust": {
+        "identity": "supported", "scope": "supported", "capability": "supported", "reliability": "supported",
+        "uncertainty": "supported", "evidence_completeness": "partially_supported", "monitoring": "partially_supported", "human_authority": "partially_supported",
+        "integrity": "supported", "reconstructability": "supported", "harm_correction": "partially_supported", "governance_update": "partially_supported"
+      },
+      "control": {
+        "access": "partially_supported", "comprehension": "partially_supported", "authority": "partially_supported", "feasibility": "unsupported",
+        "exercise": "unsupported", "effect": "unsupported", "correction": "partially_supported", "repair": "partially_supported", "reform": "partially_supported"
+      }
+    },
+    "TAE-SYN-006": {
+      "trust": {
+        "identity": "supported", "scope": "supported", "capability": "supported", "reliability": "supported",
+        "uncertainty": "supported", "evidence_completeness": "supported", "monitoring": "partially_supported", "human_authority": "unsupported",
+        "integrity": "supported", "reconstructability": "supported", "harm_correction": "supported", "governance_update": "supported"
+      },
+      "control": {
+        "access": "unsupported", "comprehension": "supported", "authority": "partially_supported", "feasibility": "unsupported",
+        "exercise": "supported", "effect": "unsupported", "correction": "supported", "repair": "supported", "reform": "supported"
+      }
+    },
+    "TAE-SYN-007": {
+      "trust": {
+        "identity": "supported", "scope": "supported", "capability": "supported", "reliability": "supported",
+        "uncertainty": "supported", "evidence_completeness": "partially_supported", "monitoring": "supported", "human_authority": "supported",
+        "integrity": "unsupported", "reconstructability": "partially_supported", "harm_correction": "partially_supported", "governance_update": "partially_supported"
+      },
+      "control": {
+        "access": "supported", "comprehension": "supported", "authority": "supported", "feasibility": "supported",
+        "exercise": "supported", "effect": "supported", "correction": "partially_supported", "repair": "partially_supported", "reform": "partially_supported"
+      }
+    },
+    "TAE-SYN-008": {
+      "trust": {
+        "identity": "partially_supported", "scope": "partially_supported", "capability": "partially_supported", "reliability": "partially_supported",
+        "uncertainty": "indeterminate", "evidence_completeness": "partially_supported", "monitoring": "indeterminate", "human_authority": "partially_supported",
+        "integrity": "partially_supported", "reconstructability": "partially_supported", "harm_correction": "partially_supported", "governance_update": "indeterminate"
+      },
+      "control": {
+        "access": "partially_supported", "comprehension": "partially_supported", "authority": "partially_supported", "feasibility": "partially_supported",
+        "exercise": "partially_supported", "effect": "partially_supported", "correction": "partially_supported", "repair": "partially_supported", "reform": "indeterminate"
+      }
+    },
+    "TAE-SYN-009": {
+      "trust": {
+        "identity": "supported", "scope": "supported", "capability": "supported", "reliability": "supported",
+        "uncertainty": "supported", "evidence_completeness": "supported", "monitoring": "supported", "human_authority": "supported",
+        "integrity": "supported", "reconstructability": "supported", "harm_correction": "supported", "governance_update": "supported"
+      },
+      "control": {
+        "access": "supported", "comprehension": "supported", "authority": "supported", "feasibility": "supported",
+        "exercise": "supported", "effect": "supported", "correction": "supported", "repair": "supported", "reform": "supported"
+      }
+    },
+    "TAE-SYN-010": {
+      "trust": {
+        "identity": "supported", "scope": "unsupported", "capability": "partially_supported", "reliability": "partially_supported",
+        "uncertainty": "unsupported", "evidence_completeness": "partially_supported", "monitoring": "unsupported", "human_authority": "unsupported",
+        "integrity": "partially_supported", "reconstructability": "partially_supported", "harm_correction": "unsupported", "governance_update": "unsupported"
+      },
+      "control": {
+        "access": "unsupported", "comprehension": "unsupported", "authority": "unsupported", "feasibility": "unsupported",
+        "exercise": "unsupported", "effect": "unsupported", "correction": "unsupported", "repair": "unsupported", "reform": "unsupported"
+      }
+    },
+    "TAE-SYN-011": {
+      "trust": {
+        "identity": "supported", "scope": "supported", "capability": "supported", "reliability": "supported",
+        "uncertainty": "supported", "evidence_completeness": "supported", "monitoring": "supported", "human_authority": "supported",
+        "integrity": "supported", "reconstructability": "supported", "harm_correction": "supported", "governance_update": "unsupported"
+      },
+      "control": {
+        "access": "supported", "comprehension": "supported", "authority": "supported", "feasibility": "supported",
+        "exercise": "supported", "effect": "supported", "correction": "supported", "repair": "supported", "reform": "unsupported"
+      }
+    },
+    "TAE-SYN-012": {
+      "trust": {
+        "identity": "supported", "scope": "supported", "capability": "supported", "reliability": "supported",
+        "uncertainty": "supported", "evidence_completeness": "supported", "monitoring": "supported", "human_authority": "supported",
+        "integrity": "supported", "reconstructability": "supported", "harm_correction": "outside_scope", "governance_update": "outside_scope"
+      },
+      "control": {
+        "access": "supported", "comprehension": "supported", "authority": "supported", "feasibility": "supported",
+        "exercise": "supported", "effect": "supported", "correction": "outside_scope", "repair": "outside_scope", "reform": "outside_scope"
+      }
+    }
+  }
+}

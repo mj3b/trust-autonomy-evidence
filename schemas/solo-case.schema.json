@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mj3b/trust-autonomy-evidence/schemas/solo-case.schema.json",
+  "title": "Trust, Autonomy, and Evidence solo-validation case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "title",
+    "purpose",
+    "context",
+    "autonomy",
+    "trust_signals",
+    "control_signals"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^TAE-SYN-[0-9]{3}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["outcome"],
+      "properties": {
+        "outcome": {
+          "enum": ["success", "failure", "unknown"]
+        }
+      }
+    },
+    "autonomy": {
+      "type": "object"
+    },
+    "trust_signals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "scope",
+        "capability",
+        "reliability",
+        "uncertainty",
+        "evidence_completeness",
+        "monitoring",
+        "human_authority",
+        "integrity",
+        "reconstructability",
+        "harm_correction",
+        "governance_update"
+      ],
+      "properties": {
+        "identity": {"enum": ["verified", "declared", "missing", "contradicted", "outside_scope"]},
+        "scope": {"enum": ["enforced", "documented", "missing", "violated", "outside_scope"]},
+        "capability": {"enum": ["repeated_relevant", "single_relevant", "missing", "contradicted", "outside_scope"]},
+        "reliability": {"enum": ["conditional_distribution", "aggregate_only", "missing", "contradicted", "outside_scope"]},
+        "uncertainty": {"enum": ["calibrated", "declared", "missing", "misleading", "outside_scope"]},
+        "evidence_completeness": {"enum": ["independently_checked", "manifest_with_gaps", "missing", "contradicted", "outside_scope"]},
+        "monitoring": {"enum": ["full_pipeline", "partial_pipeline", "missing", "bypassed", "outside_scope"]},
+        "human_authority": {"enum": ["exercised", "assigned", "missing", "ineffective", "outside_scope"]},
+        "integrity": {"enum": ["protected", "timestamped", "missing", "mutable", "outside_scope"]},
+        "reconstructability": {"enum": ["independently_reconstructed", "complete_record", "partial_record", "missing", "retrospective", "outside_scope"]},
+        "harm_correction": {"enum": ["completed", "procedure", "missing", "failed", "outside_scope"]},
+        "governance_update": {"enum": ["revised_retested", "review_trigger", "missing", "unchanged_after_failure", "outside_scope"]}
+      }
+    },
+    "control_signals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "access",
+        "comprehension",
+        "authority",
+        "feasibility",
+        "exercise",
+        "effect",
+        "correction",
+        "repair",
+        "reform"
+      ],
+      "properties": {
+        "access": {"enum": ["pre_action_complete", "pre_action_partial", "missing", "post_action", "outside_scope"]},
+        "comprehension": {"enum": ["independent_challenge", "materials_only", "missing", "automation_bias", "outside_scope"]},
+        "authority": {"enum": ["exercised", "assigned", "missing", "advisory_only", "outside_scope"]},
+        "feasibility": {"enum": ["tested", "nominal", "missing", "blocked", "outside_scope"]},
+        "exercise": {"enum": ["intervention", "documented_reasoning", "attestation_only", "missing", "automatic_approval", "outside_scope"]},
+        "effect": {"enum": ["execution_changed", "obligation_changed", "claimed_change", "missing", "no_change", "outside_scope"]},
+        "correction": {"enum": ["completed", "procedure", "missing", "inaccessible", "outside_scope"]},
+        "repair": {"enum": ["completed", "assigned", "missing", "failed", "outside_scope"]},
+        "reform": {"enum": ["revised_retested", "review_trigger", "missing", "unchanged", "outside_scope"]}
+      }
+    }
+  }
+}

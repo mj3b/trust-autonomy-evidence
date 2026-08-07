@@ -1,0 +1,32 @@
+name: Construct ambiguity
+description: Report a definition, rule, or classification that permits conflicting interpretations.
+title: "Ambiguity: "
+labels: ["construct-ambiguity"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Artifact location
+      description: Provide the file, section, schema path, rule, or claim identifier.
+    validations:
+      required: true
+  - type: textarea
+    id: interpretations
+    attributes:
+      label: Competing interpretations
+      description: State each plausible interpretation and the evidence supporting it.
+    validations:
+      required: true
+  - type: textarea
+    id: consequence
+    attributes:
+      label: Assessment consequence
+      description: Explain which case or finding changes under each interpretation.
+    validations:
+      required: true
+  - type: textarea
+    id: test
+    attributes:
+      label: Proposed discriminating test
+      description: Describe a fixture, mutation, source, or rule that could resolve the ambiguity.
+

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mj3b/trust-autonomy-evidence/schemas/mutation-suite.schema.json",
+  "title": "Trust, Autonomy, and Evidence mutation suite",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "mutations"],
+  "properties": {
+    "version": {"const": "0.2.0"},
+    "mutations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["mutation_id", "base_case_id", "purpose", "changes", "expected_deltas"],
+        "properties": {
+          "mutation_id": {"type": "string", "pattern": "^TAE-MUT-[0-9]{3}$"},
+          "base_case_id": {"type": "string", "pattern": "^TAE-SYN-[0-9]{3}$"},
+          "purpose": {"type": "string", "minLength": 1},
+          "changes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["path", "value"],
+              "properties": {
+                "path": {"type": "string", "minLength": 1},
+                "value": {}
+              }
+            }
+          },
+          "expected_deltas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["assessment", "field", "from", "to"],
+              "properties": {
+                "assessment": {"enum": ["trust", "control"]},
+                "field": {"type": "string", "minLength": 1},
+                "from": {"enum": ["supported", "partially_supported", "unsupported", "indeterminate", "outside_scope"]},
+                "to": {"enum": ["supported", "partially_supported", "unsupported", "indeterminate", "outside_scope"]}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

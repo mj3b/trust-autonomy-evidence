@@ -1,0 +1,44 @@
+name: Case proposal
+description: Propose a synthetic, public, or operational case for assessment.
+title: "Case: "
+labels: ["case-proposal"]
+body:
+  - type: dropdown
+    id: case_type
+    attributes:
+      label: Case type
+      options:
+        - Synthetic
+        - Public record reconstruction
+        - Operational
+    validations:
+      required: true
+  - type: textarea
+    id: decision_boundary
+    attributes:
+      label: Decision boundary
+      description: Identify the system, decision, period, action, and consequence in scope.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and provenance
+      description: List sources, custody, timestamps, inaccessible records, and publication authority.
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Assessment purpose
+      description: State the proposition, boundary, ambiguity, or failure this case would test.
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations
+      description: Identify selection, redaction, completeness, privacy, and interpretation limits.
+    validations:
+      required: true
+

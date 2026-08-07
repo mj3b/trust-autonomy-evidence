@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""Validate the public research repository without external dependencies."""
+"""Validate the public research repository and solo-validation artifacts."""
 
 from __future__ import annotations
 
 import re
+import subprocess
 import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 
 REQUIRED_FILES = (
     "README.md",
@@ -19,12 +20,33 @@ REQUIRED_FILES = (
     "SOURCES.md",
     "CITATION.cff",
     "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "GOVERNANCE.md",
     "LICENSE",
+    "requirements-dev.txt",
     "research/trust-autonomy-and-evidence.md",
     "evidence/trust-evidence-register.md",
     "protocols/independent-review-protocol.md",
     "protocols/practical-human-control-test.md",
+    "protocols/solo-validation-protocol.md",
     "cases/README.md",
+    "schemas/autonomy-profile.schema.json",
+    "schemas/solo-case.schema.json",
+    "schemas/trust-evidence-assessment.schema.json",
+    "schemas/practical-control-assessment.schema.json",
+    "schemas/mutation-suite.schema.json",
+    "fixtures/synthetic/cases.json",
+    "fixtures/mutations/mutations.json",
+    "oracles/solo-validation-v0.2.0.json",
+    "oracles/manifest.json",
+    "analysis/assessment.py",
+    "analysis/run_solo_validation.py",
+    "assessments/generated-results.json",
+    "reports/solo-validation-v0.2.0.md",
+    ".github/pull_request_template.md",
+    ".github/ISSUE_TEMPLATE/case-proposal.yml",
+    ".github/ISSUE_TEMPLATE/construct-ambiguity.yml",
+    ".github/ISSUE_TEMPLATE/config.yml",
     "mappings/governed-decision-intelligence.md",
     "mappings/human-influence-telemetry.md",
     "mappings/cdfi-framework.md",
@@ -103,6 +125,21 @@ def validate_public_boundary(failures: list[str]) -> None:
                 fail(f"private term found in {relative}: {term}", failures)
 
 
+def validate_solo_suite(failures: list[str]) -> str:
+    result = subprocess.run(
+        [sys.executable, "analysis/run_solo_validation.py", "--check"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        detail = (result.stdout + result.stderr).strip()
+        fail(f"solo-validation suite failed: {detail}", failures)
+        return ""
+    return result.stdout.strip()
+
+
 def main() -> int:
     failures: list[str] = []
     validate_required_files(failures)
@@ -110,6 +147,7 @@ def main() -> int:
     validate_versions(failures)
     validate_claim_ids(failures)
     validate_public_boundary(failures)
+    solo_result = validate_solo_suite(failures)
 
     if failures:
         for failure in failures:
@@ -117,6 +155,8 @@ def main() -> int:
         print(f"repository validation: FAIL ({len(failures)} error(s))")
         return 1
 
+    if solo_result:
+        print(solo_result)
     print("repository validation: PASS")
     return 0
 

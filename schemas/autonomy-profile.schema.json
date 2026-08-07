@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mj3b/trust-autonomy-evidence/schemas/autonomy-profile.schema.json",
+  "title": "Trust, Autonomy, and Evidence autonomy profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "goal_scope",
+    "action_authority",
+    "temporal_horizon",
+    "impact_radius",
+    "oversight_distance",
+    "reversibility"
+  ],
+  "properties": {
+    "goal_scope": {
+      "enum": ["narrow", "bounded", "open_ended"]
+    },
+    "action_authority": {
+      "enum": ["observe", "recommend", "execute_limited", "execute_broad"]
+    },
+    "temporal_horizon": {
+      "enum": ["single_step", "multi_step", "long_horizon"]
+    },
+    "impact_radius": {
+      "enum": ["local", "team", "institutional", "public"]
+    },
+    "oversight_distance": {
+      "enum": ["pre_action", "batched", "post_hoc", "none"]
+    },
+    "reversibility": {
+      "enum": ["reversible", "partially_reversible", "irreversible"]
+    }
+  }
+}

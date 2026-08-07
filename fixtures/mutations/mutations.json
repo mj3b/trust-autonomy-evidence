@@ -1,0 +1,135 @@
+{
+  "version": "0.2.0",
+  "mutations": [
+    {
+      "mutation_id": "TAE-MUT-001",
+      "base_case_id": "TAE-SYN-001",
+      "purpose": "Post-action evidence must defeat pre-action access.",
+      "changes": [
+        {"path": "control_signals.access", "value": "post_action"}
+      ],
+      "expected_deltas": [
+        {"assessment": "control", "field": "access", "from": "supported", "to": "unsupported"}
+      ]
+    },
+    {
+      "mutation_id": "TAE-MUT-002",
+      "base_case_id": "TAE-SYN-001",
+      "purpose": "An advisory role must defeat exercised control authority.",
+      "changes": [
+        {"path": "control_signals.authority", "value": "advisory_only"}
+      ],
+      "expected_deltas": [
+        {"assessment": "control", "field": "authority", "from": "supported", "to": "unsupported"}
+      ]
+    },
+    {
+      "mutation_id": "TAE-MUT-003",
+      "base_case_id": "TAE-SYN-001",
+      "purpose": "Ineffective institutional authority must weaken the trust proposition.",
+      "changes": [
+        {"path": "trust_signals.human_authority", "value": "ineffective"}
+      ],
+      "expected_deltas": [
+        {"assessment": "trust", "field": "human_authority", "from": "supported", "to": "unsupported"}
+      ]
+    },
+    {
+      "mutation_id": "TAE-MUT-004",
+      "base_case_id": "TAE-SYN-001",
+      "purpose": "Mutable records must defeat the integrity proposition.",
+      "changes": [
+        {"path": "trust_signals.integrity", "value": "mutable"}
+      ],
+      "expected_deltas": [
+        {"assessment": "trust", "field": "integrity", "from": "supported", "to": "unsupported"}
+      ]
+    },
+    {
+      "mutation_id": "TAE-MUT-005",
+      "base_case_id": "TAE-SYN-001",
+      "purpose": "A procedure without completed correction must reduce correction support.",
+      "changes": [
+        {"path": "trust_signals.harm_correction", "value": "procedure"},
+        {"path": "control_signals.correction", "value": "procedure"}
+      ],
+      "expected_deltas": [
+        {"assessment": "control", "field": "correction", "from": "supported", "to": "partially_supported"},
+        {"assessment": "trust", "field": "harm_correction", "from": "supported", "to": "partially_supported"}
+      ]
+    },
+    {
+      "mutation_id": "TAE-MUT-006",
+      "base_case_id": "TAE-SYN-001",
+      "purpose": "Bypassed monitoring must defeat the monitoring proposition.",
+      "changes": [
+        {"path": "trust_signals.monitoring", "value": "bypassed"}
+      ],
+      "expected_deltas": [
+        {"assessment": "trust", "field": "monitoring", "from": "supported", "to": "unsupported"}
+      ]
+    },
+    {
+      "mutation_id": "TAE-MUT-007",
+      "base_case_id": "TAE-SYN-001",
+      "purpose": "Changing the title must leave every assessment invariant.",
+      "changes": [
+        {"path": "title", "value": "Renamed complete control case"}
+      ],
+      "expected_deltas": []
+    },
+    {
+      "mutation_id": "TAE-MUT-008",
+      "base_case_id": "TAE-SYN-008",
+      "purpose": "Changing the reported outcome must leave process assessments invariant.",
+      "changes": [
+        {"path": "context.outcome", "value": "failure"}
+      ],
+      "expected_deltas": []
+    },
+    {
+      "mutation_id": "TAE-MUT-009",
+      "base_case_id": "TAE-SYN-001",
+      "purpose": "Changing impact radius must alter the autonomy profile without changing evidence assessments.",
+      "changes": [
+        {"path": "autonomy.impact_radius", "value": "public"}
+      ],
+      "expected_deltas": []
+    },
+    {
+      "mutation_id": "TAE-MUT-010",
+      "base_case_id": "TAE-SYN-001",
+      "purpose": "Missing source completeness evidence must produce an indeterminate finding.",
+      "changes": [
+        {"path": "trust_signals.evidence_completeness", "value": "missing"}
+      ],
+      "expected_deltas": [
+        {"assessment": "trust", "field": "evidence_completeness", "from": "supported", "to": "indeterminate"}
+      ]
+    },
+    {
+      "mutation_id": "TAE-MUT-011",
+      "base_case_id": "TAE-SYN-001",
+      "purpose": "Failed remediation must defeat the repair finding.",
+      "changes": [
+        {"path": "control_signals.repair", "value": "failed"}
+      ],
+      "expected_deltas": [
+        {"assessment": "control", "field": "repair", "from": "supported", "to": "unsupported"}
+      ]
+    },
+    {
+      "mutation_id": "TAE-MUT-012",
+      "base_case_id": "TAE-SYN-001",
+      "purpose": "Unchanged governance after failure must defeat institutional learning findings.",
+      "changes": [
+        {"path": "trust_signals.governance_update", "value": "unchanged_after_failure"},
+        {"path": "control_signals.reform", "value": "unchanged"}
+      ],
+      "expected_deltas": [
+        {"assessment": "control", "field": "reform", "from": "supported", "to": "unsupported"},
+        {"assessment": "trust", "field": "governance_update", "from": "supported", "to": "unsupported"}
+      ]
+    }
+  ]
+}

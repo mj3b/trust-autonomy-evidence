@@ -1,7 +1,7 @@
 # Trust, Autonomy, and Evidence
 
 [![Status: Working Research](https://img.shields.io/badge/status-working%20research-5b6cff)](RESEARCH_STATUS.md)
-[![Version: 0.1.0](https://img.shields.io/badge/version-0.1.0-blue)](CHANGELOG.md)
+[![Version: 0.2.0](https://img.shields.io/badge/version-0.2.0-blue)](CHANGELOG.md)
 [![Validation](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml/badge.svg)](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0001--8121--2878-brightgreen)](https://orcid.org/0009-0001-8121-2878)
@@ -18,14 +18,15 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 ## Current contribution
 
-Version 0.1.0 contributes four connected artifacts:
+Version 0.2.0 contributes five connected artifacts:
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
 3. A seven-level evidence ladder from assertion through longitudinal accountability.
 4. A documentary test for practical human control across access, comprehension, authority, feasibility, exercise, effect, correction, repair, and reform.
+5. A solo-validation suite containing 12 synthetic cases, 252 prespecified determinations, 12 mutation tests, three invariance tests, and sealed oracle artifacts.
 
-These artifacts organize evidence claims. They have not been validated as predictors of safer decisions or better institutional outcomes.
+All 252 determinations and 12 mutation tests pass under the committed v0.2.0 contract. The result establishes deterministic behavior for the included fixtures. It does not establish independent reliability, field validity, institutional effectiveness, or improved outcomes.
 
 ## Repository map
 
@@ -38,16 +39,26 @@ trust-autonomy-evidence/
 ├── SOURCES.md
 ├── CITATION.cff
 ├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── GOVERNANCE.md
 ├── LICENSE
+├── requirements-dev.txt
 ├── scripts/
 │   └── validate_repository.py
+├── schemas/
+├── fixtures/
+├── oracles/
+├── assessments/
+├── analysis/
+├── reports/
 ├── research/
 │   └── trust-autonomy-and-evidence.md
 ├── evidence/
 │   └── trust-evidence-register.md
 ├── protocols/
 │   ├── independent-review-protocol.md
-│   └── practical-human-control-test.md
+│   ├── practical-human-control-test.md
+│   └── solo-validation-protocol.md
 ├── cases/
 │   └── README.md
 └── mappings/
@@ -59,19 +70,20 @@ trust-autonomy-evidence/
 
 ## How to read the repository
 
-Start with [Trust, Autonomy, and Evidence](research/trust-autonomy-and-evidence.md). Use the [Trust Evidence Register](evidence/trust-evidence-register.md) to translate a reliance claim into inspectable evidence. Read [CLAIMS.md](CLAIMS.md) and [LIMITATIONS.md](LIMITATIONS.md) before applying the model.
+Start with [Trust, Autonomy, and Evidence](research/trust-autonomy-and-evidence.md). Use the [Trust Evidence Register](evidence/trust-evidence-register.md) to translate a reliance claim into inspectable evidence. Read the [solo-validation report](reports/solo-validation-v0.2.0.md), [CLAIMS.md](CLAIMS.md), and [LIMITATIONS.md](LIMITATIONS.md) before applying the model.
 
-The two protocols define future evaluation work. The mapping files show how this project relates to existing public artifacts without transferring claims among them.
+The three protocols define solo validation, practical-control assessment, and future independent evaluation. The mapping files show how this project relates to existing public artifacts without transferring claims among them.
 
 ## Repository validation
 
-Run the dependency-free validator with Python 3.10 or later:
+Install the pinned development dependency and run the validator with Python 3.10 or later:
 
 ```bash
+python -m pip install -r requirements-dev.txt
 python scripts/validate_repository.py
 ```
 
-The validator checks required files, internal Markdown links, version alignment, duplicate claim identifiers, and exclusion of private candidacy language. A successful run ends with `repository validation: PASS`.
+The validator checks required files, internal Markdown links, version alignment, duplicate claim identifiers, exclusion of private candidacy language, JSON Schema conformance, sealed hashes, 252 oracle comparisons, 12 mutation tests, and generated-output freshness. A successful run ends with `repository validation: PASS`.
 
 ## Research boundaries
 
@@ -88,7 +100,7 @@ Each proposition requires evidence from the deployment, institution, decision, a
 
 ## Contribution policy
 
-Contributions should identify the proposition being changed, the evidence supporting the change, the limits of that evidence, and the conditions that would reverse the conclusion. Case material must exclude personal, confidential, and institutionally restricted information unless the contributor has documented authority to publish it.
+Contributions should identify the proposition being changed, the evidence supporting the change, the limits of that evidence, and the conditions that would reverse the conclusion. See [CONTRIBUTING.md](CONTRIBUTING.md) and [GOVERNANCE.md](GOVERNANCE.md). Case material must exclude personal, confidential, and institutionally restricted information unless the contributor has documented authority to publish it.
 
 ## Citation
 

@@ -1,0 +1,473 @@
+{
+  "version": "0.2.0",
+  "cases": [
+    {
+      "case_id": "TAE-SYN-001",
+      "title": "Complete pre-action control chain",
+      "purpose": "Positive boundary case with direct evidence across every declared proposition.",
+      "context": {"outcome": "success"},
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "institutional",
+        "oversight_distance": "pre_action",
+        "reversibility": "partially_reversible"
+      },
+      "trust_signals": {
+        "identity": "verified",
+        "scope": "enforced",
+        "capability": "repeated_relevant",
+        "reliability": "conditional_distribution",
+        "uncertainty": "calibrated",
+        "evidence_completeness": "independently_checked",
+        "monitoring": "full_pipeline",
+        "human_authority": "exercised",
+        "integrity": "protected",
+        "reconstructability": "independently_reconstructed",
+        "harm_correction": "completed",
+        "governance_update": "revised_retested"
+      },
+      "control_signals": {
+        "access": "pre_action_complete",
+        "comprehension": "independent_challenge",
+        "authority": "exercised",
+        "feasibility": "tested",
+        "exercise": "intervention",
+        "effect": "execution_changed",
+        "correction": "completed",
+        "repair": "completed",
+        "reform": "revised_retested"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-002",
+      "title": "Design evidence without operational proof",
+      "purpose": "Partial boundary case containing specifications and assigned responsibilities without exercised controls.",
+      "context": {"outcome": "unknown"},
+      "autonomy": {
+        "goal_scope": "narrow",
+        "action_authority": "recommend",
+        "temporal_horizon": "single_step",
+        "impact_radius": "local",
+        "oversight_distance": "pre_action",
+        "reversibility": "reversible"
+      },
+      "trust_signals": {
+        "identity": "declared",
+        "scope": "documented",
+        "capability": "single_relevant",
+        "reliability": "aggregate_only",
+        "uncertainty": "declared",
+        "evidence_completeness": "manifest_with_gaps",
+        "monitoring": "partial_pipeline",
+        "human_authority": "assigned",
+        "integrity": "timestamped",
+        "reconstructability": "partial_record",
+        "harm_correction": "procedure",
+        "governance_update": "review_trigger"
+      },
+      "control_signals": {
+        "access": "pre_action_partial",
+        "comprehension": "materials_only",
+        "authority": "assigned",
+        "feasibility": "nominal",
+        "exercise": "attestation_only",
+        "effect": "claimed_change",
+        "correction": "procedure",
+        "repair": "assigned",
+        "reform": "review_trigger"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-003",
+      "title": "Missing evidence packet",
+      "purpose": "Indeterminate boundary case in which the records do not support a classification.",
+      "context": {"outcome": "unknown"},
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "recommend",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "team",
+        "oversight_distance": "batched",
+        "reversibility": "reversible"
+      },
+      "trust_signals": {
+        "identity": "missing",
+        "scope": "missing",
+        "capability": "missing",
+        "reliability": "missing",
+        "uncertainty": "missing",
+        "evidence_completeness": "missing",
+        "monitoring": "missing",
+        "human_authority": "missing",
+        "integrity": "missing",
+        "reconstructability": "missing",
+        "harm_correction": "missing",
+        "governance_update": "missing"
+      },
+      "control_signals": {
+        "access": "missing",
+        "comprehension": "missing",
+        "authority": "missing",
+        "feasibility": "missing",
+        "exercise": "missing",
+        "effect": "missing",
+        "correction": "missing",
+        "repair": "missing",
+        "reform": "missing"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-004",
+      "title": "Contradicted evidence packet",
+      "purpose": "Negative boundary case containing direct evidence that each declared condition failed.",
+      "context": {"outcome": "failure"},
+      "autonomy": {
+        "goal_scope": "open_ended",
+        "action_authority": "execute_broad",
+        "temporal_horizon": "long_horizon",
+        "impact_radius": "public",
+        "oversight_distance": "none",
+        "reversibility": "irreversible"
+      },
+      "trust_signals": {
+        "identity": "contradicted",
+        "scope": "violated",
+        "capability": "contradicted",
+        "reliability": "contradicted",
+        "uncertainty": "misleading",
+        "evidence_completeness": "contradicted",
+        "monitoring": "bypassed",
+        "human_authority": "ineffective",
+        "integrity": "mutable",
+        "reconstructability": "retrospective",
+        "harm_correction": "failed",
+        "governance_update": "unchanged_after_failure"
+      },
+      "control_signals": {
+        "access": "post_action",
+        "comprehension": "automation_bias",
+        "authority": "advisory_only",
+        "feasibility": "blocked",
+        "exercise": "automatic_approval",
+        "effect": "no_change",
+        "correction": "inaccessible",
+        "repair": "failed",
+        "reform": "unchanged"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-005",
+      "title": "Formal authority without practical force",
+      "purpose": "Tests whether assigned authority is prevented from satisfying feasibility, exercise, and effect.",
+      "context": {"outcome": "failure"},
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "institutional",
+        "oversight_distance": "batched",
+        "reversibility": "partially_reversible"
+      },
+      "trust_signals": {
+        "identity": "verified",
+        "scope": "enforced",
+        "capability": "repeated_relevant",
+        "reliability": "conditional_distribution",
+        "uncertainty": "calibrated",
+        "evidence_completeness": "manifest_with_gaps",
+        "monitoring": "partial_pipeline",
+        "human_authority": "assigned",
+        "integrity": "protected",
+        "reconstructability": "complete_record",
+        "harm_correction": "procedure",
+        "governance_update": "review_trigger"
+      },
+      "control_signals": {
+        "access": "pre_action_partial",
+        "comprehension": "materials_only",
+        "authority": "assigned",
+        "feasibility": "blocked",
+        "exercise": "automatic_approval",
+        "effect": "no_change",
+        "correction": "procedure",
+        "repair": "assigned",
+        "reform": "review_trigger"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-006",
+      "title": "Alert delivered after execution",
+      "purpose": "Tests whether post-action evidence defeats access and effective intervention despite strong surrounding controls.",
+      "context": {"outcome": "failure"},
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "institutional",
+        "oversight_distance": "post_hoc",
+        "reversibility": "partially_reversible"
+      },
+      "trust_signals": {
+        "identity": "verified",
+        "scope": "enforced",
+        "capability": "repeated_relevant",
+        "reliability": "conditional_distribution",
+        "uncertainty": "calibrated",
+        "evidence_completeness": "independently_checked",
+        "monitoring": "partial_pipeline",
+        "human_authority": "ineffective",
+        "integrity": "protected",
+        "reconstructability": "complete_record",
+        "harm_correction": "completed",
+        "governance_update": "revised_retested"
+      },
+      "control_signals": {
+        "access": "post_action",
+        "comprehension": "independent_challenge",
+        "authority": "assigned",
+        "feasibility": "blocked",
+        "exercise": "documented_reasoning",
+        "effect": "no_change",
+        "correction": "completed",
+        "repair": "completed",
+        "reform": "revised_retested"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-007",
+      "title": "Mutable records with exercised control",
+      "purpose": "Separates integrity failure from evidence of exercised intervention.",
+      "context": {"outcome": "success"},
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "team",
+        "oversight_distance": "pre_action",
+        "reversibility": "reversible"
+      },
+      "trust_signals": {
+        "identity": "verified",
+        "scope": "enforced",
+        "capability": "repeated_relevant",
+        "reliability": "conditional_distribution",
+        "uncertainty": "calibrated",
+        "evidence_completeness": "manifest_with_gaps",
+        "monitoring": "full_pipeline",
+        "human_authority": "exercised",
+        "integrity": "mutable",
+        "reconstructability": "partial_record",
+        "harm_correction": "procedure",
+        "governance_update": "review_trigger"
+      },
+      "control_signals": {
+        "access": "pre_action_complete",
+        "comprehension": "independent_challenge",
+        "authority": "exercised",
+        "feasibility": "tested",
+        "exercise": "intervention",
+        "effect": "execution_changed",
+        "correction": "procedure",
+        "repair": "assigned",
+        "reform": "review_trigger"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-008",
+      "title": "Successful outcome with weak process evidence",
+      "purpose": "Tests that a successful outcome does not upgrade process classifications.",
+      "context": {"outcome": "success"},
+      "autonomy": {
+        "goal_scope": "narrow",
+        "action_authority": "recommend",
+        "temporal_horizon": "single_step",
+        "impact_radius": "local",
+        "oversight_distance": "pre_action",
+        "reversibility": "reversible"
+      },
+      "trust_signals": {
+        "identity": "declared",
+        "scope": "documented",
+        "capability": "single_relevant",
+        "reliability": "aggregate_only",
+        "uncertainty": "missing",
+        "evidence_completeness": "manifest_with_gaps",
+        "monitoring": "missing",
+        "human_authority": "assigned",
+        "integrity": "timestamped",
+        "reconstructability": "partial_record",
+        "harm_correction": "procedure",
+        "governance_update": "missing"
+      },
+      "control_signals": {
+        "access": "pre_action_partial",
+        "comprehension": "materials_only",
+        "authority": "assigned",
+        "feasibility": "nominal",
+        "exercise": "attestation_only",
+        "effect": "claimed_change",
+        "correction": "procedure",
+        "repair": "assigned",
+        "reform": "missing"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-009",
+      "title": "Failed outcome with strong process evidence",
+      "purpose": "Tests that a failed outcome does not erase demonstrated process properties.",
+      "context": {"outcome": "failure"},
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "institutional",
+        "oversight_distance": "pre_action",
+        "reversibility": "partially_reversible"
+      },
+      "trust_signals": {
+        "identity": "verified",
+        "scope": "enforced",
+        "capability": "repeated_relevant",
+        "reliability": "conditional_distribution",
+        "uncertainty": "calibrated",
+        "evidence_completeness": "independently_checked",
+        "monitoring": "full_pipeline",
+        "human_authority": "exercised",
+        "integrity": "protected",
+        "reconstructability": "independently_reconstructed",
+        "harm_correction": "completed",
+        "governance_update": "revised_retested"
+      },
+      "control_signals": {
+        "access": "pre_action_complete",
+        "comprehension": "independent_challenge",
+        "authority": "exercised",
+        "feasibility": "tested",
+        "exercise": "intervention",
+        "effect": "obligation_changed",
+        "correction": "completed",
+        "repair": "completed",
+        "reform": "revised_retested"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-010",
+      "title": "Broad autonomous action without oversight",
+      "purpose": "Tests high-autonomy conditions with bypassed monitoring and ineffective authority.",
+      "context": {"outcome": "failure"},
+      "autonomy": {
+        "goal_scope": "open_ended",
+        "action_authority": "execute_broad",
+        "temporal_horizon": "long_horizon",
+        "impact_radius": "public",
+        "oversight_distance": "none",
+        "reversibility": "irreversible"
+      },
+      "trust_signals": {
+        "identity": "verified",
+        "scope": "violated",
+        "capability": "single_relevant",
+        "reliability": "aggregate_only",
+        "uncertainty": "misleading",
+        "evidence_completeness": "manifest_with_gaps",
+        "monitoring": "bypassed",
+        "human_authority": "ineffective",
+        "integrity": "timestamped",
+        "reconstructability": "partial_record",
+        "harm_correction": "failed",
+        "governance_update": "unchanged_after_failure"
+      },
+      "control_signals": {
+        "access": "post_action",
+        "comprehension": "automation_bias",
+        "authority": "advisory_only",
+        "feasibility": "blocked",
+        "exercise": "automatic_approval",
+        "effect": "no_change",
+        "correction": "inaccessible",
+        "repair": "failed",
+        "reform": "unchanged"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-011",
+      "title": "Correction completed without institutional reform",
+      "purpose": "Separates case-level correction and repair from longitudinal governance learning.",
+      "context": {"outcome": "failure"},
+      "autonomy": {
+        "goal_scope": "bounded",
+        "action_authority": "execute_limited",
+        "temporal_horizon": "multi_step",
+        "impact_radius": "institutional",
+        "oversight_distance": "post_hoc",
+        "reversibility": "partially_reversible"
+      },
+      "trust_signals": {
+        "identity": "verified",
+        "scope": "enforced",
+        "capability": "repeated_relevant",
+        "reliability": "conditional_distribution",
+        "uncertainty": "calibrated",
+        "evidence_completeness": "independently_checked",
+        "monitoring": "full_pipeline",
+        "human_authority": "exercised",
+        "integrity": "protected",
+        "reconstructability": "independently_reconstructed",
+        "harm_correction": "completed",
+        "governance_update": "unchanged_after_failure"
+      },
+      "control_signals": {
+        "access": "pre_action_complete",
+        "comprehension": "independent_challenge",
+        "authority": "exercised",
+        "feasibility": "tested",
+        "exercise": "intervention",
+        "effect": "obligation_changed",
+        "correction": "completed",
+        "repair": "completed",
+        "reform": "unchanged"
+      }
+    },
+    {
+      "case_id": "TAE-SYN-012",
+      "title": "Bounded advisory task with downstream stages outside scope",
+      "purpose": "Tests declared outside-scope states for correction, repair, and reform in a reversible advisory case.",
+      "context": {"outcome": "success"},
+      "autonomy": {
+        "goal_scope": "narrow",
+        "action_authority": "recommend",
+        "temporal_horizon": "single_step",
+        "impact_radius": "local",
+        "oversight_distance": "pre_action",
+        "reversibility": "reversible"
+      },
+      "trust_signals": {
+        "identity": "verified",
+        "scope": "enforced",
+        "capability": "repeated_relevant",
+        "reliability": "conditional_distribution",
+        "uncertainty": "calibrated",
+        "evidence_completeness": "independently_checked",
+        "monitoring": "full_pipeline",
+        "human_authority": "exercised",
+        "integrity": "protected",
+        "reconstructability": "complete_record",
+        "harm_correction": "outside_scope",
+        "governance_update": "outside_scope"
+      },
+      "control_signals": {
+        "access": "pre_action_complete",
+        "comprehension": "independent_challenge",
+        "authority": "exercised",
+        "feasibility": "tested",
+        "exercise": "documented_reasoning",
+        "effect": "obligation_changed",
+        "correction": "outside_scope",
+        "repair": "outside_scope",
+        "reform": "outside_scope"
+      }
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 # Research Status
 
-**Version:** 0.1.0  
-**Status:** Working research repository  
+**Version:** 0.2.0
+
+**Status:** Working research repository
+
 **Status date:** 7 August 2026
 
 ## Current maturity
@@ -14,21 +16,23 @@
 | Trust evidence register | Twelve propositions with minimum and stronger evidence | Working register | Independent case applications expose omissions, ambiguity, and revision needs |
 | Practical human control test | Nine-stage documentary chain | Draft protocol | Preregistered reviewers apply it across multiple cases with preserved disagreements |
 | Independent review protocol | Frozen-case procedure and reporting requirements | Draft protocol | At least one unaffiliated team completes the protocol from public instructions |
-| Repository validation | Dependency-free script and CI workflow | Executable for declared repository checks | CI passes on the published commit |
+| Repository validation | Pinned schema dependency, executable script, and CI workflow | Executable for declared repository checks | CI passes on the published commit |
+| Solo-validation suite | 12 synthetic cases, 252 oracle comparisons, 12 mutation tests, and three invariance tests | Demonstrated for committed fixtures | New case families expose additional boundary and interaction failures |
+| Sealed oracle | SHA-256 manifest for cases, mutations, and expected classifications | Demonstrated for v0.2.0 artifacts | A later release preserves explicit migration and re-sealing records |
 | Operational validation | No published field study | Unresolved | Prospective institutional study tests whether failed conditions change action |
 | Outcome validity | No comparative outcome evidence | Unresolved | Comparative evidence links use of the architecture to declared outcomes |
 
 ## Research phase
 
-Version 0.1.0 is a synthesis and protocol-definition phase. Its claims concern the structure and traceability of the published artifacts. Claims about reliability, institutional effectiveness, legal sufficiency, safety, or harm prevention remain unresolved.
+Version 0.2.0 adds internal validation to the synthesis and protocol-definition work. Its claims concern schema conformance, deterministic fixture behavior, exact oracle agreement, and declared mutation properties. Independent reliability, public-case validity, institutional effectiveness, legal sufficiency, safety, and harm prevention remain unresolved.
 
 ## Next evidence gates
 
-1. Freeze three agent-mediated decision cases with different evidence states.
-2. Recruit at least three reviewers who did not design the model.
-3. Preserve individual classifications before adjudication.
-4. Report agreement, disagreement, ambiguity, missing evidence, and protocol deviations.
-5. Run one clean-room implementation using only public repository instructions.
+1. Freeze a source-selection rule for three publicly documented AI cases.
+2. Preserve source packets, inaccessible evidence, and selection exclusions.
+3. Reconstruct each case using the v0.2.0 contract and publish indeterminate findings.
+4. Add interaction mutations involving two individually adequate controls that fail jointly.
+5. Run one clean-room implementation when an eligible reviewer becomes available.
 6. Test one prospective or realistically simulated decision in which a failed condition can stop or alter execution.
 
 ## Versioning rule
