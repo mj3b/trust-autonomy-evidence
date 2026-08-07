@@ -1,0 +1,96 @@
+{
+  "version": "0.1.0",
+  "source_release": "0.3.0",
+  "figures": [
+    {
+      "figure_id": "FIG-1",
+      "file_stub": "fig-1-selection-and-stopping",
+      "title": "The frozen stopping rule selected three cases after five screenings",
+      "unit_of_analysis": "candidate record and screening decision",
+      "sample": "928 preserved candidate records; the first five AIID records were screened",
+      "input_files": [
+        "cases/data/candidate-search-output.json",
+        "cases/public-case-selection-register.md",
+        "figures/specifications/selection-decisions.json"
+      ],
+      "transformation": "Read collection counts and frozen candidate order, count selected and excluded decisions, and calculate unscreened candidate records as 928 minus 5.",
+      "claim_supported": "The frozen procedure filled three prespecified strata after five screenings and left the remaining candidate records unscreened.",
+      "prohibited_interpretation": "The diagram supplies no estimate of prevalence, representativeness, or exclusion rate among all 928 candidate records."
+    },
+    {
+      "figure_id": "FIG-2",
+      "file_stub": "fig-2-practical-control-chain",
+      "title": "Formal authority appears in all three cases; practical force diverges downstream",
+      "unit_of_analysis": "practical-control proposition within a public case",
+      "sample": "27 declared states from 9 propositions across 3 purposefully selected cases",
+      "input_files": [
+        "cases/TAE-PUB-001-oko-1983/assessment.json",
+        "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
+        "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json"
+      ],
+      "transformation": "Extract each practical_control state in protocol order and render the declared categorical state without assigning a numeric score.",
+      "claim_supported": "The three assessments separate assigned authority from the conditions that give authority practical force before action.",
+      "prohibited_interpretation": "The matrix supplies no frequency, effect-size, causal, reliability, or population estimate."
+    },
+    {
+      "figure_id": "FIG-3",
+      "file_stub": "fig-3-decision-paths",
+      "title": "The intervention path remains visible until public evidence runs out",
+      "unit_of_analysis": "reconstructed event within a bounded case sequence",
+      "sample": "15 source-linked events across 3 public cases",
+      "input_files": [
+        "cases/TAE-PUB-001-oko-1983/case-report.md",
+        "cases/TAE-PUB-002-patriot-zg710-2003/case-report.md",
+        "cases/TAE-PUB-003-patriot-fa18-2003/case-report.md",
+        "figures/specifications/decision-paths.json"
+      ],
+      "transformation": "Transcribe the five bounded chronology stages declared for each case and place them in relative event order.",
+      "claim_supported": "The public record identifies where a human judgment entered each sequence and where missing records constrain further inference.",
+      "prohibited_interpretation": "Horizontal spacing has no elapsed-time scale. The Tornado packet alone supplies an approximate one-minute decision window."
+    },
+    {
+      "figure_id": "FIG-4",
+      "file_stub": "fig-4-trust-evidence-states",
+      "title": "Each case leaves material trust-evidence propositions unresolved or unsupported",
+      "unit_of_analysis": "trust-evidence proposition within a public case",
+      "sample": "36 declared states from 12 propositions across 3 purposefully selected cases",
+      "input_files": [
+        "cases/TAE-PUB-001-oko-1983/assessment.json",
+        "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
+        "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json"
+      ],
+      "transformation": "Extract each trust_evidence state in register order and render the declared categorical state without assigning a numeric score.",
+      "claim_supported": "The three packets contain enough evidence for bounded findings while leaving reliability, uncertainty, integrity, and other propositions limited.",
+      "prohibited_interpretation": "The matrix supplies no aggregate trust score and no claim that one system is generally safer or more trustworthy."
+    },
+    {
+      "figure_id": "FIG-A1",
+      "file_stub": "fig-a1-mutation-response",
+      "title": "All 12 controlled mutations matched the prespecified response",
+      "unit_of_analysis": "mutation delta assertion or invariance condition",
+      "sample": "12 mutation tests containing 11 delta assertions and 3 invariance tests",
+      "input_files": [
+        "fixtures/mutations/mutations.json",
+        "assessments/generated-results.json"
+      ],
+      "transformation": "Compare expected and observed assessment deltas by mutation and field, then plot the resulting state or the preserved invariance condition.",
+      "claim_supported": "The committed assessment code changes the declared fields under the prespecified mutations and preserves three declared invariances.",
+      "prohibited_interpretation": "The test establishes internal contract behavior for author-designed fixtures. It supplies no inter-rater or field-validity estimate."
+    },
+    {
+      "figure_id": "FIG-A2",
+      "file_stub": "fig-a2-reproducibility-lineage",
+      "title": "Every plotted state traces to a frozen input or prespecified test",
+      "unit_of_analysis": "research or figure-generation artifact",
+      "sample": "11 artifact classes connected by 10 declared lineage edges",
+      "input_files": [
+        "figures/specifications/reproducibility-lineage.json",
+        "scripts/validate_repository.py",
+        "analysis/build_figures.py"
+      ],
+      "transformation": "Render the declared research and figure-generation artifact graph in process order.",
+      "claim_supported": "A reader can trace plotted states from preserved inputs through assessments, derived tables, rendered files, and freshness checks.",
+      "prohibited_interpretation": "Hashes and reproducible transformations establish integrity and traceability. They do not establish the truth or completeness of the source content."
+    }
+  ]
+}

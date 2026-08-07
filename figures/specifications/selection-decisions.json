@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "source_release": "0.3.0",
+  "screening": [
+    {
+      "order": 1,
+      "candidate_id": "AIID-27",
+      "decision_code": "INCLUDE-PRE",
+      "result": "selected",
+      "stratum": "Pre-action intervention"
+    },
+    {
+      "order": 2,
+      "candidate_id": "AIID-42",
+      "decision_code": "EX-SOURCE",
+      "result": "excluded",
+      "stratum": "None"
+    },
+    {
+      "order": 3,
+      "candidate_id": "AIID-79",
+      "decision_code": "EX-BOUNDARY",
+      "result": "excluded",
+      "stratum": "None"
+    },
+    {
+      "order": 4,
+      "candidate_id": "AIID-444",
+      "decision_code": "INCLUDE-FORCE",
+      "result": "selected",
+      "stratum": "Authority without practical force"
+    },
+    {
+      "order": 5,
+      "candidate_id": "AIID-445",
+      "decision_code": "INCLUDE-GAP",
+      "result": "selected",
+      "stratum": "Incomplete or conflicting evidence"
+    }
+  ],
+  "stopping_rule": "Stop when the first eligible case has filled each of the three prespecified strata."
+}

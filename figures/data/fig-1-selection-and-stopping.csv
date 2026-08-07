@@ -1,0 +1,11 @@
+metric,value,source
+AIID incident records,1607,candidate-search-output.json
+AIID report records,7452,candidate-search-output.json
+AIID candidate records,828,candidate-search-output.json
+OECD exported candidate records,100,candidate-search-output.json
+Preserved candidate records,928,candidate-search-output.json
+Screened records,5,selection-decisions.json
+Selected records,3,selection-decisions.json
+Excluded records,2,selection-decisions.json
+Unscreened records,923,derived: preserved minus screened
+Filled strata,3,selection-decisions.json

@@ -1,0 +1,95 @@
+{
+  "version": "0.1.0",
+  "source_release": "0.3.0",
+  "nodes": [
+    {
+      "node_id": "collections",
+      "lane": "research",
+      "order": 1,
+      "title": "Frozen collections",
+      "detail": "AIID and OECD inputs\nSHA-256 recorded"
+    },
+    {
+      "node_id": "candidates",
+      "lane": "research",
+      "order": 2,
+      "title": "Candidate search",
+      "detail": "928 candidate records\nfrozen vocabulary"
+    },
+    {
+      "node_id": "selection",
+      "lane": "research",
+      "order": 3,
+      "title": "Selection register",
+      "detail": "5 decisions\n3 strata filled"
+    },
+    {
+      "node_id": "packets",
+      "lane": "research",
+      "order": 4,
+      "title": "Case packets",
+      "detail": "3 reports and\nsource manifests"
+    },
+    {
+      "node_id": "assessments",
+      "lane": "research",
+      "order": 5,
+      "title": "Assessments",
+      "detail": "JSON states and\nevidence references"
+    },
+    {
+      "node_id": "archive",
+      "lane": "research",
+      "order": 6,
+      "title": "Release archive",
+      "detail": "v0.3.0 manifest\nZenodo DOI"
+    },
+    {
+      "node_id": "plot_inputs",
+      "lane": "figures",
+      "order": 1,
+      "title": "Plot inputs",
+      "detail": "Assessments, selection,\nmutations, lineage spec"
+    },
+    {
+      "node_id": "builder",
+      "lane": "figures",
+      "order": 2,
+      "title": "Figure builder",
+      "detail": "build_figures.py\nfixed ordering and palette"
+    },
+    {
+      "node_id": "derived",
+      "lane": "figures",
+      "order": 3,
+      "title": "Derived tables",
+      "detail": "6 CSV files\ncell-level provenance"
+    },
+    {
+      "node_id": "figures",
+      "lane": "figures",
+      "order": 4,
+      "title": "Rendered figures",
+      "detail": "6 SVG and\n6 PNG files"
+    },
+    {
+      "node_id": "validation",
+      "lane": "figures",
+      "order": 5,
+      "title": "Freshness check",
+      "detail": "Regenerate and compare\nrepository validation"
+    }
+  ],
+  "edges": [
+    {"from": "collections", "to": "candidates"},
+    {"from": "candidates", "to": "selection"},
+    {"from": "selection", "to": "packets"},
+    {"from": "packets", "to": "assessments"},
+    {"from": "assessments", "to": "archive"},
+    {"from": "plot_inputs", "to": "builder"},
+    {"from": "builder", "to": "derived"},
+    {"from": "derived", "to": "figures"},
+    {"from": "figures", "to": "validation"},
+    {"from": "assessments", "to": "plot_inputs"}
+  ]
+}

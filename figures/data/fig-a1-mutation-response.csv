@@ -1,0 +1,15 @@
+mutation_id,base_case_id,purpose,assessment,field,from,to,result
+TAE-MUT-001,TAE-SYN-001,Post-action evidence must defeat pre-action access.,control,access,supported,unsupported,pass
+TAE-MUT-002,TAE-SYN-001,An advisory role must defeat exercised control authority.,control,authority,supported,unsupported,pass
+TAE-MUT-003,TAE-SYN-001,Ineffective institutional authority must weaken the trust proposition.,trust,human_authority,supported,unsupported,pass
+TAE-MUT-004,TAE-SYN-001,Mutable records must defeat the integrity proposition.,trust,integrity,supported,unsupported,pass
+TAE-MUT-005,TAE-SYN-001,A procedure without completed correction must reduce correction support.,control,correction,supported,partially_supported,pass
+TAE-MUT-005,TAE-SYN-001,A procedure without completed correction must reduce correction support.,trust,harm_correction,supported,partially_supported,pass
+TAE-MUT-006,TAE-SYN-001,Bypassed monitoring must defeat the monitoring proposition.,trust,monitoring,supported,unsupported,pass
+TAE-MUT-007,TAE-SYN-001,Changing the title must leave every assessment invariant.,,,,invariant,pass
+TAE-MUT-008,TAE-SYN-008,Changing the reported outcome must leave process assessments invariant.,,,,invariant,pass
+TAE-MUT-009,TAE-SYN-001,Changing impact radius must alter the autonomy profile without changing evidence assessments.,,,,invariant,pass
+TAE-MUT-010,TAE-SYN-001,Missing source completeness evidence must produce an indeterminate finding.,trust,evidence_completeness,supported,indeterminate,pass
+TAE-MUT-011,TAE-SYN-001,Failed remediation must defeat the repair finding.,control,repair,supported,unsupported,pass
+TAE-MUT-012,TAE-SYN-001,Unchanged governance after failure must defeat institutional learning findings.,control,reform,supported,unsupported,pass
+TAE-MUT-012,TAE-SYN-001,Unchanged governance after failure must defeat institutional learning findings.,trust,governance_update,supported,unsupported,pass

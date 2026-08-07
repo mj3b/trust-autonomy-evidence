@@ -4,7 +4,14 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
-No unreleased changes.
+Adds a reproducible publication figure package derived from the sealed v0.3.0 and v0.2.0 artifacts.
+
+- Adds four main figures covering frozen selection, practical human control, reconstructed decision paths, and trust-evidence states.
+- Adds appendix figures for mutation response and research-to-figure reproducibility lineage.
+- Publishes six derived CSV files, six SVG files, six PNG files, and machine-readable plotting specifications.
+- Adds formal captions, transformation records, missingness treatment, and prohibited interpretations.
+- Adds a deterministic figure builder and a repository freshness check for all 18 generated artifacts.
+- Preserves every v0.3.0 case packet, assessment, hash, and release claim without alteration.
 
 ## 0.3.0, 7 August 2026
 

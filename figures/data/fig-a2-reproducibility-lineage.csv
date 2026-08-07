@@ -1,0 +1,22 @@
+record_type,node_id,lane,order,title,detail,from,to
+node,collections,research,1,Frozen collections,AIID and OECD inputs | SHA-256 recorded,,
+node,candidates,research,2,Candidate search,928 candidate records | frozen vocabulary,,
+node,selection,research,3,Selection register,5 decisions | 3 strata filled,,
+node,packets,research,4,Case packets,3 reports and | source manifests,,
+node,assessments,research,5,Assessments,JSON states and | evidence references,,
+node,archive,research,6,Release archive,v0.3.0 manifest | Zenodo DOI,,
+node,plot_inputs,figures,1,Plot inputs,"Assessments, selection, | mutations, lineage spec",,
+node,builder,figures,2,Figure builder,build_figures.py | fixed ordering and palette,,
+node,derived,figures,3,Derived tables,6 CSV files | cell-level provenance,,
+node,figures,figures,4,Rendered figures,6 SVG and | 6 PNG files,,
+node,validation,figures,5,Freshness check,Regenerate and compare | repository validation,,
+edge,,,,,,collections,candidates
+edge,,,,,,candidates,selection
+edge,,,,,,selection,packets
+edge,,,,,,packets,assessments
+edge,,,,,,assessments,archive
+edge,,,,,,plot_inputs,builder
+edge,,,,,,builder,derived
+edge,,,,,,derived,figures
+edge,,,,,,figures,validation
+edge,,,,,,assessments,plot_inputs
