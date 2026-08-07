@@ -1,7 +1,7 @@
 # Trust, Autonomy, and Evidence
 
 [![Status: Working Research](https://img.shields.io/badge/status-working%20research-5b6cff)](RESEARCH_STATUS.md)
-[![Version: 0.2.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.2.0)
+[![Version: 0.3.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21841127.svg)](https://doi.org/10.5281/zenodo.21841127)
 [![Validation](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml/badge.svg)](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
@@ -19,15 +19,18 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 ## Current contribution
 
-[Version 0.2.0](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.2.0) contributes five connected artifacts:
+[Version 0.3.0](https://github.com/mj3b/trust-autonomy-evidence/releases) contributes eight connected artifacts:
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
 3. A seven-level evidence ladder from assertion through longitudinal accountability.
 4. A documentary test for practical human control across access, comprehension, authority, feasibility, exercise, effect, correction, repair, and reform.
 5. A solo-validation suite containing 12 synthetic cases, 252 prespecified determinations, 12 mutation tests, three invariance tests, and sealed oracle artifacts.
+6. A frozen public-case selection protocol with preserved candidate inputs, search output, exclusions, and selection decisions.
+7. Three public evidence packets covering a successful pre-action intervention, formal authority without practical force, and an action sequence whose cause remains indeterminate.
+8. A frozen research agenda focused on practical authority, evidence sufficiency, and interacting control conditions.
 
-All 252 determinations and 12 mutation tests pass under the committed v0.2.0 contract. The result establishes deterministic behavior for the included fixtures. It does not establish independent reliability, field validity, institutional effectiveness, or improved outcomes.
+All 252 determinations and 12 mutation tests pass under the committed contract. The v0.3.0 validator also checks source references, packet hashes, frozen selection invariants, and three cross-case control interactions. These results establish deterministic behavior and traceable bounded assessments for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, or improved outcomes.
 
 ## Repository map
 
@@ -42,25 +45,28 @@ All 252 determinations and 12 mutation tests pass under the committed v0.2.0 con
 | [`CHANGELOG.md`](CHANGELOG.md) | Tracks material changes to concepts, protocols, claims, and evidence requirements. |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`GOVERNANCE.md`](GOVERNANCE.md) | Define contribution evidence, review rules, decision authority, and change records. |
 | [`research/`](research/) | Contains the main conceptual paper on justified reliance, autonomy, and practical control. |
+| [`research/frozen-research-agenda.md`](research/frozen-research-agenda.md) | Freezes three research topics and one project question for the next public-case cycle. |
 | [`evidence/`](evidence/) | Contains the trust evidence register that converts reliance claims into inspectable records. |
 | [`protocols/`](protocols/) | Defines solo validation, independent review, and practical-control assessment procedures. |
 | [`protocols/public-case-reconstruction-protocol.md`](protocols/public-case-reconstruction-protocol.md) | Freezes the source cutoff, candidate pools, eligibility rules, screening order, and reconstruction procedure before case selection. |
-| [`cases/`](cases/) | Specifies the public case-submission contract and admissibility requirements. |
-| [`cases/public-case-selection-register.md`](cases/public-case-selection-register.md) | Preserves the empty preregistration state and every later inclusion or exclusion in screening order. |
-| [`schemas/`](schemas/) | Contains five JSON Schemas that define the machine-readable assessment contracts. |
+| [`cases/`](cases/) | Publishes three case packets, their provenance manifests, assessments, hashes, and admissibility requirements. |
+| [`cases/public-case-selection-register.md`](cases/public-case-selection-register.md) | Preserves the frozen collection hashes and every inclusion or exclusion in screening order. |
+| [`cases/data/candidate-search-output.json`](cases/data/candidate-search-output.json) | Preserves the deterministic search result from the two candidate collections without redistributing article text. |
+| [`schemas/`](schemas/) | Contains seven JSON Schemas defining synthetic and public-case assessment contracts. |
 | [`fixtures/`](fixtures/) | Contains 12 synthetic cases and the controlled mutation suite. |
 | [`oracles/`](oracles/) | Stores prespecified expected decisions and the SHA-256 manifest that seals them. |
 | [`analysis/`](analysis/) | Implements the deterministic assessment logic and solo-validation runner. |
 | [`assessments/`](assessments/) | Stores generated machine-readable assessment results. |
-| [`reports/`](reports/) | Publishes the human-readable solo-validation result and evidence boundary. |
-| [`scripts/`](scripts/) | Contains the repository validator used locally and in GitHub Actions. |
+| [`reports/`](reports/) | Publishes the solo-validation and three-case reconstruction results with explicit claim boundaries. |
+| [`scripts/`](scripts/) | Contains candidate-search, packet-sealing, release-manifest, and repository-validation utilities. |
+| [`release/`](release/) | Seals the v0.3.0 research artifacts and their SHA-256 digests. |
 | [`mappings/`](mappings/) | Relates this work to GDI, HIT, CDFI, and CDCF governance artifacts. |
 | [`.github/`](.github/) | Defines automated validation, the pull-request checklist, and structured issue forms. |
 | [`requirements-dev.txt`](requirements-dev.txt) and [`LICENSE`](LICENSE) | Pin the validation dependency and state the Apache-2.0 license. |
 
 ## How to read the repository
 
-Start with [Trust, Autonomy, and Evidence](research/trust-autonomy-and-evidence.md). Use the [Trust Evidence Register](evidence/trust-evidence-register.md) to translate a reliance claim into inspectable evidence. Read the [solo-validation report](reports/solo-validation-v0.2.0.md), [CLAIMS.md](CLAIMS.md), and [LIMITATIONS.md](LIMITATIONS.md) before applying the model.
+Start with [Trust, Autonomy, and Evidence](research/trust-autonomy-and-evidence.md). Use the [Trust Evidence Register](evidence/trust-evidence-register.md) to translate a reliance claim into inspectable evidence. Read the [public-case report](reports/public-case-reconstruction-v0.3.0.md), [CLAIMS.md](CLAIMS.md), and [LIMITATIONS.md](LIMITATIONS.md) before applying the model.
 
 The four protocols define solo validation, public-case reconstruction, practical-control assessment, and future independent evaluation. The public-case selection register must record its freeze commit before candidate screening begins. The mapping files show how this project relates to existing public artifacts without transferring claims among them.
 
@@ -73,7 +79,7 @@ python -m pip install -r requirements-dev.txt
 python scripts/validate_repository.py
 ```
 
-The validator checks required files, internal Markdown links, version alignment, duplicate claim identifiers, exclusion of private candidacy language, JSON Schema conformance, sealed hashes, 252 oracle comparisons, 12 mutation tests, and generated-output freshness. A successful run ends with `repository validation: PASS`.
+The validator checks required files, internal Markdown links, version alignment, duplicate claim identifiers, exclusion of private candidacy language, JSON Schema conformance, source references, sealed packet and release hashes, selection invariants, three public-case interactions, 252 oracle comparisons, 12 mutation tests, and generated-output freshness. A successful run ends with `repository validation: PASS`.
 
 ## Research boundaries
 
@@ -94,11 +100,11 @@ Contributions should identify the proposition being changed, the evidence suppor
 
 ## Citation
 
-Version 0.2.0 has a fixed Zenodo record:
+Version 0.3.0 is prepared for a fixed Zenodo record. Until its version-specific DOI is issued, use the all-versions DOI:
 
-> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.2.0) [Computer software]. Zenodo. [https://doi.org/10.5281/zenodo.21841128](https://doi.org/10.5281/zenodo.21841128)
+> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.3.0) [Computer software]. Zenodo. [https://doi.org/10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127)
 
-Use [10.5281/zenodo.21841128](https://doi.org/10.5281/zenodo.21841128) to cite this exact release. The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata appears in [CITATION.cff](CITATION.cff).
+The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata appears in [CITATION.cff](CITATION.cff). The release notes will record the version-specific DOI when Zenodo issues it.
 
 ## Author
 

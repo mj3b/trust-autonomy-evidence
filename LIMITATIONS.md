@@ -28,6 +28,16 @@ Mutation tests isolate selected evidence changes. Real deployments may contain i
 
 The model has not been validated across sectors, cultures, legal systems, system architectures, or levels of consequence. Evidence sufficient for a reversible internal workflow may be inadequate for healthcare, employment, finance, public benefits, security, or other high-consequence settings.
 
+## Public-case limits
+
+Version 0.3.0 contains three retrospectively reconstructed cases selected from public incident collections. The same author designed the protocol, screened candidates, chose source interpretations, and made the assessments. Freezing and hashing constrain later drift, while they do not supply independent judgment.
+
+Two cases concern the same Patriot system family and operating period. Their paired comparison helps isolate differences in public evidence and control conditions. It does not represent other defense systems, institutions, or present-day AI deployments.
+
+Oko and Patriot are included under a functional, historically neutral definition of an AI system that covers machine-based inference and knowledge-based approaches. Their architectures differ materially from current learned models and agents. Transfer to current systems requires mechanism-specific evidence.
+
+The public record is uneven. Retrospective interviews support the Oko sequence because contemporaneous Soviet records remain unavailable. Classified or unavailable U.S. records constrain both Patriot reconstructions. An indeterminate finding records that limit and should not be read as evidence that an event did or did not occur.
+
 ## Operational validity
 
 The presence of monitoring, review, appeal, or stop authority does not establish that those controls work under time pressure, staffing limits, organizational incentives, or irreversible execution. Operational claims require records of exercised controls and downstream effects.

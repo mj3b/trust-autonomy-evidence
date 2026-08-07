@@ -1,6 +1,6 @@
 # Research Status
 
-**Version:** 0.2.0
+**Version:** 0.3.0
 
 **Status:** Working research repository
 
@@ -16,7 +16,9 @@
 | Trust evidence register | Twelve propositions with minimum and stronger evidence | Working register | Independent case applications expose omissions, ambiguity, and revision needs |
 | Practical human control test | Nine-stage documentary chain | Draft protocol | Preregistered reviewers apply it across multiple cases with preserved disagreements |
 | Independent review protocol | Frozen-case procedure and reporting requirements | Draft protocol | At least one unaffiliated team completes the protocol from public instructions |
-| Public-case reconstruction protocol | Frozen cutoff, candidate collections, eligibility rules, screening order, source-packet contract, and empty selection register | Selection method frozen at its first `main` commit | Three cases selected and reconstructed without changing the frozen procedure |
+| Public-case reconstruction protocol | Frozen cutoff, candidate collections, eligibility rules, screening order, and source-packet contract | Applied without changing the frozen procedure | A later replication reproduces the screening path from preserved inputs |
+| Public-case packets | Three source manifests, assessments, reports, and packet hashes | Demonstrated for selected public evidence | Independent reconstruction tests source sufficiency and classification stability |
+| Public-case interaction checks | Successful intervention, authority without practical force, and missing-evidence boundary | Executable for the three included packets | New case families test additional control interactions |
 | Repository validation | Pinned schema dependency, executable script, and CI workflow | Executable for declared repository checks | CI passes on the published commit |
 | Solo-validation suite | 12 synthetic cases, 252 oracle comparisons, 12 mutation tests, and three invariance tests | Demonstrated for committed fixtures | New case families expose additional boundary and interaction failures |
 | Sealed oracle | SHA-256 manifest for cases, mutations, and expected classifications | Demonstrated for v0.2.0 artifacts | A later release preserves explicit migration and re-sealing records |
@@ -25,17 +27,15 @@
 
 ## Research phase
 
-Version 0.2.0 adds internal validation to the synthesis and protocol-definition work. Its claims concern schema conformance, deterministic fixture behavior, exact oracle agreement, and declared mutation properties. Independent reliability, public-case validity, institutional effectiveness, legal sufficiency, safety, and harm prevention remain unresolved.
+Version 0.3.0 adds three public-case reconstructions to the internal validation work. Its claims concern frozen selection, source traceability, schema conformance, packet integrity, bounded case findings, deterministic fixture behavior, and declared interaction properties. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, and harm prevention remain unresolved.
 
 ## Next evidence gates
 
-1. Record the public-case protocol's first `main` commit in the empty selection register.
-2. Retrieve and hash the two frozen candidate collections.
-3. Preserve every screened inclusion, exclusion, inaccessible source, and replacement.
-4. Reconstruct the first eligible case in each of the three prespecified strata using the v0.2.0 contract.
-5. Add interaction mutations involving two individually adequate controls that fail jointly.
-6. Run one clean-room implementation when an eligible reviewer becomes available.
-7. Test one prospective or realistically simulated decision in which a failed condition can stop or alter execution.
+1. Reproduce the five screening decisions from the preserved search output and source manifests.
+2. Add a new frozen case family that tests a different institution, sector, and system architecture.
+3. Add adversarial source perturbations involving dependent reports, altered timestamps, and missing logs.
+4. Run one clean-room implementation when an eligible reviewer becomes available.
+5. Test one prospective or realistically simulated decision in which a failed condition can stop or alter execution.
 
 ## Versioning rule
 
