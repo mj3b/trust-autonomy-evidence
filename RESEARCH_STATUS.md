@@ -1,6 +1,6 @@
 # Research Status
 
-**Version:** 0.3.0
+**Version:** 0.4.0
 
 **Status:** Working research repository
 
@@ -19,7 +19,7 @@
 | Public-case reconstruction protocol | Frozen cutoff, candidate collections, eligibility rules, screening order, and source-packet contract | Applied without changing the frozen procedure | A later replication reproduces the screening path from preserved inputs |
 | Public-case packets | Three source manifests, assessments, reports, and packet hashes | Demonstrated for selected public evidence | Independent reconstruction tests source sufficiency and classification stability |
 | Public-case interaction checks | Successful intervention, authority without practical force, and missing-evidence boundary | Executable for the three included packets | New case families test additional control interactions |
-| Publication figure set | Four main figures, two appendix figures, six derived CSV files, SVG and PNG outputs, and a derived-data and artifact-integrity check | Unreleased package derived from existing artifacts | A paper draft uses the registered captions and preserves every interpretation boundary |
+| Publication figure set | Four main figures, two appendix figures, six derived CSV files, SVG and PNG outputs, and a derived-data and artifact-integrity check | Released in v0.4.0 | A paper draft uses the registered captions and preserves every interpretation boundary |
 | Repository validation | Pinned schema dependency, executable script, and CI workflow | Executable for declared repository checks | CI passes on the published commit |
 | Solo-validation suite | 12 synthetic cases, 252 oracle comparisons, 12 mutation tests, and three invariance tests | Demonstrated for committed fixtures | New case families expose additional boundary and interaction failures |
 | Sealed oracle | SHA-256 manifest for cases, mutations, and expected classifications | Demonstrated for v0.2.0 artifacts | A later release preserves explicit migration and re-sealing records |
@@ -28,7 +28,7 @@
 
 ## Research phase
 
-Version 0.3.0 adds three public-case reconstructions to the internal validation work. Its claims concern frozen selection, source traceability, schema conformance, packet integrity, bounded case findings, deterministic fixture behavior, and declared interaction properties. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, and harm prevention remain unresolved.
+Version 0.4.0 adds a publication figure package to the frozen v0.3.0 public-case reconstructions and v0.2.0 solo-validation artifacts. Its claims concern traceable transformation, exact derived data, artifact integrity, bounded cross-case comparison, repeatable fixture behavior, and declared interaction properties. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, and harm prevention remain unresolved.
 
 ## Next evidence gates
 

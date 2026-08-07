@@ -1,0 +1,157 @@
+{
+  "version": "0.4.0",
+  "created": "2026-08-07",
+  "hash_algorithm": "SHA-256",
+  "artifacts": [
+    {
+      "path": "release/v0.3.0-manifest.json",
+      "bytes": 4238,
+      "sha256": "cd37eadb95ef849d14b6a530220f3bec4d0200fac1492cdeff81f12a06ec9a8d"
+    },
+    {
+      "path": "analysis/build_figures.py",
+      "bytes": 39725,
+      "sha256": "f4ac5f6cb733997a1fb18e678a44db4dc3f5f5e9e68de9c004e977e4ecae7b97"
+    },
+    {
+      "path": "reports/figure-methods.md",
+      "bytes": 8291,
+      "sha256": "7e667dbd16b53b0c6feb4e9d2a495e3197f79cff5299b85d0efec3dfa0cf1002"
+    },
+    {
+      "path": "figures/README.md",
+      "bytes": 7536,
+      "sha256": "64cbff2fa74e252e124ef6fc5aef4ebcaa6f0a2cb0253cf94ff7ecaa00625ed4"
+    },
+    {
+      "path": "figures/manifest.json",
+      "bytes": 5903,
+      "sha256": "ba7244e66572b733d0c2d50b2758602ff37168f3044227eb208b22b9ecd182e5"
+    },
+    {
+      "path": "figures/specifications/figure-register.json",
+      "bytes": 6201,
+      "sha256": "0c196118d3d7e6b84926c9d32e7097a77b637763495a0a6a1051c9d105247952"
+    },
+    {
+      "path": "figures/specifications/selection-decisions.json",
+      "bytes": 1031,
+      "sha256": "e9cae3c028c1660274414db7461c9ac1576eedd19afbd28508086f6b5a37523f"
+    },
+    {
+      "path": "figures/specifications/decision-paths.json",
+      "bytes": 3431,
+      "sha256": "ceadbf1ece47cb3878a081a35abac8af7127f9bf1ec0d65d48fe28e4042cc680"
+    },
+    {
+      "path": "figures/specifications/reproducibility-lineage.json",
+      "bytes": 2457,
+      "sha256": "615e8d63dfe6234bcbc56e646ca0aa60632946e1ac6c8d5c8d7c0f0300c55e3f"
+    },
+    {
+      "path": "figures/data/fig-1-selection-and-stopping.csv",
+      "bytes": 542,
+      "sha256": "9e680be4341ef43a3306061c0d196c9c802673016ad89f3ff5e8789f024449d4"
+    },
+    {
+      "path": "figures/data/fig-2-practical-control-chain.csv",
+      "bytes": 2598,
+      "sha256": "fda745556f8b0186aed98a7598de36ffce3734f3e71037cdd2544bccd8c4d4ce"
+    },
+    {
+      "path": "figures/data/fig-3-decision-paths.csv",
+      "bytes": 2632,
+      "sha256": "3c8a6e5587e8e09e202d913d6a129ba2e73947cfde61b2e95c4376abb5e85444"
+    },
+    {
+      "path": "figures/data/fig-4-trust-evidence-states.csv",
+      "bytes": 3736,
+      "sha256": "edd3850ebd90b327b7aabdba4d955fc9bd2a306abfddfb4503b18bf5d600d726"
+    },
+    {
+      "path": "figures/data/fig-a1-mutation-response.csv",
+      "bytes": 1934,
+      "sha256": "2637b81ea19e2dfce0277265879acdbba8b452c1527af2757a47aaba07cbdca5"
+    },
+    {
+      "path": "figures/data/fig-a2-reproducibility-lineage.csv",
+      "bytes": 1229,
+      "sha256": "47b8272ecaa1ec88df491d8cb8dc312b1111624d716fd21ade0605edc36f2d3d"
+    },
+    {
+      "path": "figures/generated/fig-1-selection-and-stopping.png",
+      "bytes": 217021,
+      "sha256": "7f4026b9cb32e6f9bae5acec5eab99eaff8cf74d19782408768b227538547050"
+    },
+    {
+      "path": "figures/generated/fig-1-selection-and-stopping.svg",
+      "bytes": 83315,
+      "sha256": "43188054b6e26e841683129919aecd8a0e8527d1e4ebc69e903582d5b7e7e8c0"
+    },
+    {
+      "path": "figures/generated/fig-2-practical-control-chain.png",
+      "bytes": 168092,
+      "sha256": "beae0b81f496a4f8f0ae7cd75063786051818d6dc222d32f62730b8ac3abfccc"
+    },
+    {
+      "path": "figures/generated/fig-2-practical-control-chain.svg",
+      "bytes": 78717,
+      "sha256": "db7596c2c90007f83014e6d8e466fbd9154a1f9b62ee8d52c34a0ddae131ae79"
+    },
+    {
+      "path": "figures/generated/fig-3-decision-paths.png",
+      "bytes": 266631,
+      "sha256": "e6106b211c8a95c7b11d4cc50b2412319c5ef3cac32bc7745439d54187f0e97e"
+    },
+    {
+      "path": "figures/generated/fig-3-decision-paths.svg",
+      "bytes": 124592,
+      "sha256": "94c37f8c6f1bcf35964aadf23a3254f2db3691dac68466ebaa99832d9197ec42"
+    },
+    {
+      "path": "figures/generated/fig-4-trust-evidence-states.png",
+      "bytes": 186986,
+      "sha256": "09a9227650139209dcde5f7ab5514b7732510f734cbfa35d410d4f21a26cc9bd"
+    },
+    {
+      "path": "figures/generated/fig-4-trust-evidence-states.svg",
+      "bytes": 84473,
+      "sha256": "747d586a27d4591fd1bd03d0a357ed010ee01a9cee00182c29c5a7e2ce519ed5"
+    },
+    {
+      "path": "figures/generated/fig-a1-mutation-response.png",
+      "bytes": 151066,
+      "sha256": "3d1221a7c6a96c95c479e7bccbcba17618a35a6e1063d9d755d8344c0dc4a6f5"
+    },
+    {
+      "path": "figures/generated/fig-a1-mutation-response.svg",
+      "bytes": 78028,
+      "sha256": "c3a4a5edb169b75888cbafe49699d185efe2d64a33f205ec6a5a692e6a7f595d"
+    },
+    {
+      "path": "figures/generated/fig-a2-reproducibility-lineage.png",
+      "bytes": 208919,
+      "sha256": "76bdd923109975ef44e3b9a876c0687ea443e2803bbc7a452cf3a6453ac0b12f"
+    },
+    {
+      "path": "figures/generated/fig-a2-reproducibility-lineage.svg",
+      "bytes": 96221,
+      "sha256": "c207272e7ce4dba6c6cc91578495fc28ec90fccacff95dc1f12481988ba78ef7"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 37,
+      "sha256": "c98dff45b76e798874ad491425ac6c6ba6f6fe77fca0d9334956acfd652ccf16"
+    },
+    {
+      "path": "scripts/validate_repository.py",
+      "bytes": 16884,
+      "sha256": "4b5307af56a506341d78e97b29773f60bf9317a3a62bbbf0ec94f28c848edf9c"
+    },
+    {
+      "path": "scripts/build_release_manifest.py",
+      "bytes": 2614,
+      "sha256": "8c05f1de0f7bda0e5c98420117b1e0e3a513df7cd719424b1c9c253c3cc4673a"
+    }
+  ]
+}

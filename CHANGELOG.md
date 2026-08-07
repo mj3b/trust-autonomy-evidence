@@ -4,6 +4,10 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
+No unreleased changes.
+
+## 0.4.0, 7 August 2026
+
 Adds a reproducible publication figure package derived from the sealed v0.3.0 and v0.2.0 artifacts.
 
 - Adds four main figures covering frozen selection, practical human control, reconstructed decision paths, and trust-evidence states.

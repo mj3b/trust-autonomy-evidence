@@ -1,7 +1,7 @@
 # Trust, Autonomy, and Evidence
 
 [![Status: Working Research](https://img.shields.io/badge/status-working%20research-5b6cff)](RESEARCH_STATUS.md)
-[![Version: 0.3.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
+[![Version: 0.4.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21841127.svg)](https://doi.org/10.5281/zenodo.21841127)
 [![Validation](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml/badge.svg)](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
@@ -19,7 +19,7 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 ## Current contribution
 
-[Version 0.3.0](https://github.com/mj3b/trust-autonomy-evidence/releases) contributes eight connected artifacts:
+[Version 0.4.0](https://github.com/mj3b/trust-autonomy-evidence/releases) contributes nine connected artifacts:
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
@@ -29,10 +29,11 @@ The project develops an evidence architecture for bounded reliance. It identifie
 6. A frozen public-case selection protocol with preserved candidate inputs, search output, exclusions, and selection decisions.
 7. Three public evidence packets covering a successful pre-action intervention, formal authority without practical force, and an action sequence whose cause remains indeterminate.
 8. A frozen research agenda focused on practical authority, evidence sufficiency, and interacting control conditions.
+9. A publication figure set containing four main figures, two appendix figures, six derived data tables, formal captions, reading guides, and artifact-integrity checks.
 
-All 252 determinations and 12 mutation tests pass under the committed contract. The v0.3.0 validator also checks source references, packet hashes, frozen selection invariants, and three cross-case control interactions. These results establish deterministic behavior and traceable bounded assessments for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, or improved outcomes.
+All 252 determinations and 12 mutation tests pass under the committed contract. The v0.4.0 repository validator also checks source references, packet hashes, frozen selection invariants, three cross-case control interactions, exact figure data, and figure-artifact integrity. These results establish repeatable behavior and traceable bounded assessments for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, or improved outcomes.
 
-An unreleased publication package adds four main figures and two appendix figures generated from the committed v0.3.0 and v0.2.0 artifacts. Each image has a derived CSV, an SVG for paper production, a PNG preview, a formal caption, and an explicit interpretation boundary. The package changes no release finding.
+The v0.4.0 publication package derives from the committed v0.3.0 and v0.2.0 artifacts. Each image has a derived CSV, an SVG for paper production, a PNG preview, a formal caption, and an explicit interpretation boundary. The package changes no earlier case finding.
 
 ## Featured figure
 
@@ -98,7 +99,7 @@ The [publication figure set](figures/) contains the remaining main figures, both
 | [`figures/`](figures/) | Publishes four main figures, two appendix figures, their derived data, plotting specifications, and plain-language reading guides. |
 | [`reports/figure-methods.md`](reports/figure-methods.md) | Records formal captions, transformations, missingness treatment, and prohibited interpretations for the figure set. |
 | [`scripts/`](scripts/) | Contains candidate-search, packet-sealing, release-manifest, and repository-validation utilities. |
-| [`release/`](release/) | Seals the v0.3.0 research artifacts and their SHA-256 digests. |
+| [`release/`](release/) | Seals the v0.3.0 case artifacts and v0.4.0 publication package with SHA-256 digests. |
 | [`mappings/`](mappings/) | Relates this work to GDI, HIT, CDFI, and CDCF governance artifacts. |
 | [`.github/`](.github/) | Defines automated validation, the pull-request checklist, and structured issue forms. |
 | [`requirements-dev.txt`](requirements-dev.txt) and [`LICENSE`](LICENSE) | Pin the validation dependency and state the Apache-2.0 license. |
@@ -139,11 +140,11 @@ Contributions should identify the proposition being changed, the evidence suppor
 
 ## Citation
 
-Version 0.3.0 has a fixed Zenodo record:
+Version 0.4.0 is released through GitHub and the repository's Zenodo integration. The version-specific DOI is recorded after Zenodo completes the archive.
 
-> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.3.0) [Computer software]. Zenodo. [https://doi.org/10.5281/zenodo.21843843](https://doi.org/10.5281/zenodo.21843843)
+> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.4.0) [Computer software]. Zenodo.
 
-Use [10.5281/zenodo.21843843](https://doi.org/10.5281/zenodo.21843843) to cite this exact release. The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata appears in [CITATION.cff](CITATION.cff).
+The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata appears in [CITATION.cff](CITATION.cff). The v0.3.0 case release remains available at [10.5281/zenodo.21843843](https://doi.org/10.5281/zenodo.21843843).
 
 ## Author
 
