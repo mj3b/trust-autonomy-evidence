@@ -16,6 +16,7 @@
 | Trust evidence register | Twelve propositions with minimum and stronger evidence | Working register | Independent case applications expose omissions, ambiguity, and revision needs |
 | Practical human control test | Nine-stage documentary chain | Draft protocol | Preregistered reviewers apply it across multiple cases with preserved disagreements |
 | Independent review protocol | Frozen-case procedure and reporting requirements | Draft protocol | At least one unaffiliated team completes the protocol from public instructions |
+| Public-case reconstruction protocol | Frozen cutoff, candidate collections, eligibility rules, screening order, source-packet contract, and empty selection register | Selection method frozen at its first `main` commit | Three cases selected and reconstructed without changing the frozen procedure |
 | Repository validation | Pinned schema dependency, executable script, and CI workflow | Executable for declared repository checks | CI passes on the published commit |
 | Solo-validation suite | 12 synthetic cases, 252 oracle comparisons, 12 mutation tests, and three invariance tests | Demonstrated for committed fixtures | New case families expose additional boundary and interaction failures |
 | Sealed oracle | SHA-256 manifest for cases, mutations, and expected classifications | Demonstrated for v0.2.0 artifacts | A later release preserves explicit migration and re-sealing records |
@@ -28,12 +29,13 @@ Version 0.2.0 adds internal validation to the synthesis and protocol-definition 
 
 ## Next evidence gates
 
-1. Freeze a source-selection rule for three publicly documented AI cases.
-2. Preserve source packets, inaccessible evidence, and selection exclusions.
-3. Reconstruct each case using the v0.2.0 contract and publish indeterminate findings.
-4. Add interaction mutations involving two individually adequate controls that fail jointly.
-5. Run one clean-room implementation when an eligible reviewer becomes available.
-6. Test one prospective or realistically simulated decision in which a failed condition can stop or alter execution.
+1. Record the public-case protocol's first `main` commit in the empty selection register.
+2. Retrieve and hash the two frozen candidate collections.
+3. Preserve every screened inclusion, exclusion, inaccessible source, and replacement.
+4. Reconstruct the first eligible case in each of the three prespecified strata using the v0.2.0 contract.
+5. Add interaction mutations involving two individually adequate controls that fail jointly.
+6. Run one clean-room implementation when an eligible reviewer becomes available.
+7. Test one prospective or realistically simulated decision in which a failed condition can stop or alter execution.
 
 ## Versioning rule
 
