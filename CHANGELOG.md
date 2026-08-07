@@ -10,7 +10,7 @@ Adds a reproducible publication figure package derived from the sealed v0.3.0 an
 - Adds appendix figures for mutation response and research-to-figure reproducibility lineage.
 - Publishes six derived CSV files, six SVG files, six PNG files, and machine-readable plotting specifications.
 - Adds formal captions, transformation records, missingness treatment, and prohibited interpretations.
-- Adds a deterministic figure builder and a repository freshness check for all 18 generated artifacts.
+- Adds a figure builder, exact derived-data comparison, and artifact-integrity checks for all 18 generated artifacts.
 - Preserves every v0.3.0 case packet, assessment, hash, and release claim without alteration.
 
 ## 0.3.0, 7 August 2026

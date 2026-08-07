@@ -70,6 +70,7 @@ REQUIRED_FILES = (
     "reports/public-case-reconstruction-v0.3.0.md",
     "reports/figure-methods.md",
     "figures/README.md",
+    "figures/manifest.json",
     "figures/specifications/figure-register.json",
     "figures/specifications/selection-decisions.json",
     "figures/specifications/decision-paths.json",

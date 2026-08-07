@@ -9,7 +9,7 @@ node,plot_inputs,figures,1,Plot inputs,"Assessments, selection, | mutations, lin
 node,builder,figures,2,Figure builder,build_figures.py | fixed ordering and palette,,
 node,derived,figures,3,Derived tables,6 CSV files | cell-level provenance,,
 node,figures,figures,4,Rendered figures,6 SVG and | 6 PNG files,,
-node,validation,figures,5,Freshness check,Regenerate and compare | repository validation,,
+node,validation,figures,5,Integrity check,CSV equality and | artifact integrity,,
 edge,,,,,,collections,candidates
 edge,,,,,,candidates,selection
 edge,,,,,,selection,packets

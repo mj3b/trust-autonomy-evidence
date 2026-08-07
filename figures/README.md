@@ -29,13 +29,13 @@ python -m pip install -r requirements-dev.txt
 python analysis/build_figures.py
 ```
 
-Check whether every committed CSV, PNG, and SVG matches a clean rebuild:
+Check exact equality for the six derived CSV files, verify the structure and dimensions of the PNG and SVG files, and confirm the recorded hashes for all 18 committed artifacts:
 
 ```bash
 python analysis/build_figures.py --check
 ```
 
-The repository validator runs the same freshness check. [Figure methods](../reports/figure-methods.md) records the transformations, captions, and claim boundaries. [The figure register](specifications/figure-register.json) provides a machine-readable specification for each image.
+The repository validator runs the same data and artifact-integrity check. Image renderer bytes can vary by operating system even when the plotted data and dimensions remain unchanged. [Figure methods](../reports/figure-methods.md) records the transformations, captions, and claim boundaries. [The figure register](specifications/figure-register.json) provides a machine-readable specification for each image. [The figure manifest](manifest.json) records the byte count and SHA-256 hash of every committed figure artifact and declared input.
 
 ## Use boundary
 

@@ -5,10 +5,13 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import os
+import struct
 import tempfile
 import textwrap
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
@@ -139,6 +142,23 @@ FIGURE_STUBS = (
     "fig-4-trust-evidence-states",
     "fig-a1-mutation-response",
     "fig-a2-reproducibility-lineage",
+)
+
+SOURCE_INPUTS = (
+    "analysis/build_figures.py",
+    "figures/specifications/decision-paths.json",
+    "figures/specifications/reproducibility-lineage.json",
+    "figures/specifications/selection-decisions.json",
+    "assessments/generated-results.json",
+    "fixtures/mutations/mutations.json",
+    "cases/data/candidate-search-output.json",
+    "cases/public-case-selection-register.md",
+    "cases/TAE-PUB-001-oko-1983/assessment.json",
+    "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
+    "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json",
+    "cases/TAE-PUB-001-oko-1983/case-report.md",
+    "cases/TAE-PUB-002-patriot-zg710-2003/case-report.md",
+    "cases/TAE-PUB-003-patriot-fa18-2003/case-report.md",
 )
 
 
@@ -868,7 +888,7 @@ def build_lineage(data_dir: Path, figure_dir: Path) -> None:
     add_title(
         fig,
         "Every plotted state traces to a frozen input or prespecified test",
-        "The upper lane records research provenance. The lower lane records figure generation and freshness checks.",
+        "The upper lane records research provenance. The lower lane records figure generation and integrity checks.",
     )
 
     lane_nodes = {
@@ -927,7 +947,7 @@ def build_lineage(data_dir: Path, figure_dir: Path) -> None:
 
     add_source_note(
         fig,
-        "Integrity boundary: hashes and deterministic transformations support ordering and traceability; source truth and completeness remain separate claims.",
+        "Integrity boundary: hashes and declared transformations support ordering and traceability; source truth and completeness remain separate claims.",
         y=0.025,
     )
     save_figure(fig, figure_dir, "fig-a2-reproducibility-lineage")
@@ -967,41 +987,177 @@ def build_all(output_root: Path) -> None:
     build_lineage(data_dir, figure_dir)
 
 
-def expected_outputs() -> list[Path]:
+def csv_outputs() -> list[Path]:
+    return [Path("figures/data") / f"{stub}.csv" for stub in FIGURE_STUBS]
+
+
+def image_outputs() -> list[Path]:
     outputs = []
     for stub in FIGURE_STUBS:
-        outputs.append(Path("figures/data") / f"{stub}.csv")
         outputs.append(Path("figures/generated") / f"{stub}.png")
         outputs.append(Path("figures/generated") / f"{stub}.svg")
     return outputs
+
+
+def expected_outputs() -> list[Path]:
+    return csv_outputs() + image_outputs()
+
+
+def sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def manifest_entry(path: Path, relative: Path) -> dict:
+    return {
+        "path": relative.as_posix(),
+        "bytes": path.stat().st_size,
+        "sha256": sha256_file(path),
+    }
+
+
+def write_manifest(output_root: Path) -> None:
+    manifest = {
+        "version": FIGURE_SET_VERSION,
+        "source_release": SOURCE_RELEASE,
+        "hash_algorithm": "sha256",
+        "artifacts": [
+            manifest_entry(output_root / relative, relative)
+            for relative in expected_outputs()
+        ],
+        "inputs": [
+            manifest_entry(ROOT / relative, Path(relative))
+            for relative in SOURCE_INPUTS
+        ],
+    }
+    path = output_root / "figures/manifest.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+
+
+def validate_manifest(errors: list[str]) -> None:
+    path = ROOT / "figures/manifest.json"
+    if not path.is_file():
+        errors.append("figures/manifest.json is missing")
+        return
+    try:
+        manifest = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        errors.append(f"figures/manifest.json is invalid: {exc}")
+        return
+
+    if manifest.get("version") != FIGURE_SET_VERSION:
+        errors.append("figure manifest version does not match the builder")
+    if manifest.get("source_release") != SOURCE_RELEASE:
+        errors.append("figure manifest source release does not match the builder")
+    if manifest.get("hash_algorithm") != "sha256":
+        errors.append("figure manifest hash algorithm must be sha256")
+
+    groups = (
+        ("artifacts", expected_outputs()),
+        ("inputs", [Path(relative) for relative in SOURCE_INPUTS]),
+    )
+    for group_name, expected_paths in groups:
+        entries = manifest.get(group_name)
+        if not isinstance(entries, list):
+            errors.append(f"figure manifest {group_name} must be a list")
+            continue
+        by_path = {
+            entry.get("path"): entry
+            for entry in entries
+            if isinstance(entry, dict) and isinstance(entry.get("path"), str)
+        }
+        expected_names = [relative.as_posix() for relative in expected_paths]
+        if len(by_path) != len(entries) or set(by_path) != set(expected_names):
+            errors.append(f"figure manifest {group_name} path set does not match the declared files")
+            continue
+        for relative in expected_paths:
+            name = relative.as_posix()
+            file_path = ROOT / relative
+            if not file_path.is_file():
+                errors.append(f"manifested file is missing: {name}")
+                continue
+            entry = by_path[name]
+            if entry.get("bytes") != file_path.stat().st_size:
+                errors.append(f"manifested byte count does not match: {name}")
+            if entry.get("sha256") != sha256_file(file_path):
+                errors.append(f"manifested SHA-256 does not match: {name}")
+
+
+def png_properties(path: Path) -> tuple[int, int]:
+    data = path.read_bytes()
+    if len(data) < 24 or data[:8] != b"\x89PNG\r\n\x1a\n" or data[12:16] != b"IHDR":
+        raise ValueError("invalid PNG signature or header")
+    width, height = struct.unpack(">II", data[16:24])
+    if width < 1 or height < 1:
+        raise ValueError("PNG dimensions must be positive")
+    return width, height
+
+
+def svg_properties(path: Path) -> tuple[str, str, str]:
+    try:
+        root = ET.parse(path).getroot()
+    except (ET.ParseError, OSError) as exc:
+        raise ValueError(f"invalid SVG XML: {exc}") from exc
+    if root.tag.split("}")[-1] != "svg":
+        raise ValueError("SVG root element is missing")
+    properties = tuple(root.attrib.get(name, "").strip() for name in ("width", "height", "viewBox"))
+    if not all(properties):
+        raise ValueError("SVG width, height, and viewBox are required")
+    return properties
 
 
 def check_current() -> int:
     with tempfile.TemporaryDirectory(prefix="tae-figures-") as directory:
         temporary_root = Path(directory)
         build_all(temporary_root)
-        stale = []
-        for relative in expected_outputs():
+        errors: list[str] = []
+        for relative in csv_outputs():
             committed = ROOT / relative
             rebuilt = temporary_root / relative
             if not committed.is_file() or committed.read_bytes() != rebuilt.read_bytes():
-                stale.append(str(relative))
-        if stale:
-            print("figure set is missing or stale:")
-            for relative in stale:
-                print(f"- {relative}")
+                errors.append(f"derived CSV is missing or stale: {relative}")
+
+        for relative in image_outputs():
+            committed = ROOT / relative
+            rebuilt = temporary_root / relative
+            if not committed.is_file():
+                errors.append(f"rendered image is missing: {relative}")
+                continue
+            try:
+                if relative.suffix == ".png":
+                    committed_properties = png_properties(committed)
+                    rebuilt_properties = png_properties(rebuilt)
+                else:
+                    committed_properties = svg_properties(committed)
+                    rebuilt_properties = svg_properties(rebuilt)
+            except (OSError, ValueError) as exc:
+                errors.append(f"rendered image is invalid: {relative}: {exc}")
+                continue
+            if committed_properties != rebuilt_properties:
+                errors.append(f"rendered image dimensions do not match the rebuild: {relative}")
+
+        validate_manifest(errors)
+        if errors:
+            print("figure data or artifact integrity check failed:")
+            for error in errors:
+                print(f"- {error}")
             return 1
-    print(f"figure set v{FIGURE_SET_VERSION}: PASS")
+    print(f"figure data and artifact integrity v{FIGURE_SET_VERSION}: PASS")
     return 0
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="rebuild in a temporary directory and compare with committed outputs")
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="compare derived data and validate committed figure integrity",
+    )
     args = parser.parse_args()
     if args.check:
         return check_current()
     build_all(ROOT)
+    write_manifest(ROOT)
     print(f"built {len(FIGURE_STUBS)} figures from source release v{SOURCE_RELEASE}")
     return 0
 

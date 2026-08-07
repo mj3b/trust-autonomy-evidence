@@ -85,11 +85,12 @@
       "sample": "11 artifact classes connected by 10 declared lineage edges",
       "input_files": [
         "figures/specifications/reproducibility-lineage.json",
+        "figures/manifest.json",
         "scripts/validate_repository.py",
         "analysis/build_figures.py"
       ],
-      "transformation": "Render the declared research and figure-generation artifact graph in process order.",
-      "claim_supported": "A reader can trace plotted states from preserved inputs through assessments, derived tables, rendered files, and freshness checks.",
+      "transformation": "Render the declared research and figure-generation artifact graph in process order and record hashes for the committed publication artifacts.",
+      "claim_supported": "A reader can trace plotted states from preserved inputs through assessments, derived tables, rendered files, and integrity checks.",
       "prohibited_interpretation": "Hashes and reproducible transformations establish integrity and traceability. They do not establish the truth or completeness of the source content."
     }
   ]

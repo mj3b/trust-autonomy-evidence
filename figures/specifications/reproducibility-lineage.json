@@ -76,8 +76,8 @@
       "node_id": "validation",
       "lane": "figures",
       "order": 5,
-      "title": "Freshness check",
-      "detail": "Regenerate and compare\nrepository validation"
+      "title": "Integrity check",
+      "detail": "CSV equality and\nartifact integrity"
     }
   ],
   "edges": [

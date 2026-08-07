@@ -48,7 +48,7 @@ Twelve controlled mutation tests contain 11 prespecified assessment changes and 
 
 ### Figure A2. Reproducibility lineage
 
-The research lane traces frozen candidate collections through deterministic search, five recorded screening decisions, three source packets, machine-readable assessments, and the v0.3.0 archive. The figure lane traces committed plot inputs through the builder, six derived CSV files, 12 rendered image files, and a regeneration check. Hashes and deterministic transformations support integrity, ordering, and traceability. Source truth and completeness remain separate propositions.
+The research lane traces frozen candidate collections through fixed search rules, five recorded screening decisions, three source packets, machine-readable assessments, and the v0.3.0 archive. The figure lane traces committed plot inputs through the builder, six derived CSV files, 12 rendered image files, and an integrity check. Hashes and declared transformations support integrity, ordering, and traceability. Source truth and completeness remain separate propositions.
 
 ## Missingness and uncertainty
 
@@ -56,7 +56,7 @@ Figure 3 uses relative sequence because the public packets supply no defensible 
 
 ## Reproducibility check
 
-`python analysis/build_figures.py --check` rebuilds all 18 generated artifacts in a temporary directory and compares them byte for byte with the committed files. The main repository validator runs this command after schema, packet-hash, selection, interaction, release-manifest, and solo-suite checks.
+`python analysis/build_figures.py --check` rebuilds the figure set in a temporary directory and compares the six derived CSV files exactly with the committed tables. It verifies PNG and SVG structure and dimensions against the rebuild. It also checks the byte count and SHA-256 hash recorded for each of the 18 committed artifacts and each declared input. Image bytes can vary across operating systems because Matplotlib and its font renderer can encode the same plotted data differently. The main repository validator runs this command after schema, packet-hash, selection, interaction, release-manifest, and solo-suite checks.
 
 ## Claim boundary
 
