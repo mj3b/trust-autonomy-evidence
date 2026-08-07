@@ -36,11 +36,38 @@ An unreleased publication package adds four main figures and two appendix figure
 
 ## Featured figure
 
-Figure 2 shows the repository's central cross-case result. All three cases contain formal human authority. The remaining pre-action conditions determine whether that authority can change the system's path before execution.
+Figure 2 compares whether assigned human authority became practical control in three historical cases.
 
 [![Practical-control chain across three public cases](figures/generated/fig-2-practical-control-chain.png)](figures/generated/fig-2-practical-control-chain.svg)
 
-The [publication figure set](figures/) contains the remaining main figures, both appendix figures, their derived data, and short descriptions.
+### What the figure tells us
+
+The featured figure asks a simple question: **Could the designated human actually change what the system did?**
+
+All three cases gave a human formal authority. The outcomes differed because authority was only one link in a longer chain:
+
+1. Did the person receive the relevant information?
+2. Could they understand it?
+3. Did they have authority to intervene?
+4. Was intervention realistically possible in the available time?
+5. Did they intervene?
+6. Did the intervention change the outcome?
+
+In the 1983 Oko case, the chain remained intact. Stanislav Petrov received the warning, questioned it, had time and authority to act, and prevented the warning from driving further escalation.
+
+In the Patriot ZG710 case, a human authorized the engagement. The evidence indicates weak comprehension and no feasible or exercised challenge before launch. Formal authority therefore produced no protective effect.
+
+In the F/A-18C case, the public record confirms human authority and some access to information. Missing records prevent conclusions about what operators saw, understood, or could have done in time. The purple cells mean “we do not know.” Orange cells record evidence that a condition failed.
+
+The later reforms shown in both Patriot cases indicate institutional learning. They could not repair the losses already caused.
+
+The central lesson is that placing a human “in the loop” does not establish meaningful control. Institutions need evidence that the entire chain works: timely information, comprehension, authority, opportunity, intervention, and effect.
+
+We reached this conclusion by comparing the [27 plotted states](figures/data/fig-2-practical-control-chain.csv). Authority was supported in all three cases. A protective effect appeared only in Oko, where the other five pre-action links were also supported. The [figure methods](reports/figure-methods.md#derivation-of-the-central-lesson) preserve the formal derivation.
+
+The figure shows this pattern across three historical cases. It supplies no estimate of how often these failures occur and no prediction of performance in current AI systems.
+
+The [publication figure set](figures/) contains the remaining main figures, both appendix figures, their derived data, and plain-language reading guides.
 
 ## Repository map
 
@@ -68,7 +95,7 @@ The [publication figure set](figures/) contains the remaining main figures, both
 | [`analysis/`](analysis/) | Implements the deterministic assessment logic and solo-validation runner. |
 | [`assessments/`](assessments/) | Stores generated machine-readable assessment results. |
 | [`reports/`](reports/) | Publishes the solo-validation and three-case reconstruction results with explicit claim boundaries. |
-| [`figures/`](figures/) | Publishes four main figures, two appendix figures, their derived data, plotting specifications, and short descriptions. |
+| [`figures/`](figures/) | Publishes four main figures, two appendix figures, their derived data, plotting specifications, and plain-language reading guides. |
 | [`reports/figure-methods.md`](reports/figure-methods.md) | Records formal captions, transformations, missingness treatment, and prohibited interpretations for the figure set. |
 | [`scripts/`](scripts/) | Contains candidate-search, packet-sealing, release-manifest, and repository-validation utilities. |
 | [`release/`](release/) | Seals the v0.3.0 research artifacts and their SHA-256 digests. |

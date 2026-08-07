@@ -34,6 +34,18 @@ The AI Incident Database input contained 1,607 incident records and 7,452 report
 
 Twenty-seven declared states compare nine practical-control propositions across three purposefully selected public cases. Formal authority is supported in all three cases. Oko supports the pre-action chain through protective effect. Patriot ZG710 supports authority while comprehension, feasibility, exercise, and effect are unsupported. Patriot F/A-18C supports authority while comprehension, feasibility, and exercise remain indeterminate because the public record omits timing, displays, and complete operator records. Letters identify categorical states: S, supported; PS, partially supported; U, unsupported; I, indeterminate; O, outside scope.
 
+#### Derivation of the central lesson
+
+The central lesson is derived through a declared comparison across the pre-action chain:
+
+1. Extract the six pre-action states for each case: access, comprehension, authority, feasibility, exercise, and effect.
+2. Identify the common state. Authority is supported in all three cases.
+3. Compare the remaining five states with protective effect. Oko supports all five. ZG710 records partial access and unsupported comprehension, feasibility, exercise, and effect. F/A-18C records partial access, unresolved comprehension, feasibility, and exercise, and an unsupported effect.
+4. Preserve unsupported and indeterminate as different findings. ZG710 contains evidence against several conditions. F/A-18C lacks enough public evidence to decide several conditions.
+5. State the narrow inference. Formal authority alone does not establish practical control in these packets. Practical control requires an evidence path connecting information, understanding, permission, opportunity, action, and effect.
+
+This derivation compares declared states within three reconstructed cases. It does not isolate a causal effect, estimate a population relationship, or establish that every condition has equal weight in another institutional setting.
+
 ### Figure 3. Reconstructed decision paths
 
 Fifteen source-linked events place five bounded chronology stages for each case in relative order. Oko contains a documented human challenge before escalation. The ZG710 record describes about one minute, incomplete identification evidence, human launch authorization, engagement, and loss. The F/A-18C record supports detection, correlation, a human engagement order, launch, and loss while leaving timing, display state, report independence, and feasible intervention unresolved. Horizontal spacing has no elapsed-time scale.
