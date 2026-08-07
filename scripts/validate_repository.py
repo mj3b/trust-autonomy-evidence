@@ -14,7 +14,8 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.3.0"
+REPOSITORY_VERSION = "0.4.0"
+PUBLIC_CASE_VERSION = "0.3.0"
 
 REQUIRED_FILES = (
     "README.md",
@@ -94,6 +95,7 @@ REQUIRED_FILES = (
     "figures/generated/fig-a2-reproducibility-lineage.png",
     "figures/generated/fig-a2-reproducibility-lineage.svg",
     "release/v0.3.0-manifest.json",
+    "release/v0.4.0-manifest.json",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -150,10 +152,10 @@ def validate_internal_links(failures: list[str]) -> None:
 
 def validate_versions(failures: list[str]) -> None:
     required_markers = {
-        "README.md": f"Version: {VERSION}",
-        "RESEARCH_STATUS.md": f"**Version:** {VERSION}",
-        "CITATION.cff": f"version: {VERSION}",
-        "CHANGELOG.md": f"## {VERSION}",
+        "README.md": f"Version: {REPOSITORY_VERSION}",
+        "RESEARCH_STATUS.md": f"**Version:** {REPOSITORY_VERSION}",
+        "CITATION.cff": f"version: {REPOSITORY_VERSION}",
+        "CHANGELOG.md": f"## {REPOSITORY_VERSION}",
     }
     for relative, marker in required_markers.items():
         text = (ROOT / relative).read_text(encoding="utf-8")
@@ -222,7 +224,7 @@ def validate_packet_hashes(failures: list[str]) -> None:
     index = json.loads(
         (ROOT / "cases/public-case-packet-index.json").read_text(encoding="utf-8")
     )
-    if index.get("version") != VERSION or len(index.get("packets", [])) != 3:
+    if index.get("version") != PUBLIC_CASE_VERSION or len(index.get("packets", [])) != 3:
         fail("public-case packet index must contain three v0.3.0 packets", failures)
         return
 
@@ -251,7 +253,7 @@ def validate_candidate_search(failures: list[str]) -> None:
     aiid = data.get("inputs", {}).get("aiid", {})
     oecd = data.get("inputs", {}).get("oecd", [])
     expected = {
-        "version": VERSION,
+        "version": PUBLIC_CASE_VERSION,
         "candidate_count": 928,
         "aiid_sha256": "97fe770b0e92730c98fbb05bca8f9e2df6803f0f386d94404a19a7677d70f240",
         "aiid_candidates": 828,
@@ -310,9 +312,9 @@ def validate_case_interactions(failures: list[str]) -> None:
 
 def validate_release_manifest(failures: list[str]) -> None:
     manifest = json.loads(
-        (ROOT / "release/v0.3.0-manifest.json").read_text(encoding="utf-8")
+        (ROOT / "release/v0.4.0-manifest.json").read_text(encoding="utf-8")
     )
-    if manifest.get("version") != VERSION:
+    if manifest.get("version") != REPOSITORY_VERSION:
         fail("release manifest version mismatch", failures)
     for artifact in manifest.get("artifacts", []):
         path = ROOT / artifact["path"]
@@ -348,7 +350,7 @@ def validate_figure_set(failures: list[str]) -> str:
     identifiers = [row.get("figure_id") for row in figures]
     stubs = [row.get("file_stub") for row in figures]
     expected_identifiers = ["FIG-1", "FIG-2", "FIG-3", "FIG-4", "FIG-A1", "FIG-A2"]
-    if register.get("version") != "0.1.0" or register.get("source_release") != VERSION:
+    if register.get("version") != "0.1.0" or register.get("source_release") != PUBLIC_CASE_VERSION:
         fail("figure register version or source release mismatch", failures)
     if identifiers != expected_identifiers:
         fail(f"figure register identifier mismatch: {identifiers}", failures)
