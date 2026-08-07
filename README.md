@@ -44,7 +44,9 @@ All 252 determinations and 12 mutation tests pass under the committed v0.2.0 con
 | [`research/`](research/) | Contains the main conceptual paper on justified reliance, autonomy, and practical control. |
 | [`evidence/`](evidence/) | Contains the trust evidence register that converts reliance claims into inspectable records. |
 | [`protocols/`](protocols/) | Defines solo validation, independent review, and practical-control assessment procedures. |
+| [`protocols/public-case-reconstruction-protocol.md`](protocols/public-case-reconstruction-protocol.md) | Freezes the source cutoff, candidate pools, eligibility rules, screening order, and reconstruction procedure before case selection. |
 | [`cases/`](cases/) | Specifies the public case-submission contract and admissibility requirements. |
+| [`cases/public-case-selection-register.md`](cases/public-case-selection-register.md) | Preserves the empty preregistration state and every later inclusion or exclusion in screening order. |
 | [`schemas/`](schemas/) | Contains five JSON Schemas that define the machine-readable assessment contracts. |
 | [`fixtures/`](fixtures/) | Contains 12 synthetic cases and the controlled mutation suite. |
 | [`oracles/`](oracles/) | Stores prespecified expected decisions and the SHA-256 manifest that seals them. |
@@ -60,7 +62,7 @@ All 252 determinations and 12 mutation tests pass under the committed v0.2.0 con
 
 Start with [Trust, Autonomy, and Evidence](research/trust-autonomy-and-evidence.md). Use the [Trust Evidence Register](evidence/trust-evidence-register.md) to translate a reliance claim into inspectable evidence. Read the [solo-validation report](reports/solo-validation-v0.2.0.md), [CLAIMS.md](CLAIMS.md), and [LIMITATIONS.md](LIMITATIONS.md) before applying the model.
 
-The three protocols define solo validation, practical-control assessment, and future independent evaluation. The mapping files show how this project relates to existing public artifacts without transferring claims among them.
+The four protocols define solo validation, public-case reconstruction, practical-control assessment, and future independent evaluation. The public-case selection register must record its freeze commit before candidate screening begins. The mapping files show how this project relates to existing public artifacts without transferring claims among them.
 
 ## Repository validation
 
