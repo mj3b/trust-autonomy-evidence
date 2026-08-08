@@ -4,7 +4,7 @@
 
 **Status:** Working research repository
 
-**Status date:** 7 August 2026
+**Status date:** 8 August 2026
 
 ## Current maturity
 
@@ -20,6 +20,7 @@
 | Public-case packets | Three source manifests, assessments, reports, and packet hashes | Demonstrated for selected public evidence | Independent reconstruction tests source sufficiency and classification stability |
 | Public-case interaction checks | Successful intervention, authority without practical force, and missing-evidence boundary | Executable for the three included packets | New case families test additional control interactions |
 | Publication figure set | Four main figures, two appendix figures, six derived CSV files, SVG and PNG outputs, and a derived-data and artifact-integrity check | Released in v0.4.0 | A paper draft uses the registered captions and preserves every interpretation boundary |
+| Practical human control paper | Charter, claim register, 23-source working matrix, PR #11 review, novelty audit, and drafted introduction and related work | Unreleased manuscript work | Resolve `PAPER-BLOCKER-01`, complete database searches, and finish the methods draft |
 | Repository validation | Pinned schema dependency, executable script, and CI workflow | Executable for declared repository checks | CI passes on the published commit |
 | Solo-validation suite | 12 synthetic cases, 252 oracle comparisons, 12 mutation tests, and three invariance tests | Demonstrated for committed fixtures | New case families expose additional boundary and interaction failures |
 | Sealed oracle | SHA-256 manifest for cases, mutations, and expected classifications | Demonstrated for v0.2.0 artifacts | A later release preserves explicit migration and re-sealing records |
@@ -30,13 +31,17 @@
 
 Version 0.4.0 adds a publication figure package to the frozen v0.3.0 public-case reconstructions and v0.2.0 solo-validation artifacts. Its claims concern traceable transformation, exact derived data, artifact integrity, bounded cross-case comparison, repeatable fixture behavior, and declared interaction properties. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, and harm prevention remain unresolved.
 
+Unreleased paper work adds a manuscript control layer. The PR #11 pressure test found that contrastive selection prevents an independent discrimination claim and that Oko's retrospective sources do not plainly satisfy the practical-control protocol's contemporaneous-evidence definition. The released v0.3.0 assessment remains unchanged. Preprint review is blocked until the Oko mismatch receives a versioned resolution.
+
 ## Next evidence gates
 
-1. Reproduce the five screening decisions from the preserved search output and source manifests.
-2. Add a new frozen case family that tests a different institution, sector, and system architecture.
-3. Add adversarial source perturbations involving dependent reports, altered timestamps, and missing logs.
-4. Run one clean-room implementation when an eligible reviewer becomes available.
-5. Test one prospective or realistically simulated decision in which a failed condition can stop or alter execution.
+1. Resolve `PAPER-BLOCKER-01` through a versioned protocol or assessment decision.
+2. Complete the paper's multidisciplinary database searches and citation chaining.
+3. Reproduce the five screening decisions from the preserved search output and source manifests.
+4. Add a new frozen case family that tests a different institution, sector, and system architecture.
+5. Add adversarial source perturbations involving dependent reports, altered timestamps, and missing logs.
+6. Run one clean-room implementation when an eligible reviewer becomes available.
+7. Test one prospective or realistically simulated decision in which a failed condition can stop or alter execution.
 
 ## Versioning rule
 

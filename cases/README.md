@@ -10,15 +10,15 @@ The synthetic cases test internal artifact behavior. They are not operational ob
 |---|---|---|
 | [`TAE-PUB-001`](TAE-PUB-001-oko-1983/) | A 1983 Oko false warning in which a duty officer challenged the alert before escalation | Pre-action intervention |
 | [`TAE-PUB-002`](TAE-PUB-002-patriot-zg710-2003/) | A 2003 Patriot fratricide in which formal launch authority lacked practical force | Authority without practical force |
-| [`TAE-PUB-003`](TAE-PUB-003-patriot-fa18-2003/) | A 2003 Patriot fratricide whose public record supports the sequence while leaving cause and feasible intervention unresolved | Incomplete or conflicting evidence |
+| [`TAE-PUB-003`](TAE-PUB-003-patriot-fa18-2003/) | A 2003 Patriot fratricide with a supported sequence and unresolved cause and feasible intervention | Incomplete or conflicting evidence |
 
 Each directory contains a source manifest, machine-readable assessment, narrative report, and SHA-256 packet manifest. [`public-case-packet-index.json`](public-case-packet-index.json) seals the three packet manifests. [`public-case-selection-register.md`](public-case-selection-register.md) preserves the screening path.
 
-A case may enter this directory when it contains a declared decision boundary, contemporaneous records, source provenance, publication authority, redaction statement, missing-evidence register, protocol version, independent reviewer results, and limits on interpretation.
+A public case enters this directory under the versioned protocol in force. Version 0.3.0 requires a declared decision boundary, source provenance, publication authority, a redaction statement, a missing-evidence register, a protocol version, and limits on interpretation. The three v0.3.0 packets are single-assessor records and contain no independent reviewer result. Contemporaneous evidence varies by packet and must be evaluated at the assessment-state level.
 
 ## What this case set can and cannot tell us
 
-The three public cases were purposefully selected under a frozen order and stopping rule to test the method under contrasting evidence conditions. They can show whether the framework produces traceable, bounded findings for documented pre-action intervention, formal authority without practical force, and incomplete or conflicting evidence.
+The three public cases were purposefully selected under a frozen order and stopping rule to demonstrate the method under contrasting evidence conditions. They show the assessment states produced for documented pre-action intervention, formal authority without practical force, and incomplete or conflicting evidence. Because the strata anticipated these contrasts, the case set does not independently validate discrimination among them.
 
 They do not tell us:
 
