@@ -94,7 +94,7 @@ A manuscript is ready for public preprint review only when:
 
 ## Authorship and assistance
 
-Mark Banasihan is the accountable human author for this working paper. Final author name, affiliation, and acknowledgments must be confirmed before submission. AI tools may assist with search, organization, drafting, formatting, and consistency checks. They are not authors and cannot accept responsibility for the paper's claims. The manuscript will disclose material AI assistance according to the selected venue's rules.
+Mark Julius Banasihan is the accountable human author for this working paper. Final author name, affiliation, and acknowledgments must be confirmed before submission. AI tools may assist with search, organization, drafting, formatting, and consistency checks. They are not authors and cannot accept responsibility for the paper's claims. The manuscript will disclose material AI assistance according to the selected venue's rules.
 
 ## Change rule
 

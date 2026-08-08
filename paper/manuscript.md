@@ -2,7 +2,7 @@
 
 ## A traceable method for reconstructing AI-mediated decisions
 
-**Author:** Mark Banasihan  
+**Author:** Mark Julius Banasihan  
 **ORCID:** [0009-0001-8121-2878](https://orcid.org/0009-0001-8121-2878)  
 **Status:** Working outline, v0.1
 

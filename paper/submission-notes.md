@@ -34,7 +34,7 @@ The existing GitHub and Zenodo materials are research artifacts. They are not su
 
 ## Authorship
 
-Mark Banasihan is the accountable human author for the present working paper.
+Mark Julius Banasihan is the accountable human author for the present working paper.
 
 Before submission, confirm:
 
