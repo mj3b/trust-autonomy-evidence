@@ -8,7 +8,7 @@ No journal, conference, or preprint service has been selected. Venue choice shou
 
 **Type:** Methods and comparative public-case reconstruction  
 **Primary audience:** AI governance, assurance, human factors, and responsible-AI research  
-**Working title:** *From Formal Authority to Practical Human Control: A Traceable Method for Reconstructing AI-Mediated Decisions*
+**Working title:** *From Formal Authority to Practical Human Control: A Traceable Method for Reconstructing Human Control in Automated Decisions*
 
 ## Venue decision criteria
 
@@ -31,6 +31,8 @@ Check current official venue pages immediately before making a recommendation. D
 A preprint may be appropriate after the claim audit and full repository validation. The preprint must link to the version-specific evidence archive and state that it has not completed peer review.
 
 The existing GitHub and Zenodo materials are research artifacts. They are not substitutes for a manuscript-specific archive.
+
+The v0.4.0 evidence and figure archive has the version DOI [10.5281/zenodo.21844706](https://doi.org/10.5281/zenodo.21844706). The concept DOI `10.5281/zenodo.21841127` resolves to the latest archived version and must not replace the version DOI in a claim tied to v0.4.0.
 
 ## Authorship
 
@@ -74,7 +76,7 @@ Do not characterize the work as exempt from review until the applicable institut
 ## Release checkpoints
 
 1. **Paper v0.1:** charter, abstract, detailed outline, core literature, and claim register.
-2. **Paper v0.2:** complete related work and methods draft with verified citations.
+2. **Paper v0.2:** PR #11 pressure test, corrected claim boundary, documented novelty audit, complete related work, and methods draft with verified citations.
 3. **Paper v0.3:** results, discussion, limitations, and institutional implications.
 4. **Paper v0.4:** full claim audit, figure check, disclosure, and data-availability statement.
 5. **Preprint candidate:** formatted manuscript and manuscript-specific archive.

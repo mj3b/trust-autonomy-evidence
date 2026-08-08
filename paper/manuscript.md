@@ -1,70 +1,84 @@
 # From Formal Authority to Practical Human Control
 
-## A traceable method for reconstructing AI-mediated decisions
+## A traceable method for reconstructing human control in automated decisions
 
 **Author:** Mark Julius Banasihan  
 **ORCID:** [0009-0001-8121-2878](https://orcid.org/0009-0001-8121-2878)  
-**Status:** Working outline, v0.1
+**Status:** Introduction and related-work draft, v0.2
 
 ## Abstract
 
-Institutions often treat a named human reviewer or approval step as evidence that an automated or autonomous system remains under human control. That inference can fail when the designated person lacks timely information, comprehension, authority, a feasible opportunity to challenge the system, or the ability to affect the outcome. This paper asks whether a frozen, evidence-traceable assessment procedure can distinguish formal human authority, practical human control, and unresolved evidence in public incident records. A protocol fixed the evidence cutoff, candidate collections, search vocabulary, eligibility rules, screening order, three selection strata, and missing-data treatment before candidate screening. The procedure then reconstructed three purposefully selected historical cases using immutable source packets, claim-level provenance, categorical assessment states, and a practical-control chain from information access through effect. Formal authority is supported in all three packets. The Oko packet supports the pre-action chain through protective effect. The Patriot ZG710 packet supports formal authority while comprehension, feasible challenge, exercised challenge, and effect are unsupported. The Patriot F/A-18C packet supports formal authority while missing public records leave comprehension, feasible challenge, and exercised challenge indeterminate. The findings support a bounded methodological conclusion: formal authority alone does not establish practical human control in these packets, and missing evidence should not be converted into evidence of failure. Three retrospective, single-assessor cases provide no population estimate, causal validation, independent-reliability result, or transfer claim for current learned systems. The contribution is a reproducible evidence procedure for evaluating whether institutional claims of human control are supported by a reconstructable decision record.
+Institutions often treat a named human reviewer or approval step as evidence that an automated or autonomous system remains under human control. That inference can fail when the designated person lacks timely information, comprehension, authority, a feasible opportunity to challenge the system, or the ability to affect the outcome. This paper develops a frozen, evidence-traceable procedure for representing formal authority, practical control, and unresolved evidence in bounded public incident records. The protocol fixed the evidence cutoff, candidate collections, search vocabulary, eligibility rules, screening order, three selection strata, and missing-data treatment before candidate screening. It then assembled three versioned historical case packets with claim-level provenance, categorical evidence states, and a chain from information access through effect. The released v0.3.0 assessments record formal authority in all three packets, practical force through effect in Oko, unsupported practical-control conditions in ZG710, and indeterminate conditions in F/A-18C. These cases demonstrate execution under three contrastive conditions selected by design; they do not independently validate discriminative performance. One consistency question remains open. Oko's supported states rely on retrospective participant accounts. The practical-control protocol defines supported evidence as direct and contemporaneous. The manuscript therefore reports the released states as procedure outputs pending a versioned resolution. The present contribution is a traceable, executable evidence procedure. Three retrospective, single-assessor cases supply no population estimate, causal validation, independent-reliability result, or transfer claim for current learned systems.
+
+## Audit gate
+
+`PAPER-BLOCKER-01` concerns the Oko contemporaneity mismatch recorded in the [PR #11 review](review-record-pr11.md). Introduction, related work, and method development may continue. Final empirical claims remain provisional where they depend on Oko meeting the present supported-state definition.
 
 ## 1. Introduction
 
 ### 1.1 The institutional problem
 
-**Purpose:** Establish why a human signature, approval step, or override policy is not self-validating evidence of control.
+An approval step proves that an institution assigned a role. It does not show that the person received the relevant information, understood the system's limits, could challenge the proposed action in time, exercised that authority, or changed the outcome. A human-control claim therefore contains several empirical propositions that a signature or job title cannot establish by itself.
 
-**Required support:** Green (2022), Bainbridge (1983), Endsley (2017), Zhu et al. (2026), and relevant institutional requirements.
+Human-factors research explains the mechanism. Automation can leave people responsible for rare or abnormal conditions after routine system operation has reduced their preparation for those conditions [@bainbridge1983ironies]. Situation awareness and intervention performance depend on what the person can perceive, understand, and project under the operating conditions [@endsley2017autonomy]. Trust affects reliance through the interaction of the person, system, task, and context [@lee2004trust]. Formal authority can remain intact as these operational conditions deteriorate.
 
-**Boundary:** Do not claim that human oversight always fails. State the conditions under which formal authority may lack practical force.
+The same problem appears in policy. Green finds that government rules often require human oversight without establishing that the designated people can perform the intended review [@green2022flaws]. Zhu et al. separate AI operative agency from human evaluative agency and identify verification, contestation, and substitution as oversight mechanisms [@zhu2026oversight]. These accounts direct attention to a documentary question: what evidence would justify reliance on an institutional claim that human authority had practical force in one consequential decision?
 
 ### 1.2 Research gap
 
-**Purpose:** Show that meaningful-human-control theory, human-factors evidence, incident analysis, and assurance methods address neighboring problems but do not yet supply the same retrospective evidence procedure.
+Four research streams answer parts of that question. Meaningful-human-control scholarship defines moral, design, and institutional conditions for control [@santoni2018meaningful; @siebert2023meaningful; @davidovic2023purpose; @calvert2025principles]. Human-factors research explains why monitoring, comprehension, and timely intervention can fail [@bainbridge1983ironies; @lee2004trust; @endsley2017autonomy]. Incident research specifies causal factors, reporting structures, and information needs [@mcgregor2021incidents; @macrae2022failure; @ezell2025incident; @paeth2025lessons; @wei2026reporting]. Assurance research connects claims to evidence, assumptions, and uncertainty [@burr2023ethical; @paterson2025safety].
 
-**Required support:** The completed literature search and novelty audit.
+The closest prior work narrows the remaining contribution. Dekker already provides a retrospective method for reconstructing human contributions inside the event sequence and controlling hindsight [@dekker2002reconstructing]. McDermid ties effective intervention to time, independent knowledge, skills, and assurance [@mcdermid2019control]. Pittaras and McGregor classify possible failure causes from incomplete open-source AI incidents [@pittaras2023taxonomic]. Leung et al. join control boundaries, reconstructed state, and claim-grade evidence for agentic AI losses [@leung2026cer]. Ledjaki et al. propose prompt-level chain of custody and replay [@ledjaki2026prompt].
 
-**Boundary:** Describe the gap as provisional until backward and forward citation chaining is complete.
+These sources rule out broad originality claims for control conditions, public-record reconstruction, incident evidence, provenance, or assurance. The remaining hypothesis concerns their combination in one procedure: protocol fixation before screening, a preserved selection path, versioned public evidence packets, claim-level provenance, explicit indeterminate states, a chain from access through effect, and executable artifact checks. The [novelty audit](novelty-audit.md) treats that hypothesis as provisional until database searches and citation chaining are complete.
 
 ### 1.3 Research question and contribution
 
-State the research question from the paper charter. Define the contribution as a method for testing the evidentiary support behind a bounded human-control claim.
+> How can a frozen, evidence-traceable assessment procedure represent formal human authority, practical human control, and unresolved evidence in a bounded public incident record?
+
+The paper proposes a documentary assessment procedure. It defines a bounded action sequence, fixes the case-selection and missing-data rules, assembles a versioned evidence packet, assigns provenance to material statements, and evaluates six pre-action conditions: access, comprehension, authority, feasible challenge, exercised challenge, and effect. An explicit indeterminate state prevents missing records from becoming negative factual findings.
+
+The three cases demonstrate that procedure under contrastive evidence conditions. They do not test prevalence, classification accuracy, independent reliability, causal effects, or transfer to current learned systems. The institutional output is a proposed record set that a reviewer would need before relying on a practical-control claim.
 
 ### 1.4 Paper structure
 
-Preview theory, method, case results, cross-case mechanism, institutional implications, and limitations.
+Section 2 locates the procedure in meaningful-human-control, human-factors, incident-analysis, reconstruction, and assurance research. Section 3 defines the frozen method and its transfer boundary. Section 4 reports the released assessment states and the open protocol-consistency question. Sections 5 through 7 separate interpretation, limitations, and proposed institutional record requirements.
 
 ## 2. Related work
 
 ### 2.1 Meaningful human control
 
-Connect tracking and tracing to the need for reason-responsive systems and identifiable people with adequate understanding. Explain how later work translates those ideas toward system properties, operational frameworks, institutional purposes, and human-machine teaming.
+Santoni de Sio and van den Hoven define meaningful human control through tracking and tracing. System behavior must respond to relevant human reasons, and human actors must be able to understand their role and bear responsibility [@santoni2018meaningful]. This account makes human presence insufficient because control depends on the relation among system behavior, human reasons, and identifiable responsibility.
 
-**Core sources:** Santoni de Sio and van den Hoven (2018); Davidovic (2023); Siebert et al. (2023); Calvert (2025); Tsamados, Floridi, and Taddeo (2025).
+Later work moves the concept toward institutional and engineering use. Siebert et al. propose actionable properties that align ability, authority, and responsibility [@siebert2023meaningful]. Davidovic argues that designers must first state the purpose served by human control [@davidovic2023purpose]. Calvert places proximal intervention inside a wider system of distal control across design, deployment, and governance [@calvert2025principles]. Tsamados, Floridi, and Taddeo compare supervisory control with human-machine teaming for foundation-model systems [@tsamados2025control]. Zhu et al. frame oversight as human evaluative agency expressed through verification, steering, contestation, and substitution [@zhu2026oversight].
+
+The present paper uses these sources to define the proposition being assessed. It does not offer a new philosophical account of meaningful human control.
 
 ### 2.2 Human oversight and the automation problem
 
-Explain out-of-the-loop performance, situation awareness, trust calibration, and institutional limits on human review.
+Bainbridge shows how automation transfers rare, abnormal, and difficult work to people after routine operation has weakened the practice needed for that work [@bainbridge1983ironies]. Endsley connects autonomous-system performance to situation awareness, monitoring, workload, trust, and out-of-the-loop degradation [@endsley2017autonomy]. Lee and See model appropriate reliance as a relation among the person, automation, task, and environment [@lee2004trust]. Together, these mechanisms explain how nominal oversight can lose practical force.
 
-**Core sources:** Bainbridge (1983); Lee and See (2004); Endsley (2017); Green (2022); Alon-Barkat and Busuioc (2023); Zhu et al. (2026).
+Human response to algorithmic advice is conditional. Alon-Barkat and Busuioc find both automation bias and selective adherence across experimental public-sector decisions [@alonbarkat2023interactions]. Green's policy analysis reaches an institutional implication: oversight rules need evidence that people can perform the assigned review [@green2022flaws]. The present method converts that implication into separate documentary questions about information, comprehension, authority, feasibility, action, and effect.
 
 ### 2.3 AI incident analysis and missing records
 
-Explain the role of incident collections, causal-factor frameworks, activity logs, system documentation, tool information, and epistemic uncertainty.
+The AI Incident Database was created to provide a shared record of real-world failures and support learning across incidents [@mcgregor2021incidents]. Its reports remain public-source records with changing coverage and varying detail. Pittaras and McGregor respond to that constraint through expert classification of goals, technologies, and possible technical failure causes [@pittaras2023taxonomic]. Paeth et al. show that incident reports contain structural ambiguity and unavoidable epistemic uncertainty [@paeth2025lessons]. These limits support an explicit indeterminate state.
 
-**Core sources:** Ezell, Roberts-Gaal, and Chan (2025); Paeth et al. (2025).
+Macrae demonstrates that public investigative reports can support systematic analysis of sociotechnical failure in an autonomous system [@macrae2022failure]. Ezell, Roberts-Gaal, and Chan specify system, contextual, cognitive, access, tool, log, and documentation information needed to investigate AI-agent incidents [@ezell2025incident]. Wei and Heim locate those information needs inside institutional reporting systems and post-reporting action [@wei2026reporting]. The present method applies a narrower question to each packet: which records support a claim that assigned human authority could affect the bounded action?
 
-### 2.4 Argument-based assurance
+### 2.4 Reconstruction, forensics, and assurance
 
-Explain why a control claim requires a structured argument supported by inspectable evidence, assumptions, uncertainties, and declared limits.
+Dekker treats accident reconstruction as recovery of what people could know and why their actions made sense inside the unfolding event [@dekker2002reconstructing]. This approach guards against hindsight and unsupported counterfactual blame. McDermid identifies time, knowledge independent of the automated system, and practiced skill as conditions for effective intervention [@mcdermid2019control]. These works closely anticipate the procedure's reconstruction logic and feasible-challenge stage.
 
-**Core sources:** Burr and Leslie (2023); Paterson et al. (2025).
+Argument-based assurance asks whether evidence justifies a stated claim under explicit assumptions and uncertainty. Burr and Leslie extend that structure to ethical and social claims [@burr2023ethical]. AMLAS applies it to machine-learning safety across development and deployment [@paterson2025safety]. The present procedure borrows this claim-evidence discipline for retrospective assessment. It does not issue a safety case for Oko or Patriot.
+
+Recent forensic work provides closer technical neighbors. Leung et al. reconstruct changing AI system state for insurance claims [@leung2026cer]. Ledjaki et al. preserve and replay prompt-level evidence through a chain-of-custody design [@ledjaki2026prompt]. These papers constrain the contribution to the specific combination of practical human control, public case selection, categorical missingness, and executable repository checks.
 
 ### 2.5 Synthesis
 
-State the proposed gap: the literature supplies theories of control, evidence about oversight performance, incident-information requirements, and assurance logic. This paper tests a procedure that joins those elements in a frozen public-case reconstruction.
+Existing research supplies theories of control, evidence about oversight performance, retrospective reconstruction methods, public incident-analysis procedures, reporting requirements, assurance logic, and forensic evidence controls. This paper studies one integration of those elements in a frozen public-case procedure.
+
+The contribution is methodological and bounded. It asks how a reader can inspect the path from candidate selection to source packet, provenance label, assessment state, figure, and manuscript claim. The current evidence shows that the procedure can generate that path for three selected packets. It does not show that another assessor would agree, that the categories are valid across domains, or that use of the procedure improves institutional decisions.
 
 ## 3. Method
 
@@ -72,35 +86,41 @@ State the proposed gap: the literature supplies theories of control, evidence ab
 
 Describe the work as a retrospective, purposefully selected, single-assessor methods study. Define one bounded AI-mediated decision or action sequence as the unit of analysis.
 
-### 3.2 Protocol freeze and evidence cutoff
+### 3.2 System inclusion and transfer boundary
+
+Explain the functional, historically neutral AI-system definition used by the frozen protocol. Identify the machine-based inference, recommendation, classification, or decision function in each case. State that Oko and Patriot differ materially from current learned systems and agents. Any present-system application must be justified through shared mechanisms, not category labels.
+
+### 3.3 Protocol freeze and evidence cutoff
 
 Report the freeze commit, evidence cutoff, fixed vocabulary, and rule that screening could begin only after the protocol and empty register reached `main`.
 
-### 3.3 Candidate collections and search
+### 3.4 Candidate collections and search
 
 Report the AI Incident Database snapshot, OECD export, preserved hashes, query terms, candidate counts, and interface limitation.
 
-### 3.4 Eligibility, strata, and stopping
+### 3.5 Eligibility, strata, and stopping
 
 Define the six eligibility conditions, exclusions, chronological screening order, three strata, first-eligible rule, and stopping condition.
 
+State that the strata anticipate the three headline contrasts. The case set demonstrates procedure execution under those conditions and does not independently validate discrimination.
+
 **Figure:** Figure 1, frozen selection and stopping.
 
-### 3.5 Immutable source packets
+### 3.6 Versioned evidence packets
 
-Describe the case boundary, chronology, source manifest, missing-evidence record, publication-rights statement, preserved files, and SHA-256 packet manifest.
+Describe the case boundary, chronology, source manifest, missing-evidence record, publication-rights statement, preserved files, remote-only sources, and SHA-256 packet manifest. Limit immutability claims to content that was preserved and hashed.
 
-### 3.6 Assessment contract
+### 3.7 Assessment contract
 
 Define the autonomy variables, trust-evidence propositions, practical-control stages, categorical states, and provenance labels.
 
-### 3.7 Missing evidence and inference
+### 3.8 Missing evidence and inference
 
 Explain why missing evidence is indeterminate unless the packet establishes that a required record should exist and is absent. Separate direct record, source claim, assessor inference, and unresolved evidence.
 
-### 3.8 Reproducibility controls
+### 3.9 Artifact and consistency controls
 
-Describe schema checks, packet hashes, selection invariants, interaction checks, mutation tests, figure rebuilds, and release manifests.
+Describe schema checks, packet hashes, selection invariants, interaction checks, mutation tests, figure rebuilds, and release manifests. Separate repeatable artifact transformations from independent reproduction of assessment judgments.
 
 ## 4. Results
 
@@ -110,7 +130,7 @@ Report 928 preserved candidate records, five screened candidates, two exclusions
 
 ### 4.2 Oko, 1983
 
-Report the supported alert, contextual challenge, ground-radar check, false-alarm report, pre-action intervention, and effect. Preserve limits on source completeness and counterfactual claims.
+Report the released assessment states for the alert, contextual challenge, ground-radar check, false-alarm report, pre-action intervention, and effect. State that these classifications depend on retrospective participant accounts. Preserve the open contemporaneity mismatch, source-completeness limit, and counterfactual boundary.
 
 ### 4.3 Patriot ZG710, 2003
 
@@ -126,7 +146,7 @@ Compare access, comprehension, authority, feasible challenge, exercised challeng
 
 **Figure:** Figure 2, practical-control chain.
 
-**Bounded result:** Authority is common across the three packets. The remaining links and protective effect differ.
+**Bounded released result:** Authority is classified as supported across the three packets. The remaining links and protective effect receive different states. This comparison reports procedure output under contrastive selection.
 
 ### 4.6 Decision paths and trust-evidence states
 
@@ -158,7 +178,7 @@ Discuss possible application to contemporary systems as a future research direct
 
 ## 6. Limitations
 
-Address purposeful selection, stopping after five screened candidates, two cases from one system family and operating period, retrospective public evidence, source dependence, classified and unavailable records, single assessment, no inter-rater evidence, no causal estimate, and no present-system transfer claim.
+Address purposeful selection, alignment between the strata and headline contrasts, stopping after five screened candidates, two cases from one system family and operating period, retrospective public evidence, source dependence, classified and unavailable records, remote-only source content, the Oko contemporaneity mismatch, single assessment, no inter-rater evidence, no causal estimate, and no present-system transfer claim.
 
 ## 7. Institutional implications
 
@@ -170,7 +190,7 @@ Return to the decision problem. State only that the method produced traceable, b
 
 ## Data and materials availability
 
-Link the version-specific Zenodo archive, GitHub release, packet index, figure data, and release manifests. Insert the v0.4.0 version DOI after Zenodo completes archival.
+Link the v0.4.0 [Zenodo archive](https://doi.org/10.5281/zenodo.21844706), [GitHub release](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.4.0), packet index, figure data, and release manifests. The all-versions DOI is `10.5281/zenodo.21841127`.
 
 ## Ethics and publication authority
 
@@ -182,4 +202,4 @@ To be completed using the selected venue's taxonomy.
 
 ## AI-assistance disclosure
 
-To be completed after selecting a venue. The disclosure must identify material assistance with literature discovery, drafting, formatting, and consistency checking while preserving the human author's responsibility for source verification, analysis, and conclusions.
+To be completed after selecting a venue. The disclosure must identify material assistance with literature discovery, drafting, formatting, and consistency checking and preserve the human author's responsibility for source verification, analysis, and conclusions.

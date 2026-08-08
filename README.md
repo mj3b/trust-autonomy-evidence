@@ -54,7 +54,7 @@ All three cases gave a human formal authority. The outcomes differed because aut
 5. Did they intervene?
 6. Did the intervention change the outcome?
 
-In the 1983 Oko case, the chain remained intact. Stanislav Petrov received the warning, questioned it, had time and authority to act, and prevented the warning from driving further escalation.
+In the released v0.3.0 assessment, the 1983 Oko chain is classified as intact. Retrospective participant accounts report that Stanislav Petrov received the warning, questioned it, had time and authority to act, and prevented the warning from driving further escalation.
 
 In the Patriot ZG710 case, a human authorized the engagement. The evidence indicates weak comprehension and no feasible or exercised challenge before launch. Formal authority therefore produced no protective effect.
 
@@ -64,7 +64,9 @@ The later reforms shown in both Patriot cases indicate institutional learning. T
 
 The central lesson is that placing a human “in the loop” does not establish meaningful control. Institutions need evidence that the entire chain works: timely information, comprehension, authority, opportunity, intervention, and effect.
 
-We reached this conclusion by comparing the [27 plotted states](figures/data/fig-2-practical-control-chain.csv). Authority was supported in all three cases. A protective effect appeared only in Oko, where the other five pre-action links were also supported. The [figure methods](reports/figure-methods.md#derivation-of-the-central-lesson) preserve the formal derivation.
+The released figure derives this pattern from the [27 plotted states](figures/data/fig-2-practical-control-chain.csv). Authority is classified as supported in all three cases. A protective effect appears only in Oko, where the other five pre-action links are also classified as supported. The [figure methods](reports/figure-methods.md#derivation-of-the-central-lesson) preserve the formal derivation.
+
+The paper-stage [PR #11 pressure test](paper/review-record-pr11.md) identified a protocol-consistency question. Oko's supporting records are retrospective, and the practical-control protocol defines a supported state through direct, contemporaneous evidence. Until a versioned resolution addresses that mismatch, read the green Oko cells as released assessment states, not as proof that the classifications satisfy every protocol requirement.
 
 The figure shows this pattern across three historical cases. It supplies no estimate of how often these failures occur and no prediction of performance in current AI systems.
 
@@ -84,6 +86,7 @@ The [publication figure set](figures/) contains the remaining main figures, both
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`GOVERNANCE.md`](GOVERNANCE.md) | Define contribution evidence, review rules, decision authority, and change records. |
 | [`research/`](research/) | Contains the main conceptual paper on justified reliance, autonomy, and practical control. |
 | [`research/frozen-research-agenda.md`](research/frozen-research-agenda.md) | Freezes three research topics and one project question for the next public-case cycle. |
+| [`paper/`](paper/) | Develops the methods paper, claim register, literature audit, review record, references, and publication decisions. |
 | [`evidence/`](evidence/) | Contains the trust evidence register that converts reliance claims into inspectable records. |
 | [`protocols/`](protocols/) | Defines solo validation, independent review, and practical-control assessment procedures. |
 | [`protocols/public-case-reconstruction-protocol.md`](protocols/public-case-reconstruction-protocol.md) | Freezes the source cutoff, candidate pools, eligibility rules, screening order, and reconstruction procedure before case selection. |
@@ -119,7 +122,7 @@ python -m pip install -r requirements-dev.txt
 python scripts/validate_repository.py
 ```
 
-The validator checks required files, internal Markdown links, version alignment, duplicate claim identifiers, exclusion of private candidacy language, JSON Schema conformance, source references, sealed packet and release hashes, selection invariants, three public-case interactions, 252 oracle comparisons, 12 mutation tests, and figure data and artifact integrity. A successful run ends with `repository validation: PASS`.
+The repository validator checks required release files, internal Markdown links, version alignment, duplicate claim identifiers, exclusion of private candidacy language, JSON Schema conformance, source references, sealed packet and release hashes, selection invariants, three public-case interactions, 252 oracle comparisons, 12 mutation tests, and figure data and artifact integrity. The paper validator checks the manuscript workspace, author identity, question alignment, bibliography structure, version DOI, and open blocker record. Successful runs end with `repository validation: PASS` and `paper validation: PASS`.
 
 ## Research boundaries
 
@@ -140,11 +143,11 @@ Contributions should identify the proposition being changed, the evidence suppor
 
 ## Citation
 
-Version 0.4.0 is released through GitHub and the repository's Zenodo integration. The version-specific DOI is recorded after Zenodo completes the archive.
+Version 0.4.0 is released through GitHub and the repository's Zenodo integration. Its version-specific DOI is [10.5281/zenodo.21844706](https://doi.org/10.5281/zenodo.21844706).
 
 > Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.4.0) [Computer software]. Zenodo.
 
-The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata appears in [CITATION.cff](CITATION.cff). The v0.3.0 case release remains available at [10.5281/zenodo.21843843](https://doi.org/10.5281/zenodo.21843843).
+The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata in [CITATION.cff](CITATION.cff) points to the exact v0.4.0 archive. The v0.3.0 case release remains available at [10.5281/zenodo.21843843](https://doi.org/10.5281/zenodo.21843843).
 
 ## Author
 

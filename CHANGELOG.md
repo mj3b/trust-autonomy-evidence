@@ -4,14 +4,20 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
-No unreleased changes.
+- Adds the paper workspace introduced by PR #11: charter, working manuscript, 15-source literature matrix, BibTeX file, claim-evidence register, and submission notes.
+- Records the PR #11 pressure test and preserves `PAPER-BLOCKER-01` for the unresolved Oko contemporaneity mismatch.
+- Narrows the research question from independent discrimination to traceable representation under contrastive selection.
+- Adds eight novelty-sensitive sources, a search log, and a provisional novelty audit.
+- Replaces overbroad source-immutability and independent-reproducibility wording with claims supported by the current artifacts.
+- Adds a paper validator and CI step for paper files, author identity, question alignment, bibliography structure, exact version DOI, and blocker visibility.
+- Records the v0.4.0 version DOI, `10.5281/zenodo.21844706`, in citation and manuscript files.
 
 ## 0.4.0, 7 August 2026
 
-Adds a reproducible publication figure package derived from the sealed v0.3.0 and v0.2.0 artifacts.
+Adds a repeatable publication figure package derived from the sealed v0.3.0 and v0.2.0 artifacts.
 
 - Adds four main figures covering frozen selection, practical human control, reconstructed decision paths, and trust-evidence states.
-- Adds appendix figures for mutation response and research-to-figure reproducibility lineage.
+- Adds appendix figures for mutation response and research-to-figure lineage.
 - Publishes six derived CSV files, six SVG files, six PNG files, and machine-readable plotting specifications.
 - Adds formal captions, transformation records, missingness treatment, and prohibited interpretations.
 - Adds plain-language reading guides and an explicit derivation for the featured practical-control result.
@@ -39,7 +45,7 @@ Adds a solo-validation release with bounded internal evidence.
 - Publishes five JSON Schemas for case, autonomy, mutation, trust-assessment, and practical-control contracts.
 - Freezes twelve synthetic cases spanning supported, partially supported, unsupported, indeterminate, and outside-scope states.
 - Seals cases, mutations, and the explicit oracle using SHA-256 hashes.
-- Reproduces 252 prespecified case determinations under the v0.2.0 assessment contract.
+- Matches 252 prespecified case determinations under the v0.2.0 assessment contract.
 - Passes twelve mutation tests containing eleven expected classification changes and three invariance conditions.
 - Publishes deterministic results, a generated validation report, and a solo-validation protocol.
 - Records author-oracle circularity, synthetic-case limits, and unresolved independent and operational claims.

@@ -22,3 +22,5 @@ jobs:
         run: python -m pip install -r requirements-dev.txt
       - name: Validate research artifacts
         run: python scripts/validate_repository.py
+      - name: Validate paper workspace
+        run: python scripts/validate_paper.py
