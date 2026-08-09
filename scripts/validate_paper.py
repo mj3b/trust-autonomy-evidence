@@ -17,6 +17,7 @@ QUESTION = (
     "public incident record?"
 )
 VERSION_DOI = "10.5281/zenodo.21844706"
+REPOSITORY_VERSION = "0.5.0"
 PAPER_FILES = (
     "paper/README.md",
     "paper/paper-charter.md",
@@ -28,6 +29,8 @@ PAPER_FILES = (
     "paper/claim-evidence-register.md",
     "paper/submission-notes.md",
     "paper/review-record-pr11.md",
+    "paper/claim-crosswalk.md",
+    "paper/scientistone-artifact-pressure-test.md",
 )
 
 
@@ -80,8 +83,8 @@ def validate_question(failures: list[str]) -> None:
 def validate_bibliography(failures: list[str]) -> None:
     text = (ROOT / "paper/references.bib").read_text(encoding="utf-8")
     entries = re.findall(r"^@\w+\{([^,]+),", text, flags=re.MULTILINE)
-    if len(entries) < 23:
-        fail(f"paper bibliography has {len(entries)} entries; expected at least 23", failures)
+    if len(entries) < 24:
+        fail(f"paper bibliography has {len(entries)} entries; expected at least 24", failures)
     if len(entries) != len(set(entries)):
         fail("duplicate BibTeX keys in paper/references.bib", failures)
     doi_fields = re.findall(r"^\s+doi\s*=", text, flags=re.MULTILINE | re.IGNORECASE)
@@ -103,10 +106,16 @@ def validate_boundaries(failures: list[str]) -> None:
         if "PAPER-BLOCKER-01" not in text:
             fail(f"open paper blocker missing from {relative}", failures)
     citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
-    if VERSION_DOI not in citation:
-        fail("CITATION.cff does not contain the v0.4.0 version DOI", failures)
+    if f"version: {REPOSITORY_VERSION}" not in citation:
+        fail("CITATION.cff does not identify v0.5.0", failures)
     if VERSION_DOI not in manuscript:
         fail("v0.4.0 version DOI missing from paper/manuscript.md", failures)
+    matrix = (ROOT / "paper/literature-matrix.md").read_text(encoding="utf-8")
+    if "L24" not in matrix or "ScientistOne" not in matrix:
+        fail("ScientistOne prior architecture missing from literature matrix", failures)
+    crosswalk = (ROOT / "paper/claim-crosswalk.md").read_text(encoding="utf-8")
+    if "C04 | Blocked" not in crosswalk or "C09 | Blocked" not in crosswalk:
+        fail("blocked paper claims missing from v0.5 crosswalk", failures)
 
 
 def main() -> int:

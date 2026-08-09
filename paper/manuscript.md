@@ -74,6 +74,8 @@ Argument-based assurance asks whether evidence justifies a stated claim under ex
 
 Recent forensic work provides closer technical neighbors. Leung et al. reconstruct changing AI system state for insurance claims [@leung2026cer]. Ledjaki et al. preserve and replay prompt-level evidence through a chain-of-custody design [@ledjaki2026prompt]. These papers constrain the contribution to the specific combination of practical human control, public case selection, categorical missingness, and executable repository checks.
 
+ScientistOne supplies a closer architecture for research verifiability. Its Chain-of-Evidence framework requires claims to trace to evidence, and its post-hoc audit checks scores, specification violations, references, and method-code alignment [@meng2026scientistone]. This prior work rules out an originality claim for claim traceability or the four audit categories. The present adaptation adds a governance-specific assessment of directness, contemporaneity, independence, completeness, publication authority, and dependency closure. These additions remain method proposals until independent review tests their application.
+
 ### 2.5 Synthesis
 
 Existing research supplies theories of control, evidence about oversight performance, retrospective reconstruction methods, public incident-analysis procedures, reporting requirements, assurance logic, and forensic evidence controls. This paper studies one integration of those elements in a frozen public-case procedure.
@@ -121,6 +123,10 @@ Explain why missing evidence is indeterminate unless the packet establishes that
 ### 3.9 Artifact and consistency controls
 
 Describe schema checks, packet hashes, selection invariants, interaction checks, mutation tests, figure rebuilds, and release manifests. Separate repeatable artifact transformations from independent reproduction of assessment judgments.
+
+Describe the v0.5 Chain-of-Evidence adaptation, including exact locators, integrity states, human support attestations, five evidence-fitness dimensions, dependency closure, run-type labels, and bounded-language declarations. Report the four adapted ScientistOne checks and the repository-specific fitness and closure check. State that the audit covers 14 declared material claims and not every manuscript sentence.
+
+**Figure:** Figure A3, claim-evidence integrity matrix.
 
 ## 4. Results
 

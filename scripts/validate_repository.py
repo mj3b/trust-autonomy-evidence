@@ -14,7 +14,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.4.0"
+REPOSITORY_VERSION = "0.5.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
 REQUIRED_FILES = (
@@ -31,11 +31,16 @@ REQUIRED_FILES = (
     "requirements-dev.txt",
     "research/trust-autonomy-and-evidence.md",
     "research/frozen-research-agenda.md",
+    "research/chain-of-evidence-adaptation.md",
     "evidence/trust-evidence-register.md",
+    "evidence/claim-evidence-map.json",
+    "evidence/research-lineage.json",
+    "evidence/research-activity-log.json",
     "protocols/independent-review-protocol.md",
     "protocols/practical-human-control-test.md",
     "protocols/solo-validation-protocol.md",
     "protocols/public-case-reconstruction-protocol.md",
+    "protocols/coe-integrity-audit.md",
     "cases/README.md",
     "cases/public-case-selection-register.md",
     "cases/data/candidate-search-output.json",
@@ -59,29 +64,38 @@ REQUIRED_FILES = (
     "schemas/mutation-suite.schema.json",
     "schemas/public-case-assessment.schema.json",
     "schemas/source-manifest.schema.json",
+    "schemas/claim-evidence-map.schema.json",
+    "schemas/research-lineage.schema.json",
+    "schemas/coe-audit-result.schema.json",
+    "schemas/coe-audit-mutations.schema.json",
     "fixtures/synthetic/cases.json",
     "fixtures/mutations/mutations.json",
+    "fixtures/coe-audit-mutations.json",
     "oracles/solo-validation-v0.2.0.json",
     "oracles/manifest.json",
     "analysis/assessment.py",
     "analysis/run_solo_validation.py",
     "analysis/build_figures.py",
+    "analysis/build_claim_evidence_figure.py",
     "assessments/generated-results.json",
     "reports/solo-validation-v0.2.0.md",
     "reports/public-case-reconstruction-v0.3.0.md",
     "reports/figure-methods.md",
+    "reports/claim-evidence-figure-methods-v0.5.0.md",
     "figures/README.md",
     "figures/manifest.json",
     "figures/specifications/figure-register.json",
     "figures/specifications/selection-decisions.json",
     "figures/specifications/decision-paths.json",
     "figures/specifications/reproducibility-lineage.json",
+    "figures/specifications/claim-evidence-integrity.json",
     "figures/data/fig-1-selection-and-stopping.csv",
     "figures/data/fig-2-practical-control-chain.csv",
     "figures/data/fig-3-decision-paths.csv",
     "figures/data/fig-4-trust-evidence-states.csv",
     "figures/data/fig-a1-mutation-response.csv",
     "figures/data/fig-a2-reproducibility-lineage.csv",
+    "figures/data/fig-a3-claim-evidence-integrity.csv",
     "figures/generated/fig-1-selection-and-stopping.png",
     "figures/generated/fig-1-selection-and-stopping.svg",
     "figures/generated/fig-2-practical-control-chain.png",
@@ -94,11 +108,22 @@ REQUIRED_FILES = (
     "figures/generated/fig-a1-mutation-response.svg",
     "figures/generated/fig-a2-reproducibility-lineage.png",
     "figures/generated/fig-a2-reproducibility-lineage.svg",
+    "figures/generated/fig-a3-claim-evidence-integrity.png",
+    "figures/generated/fig-a3-claim-evidence-integrity.svg",
+    "figures/v0.5.0-manifest.json",
     "release/v0.3.0-manifest.json",
     "release/v0.4.0-manifest.json",
+    "release/v0.5.0-manifest.json",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
+    "scripts/run_coe_integrity_audit.py",
+    "audits/v0.5.0/audit-plan.md",
+    "audits/v0.5.0/audit-results.json",
+    "audits/v0.5.0/audit-report.md",
+    "audits/v0.5.0/exceptions.md",
+    "paper/claim-crosswalk.md",
+    "paper/scientistone-artifact-pressure-test.md",
     ".github/pull_request_template.md",
     ".github/ISSUE_TEMPLATE/case-proposal.yml",
     ".github/ISSUE_TEMPLATE/construct-ambiguity.yml",
@@ -312,7 +337,7 @@ def validate_case_interactions(failures: list[str]) -> None:
 
 def validate_release_manifest(failures: list[str]) -> None:
     manifest = json.loads(
-        (ROOT / "release/v0.4.0-manifest.json").read_text(encoding="utf-8")
+        (ROOT / "release/v0.5.0-manifest.json").read_text(encoding="utf-8")
     )
     if manifest.get("version") != REPOSITORY_VERSION:
         fail("release manifest version mismatch", failures)
@@ -371,6 +396,36 @@ def validate_figure_set(failures: list[str]) -> str:
     return result.stdout.strip()
 
 
+def validate_coe_audit(failures: list[str]) -> str:
+    result = subprocess.run(
+        [sys.executable, "scripts/run_coe_integrity_audit.py", "--check"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        detail = (result.stdout + result.stderr).strip()
+        fail(f"chain-of-evidence audit failed: {detail}", failures)
+        return ""
+    return result.stdout.strip()
+
+
+def validate_coe_figure(failures: list[str]) -> str:
+    result = subprocess.run(
+        [sys.executable, "analysis/build_claim_evidence_figure.py", "--check"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        detail = (result.stdout + result.stderr).strip()
+        fail(f"claim-evidence figure failed: {detail}", failures)
+        return ""
+    return result.stdout.strip()
+
+
 def main() -> int:
     failures: list[str] = []
     validate_required_files(failures)
@@ -385,6 +440,8 @@ def main() -> int:
     validate_release_manifest(failures)
     solo_result = validate_solo_suite(failures)
     figure_result = validate_figure_set(failures)
+    coe_result = validate_coe_audit(failures)
+    coe_figure_result = validate_coe_figure(failures)
 
     if failures:
         for failure in failures:
@@ -396,6 +453,10 @@ def main() -> int:
         print(solo_result)
     if figure_result:
         print(figure_result)
+    if coe_result:
+        print(coe_result)
+    if coe_figure_result:
+        print(coe_figure_result)
     print("repository validation: PASS")
     return 0
 

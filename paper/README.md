@@ -16,13 +16,15 @@ This directory develops a methods and comparative-case paper from the repository
 |---|---|
 | [`paper-charter.md`](paper-charter.md) | Fixes the paper type, question, contribution, audience, and claim boundary. |
 | [`manuscript.md`](manuscript.md) | Contains the working abstract and section-level manuscript plan. |
-| [`literature-matrix.md`](literature-matrix.md) | Relates 15 initial sources and eight pressure-test additions to the proposed contribution. |
+| [`literature-matrix.md`](literature-matrix.md) | Relates 15 initial sources and nine pressure-test additions to the proposed contribution. |
 | [`literature-search-log.md`](literature-search-log.md) | Records discovery queries, dates, retained candidates, and search limits. |
 | [`novelty-audit.md`](novelty-audit.md) | Tests the proposed contribution against the closest prior work located so far. |
 | [`references.bib`](references.bib) | Stores checked citation metadata for the working literature set. |
 | [`claim-evidence-register.md`](claim-evidence-register.md) | Maps planned manuscript claims to repository evidence and excluded interpretations. |
 | [`submission-notes.md`](submission-notes.md) | Records authorship, disclosure, venue, and preprint decisions that remain open. |
 | [`review-record-pr11.md`](review-record-pr11.md) | Records the pressure test of PR #11, its resolutions, and the remaining paper blocker. |
+| [`claim-crosswalk.md`](claim-crosswalk.md) | Connects paper claims to the executable v0.5 gates and drafting consequences. |
+| [`scientistone-artifact-pressure-test.md`](scientistone-artifact-pressure-test.md) | Records how ScientistOne constrains originality and changes evidence, run-type, and method-code controls. |
 
 ## Working rule
 
@@ -31,3 +33,5 @@ A manuscript statement is not treated as a supported research claim merely becau
 If the manuscript conflicts with a frozen packet or released assessment, the released artifact controls until a documented protocol and release process changes it.
 
 A released assessment label records what the published procedure produced. It does not establish independent validity. The [PR #11 review record](review-record-pr11.md) identifies one unresolved consistency question involving the Oko packet and the protocol's contemporaneity requirement.
+
+The [v0.5 claim crosswalk](claim-crosswalk.md) now makes that boundary executable. A failed evidence-fitness gate or open dependency prevents the affected claim from entering a conclusion.

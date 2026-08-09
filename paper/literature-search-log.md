@@ -23,6 +23,7 @@ The 8 August 2026 session is an open-web pilot that used exact-phrase queries, p
 | Q09 | 2026-08-08 | Open web | `"indeterminate" "human oversight" AI incident reconstruction` | Located related uses of indeterminacy, without the same retrospective evidence-state procedure. |
 | Q10 | 2026-08-08 | Open web | `"claim-level provenance" AI incident` | Located adjacent provenance systems. No result used claim-level provenance to assess practical human control in a public incident packet. |
 | Q11 | 2026-08-08 | Publisher and index pages | Exact titles and DOI strings for eight pressure-test additions | Metadata checked for L16 through L23. Full-text review status is recorded in the novelty audit. |
+| Q12 | 2026-08-09 | arXiv and public GitHub artifacts | `Chain-of-Evidence ScientistOne integrity audit method code alignment` | Retained Meng et al. (2026) as L24 and inspected the public generated-papers and solution-code repository. |
 
 ## Inclusion rule
 
@@ -34,6 +35,7 @@ A result enters the working matrix when it addresses at least one of these funct
 4. specifies evidence preservation, chain of custody, replay, or claim-grade proof;
 5. develops assurance arguments for AI or autonomous systems;
 6. designs institutional incident reporting or recordkeeping.
+7. preserves claim-level evidence chains or audits references, scores, specifications, and method-code alignment.
 
 Search results that only used the same words for unrelated technical tasks were excluded. Commercial control products, unsourced commentary, and papers about AI-assisted physical crash reconstruction were not treated as near-neighbors.
 

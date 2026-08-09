@@ -2,9 +2,9 @@
 
 ## Decision
 
-The broad novelty hypothesis in PR #11 does not survive pressure testing. Prior work already addresses each major component separately: human-control conditions, retrospective reconstruction, public AI-incident analysis, assurance cases, state reconstruction, forensic evidence preservation, and incident-reporting design.
+The broad novelty hypothesis in PR #11 does not survive pressure testing. Prior work already addresses each major component separately: human-control conditions, retrospective reconstruction, public AI-incident analysis, assurance cases, state reconstruction, forensic evidence preservation, incident-reporting design, claim traceability, and post-hoc research-integrity audit.
 
-A narrower combination hypothesis remains open. No reviewed source yet combines a protocol fixed before candidate screening, a preserved contrastive selection path, versioned public evidence packets, claim-level provenance, explicit indeterminate states, a formal-authority-to-effect chain, and executable checks over the published artifacts.
+A narrower combination hypothesis remains open. No reviewed source yet combines a protocol fixed before candidate screening, a preserved contrastive selection path, versioned public evidence packets, explicit indeterminate states, a formal-authority-to-effect chain, claim-specific historical evidence fitness, conclusion dependency closure, and executable checks over the published artifacts.
 
 This is a search result, not a novelty finding.
 
@@ -20,10 +20,11 @@ This is a search result, not a novelty finding.
 | Leung et al. (2026), L21 | Preprint abstract inspected | Control boundaries, state reconstruction, public examples, and claim-grade evidence | Insurance recovery focus; full-text review pending |
 | Ledjaki et al. (2026), L22 | ACM abstract and metadata inspected | Tamper-resistant identifiers, replay, investigation, and chain of custody | Prompt forensics without institutional authority assessment; full-text review pending |
 | McGregor (2021), L23 | Proceedings abstract and metadata inspected | AI Incident Database purpose, architecture, and research uses | Incident collection without claim-level practical-control assessment |
+| Meng et al. (2026), L24 | Paper and public generated-artifact repository inspected | Chain-of-Evidence, claim traceability by construction, score and reference verification, specification checks, and method-code alignment | Autonomous research focus without practical-human-control reconstruction or this repository's five fitness dimensions and dependency-closure rule |
 
 ## Contribution that remains defensible
 
-The paper can position its contribution as an integration and operationalization claim. It joins established ideas in a procedure that exposes where a human-control statement is supported, contradicted, or unresolved in a bounded public record. The contribution resides in the declared combination and the inspectable artifacts, subject to the following limits:
+The paper can position its contribution as an integration and domain-adaptation claim. It applies established claim-evidence architecture to a procedure that exposes where a human-control statement is supported, contradicted, unresolved, or unfit for the proposed conclusion in a bounded public record. The contribution resides in the declared combination and the inspectable artifacts, subject to the following limits:
 
 - the case strata anticipate the three headline contrasts;
 - one assessor designed and applied the procedure;
@@ -41,6 +42,7 @@ The novelty hypothesis fails if a prior source supplies all of these elements in
 4. explicit supported, unsupported, and indeterminate evidence states;
 5. a chain from information access through human authority, feasible challenge, action, and effect;
 6. executable checks over the released research artifacts.
+7. claim-specific evidence-fitness and conclusion-dependency decisions.
 
 Substantial equivalence also defeats the claim when terminology differs. The audit must compare mechanisms, not keywords alone.
 
@@ -48,6 +50,6 @@ Substantial equivalence also defeats the claim when terminology differs. The aud
 
 The present review supports this provisional sentence:
 
-> Existing research explains why formal oversight may lack practical force, how investigators can reconstruct human contributions and sociotechnical failure, which records AI incidents require, and how assurance claims can be tied to evidence. This paper examines whether those ideas can be represented together in a frozen, traceable public-case procedure with explicit missingness and executable artifact checks.
+> Existing research explains why formal oversight may lack practical force, how investigators can reconstruct human contributions and sociotechnical failure, which records AI incidents require, and how research and assurance claims can be tied to evidence and checked against implementation. This paper examines one governance-specific adaptation: a frozen public-case procedure with explicit missingness, claim-specific evidence fitness, dependency closure, and executable artifact checks.
 
 The word `novel` remains prohibited in the manuscript until the documented database and citation-chaining work is complete.

@@ -28,11 +28,13 @@ Check current official venue pages immediately before making a recommendation. D
 
 ## Preprint decision
 
-A preprint may be appropriate after the claim audit and full repository validation. The preprint must link to the version-specific evidence archive and state that it has not completed peer review.
+A preprint may be appropriate after resolving `PAPER-BLOCKER-01`, completing the claim audit's literature-support exception, and passing full repository validation. The preprint must link to the version-specific evidence archive and state that it has not completed peer review.
 
 The existing GitHub and Zenodo materials are research artifacts. They are not substitutes for a manuscript-specific archive.
 
 The v0.4.0 evidence and figure archive has the version DOI [10.5281/zenodo.21844706](https://doi.org/10.5281/zenodo.21844706). The concept DOI `10.5281/zenodo.21841127` resolves to the latest archived version and must not replace the version DOI in a claim tied to v0.4.0.
+
+The v0.5.0 claim-evidence audit must receive its own version DOI after the GitHub release is archived. Update `CITATION.cff`, this file, and the manuscript availability section when Zenodo issues that DOI.
 
 ## Authorship
 

@@ -1,0 +1,15 @@
+{
+  "version": "0.5.0",
+  "figure_id": "FIG-A3",
+  "file_stub": "fig-a3-claim-evidence-integrity",
+  "title": "Traceable claims can still remain unfit for a conclusion",
+  "unit_of_analysis": "declared v0.5 claim and audit gate",
+  "sample": "14 material claims, five evidence gates, and one conclusion-eligibility state",
+  "input_files": [
+    "evidence/claim-evidence-map.json",
+    "audits/v0.5.0/audit-results.json"
+  ],
+  "transformation": "Read the five categorical gate states and conclusion-eligibility result for each mapped claim, preserve the states without assigning a numeric score, and render letter labels with color.",
+  "claim_supported": "Traceability alone does not make a claim eligible for a conclusion. Evidence fitness and dependency closure block the stronger Oko and dependent paper claims in this release.",
+  "prohibited_interpretation": "The matrix supplies no aggregate trust score, source-truth determination, independent reliability estimate, or ranking of claims."
+}

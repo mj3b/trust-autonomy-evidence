@@ -17,6 +17,8 @@ The source register identifies the contribution each source makes to the model. 
 | [METR, Measuring AI Ability to Complete Long Tasks](https://metr.org/time-horizons/) | Defines task difficulty using human completion time and documents domain and interpretation limits |
 | [Anthropic Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy) | Provides an example of capability thresholds, safeguards, risk reports, external review, monitoring, incidents, and revision |
 | [OpenAI Preparedness Framework](https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf) | Provides an example of capability tracking, safeguard evaluation, risk thresholds, and deployment decision processes |
+| [ScientistOne: Towards Human-Level Autonomous Research via Chain-of-Evidence](https://doi.org/10.48550/arXiv.2605.26340) | Supplies the prior architecture for claim traceability and the four CoE Integrity Audit checks adapted in v0.5.0 |
+| [ScientistOne generated artifacts](https://github.com/scientist-one/generated-artifacts) | Makes generated papers and solution code available for source-level checks of scores, references, run types, and method-code alignment |
 
 ## Public-case sources
 

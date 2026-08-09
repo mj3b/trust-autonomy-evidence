@@ -1,0 +1,44 @@
+{
+  "version": "0.5.0",
+  "log_id": "TAE-ACTIVITY-V0.5.0",
+  "responsible_author": "Mark Julius Banasihan",
+  "entries": [
+    {
+      "activity_id": "ACT-QUESTION-FREEZE",
+      "date": "2026-08-08",
+      "activity": "Reframed the working paper as a bounded methods demonstration and froze the revised research question.",
+      "human_responsibility": "Approved the decision problem, question, scope, and claim boundaries.",
+      "ai_assistance": "Compared the question with the selection design and identified circular validation language.",
+      "outputs": ["paper/paper-charter.md", "paper/review-record-pr11.md"]
+    },
+    {
+      "activity_id": "ACT-SCIENTISTONE-REVIEW",
+      "date": "2026-08-09",
+      "activity": "Reviewed ScientistOne and its public generated artifacts as prior architecture and an integrity-audit pressure test.",
+      "human_responsibility": "Selected the adaptation boundary and retained responsibility for source verification and interpretation.",
+      "ai_assistance": "Organized claim-traceability, evidence-fitness, run-type, method-code, and negative-control implications.",
+      "outputs": ["research/chain-of-evidence-adaptation.md", "paper/scientistone-artifact-pressure-test.md"]
+    },
+    {
+      "activity_id": "ACT-COE-DESIGN",
+      "date": "2026-08-09",
+      "activity": "Defined the v0.5 claim map, five gates, lineage model, exception policy, and conclusion-eligibility rule.",
+      "human_responsibility": "Authorized implementation and serves as reviewer of record for the declared support judgments.",
+      "ai_assistance": "Drafted schemas, mapped claims, implemented checks, and prepared documentation for review.",
+      "outputs": ["protocols/coe-integrity-audit.md", "evidence/claim-evidence-map.json", "evidence/research-lineage.json"]
+    },
+    {
+      "activity_id": "ACT-COE-AUDIT",
+      "date": "2026-08-09",
+      "activity": "Executed the v0.5 integrity audit and its prespecified negative controls.",
+      "human_responsibility": "Reviews the published report, open exceptions, and release claim before publication.",
+      "ai_assistance": "Executed deterministic checks and produced the machine-readable and narrative audit outputs.",
+      "outputs": ["audits/v0.5.0/audit-results.json", "audits/v0.5.0/audit-report.md"]
+    }
+  ],
+  "attestation": "Mark Julius Banasihan is the responsible author and reviewer of record. AI assistance supported research organization, drafting, code, and consistency checking. Source verification, claim approval, and conclusions remain human responsibilities.",
+  "limits": [
+    "The log describes material research activities for v0.5.0 and is not a complete transcript.",
+    "The recorded human review is not an independent assessment."
+  ]
+}

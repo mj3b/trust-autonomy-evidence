@@ -46,6 +46,10 @@ The presence of monitoring, review, appeal, or stop authority does not establish
 
 Hashes, signatures, timestamps, and protected logs can support integrity, attribution, and ordering. They do not establish the truth, completeness, relevance, or fairness of the recorded content.
 
+Version 0.5 audits 14 declared material claims. It does not audit every repository sentence. The support and evidence-fitness judgments were reviewed by Mark Julius Banasihan with disclosed AI assistance. No independent assessor has reproduced them. Nine author-designed negative controls show that the committed checks detect their prespecified corruptions. They do not estimate detection performance for unknown errors.
+
+The audit records `PASS_WITH_EXCEPTIONS` because the Oko contemporaneity mismatch remains open, complete sentence-level literature support review remains unfinished, and independent assessment is absent. This state permits bounded artifact claims and no general reliability or field-validity conclusion.
+
 ## Legal and normative limits
 
 Mappings to NIST, the EU AI Act, ISO standards, or other governance instruments can identify potentially relevant evidence. This repository does not provide legal advice, certification, conformity assessment, or a finding that a requirement has been satisfied.

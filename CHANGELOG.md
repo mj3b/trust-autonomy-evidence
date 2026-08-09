@@ -4,6 +4,20 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
+## 0.5.0, 9 August 2026
+
+Adds claim traceability, claim-specific evidence fitness, dependency closure, and an executable integrity audit.
+
+- Adds a machine-readable map covering 14 material paper and repository claims.
+- Separates traceability, integrity, human support review, evidence fitness, and dependency closure.
+- Assesses directness, contemporaneity, independence, completeness, and publication authority for each mapped claim.
+- Adapts the four ScientistOne CoE Integrity Audit checks and adds a governance-specific fitness and closure check.
+- Detects all nine prespecified corruptions covering values, references, review, fitness, method-code alignment, dependencies, hashes, run types, and bounded language.
+- Preserves `PAPER-BLOCKER-01` as a failed Oko contemporaneity gate and prevents dependent conclusions from becoming eligible.
+- Adds a PROV-O-compatible research-lineage record and an AI-assisted research activity log.
+- Adds Figure A3 and its data table to show claim-gate states without an aggregate trust score.
+- Publishes the audit plan, machine-readable result, narrative report, and three open exceptions.
+- Records ScientistOne and its public generated-artifact repository as prior architecture that narrows the originality claim.
 - Adds the paper workspace introduced by PR #11: charter, working manuscript, 15-source literature matrix, BibTeX file, claim-evidence register, and submission notes.
 - Records the PR #11 pressure test and preserves `PAPER-BLOCKER-01` for the unresolved Oko contemporaneity mismatch.
 - Narrows the research question from independent discrimination to traceable representation under contrastive selection.

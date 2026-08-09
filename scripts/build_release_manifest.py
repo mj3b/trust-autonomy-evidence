@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seal the v0.4.0 publication artifacts with SHA-256 digests."""
+"""Seal the v0.5.0 claim-evidence and integrity-audit artifacts."""
 
 from __future__ import annotations
 
@@ -9,36 +9,53 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "release" / "v0.4.0-manifest.json"
+OUTPUT = ROOT / "release" / "v0.5.0-manifest.json"
 ARTIFACTS = (
     "release/v0.3.0-manifest.json",
-    "analysis/build_figures.py",
-    "reports/figure-methods.md",
-    "figures/README.md",
-    "figures/manifest.json",
-    "figures/specifications/figure-register.json",
-    "figures/specifications/selection-decisions.json",
-    "figures/specifications/decision-paths.json",
-    "figures/specifications/reproducibility-lineage.json",
-    "figures/data/fig-1-selection-and-stopping.csv",
-    "figures/data/fig-2-practical-control-chain.csv",
-    "figures/data/fig-3-decision-paths.csv",
-    "figures/data/fig-4-trust-evidence-states.csv",
-    "figures/data/fig-a1-mutation-response.csv",
-    "figures/data/fig-a2-reproducibility-lineage.csv",
-    "figures/generated/fig-1-selection-and-stopping.png",
-    "figures/generated/fig-1-selection-and-stopping.svg",
-    "figures/generated/fig-2-practical-control-chain.png",
-    "figures/generated/fig-2-practical-control-chain.svg",
-    "figures/generated/fig-3-decision-paths.png",
-    "figures/generated/fig-3-decision-paths.svg",
-    "figures/generated/fig-4-trust-evidence-states.png",
-    "figures/generated/fig-4-trust-evidence-states.svg",
-    "figures/generated/fig-a1-mutation-response.png",
-    "figures/generated/fig-a1-mutation-response.svg",
-    "figures/generated/fig-a2-reproducibility-lineage.png",
-    "figures/generated/fig-a2-reproducibility-lineage.svg",
+    "release/v0.4.0-manifest.json",
+    "README.md",
+    "RESEARCH_STATUS.md",
+    "CLAIMS.md",
+    "LIMITATIONS.md",
+    "SOURCES.md",
+    "CITATION.cff",
+    "CHANGELOG.md",
+    "protocols/coe-integrity-audit.md",
+    "research/chain-of-evidence-adaptation.md",
+    "evidence/claim-evidence-map.json",
+    "evidence/research-lineage.json",
+    "evidence/research-activity-log.json",
+    "schemas/claim-evidence-map.schema.json",
+    "schemas/research-lineage.schema.json",
+    "schemas/coe-audit-result.schema.json",
+    "schemas/coe-audit-mutations.schema.json",
+    "fixtures/coe-audit-mutations.json",
+    "audits/v0.5.0/audit-plan.md",
+    "audits/v0.5.0/audit-results.json",
+    "audits/v0.5.0/audit-report.md",
+    "audits/v0.5.0/exceptions.md",
+    "analysis/build_claim_evidence_figure.py",
+    "figures/specifications/claim-evidence-integrity.json",
+    "figures/data/fig-a3-claim-evidence-integrity.csv",
+    "figures/generated/fig-a3-claim-evidence-integrity.png",
+    "figures/generated/fig-a3-claim-evidence-integrity.svg",
+    "figures/v0.5.0-manifest.json",
+    "reports/claim-evidence-figure-methods-v0.5.0.md",
+    "paper/README.md",
+    "paper/paper-charter.md",
+    "paper/manuscript.md",
+    "paper/literature-matrix.md",
+    "paper/literature-search-log.md",
+    "paper/novelty-audit.md",
+    "paper/references.bib",
+    "paper/claim-evidence-register.md",
+    "paper/claim-crosswalk.md",
+    "paper/scientistone-artifact-pressure-test.md",
+    "paper/submission-notes.md",
+    "paper/review-record-pr11.md",
     "requirements-dev.txt",
+    "scripts/run_coe_integrity_audit.py",
+    "scripts/validate_paper.py",
     "scripts/validate_repository.py",
     "scripts/build_release_manifest.py",
 )
@@ -63,8 +80,8 @@ def main() -> int:
         )
 
     result = {
-        "version": "0.4.0",
-        "created": "2026-08-07",
+        "version": "0.5.0",
+        "created": "2026-08-09",
         "hash_algorithm": "SHA-256",
         "artifacts": artifacts,
     }

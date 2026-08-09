@@ -1,0 +1,15 @@
+claim_id,traceability,integrity,support,evidence_fitness,dependency_closure,conclusion_eligible
+PAPER-C02,pass,pass,pass,pass,pass,eligible
+PAPER-C03,pass,pass,pass,pass,pass,eligible
+PAPER-C04,pass,pass,pass,fail,fail,blocked
+PAPER-C05,pass,pass,pass,pass,pass,eligible
+PAPER-C06,pass,pass,pass,pass,pass,eligible
+PAPER-C07,pass,pass,pass,pass,pass,eligible
+PAPER-C08,pass,pass,pass,pass,pass,eligible
+PAPER-C09,pass,pass,pass,fail,fail,blocked
+PAPER-C11,pass,pass,pass,pass,pass,eligible
+PAPER-C14,pass,pass,pass,pass,pass,eligible
+TAE-C21,pass,pass,pass,pass,pass,eligible
+TAE-C23,pass,pass,pass,fail,outside_scope,blocked
+TAE-C24,pass,pass,pass,pass,fail,blocked
+TAE-C25,pass,pass,pass,pass,fail,blocked

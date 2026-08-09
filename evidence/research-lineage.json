@@ -1,0 +1,106 @@
+{
+  "version": "0.5.0",
+  "lineage_id": "TAE-LINEAGE-V0.5.0",
+  "description": "PROV-O-compatible research lineage for the v0.5 claim map and integrity audit. The file declares agents, activities, entities, and relations without claiming full PROV-O or RO-Crate conformance.",
+  "agents": [
+    {
+      "agent_id": "AGENT-MJB",
+      "name": "Mark Julius Banasihan",
+      "agent_type": "person",
+      "responsibility": "Responsible author, source reviewer, assessor, and reviewer of record"
+    },
+    {
+      "agent_id": "AGENT-AI",
+      "name": "AI research and coding assistance",
+      "agent_type": "software",
+      "responsibility": "Research organization, drafting, implementation, and consistency checking under human responsibility"
+    },
+    {
+      "agent_id": "AGENT-CI",
+      "name": "Repository validation workflow",
+      "agent_type": "software",
+      "responsibility": "Deterministic schema, artifact, mutation, figure, paper, and integrity checks"
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "ACT-QUESTION-FREEZE",
+      "activity_type": "question_freeze",
+      "description": "Freeze the bounded methods question and design limits.",
+      "date": "2026-08-08",
+      "responsible_agent": "AGENT-MJB",
+      "assisting_agents": ["AGENT-AI"],
+      "protocol": "paper/paper-charter.md",
+      "status": "completed"
+    },
+    {
+      "activity_id": "ACT-CASE-ASSESSMENT",
+      "activity_type": "assessment",
+      "description": "Apply the frozen public-case procedure to three selected packets.",
+      "date": "2026-08-07",
+      "responsible_agent": "AGENT-MJB",
+      "assisting_agents": ["AGENT-AI"],
+      "protocol": "protocols/public-case-reconstruction-protocol.md",
+      "status": "completed"
+    },
+    {
+      "activity_id": "ACT-CLAIM-MAP",
+      "activity_type": "claim_drafting",
+      "description": "Map material claims to exact evidence, fitness judgments, dependencies, and human review.",
+      "date": "2026-08-09",
+      "responsible_agent": "AGENT-MJB",
+      "assisting_agents": ["AGENT-AI"],
+      "protocol": "protocols/coe-integrity-audit.md",
+      "status": "completed"
+    },
+    {
+      "activity_id": "ACT-INTEGRITY-AUDIT",
+      "activity_type": "integrity_audit",
+      "description": "Test the mapped claim set and nine prespecified corruptions.",
+      "date": "2026-08-09",
+      "responsible_agent": "AGENT-MJB",
+      "assisting_agents": ["AGENT-AI", "AGENT-CI"],
+      "protocol": "protocols/coe-integrity-audit.md",
+      "status": "completed"
+    },
+    {
+      "activity_id": "ACT-RELEASE",
+      "activity_type": "release",
+      "description": "Seal v0.5 artifacts and publish the open exceptions with the release.",
+      "date": "2026-08-09",
+      "responsible_agent": "AGENT-MJB",
+      "assisting_agents": ["AGENT-CI"],
+      "protocol": "audits/v0.5.0/audit-plan.md",
+      "status": "open"
+    }
+  ],
+  "entities": [
+    {"entity_id": "ENTITY-QUESTION", "entity_type": "question", "path": "paper/paper-charter.md", "version": "0.5.0", "integrity_state": "verified"},
+    {"entity_id": "ENTITY-SELECTION", "entity_type": "selection_record", "path": "cases/public-case-selection-register.md", "version": "0.3.0", "integrity_state": "release_manifest"},
+    {"entity_id": "ENTITY-OKO", "entity_type": "assessment", "path": "cases/TAE-PUB-001-oko-1983/assessment.json", "version": "0.3.0", "integrity_state": "release_manifest"},
+    {"entity_id": "ENTITY-ZG710", "entity_type": "assessment", "path": "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json", "version": "0.3.0", "integrity_state": "release_manifest"},
+    {"entity_id": "ENTITY-FA18", "entity_type": "assessment", "path": "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json", "version": "0.3.0", "integrity_state": "release_manifest"},
+    {"entity_id": "ENTITY-CLAIM-MAP", "entity_type": "claim_map", "path": "evidence/claim-evidence-map.json", "version": "0.5.0", "integrity_state": "pending"},
+    {"entity_id": "ENTITY-MANUSCRIPT", "entity_type": "manuscript", "path": "paper/manuscript.md", "version": "working", "integrity_state": "pending"},
+    {"entity_id": "ENTITY-AUDIT", "entity_type": "audit_result", "path": "audits/v0.5.0/audit-results.json", "version": "0.5.0", "integrity_state": "pending"},
+    {"entity_id": "ENTITY-RELEASE", "entity_type": "release_manifest", "path": "release/v0.5.0-manifest.json", "version": "0.5.0", "integrity_state": "pending"}
+  ],
+  "relations": [
+    {"from": "ACT-CASE-ASSESSMENT", "to": "ENTITY-SELECTION", "relation": "used"},
+    {"from": "ACT-CASE-ASSESSMENT", "to": "ENTITY-OKO", "relation": "generated"},
+    {"from": "ACT-CASE-ASSESSMENT", "to": "ENTITY-ZG710", "relation": "generated"},
+    {"from": "ACT-CASE-ASSESSMENT", "to": "ENTITY-FA18", "relation": "generated"},
+    {"from": "ACT-CLAIM-MAP", "to": "ENTITY-OKO", "relation": "used"},
+    {"from": "ACT-CLAIM-MAP", "to": "ENTITY-ZG710", "relation": "used"},
+    {"from": "ACT-CLAIM-MAP", "to": "ENTITY-FA18", "relation": "used"},
+    {"from": "ACT-CLAIM-MAP", "to": "ENTITY-CLAIM-MAP", "relation": "generated"},
+    {"from": "ENTITY-MANUSCRIPT", "to": "ENTITY-CLAIM-MAP", "relation": "informed"},
+    {"from": "ACT-INTEGRITY-AUDIT", "to": "ENTITY-CLAIM-MAP", "relation": "used"},
+    {"from": "ACT-INTEGRITY-AUDIT", "to": "ENTITY-AUDIT", "relation": "generated"},
+    {"from": "ENTITY-MANUSCRIPT", "to": "ENTITY-AUDIT", "relation": "validated"},
+    {"from": "ENTITY-MANUSCRIPT", "to": "ENTITY-OKO", "relation": "blocked_by"},
+    {"from": "ENTITY-AUDIT", "to": "ENTITY-RELEASE", "relation": "included_in"},
+    {"from": "ACT-QUESTION-FREEZE", "to": "ENTITY-QUESTION", "relation": "generated"},
+    {"from": "ACT-CLAIM-MAP", "to": "AGENT-MJB", "relation": "attributed_to"}
+  ]
+}

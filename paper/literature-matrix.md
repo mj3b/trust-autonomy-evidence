@@ -6,7 +6,7 @@ Which prior work most closely addresses the distinction between formal human aut
 
 ## Status
 
-The initial 15-source set was checked against publisher pages, DOI records, conference proceedings, or institutional repositories on 8 August 2026. The PR #11 pressure test added eight near-neighbors that constrain the proposed contribution. Metadata has been checked for those additions. Full-text review remains incomplete where the [novelty audit](novelty-audit.md) says so. This matrix is a structured seed, not a systematic review.
+The initial 15-source set was checked against publisher pages, DOI records, conference proceedings, or institutional repositories on 8 August 2026. The PR #11 pressure test added eight near-neighbors that constrain the proposed contribution. The v0.5 review adds ScientistOne as a close prior architecture for claim traceability and integrity audit. Metadata has been checked for those additions. Full-text review remains incomplete where the [novelty audit](novelty-audit.md) says so. This matrix is a structured seed, not a systematic review.
 
 | ID | Stream and source | What it contributes | Relationship to this paper | Boundary or difference |
 |---|---|---|---|---|
@@ -38,6 +38,7 @@ The initial 15-source set was checked against publisher pages, DOI records, conf
 | L21 | AI-loss evidence reconstruction: [Leung et al. (2026)](https://arxiv.org/abs/2606.03777) | Introduces control boundary, evidence reconstruction, and insurance response for agentic AI losses using public examples. | Shares the language of control boundaries, reconstructed state, and claim-grade evidence. | Centers insurance recovery and current generative or agentic systems. Human practical control is not its assessed chain. |
 | L22 | LLM prompt forensics: [Ledjaki et al. (2026)](https://doi.org/10.1145/3774905.3795469) | Proposes tamper-resistant prompt identifiers, replay, investigation, and chain-of-custody records for LLM incidents. | Constrains claims about originality in evidence preservation, replay, and forensic traceability. | Focuses on prompt traces and model behavior, not institutional human authority. |
 | L23 | AI incident infrastructure: [McGregor (2021)](https://doi.org/10.1609/aaai.v35i17.17817) | Defines the AI Incident Database as shared infrastructure for collecting and learning from public failures. | Supplies the origin and limits of the candidate collection used by this repository. | Catalogs incidents without making claim-level practical-control assessments. |
+| L24 | Autonomous research verifiability: [Meng et al. (2026)](https://doi.org/10.48550/arXiv.2605.26340) and [generated artifacts](https://github.com/scientist-one/generated-artifacts) | Defines Chain-of-Evidence, ScientistOne, and four uniform post-hoc integrity checks; publishes generated papers and solution code. | Directly constrains originality claims for claim traceability, evidence-preserving workflows, score and reference verification, and method-code alignment. | Studies autonomous research outputs. It does not assess practical human control, claim-specific historical evidence fitness, or conclusion dependency closure in public governance cases. |
 
 ## Provisional synthesis
 
@@ -49,7 +50,7 @@ The literature establishes five propositions relevant to the manuscript:
 4. Incident analysis requires records capable of testing alternative causal explanations.
 5. Assurance claims require structured arguments, traceable evidence, assumptions, and uncertainty.
 
-The proposed paper's remaining contribution is narrower than PR #11 stated. Prior work already supplies control conditions, retrospective reconstruction, public AI-incident analysis, assurance logic, evidence reconstruction, and forensic traceability. The unresolved hypothesis concerns their combination in one documented procedure: a protocol fixed before screening, a preserved selection path, versioned evidence packets, claim-level provenance, categorical missingness, a declared chain from information access through effect, and executable checks.
+The proposed paper's remaining contribution is narrower than PR #11 stated. Prior work already supplies control conditions, retrospective reconstruction, public AI-incident analysis, assurance logic, evidence reconstruction, forensic traceability, claim-level evidence chains, and post-hoc integrity checks. The unresolved hypothesis concerns a governance-specific combination: a protocol fixed before screening, a preserved selection path, versioned public evidence packets, categorical missingness, a declared chain from information access through effect, claim-specific evidence fitness, and conclusion dependency closure.
 
 ## Search expansion required
 
