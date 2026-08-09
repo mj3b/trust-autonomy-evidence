@@ -6,7 +6,7 @@ Which prior work most closely addresses the distinction between formal human aut
 
 ## Status
 
-The initial 15-source set was checked against publisher pages, DOI records, conference proceedings, or institutional repositories on 8 August 2026. The PR #11 pressure test added eight near-neighbors that constrain the proposed contribution. The v0.5 review adds ScientistOne as a close prior architecture for claim traceability and integrity audit. Metadata has been checked for those additions. Full-text review remains incomplete where the [novelty audit](novelty-audit.md) says so. This matrix is a structured seed, not a systematic review.
+The initial 15-source set was checked against publisher pages, DOI records, conference proceedings, or institutional repositories on 8 August 2026. The PR #11 pressure test added eight near-neighbors. The v0.5 review added ScientistOne. The v0.6 review adds four close sources on oversight effectiveness, compliance testing, assurance audits, and oversight architecture. This matrix is a structured working set, not a systematic review.
 
 | ID | Stream and source | What it contributes | Relationship to this paper | Boundary or difference |
 |---|---|---|---|---|
@@ -40,6 +40,15 @@ The initial 15-source set was checked against publisher pages, DOI records, conf
 | L23 | AI incident infrastructure: [McGregor (2021)](https://doi.org/10.1609/aaai.v35i17.17817) | Defines the AI Incident Database as shared infrastructure for collecting and learning from public failures. | Supplies the origin and limits of the candidate collection used by this repository. | Catalogs incidents without making claim-level practical-control assessments. |
 | L24 | Autonomous research verifiability: [Meng et al. (2026)](https://doi.org/10.48550/arXiv.2605.26340) and [generated artifacts](https://github.com/scientist-one/generated-artifacts) | Defines Chain-of-Evidence, ScientistOne, and four uniform post-hoc integrity checks; publishes generated papers and solution code. | Directly constrains originality claims for claim traceability, evidence-preserving workflows, score and reference verification, and method-code alignment. | Studies autonomous research outputs. It does not assess practical human control, claim-specific historical evidence fitness, or conclusion dependency closure in public governance cases. |
 
+## v0.6 pressure-test additions
+
+| ID | Stream and source | What it contributes | Relationship to this paper | Boundary or difference |
+|---|---|---|---|---|
+| L25 | Oversight effectiveness: [Langer, Baum, and Schlicker (2024)](https://doi.org/10.1007/s11023-024-09701-0) | Uses signal-detection theory to separate error-detection ability from a tendency to accept or reject outputs. | Supports treating comprehension and exercised challenge as empirical capacities instead of consequences of assigned authority. | Studies oversight performance without reconstructing frozen public incident packets. |
+| L26 | Oversight compliance testing: [Langer, Lazar, and Baum (2025)](https://doi.org/10.1007/978-3-032-07132-3_11) | Explains why checklist compliance can miss actual oversight performance and why empirical tests are context sensitive. | Supports the distinction between documented authority and evidence that assigned control worked. | Addresses regulatory testing design without a versioned retrospective adjudication path. |
+| L27 | Assurance audits: [Lam et al. (2024)](https://doi.org/10.1145/3630106.3658957) | Proposes criterion audits, external assurance, defined scope, and audit reporting for algorithmic systems. | Constrains originality claims for structured algorithmic assurance and clarifies the importance of reviewer independence. | Audits systems against criteria and does not adjudicate historical practical-control stages from public evidence. |
+| L28 | Oversight architecture: [Gaube et al. (2026)](https://doi.org/10.48550/arXiv.2605.16278) | Provides a working definition, architecture, process model, documentation template, and open questions for effective human oversight. | Is the closest broad neighbor to the paper's institutional recordkeeping and process implications. | Does not publish the same combination of frozen selection, retrospective evidence packets, versioned correction, categorical missingness, and dependency closure. |
+
 ## Provisional synthesis
 
 The literature establishes five propositions relevant to the manuscript:
@@ -50,7 +59,7 @@ The literature establishes five propositions relevant to the manuscript:
 4. Incident analysis requires records capable of testing alternative causal explanations.
 5. Assurance claims require structured arguments, traceable evidence, assumptions, and uncertainty.
 
-The proposed paper's remaining contribution is narrower than PR #11 stated. Prior work already supplies control conditions, retrospective reconstruction, public AI-incident analysis, assurance logic, evidence reconstruction, forensic traceability, claim-level evidence chains, and post-hoc integrity checks. The unresolved hypothesis concerns a governance-specific combination: a protocol fixed before screening, a preserved selection path, versioned public evidence packets, categorical missingness, a declared chain from information access through effect, claim-specific evidence fitness, and conclusion dependency closure.
+The proposed paper's remaining contribution is narrower than PR #11 stated. Prior work already supplies control conditions, oversight-performance models, compliance-testing cautions, retrospective reconstruction, public AI-incident analysis, assurance logic, forensic evidence controls, claim traceability, and oversight architectures. The paper studies one integration: a frozen public-case procedure that connects candidate selection, source provenance, categorical missingness, practical-control stages, versioned adjudication, claim-specific evidence fitness, conclusion dependency closure, and executable artifact checks.
 
 ## Search expansion required
 

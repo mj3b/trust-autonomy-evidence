@@ -4,6 +4,23 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
+## 0.6.0, 9 August 2026
+
+Resolves the Oko evidence-rule mismatch and moves the methods paper into a controlled results-drafting phase.
+
+- Freezes the Oko adjudication question, evidence universe, cutoff, stage rules, and dependency rule before reassessment.
+- Reclassifies access, comprehension, authority, feasibility, exercise, and effect from supported to partially supported in a separate v0.6 assessment.
+- Preserves the v0.3.0 assessment and records all six transitions, frozen hashes, assessor identity, and AI assistance in a machine-readable ledger.
+- Detects six prespecified adjudication-record corruptions.
+- Updates Figure 2 and the cross-case report to use the current Oko assessment with both preserved Patriot assessments.
+- Expands the working literature set to 28 sources, including close work on oversight performance, compliance testing, assurance audits, and oversight architecture.
+- Adds an OpenAlex citation-chain sample and a sentence-level audit for 16 material literature propositions.
+- Closes the current literature-support exception while preserving incomplete institutional database searching as an originality limit.
+- Updates the 15-claim integrity map, detects all nine claim-map corruptions, and publishes two remaining exceptions.
+- Rebuilds Figure A3 to show the resolved Oko dependency and the still-ineligible independent-validity claim.
+- Updates the manuscript abstract, method, results, paper charter, claim register, crosswalk, submission notes, metadata, and release validation.
+- Records the v0.5.0 version DOI, `10.5281/zenodo.21863464`.
+
 ## 0.5.0, 9 August 2026
 
 Adds claim traceability, claim-specific evidence fitness, dependency closure, and an executable integrity audit.

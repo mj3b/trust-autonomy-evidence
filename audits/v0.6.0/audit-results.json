@@ -1,0 +1,267 @@
+{
+  "version": "0.6.0",
+  "audit_id": "TAE-COE-AUDIT-V0.6.0",
+  "audit_date": "2026-08-09",
+  "scope": "Fifteen material claims declared in TAE-COE-V0.6.0, plus a separate 16-proposition literature-support register; independent validity and systematic novelty searching are outside the audit.",
+  "status": "PASS_WITH_EXCEPTIONS",
+  "checks": [
+    {
+      "check_id": "COE-I1",
+      "name": "score_verification",
+      "status": "pass",
+      "tested": 17,
+      "passed": 17,
+      "failed": 0,
+      "indeterminate": 0,
+      "findings": []
+    },
+    {
+      "check_id": "COE-I2",
+      "name": "specification_violation",
+      "status": "pass",
+      "tested": 15,
+      "passed": 15,
+      "failed": 0,
+      "indeterminate": 0,
+      "findings": []
+    },
+    {
+      "check_id": "COE-I3",
+      "name": "reference_verification",
+      "status": "pass",
+      "tested": 15,
+      "passed": 15,
+      "failed": 0,
+      "indeterminate": 0,
+      "findings": []
+    },
+    {
+      "check_id": "COE-I4",
+      "name": "method_code_alignment",
+      "status": "pass",
+      "tested": 3,
+      "passed": 3,
+      "failed": 0,
+      "indeterminate": 0,
+      "findings": []
+    },
+    {
+      "check_id": "COE-I5",
+      "name": "evidence_fitness_and_dependency_closure",
+      "status": "pass_with_exceptions",
+      "tested": 15,
+      "passed": 14,
+      "failed": 1,
+      "indeterminate": 0,
+      "findings": [
+        "TAE-C23: evidence fitness is fail"
+      ]
+    }
+  ],
+  "negative_controls": [
+    {
+      "control_id": "COE-NC-01",
+      "expected_check": "score_verification",
+      "detected": true,
+      "observed_check": "score_verification",
+      "message": "PAPER-C03/C03-OKO-AUTHORITY: expected 'unsupported', observed 'partially_supported'"
+    },
+    {
+      "control_id": "COE-NC-02",
+      "expected_check": "reference_verification",
+      "detected": true,
+      "observed_check": "reference_verification",
+      "message": "PAPER-C05/C05-AUTHORITY: missing file"
+    },
+    {
+      "control_id": "COE-NC-03",
+      "expected_check": "reference_verification",
+      "detected": true,
+      "observed_check": "reference_verification",
+      "message": "PAPER-C06: human support review pending"
+    },
+    {
+      "control_id": "COE-NC-04",
+      "expected_check": "evidence_fitness_and_dependency_closure",
+      "detected": true,
+      "observed_check": "evidence_fitness_and_dependency_closure",
+      "message": "PAPER-C03: evidence fitness is fail"
+    },
+    {
+      "control_id": "COE-NC-05",
+      "expected_check": "method_code_alignment",
+      "detected": true,
+      "observed_check": "method_code_alignment",
+      "message": "PAPER-C08: method or implementation marker does not resolve"
+    },
+    {
+      "control_id": "COE-NC-06",
+      "expected_check": "evidence_fitness_and_dependency_closure",
+      "detected": true,
+      "observed_check": "evidence_fitness_and_dependency_closure",
+      "message": "PAPER-C09: unresolved dependencies PAPER-C99"
+    },
+    {
+      "control_id": "COE-NC-07",
+      "expected_check": "reference_verification",
+      "detected": true,
+      "observed_check": "reference_verification",
+      "message": "TAE-C21/C21-PROTOCOL: integrity failure"
+    },
+    {
+      "control_id": "COE-NC-08",
+      "expected_check": "score_verification",
+      "detected": true,
+      "observed_check": "score_verification",
+      "message": "PAPER-C03/C03-OKO-AUTHORITY: categorical state mislabelled as multi_run_mean"
+    },
+    {
+      "control_id": "COE-NC-09",
+      "expected_check": "specification_violation",
+      "detected": true,
+      "observed_check": "specification_violation",
+      "message": "TAE-C21: guarantees lacks a scope justification"
+    }
+  ],
+  "exceptions": [
+    "COE-EX-03",
+    "COE-EX-04"
+  ],
+  "claim_results": [
+    {
+      "claim_id": "PAPER-C02",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C03",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C04",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C05",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C06",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C07",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C08",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C09",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C11",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C14",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C15",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "TAE-C21",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "TAE-C23",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "fail",
+      "dependency_closure": "outside_scope",
+      "conclusion_eligible": false
+    },
+    {
+      "claim_id": "TAE-C24",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "TAE-C25",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    }
+  ]
+}

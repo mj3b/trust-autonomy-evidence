@@ -1,6 +1,6 @@
 # Publication Figure Set
 
-The figure set converts committed assessments, selection records, mutation results, artifact lineage, and the v0.5.0 integrity audit into seven reproducible graphics. It adds no empirical observation and changes no v0.3.0 case finding.
+The figure set converts committed assessments, selection records, mutation results, artifact lineage, and the v0.6.0 integrity audit into seven reproducible graphics. The current main figures incorporate the v0.6 Oko adjudication and preserve the v0.3 Patriot assessments.
 
 The figures follow four measurement rules drawn from the repository's use of METR's evaluation discipline: the measured unit appears in each specification, raw categorical states remain visible, uncertainty stays separate from negative findings, and every image has a machine-readable input table.
 
@@ -19,7 +19,7 @@ The figures follow four measurement rules drawn from the repository's use of MET
 |---|---|---|
 | Figure A1 | Maps all 12 controlled mutations to 11 prespecified state changes and three invariance tests. | [PNG](generated/fig-a1-mutation-response.png) · [SVG](generated/fig-a1-mutation-response.svg) · [data](data/fig-a1-mutation-response.csv) |
 | Figure A2 | Traces the research and figure-generation artifacts from frozen collections through repository validation. | [PNG](generated/fig-a2-reproducibility-lineage.png) · [SVG](generated/fig-a2-reproducibility-lineage.svg) · [data](data/fig-a2-reproducibility-lineage.csv) |
-| Figure A3 | Shows the five claim gates and conclusion eligibility for 14 material v0.5 claims. | [PNG](generated/fig-a3-claim-evidence-integrity.png) · [SVG](generated/fig-a3-claim-evidence-integrity.svg) · [data](data/fig-a3-claim-evidence-integrity.csv) |
+| Figure A3 | Shows five claim gates and conclusion eligibility for the material v0.6 claims. | [PNG](generated/fig-a3-claim-evidence-integrity.png) · [SVG](generated/fig-a3-claim-evidence-integrity.svg) · [data](data/fig-a3-claim-evidence-integrity.csv) |
 
 ## How to read the figures
 
@@ -33,9 +33,9 @@ The counts support a procedural conclusion: the published cases follow the froze
 
 ### Figure 2. Practical-control chain
 
-The figure directly shows 27 categorical findings: nine practical-control conditions across three cases. Authority is supported in every case. Protective effect is supported only for Oko, where access, comprehension, feasibility, and exercised challenge are also supported. ZG710 records supported authority alongside unsupported comprehension, feasibility, exercise, and effect. F/A-18C records supported authority, partially supported access, an unsupported effect, and unresolved comprehension, feasibility, and exercise.
+The figure directly shows 27 categorical findings: nine practical-control conditions across three cases. Oko records partial support for access, comprehension, authority, feasibility, exercise, and effect. ZG710 records supported authority alongside unsupported comprehension, feasibility, exercise, and effect. F/A-18C records supported authority, partially supported access, an unsupported effect, and unresolved comprehension, feasibility, and exercise.
 
-Authority has the same supported state across the three columns. The remaining pre-action conditions vary with protective effect. This pattern supports a bounded mechanism claim: practical control requires an evidence path from access through effect. The figure does not estimate the causal contribution of any individual condition.
+Authority evidence is present in every column, with partial support in Oko and support in both Patriot packets. The remaining pre-action conditions vary. This pattern supports a bounded method claim: each practical-control stage requires its own evidence. The figure does not estimate the causal contribution of any condition.
 
 ### Figure 3. Reconstructed decision paths
 
@@ -63,9 +63,9 @@ This lineage supports reconstruction of how each plotted state was produced. It 
 
 ### Figure A3. Claim-evidence integrity
 
-The figure directly shows 84 categorical decisions: five evidence gates and one conclusion-eligibility state for each of 14 material claims. Every claim passes traceability. `PAPER-C04` fails evidence fitness because the stronger Oko protocol-consistency claim lacks the contemporaneous and complete evidence required by the current protocol. `PAPER-C09` inherits that failed dependency and remains ineligible.
+The figure directly shows five evidence gates and one conclusion-eligibility state for each material v0.6 claim. Every claim passes traceability. `PAPER-C04` now passes because the v0.6 assessment fits the declared evidence rule and preserves the partial state. `PAPER-C09` passes dependency closure. The independent-assessment and database-search limits remain published exceptions.
 
-The matrix separates a working evidence link from evidence that fits the proposed conclusion. Purple cells preserve indeterminate integrity where v0.5 artifacts await the release manifest. Gray cells preserve outside-scope or ineligible states. The figure calculates no aggregate trust score and supplies no source-truth or independent-reliability finding.
+The matrix separates a working evidence link from evidence that fits the proposed conclusion. Purple cells preserve indeterminate states and gray cells preserve outside-scope or ineligible states. The figure calculates no aggregate trust score and supplies no source-truth or independent-reliability finding.
 
 ## Regeneration
 
@@ -86,7 +86,7 @@ python scripts/run_coe_integrity_audit.py --check
 python analysis/build_claim_evidence_figure.py --check
 ```
 
-The repository validator runs the same data and artifact-integrity checks. Image renderer bytes can vary by operating system even when the plotted data and dimensions remain unchanged. [Figure methods](../reports/figure-methods.md) records the transformations, captions, and claim boundaries. [The original figure register](specifications/figure-register.json) describes Figures 1 through A2. [The v0.5 specification](specifications/claim-evidence-integrity.json) describes Figure A3. [The original figure manifest](manifest.json) and [v0.5 figure manifest](v0.5.0-manifest.json) record byte counts and SHA-256 hashes.
+The repository validator runs the same data and artifact-integrity checks. Image renderer bytes can vary by operating system even when the plotted data and dimensions remain unchanged. [Figure methods](../reports/figure-methods.md) records the transformations, captions, and claim boundaries. [The figure register](specifications/figure-register.json) describes Figures 1 through A2. [The v0.6 specification](specifications/claim-evidence-integrity.json) describes Figure A3. Versioned manifests record byte counts and SHA-256 hashes.
 
 ## Use boundary
 

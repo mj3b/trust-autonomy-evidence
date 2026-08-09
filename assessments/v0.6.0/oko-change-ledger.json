@@ -1,0 +1,94 @@
+{
+  "version": "0.6.0",
+  "case_id": "TAE-PUB-001",
+  "adjudication_date": "2026-08-09",
+  "frozen_assessment": {
+    "path": "cases/TAE-PUB-001-oko-1983/assessment.json",
+    "version": "0.3.0",
+    "sha256": "27c1da1a0e7596cbfae08ed98024935c70b3a58a7d7870614dde0534f638a353"
+  },
+  "adjudication_protocol": {
+    "path": "protocols/oko-evidence-adjudication-v0.6.0.md",
+    "sha256": "6fef3cc0e69df173496e623c3c721fce57a7ef774dcee57ed7d93cf152f9cb52",
+    "freeze_commit": "9747ea551e1de7f053e81099c710f566261ed607"
+  },
+  "source_packet": {
+    "path": "cases/TAE-PUB-001-oko-1983/packet-manifest.json",
+    "version": "0.3.0",
+    "sha256": "be0734012f31243a45ba4b3412cf5da7e2ee66880a6702fb9bef565d515a438b"
+  },
+  "reassessed_fields": [
+    {
+      "json_pointer": "/practical_control/access/state",
+      "prior_state": "supported",
+      "current_state": "partially_supported",
+      "evidence_refs": ["O2", "O3", "O4"],
+      "located_evidence": "Retrospective accounts report alert receipt and contextual and ground-radar checking.",
+      "material_gap": "No contemporaneous delivery, interface, or command record was located.",
+      "decision": "The accounts satisfy part of the access requirement and fail the contemporaneity requirement."
+    },
+    {
+      "json_pointer": "/practical_control/comprehension/state",
+      "prior_state": "supported",
+      "current_state": "partially_supported",
+      "evidence_refs": ["O2", "O3", "O4"],
+      "located_evidence": "Retrospective accounts describe Petrov's interpretation of the alert and its discrepancies.",
+      "material_gap": "No contemporaneous reasoning, review, or explanation record was located.",
+      "decision": "The accounts satisfy part of the comprehension requirement and fail the contemporaneity requirement."
+    },
+    {
+      "json_pointer": "/practical_control/authority/state",
+      "prior_state": "supported",
+      "current_state": "partially_supported",
+      "evidence_refs": ["O2", "O3", "O4"],
+      "located_evidence": "Retrospective accounts describe the duty role and responsibility to classify and report the warning.",
+      "material_gap": "No contemporaneous delegation or command-procedure record was located.",
+      "decision": "The accounts satisfy part of the authority requirement and fail the contemporaneity requirement."
+    },
+    {
+      "json_pointer": "/practical_control/feasibility/state",
+      "prior_state": "supported",
+      "current_state": "partially_supported",
+      "evidence_refs": ["O2", "O3", "O4"],
+      "located_evidence": "Retrospective accounts describe a decision window and communication path that allowed a false-alarm report.",
+      "material_gap": "No contemporaneous timing or operating record was located.",
+      "decision": "The accounts satisfy part of the feasibility requirement and fail the contemporaneity requirement."
+    },
+    {
+      "json_pointer": "/practical_control/exercise/state",
+      "prior_state": "supported",
+      "current_state": "partially_supported",
+      "evidence_refs": ["O2", "O3", "O4"],
+      "located_evidence": "Retrospective accounts report that Petrov challenged the output and classified the warning as false.",
+      "material_gap": "No contemporaneous decision or communication log was located.",
+      "decision": "The accounts satisfy part of the exercise requirement and fail the contemporaneity requirement."
+    },
+    {
+      "json_pointer": "/practical_control/effect/state",
+      "prior_state": "supported",
+      "current_state": "partially_supported",
+      "evidence_refs": ["O2", "O3"],
+      "located_evidence": "Retrospective accounts and an independent reconstruction report that the warning did not advance as a confirmed attack report.",
+      "material_gap": "No contemporaneous linked action, stop, or escalation record was located.",
+      "decision": "The sources satisfy part of the effect requirement and fail the contemporaneity requirement."
+    }
+  ],
+  "carried_forward_sections": [
+    "autonomy",
+    "trust_evidence",
+    "practical_control.correction",
+    "practical_control.repair",
+    "practical_control.reform"
+  ],
+  "dependency_decision": {
+    "practical_force_eligible": false,
+    "paper_blocker_state": "resolved_by_reclassification",
+    "reason": "Every required practical-force stage is partially supported. The current protocol requires supported findings for access, authority, feasibility, exercise, and effect."
+  },
+  "assessor": {
+    "name": "Mark Julius Banasihan",
+    "orcid": "0009-0001-8121-2878",
+    "ai_assistance": true,
+    "independent_assessment": false
+  }
+}

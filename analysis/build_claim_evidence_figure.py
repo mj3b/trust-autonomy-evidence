@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and validate the v0.5.0 claim-evidence integrity matrix."""
+"""Build and validate the v0.6.0 claim-evidence integrity matrix."""
 
 from __future__ import annotations
 
@@ -32,12 +32,12 @@ STUB = "fig-a3-claim-evidence-integrity"
 CSV_PATH = Path("figures/data") / f"{STUB}.csv"
 PNG_PATH = Path("figures/generated") / f"{STUB}.png"
 SVG_PATH = Path("figures/generated") / f"{STUB}.svg"
-MANIFEST_PATH = Path("figures/v0.5.0-manifest.json")
+MANIFEST_PATH = Path("figures/v0.6.0-manifest.json")
 INPUTS = (
     Path("analysis/build_claim_evidence_figure.py"),
     Path("figures/specifications/claim-evidence-integrity.json"),
     Path("evidence/claim-evidence-map.json"),
-    Path("audits/v0.5.0/audit-results.json"),
+    Path("audits/v0.6.0/audit-results.json"),
 )
 OUTPUTS = (CSV_PATH, PNG_PATH, SVG_PATH)
 GATES = (
@@ -77,7 +77,7 @@ def sha256(path: Path) -> str:
 
 
 def table_rows() -> list[dict[str, str]]:
-    result = read_json(Path("audits/v0.5.0/audit-results.json"))
+    result = read_json(Path("audits/v0.6.0/audit-results.json"))
     rows = []
     for claim in result["claim_results"]:
         row = {"claim_id": claim["claim_id"]}
@@ -116,7 +116,7 @@ def build_figure(output_root: Path) -> None:
         "font.family": "DejaVu Sans",
         "font.size": 10,
         "text.color": "#17212B",
-        "svg.hashsalt": "trust-autonomy-evidence-coe-v0.5.0",
+        "svg.hashsalt": "trust-autonomy-evidence-coe-v0.6.0",
     })
     fig, ax = plt.subplots(figsize=(12.6, 9.5))
     cmap = ListedColormap([STATE_COLOR[state] for state in STATE_ORDER])
@@ -140,18 +140,20 @@ def build_figure(output_root: Path) -> None:
             ax.text(x, y, STATE_CODE[state], ha="center", va="center", color=text_color, weight="bold", fontsize=9.5)
 
     fig.subplots_adjust(left=0.16, right=0.98, top=0.78, bottom=0.16)
-    fig.text(0.16, 0.94, "Traceable claims can still remain unfit for a conclusion", ha="left", va="top", fontsize=17, weight="bold")
-    fig.text(0.16, 0.905, "Fourteen material claims across five evidence gates and one conclusion-eligibility decision", ha="left", va="top", fontsize=10.5, color="#5A6772")
-    fig.text(0.16, 0.865, "Oko's stronger protocol-consistency claim fails fitness; its dependent paper conclusion remains blocked.", ha="left", va="top", fontsize=10.5, color="#D55E00", weight="bold")
+    fig.text(0.16, 0.94, "Evidence fitness determines conclusion eligibility", ha="left", va="top", fontsize=17, weight="bold")
+    fig.text(0.16, 0.905, "Fifteen material claims across five evidence gates and one conclusion-eligibility decision", ha="left", va="top", fontsize=10.5, color="#5A6772")
+    fig.text(0.16, 0.865, "The versioned Oko correction closes the prior fitness failure; independent validity remains outside scope.", ha="left", va="top", fontsize=10.5, color="#0072B2", weight="bold")
 
     legend_states = ("pass", "fail", "indeterminate", "outside_scope", "eligible", "blocked")
     legend = [Patch(facecolor=STATE_COLOR[state], label=f"{STATE_CODE[state]}  {STATE_LABEL[state]}") for state in legend_states]
     fig.legend(handles=legend, loc="lower left", bbox_to_anchor=(0.155, 0.07), ncol=3, frameon=False, fontsize=9, columnspacing=1.5)
-    fig.text(0.16, 0.025, "Source: v0.5.0 claim map and integrity audit. States are categorical. No numeric score is calculated.", ha="left", va="bottom", fontsize=8.5, color="#5A6772")
+    fig.text(0.16, 0.025, "Source: v0.6.0 claim map and integrity audit. States are categorical. No numeric score is calculated.", ha="left", va="bottom", fontsize=8.5, color="#5A6772")
 
     png_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(png_path, dpi=200, bbox_inches="tight", metadata={"Software": "Trust, Autonomy, and Evidence v0.5 figure builder"})
-    fig.savefig(svg_path, bbox_inches="tight", metadata={"Creator": "Trust, Autonomy, and Evidence v0.5 figure builder", "Date": None})
+    fig.savefig(png_path, dpi=200, bbox_inches="tight", metadata={"Software": "Trust, Autonomy, and Evidence v0.6 figure builder"})
+    fig.savefig(svg_path, bbox_inches="tight", metadata={"Creator": "Trust, Autonomy, and Evidence v0.6 figure builder", "Date": None})
+    svg_text = svg_path.read_text(encoding="utf-8")
+    svg_path.write_text("\n".join(line.rstrip() for line in svg_text.splitlines()) + "\n", encoding="utf-8")
     plt.close(fig)
 
 
@@ -161,7 +163,7 @@ def manifest_entry(path: Path, relative: Path) -> dict:
 
 def write_manifest(output_root: Path) -> None:
     manifest = {
-        "version": "0.5.0",
+        "version": "0.6.0",
         "figure_id": "FIG-A3",
         "hash_algorithm": "sha256",
         "artifacts": [manifest_entry(output_root / relative, relative) for relative in OUTPUTS],
@@ -202,19 +204,19 @@ def validate() -> list[str]:
             errors.append(f"SVG validation failed: {exc}")
 
     if not (ROOT / MANIFEST_PATH).is_file():
-        errors.append("v0.5 figure manifest is missing")
+        errors.append("v0.6 figure manifest is missing")
         return errors
     manifest = read_json(MANIFEST_PATH)
     for group, paths in (("artifacts", OUTPUTS), ("inputs", INPUTS)):
         indexed = {row["path"]: row for row in manifest.get(group, [])}
         if set(indexed) != {path.as_posix() for path in paths}:
-            errors.append(f"v0.5 figure manifest {group} path set mismatch")
+            errors.append(f"v0.6 figure manifest {group} path set mismatch")
             continue
         for relative in paths:
             path = ROOT / relative
             row = indexed[relative.as_posix()]
             if not path.is_file() or path.stat().st_size != row["bytes"] or sha256(path) != row["sha256"]:
-                errors.append(f"v0.5 figure manifest mismatch: {relative.as_posix()}")
+                errors.append(f"v0.6 figure manifest mismatch: {relative.as_posix()}")
     return errors
 
 
@@ -231,7 +233,7 @@ def main() -> int:
     else:
         build_figure(ROOT)
         write_manifest(ROOT)
-    print("claim-evidence figure: PASS (14 claims; 6 categorical decisions per claim)")
+    print("claim-evidence figure: PASS (15 claims; 6 categorical decisions per claim)")
     return 0
 
 

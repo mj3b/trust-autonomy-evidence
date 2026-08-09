@@ -1,0 +1,312 @@
+{
+  "version": "0.6.0",
+  "created": "2026-08-09",
+  "hash_algorithm": "SHA-256",
+  "artifacts": [
+    {
+      "path": "release/v0.3.0-manifest.json",
+      "bytes": 4238,
+      "sha256": "cd37eadb95ef849d14b6a530220f3bec4d0200fac1492cdeff81f12a06ec9a8d"
+    },
+    {
+      "path": "release/v0.4.0-manifest.json",
+      "bytes": 5394,
+      "sha256": "2d47b14d4a5ce1d783bfd2b66e9a0192b88502465a7549601b103f94989abf48"
+    },
+    {
+      "path": "release/v0.5.0-manifest.json",
+      "bytes": 7828,
+      "sha256": "884cfaf2d820368d79064f2a8adafdcac8a80796ec5792bd5384cab133ea8670"
+    },
+    {
+      "path": "README.md",
+      "bytes": 18252,
+      "sha256": "ec58d7fae981029c07ac6b5dc4dabed0e507cbc9f58038b9d72247bbea9e0a2b"
+    },
+    {
+      "path": "RESEARCH_STATUS.md",
+      "bytes": 6368,
+      "sha256": "d6643da89ed2dcf6f36bb9237af212aaf7e7b7e28f8e7da95fdc5735a4f8615c"
+    },
+    {
+      "path": "CLAIMS.md",
+      "bytes": 7646,
+      "sha256": "76c7fb420f61f969143560b1af55f23c3ec4c9fff01acd8024d83166da9795f0"
+    },
+    {
+      "path": "LIMITATIONS.md",
+      "bytes": 5538,
+      "sha256": "6ff8e7935ea7818ecee89bc5a85cf4bc78b08a7b7aa44547359f4295b06e5526"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 7763,
+      "sha256": "27919e9c6f479c25c93ea56173d76491c0c2513360c9cd0f87d3e21c713a28fd"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 726,
+      "sha256": "978e971197402a7b80d55882edeca63b8760cf9ff07bcde1201adeedb1a1928c"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 7306,
+      "sha256": "5805f8d8478748bed1f1ac40e3c95799a196fd171470c0f4946301734320ef22"
+    },
+    {
+      "path": "protocols/coe-integrity-audit.md",
+      "bytes": 6448,
+      "sha256": "8c1e96e261268eb0328431c43617504280c3a2894450fb5b405d93218fe8ce15"
+    },
+    {
+      "path": "protocols/oko-evidence-adjudication-v0.6.0.md",
+      "bytes": 4703,
+      "sha256": "6fef3cc0e69df173496e623c3c721fce57a7ef774dcee57ed7d93cf152f9cb52"
+    },
+    {
+      "path": "research/chain-of-evidence-adaptation.md",
+      "bytes": 3492,
+      "sha256": "d1dd7b10c1b99e10f87859f339981d8038e4a9ba362825a0caf3efe7ffeda8d6"
+    },
+    {
+      "path": "evidence/claim-evidence-map.json",
+      "bytes": 40236,
+      "sha256": "1339da81914aab18f162fd5c6f7730c6081241bb0e50daf997a8956f3b8b632e"
+    },
+    {
+      "path": "evidence/research-lineage.json",
+      "bytes": 5743,
+      "sha256": "f50473f1437c5c2e6457ea17a15b55f1d5a0a1fdd39c34e06d17b437571ad980"
+    },
+    {
+      "path": "evidence/research-activity-log.json",
+      "bytes": 2764,
+      "sha256": "9ef046cd94d6835295fd88e575b43902df09cf2f676677aee7e05a408b311e23"
+    },
+    {
+      "path": "schemas/claim-evidence-map.schema.json",
+      "bytes": 4970,
+      "sha256": "1d233cd86e1032402c6202024d3ce1aea035f3e43b2cf6c7776a6b1bed0ed4da"
+    },
+    {
+      "path": "schemas/research-lineage.schema.json",
+      "bytes": 3368,
+      "sha256": "cda50d788cff75f11dbc25a961083afd764caf1ed00ec9b436352d01b6f3a8e9"
+    },
+    {
+      "path": "schemas/coe-audit-result.schema.json",
+      "bytes": 3257,
+      "sha256": "253ed51fca847cafe7efa21020d0b1cb272ab21ad46d90262a170862d00b5212"
+    },
+    {
+      "path": "schemas/coe-audit-mutations.schema.json",
+      "bytes": 1436,
+      "sha256": "afdd7097d82aea4811bb6d45259aa227884593239de067d3934501a52b49a267"
+    },
+    {
+      "path": "schemas/adjudication-ledger.schema.json",
+      "bytes": 3583,
+      "sha256": "cfa3b45793c2f6529fb212b9a12b29094b42dcce0961c146ab0aa21adbcc0f3f"
+    },
+    {
+      "path": "schemas/literature-support-audit.schema.json",
+      "bytes": 1614,
+      "sha256": "218474aaa2a5dff617a9b8aad6e9779b99cb1de2273f8a543679bfeab3f9d280"
+    },
+    {
+      "path": "fixtures/coe-audit-mutations.json",
+      "bytes": 2494,
+      "sha256": "c7f2b1fe20bd8671570c1571febae6a52fba21ae85d4265487e3a420282bcf55"
+    },
+    {
+      "path": "fixtures/adjudication-mutations-v0.6.0.json",
+      "bytes": 1489,
+      "sha256": "8eadc4e4494c0e44ccf2768fbd03cd9b35563d3be560fd33cd0b7be535e362dd"
+    },
+    {
+      "path": "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
+      "bytes": 7513,
+      "sha256": "81709fec80b42331e78c5fe3466caf93fe38ca7d72776d50f4ee700d6c5b8866"
+    },
+    {
+      "path": "assessments/v0.6.0/oko-change-ledger.json",
+      "bytes": 4610,
+      "sha256": "2a4f4a166244022e19a446edbd64af0f8b562c75739219bee41508029bedb9d3"
+    },
+    {
+      "path": "audits/v0.6.0/audit-plan.md",
+      "bytes": 820,
+      "sha256": "0b181ae26001b6e3707c60d291822eebda2dace595d4f308bbb1c444ddd66133"
+    },
+    {
+      "path": "audits/v0.6.0/audit-results.json",
+      "bytes": 7266,
+      "sha256": "0ed6016672d1d31c5c2b6c52576ce4303bf900bd731d60e09a367afac84748d2"
+    },
+    {
+      "path": "audits/v0.6.0/audit-report.md",
+      "bytes": 3291,
+      "sha256": "9034c856b156f725c257d76483a782bac7267182501acdceff55254340dff450"
+    },
+    {
+      "path": "audits/v0.6.0/exceptions.md",
+      "bytes": 1176,
+      "sha256": "915a0b40b7af76f31126567d6572603a445fb28a2431e6a510efbbf518569b07"
+    },
+    {
+      "path": "analysis/build_claim_evidence_figure.py",
+      "bytes": 9859,
+      "sha256": "21b0a8eb876cdc3ca8739d873ddffe4fbacdb838315fd153ecfdd1e78289fdd0"
+    },
+    {
+      "path": "figures/specifications/claim-evidence-integrity.json",
+      "bytes": 1020,
+      "sha256": "e28e6d37999130e0c7c7c84b3604489ed9a67600dbc3b68df67eaf7c84f536c1"
+    },
+    {
+      "path": "figures/data/fig-a3-claim-evidence-integrity.csv",
+      "bytes": 756,
+      "sha256": "90fe3ce5827680243d24951d9b2315da87562a709eec95996acad8bc5a4d0bcb"
+    },
+    {
+      "path": "figures/generated/fig-a3-claim-evidence-integrity.png",
+      "bytes": 171491,
+      "sha256": "d96fa0c1aef20b9f227d9516c2d1766f854058d6821c0bef662e04e5f862c803"
+    },
+    {
+      "path": "figures/generated/fig-a3-claim-evidence-integrity.svg",
+      "bytes": 99242,
+      "sha256": "d431732bbb2cf0f0788b57c147ba33ba0d6b50cec3ec2973980858d6a315d7c6"
+    },
+    {
+      "path": "figures/v0.6.0-manifest.json",
+      "bytes": 1376,
+      "sha256": "1970b5f5b828de7e240a040265f40648e2affbb45a39d2eb1fd68d1b804bbe70"
+    },
+    {
+      "path": "reports/oko-evidence-adjudication-v0.6.0.md",
+      "bytes": 3688,
+      "sha256": "da853c263640ebc96380604f3c30e26b0a61b7bd3f691ce65f6a0c3dc872bd70"
+    },
+    {
+      "path": "reports/public-case-reconstruction-v0.6.0.md",
+      "bytes": 2969,
+      "sha256": "8acefe2a734ac78f1487c316b35ae9e8e8b414ffaf7567040dfd1c48bb5b8987"
+    },
+    {
+      "path": "reports/claim-evidence-figure-methods-v0.6.0.md",
+      "bytes": 1512,
+      "sha256": "e3c2ae13470c3a0e6e8fb0d4c327b6850aa2c1b0f248dfb677f576f45aa7ddfb"
+    },
+    {
+      "path": "paper/README.md",
+      "bytes": 3763,
+      "sha256": "08cbb72b5024bb63ed17e7334fb7785099a5cd50ddac7c4bb4391a7c6d340cb1"
+    },
+    {
+      "path": "paper/paper-charter.md",
+      "bytes": 7936,
+      "sha256": "9745aa3787e65e893bb8628ce36dd8ebdc71426ed522712f847cf1de883653f1"
+    },
+    {
+      "path": "paper/manuscript.md",
+      "bytes": 22712,
+      "sha256": "20062273d3adbbc6180f1587af66ba7b873c74d7737a2599df7bd9f981a2dad1"
+    },
+    {
+      "path": "paper/literature-matrix.md",
+      "bytes": 14438,
+      "sha256": "61d3113f85074ef3417ce4a04580fdfc4e98a9295aa6be497fd11347627ae9f0"
+    },
+    {
+      "path": "paper/literature-search-log.md",
+      "bytes": 5336,
+      "sha256": "dd162c4c4e857043f787f69de55cb72a1295a310a8df09bc846d54897399b427"
+    },
+    {
+      "path": "paper/citation-chain-log-v0.6.0.md",
+      "bytes": 1637,
+      "sha256": "8c70780274c270fa7698c83776b02a2af425291c69d98f8c276cc54c696510c5"
+    },
+    {
+      "path": "paper/literature-support-audit-v0.6.0.json",
+      "bytes": 6427,
+      "sha256": "cc4a1c9d2b4d654f7e4f0f6f7b2ae473e1e2d00d320dc88788f1bfa9baf12304"
+    },
+    {
+      "path": "paper/literature-support-audit-v0.6.0.md",
+      "bytes": 1121,
+      "sha256": "0f31fc8bdb9809e1c99bc206545703184dd5dfa6c6df3666df4979272019d0e9"
+    },
+    {
+      "path": "paper/novelty-audit.md",
+      "bytes": 6579,
+      "sha256": "c48cf5032aa148a1e96b561b72dabc71d9acd29824d3d89a7958d88c3f856b2b"
+    },
+    {
+      "path": "paper/references.bib",
+      "bytes": 11193,
+      "sha256": "27600b1db817092b0029179f320efae1ca565d444b2c5e0f5fc4369a411d951d"
+    },
+    {
+      "path": "paper/claim-evidence-register.md",
+      "bytes": 6910,
+      "sha256": "3197363a48150c24e612b22a580dc0966413e7e82a2625ec0bba7cfdcf320e82"
+    },
+    {
+      "path": "paper/claim-crosswalk.md",
+      "bytes": 1829,
+      "sha256": "2aa81af1bb094c71ee4045afb99221da3a60600ec09425dbd7d564c02600f294"
+    },
+    {
+      "path": "paper/scientistone-artifact-pressure-test.md",
+      "bytes": 2374,
+      "sha256": "64f4563ba2251923045f4f3693f070542896cba9f8bd0f16e1403b5ce25017e1"
+    },
+    {
+      "path": "paper/submission-notes.md",
+      "bytes": 4256,
+      "sha256": "7ee31a608b500b3fa7cc59747260ad0a27a200b4e5308290d1d2cb8f70b3faad"
+    },
+    {
+      "path": "paper/review-record-pr11.md",
+      "bytes": 6278,
+      "sha256": "9759a06ede9af3913a8f69173b86a79aec2600f00e7700f02feedaf987ad2d43"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 37,
+      "sha256": "c98dff45b76e798874ad491425ac6c6ba6f6fe77fca0d9334956acfd652ccf16"
+    },
+    {
+      "path": "scripts/run_coe_integrity_audit.py",
+      "bytes": 22670,
+      "sha256": "e00fb3ce96be15810003dcbadcbed9b3000bd0753a51ae3d1d563aafabbb10cb"
+    },
+    {
+      "path": "scripts/validate_v060_adjudication.py",
+      "bytes": 7539,
+      "sha256": "df1acd49b0561328a82f4f2734691490a0bb2db171b022f1894854cb359f8900"
+    },
+    {
+      "path": "scripts/validate_literature_support.py",
+      "bytes": 1911,
+      "sha256": "e3ea8a9f001d50effa93532dd14812703e45809c1fbfb6bb601ee9e1d327820b"
+    },
+    {
+      "path": "scripts/validate_paper.py",
+      "bytes": 5560,
+      "sha256": "b453d49b6896a991a650d2772c558166dbe90e05b2376d7612cbf4bafbfdcba1"
+    },
+    {
+      "path": "scripts/validate_repository.py",
+      "bytes": 21430,
+      "sha256": "5da37a677bedb64a030f6eadaa20c1bbfedd97d428963ec0cb13716de6ce6753"
+    },
+    {
+      "path": "scripts/build_release_manifest.py",
+      "bytes": 3584,
+      "sha256": "eada4a6c72d24a93084799d14ce22f6988fd170663a0bc1641eed81e171b29d3"
+    }
+  ]
+}

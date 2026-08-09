@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the v0.5.0 Chain-of-Evidence integrity audit and negative controls."""
+"""Run the v0.6.0 Chain-of-Evidence integrity audit and negative controls."""
 
 from __future__ import annotations
 
@@ -19,9 +19,9 @@ ROOT = Path(__file__).resolve().parents[1]
 CLAIM_MAP_PATH = ROOT / "evidence/claim-evidence-map.json"
 LINEAGE_PATH = ROOT / "evidence/research-lineage.json"
 MUTATIONS_PATH = ROOT / "fixtures/coe-audit-mutations.json"
-RESULT_PATH = ROOT / "audits/v0.5.0/audit-results.json"
-REPORT_PATH = ROOT / "audits/v0.5.0/audit-report.md"
-EXCEPTIONS = ["COE-EX-01", "COE-EX-02", "COE-EX-03"]
+RESULT_PATH = ROOT / "audits/v0.6.0/audit-results.json"
+REPORT_PATH = ROOT / "audits/v0.6.0/audit-report.md"
+EXCEPTIONS = ["COE-EX-03", "COE-EX-04"]
 FITNESS_DIMENSIONS = (
     "directness",
     "contemporaneity",
@@ -413,10 +413,10 @@ def build_result() -> dict[str, Any]:
     hard_fail = any(check["status"] == "fail" for check in checks) or bool(escaped_controls)
     status = "FAIL" if hard_fail else "PASS_WITH_EXCEPTIONS"
     result = {
-        "version": "0.5.0",
-        "audit_id": "TAE-COE-AUDIT-V0.5.0",
+        "version": "0.6.0",
+        "audit_id": "TAE-COE-AUDIT-V0.6.0",
         "audit_date": "2026-08-09",
-        "scope": "Fourteen material claims declared in TAE-COE-V0.5.0; complete repository prose and independent validity are outside the audit.",
+        "scope": "Fifteen material claims declared in TAE-COE-V0.6.0, plus a separate 16-proposition literature-support register; independent validity and systematic novelty searching are outside the audit.",
         "status": status,
         "checks": checks,
         "negative_controls": controls,
@@ -431,7 +431,7 @@ def build_result() -> dict[str, Any]:
 
 def render_report(result: dict[str, Any]) -> str:
     lines = [
-        "# v0.5.0 Chain-of-Evidence Integrity Audit",
+        "# v0.6.0 Chain-of-Evidence Integrity Audit",
         "",
         f"**Audit date:** {result['audit_date']}  ",
         f"**Status:** `{result['status']}`  ",
@@ -439,7 +439,7 @@ def render_report(result: dict[str, Any]) -> str:
         "",
         "## Decision",
         "",
-        "The declared v0.5 claim set passes its executable integrity controls with three published exceptions. The result permits bounded artifact and method claims. It does not clear the blocked Oko protocol-consistency conclusion or establish independent reliability.",
+        "The declared v0.6 claim set passes its executable integrity controls with two published exceptions. The Oko protocol mismatch is resolved through versioned reclassification, and the current sentence-level literature-support audit passes. The result permits bounded artifact and method claims and supplies no independent reliability or originality finding.",
         "",
         "## Integrity checks",
         "",
@@ -464,9 +464,8 @@ def render_report(result: dict[str, Any]) -> str:
         "",
         "## Published exceptions",
         "",
-        "- `COE-EX-01`: Oko contemporaneity blocks the stronger protocol-consistency claim and dependent paper conclusion.",
-        "- `COE-EX-02`: complete sentence-level literature support review and systematic searching remain unfinished.",
         "- `COE-EX-03`: no independent assessor has reproduced the support or evidence-fitness judgments.",
+        "- `COE-EX-04`: institutional database searching and full citation chaining remain incomplete.",
         "",
         "## Interpretation",
         "",

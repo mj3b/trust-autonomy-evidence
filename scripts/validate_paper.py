@@ -16,8 +16,8 @@ QUESTION = (
     "human authority, practical human control, and unresolved evidence in a bounded "
     "public incident record?"
 )
-VERSION_DOI = "10.5281/zenodo.21844706"
-REPOSITORY_VERSION = "0.5.0"
+VERSION_DOI = "10.5281/zenodo.21863464"
+REPOSITORY_VERSION = "0.6.0"
 PAPER_FILES = (
     "paper/README.md",
     "paper/paper-charter.md",
@@ -31,6 +31,9 @@ PAPER_FILES = (
     "paper/review-record-pr11.md",
     "paper/claim-crosswalk.md",
     "paper/scientistone-artifact-pressure-test.md",
+    "paper/citation-chain-log-v0.6.0.md",
+    "paper/literature-support-audit-v0.6.0.json",
+    "paper/literature-support-audit-v0.6.0.md",
 )
 
 
@@ -83,13 +86,13 @@ def validate_question(failures: list[str]) -> None:
 def validate_bibliography(failures: list[str]) -> None:
     text = (ROOT / "paper/references.bib").read_text(encoding="utf-8")
     entries = re.findall(r"^@\w+\{([^,]+),", text, flags=re.MULTILINE)
-    if len(entries) < 24:
-        fail(f"paper bibliography has {len(entries)} entries; expected at least 24", failures)
+    if len(entries) < 28:
+        fail(f"paper bibliography has {len(entries)} entries; expected at least 28", failures)
     if len(entries) != len(set(entries)):
         fail("duplicate BibTeX keys in paper/references.bib", failures)
     doi_fields = re.findall(r"^\s+doi\s*=", text, flags=re.MULTILINE | re.IGNORECASE)
-    if len(doi_fields) < 20:
-        fail(f"paper bibliography has {len(doi_fields)} DOI fields; expected at least 20", failures)
+    if len(doi_fields) < 24:
+        fail(f"paper bibliography has {len(doi_fields)} DOI fields; expected at least 24", failures)
     if "\\\\&" in text:
         fail("doubled backslash before ampersand in paper/references.bib", failures)
 
@@ -98,24 +101,23 @@ def validate_boundaries(failures: list[str]) -> None:
     review = (ROOT / "paper/review-record-pr11.md").read_text(encoding="utf-8")
     register = (ROOT / "paper/claim-evidence-register.md").read_text(encoding="utf-8")
     manuscript = (ROOT / "paper/manuscript.md").read_text(encoding="utf-8")
-    for relative, text in (
-        ("paper/review-record-pr11.md", review),
-        ("paper/claim-evidence-register.md", register),
-        ("paper/manuscript.md", manuscript),
-    ):
-        if "PAPER-BLOCKER-01" not in text:
-            fail(f"open paper blocker missing from {relative}", failures)
+    if "## v0.6.0 resolution" not in review or "resolved by reclassification" not in review.lower():
+        fail("v0.6 Oko resolution missing from review record", failures)
+    if "C04 | The frozen v0.6 Oko adjudication" not in register:
+        fail("current Oko claim missing from claim register", failures)
     citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
     if f"version: {REPOSITORY_VERSION}" not in citation:
-        fail("CITATION.cff does not identify v0.5.0", failures)
+        fail("CITATION.cff does not identify v0.6.0", failures)
     if VERSION_DOI not in manuscript:
-        fail("v0.4.0 version DOI missing from paper/manuscript.md", failures)
+        fail("v0.5.0 version DOI missing from paper/manuscript.md", failures)
     matrix = (ROOT / "paper/literature-matrix.md").read_text(encoding="utf-8")
-    if "L24" not in matrix or "ScientistOne" not in matrix:
-        fail("ScientistOne prior architecture missing from literature matrix", failures)
+    if "L24" not in matrix or "ScientistOne" not in matrix or "L28" not in matrix:
+        fail("required close neighbors missing from literature matrix", failures)
     crosswalk = (ROOT / "paper/claim-crosswalk.md").read_text(encoding="utf-8")
-    if "C04 | Blocked" not in crosswalk or "C09 | Blocked" not in crosswalk:
-        fail("blocked paper claims missing from v0.5 crosswalk", failures)
+    if "C04 | Eligible" not in crosswalk or "C09 | Eligible" not in crosswalk or "C15 | Eligible" not in crosswalk:
+        fail("eligible v0.6 paper claims missing from crosswalk", failures)
+    if re.search(r"\bnovel\b", manuscript, flags=re.IGNORECASE):
+        fail("manuscript contains prohibited novelty wording", failures)
 
 
 def main() -> int:

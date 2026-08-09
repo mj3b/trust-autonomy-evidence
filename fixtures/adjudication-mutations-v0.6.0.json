@@ -1,0 +1,47 @@
+{
+  "version": "0.6.0",
+  "controls": [
+    {
+      "control_id": "ADJ-M01",
+      "mutation": "promote_without_contemporaneous_record",
+      "target": "/reassessed_fields/0/current_state",
+      "replacement": "supported",
+      "expected_check": "state_rule"
+    },
+    {
+      "control_id": "ADJ-M02",
+      "mutation": "stale_frozen_assessment_hash",
+      "target": "/frozen_assessment/sha256",
+      "replacement": "0000000000000000000000000000000000000000000000000000000000000000",
+      "expected_check": "artifact_integrity"
+    },
+    {
+      "control_id": "ADJ-M03",
+      "mutation": "stale_source_packet_hash",
+      "target": "/source_packet/sha256",
+      "replacement": "0000000000000000000000000000000000000000000000000000000000000000",
+      "expected_check": "artifact_integrity"
+    },
+    {
+      "control_id": "ADJ-M04",
+      "mutation": "hidden_transition",
+      "target": "/reassessed_fields/5",
+      "replacement": null,
+      "expected_check": "transition_completeness"
+    },
+    {
+      "control_id": "ADJ-M05",
+      "mutation": "carried_forward_drift",
+      "target": "/current_assessment/trust_evidence/human_authority/state",
+      "replacement": "partially_supported",
+      "expected_check": "carry_forward_integrity"
+    },
+    {
+      "control_id": "ADJ-M06",
+      "mutation": "dependency_escape",
+      "target": "/dependency_decision/practical_force_eligible",
+      "replacement": true,
+      "expected_check": "dependency_closure"
+    }
+  ]
+}

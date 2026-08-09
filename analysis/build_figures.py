@@ -32,13 +32,13 @@ from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Patch  # noqa: E402
 
 
-FIGURE_SET_VERSION = "0.1.0"
-SOURCE_RELEASE = "0.3.0"
+FIGURE_SET_VERSION = "0.6.0"
+SOURCE_RELEASE = "0.6.0"
 
-CASE_DIRECTORIES = (
-    "cases/TAE-PUB-001-oko-1983",
-    "cases/TAE-PUB-002-patriot-zg710-2003",
-    "cases/TAE-PUB-003-patriot-fa18-2003",
+CASE_ASSESSMENT_PATHS = (
+    "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
+    "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
+    "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json",
 )
 CASE_LABELS = {
     "TAE-PUB-001": "Oko\n1983",
@@ -153,7 +153,9 @@ SOURCE_INPUTS = (
     "fixtures/mutations/mutations.json",
     "cases/data/candidate-search-output.json",
     "cases/public-case-selection-register.md",
-    "cases/TAE-PUB-001-oko-1983/assessment.json",
+    "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
+    "assessments/v0.6.0/oko-change-ledger.json",
+    "protocols/oko-evidence-adjudication-v0.6.0.md",
     "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
     "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json",
     "cases/TAE-PUB-001-oko-1983/case-report.md",
@@ -176,7 +178,7 @@ def configure_style() -> None:
             "figure.facecolor": PAPER,
             "axes.facecolor": PAPER,
             "savefig.facecolor": PAPER,
-            "svg.hashsalt": "trust-autonomy-evidence-figure-set-v0.1.0",
+            "svg.hashsalt": "trust-autonomy-evidence-figure-set-v0.6.0",
         }
     )
 
@@ -187,8 +189,8 @@ def read_json(relative: str) -> dict:
 
 def load_assessments() -> list[dict]:
     assessments = []
-    for relative in CASE_DIRECTORIES:
-        assessments.append(read_json(f"{relative}/assessment.json"))
+    for relative in CASE_ASSESSMENT_PATHS:
+        assessments.append(read_json(relative))
     return sorted(assessments, key=lambda row: row["case_id"])
 
 
@@ -208,14 +210,17 @@ def save_figure(fig: plt.Figure, output_dir: Path, stub: str) -> None:
         bbox_inches="tight",
         metadata={"Software": "Trust, Autonomy, and Evidence figure builder"},
     )
+    svg_path = output_dir / f"{stub}.svg"
     fig.savefig(
-        output_dir / f"{stub}.svg",
+        svg_path,
         bbox_inches="tight",
         metadata={
             "Creator": "Trust, Autonomy, and Evidence figure builder",
             "Date": None,
         },
     )
+    svg_text = svg_path.read_text(encoding="utf-8")
+    svg_path.write_text("\n".join(line.rstrip() for line in svg_text.splitlines()) + "\n", encoding="utf-8")
     plt.close(fig)
 
 
@@ -553,7 +558,7 @@ def categorical_matrix(
     )
     add_source_note(
         fig,
-        f"Source: three v{SOURCE_RELEASE} public-case assessment files. States are categorical and carry no numeric distance.",
+        f"Source: the current v{SOURCE_RELEASE} assessment set, combining the adjudicated Oko result with two preserved v0.3.0 assessments. States are categorical and carry no numeric distance.",
         y=0.025,
     )
     save_figure(fig, figure_dir, stub)
@@ -965,7 +970,7 @@ def build_all(output_root: Path) -> None:
         "practical_control",
         CONTROL_FIELDS,
         CONTROL_LABELS,
-        "Formal authority appears in all three cases; practical force diverges downstream",
+        "Authority evidence does not determine the remaining practical-control states",
         "Twenty-seven declared states from nine propositions across three purposefully selected public cases.",
         "fig-2-practical-control-chain",
         data_dir,

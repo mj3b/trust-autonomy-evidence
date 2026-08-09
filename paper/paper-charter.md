@@ -37,11 +37,11 @@ The paper contributes a documented and executable procedure for testing whether 
 
 ## Provisional central claim
 
-The released v0.3.0 assessments classify formal human authority as supported in every packet. They classify a protective effect as supported only in Oko, where access, comprehension, feasible challenge, and exercised challenge are also marked supported. ZG710 records formal authority with several practical-control conditions unsupported. F/A-18C records formal authority with several conditions indeterminate because public records are missing.
+The current assessment set applies v0.6.0 to Oko and preserves the v0.3.0 Patriot assessments. Oko records partial support across access, comprehension, authority, feasible challenge, exercised challenge, and effect. ZG710 records supported authority with several practical-control conditions unsupported. F/A-18C records supported authority with several conditions indeterminate because public records are missing.
 
 These states demonstrate how the procedure represents three contrastive evidence conditions. The selection strata anticipated those contrasts, so the cases do not independently establish discriminative validity.
 
-One protocol-consistency question remains open. The Oko packet relies on retrospective participant accounts. The practical-control protocol defines `supported` evidence as direct and contemporaneous. The manuscript may report the released state. It may not describe that state as protocol-consistent until a versioned resolution addresses the mismatch.
+The v0.6 adjudication resolves the Oko protocol mismatch through reclassification under the existing direct-and-contemporaneous rule. The adjudication protocol was frozen before the reassessment, the evidence universe remained fixed, and each transition is recorded in a machine-readable ledger. The decision preserves v0.3.0 and leaves the missing contemporaneous record visible.
 
 ## Novelty hypothesis
 
@@ -85,7 +85,7 @@ It may not claim:
 - improved institutional outcomes;
 - independent validation of the method's ability to discriminate among case types;
 - immutable preservation of source content that remains remote-only;
-- protocol-consistent contemporaneous support for Oko before the open mismatch is resolved.
+- contemporaneous historical support for Oko beyond the evidence in the frozen packet.
 
 ## Completion gates
 
@@ -94,7 +94,7 @@ A manuscript is ready for public preprint review only when:
 1. every material empirical claim appears in the claim-evidence register;
 2. every bibliographic entry has been checked against a publisher, DOI record, or institutional repository;
 3. the literature search and citation-chaining procedure are documented;
-4. the Oko contemporaneity mismatch identified as `PAPER-BLOCKER-01` has a versioned resolution;
+4. the Oko decision and each assessment transition remain traceable to the frozen v0.6 adjudication;
 5. all six figures rebuild and both repository validators pass;
 6. the version-specific data and code archive is cited;
 7. the single-assessor design and AI-assisted workflow are disclosed;
@@ -111,3 +111,5 @@ This working charter includes its v0.1 foundation and each later material decisi
 ## Decision history
 
 On 8 August 2026, the PR #11 pressure test changed the question from whether the method can distinguish the three states to how the method represents them. The contrastive selection strata anticipate the headline differences, which prevents the three selected cases from serving as an independent test of discriminative validity. The case set, unit of analysis, released assessment states, and frozen packets remain unchanged.
+
+On 9 August 2026, the v0.6 adjudication resolved `PAPER-BLOCKER-01` by applying the existing evidence rule to the frozen Oko packet. Six practical-control stages changed from supported to partially supported in a new assessment. The v0.3.0 record remains unchanged. A sentence-level support audit closed the current literature-support exception; systematic novelty searching remains open.

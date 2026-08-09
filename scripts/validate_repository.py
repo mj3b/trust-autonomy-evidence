@@ -14,7 +14,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.5.0"
+REPOSITORY_VERSION = "0.6.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
 REQUIRED_FILES = (
@@ -41,6 +41,7 @@ REQUIRED_FILES = (
     "protocols/solo-validation-protocol.md",
     "protocols/public-case-reconstruction-protocol.md",
     "protocols/coe-integrity-audit.md",
+    "protocols/oko-evidence-adjudication-v0.6.0.md",
     "cases/README.md",
     "cases/public-case-selection-register.md",
     "cases/data/candidate-search-output.json",
@@ -68,9 +69,12 @@ REQUIRED_FILES = (
     "schemas/research-lineage.schema.json",
     "schemas/coe-audit-result.schema.json",
     "schemas/coe-audit-mutations.schema.json",
+    "schemas/adjudication-ledger.schema.json",
+    "schemas/literature-support-audit.schema.json",
     "fixtures/synthetic/cases.json",
     "fixtures/mutations/mutations.json",
     "fixtures/coe-audit-mutations.json",
+    "fixtures/adjudication-mutations-v0.6.0.json",
     "oracles/solo-validation-v0.2.0.json",
     "oracles/manifest.json",
     "analysis/assessment.py",
@@ -82,6 +86,9 @@ REQUIRED_FILES = (
     "reports/public-case-reconstruction-v0.3.0.md",
     "reports/figure-methods.md",
     "reports/claim-evidence-figure-methods-v0.5.0.md",
+    "reports/oko-evidence-adjudication-v0.6.0.md",
+    "reports/public-case-reconstruction-v0.6.0.md",
+    "reports/claim-evidence-figure-methods-v0.6.0.md",
     "figures/README.md",
     "figures/manifest.json",
     "figures/specifications/figure-register.json",
@@ -111,9 +118,11 @@ REQUIRED_FILES = (
     "figures/generated/fig-a3-claim-evidence-integrity.png",
     "figures/generated/fig-a3-claim-evidence-integrity.svg",
     "figures/v0.5.0-manifest.json",
+    "figures/v0.6.0-manifest.json",
     "release/v0.3.0-manifest.json",
     "release/v0.4.0-manifest.json",
     "release/v0.5.0-manifest.json",
+    "release/v0.6.0-manifest.json",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -122,6 +131,17 @@ REQUIRED_FILES = (
     "audits/v0.5.0/audit-results.json",
     "audits/v0.5.0/audit-report.md",
     "audits/v0.5.0/exceptions.md",
+    "audits/v0.6.0/audit-plan.md",
+    "audits/v0.6.0/audit-results.json",
+    "audits/v0.6.0/audit-report.md",
+    "audits/v0.6.0/exceptions.md",
+    "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
+    "assessments/v0.6.0/oko-change-ledger.json",
+    "paper/citation-chain-log-v0.6.0.md",
+    "paper/literature-support-audit-v0.6.0.json",
+    "paper/literature-support-audit-v0.6.0.md",
+    "scripts/validate_v060_adjudication.py",
+    "scripts/validate_literature_support.py",
     "paper/claim-crosswalk.md",
     "paper/scientistone-artifact-pressure-test.md",
     ".github/pull_request_template.md",
@@ -244,6 +264,10 @@ def validate_public_case_schemas(failures: list[str]) -> None:
         if missing:
             fail(f"unknown source references in {relative}: {', '.join(missing)}", failures)
 
+    current = json.loads((ROOT / "assessments/v0.6.0/TAE-PUB-001-oko-1983.json").read_text(encoding="utf-8"))
+    for error in assessment_validator.iter_errors(current):
+        fail(f"v0.6 Oko assessment schema failure: {error.message}", failures)
+
 
 def validate_packet_hashes(failures: list[str]) -> None:
     index = json.loads(
@@ -315,9 +339,9 @@ def validate_case_interactions(failures: list[str]) -> None:
         data = json.loads((ROOT / relative / "assessment.json").read_text(encoding="utf-8"))
         assessments[data["case_id"]] = data
 
-    oko = assessments["TAE-PUB-001"]["practical_control"]
-    for field in ("access", "authority", "feasibility", "exercise", "effect"):
-        if oko[field]["state"] != "supported":
+    oko = json.loads((ROOT / "assessments/v0.6.0/TAE-PUB-001-oko-1983.json").read_text(encoding="utf-8"))["practical_control"]
+    for field in ("access", "comprehension", "authority", "feasibility", "exercise", "effect"):
+        if oko[field]["state"] != "partially_supported":
             fail(f"TAE-PUB-001 interaction mismatch: {field}", failures)
 
     tornado = assessments["TAE-PUB-002"]["practical_control"]
@@ -337,7 +361,7 @@ def validate_case_interactions(failures: list[str]) -> None:
 
 def validate_release_manifest(failures: list[str]) -> None:
     manifest = json.loads(
-        (ROOT / "release/v0.5.0-manifest.json").read_text(encoding="utf-8")
+        (ROOT / "release/v0.6.0-manifest.json").read_text(encoding="utf-8")
     )
     if manifest.get("version") != REPOSITORY_VERSION:
         fail("release manifest version mismatch", failures)
@@ -375,7 +399,7 @@ def validate_figure_set(failures: list[str]) -> str:
     identifiers = [row.get("figure_id") for row in figures]
     stubs = [row.get("file_stub") for row in figures]
     expected_identifiers = ["FIG-1", "FIG-2", "FIG-3", "FIG-4", "FIG-A1", "FIG-A2"]
-    if register.get("version") != "0.1.0" or register.get("source_release") != PUBLIC_CASE_VERSION:
+    if register.get("version") != REPOSITORY_VERSION or register.get("source_release") != REPOSITORY_VERSION:
         fail("figure register version or source release mismatch", failures)
     if identifiers != expected_identifiers:
         fail(f"figure register identifier mismatch: {identifiers}", failures)
@@ -426,6 +450,28 @@ def validate_coe_figure(failures: list[str]) -> str:
     return result.stdout.strip()
 
 
+def validate_adjudication(failures: list[str]) -> str:
+    result = subprocess.run(
+        [sys.executable, "scripts/validate_v060_adjudication.py"],
+        cwd=ROOT, text=True, capture_output=True, check=False,
+    )
+    if result.returncode != 0:
+        fail(f"v0.6 adjudication failed: {(result.stdout + result.stderr).strip()}", failures)
+        return ""
+    return result.stdout.strip()
+
+
+def validate_literature(failures: list[str]) -> str:
+    result = subprocess.run(
+        [sys.executable, "scripts/validate_literature_support.py"],
+        cwd=ROOT, text=True, capture_output=True, check=False,
+    )
+    if result.returncode != 0:
+        fail(f"literature-support audit failed: {(result.stdout + result.stderr).strip()}", failures)
+        return ""
+    return result.stdout.strip()
+
+
 def main() -> int:
     failures: list[str] = []
     validate_required_files(failures)
@@ -442,6 +488,8 @@ def main() -> int:
     figure_result = validate_figure_set(failures)
     coe_result = validate_coe_audit(failures)
     coe_figure_result = validate_coe_figure(failures)
+    adjudication_result = validate_adjudication(failures)
+    literature_result = validate_literature(failures)
 
     if failures:
         for failure in failures:
@@ -457,6 +505,10 @@ def main() -> int:
         print(coe_result)
     if coe_figure_result:
         print(coe_figure_result)
+    if adjudication_result:
+        print(adjudication_result)
+    if literature_result:
+        print(literature_result)
     print("repository validation: PASS")
     return 0
 
