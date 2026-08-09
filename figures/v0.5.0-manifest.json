@@ -33,7 +33,7 @@
     {
       "path": "evidence/claim-evidence-map.json",
       "bytes": 37176,
-      "sha256": "362875333b332af8af0a6d34bbe5aa846f15f74180504f641795e2064baf2544"
+      "sha256": "1c43b53f5bd80674a5e03a0cbd4b48b88b336aa7e93730873921d72af0689752"
     },
     {
       "path": "audits/v0.5.0/audit-results.json",

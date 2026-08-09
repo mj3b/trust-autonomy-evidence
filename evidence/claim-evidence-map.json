@@ -174,7 +174,7 @@
       "status": "supported",
       "verification_rule": "The validator must contain executable checks for each named internal property and complete successfully for the committed artifacts.",
       "evidence": [
-        {"evidence_id": "C08-METHOD", "path": "reports/figure-methods.md", "locator_type": "markdown_heading", "locator": "## Reproducibility check", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "41ddebe562d6ad92050011b173b84f71c1be515cccb77599998a4606a62a7b64", "content_review": "recorded"},
+        {"evidence_id": "C08-METHOD", "path": "reports/figure-methods.md", "locator_type": "markdown_heading", "locator": "## Reproducibility check", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "7e667dbd16b53b0c6feb4e9d2a495e3197f79cff5299b85d0efec3dfa0cf1002", "content_review": "recorded"},
         {"evidence_id": "C08-IMPLEMENTATION", "path": "scripts/validate_repository.py", "locator_type": "text_marker", "locator": "validate_case_interactions", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "aebea4bce6bcbb4ef6269a6bfdaa126fe990726aaeba2758ee5317dcf08c5608", "content_review": "recorded"}
       ],
       "fitness": {
@@ -201,7 +201,7 @@
       "verification_rule": "Every dependent selection, state, missing-data, validation, and protocol-consistency claim must be conclusion-eligible.",
       "evidence": [
         {"evidence_id": "C09-REPORT", "path": "reports/public-case-reconstruction-v0.3.0.md", "locator_type": "markdown_heading", "locator": "## Cross-case comparison", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "6c2acc2ba62bb78b82405bcb5363ae09e6247313e175324b7399d0f73ce00409", "content_review": "recorded"},
-        {"evidence_id": "C09-BLOCKER", "path": "paper/review-record-pr11.md", "locator_type": "text_marker", "locator": "PAPER-BLOCKER-01", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "40720c7987a3a1084a75de15f6c2c0545b16faded7b9032f50d6c78038c0a783", "content_review": "recorded"}
+        {"evidence_id": "C09-BLOCKER", "path": "paper/review-record-pr11.md", "locator_type": "text_marker", "locator": "PAPER-BLOCKER-01", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e8af6f366ce06a9a6998f57873414a2d86753c6b4e13249cc0b76344eac829a3", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The report and review record directly address the proposed conclusion."},
@@ -226,7 +226,7 @@
       "status": "supported",
       "verification_rule": "The case-set boundary and protocol must exclude each named estimate from the design.",
       "evidence": [
-        {"evidence_id": "C11-BOUNDARY", "path": "cases/README.md", "locator_type": "text_marker", "locator": "They do not tell us:", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "119ff57de2b8a53681382365c696f4cc70d06fce41a5f1b83ae84159e2b6ef06", "content_review": "recorded"},
+        {"evidence_id": "C11-BOUNDARY", "path": "cases/README.md", "locator_type": "text_marker", "locator": "They do not tell us:", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "19803df1a676f7908554eb890b7de7af11a6f9839d1f94794023c2ebce5adc51", "content_review": "recorded"},
         {"evidence_id": "C11-LIMITS", "path": "LIMITATIONS.md", "locator_type": "text_marker", "locator": "The repository has no completed multi-case reliability study", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "7bf9903fb8e10ea0ce4b412ceebce27b6a31b0e127605c9e0a15d32985755948", "content_review": "recorded"}
       ],
       "fitness": {
@@ -253,7 +253,7 @@
       "verification_rule": "The source manifest must identify the retrospective dates and list the unlocated contemporaneous records.",
       "evidence": [
         {"evidence_id": "C14-SOURCES", "path": "cases/TAE-PUB-001-oko-1983/source-manifest.json", "locator_type": "text_marker", "locator": "Soviet command logs, the official incident record", "role": "source", "source_id": "TAE-PUB-001", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c117b8d80dcb5421bdc9e8990e22f80c97908c68d0d13f33b87b911e9a95784c", "content_review": "recorded"},
-        {"evidence_id": "C14-REVIEW", "path": "paper/review-record-pr11.md", "locator_type": "markdown_heading", "locator": "## Evidence behind the open blocker", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "40720c7987a3a1084a75de15f6c2c0545b16faded7b9032f50d6c78038c0a783", "content_review": "recorded"}
+        {"evidence_id": "C14-REVIEW", "path": "paper/review-record-pr11.md", "locator_type": "markdown_heading", "locator": "## Evidence behind the open blocker", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e8af6f366ce06a9a6998f57873414a2d86753c6b4e13249cc0b76344eac829a3", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The manifest directly records the dates and unavailable records."},

@@ -34,4 +34,3 @@ Synthetic or simulated additions must identify which properties are constructed 
 ## Privacy and authority
 
 Do not publish personal data, confidential records, security-sensitive details, or institutionally restricted material without documented authority. A redacted case must identify how redaction affects the assessment.
-

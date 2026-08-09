@@ -61,7 +61,7 @@
     {
       "path": "evidence/claim-evidence-map.json",
       "bytes": 37176,
-      "sha256": "362875333b332af8af0a6d34bbe5aa846f15f74180504f641795e2064baf2544"
+      "sha256": "1c43b53f5bd80674a5e03a0cbd4b48b88b336aa7e93730873921d72af0689752"
     },
     {
       "path": "evidence/research-lineage.json",
@@ -146,7 +146,7 @@
     {
       "path": "figures/v0.5.0-manifest.json",
       "bytes": 1376,
-      "sha256": "c81b071cb6f528300cb54f88ba15d16bd6ba1c8502faca027df41c4367104f55"
+      "sha256": "ea046219a46b80e0d4b4a6f29d33c111b49c7796351f7ad5504717f0e8d7396b"
     },
     {
       "path": "reports/claim-evidence-figure-methods-v0.5.0.md",
@@ -210,8 +210,8 @@
     },
     {
       "path": "paper/review-record-pr11.md",
-      "bytes": 5570,
-      "sha256": "40720c7987a3a1084a75de15f6c2c0545b16faded7b9032f50d6c78038c0a783"
+      "bytes": 5569,
+      "sha256": "e8af6f366ce06a9a6998f57873414a2d86753c6b4e13249cc0b76344eac829a3"
     },
     {
       "path": "requirements-dev.txt",
