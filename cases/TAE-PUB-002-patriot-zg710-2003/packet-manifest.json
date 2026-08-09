@@ -1,0 +1,11 @@
+{
+  "version": "0.3.0",
+  "case_id": "TAE-PUB-002",
+  "protocol_freeze_commit": "180ddda1d70f0ee36faaf8875e839bbc99cbbec2",
+  "assessment_contract": "schemas/public-case-assessment.schema.json@0.3.0",
+  "artifacts": {
+    "case-report.md": "39799fde17aaf693f57dbd5006f5179e1508993ea2ee3442c8f703c5fcd5f0e8",
+    "source-manifest.json": "b9325354cf78c2b1fafaae1adb969de75b56b0ffd4902e442eccb3bee65570b3",
+    "assessment.json": "e0a06afec1dd0220d47414ecf07f14a68a2207bda7f0c1a8019737d8384bf41e"
+  }
+}
