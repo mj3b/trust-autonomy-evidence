@@ -6,8 +6,8 @@
   "additionalProperties": false,
   "required": ["version", "audit_id", "audit_date", "scope", "status", "checks", "negative_controls", "exceptions", "claim_results"],
   "properties": {
-    "version": {"const": "0.5.0"},
-    "audit_id": {"const": "TAE-COE-AUDIT-V0.5.0"},
+    "version": {"const": "0.6.0"},
+    "audit_id": {"const": "TAE-COE-AUDIT-V0.6.0"},
     "audit_date": {"const": "2026-08-09"},
     "scope": {"type": "string", "minLength": 1},
     "status": {"enum": ["PASS", "PASS_WITH_EXCEPTIONS", "FAIL"]},

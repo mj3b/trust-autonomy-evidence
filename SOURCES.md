@@ -17,8 +17,12 @@ The source register identifies the contribution each source makes to the model. 
 | [METR, Measuring AI Ability to Complete Long Tasks](https://metr.org/time-horizons/) | Defines task difficulty using human completion time and documents domain and interpretation limits |
 | [Anthropic Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy) | Provides an example of capability thresholds, safeguards, risk reports, external review, monitoring, incidents, and revision |
 | [OpenAI Preparedness Framework](https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf) | Provides an example of capability tracking, safeguard evaluation, risk thresholds, and deployment decision processes |
-| [ScientistOne: Towards Human-Level Autonomous Research via Chain-of-Evidence](https://doi.org/10.48550/arXiv.2605.26340) | Supplies the prior architecture for claim traceability and the four CoE Integrity Audit checks adapted in v0.5.0 |
+| [ScientistOne: Towards Human-Level Autonomous Research via Chain-of-Evidence](https://doi.org/10.48550/arXiv.2605.26340) | Supplies the prior architecture for claim traceability and the four CoE Integrity Audit checks adapted in v0.5.0 and carried into v0.6.0 |
 | [ScientistOne generated artifacts](https://github.com/scientist-one/generated-artifacts) | Makes generated papers and solution code available for source-level checks of scores, references, run types, and method-code alignment |
+| [Langer, Baum, and Schlicker, Effective Human Oversight](https://doi.org/10.1007/s11023-024-09701-0) | Separates oversight sensitivity from response tendency and identifies task, system, and person factors |
+| [Langer, Lazar, and Baum, Testing Human Oversight Compliance](https://doi.org/10.1007/978-3-032-07132-3_11) | Explains limits of checklist compliance and context-sensitive empirical oversight testing |
+| [Lam et al., Assurance Audits of Algorithmic Systems](https://doi.org/10.1145/3630106.3658957) | Supplies a criterion-audit framework, external assurance model, scope discipline, and audit reporting structure |
+| [Gaube et al., Keeping an Eye on AI](https://doi.org/10.48550/arXiv.2605.16278) | Supplies a broad effective-oversight definition, architecture, process model, and documentation template |
 
 ## Public-case sources
 

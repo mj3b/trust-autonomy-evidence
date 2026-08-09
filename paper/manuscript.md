@@ -4,15 +4,15 @@
 
 **Author:** Mark Julius Banasihan  
 **ORCID:** [0009-0001-8121-2878](https://orcid.org/0009-0001-8121-2878)  
-**Status:** Introduction and related-work draft, v0.2
+**Status:** Methods and results draft, v0.3
 
 ## Abstract
 
-Institutions often treat a named human reviewer or approval step as evidence that an automated or autonomous system remains under human control. That inference can fail when the designated person lacks timely information, comprehension, authority, a feasible opportunity to challenge the system, or the ability to affect the outcome. This paper develops a frozen, evidence-traceable procedure for representing formal authority, practical control, and unresolved evidence in bounded public incident records. The protocol fixed the evidence cutoff, candidate collections, search vocabulary, eligibility rules, screening order, three selection strata, and missing-data treatment before candidate screening. It then assembled three versioned historical case packets with claim-level provenance, categorical evidence states, and a chain from information access through effect. The released v0.3.0 assessments record formal authority in all three packets, practical force through effect in Oko, unsupported practical-control conditions in ZG710, and indeterminate conditions in F/A-18C. These cases demonstrate execution under three contrastive conditions selected by design; they do not independently validate discriminative performance. One consistency question remains open. Oko's supported states rely on retrospective participant accounts. The practical-control protocol defines supported evidence as direct and contemporaneous. The manuscript therefore reports the released states as procedure outputs pending a versioned resolution. The present contribution is a traceable, executable evidence procedure. Three retrospective, single-assessor cases supply no population estimate, causal validation, independent-reliability result, or transfer claim for current learned systems.
+Institutions often treat a named human reviewer or approval step as evidence that an automated or autonomous system remains under human control. That inference can fail when the designated person lacks timely information, comprehension, authority, a feasible opportunity to challenge the system, or the ability to affect the outcome. This paper develops a frozen, evidence-traceable procedure for representing formal authority, practical control, and unresolved evidence in bounded public incident records. The protocol fixed the evidence cutoff, candidate collections, search vocabulary, eligibility rules, screening order, three selection strata, and missing-data treatment before candidate screening. It assembled three versioned historical case packets with claim-level provenance, categorical evidence states, and a chain from information access through effect. A preregistered v0.6 adjudication applied the existing direct-and-contemporaneous rule to the Oko packet and reclassified access, comprehension, authority, feasibility, exercise, and effect from supported to partially supported. The current assessment set therefore records partial support across those six Oko stages, supported authority with unsupported practical conditions in ZG710, and supported authority with unresolved practical conditions in F/A-18C. The three contrastive cases demonstrate procedure execution and no independent test of discrimination. The contribution is a traceable, executable evidence procedure with a visible correction path. Three retrospective, single-assessor cases supply no population estimate, causal validation, independent-reliability result, or transfer claim for current learned systems.
 
-## Audit gate
+## Resolved evidence decision
 
-`PAPER-BLOCKER-01` concerns the Oko contemporaneity mismatch recorded in the [PR #11 review](review-record-pr11.md). Introduction, related work, and method development may continue. Final empirical claims remain provisional where they depend on Oko meeting the present supported-state definition.
+`PAPER-BLOCKER-01` identified a mismatch between Oko's released v0.3 supported states and the protocol's direct-and-contemporaneous evidence rule. The [v0.6 adjudication protocol](../protocols/oko-evidence-adjudication-v0.6.0.md) was frozen before reassessment. The resulting [change ledger](../assessments/v0.6.0/oko-change-ledger.json) records six transitions to partially supported and preserves v0.3.0 as release history. Missing contemporaneous records remain a limitation.
 
 ## 1. Introduction
 
@@ -30,7 +30,7 @@ Four research streams answer parts of that question. Meaningful-human-control sc
 
 The closest prior work narrows the remaining contribution. Dekker already provides a retrospective method for reconstructing human contributions inside the event sequence and controlling hindsight [@dekker2002reconstructing]. McDermid ties effective intervention to time, independent knowledge, skills, and assurance [@mcdermid2019control]. Pittaras and McGregor classify possible failure causes from incomplete open-source AI incidents [@pittaras2023taxonomic]. Leung et al. join control boundaries, reconstructed state, and claim-grade evidence for agentic AI losses [@leung2026cer]. Ledjaki et al. propose prompt-level chain of custody and replay [@ledjaki2026prompt].
 
-These sources rule out broad originality claims for control conditions, public-record reconstruction, incident evidence, provenance, or assurance. The remaining hypothesis concerns their combination in one procedure: protocol fixation before screening, a preserved selection path, versioned public evidence packets, claim-level provenance, explicit indeterminate states, a chain from access through effect, and executable artifact checks. The [novelty audit](novelty-audit.md) treats that hypothesis as provisional until database searches and citation chaining are complete.
+These sources rule out broad originality claims for control conditions, public-record reconstruction, incident evidence, provenance, or assurance. Langer, Baum, and Schlicker separate oversight sensitivity from response tendency [@langer2024signal]. Langer, Lazar, and Baum show why checklist compliance may fail to establish actual oversight performance [@langer2025testing]. Lam et al. formalize assurance audits for algorithmic systems [@lam2024assurance]. Gaube et al. supply a wider architecture, process, and documentation framework for effective human oversight [@gaube2026oversight]. The remaining hypothesis concerns one integration: protocol fixation before screening, a preserved selection path, versioned public evidence packets, explicit missingness, a practical-control chain, versioned correction, and executable artifact checks. The [novelty audit](novelty-audit.md) treats that hypothesis as provisional until institutional database searches and full citation chaining are complete.
 
 ### 1.3 Research question and contribution
 
@@ -124,7 +124,11 @@ Explain why missing evidence is indeterminate unless the packet establishes that
 
 Describe schema checks, packet hashes, selection invariants, interaction checks, mutation tests, figure rebuilds, and release manifests. Separate repeatable artifact transformations from independent reproduction of assessment judgments.
 
-Describe the v0.5 Chain-of-Evidence adaptation, including exact locators, integrity states, human support attestations, five evidence-fitness dimensions, dependency closure, run-type labels, and bounded-language declarations. Report the four adapted ScientistOne checks and the repository-specific fitness and closure check. State that the audit covers 14 declared material claims and not every manuscript sentence.
+Describe the v0.6 Chain-of-Evidence adaptation, including exact locators, integrity states, human support attestations, five evidence-fitness dimensions, dependency closure, run-type labels, and bounded-language declarations. Report the four adapted ScientistOne checks and the repository-specific fitness and closure check. State that the audit covers the declared material claims and a separate sentence-level literature-support register.
+
+### 3.10 Frozen Oko adjudication
+
+Report the adjudication question, frozen evidence universe, cutoff, stage rules, dependency rule, and prereassessment freeze commit. Explain that retrospective testimony directly supports what a participant later reported and does not become a contemporaneous event record. Preserve the v0.3.0 assessment and publish each v0.6 transition in a separate ledger.
 
 **Figure:** Figure A3, claim-evidence integrity matrix.
 
@@ -136,7 +140,7 @@ Report 928 preserved candidate records, five screened candidates, two exclusions
 
 ### 4.2 Oko, 1983
 
-Report the released assessment states for the alert, contextual challenge, ground-radar check, false-alarm report, pre-action intervention, and effect. State that these classifications depend on retrospective participant accounts. Preserve the open contemporaneity mismatch, source-completeness limit, and counterfactual boundary.
+Report both versions. The v0.3.0 release classified the six stages from access through effect as supported. The frozen v0.6 adjudication classifies all six as partially supported because the packet contains retrospective participant accounts and no located contemporaneous command log or official incident record. The adjudication resolves the protocol mismatch through reclassification. It does not fill the historical record or establish the sole cause of the ultimate outcome.
 
 ### 4.3 Patriot ZG710, 2003
 
@@ -152,7 +156,7 @@ Compare access, comprehension, authority, feasible challenge, exercised challeng
 
 **Figure:** Figure 2, practical-control chain.
 
-**Bounded released result:** Authority is classified as supported across the three packets. The remaining links and protective effect receive different states. This comparison reports procedure output under contrastive selection.
+**Bounded current result:** Authority is partially supported in Oko and supported in both Patriot packets. The remaining links and protective effect receive different states. The comparison reports procedure output under contrastive selection.
 
 ### 4.6 Decision paths and trust-evidence states
 
@@ -184,7 +188,7 @@ Discuss possible application to contemporary systems as a future research direct
 
 ## 6. Limitations
 
-Address purposeful selection, alignment between the strata and headline contrasts, stopping after five screened candidates, two cases from one system family and operating period, retrospective public evidence, source dependence, classified and unavailable records, remote-only source content, the Oko contemporaneity mismatch, single assessment, no inter-rater evidence, no causal estimate, and no present-system transfer claim.
+Address purposeful selection, alignment between the strata and headline contrasts, stopping after five screened candidates, two cases from one system family and operating period, retrospective public evidence, source dependence, classified and unavailable records, remote-only source content, the remaining Oko evidence gap, single assessment, no inter-rater evidence, no causal estimate, incomplete institutional database searching, and no present-system transfer claim.
 
 ## 7. Institutional implications
 
@@ -196,7 +200,7 @@ Return to the decision problem. State only that the method produced traceable, b
 
 ## Data and materials availability
 
-Link the v0.4.0 [Zenodo archive](https://doi.org/10.5281/zenodo.21844706), [GitHub release](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.4.0), packet index, figure data, and release manifests. The all-versions DOI is `10.5281/zenodo.21841127`.
+Link the v0.5.0 [Zenodo archive](https://doi.org/10.5281/zenodo.21863464), the versioned GitHub releases, packet index, assessment ledger, figure data, audit outputs, and release manifests. The all-versions DOI is `10.5281/zenodo.21841127`. The exact v0.6.0 DOI will be added after Zenodo archives the GitHub release.
 
 ## Ethics and publication authority
 

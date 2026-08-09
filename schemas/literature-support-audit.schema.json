@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mj3b/trust-autonomy-evidence/schemas/literature-support-audit.schema.json",
+  "title": "Manuscript literature-support audit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "audit_id", "audit_date", "manuscript", "scope", "entries", "limits"],
+  "properties": {
+    "version": {"const": "0.6.0"},
+    "audit_id": {"const": "TAE-LIT-SUPPORT-V0.6.0"},
+    "audit_date": {"const": "2026-08-09"},
+    "manuscript": {"const": "paper/manuscript.md"},
+    "scope": {"type": "string", "minLength": 1},
+    "entries": {"type": "array", "minItems": 16, "items": {"$ref": "#/$defs/entry"}},
+    "limits": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "locator", "claim_summary", "citation_keys", "review_basis", "support_state", "scope_note"],
+      "properties": {
+        "claim_id": {"type": "string", "pattern": "^LIT-S[0-9]{2}$"},
+        "locator": {"type": "string", "minLength": 12},
+        "claim_summary": {"type": "string", "minLength": 1},
+        "citation_keys": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^[A-Za-z0-9]+$"}},
+        "review_basis": {"enum": ["full_text", "abstract", "metadata", "public_artifact", "mixed"]},
+        "support_state": {"enum": ["pass", "partial", "fail", "pending"]},
+        "scope_note": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

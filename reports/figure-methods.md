@@ -2,9 +2,9 @@
 
 ## Result
 
-Six figures expose the observations and transformations behind the repository's public-case and mutation findings. Four figures belong in a paper's main text. Figures A1 and A2 document internal contract behavior and artifact lineage in an appendix.
+Six figures expose the observations and transformations behind the repository's public-case and mutation findings. Four figures belong in a paper's main text. Figures A1 and A2 document internal contract behavior and artifact lineage in an appendix. Figure A3 separately reports the v0.6 claim-evidence audit.
 
-The figure set is version 0.1.0 and derives from the v0.3.0 public-case release and v0.2.0 solo-validation artifacts. It changes no assessment state, case boundary, source reference, packet hash, or release claim.
+The current figure set is version 0.6.0. It combines the v0.6 Oko assessment with the preserved v0.3 Patriot assessments and v0.2 solo-validation artifacts. The Oko change is traceable to the frozen adjudication and ledger.
 
 ## Design rule
 
@@ -32,17 +32,17 @@ The AI Incident Database input contained 1,607 incident records and 7,452 report
 
 ### Figure 2. Practical-control chain
 
-Twenty-seven declared states compare nine practical-control propositions across three purposefully selected public cases. Formal authority is supported in all three cases. Oko supports the pre-action chain through protective effect. Patriot ZG710 supports authority while comprehension, feasibility, exercise, and effect are unsupported. Patriot F/A-18C supports authority while comprehension, feasibility, and exercise remain indeterminate because the public record omits timing, displays, and complete operator records. Letters identify categorical states: S, supported; PS, partially supported; U, unsupported; I, indeterminate; O, outside scope.
+Twenty-seven declared states compare nine practical-control propositions across three purposefully selected public cases. Oko is partially supported across the six stages from access through effect under the v0.6 adjudication. Patriot ZG710 supports authority while comprehension, feasibility, exercise, and effect are unsupported. Patriot F/A-18C supports authority while comprehension, feasibility, and exercise remain indeterminate because the public record omits timing, displays, and complete operator records. Letters identify categorical states: S, supported; PS, partially supported; U, unsupported; I, indeterminate; O, outside scope.
 
 #### Derivation of the central lesson
 
 The central lesson is derived through a declared comparison across the pre-action chain:
 
 1. Extract the six pre-action states for each case: access, comprehension, authority, feasibility, exercise, and effect.
-2. Identify the common state. Authority is supported in all three cases.
-3. Compare the remaining five states with protective effect. Oko supports all five. ZG710 records partial access and unsupported comprehension, feasibility, exercise, and effect. F/A-18C records partial access, unresolved comprehension, feasibility, and exercise, and an unsupported effect.
+2. Compare authority. It is partially supported in Oko and supported in both Patriot packets.
+3. Compare the remaining five states with protective effect. Oko records partial support across all five. ZG710 records partial access and unsupported comprehension, feasibility, exercise, and effect. F/A-18C records partial access, unresolved comprehension, feasibility, and exercise, and an unsupported effect.
 4. Preserve unsupported and indeterminate as different findings. ZG710 contains evidence against several conditions. F/A-18C lacks enough public evidence to decide several conditions.
-5. State the narrow inference. Formal authority alone does not establish practical control in these packets. Practical control requires an evidence path connecting information, understanding, permission, opportunity, action, and effect.
+5. State the narrow inference. Evidence of authority does not determine the other practical-control stages in these packets. Each stage requires its own evidence path connecting information, understanding, permission, opportunity, action, and effect.
 
 This derivation compares declared states within three reconstructed cases. It does not isolate a causal effect, estimate a population relationship, or establish that every condition has equal weight in another institutional setting.
 

@@ -21,6 +21,10 @@ This is a search result, not a novelty finding.
 | Ledjaki et al. (2026), L22 | ACM abstract and metadata inspected | Tamper-resistant identifiers, replay, investigation, and chain of custody | Prompt forensics without institutional authority assessment; full-text review pending |
 | McGregor (2021), L23 | Proceedings abstract and metadata inspected | AI Incident Database purpose, architecture, and research uses | Incident collection without claim-level practical-control assessment |
 | Meng et al. (2026), L24 | Paper and public generated-artifact repository inspected | Chain-of-Evidence, claim traceability by construction, score and reference verification, specification checks, and method-code alignment | Autonomous research focus without practical-human-control reconstruction or this repository's five fitness dimensions and dependency-closure rule |
+| Langer, Baum, and Schlicker (2024), L25 | Abstract and publisher metadata inspected | Oversight sensitivity, response bias, task factors, system factors, and person factors | Performance model without frozen retrospective evidence packets |
+| Langer, Lazar, and Baum (2025), L26 | Institutional full text and DOI metadata inspected | Limits of checklist compliance and context-sensitive empirical oversight testing | Regulatory testing analysis without versioned case adjudication |
+| Lam et al. (2024), L27 | Proceedings paper and DOI metadata inspected | Criterion audits, assurance scope, audit reporting, and independence | System assurance audit without the practical-control chain or historical packet correction |
+| Gaube et al. (2026), L28 | arXiv abstract and metadata inspected | Working definition, architecture, process, documentation template, and open questions for effective oversight | Broad oversight framework without frozen contrastive selection, retrospective packets, and dependency closure |
 
 ## Contribution that remains defensible
 
@@ -29,7 +33,7 @@ The paper can position its contribution as an integration and domain-adaptation 
 - the case strata anticipate the three headline contrasts;
 - one assessor designed and applied the procedure;
 - some source content remains remote-only;
-- the Oko classification has an unresolved contemporaneity mismatch;
+- the Oko correction has one assessor and depends on an incomplete historical record;
 - independent reliability and outcome validity have not been tested.
 
 ## Rejection test
@@ -41,8 +45,9 @@ The novelty hypothesis fails if a prior source supplies all of these elements in
 3. versioned public evidence packets with source-level provenance;
 4. explicit supported, unsupported, and indeterminate evidence states;
 5. a chain from information access through human authority, feasible challenge, action, and effect;
-6. executable checks over the released research artifacts.
-7. claim-specific evidence-fitness and conclusion-dependency decisions.
+6. executable checks over the released research artifacts;
+7. claim-specific evidence-fitness and conclusion-dependency decisions;
+8. a prereassessment freeze and versioned correction ledger that preserves the earlier release.
 
 Substantial equivalence also defeats the claim when terminology differs. The audit must compare mechanisms, not keywords alone.
 
@@ -52,4 +57,4 @@ The present review supports this provisional sentence:
 
 > Existing research explains why formal oversight may lack practical force, how investigators can reconstruct human contributions and sociotechnical failure, which records AI incidents require, and how research and assurance claims can be tied to evidence and checked against implementation. This paper examines one governance-specific adaptation: a frozen public-case procedure with explicit missingness, claim-specific evidence fitness, dependency closure, and executable artifact checks.
 
-The word `novel` remains prohibited in the manuscript until the documented database and citation-chaining work is complete.
+The word `novel` remains prohibited in the manuscript until the documented institutional database and full citation-chaining work is complete. The v0.6 citation sample and sentence-level support audit narrow uncertainty and do not remove this restriction.

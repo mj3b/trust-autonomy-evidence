@@ -20,7 +20,7 @@
     "limitations"
   ],
   "properties": {
-    "version": {"const": "0.3.0"},
+    "version": {"enum": ["0.3.0", "0.6.0"]},
     "case_id": {"type": "string", "pattern": "^TAE-PUB-[0-9]{3}$"},
     "title": {"type": "string", "minLength": 1},
     "assessment_date": {"type": "string", "format": "date"},

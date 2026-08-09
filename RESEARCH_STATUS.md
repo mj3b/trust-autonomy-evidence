@@ -1,6 +1,6 @@
 # Research Status
 
-**Version:** 0.5.0
+**Version:** 0.6.0
 
 **Status:** Working research repository
 
@@ -20,10 +20,11 @@
 | Public-case packets | Three source manifests, assessments, reports, and packet hashes | Demonstrated for selected public evidence | Independent reconstruction tests source sufficiency and classification stability |
 | Public-case interaction checks | Successful intervention, authority without practical force, and missing-evidence boundary | Executable for the three included packets | New case families test additional control interactions |
 | Publication figure set | Four main figures, two appendix figures, six derived CSV files, SVG and PNG outputs, and a derived-data and artifact-integrity check | Released in v0.4.0 | A paper draft uses the registered captions and preserves every interpretation boundary |
-| Claim-evidence integrity | Fourteen mapped claims, five gates, five integrity checks, nine negative controls, and three published exceptions | Demonstrated for the declared v0.5.0 scope | Expand sentence-level support review and obtain an independent reconstruction |
+| Claim-evidence integrity | Fifteen mapped claims, five gates, five integrity checks, nine negative controls, and two published exceptions | Demonstrated for the declared v0.6.0 scope | Obtain an independent reconstruction and complete institutional database searching |
 | Research lineage | Human and software agents, activities, entities, relations, and AI-assistance log | Published with PROV-O-compatible concepts | Add formal PROV-O or RO-Crate serialization if needed by a publication venue |
-| Claim-evidence figure | One categorical appendix matrix, derived CSV, SVG, PNG, specification, and manifest | Demonstrated for the v0.5.0 audit result | The manuscript uses the registered caption and preserves its no-score boundary |
-| Practical human control paper | Charter, claim register, 24-source working matrix, PR #11 review, novelty audit, claim crosswalk, ScientistOne pressure test, and drafted introduction and related work | Unreleased manuscript work | Resolve `PAPER-BLOCKER-01`, complete database searches, and finish the methods draft |
+| Claim-evidence figure | One categorical appendix matrix, derived CSV, SVG, PNG, specification, and manifest | Demonstrated for the v0.6.0 audit result | The manuscript uses the registered caption and preserves its no-score boundary |
+| Oko evidence adjudication | Frozen plan, fixed packet, six reclassifications, change ledger, and six negative controls | Demonstrated for the v0.6.0 decision | Independent review tests the judgment and new eligible evidence triggers a versioned reassessment |
+| Practical human control paper | Charter, claim register, 28-source working matrix, PR #11 review, citation sample, sentence-level support audit, claim crosswalk, and drafted methods and results | Unreleased manuscript work | Complete institutional database searches, discussion, ethics review, and venue selection |
 | Repository validation | Pinned schema dependency, executable script, and CI workflow | Executable for declared repository checks | CI passes on the published commit |
 | Solo-validation suite | 12 synthetic cases, 252 oracle comparisons, 12 mutation tests, and three invariance tests | Demonstrated for committed fixtures | New case families expose additional boundary and interaction failures |
 | Sealed oracle | SHA-256 manifest for cases, mutations, and expected classifications | Demonstrated for v0.2.0 artifacts | A later release preserves explicit migration and re-sealing records |
@@ -32,20 +33,18 @@
 
 ## Research phase
 
-Version 0.5.0 adds claim-level traceability, human support attestations, evidence-fitness judgments, dependency closure, research lineage, and an executable integrity audit. Its claims concern 14 declared material claims and nine prespecified corruptions. The audit result is `PASS_WITH_EXCEPTIONS`. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, source truth, and harm prevention remain unresolved.
+Version 0.6.0 applies the existing evidence rule to the frozen Oko packet and changes six current stages from supported to partially supported. Its integrity audit covers 15 material claims and detects nine prespecified corruptions. A separate adjudication validator detects six prespecified decision-record corruptions. The audit result is `PASS_WITH_EXCEPTIONS`. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, source truth, originality, and harm prevention remain unresolved.
 
-The paper workspace adds a manuscript control layer. The PR #11 pressure test found that contrastive selection prevents an independent discrimination claim and that Oko's retrospective sources do not plainly satisfy the practical-control protocol's contemporaneous-evidence definition. Version 0.5 converts that issue into a failed evidence-fitness gate and blocks dependent conclusions. The released v0.3.0 assessment remains unchanged. Preprint review remains blocked until the Oko mismatch receives a versioned resolution.
+The paper workspace now records the v0.6 Oko resolution and audits 16 material literature propositions in the current draft. The 28-source matrix includes ScientistOne, oversight-performance research, compliance-testing cautions, assurance-audit work, and a broad oversight architecture. Institutional database searching and full citation chaining remain open, so the manuscript makes no novelty claim. The released v0.3.0 assessment remains unchanged as version history.
 
 ## Next evidence gates
 
-1. Resolve `PAPER-BLOCKER-01` through a versioned protocol or assessment decision.
-2. Complete sentence-level support review for the paper's literature claims.
-3. Complete the paper's multidisciplinary database searches and citation chaining.
-4. Reproduce the five screening decisions from the preserved search output and source manifests.
-5. Add a new frozen case family that tests a different institution, sector, and system architecture.
-6. Add adversarial source perturbations involving dependent reports, altered timestamps, and missing logs.
-7. Run one clean-room implementation when an eligible reviewer becomes available.
-8. Test one prospective or realistically simulated decision in which a failed condition can stop or alter execution.
+1. Complete the paper's multidisciplinary database searches and full citation chaining.
+2. Draft the discussion, institutional implications, ethics basis, author contributions, and AI-assistance disclosure.
+3. Reproduce the five screening decisions from the preserved search output and source manifests.
+4. Add a new frozen case family that tests a different institution, sector, and system architecture.
+5. Run one clean-room implementation when an eligible reviewer becomes available.
+6. Test one prospective or realistically simulated decision in which a failed condition can stop or alter execution.
 
 ## Versioning rule
 

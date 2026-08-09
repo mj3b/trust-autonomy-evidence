@@ -6,7 +6,7 @@ This log records the searches used to test whether the proposed paper duplicates
 
 ## Current scope
 
-The 8 August 2026 session is an open-web pilot that used exact-phrase queries, publisher pages, proceedings pages, institutional repositories, and preprint records. It is not a database search. Search ranking, incomplete indexing, access restrictions, and query interpretation limit recall.
+The 8 and 9 August 2026 sessions used exact-phrase queries, publisher pages, proceedings pages, institutional repositories, preprint records, Crossref, and OpenAlex. They do not constitute a systematic database search. Search ranking, incomplete indexing, access restrictions, sampled citation chains, and query interpretation limit recall.
 
 ## Discovery queries
 
@@ -24,6 +24,11 @@ The 8 August 2026 session is an open-web pilot that used exact-phrase queries, p
 | Q10 | 2026-08-08 | Open web | `"claim-level provenance" AI incident` | Located adjacent provenance systems. No result used claim-level provenance to assess practical human control in a public incident packet. |
 | Q11 | 2026-08-08 | Publisher and index pages | Exact titles and DOI strings for eight pressure-test additions | Metadata checked for L16 through L23. Full-text review status is recorded in the novelty audit. |
 | Q12 | 2026-08-09 | arXiv and public GitHub artifacts | `Chain-of-Evidence ScientistOne integrity audit method code alignment` | Retained Meng et al. (2026) as L24 and inspected the public generated-papers and solution-code repository. |
+| Q13 | 2026-08-09 | Open web and Crossref | `effective human oversight AI evidence performance testing` | Retained L25 and L26. |
+| Q14 | 2026-08-09 | ACM and Crossref | `algorithmic assurance audit framework evidence criteria` | Retained L27. |
+| Q15 | 2026-08-09 | arXiv | `effective human oversight framework architecture process documentation` | Retained L28. |
+| Q16 | 2026-08-09 | OpenAlex | DOI searches for 12 declared seed works | Recorded index identifiers and counts in the [citation-chain log](citation-chain-log-v0.6.0.md). |
+| Q17 | 2026-08-09 | OpenAlex | Forward-citation samples for L01, L02, L10, L14, and L16 | Inspected five highly cited returned titles per seed. No sampled title disclosed the complete method combination. The sample cannot support a novelty finding. |
 
 ## Inclusion rule
 
@@ -41,4 +46,4 @@ Search results that only used the same words for unrelated technical tasks were 
 
 ## Work required before a novelty statement
 
-The next search cycle must record complete searches in Scopus or Web of Science, IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index. It must also complete backward and forward citation review for L01, L02, L04, L06, L10, L12, L14, L15, L16, L17, L19, and L21. Duplicate handling, exclusion reasons, inaccessible results, and full-text decisions must remain visible.
+The next search cycle must record complete searches in Scopus or Web of Science, IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index. It must also complete backward and forward citation review for the declared seed set. Duplicate handling, exclusion reasons, inaccessible results, and full-text decisions must remain visible. Until then, the manuscript may state its bounded integration and may not state a novelty finding.

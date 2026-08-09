@@ -1,0 +1,44 @@
+{
+  "version": "0.6.0",
+  "figure_id": "FIG-A3",
+  "hash_algorithm": "sha256",
+  "artifacts": [
+    {
+      "path": "figures/data/fig-a3-claim-evidence-integrity.csv",
+      "bytes": 756,
+      "sha256": "90fe3ce5827680243d24951d9b2315da87562a709eec95996acad8bc5a4d0bcb"
+    },
+    {
+      "path": "figures/generated/fig-a3-claim-evidence-integrity.png",
+      "bytes": 171491,
+      "sha256": "d96fa0c1aef20b9f227d9516c2d1766f854058d6821c0bef662e04e5f862c803"
+    },
+    {
+      "path": "figures/generated/fig-a3-claim-evidence-integrity.svg",
+      "bytes": 99242,
+      "sha256": "d431732bbb2cf0f0788b57c147ba33ba0d6b50cec3ec2973980858d6a315d7c6"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "analysis/build_claim_evidence_figure.py",
+      "bytes": 9859,
+      "sha256": "21b0a8eb876cdc3ca8739d873ddffe4fbacdb838315fd153ecfdd1e78289fdd0"
+    },
+    {
+      "path": "figures/specifications/claim-evidence-integrity.json",
+      "bytes": 1020,
+      "sha256": "e28e6d37999130e0c7c7c84b3604489ed9a67600dbc3b68df67eaf7c84f536c1"
+    },
+    {
+      "path": "evidence/claim-evidence-map.json",
+      "bytes": 40236,
+      "sha256": "1339da81914aab18f162fd5c6f7730c6081241bb0e50daf997a8956f3b8b632e"
+    },
+    {
+      "path": "audits/v0.6.0/audit-results.json",
+      "bytes": 7266,
+      "sha256": "0ed6016672d1d31c5c2b6c52576ce4303bf900bd731d60e09a367afac84748d2"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "version": "0.1.0",
-  "source_release": "0.3.0",
+  "version": "0.6.0",
+  "source_release": "0.6.0",
   "hash_algorithm": "sha256",
   "artifacts": [
     {
@@ -10,8 +10,8 @@
     },
     {
       "path": "figures/data/fig-2-practical-control-chain.csv",
-      "bytes": 2598,
-      "sha256": "fda745556f8b0186aed98a7598de36ffce3734f3e71037cdd2544bccd8c4d4ce"
+      "bytes": 2658,
+      "sha256": "1392a08160c1952a538272ed99965e875e43e0244999684c58712520a7453a83"
     },
     {
       "path": "figures/data/fig-3-decision-paths.csv",
@@ -40,18 +40,18 @@
     },
     {
       "path": "figures/generated/fig-1-selection-and-stopping.svg",
-      "bytes": 83315,
-      "sha256": "43188054b6e26e841683129919aecd8a0e8527d1e4ebc69e903582d5b7e7e8c0"
+      "bytes": 81775,
+      "sha256": "0c566823c74628fbb6e9ff691afea755a399b0ae2b8309737527f967b963b068"
     },
     {
       "path": "figures/generated/fig-2-practical-control-chain.png",
-      "bytes": 168092,
-      "sha256": "beae0b81f496a4f8f0ae7cd75063786051818d6dc222d32f62730b8ac3abfccc"
+      "bytes": 175743,
+      "sha256": "a46349a8e8debcda5376f6a5ded084ae84d7a06709f7d6e2cd661fe2ad1e2883"
     },
     {
       "path": "figures/generated/fig-2-practical-control-chain.svg",
-      "bytes": 78717,
-      "sha256": "db7596c2c90007f83014e6d8e466fbd9154a1f9b62ee8d52c34a0ddae131ae79"
+      "bytes": 81685,
+      "sha256": "13442485bb3d1f45380f68324119709e7664228689be3f2ddc8b91cd596adecd"
     },
     {
       "path": "figures/generated/fig-3-decision-paths.png",
@@ -60,18 +60,18 @@
     },
     {
       "path": "figures/generated/fig-3-decision-paths.svg",
-      "bytes": 124592,
-      "sha256": "94c37f8c6f1bcf35964aadf23a3254f2db3691dac68466ebaa99832d9197ec42"
+      "bytes": 122868,
+      "sha256": "5ea9af441a3788c7b3053be5f4d000c3d72b941dd3c9895d2ad9cf76142be919"
     },
     {
       "path": "figures/generated/fig-4-trust-evidence-states.png",
-      "bytes": 186986,
-      "sha256": "09a9227650139209dcde5f7ab5514b7732510f734cbfa35d410d4f21a26cc9bd"
+      "bytes": 194012,
+      "sha256": "490a17f48bc4944f036bcb52268e8c8c5f355912e3beeb7966dbdbef9946e774"
     },
     {
       "path": "figures/generated/fig-4-trust-evidence-states.svg",
-      "bytes": 84473,
-      "sha256": "747d586a27d4591fd1bd03d0a357ed010ee01a9cee00182c29c5a7e2ce519ed5"
+      "bytes": 88016,
+      "sha256": "0edc46c2f3e63b2b7e9b5cf04abd005139a5101a181930ff2ca3c477c6201f5e"
     },
     {
       "path": "figures/generated/fig-a1-mutation-response.png",
@@ -80,8 +80,8 @@
     },
     {
       "path": "figures/generated/fig-a1-mutation-response.svg",
-      "bytes": 78028,
-      "sha256": "c3a4a5edb169b75888cbafe49699d185efe2d64a33f205ec6a5a692e6a7f595d"
+      "bytes": 76697,
+      "sha256": "63e24f92ac1f29cdfd04c3b6e1f6f717c8aa42570e198bf6b8dfb9cadb4ddf26"
     },
     {
       "path": "figures/generated/fig-a2-reproducibility-lineage.png",
@@ -90,15 +90,15 @@
     },
     {
       "path": "figures/generated/fig-a2-reproducibility-lineage.svg",
-      "bytes": 96221,
-      "sha256": "c207272e7ce4dba6c6cc91578495fc28ec90fccacff95dc1f12481988ba78ef7"
+      "bytes": 94535,
+      "sha256": "2e844828da5aa475efb6d9dd7d9b21c9d9e0ece4bec1fbe6c48e1eb9936a6e5c"
     }
   ],
   "inputs": [
     {
       "path": "analysis/build_figures.py",
-      "bytes": 39725,
-      "sha256": "f4ac5f6cb733997a1fb18e678a44db4dc3f5f5e9e68de9c004e977e4ecae7b97"
+      "bytes": 40117,
+      "sha256": "0645feaaadf64e93b37ce79a0bb64319e347c4720569ecbdc61de11f0261e01f"
     },
     {
       "path": "figures/specifications/decision-paths.json",
@@ -136,9 +136,19 @@
       "sha256": "5dee37c58bd7338739742efc0d8dc99c7773f252743da8c6d2a0c538f040495c"
     },
     {
-      "path": "cases/TAE-PUB-001-oko-1983/assessment.json",
-      "bytes": 6432,
-      "sha256": "27c1da1a0e7596cbfae08ed98024935c70b3a58a7d7870614dde0534f638a353"
+      "path": "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
+      "bytes": 7513,
+      "sha256": "81709fec80b42331e78c5fe3466caf93fe38ca7d72776d50f4ee700d6c5b8866"
+    },
+    {
+      "path": "assessments/v0.6.0/oko-change-ledger.json",
+      "bytes": 4610,
+      "sha256": "2a4f4a166244022e19a446edbd64af0f8b562c75739219bee41508029bedb9d3"
+    },
+    {
+      "path": "protocols/oko-evidence-adjudication-v0.6.0.md",
+      "bytes": 4703,
+      "sha256": "6fef3cc0e69df173496e623c3c721fce57a7ef774dcee57ed7d93cf152f9cb52"
     },
     {
       "path": "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",

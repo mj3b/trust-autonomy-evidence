@@ -1,6 +1,6 @@
 {
-  "version": "0.1.0",
-  "source_release": "0.3.0",
+  "version": "0.6.0",
+  "source_release": "0.6.0",
   "figures": [
     {
       "figure_id": "FIG-1",
@@ -20,16 +20,17 @@
     {
       "figure_id": "FIG-2",
       "file_stub": "fig-2-practical-control-chain",
-      "title": "Formal authority appears in all three cases; practical force diverges downstream",
+      "title": "Authority evidence does not determine the remaining practical-control states",
       "unit_of_analysis": "practical-control proposition within a public case",
       "sample": "27 declared states from 9 propositions across 3 purposefully selected cases",
       "input_files": [
-        "cases/TAE-PUB-001-oko-1983/assessment.json",
+        "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
+        "assessments/v0.6.0/oko-change-ledger.json",
         "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
         "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json"
       ],
       "transformation": "Extract each practical_control state in protocol order and render the declared categorical state without assigning a numeric score.",
-      "claim_supported": "The three assessments separate assigned authority from the conditions that give authority practical force before action.",
+      "claim_supported": "The current assessment set separates authority evidence from the conditions that give authority practical force. The strict v0.6.0 rule classifies the retrospective Oko evidence as partial across every pre-action stage.",
       "prohibited_interpretation": "The matrix supplies no frequency, effect-size, causal, reliability, or population estimate."
     },
     {
@@ -55,7 +56,7 @@
       "unit_of_analysis": "trust-evidence proposition within a public case",
       "sample": "36 declared states from 12 propositions across 3 purposefully selected cases",
       "input_files": [
-        "cases/TAE-PUB-001-oko-1983/assessment.json",
+        "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
         "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
         "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json"
       ],

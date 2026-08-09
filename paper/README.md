@@ -16,14 +16,17 @@ This directory develops a methods and comparative-case paper from the repository
 |---|---|
 | [`paper-charter.md`](paper-charter.md) | Fixes the paper type, question, contribution, audience, and claim boundary. |
 | [`manuscript.md`](manuscript.md) | Contains the working abstract and section-level manuscript plan. |
-| [`literature-matrix.md`](literature-matrix.md) | Relates 15 initial sources and nine pressure-test additions to the proposed contribution. |
+| [`literature-matrix.md`](literature-matrix.md) | Relates 28 working sources to the proposed contribution and its boundaries. |
 | [`literature-search-log.md`](literature-search-log.md) | Records discovery queries, dates, retained candidates, and search limits. |
+| [`citation-chain-log-v0.6.0.md`](citation-chain-log-v0.6.0.md) | Records the index-based citation sample and its limits. |
+| [`literature-support-audit-v0.6.0.md`](literature-support-audit-v0.6.0.md) | Explains the sentence-level support audit for the current draft. |
+| [`literature-support-audit-v0.6.0.json`](literature-support-audit-v0.6.0.json) | Maps 16 manuscript locators to checked bibliography keys. |
 | [`novelty-audit.md`](novelty-audit.md) | Tests the proposed contribution against the closest prior work located so far. |
 | [`references.bib`](references.bib) | Stores checked citation metadata for the working literature set. |
 | [`claim-evidence-register.md`](claim-evidence-register.md) | Maps planned manuscript claims to repository evidence and excluded interpretations. |
 | [`submission-notes.md`](submission-notes.md) | Records authorship, disclosure, venue, and preprint decisions that remain open. |
 | [`review-record-pr11.md`](review-record-pr11.md) | Records the pressure test of PR #11, its resolutions, and the remaining paper blocker. |
-| [`claim-crosswalk.md`](claim-crosswalk.md) | Connects paper claims to the executable v0.5 gates and drafting consequences. |
+| [`claim-crosswalk.md`](claim-crosswalk.md) | Connects paper claims to the executable v0.6 gates and drafting consequences. |
 | [`scientistone-artifact-pressure-test.md`](scientistone-artifact-pressure-test.md) | Records how ScientistOne constrains originality and changes evidence, run-type, and method-code controls. |
 
 ## Working rule
@@ -32,6 +35,6 @@ A manuscript statement is not treated as a supported research claim merely becau
 
 If the manuscript conflicts with a frozen packet or released assessment, the released artifact controls until a documented protocol and release process changes it.
 
-A released assessment label records what the published procedure produced. It does not establish independent validity. The [PR #11 review record](review-record-pr11.md) identifies one unresolved consistency question involving the Oko packet and the protocol's contemporaneity requirement.
+A released assessment label records what the published procedure produced. It does not establish independent validity. The [PR #11 review record](review-record-pr11.md) preserves the Oko mismatch and its v0.6 resolution through reclassification.
 
-The [v0.5 claim crosswalk](claim-crosswalk.md) now makes that boundary executable. A failed evidence-fitness gate or open dependency prevents the affected claim from entering a conclusion.
+The [v0.6 claim crosswalk](claim-crosswalk.md) makes that boundary executable. A failed evidence-fitness gate or open dependency prevents the affected claim from entering a conclusion. The open novelty-search limit remains separate from the resolved sentence-level support audit.
