@@ -24,3 +24,5 @@ jobs:
         run: python scripts/validate_repository.py
       - name: Validate paper workspace
         run: python scripts/validate_paper.py
+      - name: Check release manifest regeneration
+        run: python scripts/build_release_manifest.py && git diff --exit-code -- release/v0.5.0-manifest.json

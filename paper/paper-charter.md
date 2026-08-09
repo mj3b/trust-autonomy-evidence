@@ -45,9 +45,9 @@ One protocol-consistency question remains open. The Oko packet relies on retrosp
 
 ## Novelty hypothesis
 
-A targeted search identified prior work on meaningful human control, human-automation performance, retrospective reconstruction, public AI-incident analysis, assurance cases, AI-loss reconstruction, and prompt forensics. Broad claims to originality in any one of these areas are rejected.
+A targeted search identified prior work on meaningful human control, human-automation performance, retrospective reconstruction, public AI-incident analysis, assurance cases, AI-loss reconstruction, prompt forensics, Chain-of-Evidence, and post-hoc research-integrity audit. Broad claims to originality in any one of these areas are rejected.
 
-The narrower novelty hypothesis concerns their combination: a protocol fixed before screening, a preserved selection path, versioned public evidence packets, claim-level provenance, explicit indeterminate states, a declared chain from access through effect, and executable checks over the published artifacts.
+The narrower novelty hypothesis concerns a governance-specific combination: a protocol fixed before screening, a preserved selection path, versioned public evidence packets, explicit indeterminate states, a declared chain from access through effect, claim-specific evidence fitness, dependency closure, and executable checks over the published artifacts.
 
 This is a provisional hypothesis. The paper must not claim novelty until backward citation review, forward citation review, and a documented database search are complete.
 

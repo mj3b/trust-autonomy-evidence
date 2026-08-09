@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mj3b/trust-autonomy-evidence/schemas/claim-evidence-map.schema.json",
+  "title": "Claim-evidence map",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "scope_id", "description", "claims"],
+  "properties": {
+    "version": {"const": "0.5.0"},
+    "scope_id": {"const": "TAE-COE-V0.5.0"},
+    "description": {"type": "string", "minLength": 1},
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/claim"}
+    }
+  },
+  "$defs": {
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "rationale"],
+      "properties": {
+        "state": {"enum": ["pass", "fail", "indeterminate", "outside_scope"]},
+        "rationale": {"type": "string", "minLength": 1}
+      }
+    },
+    "fitness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["directness", "contemporaneity", "independence", "completeness", "publication_authority"],
+      "properties": {
+        "directness": {"$ref": "#/$defs/gate"},
+        "contemporaneity": {"$ref": "#/$defs/gate"},
+        "independence": {"$ref": "#/$defs/gate"},
+        "completeness": {"$ref": "#/$defs/gate"},
+        "publication_authority": {"$ref": "#/$defs/gate"}
+      }
+    },
+    "human_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reviewer", "review_date", "attestation_path", "note"],
+      "properties": {
+        "status": {"enum": ["recorded", "pending", "outside_scope"]},
+        "reviewer": {"type": ["string", "null"]},
+        "review_date": {"type": ["string", "null"], "format": "date"},
+        "attestation_path": {"type": ["string", "null"]},
+        "note": {"type": "string"}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "path", "locator_type", "locator", "role", "integrity_state", "content_review"],
+      "properties": {
+        "evidence_id": {"type": "string", "pattern": "^[A-Z0-9-]+$"},
+        "path": {"type": "string", "minLength": 1},
+        "locator_type": {"enum": ["file", "json_pointer", "csv_cell", "markdown_heading", "text_marker"]},
+        "locator": {"type": "string"},
+        "role": {"enum": ["source", "numeric", "method", "implementation", "provenance", "limitation", "conclusion"]},
+        "source_id": {"type": ["string", "null"]},
+        "expected_value": {},
+        "run_type": {"enum": ["not_applicable", "individual_run", "selected_run", "best_run", "multi_run_mean", "failed_run", "excluded_run", "post_hoc_ablation"]},
+        "integrity_state": {"enum": ["verified", "release_manifest", "remote_only", "pending"]},
+        "sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+        "content_review": {"enum": ["recorded", "pending", "outside_scope"]}
+      }
+    },
+    "scope_term": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["term", "justification"],
+      "properties": {
+        "term": {"enum": ["all", "always", "required", "consistently", "proves", "guarantees", "state of the art"]},
+        "justification": {"type": "string", "minLength": 1}
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id", "claim_text", "claim_class", "claim_scope", "status", "verification_rule",
+        "evidence", "fitness", "dependencies", "dependency_closure", "conclusion_eligible",
+        "human_review", "scope_terms", "limitations", "reversal_conditions"
+      ],
+      "properties": {
+        "claim_id": {"type": "string", "pattern": "^(TAE|PAPER)-C[0-9]{2}$"},
+        "claim_text": {"type": "string", "minLength": 1},
+        "claim_class": {"enum": ["citation", "numerical", "methodological", "conclusion", "documentary_classification"]},
+        "claim_scope": {"enum": ["repository", "paper", "method", "audit"]},
+        "status": {"enum": ["supported", "provisional", "blocked", "unresolved", "outside_scope"]},
+        "verification_rule": {"type": "string", "minLength": 1},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+        "fitness": {"$ref": "#/$defs/fitness"},
+        "dependencies": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^(TAE|PAPER)-C[0-9]{2}$"}},
+        "dependency_closure": {"enum": ["pass", "fail", "indeterminate", "outside_scope"]},
+        "conclusion_eligible": {"type": "boolean"},
+        "human_review": {"$ref": "#/$defs/human_review"},
+        "scope_terms": {"type": "array", "items": {"$ref": "#/$defs/scope_term"}},
+        "limitations": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "reversal_conditions": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

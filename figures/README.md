@@ -1,6 +1,6 @@
 # Publication Figure Set
 
-The figure set converts committed assessments, selection records, mutation results, and artifact lineage into six reproducible graphics. It adds no empirical observation and changes no v0.3.0 case finding.
+The figure set converts committed assessments, selection records, mutation results, artifact lineage, and the v0.5.0 integrity audit into seven reproducible graphics. It adds no empirical observation and changes no v0.3.0 case finding.
 
 The figures follow four measurement rules drawn from the repository's use of METR's evaluation discipline: the measured unit appears in each specification, raw categorical states remain visible, uncertainty stays separate from negative findings, and every image has a machine-readable input table.
 
@@ -19,6 +19,7 @@ The figures follow four measurement rules drawn from the repository's use of MET
 |---|---|---|
 | Figure A1 | Maps all 12 controlled mutations to 11 prespecified state changes and three invariance tests. | [PNG](generated/fig-a1-mutation-response.png) · [SVG](generated/fig-a1-mutation-response.svg) · [data](data/fig-a1-mutation-response.csv) |
 | Figure A2 | Traces the research and figure-generation artifacts from frozen collections through repository validation. | [PNG](generated/fig-a2-reproducibility-lineage.png) · [SVG](generated/fig-a2-reproducibility-lineage.svg) · [data](data/fig-a2-reproducibility-lineage.csv) |
+| Figure A3 | Shows the five claim gates and conclusion eligibility for 14 material v0.5 claims. | [PNG](generated/fig-a3-claim-evidence-integrity.png) · [SVG](generated/fig-a3-claim-evidence-integrity.svg) · [data](data/fig-a3-claim-evidence-integrity.csv) |
 
 ## How to read the figures
 
@@ -60,6 +61,12 @@ The figure directly shows the path from frozen collections through candidate sel
 
 This lineage supports reconstruction of how each plotted state was produced. It establishes ordering and file integrity. It makes no claim that a source is true, complete, or sufficient for an institutional decision.
 
+### Figure A3. Claim-evidence integrity
+
+The figure directly shows 84 categorical decisions: five evidence gates and one conclusion-eligibility state for each of 14 material claims. Every claim passes traceability. `PAPER-C04` fails evidence fitness because the stronger Oko protocol-consistency claim lacks the contemporaneous and complete evidence required by the current protocol. `PAPER-C09` inherits that failed dependency and remains ineligible.
+
+The matrix separates a working evidence link from evidence that fits the proposed conclusion. Purple cells preserve indeterminate integrity where v0.5 artifacts await the release manifest. Gray cells preserve outside-scope or ineligible states. The figure calculates no aggregate trust score and supplies no source-truth or independent-reliability finding.
+
 ## Regeneration
 
 Install the development dependencies and rebuild the full set:
@@ -67,15 +74,19 @@ Install the development dependencies and rebuild the full set:
 ```bash
 python -m pip install -r requirements-dev.txt
 python analysis/build_figures.py
+python scripts/run_coe_integrity_audit.py
+python analysis/build_claim_evidence_figure.py
 ```
 
 Check exact equality for the six derived CSV files, verify the structure and dimensions of the PNG and SVG files, and confirm the recorded hashes for all 18 committed artifacts:
 
 ```bash
 python analysis/build_figures.py --check
+python scripts/run_coe_integrity_audit.py --check
+python analysis/build_claim_evidence_figure.py --check
 ```
 
-The repository validator runs the same data and artifact-integrity check. Image renderer bytes can vary by operating system even when the plotted data and dimensions remain unchanged. [Figure methods](../reports/figure-methods.md) records the transformations, captions, and claim boundaries. [The figure register](specifications/figure-register.json) provides a machine-readable specification for each image. [The figure manifest](manifest.json) records the byte count and SHA-256 hash of every committed figure artifact and declared input.
+The repository validator runs the same data and artifact-integrity checks. Image renderer bytes can vary by operating system even when the plotted data and dimensions remain unchanged. [Figure methods](../reports/figure-methods.md) records the transformations, captions, and claim boundaries. [The original figure register](specifications/figure-register.json) describes Figures 1 through A2. [The v0.5 specification](specifications/claim-evidence-integrity.json) describes Figure A3. [The original figure manifest](manifest.json) and [v0.5 figure manifest](v0.5.0-manifest.json) record byte counts and SHA-256 hashes.
 
 ## Use boundary
 

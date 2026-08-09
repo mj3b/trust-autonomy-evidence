@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mj3b/trust-autonomy-evidence/schemas/coe-audit-mutations.schema.json",
+  "title": "Chain-of-Evidence audit negative controls",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "suite_id", "controls"],
+  "properties": {
+    "version": {"const": "0.5.0"},
+    "suite_id": {"const": "TAE-COE-NEGATIVE-CONTROLS-V0.5.0"},
+    "controls": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["control_id", "description", "mutation_type", "target_claim", "expected_check", "parameters"],
+        "properties": {
+          "control_id": {"type": "string", "pattern": "^COE-NC-[0-9]{2}$"},
+          "description": {"type": "string", "minLength": 1},
+          "mutation_type": {"enum": ["numeric_mismatch", "missing_reference", "support_review_removed", "fitness_failure", "method_marker_removed", "unresolved_dependency", "stale_hash", "run_type_mislabel", "unsupported_scope_term"]},
+          "target_claim": {"type": "string", "pattern": "^(TAE|PAPER)-C[0-9]{2}$"},
+          "expected_check": {"enum": ["score_verification", "specification_violation", "reference_verification", "method_code_alignment", "evidence_fitness_and_dependency_closure"]},
+          "parameters": {"type": "object"}
+        }
+      }
+    }
+  }
+}

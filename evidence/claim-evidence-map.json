@@ -1,0 +1,377 @@
+{
+  "version": "0.5.0",
+  "scope_id": "TAE-COE-V0.5.0",
+  "description": "Material paper and repository claims audited in v0.5.0. The map does not cover every sentence in the repository.",
+  "claims": [
+    {
+      "claim_id": "PAPER-C02",
+      "claim_text": "The candidate selection rules were fixed before screening, and the first eligible case in each stratum was selected.",
+      "claim_class": "methodological",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The protocol must state the freeze and first-eligible rules, and the five-row register must preserve the screening order and decisions.",
+      "evidence": [
+        {"evidence_id": "C02-METHOD", "path": "protocols/public-case-reconstruction-protocol.md", "locator_type": "text_marker", "locator": "Select the first eligible candidate", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "9a83c6de2e550d09c5fc5b61d734be12c005ff6447ede5b3344c38093389a2e3", "content_review": "recorded"},
+        {"evidence_id": "C02-SELECTION", "path": "cases/public-case-selection-register.md", "locator_type": "text_marker", "locator": "AIID-445", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5dee37c58bd7338739742efc0d8dc99c7773f252743da8c6d2a0c538f040495c", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The protocol and register directly record the rule and its application."},
+        "contemporaneity": {"state": "pass", "rationale": "The protocol freeze preceded the recorded screening decisions."},
+        "independence": {"state": "outside_scope", "rationale": "This is a claim about repository records, not independent validity."},
+        "completeness": {"state": "pass", "rationale": "The register preserves every decision made before the stopping condition."},
+        "publication_authority": {"state": "pass", "rationale": "The repository author controls and versions the declared procedure records."}
+      },
+      "dependencies": [],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "evidence/research-activity-log.json", "note": "Reviewed as a direct repository-record claim."},
+      "scope_terms": [],
+      "limitations": ["The rule demonstrates procedural conformance for the recorded search and no independent discrimination test."],
+      "reversal_conditions": ["An earlier eligible candidate is established or the register conflicts with the frozen protocol."]
+    },
+    {
+      "claim_id": "PAPER-C03",
+      "claim_text": "Formal authority is classified as supported in all three released public-case assessments.",
+      "claim_class": "numerical",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The authority state at the same JSON pointer must equal supported in each of the three assessment files.",
+      "evidence": [
+        {"evidence_id": "C03-OKO-AUTHORITY", "path": "cases/TAE-PUB-001-oko-1983/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/authority/state", "role": "numeric", "source_id": "TAE-PUB-001", "expected_value": "supported", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"},
+        {"evidence_id": "C03-ZG710-AUTHORITY", "path": "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/authority/state", "role": "numeric", "source_id": "TAE-PUB-002", "expected_value": "supported", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"},
+        {"evidence_id": "C03-FA18-AUTHORITY", "path": "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/authority/state", "role": "numeric", "source_id": "TAE-PUB-003", "expected_value": "supported", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "Each value is read from the released field asserted by the claim."},
+        "contemporaneity": {"state": "outside_scope", "rationale": "The claim reports released classifications without asserting their historical protocol consistency."},
+        "independence": {"state": "outside_scope", "rationale": "The claim describes author-produced assessment outputs."},
+        "completeness": {"state": "pass", "rationale": "The claim includes the complete three-case set."},
+        "publication_authority": {"state": "pass", "rationale": "The repository publishes and versions its own assessments."}
+      },
+      "dependencies": ["PAPER-C02"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "paper/review-record-pr11.md", "note": "The wording is limited to released assessment states."},
+      "scope_terms": [{"term": "all", "justification": "All means the complete set of three released public-case assessments in v0.3.0."}],
+      "limitations": ["The equality of three stored states is not evidence of independent reliability or historical truth."],
+      "reversal_conditions": ["Any released authority state differs from supported or the case set changes."]
+    },
+    {
+      "claim_id": "PAPER-C04",
+      "claim_text": "The released Oko supported states satisfy the practical-control protocol's contemporaneous-evidence rule.",
+      "claim_class": "documentary_classification",
+      "claim_scope": "paper",
+      "status": "blocked",
+      "verification_rule": "A contemporaneous command log, official incident record, or equivalent direct record must support the affected states under the current protocol.",
+      "evidence": [
+        {"evidence_id": "C04-OKO-STATE", "path": "cases/TAE-PUB-001-oko-1983/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/effect/state", "role": "conclusion", "source_id": "TAE-PUB-001", "expected_value": "supported", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"},
+        {"evidence_id": "C04-OKO-SOURCES", "path": "cases/TAE-PUB-001-oko-1983/source-manifest.json", "locator_type": "text_marker", "locator": "Soviet command logs, the official incident record", "role": "limitation", "source_id": "TAE-PUB-001", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c117b8d80dcb5421bdc9e8990e22f80c97908c68d0d13f33b87b911e9a95784c", "content_review": "recorded"},
+        {"evidence_id": "C04-PROTOCOL", "path": "protocols/practical-human-control-test.md", "locator_type": "text_marker", "locator": "direct, contemporaneous evidence", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "987eb6aea24ad6c73ded73af36db3504193bfa9eff11079b6fb68c71711f2776", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "Retrospective accounts directly describe Petrov's recollection and the released assessment records the output."},
+        "contemporaneity": {"state": "fail", "rationale": "The located participant accounts postdate the 1983 event, and no contemporaneous command log or official incident record was located."},
+        "independence": {"state": "indeterminate", "rationale": "Multiple public accounts exist, yet their independence from the participant narrative is unresolved."},
+        "completeness": {"state": "fail", "rationale": "Material official records remain unavailable."},
+        "publication_authority": {"state": "indeterminate", "rationale": "The public accounts have identifiable publishers but no authority over the missing Soviet command record."}
+      },
+      "dependencies": ["PAPER-C02"],
+      "dependency_closure": "fail",
+      "conclusion_eligible": false,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-08", "attestation_path": "paper/review-record-pr11.md", "note": "Recorded as PAPER-BLOCKER-01."},
+      "scope_terms": [],
+      "limitations": ["The failed gate applies to the stronger protocol-consistency claim and does not erase the released v0.3.0 state."],
+      "reversal_conditions": ["A versioned protocol decision changes the rule or eligible contemporaneous evidence is located and reviewed."]
+    },
+    {
+      "claim_id": "PAPER-C05",
+      "claim_text": "The ZG710 assessment records supported authority and unsupported comprehension, feasibility, exercise, and effect.",
+      "claim_class": "documentary_classification",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The five declared JSON pointers must equal their stated categorical values.",
+      "evidence": [
+        {"evidence_id": "C05-AUTHORITY", "path": "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/authority/state", "role": "numeric", "source_id": "TAE-PUB-002", "expected_value": "supported", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"},
+        {"evidence_id": "C05-COMPREHENSION", "path": "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/comprehension/state", "role": "numeric", "source_id": "TAE-PUB-002", "expected_value": "unsupported", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"},
+        {"evidence_id": "C05-FEASIBILITY", "path": "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/feasibility/state", "role": "numeric", "source_id": "TAE-PUB-002", "expected_value": "unsupported", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"},
+        {"evidence_id": "C05-EXERCISE", "path": "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/exercise/state", "role": "numeric", "source_id": "TAE-PUB-002", "expected_value": "unsupported", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"},
+        {"evidence_id": "C05-EFFECT", "path": "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/effect/state", "role": "numeric", "source_id": "TAE-PUB-002", "expected_value": "unsupported", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim reports exact released fields."},
+        "contemporaneity": {"state": "outside_scope", "rationale": "The claim is limited to released packet outputs."},
+        "independence": {"state": "outside_scope", "rationale": "No independent-validity claim is made."},
+        "completeness": {"state": "pass", "rationale": "The five states named in the claim are mapped."},
+        "publication_authority": {"state": "pass", "rationale": "The repository publishes its own versioned assessment."}
+      },
+      "dependencies": ["PAPER-C02"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "evidence/research-activity-log.json", "note": "Checked against the released assessment."},
+      "scope_terms": [],
+      "limitations": ["The categorical output does not establish individual culpability or system-wide frequency."],
+      "reversal_conditions": ["Any mapped assessment state changes in a versioned release."]
+    },
+    {
+      "claim_id": "PAPER-C06",
+      "claim_text": "The F/A-18C assessment records supported authority and indeterminate comprehension, feasibility, and exercise.",
+      "claim_class": "documentary_classification",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The four declared JSON pointers must equal their stated categorical values.",
+      "evidence": [
+        {"evidence_id": "C06-AUTHORITY", "path": "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/authority/state", "role": "numeric", "source_id": "TAE-PUB-003", "expected_value": "supported", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"},
+        {"evidence_id": "C06-COMPREHENSION", "path": "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/comprehension/state", "role": "numeric", "source_id": "TAE-PUB-003", "expected_value": "indeterminate", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"},
+        {"evidence_id": "C06-FEASIBILITY", "path": "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/feasibility/state", "role": "numeric", "source_id": "TAE-PUB-003", "expected_value": "indeterminate", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"},
+        {"evidence_id": "C06-EXERCISE", "path": "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json", "locator_type": "json_pointer", "locator": "/practical_control/exercise/state", "role": "numeric", "source_id": "TAE-PUB-003", "expected_value": "indeterminate", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim reports exact released fields."},
+        "contemporaneity": {"state": "outside_scope", "rationale": "The claim is limited to released packet outputs."},
+        "independence": {"state": "outside_scope", "rationale": "No independent-validity claim is made."},
+        "completeness": {"state": "pass", "rationale": "The four states named in the claim are mapped."},
+        "publication_authority": {"state": "pass", "rationale": "The repository publishes its own versioned assessment."}
+      },
+      "dependencies": ["PAPER-C02"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "evidence/research-activity-log.json", "note": "Checked against the released assessment."},
+      "scope_terms": [],
+      "limitations": ["Indeterminate states report missing public evidence and do not establish factual failure."],
+      "reversal_conditions": ["Any mapped assessment state changes in a versioned release."]
+    },
+    {
+      "claim_id": "PAPER-C07",
+      "claim_text": "The explicit indeterminate state prevents missing public records from being converted into negative factual findings under the declared method.",
+      "claim_class": "methodological",
+      "claim_scope": "method",
+      "status": "supported",
+      "verification_rule": "The protocol must reserve indeterminate for unresolved evidence and the assessment schema must permit that state.",
+      "evidence": [
+        {"evidence_id": "C07-METHOD", "path": "protocols/public-case-reconstruction-protocol.md", "locator_type": "text_marker", "locator": "Treat missing evidence as indeterminate", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "9a83c6de2e550d09c5fc5b61d734be12c005ff6447ede5b3344c38093389a2e3", "content_review": "recorded"},
+        {"evidence_id": "C07-IMPLEMENTATION", "path": "schemas/public-case-assessment.schema.json", "locator_type": "text_marker", "locator": "indeterminate", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The protocol states the rule and the schema represents its state."},
+        "contemporaneity": {"state": "outside_scope", "rationale": "This is a method-property claim."},
+        "independence": {"state": "outside_scope", "rationale": "Independent application is outside this claim."},
+        "completeness": {"state": "pass", "rationale": "The rule and representation are both mapped."},
+        "publication_authority": {"state": "pass", "rationale": "The repository author defines the method contract."}
+      },
+      "dependencies": [],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "evidence/research-activity-log.json", "note": "Reviewed as an internal method property."},
+      "scope_terms": [],
+      "limitations": ["The rule cannot establish whether unavailable evidence exists outside the public record."],
+      "reversal_conditions": ["The protocol or schema removes the indeterminate-state rule."]
+    },
+    {
+      "claim_id": "PAPER-C08",
+      "claim_text": "The repository checks internal contract behavior, selection invariants, cross-case interactions, figure data, and artifact integrity.",
+      "claim_class": "methodological",
+      "claim_scope": "repository",
+      "status": "supported",
+      "verification_rule": "The validator must contain executable checks for each named internal property and complete successfully for the committed artifacts.",
+      "evidence": [
+        {"evidence_id": "C08-METHOD", "path": "reports/figure-methods.md", "locator_type": "markdown_heading", "locator": "## Reproducibility check", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "41ddebe562d6ad92050011b173b84f71c1be515cccb77599998a4606a62a7b64", "content_review": "recorded"},
+        {"evidence_id": "C08-IMPLEMENTATION", "path": "scripts/validate_repository.py", "locator_type": "text_marker", "locator": "validate_case_interactions", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "aebea4bce6bcbb4ef6269a6bfdaa126fe990726aaeba2758ee5317dcf08c5608", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The method report names the control and the script implements the checks."},
+        "contemporaneity": {"state": "outside_scope", "rationale": "This is a current repository-property claim."},
+        "independence": {"state": "outside_scope", "rationale": "The wording excludes independent reproduction."},
+        "completeness": {"state": "pass", "rationale": "The verification rule names the controls covered by the implementation."},
+        "publication_authority": {"state": "pass", "rationale": "The repository publishes the implementation and its outputs."}
+      },
+      "dependencies": [],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-08", "attestation_path": "paper/review-record-pr11.md", "note": "PT-07 distinguishes these controls from independent reproduction."},
+      "scope_terms": [],
+      "limitations": ["The checks establish internal behavior and artifact consistency only."],
+      "reversal_conditions": ["A named validation path is removed or fails for committed artifacts."]
+    },
+    {
+      "claim_id": "PAPER-C09",
+      "claim_text": "The method produced protocol-consistent, traceable, bounded assessment states across all three selected packets.",
+      "claim_class": "conclusion",
+      "claim_scope": "paper",
+      "status": "blocked",
+      "verification_rule": "Every dependent selection, state, missing-data, validation, and protocol-consistency claim must be conclusion-eligible.",
+      "evidence": [
+        {"evidence_id": "C09-REPORT", "path": "reports/public-case-reconstruction-v0.3.0.md", "locator_type": "markdown_heading", "locator": "## Cross-case comparison", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "6c2acc2ba62bb78b82405bcb5363ae09e6247313e175324b7399d0f73ce00409", "content_review": "recorded"},
+        {"evidence_id": "C09-BLOCKER", "path": "paper/review-record-pr11.md", "locator_type": "text_marker", "locator": "PAPER-BLOCKER-01", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "40720c7987a3a1084a75de15f6c2c0545b16faded7b9032f50d6c78038c0a783", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The report and review record directly address the proposed conclusion."},
+        "contemporaneity": {"state": "fail", "rationale": "The dependent Oko protocol-consistency claim fails its contemporaneity requirement."},
+        "independence": {"state": "indeterminate", "rationale": "No independent assessor has reproduced the judgments."},
+        "completeness": {"state": "fail", "rationale": "The Oko official record remains incomplete for the stronger conclusion."},
+        "publication_authority": {"state": "pass", "rationale": "The repository can report its own procedure outputs and disclosed blocker."}
+      },
+      "dependencies": ["PAPER-C02", "PAPER-C03", "PAPER-C04", "PAPER-C05", "PAPER-C06", "PAPER-C07", "PAPER-C08"],
+      "dependency_closure": "fail",
+      "conclusion_eligible": false,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-08", "attestation_path": "paper/review-record-pr11.md", "note": "Final empirical conclusion remains blocked where it depends on PAPER-C04."},
+      "scope_terms": [{"term": "all", "justification": "All means the complete three-packet case set and all mapped dependencies C02 through C08."}],
+      "limitations": ["The traceable procedure-output claim can be reported without asserting complete protocol consistency."],
+      "reversal_conditions": ["PAPER-C04 receives a versioned resolution and every dependency passes all required gates."]
+    },
+    {
+      "claim_id": "PAPER-C11",
+      "claim_text": "The case set supplies no prevalence, causal-effect, inter-rater, legal-responsibility, or current-system transfer estimate.",
+      "claim_class": "methodological",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The case-set boundary and protocol must exclude each named estimate from the design.",
+      "evidence": [
+        {"evidence_id": "C11-BOUNDARY", "path": "cases/README.md", "locator_type": "text_marker", "locator": "They do not tell us:", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "119ff57de2b8a53681382365c696f4cc70d06fce41a5f1b83ae84159e2b6ef06", "content_review": "recorded"},
+        {"evidence_id": "C11-LIMITS", "path": "LIMITATIONS.md", "locator_type": "text_marker", "locator": "The repository has no completed multi-case reliability study", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "7bf9903fb8e10ea0ce4b412ceebce27b6a31b0e127605c9e0a15d32985755948", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The design records directly exclude the named estimates."},
+        "contemporaneity": {"state": "outside_scope", "rationale": "This is a current design-boundary claim."},
+        "independence": {"state": "outside_scope", "rationale": "The claim declares the absence of an independent estimate."},
+        "completeness": {"state": "pass", "rationale": "The evidence names the material design limits used in the claim."},
+        "publication_authority": {"state": "pass", "rationale": "The study author declares the design and its limits."}
+      },
+      "dependencies": ["PAPER-C02"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "evidence/research-activity-log.json", "note": "Reviewed as a design limitation."},
+      "scope_terms": [],
+      "limitations": ["The claim does not imply that the cases lack descriptive value."],
+      "reversal_conditions": ["A later study adds an eligible estimate under a prespecified design."]
+    },
+    {
+      "claim_id": "PAPER-C14",
+      "claim_text": "The Oko packet contains retrospective participant accounts and no located contemporaneous command log or official incident record.",
+      "claim_class": "citation",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The source manifest must identify the retrospective dates and list the unlocated contemporaneous records.",
+      "evidence": [
+        {"evidence_id": "C14-SOURCES", "path": "cases/TAE-PUB-001-oko-1983/source-manifest.json", "locator_type": "text_marker", "locator": "Soviet command logs, the official incident record", "role": "source", "source_id": "TAE-PUB-001", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c117b8d80dcb5421bdc9e8990e22f80c97908c68d0d13f33b87b911e9a95784c", "content_review": "recorded"},
+        {"evidence_id": "C14-REVIEW", "path": "paper/review-record-pr11.md", "locator_type": "markdown_heading", "locator": "## Evidence behind the open blocker", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "40720c7987a3a1084a75de15f6c2c0545b16faded7b9032f50d6c78038c0a783", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The manifest directly records the dates and unavailable records."},
+        "contemporaneity": {"state": "pass", "rationale": "The claim concerns the present packet contents and search record."},
+        "independence": {"state": "outside_scope", "rationale": "The claim does not infer the historical event from one source."},
+        "completeness": {"state": "pass", "rationale": "The packet's declared source and missing-evidence records are inspected."},
+        "publication_authority": {"state": "pass", "rationale": "The repository author can attest to which sources were located for the packet."}
+      },
+      "dependencies": [],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-08", "attestation_path": "paper/review-record-pr11.md", "note": "Reviewed as the evidence basis for PAPER-BLOCKER-01."},
+      "scope_terms": [],
+      "limitations": ["No located record does not establish that no contemporaneous record exists."],
+      "reversal_conditions": ["A contemporaneous command log or official incident record is located and added to the versioned packet."]
+    },
+    {
+      "claim_id": "TAE-C21",
+      "claim_text": "Version 0.5 defines separate traceability, integrity, support, evidence-fitness, and dependency-closure gates for its declared claim set.",
+      "claim_class": "methodological",
+      "claim_scope": "method",
+      "status": "supported",
+      "verification_rule": "The protocol and claim-map schema must define all five gates and store their required states.",
+      "evidence": [
+        {"evidence_id": "C21-PROTOCOL", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Five gates", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "8c1e96e261268eb0328431c43617504280c3a2894450fb5b405d93218fe8ce15", "content_review": "recorded"},
+        {"evidence_id": "C21-SCHEMA", "path": "schemas/claim-evidence-map.schema.json", "locator_type": "text_marker", "locator": "dependency_closure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "a77e688ac3ce7c7f29dfee2b331eb1b858b2f08aa00006bebb769de3525796db", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The protocol defines the gates and the schema stores them."},
+        "contemporaneity": {"state": "outside_scope", "rationale": "This is a current artifact-property claim."},
+        "independence": {"state": "outside_scope", "rationale": "Independent effectiveness is excluded."},
+        "completeness": {"state": "pass", "rationale": "Every named gate has a declared representation."},
+        "publication_authority": {"state": "pass", "rationale": "The repository author defines the released method contract."}
+      },
+      "dependencies": [],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "evidence/research-activity-log.json", "note": "Reviewed as a v0.5 artifact property."},
+      "scope_terms": [],
+      "limitations": ["The five gates cover only claims declared in this map."],
+      "reversal_conditions": ["The protocol or schema removes a gate or no longer represents its state."]
+    },
+    {
+      "claim_id": "TAE-C23",
+      "claim_text": "The v0.5 integrity audit establishes independent reliability or field validity for the framework.",
+      "claim_class": "conclusion",
+      "claim_scope": "audit",
+      "status": "outside_scope",
+      "verification_rule": "An eligible independent, prespecified assessment must reproduce the judgments in a relevant field setting.",
+      "evidence": [
+        {"evidence_id": "C23-LIMIT", "path": "audits/v0.5.0/exceptions.md", "locator_type": "markdown_heading", "locator": "## COE-EX-03: independent assessment", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "af7f0548c705a4bb27143119b4e291de18195de412ac34e853bc438fd2890c34", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "indeterminate", "rationale": "No eligible independent study exists for this release."},
+        "contemporaneity": {"state": "outside_scope", "rationale": "No field-validity study is being assessed."},
+        "independence": {"state": "fail", "rationale": "The author designed and reviewed the v0.5 judgments."},
+        "completeness": {"state": "fail", "rationale": "The release contains no independent sample or field outcome design."},
+        "publication_authority": {"state": "outside_scope", "rationale": "No external validity determination has been issued."}
+      },
+      "dependencies": [],
+      "dependency_closure": "outside_scope",
+      "conclusion_eligible": false,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "evidence/research-activity-log.json", "note": "Recorded as an excluded interpretation."},
+      "scope_terms": [],
+      "limitations": ["Internal negative controls do not supply an independent estimate."],
+      "reversal_conditions": ["An eligible independent study satisfies a prespecified reliability or field-validity protocol."]
+    },
+    {
+      "claim_id": "TAE-C24",
+      "claim_text": "Under the v0.5 contract, a failed or indeterminate required gate prevents a claim from supporting a conclusion.",
+      "claim_class": "methodological",
+      "claim_scope": "method",
+      "status": "supported",
+      "verification_rule": "The protocol must state the rule and the audit must recompute eligibility from status, five gates, and dependencies.",
+      "evidence": [
+        {"evidence_id": "C24-METHOD", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Conclusion-eligibility rule", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "8c1e96e261268eb0328431c43617504280c3a2894450fb5b405d93218fe8ce15", "content_review": "recorded"},
+        {"evidence_id": "C24-BLOCKED-CASE", "path": "paper/claim-crosswalk.md", "locator_type": "text_marker", "locator": "C09 | Blocked", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "dc637047b0850b47e343bf69debff7ee851050b7fa2aace1e5a1352bc3cf4893", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The protocol states the rule and the crosswalk applies it to a blocked conclusion."},
+        "contemporaneity": {"state": "outside_scope", "rationale": "This is a current method-property claim."},
+        "independence": {"state": "outside_scope", "rationale": "No external-effectiveness claim is made."},
+        "completeness": {"state": "pass", "rationale": "The method rule and an applied blocked case are both visible."},
+        "publication_authority": {"state": "pass", "rationale": "The repository author defines the contract and its released application."}
+      },
+      "dependencies": ["PAPER-C04", "PAPER-C09"],
+      "dependency_closure": "fail",
+      "conclusion_eligible": false,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "evidence/research-activity-log.json", "note": "The method claim is supported; conclusion eligibility is false because its demonstration dependencies are intentionally blocked."},
+      "scope_terms": [{"term": "required", "justification": "Required refers to a gate designated as applicable under the v0.5 contract."}],
+      "limitations": ["The gating rule is an artifact property and no outcome-effectiveness finding."],
+      "reversal_conditions": ["The audit permits a failed or indeterminate required gate to enter an eligible conclusion."]
+    },
+    {
+      "claim_id": "TAE-C25",
+      "claim_text": "The v0.5 evidence-fitness review fails contemporaneity for the stronger Oko protocol-consistency claim while preserving the released v0.3.0 assessment.",
+      "claim_class": "documentary_classification",
+      "claim_scope": "audit",
+      "status": "supported",
+      "verification_rule": "The v0.5 map must record failed contemporaneity for PAPER-C04 and leave the v0.3.0 assessment file unchanged against its release manifest.",
+      "evidence": [
+        {"evidence_id": "C25-PROTOCOL", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Oko negative case", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "8c1e96e261268eb0328431c43617504280c3a2894450fb5b405d93218fe8ce15", "content_review": "recorded"},
+        {"evidence_id": "C25-RELEASED", "path": "cases/TAE-PUB-001-oko-1983/assessment.json", "locator_type": "json_pointer", "locator": "/version", "role": "provenance", "source_id": "TAE-PUB-001", "expected_value": "0.3.0", "run_type": "not_applicable", "integrity_state": "release_manifest", "sha256": null, "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The protocol records the v0.5 treatment and the released file records its preserved version."},
+        "contemporaneity": {"state": "pass", "rationale": "The claim concerns current audit treatment and release preservation."},
+        "independence": {"state": "outside_scope", "rationale": "No independent historical judgment is asserted."},
+        "completeness": {"state": "pass", "rationale": "Both the new audit state and frozen assessment boundary are represented."},
+        "publication_authority": {"state": "pass", "rationale": "The repository author controls the versioned audit and assessment records."}
+      },
+      "dependencies": ["PAPER-C04", "PAPER-C14"],
+      "dependency_closure": "fail",
+      "conclusion_eligible": false,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "paper/review-record-pr11.md", "note": "The failure state is the intended negative case and blocks stronger Oko conclusions."},
+      "scope_terms": [],
+      "limitations": ["The finding does not reclassify the frozen assessment within v0.5.0."],
+      "reversal_conditions": ["A versioned protocol or evidence decision resolves PAPER-BLOCKER-01."]
+    }
+  ]
+}

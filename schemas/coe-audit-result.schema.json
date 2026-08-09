@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mj3b/trust-autonomy-evidence/schemas/coe-audit-result.schema.json",
+  "title": "Chain-of-Evidence audit result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "audit_id", "audit_date", "scope", "status", "checks", "negative_controls", "exceptions", "claim_results"],
+  "properties": {
+    "version": {"const": "0.5.0"},
+    "audit_id": {"const": "TAE-COE-AUDIT-V0.5.0"},
+    "audit_date": {"const": "2026-08-09"},
+    "scope": {"type": "string", "minLength": 1},
+    "status": {"enum": ["PASS", "PASS_WITH_EXCEPTIONS", "FAIL"]},
+    "checks": {"type": "array", "minItems": 5, "items": {"$ref": "#/$defs/check"}},
+    "negative_controls": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/control"}},
+    "exceptions": {"type": "array", "items": {"type": "string", "pattern": "^COE-EX-[0-9]{2}$"}},
+    "claim_results": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/claim_result"}}
+  },
+  "$defs": {
+    "check": {
+      "type": "object", "additionalProperties": false,
+      "required": ["check_id", "name", "status", "tested", "passed", "failed", "indeterminate", "findings"],
+      "properties": {
+        "check_id": {"type": "string", "pattern": "^COE-I[1-5]$"},
+        "name": {"enum": ["score_verification", "specification_violation", "reference_verification", "method_code_alignment", "evidence_fitness_and_dependency_closure"]},
+        "status": {"enum": ["pass", "pass_with_exceptions", "fail"]},
+        "tested": {"type": "integer", "minimum": 0},
+        "passed": {"type": "integer", "minimum": 0},
+        "failed": {"type": "integer", "minimum": 0},
+        "indeterminate": {"type": "integer", "minimum": 0},
+        "findings": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "control": {
+      "type": "object", "additionalProperties": false,
+      "required": ["control_id", "expected_check", "detected", "observed_check", "message"],
+      "properties": {
+        "control_id": {"type": "string", "pattern": "^COE-NC-[0-9]{2}$"},
+        "expected_check": {"enum": ["score_verification", "specification_violation", "reference_verification", "method_code_alignment", "evidence_fitness_and_dependency_closure"]},
+        "detected": {"type": "boolean"},
+        "observed_check": {"type": "string"},
+        "message": {"type": "string"}
+      }
+    },
+    "claim_result": {
+      "type": "object", "additionalProperties": false,
+      "required": ["claim_id", "traceability", "integrity", "support", "evidence_fitness", "dependency_closure", "conclusion_eligible"],
+      "properties": {
+        "claim_id": {"type": "string", "pattern": "^(TAE|PAPER)-C[0-9]{2}$"},
+        "traceability": {"enum": ["pass", "fail", "indeterminate", "outside_scope"]},
+        "integrity": {"enum": ["pass", "fail", "indeterminate", "outside_scope"]},
+        "support": {"enum": ["pass", "fail", "indeterminate", "outside_scope"]},
+        "evidence_fitness": {"enum": ["pass", "fail", "indeterminate", "outside_scope"]},
+        "dependency_closure": {"enum": ["pass", "fail", "indeterminate", "outside_scope"]},
+        "conclusion_eligible": {"type": "boolean"}
+      }
+    }
+  }
+}

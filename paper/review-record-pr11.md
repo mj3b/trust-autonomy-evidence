@@ -35,3 +35,4 @@ The frozen v0.3.0 assessment remains unchanged. The paper will identify its clas
 ## Safe drafting boundary
 
 Introduction, related work, search documentation, system inclusion, and method description may proceed. Final abstract, results interpretation, and conclusion remain provisional wherever they depend on Oko satisfying the current supported-state definition.
+

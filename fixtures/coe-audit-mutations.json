@@ -1,0 +1,15 @@
+{
+  "version": "0.5.0",
+  "suite_id": "TAE-COE-NEGATIVE-CONTROLS-V0.5.0",
+  "controls": [
+    {"control_id": "COE-NC-01", "description": "Change one expected assessment state.", "mutation_type": "numeric_mismatch", "target_claim": "PAPER-C03", "expected_check": "score_verification", "parameters": {"evidence_id": "C03-OKO-AUTHORITY", "replacement": "unsupported"}},
+    {"control_id": "COE-NC-02", "description": "Replace one evidence path with a missing file.", "mutation_type": "missing_reference", "target_claim": "PAPER-C05", "expected_check": "reference_verification", "parameters": {"evidence_id": "C05-AUTHORITY"}},
+    {"control_id": "COE-NC-03", "description": "Remove the recorded human support review.", "mutation_type": "support_review_removed", "target_claim": "PAPER-C06", "expected_check": "reference_verification", "parameters": {}},
+    {"control_id": "COE-NC-04", "description": "Fail one required evidence-fitness dimension.", "mutation_type": "fitness_failure", "target_claim": "PAPER-C03", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dimension": "completeness"}},
+    {"control_id": "COE-NC-05", "description": "Remove the implementation marker paired with a method claim.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C08", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C08-IMPLEMENTATION"}},
+    {"control_id": "COE-NC-06", "description": "Replace one satisfied dependency with an unresolved identifier.", "mutation_type": "unresolved_dependency", "target_claim": "PAPER-C09", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dependency": "PAPER-C99"}},
+    {"control_id": "COE-NC-07", "description": "Replace a verified digest with a stale digest.", "mutation_type": "stale_hash", "target_claim": "TAE-C21", "expected_check": "reference_verification", "parameters": {"evidence_id": "C21-PROTOCOL"}},
+    {"control_id": "COE-NC-08", "description": "Label a non-run categorical finding as a multi-run mean.", "mutation_type": "run_type_mislabel", "target_claim": "PAPER-C03", "expected_check": "score_verification", "parameters": {"evidence_id": "C03-OKO-AUTHORITY", "replacement": "multi_run_mean"}},
+    {"control_id": "COE-NC-09", "description": "Add a bounded term without a scope justification.", "mutation_type": "unsupported_scope_term", "target_claim": "TAE-C21", "expected_check": "specification_violation", "parameters": {"term": "guarantees"}}
+  ]
+}

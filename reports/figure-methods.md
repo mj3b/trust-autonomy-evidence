@@ -62,6 +62,7 @@ Twelve controlled mutation tests contain 11 prespecified assessment changes and 
 
 The research lane traces frozen candidate collections through fixed search rules, five recorded screening decisions, three source packets, machine-readable assessments, and the v0.3.0 archive. The figure lane traces committed plot inputs through the builder, six derived CSV files, 12 rendered image files, and an integrity check. Hashes and declared transformations support integrity, ordering, and traceability. Source truth and completeness remain separate propositions.
 
+
 ## Missingness and uncertainty
 
 Figure 3 uses relative sequence because the public packets supply no defensible common time scale. The ZG710 packet alone reports an approximate one-minute decision window. Figure 2 preserves indeterminate states where missing public records prevent a factual finding. Figure 4 preserves outside-scope states where the bounded sequence provides no applicable post-action proposition.
