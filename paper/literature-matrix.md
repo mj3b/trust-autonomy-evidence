@@ -6,7 +6,7 @@ Which prior work most closely addresses the distinction between formal human aut
 
 ## Status
 
-The initial 15-source set was checked against publisher pages, DOI records, conference proceedings, or institutional repositories on 8 August 2026. The PR #11 pressure test added eight near-neighbors. The v0.5 review added ScientistOne. The v0.6 review adds four close sources on oversight effectiveness, compliance testing, assurance audits, and oversight architecture. This matrix is a structured working set, not a systematic review.
+The initial 15-source set was checked against publisher pages, DOI records, conference proceedings, or institutional repositories on 8 August 2026. The PR #11 pressure test added eight near-neighbors. The v0.5 review added ScientistOne. The v0.6 review added four close sources on oversight effectiveness, compliance testing, assurance audits, and oversight architecture. The frozen v0.7 search adds thirteen sources located through direct queries, citation chaining, and official-source checking. This matrix is a structured working set. The formal search record discloses its index and screening limits.
 
 | ID | Stream and source | What it contributes | Relationship to this paper | Boundary or difference |
 |---|---|---|---|---|
@@ -49,6 +49,24 @@ The initial 15-source set was checked against publisher pages, DOI records, conf
 | L27 | Assurance audits: [Lam et al. (2024)](https://doi.org/10.1145/3630106.3658957) | Proposes criterion audits, external assurance, defined scope, and audit reporting for algorithmic systems. | Constrains originality claims for structured algorithmic assurance and clarifies the importance of reviewer independence. | Audits systems against criteria and does not adjudicate historical practical-control stages from public evidence. |
 | L28 | Oversight architecture: [Gaube et al. (2026)](https://doi.org/10.48550/arXiv.2605.16278) | Provides a working definition, architecture, process model, documentation template, and open questions for effective human oversight. | Is the closest broad neighbor to the paper's institutional recordkeeping and process implications. | Does not publish the same combination of frozen selection, retrospective evidence packets, versioned correction, categorical missingness, and dependency closure. |
 
+## v0.7 formal-search additions
+
+| ID | Stream and source | What it contributes | Relationship to this paper | Boundary or difference |
+|---|---|---|---|---|
+| L29 | Layered control: [Verdiesen, Santoni de Sio, and Dignum (2021)](https://doi.org/10.1007/s11023-020-09532-9) | Connects technical, sociotechnical, and governance control to accountability over autonomous weapons. | Shows that control must be assessed across system and institutional layers. | Supplies a design framework without a frozen retrospective evidence packet or correction ledger. |
+| L30 | Contestable intervention: [Almada (2019)](https://doi.org/10.1145/3322640.3326699) | Examines the information and design conditions needed for human intervention to make automated decisions contestable. | Closely supports the access, comprehension, and intervention links in the practical-control chain. | Addresses legal and system design across the decision lifecycle without adjudicating historical public records. |
+| L31 | Causal responsibility: [Douer and Meyer (2020)](https://doi.org/10.1109/TASE.2020.2965466) | Models how function allocation in human-automation systems changes causal responsibility. | Constrains any inference that assigned responsibility or retained functions establish practical causal force. | Provides a quantitative responsibility model without claim-level public-case provenance. |
+| L32 | Oversight support: [Haselager et al. (2023)](https://doi.org/10.1017/S0963180122000718) | Proposes counterargument prompts to help clinicians question medical decision-support advice. | Supplies a concrete mechanism for supporting comprehension and exercised challenge. | Studies a prospective interface intervention in medicine, not retrospective control reconstruction. |
+| L33 | Human learning: [Te'eni, Yahav, and Schwartz (2025)](https://doi.org/10.1007/s00146-025-02401-y) | Treats continual human learning as a condition for stable and adaptive control of AI. | Extends the paper's control mechanism beyond one decision to the institutional capacity that prepares a reviewer to act. | Develops a design account without versioned incident evidence or categorical missingness. |
+| L34 | Interdisciplinary synthesis: [Langer et al. (2025)](https://doi.org/10.4230/DagRep.15.6.189) | Synthesizes conceptual, technical, legal, and practical work on human oversight architecture, processes, and sociotechnical conditions. | Places the practical-control chain inside a broader interdisciplinary research agenda. | Is a seminar report and framework synthesis, not a case-tested evidence procedure. |
+| L35 | Effective oversight conditions: [Sterz et al. (2024)](https://doi.org/10.1145/3630106.3659051) | Defines effective oversight through causal power, epistemic access, self-control, and fitting intentions. | Is the closest conceptual account of why authority requires information and causal capacity. | Does not provide the paper's selection, packet, missingness, versioning, and executable-audit path. |
+| L36 | Institutional fallibility: [Laux (2023)](https://doi.org/10.1007/s00146-023-01777-z) | Develops six institutional-design principles that anticipate overseer incompetence and harmful incentives. | Supports treating human fallibility as a governance-design problem. | Provides normative institutional design without reconstructing whether control worked in a specific incident. |
+| L37 | Agent oversight practice: [Dhanorkar, Passi, and Vorvoreanu (2026)](https://doi.org/10.1145/3805689.3812402) | Reports four forms of oversight work from interviews with 17 experienced developers: a priori control, co-planning, real-time monitoring, and post hoc review. | Supplies early empirical evidence about how people oversee contemporary software agents. | Its interview setting and developer tasks differ from the paper's historical incident packets and documentary states. |
+| L38 | Runtime involvement taxonomy: [Baum and Laux (2026)](https://doi.org/10.48550/arXiv.2603.19213) | Separates constitutive human participation from corrective oversight and distinguishes temporal modes of intervention. | Clarifies the causal role behind formal loop labels and supports the paper's focus on capacity to change an outcome. | Is a conceptual preprint without retrospective evidence adjudication. |
+| L39 | Traceable decision pathway: [Alhalangy (2026)](https://doi.org/10.3390/info17070694) | Integrates prediction, explanation, selective human review, and structured audit records in a synthetic institutional decision-support study. | Shows how review authority, escalation, and durable records can be joined in an operating design. | Uses simulated cases and evaluates fairness and audit-completeness measures, not public incident reconstruction. |
+| L40 | Evidence-linked argument graphs: [Moghaddam (2026)](https://doi.org/10.48550/arXiv.2604.04103) | Proposes typed claim-evidence graphs, deterministic validation rules, and a provenance ledger for certification-grade accountability. | Further constrains originality claims for evidence-linked governance arguments and executable claim checks. | Presents a system design and evaluation strategy without the paper's historical control chain or case-selection record. |
+| L41 | Pre-design governance: [Lee, Yoon, and Lee (2026)](https://doi.org/10.3390/systems14070849) | Defines pre-design decisions about risk, autonomy, oversight authority, documentation duties, and auditability. | Supports the paper's institutional implication that control evidence must be designed into the decision pathway. | Addresses prospective governance priorities under the EU AI Act without retrospective packet adjudication. |
+
 ## Provisional synthesis
 
 The literature establishes five propositions relevant to the manuscript:
@@ -59,20 +77,17 @@ The literature establishes five propositions relevant to the manuscript:
 4. Incident analysis requires records capable of testing alternative causal explanations.
 5. Assurance claims require structured arguments, traceable evidence, assumptions, and uncertainty.
 
-The proposed paper's remaining contribution is narrower than PR #11 stated. Prior work already supplies control conditions, oversight-performance models, compliance-testing cautions, retrospective reconstruction, public AI-incident analysis, assurance logic, forensic evidence controls, claim traceability, and oversight architectures. The paper studies one integration: a frozen public-case procedure that connects candidate selection, source provenance, categorical missingness, practical-control stages, versioned adjudication, claim-specific evidence fitness, conclusion dependency closure, and executable artifact checks.
+The proposed paper's remaining contribution is narrower than PR #11 stated. Prior work already supplies control conditions, causal-role taxonomies, oversight-performance models, institutional-design principles, compliance-testing cautions, retrospective reconstruction, public AI-incident analysis, assurance logic, forensic evidence controls, claim traceability, evidence-linked argument graphs, and oversight architectures. The paper studies one governance-specific integration: a frozen public-case procedure that connects candidate selection, source provenance, categorical missingness, practical-control stages, versioned adjudication, claim-specific evidence fitness, conclusion dependency closure, and executable artifact checks.
 
-## Search expansion required
+## Remaining search gate
 
-Before a novelty claim is permitted, expand the review across:
+The formal open-index search and selected-index citation chains are recorded in [`formal-citation-chain-v0.7.0.md`](formal-citation-chain-v0.7.0.md). Before a contribution claim can be described as the result of a completed multidisciplinary search, the author must still:
 
-- Scopus or Web of Science;
-- IEEE Xplore and ACM Digital Library;
-- PhilPapers;
-- HeinOnline or an equivalent legal database;
-- backward references from L01, L02, L04, L06, L10, L12, L14, and L15;
-- forward citations to those same sources;
-- terms combining `meaningful human control`, `human oversight`, `incident reconstruction`, `assurance case`, `formal authority`, `practical control`, `contestability`, `override`, and `evidence traceability`.
+- confirm the twelve `retain-close` proposals and the 77 records marked for author attention;
+- review the inaccessible-record risk created by 1,087 records without abstracts;
+- search Scopus or Web of Science through authenticated access;
+- complete the declared disciplinary-interface log for IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index.
 
-Record databases, dates, complete search strings, duplicate treatment, inclusion decisions, and inaccessible results.
+The word `novel` remains prohibited. The paper may describe its declared search, closest sources, and bounded integration.
 
 The [literature search log](literature-search-log.md) records the open-web pilot. The [novelty audit](novelty-audit.md) defines the current rejection test and the work that remains.

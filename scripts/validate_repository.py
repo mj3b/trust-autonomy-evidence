@@ -140,6 +140,20 @@ REQUIRED_FILES = (
     "paper/citation-chain-log-v0.6.0.md",
     "paper/literature-support-audit-v0.6.0.json",
     "paper/literature-support-audit-v0.6.0.md",
+    "paper/formal-literature-search-protocol-v0.7.0.md",
+    "paper/formal-citation-chain-v0.7.0.md",
+    "paper/formal-search-screening-v0.7.0.md",
+    "paper/data/formal-search-v0.7.0.json",
+    "paper/data/formal-screening-proposals-v0.7.0.json",
+    "paper/data/formal-metadata-verification-v0.7.0.json",
+    "paper/data/author-screening-queue-v0.7.0.csv",
+    "paper/literature-support-audit-v0.7.0.json",
+    "paper/literature-support-audit-v0.7.0.md",
+    "scripts/run_formal_literature_search.py",
+    "scripts/propose_formal_search_screening.py",
+    "scripts/verify_formal_search_metadata.py",
+    "scripts/validate_formal_search.py",
+    "scripts/validate_release_snapshot.py",
     "scripts/validate_v060_adjudication.py",
     "scripts/validate_literature_support.py",
     "paper/claim-crosswalk.md",
@@ -359,21 +373,15 @@ def validate_case_interactions(failures: list[str]) -> None:
             fail(f"TAE-PUB-003 missing-evidence mismatch: {field}", failures)
 
 
-def validate_release_manifest(failures: list[str]) -> None:
-    manifest = json.loads(
-        (ROOT / "release/v0.6.0-manifest.json").read_text(encoding="utf-8")
+def validate_release_snapshot(failures: list[str]) -> str:
+    result = subprocess.run(
+        [sys.executable, "scripts/validate_release_snapshot.py"],
+        cwd=ROOT, text=True, capture_output=True, check=False,
     )
-    if manifest.get("version") != REPOSITORY_VERSION:
-        fail("release manifest version mismatch", failures)
-    for artifact in manifest.get("artifacts", []):
-        path = ROOT / artifact["path"]
-        if not path.is_file():
-            fail(f"release artifact missing: {artifact['path']}", failures)
-            continue
-        if path.stat().st_size != artifact["bytes"]:
-            fail(f"release artifact size mismatch: {artifact['path']}", failures)
-        if digest(path) != artifact["sha256"]:
-            fail(f"release artifact hash mismatch: {artifact['path']}", failures)
+    if result.returncode != 0:
+        fail(f"release snapshot failed: {(result.stdout + result.stderr).strip()}", failures)
+        return ""
+    return result.stdout.strip()
 
 
 def validate_solo_suite(failures: list[str]) -> str:
@@ -420,21 +428,6 @@ def validate_figure_set(failures: list[str]) -> str:
     return result.stdout.strip()
 
 
-def validate_coe_audit(failures: list[str]) -> str:
-    result = subprocess.run(
-        [sys.executable, "scripts/run_coe_integrity_audit.py", "--check"],
-        cwd=ROOT,
-        text=True,
-        capture_output=True,
-        check=False,
-    )
-    if result.returncode != 0:
-        detail = (result.stdout + result.stderr).strip()
-        fail(f"chain-of-evidence audit failed: {detail}", failures)
-        return ""
-    return result.stdout.strip()
-
-
 def validate_coe_figure(failures: list[str]) -> str:
     result = subprocess.run(
         [sys.executable, "analysis/build_claim_evidence_figure.py", "--check"],
@@ -472,6 +465,17 @@ def validate_literature(failures: list[str]) -> str:
     return result.stdout.strip()
 
 
+def validate_formal_search(failures: list[str]) -> str:
+    result = subprocess.run(
+        [sys.executable, "scripts/validate_formal_search.py"],
+        cwd=ROOT, text=True, capture_output=True, check=False,
+    )
+    if result.returncode != 0:
+        fail(f"formal-search audit failed: {(result.stdout + result.stderr).strip()}", failures)
+        return ""
+    return result.stdout.strip()
+
+
 def main() -> int:
     failures: list[str] = []
     validate_required_files(failures)
@@ -483,13 +487,13 @@ def main() -> int:
     validate_packet_hashes(failures)
     validate_candidate_search(failures)
     validate_case_interactions(failures)
-    validate_release_manifest(failures)
+    release_result = validate_release_snapshot(failures)
     solo_result = validate_solo_suite(failures)
     figure_result = validate_figure_set(failures)
-    coe_result = validate_coe_audit(failures)
     coe_figure_result = validate_coe_figure(failures)
     adjudication_result = validate_adjudication(failures)
     literature_result = validate_literature(failures)
+    formal_search_result = validate_formal_search(failures)
 
     if failures:
         for failure in failures:
@@ -497,18 +501,20 @@ def main() -> int:
         print(f"repository validation: FAIL ({len(failures)} error(s))")
         return 1
 
+    if release_result:
+        print(release_result)
     if solo_result:
         print(solo_result)
     if figure_result:
         print(figure_result)
-    if coe_result:
-        print(coe_result)
     if coe_figure_result:
         print(coe_figure_result)
     if adjudication_result:
         print(adjudication_result)
     if literature_result:
         print(literature_result)
+    if formal_search_result:
+        print(formal_search_result)
     print("repository validation: PASS")
     return 0
 

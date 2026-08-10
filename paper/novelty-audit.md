@@ -4,9 +4,15 @@
 
 The broad novelty hypothesis in PR #11 does not survive pressure testing. Prior work already addresses each major component separately: human-control conditions, retrospective reconstruction, public AI-incident analysis, assurance cases, state reconstruction, forensic evidence preservation, incident-reporting design, claim traceability, and post-hoc research-integrity audit.
 
-A narrower combination hypothesis remains open. No reviewed source yet combines a protocol fixed before candidate screening, a preserved contrastive selection path, versioned public evidence packets, explicit indeterminate states, a formal-authority-to-effect chain, claim-specific historical evidence fitness, conclusion dependency closure, and executable checks over the published artifacts.
+A narrower combination hypothesis remains open. The reviewed sources do not disclose the full combination of a protocol fixed before candidate screening, a preserved contrastive selection path, versioned public evidence packets, explicit indeterminate states, a formal-authority-to-effect chain, claim-specific historical evidence fitness, conclusion dependency closure, a versioned correction ledger, and executable checks over published artifacts.
 
-This is a search result, not a novelty finding.
+This statement describes the declared search result. Universal originality remains outside its support.
+
+## Formal-search state
+
+The frozen v0.7 search returned 2,431 deduplicated records from direct queries and selected-seed citation chains. Twelve records are proposed as close additions. Seventy-seven more records have title-and-abstract overlap requiring author attention. Another 1,087 records lack abstracts and remain inaccessible for substantive screening. Semantic Scholar resolved fourteen of fifteen citation seeds; OpenAlex resolved thirteen and supplied a zero-link record for L12.
+
+The machine triage does not close the contribution decision. Mark Julius Banasihan must confirm the close set and the material exclusions. Authenticated Scopus or Web of Science and the declared disciplinary interfaces also remain open.
 
 ## Closest prior work
 
@@ -26,9 +32,27 @@ This is a search result, not a novelty finding.
 | Lam et al. (2024), L27 | Proceedings paper and DOI metadata inspected | Criterion audits, assurance scope, audit reporting, and independence | System assurance audit without the practical-control chain or historical packet correction |
 | Gaube et al. (2026), L28 | arXiv abstract and metadata inspected | Working definition, architecture, process, documentation template, and open questions for effective oversight | Broad oversight framework without frozen contrastive selection, retrospective packets, and dependency closure |
 
+## Closest formal-search additions
+
+| Source | Review state on 2026-08-09 | Material overlap | Remaining difference |
+|---|---|---|---|
+| Verdiesen, Santoni de Sio, and Dignum (2021), L29 | Publisher page and full open text inspected | Technical, sociotechnical, and governance control layers tied to accountability | Prospective framework without the public-case selection and adjudication path |
+| Almada (2019), L30 | Proceedings abstract and DOI metadata inspected | Information and design conditions for contestable human intervention | Lifecycle contestability analysis without historical evidence packets |
+| Douer and Meyer (2020), L31 | Publisher abstract and DOI metadata inspected | Causal responsibility under human-automation function allocation | Quantitative responsibility model without packet provenance or missingness states |
+| Haselager et al. (2023), L32 | Publisher abstract and DOI metadata inspected | Counterargument prompts intended to support effective oversight | Prospective medical interface design without retrospective reconstruction |
+| Te'eni, Yahav, and Schwartz (2025), L33 | Publisher page and accessible text inspected | Human learning as a condition for stable and adaptive control | Design account without case-level evidence adjudication |
+| Langer et al. (2025), L34 | Official Dagstuhl report inspected | Oversight architecture, process, and sociotechnical conditions | Interdisciplinary synthesis without a released case-test procedure |
+| Sterz et al. (2024), L35 | Official proceedings paper and arXiv record inspected | Causal power, epistemic access, self-control, and fitting intentions | Conceptual conditions without source packets, correction history, and executable audits |
+| Laux (2024), L36 | Publisher and institutional open copy inspected | Institutional design that anticipates overseer incompetence and incentives | Normative framework without incident-level adjudication |
+| Dhanorkar, Passi, and Vorvoreanu (2026), L37 | Official arXiv abstract and DOI metadata inspected | Empirical forms, challenges, and heuristics of agent oversight work | Interview study without historical packet states or contribution-dependency checks |
+| Baum and Laux (2026), L38 | Official arXiv abstract inspected | Causal taxonomy of constitutive and corrective runtime involvement | Conceptual preprint without public-case evidence testing |
+| Alhalangy (2026), L39 | Publisher abstract and methods summary inspected | Selective human review joined to structured audit records | Synthetic design-science evaluation without retrospective incident reconstruction |
+| Moghaddam (2026), L40 | Official arXiv abstract inspected | Evidence-linked formal arguments, validation invariants, and provenance ledger | System-design proposal without the paper's practical-control assessment chain |
+| Lee, Yoon, and Lee (2026), L41 | Publisher page inspected | Pre-design oversight authority, documentation duties, and auditability | Prospective governance framework without historical packet adjudication |
+
 ## Contribution that remains defensible
 
-The paper can position its contribution as an integration and domain-adaptation claim. It applies established claim-evidence architecture to a procedure that exposes where a human-control statement is supported, contradicted, unresolved, or unfit for the proposed conclusion in a bounded public record. The contribution resides in the declared combination and the inspectable artifacts, subject to the following limits:
+The paper can position its contribution as a governance-specific integration and domain-adaptation claim. It applies established claim-evidence architecture to a procedure that exposes where a human-control statement is supported, contradicted, unresolved, or unfit for the proposed conclusion in a bounded public record. The contribution resides in the declared combination and the inspectable artifacts, subject to the following limits:
 
 - the case strata anticipate the three headline contrasts;
 - one assessor designed and applied the procedure;
@@ -55,6 +79,6 @@ Substantial equivalence also defeats the claim when terminology differs. The aud
 
 The present review supports this provisional sentence:
 
-> Existing research explains why formal oversight may lack practical force, how investigators can reconstruct human contributions and sociotechnical failure, which records AI incidents require, and how research and assurance claims can be tied to evidence and checked against implementation. This paper examines one governance-specific adaptation: a frozen public-case procedure with explicit missingness, claim-specific evidence fitness, dependency closure, and executable artifact checks.
+> Existing research explains why formal oversight may lack practical force, how investigators can reconstruct human contributions and sociotechnical failure, which records AI incidents require, and how research and assurance claims can be tied to evidence and checked against implementation. This paper examines one governance-specific integration: a frozen public-case procedure with visible selection, explicit missingness, versioned adjudication, claim-specific evidence fitness, conclusion dependency closure, and executable artifact checks.
 
-The word `novel` remains prohibited in the manuscript until the documented institutional database and full citation-chaining work is complete. The v0.6 citation sample and sentence-level support audit narrow uncertainty and do not remove this restriction.
+The word `novel` remains prohibited in the manuscript. The formal open-index search and full Semantic Scholar chains narrow uncertainty. Author-confirmed screening, inaccessible-record review, authenticated multidisciplinary searching, and disciplinary-interface checks remain open.
