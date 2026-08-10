@@ -1,0 +1,104 @@
+% Journal-style table fragments for the Trust, Autonomy, and Evidence manuscript.
+% Requires: \usepackage{booktabs,tabularx,threeparttable}
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
+\caption{Assessment-state decision rules}
+\label{tab:state-rules}
+\begin{tabularx}{\linewidth}{l c X}
+\toprule
+State & Code & Decision rule \\
+\midrule
+Supported & S & Direct, contemporaneous evidence satisfies the stage definition. \\
+Partially supported & P & Some required elements are present and a material gap remains. \\
+Unsupported & U & Available evidence contradicts the stage or shows that the condition was absent. \\
+Indeterminate & I & The packet lacks enough evidence to decide. \\
+Outside scope & O & The stage does not apply within the declared case boundary, with a written reason. \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]\footnotesize
+\item A missing record produces an indeterminate state unless the protocol or case design establishes that the record should exist. The states are categorical. No numeric distance or aggregate score is assigned.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
+\caption{Practical-control states across three public cases}
+\label{tab:practical-control}
+\begin{tabular}{l c c c}
+\toprule
+Stage & Oko, 1983 & ZG710, 2003 & F/A-18C, 2003 \\
+\midrule
+Access before action & P & P & P \\
+Comprehension & P & U & I \\
+Formal authority & P & S & S \\
+Feasible challenge & P & U & I \\
+Exercised challenge & P & U & I \\
+Protective effect & P & U & U \\
+\midrule
+Correction & O & O & O \\
+Repair & O & U & U \\
+Institutional reform & P & S & S \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item S = supported; P = partially supported; U = unsupported; I = indeterminate; O = outside scope. The table reports 27 item-level findings from three purposefully selected cases. It supplies no frequency, causal, or population estimate.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
+\caption{Formal search and preliminary screening}
+\label{tab:formal-search}
+\begin{tabularx}{\linewidth}{l X r l}
+\toprule
+Stage & Record class & Count & Status \\
+\midrule
+Retrieval & Direct queries & 184 & Declared open-index queries complete \\
+Retrieval & Citation chains & 2,482 & Fourteen of fifteen seeds resolved \\
+Pooling & Combined records & 2,666 & Before deduplication \\
+Pooling & Deduplicated records & 2,431 & Unit for preliminary triage \\
+\midrule
+Preliminary triage & Retain close & 12 & Author decision required \\
+Preliminary triage & Retain background & 13 & Proposed background set \\
+Preliminary triage & Attention records & 77 & Author decision required \\
+Preliminary triage & Exclude topic & 1,239 & AI-assisted proposal \\
+Preliminary triage & Inaccessible & 1,087 & Substantive screening unresolved \\
+Preliminary triage & Outside cutoff & 3 & Published after cutoff \\
+\midrule
+Author gate & Open queue & 89 & Twelve close plus 77 attention records \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]\footnotesize
+\item The six preliminary triage classes sum to 2,431. The decisions are AI-assisted proposals. The 89-record author gate and authenticated database searching remain open.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
+\caption{Versioned correction of the Oko assessment}
+\label{tab:oko-correction}
+\begin{tabularx}{\linewidth}{l c c X}
+\toprule
+Stage & v0.3.0 & v0.6.0 & Material gap recorded in v0.6.0 \\
+\midrule
+Access before action & S & P & No contemporaneous delivery, interface, or command record was located. \\
+Comprehension & S & P & No contemporaneous reasoning, review, or explanation record was located. \\
+Formal authority & S & P & No contemporaneous delegation or command-procedure record was located. \\
+Feasible challenge & S & P & No contemporaneous timing or operating record was located. \\
+Exercised challenge & S & P & No contemporaneous decision or communication log was located. \\
+Protective effect & S & P & No contemporaneous linked action, stop, or escalation record was located. \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]\footnotesize
+\item The packet remained fixed. The v0.6.0 adjudication applied a protocol frozen before reassessment and admitted no new historical source. The correction records a change in evidence classification.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

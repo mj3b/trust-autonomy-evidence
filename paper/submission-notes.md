@@ -60,7 +60,7 @@ The existing GitHub and Zenodo materials are research artifacts. They are not su
 
 The v0.4.0 evidence and figure archive has the version DOI [10.5281/zenodo.21844706](https://doi.org/10.5281/zenodo.21844706). The concept DOI `10.5281/zenodo.21841127` resolves to the latest archived version and must not replace the version DOI in a claim tied to v0.4.0.
 
-The v0.5.0 claim-evidence audit is archived at [10.5281/zenodo.21863464](https://doi.org/10.5281/zenodo.21863464). The v0.6.0 release is archived at [10.5281/zenodo.21865007](https://doi.org/10.5281/zenodo.21865007). The v0.7 branch has no version DOI. Update `CITATION.cff`, this file, and the manuscript availability section only after a later release is archived.
+The v0.5.0 claim-evidence audit is archived at [10.5281/zenodo.21863464](https://doi.org/10.5281/zenodo.21863464). The v0.6.0 release is archived at [10.5281/zenodo.21865007](https://doi.org/10.5281/zenodo.21865007). The v0.7.0 GitHub release is prepared for archival, and its Zenodo version DOI remains pending. Update this file and the manuscript availability section after Zenodo issues the exact version DOI.
 
 ## Authorship
 

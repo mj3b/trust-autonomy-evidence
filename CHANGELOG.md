@@ -4,6 +4,23 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
+## 0.7.0, 10 August 2026
+
+Packages the formal literature search and full methods manuscript as a versioned research checkpoint.
+
+- Freezes eight search families, fifteen citation seeds, screening states, deduplication, and contribution-rejection rules before retrieval.
+- Preserves 184 direct-query records, 2,482 citation-chain records, and 2,431 deduplicated records with request-level metadata.
+- Publishes preliminary triage for all 2,431 records and an 89-record author-decision queue.
+- Records 1,087 inaccessible records, authenticated database gaps, and disciplinary-interface gaps as open limits.
+- Expands the checked working set to 41 sources and audits 21 material literature propositions in the full review draft.
+- Publishes the full methods manuscript with results, discussion, institutional record requirements, ethics, author contribution, and AI-assistance disclosure.
+- Redesigns all seven existing figures into a compact journal visual system with white backgrounds, thin rules, one blue accent, direct labels, and color-independent state codes.
+- Adds Figure 5 for formal-search retrieval and screening and Figure A4 for the Oko correction path.
+- Publishes five main figures, four appendix figures, nine derived CSV files, nine PNG files, nine SVG files, and versioned manifests.
+- Adds four structured manuscript tables in Markdown and journal-ready `booktabs` fragments.
+- Preserves v0.6.0 and earlier release manifests, assessments, audit files, and exact historical artifacts.
+- Leaves author-confirmed screening, authenticated searching, ethics guidance, independent reliability, field validity, and institutional effectiveness open.
+
 ## 0.6.0, 9 August 2026
 
 Resolves the Oko evidence-rule mismatch and moves the methods paper into a controlled results-drafting phase.

@@ -1,7 +1,7 @@
 # Trust, Autonomy, and Evidence
 
 [![Status: Working Research](https://img.shields.io/badge/status-working%20research-5b6cff)](RESEARCH_STATUS.md)
-[![Version: 0.6.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
+[![Version: 0.7.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21841127.svg)](https://doi.org/10.5281/zenodo.21841127)
 [![Validation](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml/badge.svg)](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
@@ -19,7 +19,7 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 ## Current contribution
 
-[Version 0.6.0](https://github.com/mj3b/trust-autonomy-evidence/releases) contributes fifteen connected artifacts:
+[Version 0.7.0](https://github.com/mj3b/trust-autonomy-evidence/releases) contributes eighteen connected artifacts:
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
@@ -29,17 +29,20 @@ The project develops an evidence architecture for bounded reliance. It identifie
 6. A frozen public-case selection protocol with preserved candidate inputs, search output, exclusions, and selection decisions.
 7. Three public evidence packets covering a successful pre-action intervention, formal authority without practical force, and an action sequence whose cause remains indeterminate.
 8. A frozen research agenda focused on practical authority, evidence sufficiency, and interacting control conditions.
-9. A publication figure set containing four main figures, two appendix figures, six derived data tables, formal captions, reading guides, and artifact-integrity checks.
+9. A publication figure set containing five main figures, four appendix figures, nine derived data tables, formal captions, reading guides, and artifact-integrity checks.
 10. A machine-readable map connecting 15 material claims to exact evidence locations, human support attestations, evidence-fitness judgments, dependencies, limitations, and reversal conditions.
 11. An executable integrity audit that applies five checks and detects nine prespecified corruptions without changing the released case packets.
 12. A research-lineage record, activity log, audit report, and claim-evidence matrix that preserve authorship, AI assistance, open exceptions, and conclusion eligibility.
 13. A prereassessment Oko adjudication protocol, frozen evidence universe, six-stage reassessment, and machine-readable change ledger.
-14. A 28-source working literature matrix, index-based citation sample, and sentence-level audit covering 16 material literature propositions in the current draft.
-15. A paper-readiness package that resolves the Oko protocol mismatch while keeping independent assessment and systematic novelty searching outside the supported claim set.
+14. A 41-source working literature matrix and sentence-level audit covering 21 material literature propositions in the full review draft.
+15. A frozen formal search containing eight direct queries, fifteen citation seeds, 2,431 deduplicated records, and an explicit 89-record author-decision gate.
+16. A full methods manuscript with results, discussion, institutional implications, ethics, limitations, and AI-assistance disclosure.
+17. A structured table package that preserves exact states and counts in Markdown and journal-ready `booktabs` fragments.
+18. A paper-readiness package that keeps independent assessment, author-confirmed screening, authenticated database coverage, and ethics guidance outside the supported claim set.
 
-All 252 determinations and 12 original mutation tests pass under the committed contract. The v0.6.0 adjudication detects all six prespecified corruptions. The integrity audit maps 15 material claims and detects all nine prespecified claim-map corruptions. Two exceptions remain: no independent assessment and incomplete institutional database and full citation-chain coverage. These results establish internal contract behavior and traceability for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, source truth, originality, or improved outcomes.
+All 252 determinations and 12 original mutation tests pass under the committed contract. The v0.6.0 adjudication detects all six prespecified corruptions. The integrity audit maps 15 material claims and detects all nine prespecified claim-map corruptions. Its two published exceptions remain: no independent assessment and incomplete institutional database coverage. The v0.7 search also leaves 89 author decisions and 1,087 inaccessible records open. These results establish internal contract behavior and traceability for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, source truth, originality, or improved outcomes.
 
-The v0.6.0 release preserves the committed v0.5.0, v0.4.0, v0.3.0, and v0.2.0 artifacts. Its negative controls run on in-memory copies. It adds a current Oko assessment and leaves the earlier v0.3.0 assessment unchanged.
+The v0.7.0 release preserves the committed v0.6.0 and earlier release artifacts. Its negative controls run on in-memory copies. It adds the formal search, full manuscript draft, journal-style figures, structured tables, and a new release manifest. The earlier case packets and v0.3.0 Oko assessment remain unchanged.
 
 ## Featured figure
 
@@ -64,7 +67,7 @@ In the current v0.6.0 assessment, every Oko stage from access through effect is 
 
 In the Patriot ZG710 case, a human authorized the engagement. The evidence indicates weak comprehension and no feasible or exercised challenge before launch. Formal authority therefore produced no protective effect.
 
-In the F/A-18C case, the public record confirms human authority and some access to information. Missing records prevent conclusions about what operators saw, understood, or could have done in time. The purple cells mean “we do not know.” Orange cells record evidence that a condition failed.
+In the F/A-18C case, the public record confirms human authority and some access to information. Missing records prevent conclusions about what operators saw, understood, or could have done in time. Open diamonds marked `I` mean “we do not know.” Gray crosses marked `U` record evidence that a condition failed.
 
 The later reforms shown in both Patriot cases indicate institutional learning. They could not repair the losses already caused.
 
@@ -76,7 +79,7 @@ The paper-stage [PR #11 pressure test](paper/review-record-pr11.md) identified t
 
 The figure shows this pattern across three historical cases. It supplies no estimate of how often these failures occur and no prediction of performance in current AI systems.
 
-The [publication figure set](figures/) contains the remaining main figures, three appendix figures, their derived data, and plain-language reading guides.
+The [publication figure set](figures/) contains five main figures, four appendix figures, derived data, formal captions, and plain-language reading guides. The [structured tables](paper/tables.md) preserve the exact states and counts behind the graphics.
 
 ## Claim-evidence integrity figure
 
@@ -104,7 +107,9 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`GOVERNANCE.md`](GOVERNANCE.md) | Define contribution evidence, review rules, decision authority, and change records. |
 | [`research/`](research/) | Contains the main conceptual paper on justified reliance, autonomy, and practical control. |
 | [`research/frozen-research-agenda.md`](research/frozen-research-agenda.md) | Freezes three research topics and one project question for the next public-case cycle. |
-| [`paper/`](paper/) | Develops the methods paper, claim register, literature audit, review record, references, and publication decisions. |
+| [`paper/`](paper/) | Develops the methods paper, formal search, claim register, literature audit, structured tables, references, and publication decisions. |
+| [`paper/tables.md`](paper/tables.md) | Publishes compact exact-value tables with captions, notes, and interpretation boundaries. |
+| [`paper/tables/manuscript-tables.tex`](paper/tables/manuscript-tables.tex) | Provides journal-style `booktabs` fragments with three horizontal rules and no vertical rules. |
 | [`evidence/`](evidence/) | Contains the trust evidence register, v0.6 claim-evidence map, research lineage, and AI-assisted activity log. |
 | [`evidence/claim-evidence-map.json`](evidence/claim-evidence-map.json) | Connects 15 material claims to exact locators, five fitness dimensions, dependencies, human review, limits, and reversal conditions. |
 | [`evidence/research-lineage.json`](evidence/research-lineage.json) | Records people, software, research activities, artifacts, and relations using PROV-O-compatible concepts. |
@@ -120,7 +125,7 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`analysis/`](analysis/) | Implements deterministic assessment logic and builders for the publication figures and claim-evidence matrix. |
 | [`assessments/`](assessments/) | Stores generated results plus the current v0.6 Oko assessment and change ledger. |
 | [`reports/`](reports/) | Publishes the solo-validation and three-case reconstruction results with explicit claim boundaries. |
-| [`figures/`](figures/) | Publishes four main figures, three appendix figures, their derived data, plotting specifications, and plain-language reading guides. |
+| [`figures/`](figures/) | Publishes five main figures, four appendix figures, nine derived CSV files, plotting specifications, and plain-language reading guides. |
 | [`reports/figure-methods.md`](reports/figure-methods.md) | Records formal captions, transformations, missingness treatment, and prohibited interpretations for the figure set. |
 | [`audits/v0.6.0/`](audits/v0.6.0/) | Publishes the current audit plan, machine-readable result, plain-language report, and two open exceptions. |
 | [`scripts/`](scripts/) | Contains candidate-search, packet-sealing, release-manifest, repository-validation, paper-validation, and integrity-audit utilities. |
@@ -144,7 +149,7 @@ python -m pip install -r requirements-dev.txt
 python scripts/validate_repository.py
 ```
 
-The repository validator checks required release files, internal links, version alignment, schemas, source references, sealed packet and release hashes, selection invariants, current case interactions, 252 oracle comparisons, 12 original mutation tests, six adjudication controls, nine claim-integrity controls, literature support, and figure integrity. The paper validator checks author identity, question alignment, 28 bibliography entries, the archived v0.5 DOI, current claim eligibility, and the novelty-language boundary. Successful runs end with `repository validation: PASS`, `chain-of-evidence audit: PASS_WITH_EXCEPTIONS`, and `paper validation: PASS`.
+The repository validator checks required release files, internal links, version alignment, schemas, source references, sealed packet and release hashes, selection invariants, current case interactions, 252 oracle comparisons, 12 original mutation tests, six adjudication controls, nine claim-integrity controls, formal-search consistency, literature support, and figure integrity. The paper validator checks author identity, question alignment, 41 bibliography entries, the archived v0.6 DOI, current claim eligibility, and the originality-language boundary. Successful runs end with `repository validation: PASS`, `chain-of-evidence audit: PASS_WITH_EXCEPTIONS`, and `paper validation: PASS`.
 
 ## Research boundaries
 
@@ -165,11 +170,11 @@ Contributions should identify the proposition being changed, the evidence suppor
 
 ## Citation
 
-Version 0.6.0 is prepared for release through GitHub and the repository's Zenodo integration. Its version-specific DOI is pending creation of the Zenodo archive. Until that record exists, cite v0.5.0 by its version DOI, [10.5281/zenodo.21863464](https://doi.org/10.5281/zenodo.21863464), and identify v0.6.0 as the repository version used when relying on the Oko correction.
+Version 0.7.0 is prepared for release through GitHub and the repository's Zenodo integration. Its version-specific DOI remains pending until Zenodo creates the archive. Until that record exists, cite v0.6.0 by its version DOI, [10.5281/zenodo.21865007](https://doi.org/10.5281/zenodo.21865007), and identify v0.7.0 as the repository version used for the formal search, manuscript, figures, and tables.
 
-> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.6.0) [Computer software]. Zenodo. Version DOI pending.
+> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.7.0) [Computer software]. Zenodo. Version DOI pending.
 
-The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata in [CITATION.cff](CITATION.cff) identifies v0.6.0 and will receive the exact DOI after archiving. Earlier releases remain available through the Zenodo record history.
+The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata in [CITATION.cff](CITATION.cff) identifies v0.7.0 and will receive the exact version DOI after archiving. Earlier releases remain available through the Zenodo record history.
 
 ## Author
 

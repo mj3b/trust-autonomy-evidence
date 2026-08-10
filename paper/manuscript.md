@@ -124,6 +124,18 @@ The assessment contract records six autonomy variables, twelve trust-evidence pr
 
 A bounded practical-force conclusion requires supported findings for access, authority, feasibility, exercise, and effect. Correction and repair are required for a wider institutional-accountability conclusion. Reform requires longitudinal evidence.
 
+**Table 1. Assessment-state decision rules.**
+
+| State | Code | Decision rule |
+|---|:---:|---|
+| Supported | S | Direct, contemporaneous evidence satisfies the stage definition. |
+| Partially supported | P | Some required elements are present and a material gap remains. |
+| Unsupported | U | Available evidence contradicts the stage or shows that the condition was absent. |
+| Indeterminate | I | The packet lacks enough evidence to decide. |
+| Outside scope | O | The stage does not apply within the declared case boundary, with a written reason. |
+
+*Note.* A missing record produces an indeterminate state unless the protocol or case design establishes that the record should exist. The states are categorical. No numeric distance or aggregate score is assigned.
+
 ### 3.8 Missing evidence and inference
 
 Missing public evidence produces an indeterminate state unless the packet establishes that a required record should exist and eligible evidence shows the condition was absent. This rule blocks a common inference error in retrospective work: converting an unavailable log, display, inquiry, or internal record into a finding that the underlying condition failed. The report separates what a source states, what a preserved record directly shows, what the assessor infers, and what remains unresolved.
@@ -168,6 +180,22 @@ Figure 2 compares the six pre-action stages. Oko carries partial support across 
 
 **Figure 2. Practical-control chain.** The result shows that assigned authority can coexist with different states for information, understanding, opportunity, action, and effect. The comparison reports the procedure's output for purposefully selected cases. It supplies no frequency estimate.
 
+**Table 2. Practical-control states across three public cases.**
+
+| Stage | Oko, 1983 | Patriot ZG710, 2003 | Patriot F/A-18C, 2003 |
+|---|:---:|:---:|:---:|
+| Access before action | P | P | P |
+| Comprehension | P | U | I |
+| Formal authority | P | S | S |
+| Feasible challenge | P | U | I |
+| Exercised challenge | P | U | I |
+| Protective effect | P | U | U |
+| Correction | O | O | O |
+| Repair | O | U | U |
+| Institutional reform | P | S | S |
+
+*Note.* S = supported; P = partially supported; U = unsupported; I = indeterminate; O = outside scope. The table reports 27 item-level findings. It supplies no frequency, causal, or population estimate.
+
 ### 4.6 Decision paths and trust-evidence states
 
 Figure 3 traces each bounded sequence from machine output through human and institutional action. Its relative spacing reflects the absence of a defensible common time scale. Figure 4 reports the twelve trust-evidence propositions by case. The categorical states are kept separate because the protocol defines no validated aggregation rule.
@@ -178,11 +206,46 @@ The v0.6 integrity audit maps fifteen material repository claims. Every declared
 
 **Figure A3. Claim-evidence integrity.** The matrix shows that traceability and conclusion eligibility are separate decisions. It assigns no numeric score.
 
+**Figure A4. Versioned correction of the Oko assessment.** All six pre-action stages move from supported in v0.3.0 to partially supported in v0.6.0. The packet remained fixed. The frozen evidence rule required the correction, and the change supplies no new historical evidence.
+
+**Table A1. Oko correction record.**
+
+| Stage | v0.3.0 | v0.6.0 | Material gap recorded in v0.6.0 |
+|---|:---:|:---:|---|
+| Access before action | S | P | No contemporaneous delivery, interface, or command record was located. |
+| Comprehension | S | P | No contemporaneous reasoning, review, or explanation record was located. |
+| Formal authority | S | P | No contemporaneous delegation or command-procedure record was located. |
+| Feasible challenge | S | P | No contemporaneous timing or operating record was located. |
+| Exercised challenge | S | P | No contemporaneous decision or communication log was located. |
+| Protective effect | S | P | No contemporaneous linked action, stop, or escalation record was located. |
+
+*Note.* The v0.6.0 adjudication applied a protocol frozen before reassessment and admitted no new historical source.
+
 ### 4.8 Formal search result
 
 The eight Semantic Scholar queries returned 184 records. Fourteen resolved seed chains returned 2,482 reference and citation records. L12 returned `404` for both chain endpoints. The combined pool contains 2,431 deduplicated records. Preliminary triage proposes twelve close additions and retains thirteen earlier matrix records found in the pool. Seventy-seven records contain both control and evidence terms and require author attention. Another 1,087 records lack abstracts and remain inaccessible for substantive screening. Three records fall after the publication cutoff.
 
 Crossref resolved 22 of 25 DOI-bearing retained proposals. OpenAlex resolved thirteen of fifteen citation seeds, including an L12 record with zero indexed links. Different reference and citation counts across indexes show that chain coverage depends on the selected index. The search therefore supports a declared closest-work analysis and a bounded integration statement. It does not support universal originality.
+
+**Figure 5. Formal search retrieval and preliminary screening.** The left panel traces 184 direct-query records and 2,482 citation-chain records through pooling and deduplication. The right panel reports the six preliminary triage classes on a logarithmic count axis. Blue points identify the 12 retain-close records and 77 attention records in the open author-decision queue. The triage is AI-assisted and remains provisional.
+
+**Table 3. Formal search and preliminary screening.**
+
+| Stage | Record class | Count | Status |
+|---|---|---:|---|
+| Retrieval | Direct queries | 184 | Complete for the declared open-index queries |
+| Retrieval | Citation chains | 2,482 | Fourteen of fifteen seed chains resolved |
+| Pooling | Combined records | 2,666 | Before deduplication |
+| Pooling | Deduplicated records | 2,431 | Unit for preliminary triage |
+| Preliminary triage | Retain close | 12 | Author decision required |
+| Preliminary triage | Retain background | 13 | Proposed background set |
+| Preliminary triage | Attention records | 77 | Author decision required |
+| Preliminary triage | Exclude topic | 1,239 | AI-assisted proposal |
+| Preliminary triage | Inaccessible | 1,087 | Substantive screening unresolved |
+| Preliminary triage | Outside cutoff | 3 | Published after the cutoff |
+| Author gate | Open queue | 89 | Twelve close plus 77 attention records |
+
+*Note.* The six preliminary triage classes sum to 2,431. The 89 author decisions and authenticated database searching remain open.
 
 ## 5. Discussion
 
@@ -249,7 +312,7 @@ The result is a method demonstration. Independent assessors, varied case familie
 
 ## Data and materials availability
 
-The repository, versioned releases, packets, assessments, figure data, audit outputs, search files, and release manifests are available at [github.com/mj3b/trust-autonomy-evidence](https://github.com/mj3b/trust-autonomy-evidence). The v0.6.0 evidence archive has the version DOI [10.5281/zenodo.21865007](https://doi.org/10.5281/zenodo.21865007). The all-versions DOI is [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127). The formal search data and this manuscript remain branch artifacts until a later version-specific archive is released.
+The repository, versioned releases, packets, assessments, figure data, audit outputs, search files, manuscript tables, and release manifests are available at [github.com/mj3b/trust-autonomy-evidence](https://github.com/mj3b/trust-autonomy-evidence). The v0.6.0 evidence archive has the version DOI [10.5281/zenodo.21865007](https://doi.org/10.5281/zenodo.21865007). The all-versions DOI is [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127). The v0.7.0 archive contains the formal search, full manuscript draft, journal-style figures, and structured tables. Its version DOI remains pending until Zenodo issues the record.
 
 ## Ethics and publication authority
 

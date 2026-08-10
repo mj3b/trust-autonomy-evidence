@@ -1,6 +1,6 @@
 # Paper Workspace
 
-This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. Manuscript work proceeds on focused `paper/*` branches. Released case packets, assessments, figures, and manifests remain the controlling research record.
+This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. Version 0.7.0 publishes the formal open-index search, full review draft, figures, and structured tables as a research checkpoint. Released case packets, assessments, and manifests remain the controlling research record.
 
 **PR #11 merge commit:** [`a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec`](https://github.com/mj3b/trust-autonomy-evidence/commit/a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec)
 
@@ -16,6 +16,8 @@ This directory develops a methods and comparative-case paper from the repository
 |---|---|
 | [`paper-charter.md`](paper-charter.md) | Fixes the paper type, question, contribution, audience, and claim boundary. |
 | [`manuscript.md`](manuscript.md) | Contains the full v0.4 review draft, including results, discussion, ethics, limitations, and disclosure. |
+| [`tables.md`](tables.md) | Preserves exact assessment states, search counts, correction history, captions, and interpretation notes. |
+| [`tables/manuscript-tables.tex`](tables/manuscript-tables.tex) | Provides journal-ready `booktabs` fragments with three horizontal rules and no vertical rules. |
 | [`literature-matrix.md`](literature-matrix.md) | Relates 41 working sources to the proposed contribution and its boundaries. |
 | [`literature-search-log.md`](literature-search-log.md) | Records discovery queries, dates, retained candidates, and search limits. |
 | [`formal-literature-search-protocol-v0.7.0.md`](formal-literature-search-protocol-v0.7.0.md) | Freezes the formal search, screening, deduplication, and citation-chain rules before retrieval. |

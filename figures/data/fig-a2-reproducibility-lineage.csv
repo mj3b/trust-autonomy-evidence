@@ -4,11 +4,11 @@ node,candidates,research,2,Candidate search,928 candidate records | frozen vocab
 node,selection,research,3,Selection register,5 decisions | 3 strata filled,,
 node,packets,research,4,Case packets,3 reports and | source manifests,,
 node,assessments,research,5,Assessments,JSON states and | evidence references,,
-node,archive,research,6,Release archive,v0.3.0 manifest | Zenodo DOI,,
-node,plot_inputs,figures,1,Plot inputs,"Assessments, selection, | mutations, lineage spec",,
-node,builder,figures,2,Figure builder,build_figures.py | fixed ordering and palette,,
-node,derived,figures,3,Derived tables,6 CSV files | cell-level provenance,,
-node,figures,figures,4,Rendered figures,6 SVG and | 6 PNG files,,
+node,archive,research,6,Release archive,version manifest | and archive DOI,,
+node,plot_inputs,figures,1,Plot inputs,"Assessments, search, | mutations, audit",,
+node,builder,figures,2,Figure builder,two builders | fixed ordering,,
+node,derived,figures,3,Derived tables,9 CSV files | cell provenance,,
+node,figures,figures,4,Rendered figures,9 SVG and | 9 PNG files,,
 node,validation,figures,5,Integrity check,CSV equality and | artifact integrity,,
 edge,,,,,,collections,candidates
 edge,,,,,,candidates,selection

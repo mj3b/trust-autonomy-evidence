@@ -14,7 +14,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.6.0"
+REPOSITORY_VERSION = "0.7.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
 REQUIRED_FILES = (
@@ -111,18 +111,27 @@ REQUIRED_FILES = (
     "figures/generated/fig-3-decision-paths.svg",
     "figures/generated/fig-4-trust-evidence-states.png",
     "figures/generated/fig-4-trust-evidence-states.svg",
+    "figures/data/fig-5-formal-search-and-screening.csv",
+    "figures/generated/fig-5-formal-search-and-screening.png",
+    "figures/generated/fig-5-formal-search-and-screening.svg",
     "figures/generated/fig-a1-mutation-response.png",
     "figures/generated/fig-a1-mutation-response.svg",
     "figures/generated/fig-a2-reproducibility-lineage.png",
     "figures/generated/fig-a2-reproducibility-lineage.svg",
     "figures/generated/fig-a3-claim-evidence-integrity.png",
     "figures/generated/fig-a3-claim-evidence-integrity.svg",
+    "figures/data/fig-a4-oko-versioned-correction.csv",
+    "figures/generated/fig-a4-oko-versioned-correction.png",
+    "figures/generated/fig-a4-oko-versioned-correction.svg",
     "figures/v0.5.0-manifest.json",
     "figures/v0.6.0-manifest.json",
+    "figures/v0.7.0-manifest.json",
+    "figures/v0.7.0-claim-evidence-manifest.json",
     "release/v0.3.0-manifest.json",
     "release/v0.4.0-manifest.json",
     "release/v0.5.0-manifest.json",
     "release/v0.6.0-manifest.json",
+    "release/v0.7.0-manifest.json",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -149,6 +158,8 @@ REQUIRED_FILES = (
     "paper/data/author-screening-queue-v0.7.0.csv",
     "paper/literature-support-audit-v0.7.0.json",
     "paper/literature-support-audit-v0.7.0.md",
+    "paper/tables.md",
+    "paper/tables/manuscript-tables.tex",
     "scripts/run_formal_literature_search.py",
     "scripts/propose_formal_search_screening.py",
     "scripts/verify_formal_search_metadata.py",
@@ -384,6 +395,45 @@ def validate_release_snapshot(failures: list[str]) -> str:
     return result.stdout.strip()
 
 
+def validate_release_candidate(failures: list[str]) -> str:
+    relative = "release/v0.7.0-manifest.json"
+    path = ROOT / relative
+    if not path.is_file():
+        fail(f"missing current release manifest: {relative}", failures)
+        return ""
+    try:
+        manifest = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        fail(f"invalid current release manifest: {exc}", failures)
+        return ""
+    if manifest.get("version") != REPOSITORY_VERSION:
+        fail("current release manifest version mismatch", failures)
+    if manifest.get("hash_algorithm") != "SHA-256":
+        fail("current release manifest hash algorithm mismatch", failures)
+    artifacts = manifest.get("artifacts")
+    if not isinstance(artifacts, list) or not artifacts:
+        fail("current release manifest artifact list is empty", failures)
+        return ""
+    indexed = {}
+    for row in artifacts:
+        if not isinstance(row, dict) or not isinstance(row.get("path"), str):
+            fail("current release manifest contains an invalid artifact row", failures)
+            continue
+        indexed[row["path"]] = row
+    if len(indexed) != len(artifacts):
+        fail("current release manifest contains duplicate artifact paths", failures)
+    for artifact_path, row in indexed.items():
+        file_path = ROOT / artifact_path
+        if not file_path.is_file():
+            fail(f"current release artifact is missing: {artifact_path}", failures)
+            continue
+        if row.get("bytes") != file_path.stat().st_size:
+            fail(f"current release artifact size mismatch: {artifact_path}", failures)
+        if row.get("sha256") != digest(file_path):
+            fail(f"current release artifact hash mismatch: {artifact_path}", failures)
+    return f"release candidate validation: PASS ({len(indexed)} sealed artifacts)"
+
+
 def validate_solo_suite(failures: list[str]) -> str:
     result = subprocess.run(
         [sys.executable, "analysis/run_solo_validation.py", "--check"],
@@ -406,8 +456,8 @@ def validate_figure_set(failures: list[str]) -> str:
     figures = register.get("figures", [])
     identifiers = [row.get("figure_id") for row in figures]
     stubs = [row.get("file_stub") for row in figures]
-    expected_identifiers = ["FIG-1", "FIG-2", "FIG-3", "FIG-4", "FIG-A1", "FIG-A2"]
-    if register.get("version") != REPOSITORY_VERSION or register.get("source_release") != REPOSITORY_VERSION:
+    expected_identifiers = ["FIG-1", "FIG-2", "FIG-3", "FIG-4", "FIG-5", "FIG-A1", "FIG-A2", "FIG-A4"]
+    if register.get("version") != REPOSITORY_VERSION or register.get("source_release") != "0.6.0":
         fail("figure register version or source release mismatch", failures)
     if identifiers != expected_identifiers:
         fail(f"figure register identifier mismatch: {identifiers}", failures)
@@ -488,6 +538,7 @@ def main() -> int:
     validate_candidate_search(failures)
     validate_case_interactions(failures)
     release_result = validate_release_snapshot(failures)
+    release_candidate_result = validate_release_candidate(failures)
     solo_result = validate_solo_suite(failures)
     figure_result = validate_figure_set(failures)
     coe_figure_result = validate_coe_figure(failures)
@@ -503,6 +554,8 @@ def main() -> int:
 
     if release_result:
         print(release_result)
+    if release_candidate_result:
+        print(release_candidate_result)
     if solo_result:
         print(solo_result)
     if figure_result:

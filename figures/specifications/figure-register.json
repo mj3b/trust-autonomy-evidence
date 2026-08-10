@@ -1,11 +1,12 @@
 {
-  "version": "0.6.0",
+  "version": "0.7.0",
   "source_release": "0.6.0",
+  "visual_standard": "Journal width, white background, thin horizontal rules, one blue accent, direct labels, and color-independent state codes. Titles, source notes, uncertainty, and interpretation belong in manuscript captions.",
   "figures": [
     {
       "figure_id": "FIG-1",
       "file_stub": "fig-1-selection-and-stopping",
-      "title": "The frozen stopping rule selected three cases after five screenings",
+      "title": "Public-case selection and stopping",
       "unit_of_analysis": "candidate record and screening decision",
       "sample": "928 preserved candidate records; the first five AIID records were screened",
       "input_files": [
@@ -20,7 +21,7 @@
     {
       "figure_id": "FIG-2",
       "file_stub": "fig-2-practical-control-chain",
-      "title": "Authority evidence does not determine the remaining practical-control states",
+      "title": "Practical-control states across three public cases",
       "unit_of_analysis": "practical-control proposition within a public case",
       "sample": "27 declared states from 9 propositions across 3 purposefully selected cases",
       "input_files": [
@@ -36,7 +37,7 @@
     {
       "figure_id": "FIG-3",
       "file_stub": "fig-3-decision-paths",
-      "title": "The intervention path remains visible until public evidence runs out",
+      "title": "Bounded decision paths and public evidence gaps",
       "unit_of_analysis": "reconstructed event within a bounded case sequence",
       "sample": "15 source-linked events across 3 public cases",
       "input_files": [
@@ -47,12 +48,12 @@
       ],
       "transformation": "Transcribe the five bounded chronology stages declared for each case and place them in relative event order.",
       "claim_supported": "The public record identifies where a human judgment entered each sequence and where missing records constrain further inference.",
-      "prohibited_interpretation": "Horizontal spacing has no elapsed-time scale. The Tornado packet alone supplies an approximate one-minute decision window."
+      "prohibited_interpretation": "Horizontal spacing has no elapsed-time scale. The ZG710 packet alone supplies an approximate one-minute decision window."
     },
     {
       "figure_id": "FIG-4",
       "file_stub": "fig-4-trust-evidence-states",
-      "title": "Each case leaves material trust-evidence propositions unresolved or unsupported",
+      "title": "Trust-evidence states across three public cases",
       "unit_of_analysis": "trust-evidence proposition within a public case",
       "sample": "36 declared states from 12 propositions across 3 purposefully selected cases",
       "input_files": [
@@ -65,9 +66,24 @@
       "prohibited_interpretation": "The matrix supplies no aggregate trust score and no claim that one system is generally safer or more trustworthy."
     },
     {
+      "figure_id": "FIG-5",
+      "file_stub": "fig-5-formal-search-and-screening",
+      "title": "Formal search retrieval and preliminary screening",
+      "unit_of_analysis": "deduplicated literature record",
+      "sample": "2,431 deduplicated records retrieved through direct queries and citation chains",
+      "input_files": [
+        "paper/data/formal-search-v0.7.0.json",
+        "paper/data/formal-screening-proposals-v0.7.0.json",
+        "paper/data/author-screening-queue-v0.7.0.csv"
+      ],
+      "transformation": "Sum direct-query and citation-chain retrieval counts, preserve the pooled and deduplicated totals, plot preliminary screening counts on a declared logarithmic axis, and calculate the open author queue as 12 retain-close plus 77 attention records.",
+      "claim_supported": "The open-index search produced a declared record pool and a visible author-decision gate. Eighty-nine substantive screening decisions remain open.",
+      "prohibited_interpretation": "The preliminary triage is not a completed systematic review, and the search supplies no universal originality claim."
+    },
+    {
       "figure_id": "FIG-A1",
       "file_stub": "fig-a1-mutation-response",
-      "title": "All 12 controlled mutations matched the prespecified response",
+      "title": "Prespecified mutation responses",
       "unit_of_analysis": "mutation delta assertion or invariance condition",
       "sample": "12 mutation tests containing 11 delta assertions and 3 invariance tests",
       "input_files": [
@@ -81,7 +97,7 @@
     {
       "figure_id": "FIG-A2",
       "file_stub": "fig-a2-reproducibility-lineage",
-      "title": "Every plotted state traces to a frozen input or prespecified test",
+      "title": "Reproducibility lineage",
       "unit_of_analysis": "research or figure-generation artifact",
       "sample": "11 artifact classes connected by 10 declared lineage edges",
       "input_files": [
@@ -93,6 +109,20 @@
       "transformation": "Render the declared research and figure-generation artifact graph in process order and record hashes for the committed publication artifacts.",
       "claim_supported": "A reader can trace plotted states from preserved inputs through assessments, derived tables, rendered files, and integrity checks.",
       "prohibited_interpretation": "Hashes and reproducible transformations establish integrity and traceability. They do not establish the truth or completeness of the source content."
+    },
+    {
+      "figure_id": "FIG-A4",
+      "file_stub": "fig-a4-oko-versioned-correction",
+      "title": "Versioned correction of the Oko practical-control states",
+      "unit_of_analysis": "reassessed practical-control proposition",
+      "sample": "6 propositions reassessed under the frozen v0.6.0 evidence rule",
+      "input_files": [
+        "assessments/v0.6.0/oko-change-ledger.json",
+        "protocols/oko-evidence-adjudication-v0.6.0.md"
+      ],
+      "transformation": "Read each prior and current state from the correction ledger and draw the recorded version transition without changing the source packet.",
+      "claim_supported": "All six Oko pre-action states moved from supported to partially supported when the frozen direct-and-contemporaneous rule was applied to the existing packet.",
+      "prohibited_interpretation": "The figure records a method-driven correction. It supplies no new historical evidence and no estimate of error frequency."
     }
   ]
 }

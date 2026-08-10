@@ -20,7 +20,7 @@ This crosswalk connects the working manuscript register to the executable v0.6 c
 | C17 | Eligible with decision boundary | Report the machine-triage counts as preliminary proposals requiring author confirmation. |
 | C18 | Provisional | Use governance-specific integration language. Preserve the open author-screening, inaccessible-record, authenticated-database, and interface limits. |
 | C19 | Eligible with ethics boundary | State the public-record design and absence of participant interaction. Claim no formal exemption. |
-| C20 | Eligible | Cite the v0.6.0 version DOI and identify the v0.7 branch artifacts as unreleased. |
+| C20 | Eligible | Cite the v0.6.0 version DOI and identify the v0.7.0 Zenodo version DOI as pending. |
 | C21 | Proposed and bounded | Argue for an institutional evidence duty tied to a human-control representation. Preserve individual-fault, legal, safety, and outcome boundaries. |
 
 `COE-EX-02` is closed for the current manuscript draft. The selected-index citation chains are complete within recorded Semantic Scholar limits. `COE-EX-04` remains open for author-confirmed screening, inaccessible records, authenticated multidisciplinary databases, and disciplinary interfaces. The manuscript uses no originality finding.

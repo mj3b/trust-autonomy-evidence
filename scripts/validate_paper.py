@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the unreleased practical human control paper workspace."""
+"""Validate the v0.7.0 practical human control paper workspace."""
 
 from __future__ import annotations
 
@@ -17,11 +17,13 @@ QUESTION = (
     "public incident record?"
 )
 VERSION_DOI = "10.5281/zenodo.21865007"
-REPOSITORY_VERSION = "0.6.0"
+REPOSITORY_VERSION = "0.7.0"
 PAPER_FILES = (
     "paper/README.md",
     "paper/paper-charter.md",
     "paper/manuscript.md",
+    "paper/tables.md",
+    "paper/tables/manuscript-tables.tex",
     "paper/literature-matrix.md",
     "paper/literature-search-log.md",
     "paper/novelty-audit.md",
@@ -116,7 +118,7 @@ def validate_boundaries(failures: list[str]) -> None:
         fail("current Oko claim missing from claim register", failures)
     citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
     if f"version: {REPOSITORY_VERSION}" not in citation:
-        fail("CITATION.cff does not identify v0.6.0", failures)
+        fail("CITATION.cff does not identify v0.7.0", failures)
     if VERSION_DOI not in manuscript:
         fail("v0.6.0 version DOI missing from paper/manuscript.md", failures)
     matrix = (ROOT / "paper/literature-matrix.md").read_text(encoding="utf-8")
