@@ -95,7 +95,7 @@ def chain_all(seed: str, relation: str, request_delay: float) -> tuple[list[dict
     offset = 0
     while True:
         params = {"offset": offset, "limit": 100, "fields": FIELDS}
-        url = api_url(f"/paper/{urllib.parse.quote(seed, safe='')}/{relation}", params)
+        url = api_url(f"/paper/{urllib.parse.quote(seed, safe=':')}/{relation}", params)
         payload = fetch_json(url)
         page = payload.get("data", [])
         normalized = []
@@ -143,6 +143,7 @@ def main() -> None:
     search_runs: dict[str, Any] = {}
     pooled: list[dict[str, Any]] = []
     for query_id, query in SEARCH_QUERIES.items():
+        print(f"search {query_id}", flush=True)
         records, requests = search_all(query, args.delay)
         search_runs[query_id] = {"query": query, "record_count": len(records), "requests": requests, "records": records}
         pooled.extend(records)
@@ -150,15 +151,28 @@ def main() -> None:
 
     chains: dict[str, Any] = {}
     for literature_id, seed in SEEDS.items():
-        references, reference_requests = chain_all(seed, "references", args.delay)
+        print(f"chain {literature_id}", flush=True)
+        chain_errors: list[dict[str, Any]] = []
+        try:
+            references, reference_requests = chain_all(seed, "references", args.delay)
+        except urllib.error.HTTPError as exc:
+            references = []
+            reference_requests = []
+            chain_errors.append({"relation": "references", "http_status": exc.code, "reason": str(exc)})
         time.sleep(args.delay)
-        citations, citation_requests = chain_all(seed, "citations", args.delay)
+        try:
+            citations, citation_requests = chain_all(seed, "citations", args.delay)
+        except urllib.error.HTTPError as exc:
+            citations = []
+            citation_requests = []
+            chain_errors.append({"relation": "citations", "http_status": exc.code, "reason": str(exc)})
         chains[literature_id] = {
             "seed": seed,
             "reference_count": len(references),
             "citation_count": len(citations),
             "reference_requests": reference_requests,
             "citation_requests": citation_requests,
+            "errors": chain_errors,
             "references": references,
             "citations": citations,
         }
