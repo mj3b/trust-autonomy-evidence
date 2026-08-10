@@ -79,7 +79,7 @@ def search_all(query: str, request_delay: float) -> tuple[list[dict[str, Any]], 
             params["token"] = token
         url = api_url("/paper/search/bulk", params)
         payload = fetch_json(url)
-        page = payload.get("data", [])
+        page = payload.get("data") or []
         records.extend(page)
         requests.append({"url": url, "returned": len(page), "estimated_total": payload.get("total")})
         token = payload.get("token")
@@ -97,7 +97,7 @@ def chain_all(seed: str, relation: str, request_delay: float) -> tuple[list[dict
         params = {"offset": offset, "limit": 100, "fields": FIELDS}
         url = api_url(f"/paper/{urllib.parse.quote(seed, safe=':')}/{relation}", params)
         payload = fetch_json(url)
-        page = payload.get("data", [])
+        page = payload.get("data") or []
         normalized = []
         for item in page:
             paper = item.get("citedPaper") or item.get("citingPaper") or item
