@@ -19,7 +19,7 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 ## Current contribution
 
-The v0.9.0 working state builds on the published [v0.8.0 release](https://github.com/mj3b/trust-autonomy-evidence/releases) and contributes eighteen connected artifacts:
+[Version 0.9.0](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.9.0) contributes eighteen connected artifacts:
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
@@ -42,7 +42,7 @@ The v0.9.0 working state builds on the published [v0.8.0 release](https://github
 
 All 252 determinations and 12 original mutation tests pass under the committed contract. The v0.6.0 adjudication detects all six prespecified corruptions. The v0.9 integrity audit maps 20 material claims and detects all 14 prespecified claim-map corruptions. Two exceptions remain: no independent assessment and incomplete literature-search coverage. The author gate is closed at 89 of 89 decisions. Another 1,087 records lack abstracts and remain open. These results establish internal contract behavior and traceability for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, source truth, originality, or improved outcomes.
 
-The v0.9.0 working increment preserves every published release artifact. It adds 89 accountable screening decisions, a final Figure 5 search flow, a proposal-to-author decision table, fifteen close-source matrix entries, a narrower contribution boundary, and a rebuilt Figure A3. The earlier case packets and v0.3.0 Oko assessment remain unchanged.
+The v0.9.0 release preserves every earlier release artifact. It adds 89 accountable screening decisions, a final Figure 5 search flow, a proposal-to-author decision table, fifteen close-source matrix entries, a narrower contribution boundary, and a rebuilt Figure A3. The earlier case packets and v0.3.0 Oko assessment remain unchanged.
 
 ## Featured figure
 
@@ -179,7 +179,7 @@ Contributions should identify the proposition being changed, the evidence suppor
 
 ## Citation
 
-Version 0.9.0 is the current release candidate. Its version-specific DOI remains pending. Until that DOI is recorded, use the all-versions DOI and identify v0.9.0 as the repository version used for the author-screened manuscript, figures, tables, claim map, and integrity audit.
+Version 0.9.0 is the current release. Its version-specific DOI remains pending. Until that DOI is recorded, use the all-versions DOI and identify v0.9.0 as the repository version used for the author-screened manuscript, figures, tables, claim map, and integrity audit.
 
 > Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.9.0) [Computer software]. Zenodo. Version DOI pending.
 
