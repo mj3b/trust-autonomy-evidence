@@ -97,6 +97,10 @@ The search can support a bounded contribution statement when:
 
 This protocol cannot establish universal originality. It can show that a declared search did or did not locate a substantially equivalent method by the cutoff date.
 
+## Retrieval implementation correction
+
+The first API run on 9 August 2026 returned zero direct-search records because the bulk endpoint does not parse the words `AND` and `OR` as its Boolean operators. The official Semantic Scholar syntax uses `+` for a required term or group and `|` for alternatives. Before candidate screening, the executable strings were corrected to express the eight frozen concept families with the documented operators. The citation-chain retrieval was unaffected. This correction changes API syntax and preserves the search concepts, cutoff, inclusion rules, and decision rule.
+
 ## Authorship and assistance
 
 Mark Julius Banasihan owns the search decisions, source interpretations, and manuscript claims. AI assistance may retrieve metadata, normalize records, propose screening candidates, and check consistency. The machine-generated candidate set is evidence for review activity. It is not a human judgment and cannot close the contribution decision by itself.

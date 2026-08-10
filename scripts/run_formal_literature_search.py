@@ -21,14 +21,14 @@ FIELDS = (
     "authors,citationCount,referenceCount,publicationTypes,openAccessPdf"
 )
 SEARCH_QUERIES = {
-    "F01": '"meaningful human control" AND (evidence OR assessment OR operationalization OR assurance)',
-    "F02": '"effective human oversight" AND (evidence OR performance OR audit OR evaluation OR compliance)',
-    "F03": '("human oversight" OR "human control") AND ("incident reconstruction" OR "accident reconstruction")',
-    "F04": '("formal authority" OR "human authority") AND ("practical control" OR override OR intervention OR contestability) AND (automation OR "artificial intelligence" OR autonomous)',
-    "F05": '("AI incident" OR "algorithmic incident") AND (reconstruction OR provenance OR "chain of custody" OR "missing evidence")',
-    "F06": '("assurance case" OR "assurance audit") AND ("human control" OR "human oversight")',
-    "F07": '("claim evidence" OR "chain of evidence") AND ("human control" OR "human oversight")',
-    "F08": '(indeterminate OR missingness) AND ("human oversight" OR "meaningful human control")',
+    "F01": '"meaningful human control" +(evidence | assessment | operationalization | assurance)',
+    "F02": '"effective human oversight" +(evidence | performance | audit | evaluation | compliance)',
+    "F03": '("human oversight" | "human control") +("incident reconstruction" | "accident reconstruction")',
+    "F04": '("formal authority" | "human authority") +("practical control" | override | intervention | contestability) +(automation | "artificial intelligence" | autonomous)',
+    "F05": '("AI incident" | "algorithmic incident") +(reconstruction | provenance | "chain of custody" | "missing evidence")',
+    "F06": '("assurance case" | "assurance audit") +("human control" | "human oversight")',
+    "F07": '("claim evidence" | "chain of evidence") +("human control" | "human oversight")',
+    "F08": '(indeterminate | missingness) +("human oversight" | "meaningful human control")',
 }
 SEEDS = {
     "L01": "DOI:10.3389/frobt.2018.00015",
