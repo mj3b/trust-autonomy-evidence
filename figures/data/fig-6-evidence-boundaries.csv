@@ -1,0 +1,13 @@
+case_id,case_title,state,count,stages,denominator
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",supported,0,,6
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",partially_supported,6,access;comprehension;authority;feasibility;exercise;effect,6
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",unsupported,0,,6
+TAE-PUB-001,"Oko false launch warning, 26 September 1983",indeterminate,0,,6
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",supported,1,authority,6
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",partially_supported,1,access,6
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",unsupported,4,comprehension;feasibility;exercise;effect,6
+TAE-PUB-002,"Patriot engagement of RAF Tornado ZG710, 22 March 2003",indeterminate,0,,6
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",supported,1,authority,6
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",partially_supported,1,access,6
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",unsupported,1,effect,6
+TAE-PUB-003,"Patriot engagement of U.S. Navy F/A-18C, 2 April 2003",indeterminate,3,comprehension;feasibility;exercise,6

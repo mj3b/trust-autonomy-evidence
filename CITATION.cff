@@ -1,9 +1,8 @@
 cff-version: 1.2.0
-message: "Version 0.7.0 is prepared for archival release. Use its version DOI once Zenodo issues the record."
+message: "Version 0.8.0 is released. Use the all-versions DOI until the version-specific DOI is recorded."
 title: "Trust, Autonomy, and Evidence"
 type: software
-version: 0.7.0
-date-released: 2026-08-10
+version: 0.8.0
 authors:
   - family-names: Banasihan
     given-names: Mark Julius

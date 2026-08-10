@@ -4,6 +4,23 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
+## 0.8.0, 10 August 2026
+
+Pressure-tests the manuscript and exposes the remaining submission gates.
+
+- Explains that bracketed `@` strings are Pandoc citation identifiers and verifies that all 38 manuscript identifiers resolve to bibliography records.
+- Adds a GitHub-readable manuscript with clickable author-year citations and a rendered reference list.
+- Adds a manuscript pressure-test report covering citations, counts, claims, coding stability, ethics, and submission gates.
+- Revises the abstract to identify 89 open author decisions and 1,087 inaccessible records.
+- Adds Figure 6, which preserves supported, partial, unsupported, and indeterminate states across the six pre-action stages.
+- Adds Table A3, which shows that the current version history supplies no eligible reliability estimate.
+- Adds an executable author-screening completion gate and keeps Figure 5 preliminary while author decisions remain open.
+- Expands the executable claim map from 15 to 20 material claims and adds the reader manuscript, Figure 6, Table A3, author-screening checkpoint, and blocked final-screening conclusion.
+- Expands the integrity suite from nine to fourteen controlled corruptions and records three open exceptions.
+- Rebuilds Figure A3 from the v0.8 audit to display twenty claims and both ineligible conclusions.
+- Seals the audit records, author review, machine-readable screening-gate summary, figures, manuscript files, schemas, controls, and validation utilities in the v0.8 release manifest.
+- Preserves the v0.7.0 release manifests and tagged artifacts as release history.
+
 ## 0.7.0, 10 August 2026
 
 Packages the formal literature search and full methods manuscript as a versioned research checkpoint.

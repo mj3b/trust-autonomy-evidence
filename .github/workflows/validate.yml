@@ -26,5 +26,5 @@ jobs:
         run: python scripts/validate_repository.py
       - name: Validate paper workspace
         run: python scripts/validate_paper.py
-      - name: Validate frozen v0.6.0 release snapshot
+      - name: Validate frozen release snapshots
         run: python scripts/validate_release_snapshot.py

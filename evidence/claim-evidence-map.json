@@ -1,7 +1,7 @@
 {
-  "version": "0.6.0",
-  "scope_id": "TAE-COE-V0.6.0",
-  "description": "Material paper and repository claims audited in v0.6.0, with a separate sentence-level literature-support register.",
+  "version": "0.8.0",
+  "scope_id": "TAE-COE-V0.8.0",
+  "description": "Material paper and repository claims audited through v0.8.0, with a separate sentence-level literature-support register.",
   "claims": [
     {
       "claim_id": "PAPER-C02",
@@ -174,8 +174,8 @@
       "status": "supported",
       "verification_rule": "The validator must contain executable checks for each named internal property and complete successfully for the committed artifacts.",
       "evidence": [
-        {"evidence_id": "C08-METHOD", "path": "reports/figure-methods.md", "locator_type": "markdown_heading", "locator": "## Reproducibility check", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "a0bc777ca2d706b82c370c744714f154a72477c7db841ac652917d6043a5674e", "content_review": "recorded"},
-        {"evidence_id": "C08-IMPLEMENTATION", "path": "scripts/validate_repository.py", "locator_type": "text_marker", "locator": "validate_case_interactions", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5da37a677bedb64a030f6eadaa20c1bbfedd97d428963ec0cb13716de6ce6753", "content_review": "recorded"}
+        {"evidence_id": "C08-METHOD", "path": "reports/figure-methods.md", "locator_type": "markdown_heading", "locator": "## Reproducibility check", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "735a5997594e2a9d48d7ae76215fb83b9002560d9b8fa97cda7610781c6182b6", "content_review": "recorded"},
+        {"evidence_id": "C08-IMPLEMENTATION", "path": "scripts/validate_repository.py", "locator_type": "text_marker", "locator": "validate_case_interactions", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "7d4f4a96c332ab99b24117683c74539d65f38ea46cbcf67aa6ba05e781f9b87f", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The method report names the control and the script implements the checks."},
@@ -272,40 +272,40 @@
     },
     {
       "claim_id": "PAPER-C15",
-      "claim_text": "Sixteen material literature propositions in the current manuscript resolve to checked bibliography keys and explicit sentence locators.",
+      "claim_text": "Twenty-one material literature propositions in the current manuscript resolve to checked bibliography keys and explicit sentence locators.",
       "claim_class": "citation",
       "claim_scope": "paper",
       "status": "supported",
       "verification_rule": "The sentence-level audit must pass schema validation, resolve every locator once, and map every citation key to the bibliography.",
       "evidence": [
-        {"evidence_id": "C15-AUDIT", "path": "paper/literature-support-audit-v0.6.0.json", "locator_type": "json_pointer", "locator": "/version", "role": "source", "source_id": null, "expected_value": "0.6.0", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "cc4a1c9d2b4d654f7e4f0f6f7b2ae473e1e2d00d320dc88788f1bfa9baf12304", "content_review": "recorded"},
-        {"evidence_id": "C15-VALIDATOR", "path": "scripts/validate_literature_support.py", "locator_type": "text_marker", "locator": "locator must occur exactly once", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e3ea8a9f001d50effa93532dd14812703e45809c1fbfb6bb601ee9e1d327820b", "content_review": "recorded"}
+        {"evidence_id": "C15-AUDIT", "path": "paper/literature-support-audit-v0.7.0.json", "locator_type": "json_pointer", "locator": "/version", "role": "source", "source_id": null, "expected_value": "0.7.0", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "cebfe5457e43860a38a368bab5db8763046beb32051d7a384819a46fb4b1cb8b", "content_review": "recorded"},
+        {"evidence_id": "C15-VALIDATOR", "path": "scripts/validate_literature_support.py", "locator_type": "text_marker", "locator": "locator must occur exactly once", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "dc11fe5a5be75e8dc2b868c42a479a5a1eea6a6c5556e0a208850ecf6ca7e68b", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The audit directly maps the current manuscript locators to bibliography keys."},
-        "contemporaneity": {"state": "pass", "rationale": "The audit targets the current v0.3 manuscript draft."},
+        "contemporaneity": {"state": "pass", "rationale": "The audit targets the current v0.8 manuscript draft."},
         "independence": {"state": "outside_scope", "rationale": "The claim concerns internal support review and no independent literature review."},
-        "completeness": {"state": "pass", "rationale": "All 16 registered material literature propositions pass the declared checks."},
+        "completeness": {"state": "pass", "rationale": "All 21 registered material literature propositions pass the declared checks."},
         "publication_authority": {"state": "pass", "rationale": "The author controls and attests to the current manuscript support register."}
       },
       "dependencies": [],
       "dependency_closure": "pass",
       "conclusion_eligible": true,
-      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "paper/literature-support-audit-v0.6.0.md", "note": "Reviewed for the current draft only."},
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-10", "attestation_path": "paper/literature-support-audit-v0.7.0.md", "note": "Reviewed for the current draft only."},
       "scope_terms": [],
       "limitations": ["Institutional database searching and complete citation chaining remain open."],
       "reversal_conditions": ["A locator or citation key stops resolving, a support state changes, or the manuscript changes without an audit update."]
     },
     {
       "claim_id": "TAE-C21",
-      "claim_text": "Version 0.6 defines separate traceability, integrity, support, evidence-fitness, and dependency-closure gates for its declared claim set.",
+      "claim_text": "Version 0.8 retains separate traceability, integrity, support, evidence-fitness, and dependency-closure gates for its declared claim set.",
       "claim_class": "methodological",
       "claim_scope": "method",
       "status": "supported",
       "verification_rule": "The protocol and claim-map schema must define all five gates and store their required states.",
       "evidence": [
         {"evidence_id": "C21-PROTOCOL", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Five gates", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "8c1e96e261268eb0328431c43617504280c3a2894450fb5b405d93218fe8ce15", "content_review": "recorded"},
-        {"evidence_id": "C21-SCHEMA", "path": "schemas/claim-evidence-map.schema.json", "locator_type": "text_marker", "locator": "dependency_closure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "1d233cd86e1032402c6202024d3ce1aea035f3e43b2cf6c7776a6b1bed0ed4da", "content_review": "recorded"}
+        {"evidence_id": "C21-SCHEMA", "path": "schemas/claim-evidence-map.schema.json", "locator_type": "text_marker", "locator": "dependency_closure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c3e61140178abcf83d7e52f0f07a0343dbc51509abd5052689f6ea5f501ab97d", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The protocol defines the gates and the schema stores them."},
@@ -317,20 +317,20 @@
       "dependencies": [],
       "dependency_closure": "pass",
       "conclusion_eligible": true,
-      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "evidence/research-activity-log.json", "note": "Reviewed as a v0.6 artifact property."},
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-10", "attestation_path": "paper/review-record-v0.8.0.md", "note": "Reviewed as a v0.8 artifact property."},
       "scope_terms": [],
       "limitations": ["The five gates cover only claims declared in this map."],
       "reversal_conditions": ["The protocol or schema removes a gate or no longer represents its state."]
     },
     {
       "claim_id": "TAE-C23",
-      "claim_text": "The v0.6 integrity audit establishes independent reliability or field validity for the framework.",
+      "claim_text": "The v0.8 integrity audit establishes independent reliability or field validity for the framework.",
       "claim_class": "conclusion",
       "claim_scope": "audit",
       "status": "outside_scope",
       "verification_rule": "An eligible independent, prespecified assessment must reproduce the judgments in a relevant field setting.",
       "evidence": [
-        {"evidence_id": "C23-LIMIT", "path": "audits/v0.6.0/exceptions.md", "locator_type": "markdown_heading", "locator": "## COE-EX-03: independent assessment", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "915a0b40b7af76f31126567d6572603a445fb28a2431e6a510efbbf518569b07", "content_review": "recorded"}
+        {"evidence_id": "C23-LIMIT", "path": "audits/v0.8.0/exceptions.md", "locator_type": "markdown_heading", "locator": "## COE-EX-03: independent assessment", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "44a5ebb11a005a5a83196d899c61257335e31096bcdaf59952d251cf3b5298e9", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "indeterminate", "rationale": "No eligible independent study exists for this release."},
@@ -342,21 +342,21 @@
       "dependencies": [],
       "dependency_closure": "outside_scope",
       "conclusion_eligible": false,
-      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-09", "attestation_path": "evidence/research-activity-log.json", "note": "Recorded as an excluded interpretation."},
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-10", "attestation_path": "paper/review-record-v0.8.0.md", "note": "Recorded as an excluded interpretation."},
       "scope_terms": [],
       "limitations": ["Internal negative controls do not supply an independent estimate."],
       "reversal_conditions": ["An eligible independent study satisfies a prespecified reliability or field-validity protocol."]
     },
     {
       "claim_id": "TAE-C24",
-      "claim_text": "Under the v0.6 contract, a failed or indeterminate required gate prevents a claim from supporting a conclusion.",
+      "claim_text": "Under the v0.8 contract, a failed or indeterminate required gate prevents a claim from supporting a conclusion.",
       "claim_class": "methodological",
       "claim_scope": "method",
       "status": "supported",
       "verification_rule": "The protocol must state the rule and the audit must recompute eligibility from status, five gates, and dependencies.",
       "evidence": [
         {"evidence_id": "C24-METHOD", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Conclusion-eligibility rule", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "8c1e96e261268eb0328431c43617504280c3a2894450fb5b405d93218fe8ce15", "content_review": "recorded"},
-        {"evidence_id": "C24-IMPLEMENTATION", "path": "fixtures/coe-audit-mutations.json", "locator_type": "text_marker", "locator": "fitness_failure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c7f2b1fe20bd8671570c1571febae6a52fba21ae85d4265487e3a420282bcf55", "content_review": "recorded"}
+        {"evidence_id": "C24-IMPLEMENTATION", "path": "fixtures/coe-audit-mutations.json", "locator_type": "text_marker", "locator": "fitness_failure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "be232e471e5c17a584904ab38ff49fb6813717230f6c59439847fdaec71761e8", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The protocol states the rule and the mutation suite tests the failed-fitness branch."},
@@ -398,6 +398,147 @@
       "scope_terms": [],
       "limitations": ["The adjudication changes the current assessment state and does not add historical evidence."],
       "reversal_conditions": ["The transition count differs from six or the preserved v0.3.0 file changes."]
+    },
+    {
+      "claim_id": "PAPER-C22",
+      "claim_text": "The v0.8 reader manuscript resolves all 38 manuscript citation identifiers to author-year links and contains no raw Pandoc citation syntax.",
+      "claim_class": "methodological",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The pressure test must count 38 resolved identifiers, the reader file must declare its derivation, and the renderer check must reject unresolved citation syntax.",
+      "evidence": [
+        {"evidence_id": "C16-PRESSURE-TEST", "path": "paper/manuscript-pressure-test-v0.8.0.md", "locator_type": "text_marker", "locator": "The manuscript uses 38 distinct identifiers. All 38 map to entries in `references.bib`.", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "74afe45f166dffbc92d8160328a293d53a50dd3f7d2ac6ff49ffc63804145489", "content_review": "recorded"},
+        {"evidence_id": "C16-READER", "path": "paper/manuscript-reader.md", "locator_type": "text_marker", "locator": "This file converts the manuscript's Pandoc citation keys into clickable author-year citations.", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "77b53ce4cb3f05a56fc73a9735562737ffae5ca61c109b7dc2549cc702530728", "content_review": "recorded"},
+        {"evidence_id": "C16-RENDERER", "path": "scripts/render_reader_manuscript.py", "locator_type": "text_marker", "locator": "reader manuscript still contains an unresolved Pandoc citation", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "54645add37a51637309a0eafa9b4b7043acd871fc8c1e9d251b178dd90f93061", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The pressure test records the count, and the reader and renderer record the display transformation and failure condition."},
+        "contemporaneity": {"state": "pass", "rationale": "The evidence targets the committed v0.8 manuscript and reader edition."},
+        "independence": {"state": "outside_scope", "rationale": "The claim concerns repository rendering and no independent research judgment."},
+        "completeness": {"state": "pass", "rationale": "Count resolution, visible provenance, and surviving-syntax detection are represented."},
+        "publication_authority": {"state": "pass", "rationale": "The repository author controls both manuscript editions and the released check."}
+      },
+      "dependencies": ["PAPER-C15"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-10", "attestation_path": "paper/review-record-v0.8.0.md", "note": "Reviewed as a repository-readability and citation-resolution claim."},
+      "scope_terms": [{"term": "all", "justification": "All refers to the 38 distinct citation identifiers counted in the v0.8 working manuscript."}],
+      "limitations": ["The reader edition does not verify that every cited source supports each substantive sentence."],
+      "reversal_conditions": ["Any citation identifier stops resolving, raw Pandoc citation syntax survives in the reader edition, or the manuscript changes without regeneration."]
+    },
+    {
+      "claim_id": "PAPER-C23",
+      "claim_text": "Figure 6 records six partially supported Oko stages; one supported, one partially supported, and four unsupported ZG710 stages; and one supported, one partially supported, one unsupported, and three indeterminate F/A-18C stages.",
+      "claim_class": "numerical",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The eight nonzero state counts must resolve from the Figure 6 data and each case denominator must equal six.",
+      "evidence": [
+        {"evidence_id": "C17-OKO-PARTIAL", "path": "figures/data/fig-6-evidence-boundaries.csv", "locator_type": "csv_cell", "locator": "case_id=TAE-PUB-001;state=partially_supported|count", "role": "numeric", "source_id": "TAE-PUB-001", "expected_value": "6", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e72fcb80d2e684141685ef97792c8dbe374dd09caece26e7dfd1cca341455a1d", "content_review": "recorded"},
+        {"evidence_id": "C17-ZG-SUPPORTED", "path": "figures/data/fig-6-evidence-boundaries.csv", "locator_type": "csv_cell", "locator": "case_id=TAE-PUB-002;state=supported|count", "role": "numeric", "source_id": "TAE-PUB-002", "expected_value": "1", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e72fcb80d2e684141685ef97792c8dbe374dd09caece26e7dfd1cca341455a1d", "content_review": "recorded"},
+        {"evidence_id": "C17-ZG-PARTIAL", "path": "figures/data/fig-6-evidence-boundaries.csv", "locator_type": "csv_cell", "locator": "case_id=TAE-PUB-002;state=partially_supported|count", "role": "numeric", "source_id": "TAE-PUB-002", "expected_value": "1", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e72fcb80d2e684141685ef97792c8dbe374dd09caece26e7dfd1cca341455a1d", "content_review": "recorded"},
+        {"evidence_id": "C17-ZG-UNSUPPORTED", "path": "figures/data/fig-6-evidence-boundaries.csv", "locator_type": "csv_cell", "locator": "case_id=TAE-PUB-002;state=unsupported|count", "role": "numeric", "source_id": "TAE-PUB-002", "expected_value": "4", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e72fcb80d2e684141685ef97792c8dbe374dd09caece26e7dfd1cca341455a1d", "content_review": "recorded"},
+        {"evidence_id": "C17-FA-SUPPORTED", "path": "figures/data/fig-6-evidence-boundaries.csv", "locator_type": "csv_cell", "locator": "case_id=TAE-PUB-003;state=supported|count", "role": "numeric", "source_id": "TAE-PUB-003", "expected_value": "1", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e72fcb80d2e684141685ef97792c8dbe374dd09caece26e7dfd1cca341455a1d", "content_review": "recorded"},
+        {"evidence_id": "C17-FA-PARTIAL", "path": "figures/data/fig-6-evidence-boundaries.csv", "locator_type": "csv_cell", "locator": "case_id=TAE-PUB-003;state=partially_supported|count", "role": "numeric", "source_id": "TAE-PUB-003", "expected_value": "1", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e72fcb80d2e684141685ef97792c8dbe374dd09caece26e7dfd1cca341455a1d", "content_review": "recorded"},
+        {"evidence_id": "C17-FA-UNSUPPORTED", "path": "figures/data/fig-6-evidence-boundaries.csv", "locator_type": "csv_cell", "locator": "case_id=TAE-PUB-003;state=unsupported|count", "role": "numeric", "source_id": "TAE-PUB-003", "expected_value": "1", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e72fcb80d2e684141685ef97792c8dbe374dd09caece26e7dfd1cca341455a1d", "content_review": "recorded"},
+        {"evidence_id": "C17-FA-INDETERMINATE", "path": "figures/data/fig-6-evidence-boundaries.csv", "locator_type": "csv_cell", "locator": "case_id=TAE-PUB-003;state=indeterminate|count", "role": "numeric", "source_id": "TAE-PUB-003", "expected_value": "3", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e72fcb80d2e684141685ef97792c8dbe374dd09caece26e7dfd1cca341455a1d", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "Each asserted count resolves from the exact Figure 6 case-state cell."},
+        "contemporaneity": {"state": "pass", "rationale": "The derived data use the current v0.6 Oko assessment and preserved Patriot assessments."},
+        "independence": {"state": "outside_scope", "rationale": "The figure reports single-assessor classifications and no independent reliability result."},
+        "completeness": {"state": "pass", "rationale": "The claim includes every nonzero state across all eighteen displayed stages."},
+        "publication_authority": {"state": "pass", "rationale": "The repository author publishes the versioned assessments and derived figure data."}
+      },
+      "dependencies": ["PAPER-C03", "PAPER-C04", "PAPER-C05", "PAPER-C06"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-10", "attestation_path": "paper/review-record-v0.8.0.md", "note": "Reviewed as a categorical composition claim with no aggregate score."},
+      "scope_terms": [],
+      "limitations": ["The eighteen classifications supply no prevalence, reliability, missingness-rate, or case-ranking estimate."],
+      "reversal_conditions": ["Any source assessment changes, a derived count differs, or a case denominator no longer equals six."]
+    },
+    {
+      "claim_id": "PAPER-C24",
+      "claim_text": "The current case set supplies no eligible coding-stability or inter-rater estimate: Oko was recoded under a changed evidence rule, and each Patriot case has one released coding pass.",
+      "claim_class": "methodological",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "Table A3 and the pressure test must distinguish rule-change comparison from repeat coding and record the absence of an independent second assessor.",
+      "evidence": [
+        {"evidence_id": "C18-TABLE", "path": "paper/tables.md", "locator_type": "markdown_heading", "locator": "## Table A3. Availability of coding-stability evidence", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "700fb221fcd9192f167be43d41fad9c742a7bca580b291c4dc4c9e100e3f6def", "content_review": "recorded"},
+        {"evidence_id": "C18-PRESSURE-TEST", "path": "paper/manuscript-pressure-test-v0.8.0.md", "locator_type": "text_marker", "locator": "No independent second assessor exists.", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "74afe45f166dffbc92d8160328a293d53a50dd3f7d2ac6ff49ffc63804145489", "content_review": "recorded"},
+        {"evidence_id": "C18-LEDGER", "path": "assessments/v0.6.0/oko-change-ledger.json", "locator_type": "json_pointer", "locator": "/dependency_decision/paper_blocker_state", "role": "provenance", "source_id": "TAE-PUB-001", "expected_value": "resolved_by_reclassification", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "2a4f4a166244022e19a446edbd64af0f8b562c75739219bee41508029bedb9d3", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The table and pressure test directly record the available comparisons and their eligibility boundary."},
+        "contemporaneity": {"state": "pass", "rationale": "The claim concerns the current versioned assessment set."},
+        "independence": {"state": "outside_scope", "rationale": "The claim declares that independent coding evidence is absent."},
+        "completeness": {"state": "pass", "rationale": "All three cases and the only version comparison are represented."},
+        "publication_authority": {"state": "pass", "rationale": "The study author can attest to the coding records present in the repository."}
+      },
+      "dependencies": ["TAE-C25"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-10", "attestation_path": "paper/review-record-v0.8.0.md", "note": "Reviewed as an absence-of-evidence claim; no reliability estimate is asserted."},
+      "scope_terms": [],
+      "limitations": ["Repository inspection cannot establish that no unrecorded coding activity occurred outside the versioned project."],
+      "reversal_conditions": ["A frozen repeat-coding or independent-coding study is added with disagreements preserved."]
+    },
+    {
+      "claim_id": "PAPER-C25",
+      "claim_text": "At the v0.8 checkpoint, the author-screening queue contains 89 records, 0 completed author decisions, and 89 open decisions.",
+      "claim_class": "numerical",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The generated gate summary must report 89 records, 0 completed decisions, 89 open decisions, and an open state from the frozen queue and decision ledger.",
+      "evidence": [
+        {"evidence_id": "C19-RECORDS", "path": "paper/data/author-screening-gate-v0.8.0.json", "locator_type": "json_pointer", "locator": "/records", "role": "numeric", "source_id": null, "expected_value": 89, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "809df609d55973e05435b3057f64e285071c9d7d5aef17c414ba95e0b793f894", "content_review": "recorded"},
+        {"evidence_id": "C19-COMPLETE", "path": "paper/data/author-screening-gate-v0.8.0.json", "locator_type": "json_pointer", "locator": "/author_decisions_complete", "role": "numeric", "source_id": null, "expected_value": 0, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "809df609d55973e05435b3057f64e285071c9d7d5aef17c414ba95e0b793f894", "content_review": "recorded"},
+        {"evidence_id": "C19-OPEN", "path": "paper/data/author-screening-gate-v0.8.0.json", "locator_type": "json_pointer", "locator": "/author_decisions_open", "role": "numeric", "source_id": null, "expected_value": 89, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "809df609d55973e05435b3057f64e285071c9d7d5aef17c414ba95e0b793f894", "content_review": "recorded"},
+        {"evidence_id": "C19-GATE-METHOD", "path": "paper/author-screening-completion-gate.md", "locator_type": "markdown_heading", "locator": "## Completion conditions", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "2ccb3d098ef958c79179bd0db64da8f938663f15ba8e3e50f8dddbce302ddb79", "content_review": "recorded"},
+        {"evidence_id": "C19-VALIDATOR", "path": "scripts/validate_author_screening_gate.py", "locator_type": "text_marker", "locator": "final_search_flow_eligible", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b495ce46d2d2439ed3f2c1dabb781b0332dfe9a28f2678abe13cf1590affa2c7", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The three counts are recomputed from the frozen queue and author-decision ledger."},
+        "contemporaneity": {"state": "pass", "rationale": "The summary is regenerated for the current v0.8 checkpoint."},
+        "independence": {"state": "outside_scope", "rationale": "The claim reports repository workflow state and no independent research judgment."},
+        "completeness": {"state": "pass", "rationale": "Every queued record is included in the completion calculation."},
+        "publication_authority": {"state": "pass", "rationale": "Mark Julius Banasihan is the declared decision owner for the queue."}
+      },
+      "dependencies": [],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-10", "attestation_path": "paper/review-record-v0.8.0.md", "note": "Reviewed as the current author-screening checkpoint."},
+      "scope_terms": [],
+      "limitations": ["The gate reports completion status and no substantive screening outcome."],
+      "reversal_conditions": ["An author decision is recorded, a queue record changes, or the generated summary stops matching the source ledgers."]
+    },
+    {
+      "claim_id": "PAPER-C26",
+      "claim_text": "The final search-flow figure and final author-screening counts are eligible to support research conclusions in v0.8.",
+      "claim_class": "conclusion",
+      "claim_scope": "paper",
+      "status": "blocked",
+      "verification_rule": "Eligibility requires a closed gate with one valid author decision for each of the 89 queued records.",
+      "evidence": [
+        {"evidence_id": "C20-GATE", "path": "paper/data/author-screening-gate-v0.8.0.json", "locator_type": "json_pointer", "locator": "/final_search_flow_eligible", "role": "limitation", "source_id": null, "expected_value": false, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "809df609d55973e05435b3057f64e285071c9d7d5aef17c414ba95e0b793f894", "content_review": "recorded"},
+        {"evidence_id": "C20-BOUNDARY", "path": "paper/author-screening-completion-gate.md", "locator_type": "text_marker", "locator": "it cannot report final screening counts while 89 author decisions remain open", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "2ccb3d098ef958c79179bd0db64da8f938663f15ba8e3e50f8dddbce302ddb79", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "fail", "rationale": "The gate directly records that final search-flow eligibility is false."},
+        "contemporaneity": {"state": "pass", "rationale": "The evidence reflects the current v0.8 checkpoint."},
+        "independence": {"state": "outside_scope", "rationale": "No independent review is needed to observe the open ledger, but substantive screening still requires the author decisions."},
+        "completeness": {"state": "fail", "rationale": "All 89 required author decisions remain open."},
+        "publication_authority": {"state": "pass", "rationale": "The decision owner has declared the completion rule and current boundary."}
+      },
+      "dependencies": ["PAPER-C25"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": false,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-10", "attestation_path": "paper/review-record-v0.8.0.md", "note": "Reviewed as a blocked conclusion pending author screening."},
+      "scope_terms": [],
+      "limitations": ["Proposal counts may be reported as provisional workflow facts, not as final screening results."],
+      "reversal_conditions": ["The gate closes after 89 valid author decisions and the search tables and figure are rebuilt from those decisions."]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "version": "0.7.0",
-  "source_release": "0.6.0",
+  "version": "0.8.0",
+  "source_release": "0.7.0",
   "visual_standard": "Journal width, white background, thin horizontal rules, one blue accent, direct labels, and color-independent state codes. Titles, source notes, uncertainty, and interpretation belong in manuscript captions.",
   "figures": [
     {
@@ -79,6 +79,21 @@
       "transformation": "Sum direct-query and citation-chain retrieval counts, preserve the pooled and deduplicated totals, plot preliminary screening counts on a declared logarithmic axis, and calculate the open author queue as 12 retain-close plus 77 attention records.",
       "claim_supported": "The open-index search produced a declared record pool and a visible author-decision gate. Eighty-nine substantive screening decisions remain open.",
       "prohibited_interpretation": "The preliminary triage is not a completed systematic review, and the search supplies no universal originality claim."
+    },
+    {
+      "figure_id": "FIG-6",
+      "file_stub": "fig-6-evidence-boundaries",
+      "title": "Evidence boundaries across six pre-action practical-control stages",
+      "unit_of_analysis": "categorical pre-action practical-control finding within a public case",
+      "sample": "18 declared states from 6 pre-action propositions across 3 purposefully selected cases",
+      "input_files": [
+        "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
+        "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
+        "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json"
+      ],
+      "transformation": "Count supported, partially supported, unsupported, and indeterminate classifications across the six pre-action fields for each case and render the four counts as a six-cell stacked bar.",
+      "claim_supported": "The assessment output separates supporting evidence with a material gap, evidence against a condition, and insufficient evidence for a decision.",
+      "prohibited_interpretation": "The counts supply no missingness rate, numeric distance among states, aggregate control score, reliability estimate, or case ranking."
     },
     {
       "figure_id": "FIG-A1",

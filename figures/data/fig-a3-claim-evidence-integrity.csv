@@ -10,6 +10,11 @@ PAPER-C09,pass,pass,pass,pass,pass,eligible
 PAPER-C11,pass,pass,pass,pass,pass,eligible
 PAPER-C14,pass,pass,pass,pass,pass,eligible
 PAPER-C15,pass,pass,pass,pass,pass,eligible
+PAPER-C22,pass,pass,pass,pass,pass,eligible
+PAPER-C23,pass,pass,pass,pass,pass,eligible
+PAPER-C24,pass,pass,pass,pass,pass,eligible
+PAPER-C25,pass,pass,pass,pass,pass,eligible
+PAPER-C26,pass,pass,pass,fail,pass,blocked
 TAE-C21,pass,pass,pass,pass,pass,eligible
 TAE-C23,pass,pass,pass,fail,outside_scope,blocked
 TAE-C24,pass,pass,pass,pass,pass,eligible

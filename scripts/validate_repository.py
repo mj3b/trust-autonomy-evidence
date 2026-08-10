@@ -14,7 +14,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.7.0"
+REPOSITORY_VERSION = "0.8.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
 REQUIRED_FILES = (
@@ -114,6 +114,9 @@ REQUIRED_FILES = (
     "figures/data/fig-5-formal-search-and-screening.csv",
     "figures/generated/fig-5-formal-search-and-screening.png",
     "figures/generated/fig-5-formal-search-and-screening.svg",
+    "figures/data/fig-6-evidence-boundaries.csv",
+    "figures/generated/fig-6-evidence-boundaries.png",
+    "figures/generated/fig-6-evidence-boundaries.svg",
     "figures/generated/fig-a1-mutation-response.png",
     "figures/generated/fig-a1-mutation-response.svg",
     "figures/generated/fig-a2-reproducibility-lineage.png",
@@ -127,11 +130,14 @@ REQUIRED_FILES = (
     "figures/v0.6.0-manifest.json",
     "figures/v0.7.0-manifest.json",
     "figures/v0.7.0-claim-evidence-manifest.json",
+    "figures/v0.8.0-manifest.json",
+    "figures/v0.8.0-claim-evidence-manifest.json",
     "release/v0.3.0-manifest.json",
     "release/v0.4.0-manifest.json",
     "release/v0.5.0-manifest.json",
     "release/v0.6.0-manifest.json",
     "release/v0.7.0-manifest.json",
+    "release/v0.8.0-manifest.json",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -144,6 +150,10 @@ REQUIRED_FILES = (
     "audits/v0.6.0/audit-results.json",
     "audits/v0.6.0/audit-report.md",
     "audits/v0.6.0/exceptions.md",
+    "audits/v0.8.0/audit-plan.md",
+    "audits/v0.8.0/audit-results.json",
+    "audits/v0.8.0/audit-report.md",
+    "audits/v0.8.0/exceptions.md",
     "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
     "assessments/v0.6.0/oko-change-ledger.json",
     "paper/citation-chain-log-v0.6.0.md",
@@ -156,6 +166,12 @@ REQUIRED_FILES = (
     "paper/data/formal-screening-proposals-v0.7.0.json",
     "paper/data/formal-metadata-verification-v0.7.0.json",
     "paper/data/author-screening-queue-v0.7.0.csv",
+    "paper/data/author-screening-decisions-v0.8.0.csv",
+    "paper/manuscript-reader.md",
+    "paper/manuscript-pressure-test-v0.8.0.md",
+    "paper/review-record-v0.8.0.md",
+    "paper/author-screening-completion-gate.md",
+    "paper/data/author-screening-gate-v0.8.0.json",
     "paper/literature-support-audit-v0.7.0.json",
     "paper/literature-support-audit-v0.7.0.md",
     "paper/tables.md",
@@ -167,6 +183,8 @@ REQUIRED_FILES = (
     "scripts/validate_release_snapshot.py",
     "scripts/validate_v060_adjudication.py",
     "scripts/validate_literature_support.py",
+    "scripts/render_reader_manuscript.py",
+    "scripts/validate_author_screening_gate.py",
     "paper/claim-crosswalk.md",
     "paper/scientistone-artifact-pressure-test.md",
     ".github/pull_request_template.md",
@@ -396,7 +414,7 @@ def validate_release_snapshot(failures: list[str]) -> str:
 
 
 def validate_release_candidate(failures: list[str]) -> str:
-    relative = "release/v0.7.0-manifest.json"
+    relative = "release/v0.8.0-manifest.json"
     path = ROOT / relative
     if not path.is_file():
         fail(f"missing current release manifest: {relative}", failures)
@@ -456,8 +474,8 @@ def validate_figure_set(failures: list[str]) -> str:
     figures = register.get("figures", [])
     identifiers = [row.get("figure_id") for row in figures]
     stubs = [row.get("file_stub") for row in figures]
-    expected_identifiers = ["FIG-1", "FIG-2", "FIG-3", "FIG-4", "FIG-5", "FIG-A1", "FIG-A2", "FIG-A4"]
-    if register.get("version") != REPOSITORY_VERSION or register.get("source_release") != "0.6.0":
+    expected_identifiers = ["FIG-1", "FIG-2", "FIG-3", "FIG-4", "FIG-5", "FIG-6", "FIG-A1", "FIG-A2", "FIG-A4"]
+    if register.get("version") != REPOSITORY_VERSION or register.get("source_release") != "0.7.0":
         fail("figure register version or source release mismatch", failures)
     if identifiers != expected_identifiers:
         fail(f"figure register identifier mismatch: {identifiers}", failures)
@@ -489,6 +507,21 @@ def validate_coe_figure(failures: list[str]) -> str:
     if result.returncode != 0:
         detail = (result.stdout + result.stderr).strip()
         fail(f"claim-evidence figure failed: {detail}", failures)
+        return ""
+    return result.stdout.strip()
+
+
+def validate_coe_audit(failures: list[str]) -> str:
+    result = subprocess.run(
+        [sys.executable, "scripts/run_coe_integrity_audit.py", "--check"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        detail = (result.stdout + result.stderr).strip()
+        fail(f"claim-evidence audit failed: {detail}", failures)
         return ""
     return result.stdout.strip()
 
@@ -542,6 +575,7 @@ def main() -> int:
     solo_result = validate_solo_suite(failures)
     figure_result = validate_figure_set(failures)
     coe_figure_result = validate_coe_figure(failures)
+    coe_audit_result = validate_coe_audit(failures)
     adjudication_result = validate_adjudication(failures)
     literature_result = validate_literature(failures)
     formal_search_result = validate_formal_search(failures)
@@ -562,6 +596,8 @@ def main() -> int:
         print(figure_result)
     if coe_figure_result:
         print(coe_figure_result)
+    if coe_audit_result:
+        print(coe_audit_result)
     if adjudication_result:
         print(adjudication_result)
     if literature_result:
