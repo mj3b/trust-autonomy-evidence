@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Version 0.8.0 is released. Use the all-versions DOI until the version-specific DOI is recorded."
+message: "Version 0.9.0 is a release candidate. Use the all-versions DOI until the version-specific DOI is recorded."
 title: "Trust, Autonomy, and Evidence"
 type: software
-version: 0.8.0
+version: 0.9.0
 authors:
   - family-names: Banasihan
     given-names: Mark Julius

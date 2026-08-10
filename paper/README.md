@@ -1,6 +1,6 @@
 # Paper Workspace
 
-This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. Version 0.8.0 publishes the GitHub-readable manuscript, pressure test, evidence-boundary figure, coding-stability table, author-screening gate, and expanded claim-evidence audit as a research checkpoint. The manuscript remains a working submission candidate. Released case packets, assessments, and manifests remain the controlling research record.
+This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. The v0.9.0 working state closes the 89-record author gate, rebuilds Figure 5 from final decisions, expands the close-source map, narrows the contribution, and reruns the claim-evidence audit. The manuscript remains a working submission candidate. Released case packets, assessments, and manifests remain the controlling research record.
 
 **PR #11 merge commit:** [`a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec`](https://github.com/mj3b/trust-autonomy-evidence/commit/a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec)
 
@@ -27,8 +27,11 @@ This directory develops a methods and comparative-case paper from the repository
 | [`formal-citation-chain-v0.7.0.md`](formal-citation-chain-v0.7.0.md) | Reports the eight direct queries, fifteen seed chains, second-index checks, errors, and coverage limits. |
 | [`formal-search-screening-v0.7.0.md`](formal-search-screening-v0.7.0.md) | Summarizes preliminary machine triage and the author-confirmation gate. |
 | [`data/author-screening-queue-v0.7.0.csv`](data/author-screening-queue-v0.7.0.csv) | Presents the 12 close-source proposals and 77 attention records for author decisions and notes. |
-| [`data/author-screening-decisions-v0.8.0.csv`](data/author-screening-decisions-v0.8.0.csv) | Records Mark Julius Banasihan's decisions without changing the released v0.7 proposal queue. |
-| [`data/author-screening-gate-v0.8.0.json`](data/author-screening-gate-v0.8.0.json) | Records the computed 89-record gate state used by the claim map and integrity audit. |
+| [`data/author-screening-decisions-v0.8.0.csv`](data/author-screening-decisions-v0.8.0.csv) | Preserves the blank decision ledger at the v0.8 checkpoint. |
+| [`data/author-screening-gate-v0.8.0.json`](data/author-screening-gate-v0.8.0.json) | Preserves the open 89-record gate state published at the v0.8 checkpoint. |
+| [`data/author-screening-decisions-v0.9.0.csv`](data/author-screening-decisions-v0.9.0.csv) | Records all 89 author decisions, rationales, review bases, source locators, and the AI-assistance disclosure. |
+| [`data/author-screening-gate-v0.9.0.json`](data/author-screening-gate-v0.9.0.json) | Records the closed author gate and final decision counts used by Figure 5 and the v0.9 audit. |
+| [`review-record-v0.9.0.md`](review-record-v0.9.0.md) | Records author accountability for the final screening state and its publication boundary. |
 | [`author-screening-completion-gate.md`](author-screening-completion-gate.md) | Shows completed and open author decisions and defines when final search-flow language becomes eligible. |
 | [`citation-chain-log-v0.6.0.md`](citation-chain-log-v0.6.0.md) | Records the index-based citation sample and its limits. |
 | [`literature-support-audit-v0.6.0.md`](literature-support-audit-v0.6.0.md) | Preserves the 16-proposition audit for the earlier introduction and related-work draft. |
@@ -51,4 +54,4 @@ If the manuscript conflicts with a frozen packet or released assessment, the rel
 
 A released assessment label records what the published procedure produced. It does not establish independent validity. The [PR #11 review record](review-record-pr11.md) preserves the Oko mismatch and its v0.6 resolution through reclassification.
 
-The [v0.8 claim crosswalk](claim-crosswalk.md) makes that boundary executable. A failed evidence-fitness gate or open dependency prevents the affected claim from entering a conclusion. The formal open-index search and selected-index citation chains are complete within declared limits. Author-confirmed screening, inaccessible-record review, authenticated databases, disciplinary interfaces, and venue-specific ethics guidance remain open.
+The [claim crosswalk](claim-crosswalk.md) makes that boundary executable. A failed evidence-fitness gate or open dependency prevents the affected claim from entering a conclusion. The formal open-index search, selected-index citation chains, and 89-record author queue are complete within declared limits. Inaccessible-record review, authenticated databases, disciplinary interfaces, independent assessment, and venue-specific ethics guidance remain open.

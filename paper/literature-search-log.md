@@ -6,7 +6,7 @@ This log records the searches used to test whether the proposed paper duplicates
 
 ## Current scope
 
-The 8 and 9 August 2026 sessions used exact-phrase queries, publisher pages, proceedings pages, institutional repositories, preprint records, Crossref, OpenAlex, and a frozen Semantic Scholar search. The formal search retrieved every page returned for eight query families and every returned citation page for fourteen resolved seeds. The search still falls short of a multidisciplinary systematic review because authenticated Scopus or Web of Science access, several disciplinary interfaces, author-confirmed screening, and inaccessible-record review remain open.
+The 8 through 10 August 2026 sessions used exact-phrase queries, publisher pages, proceedings pages, institutional repositories, preprint records, Crossref, OpenAlex, and a frozen Semantic Scholar search. The formal search retrieved every page returned for eight query families and every returned citation page for fourteen resolved seeds. Mark Julius Banasihan completed the 89-record author queue. The search still falls short of a multidisciplinary systematic review because authenticated Scopus or Web of Science access, several disciplinary interfaces, and inaccessible-record review remain open.
 
 ## Formal v0.7 search
 
@@ -20,6 +20,7 @@ The 8 and 9 August 2026 sessions used exact-phrase queries, publisher pages, pro
 | V02 | 2026-08-09 | OpenAlex Works API | Coverage comparison for 15 frozen citation seeds | 13 resolved; L12 resolved with zero indexed links; two arXiv URL-form seeds did not resolve. |
 | I01 | 2026-08-09 | ACM proceedings, arXiv, Springer, MDPI, Oxford repository, Dagstuhl | Exact-title and DOI checks for proposed close sources | Verified publisher, proceedings, preprint, or institutional records for L29 through L41. |
 | I02 | 2026-08-09 | Harvard library interface | Interface access attempt | Host did not resolve in the controlled browser session; no search result was claimed. |
+| A01 | 2026-08-10 | Frozen 89-record author queue | Author review of 12 proposed close and 77 attention records | 27 retain close, 32 retain background, 20 exclude topic, and 10 exclude single component. All decisions record a rationale, review basis, source locator, author, date, and assistance disclosure. |
 
 The [formal chain record](formal-citation-chain-v0.7.0.md) reports query strings, counts, errors, and coverage limits. The [screening proposal file](formal-search-screening-v0.7.0.md) separates machine triage from author judgment.
 
@@ -62,4 +63,4 @@ Search results that only used the same words for unrelated technical tasks were 
 
 ## Remaining contribution gate
 
-The open-index retrieval and full Semantic Scholar citation chains are complete within recorded index limits. Before the author treats the contribution search as complete, he must confirm the twelve close-source proposals, inspect the 77 records marked for attention, decide how to handle the 1,087 inaccessible records, and record searches in Scopus or Web of Science, IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index. The manuscript may state its bounded integration and may not state a novelty finding.
+The open-index retrieval, selected Semantic Scholar citation chains, and 89-record author queue are complete within recorded index limits. Before the author treats the contribution search as complete, he must decide how to handle the 1,087 inaccessible records and record searches in Scopus or Web of Science, IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index. The manuscript may state its bounded integration and may not state a novelty finding.

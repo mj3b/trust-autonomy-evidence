@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the v0.8.0 practical human control paper workspace."""
+"""Validate the v0.9.0 practical human control paper workspace."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ QUESTION = (
     "public incident record?"
 )
 VERSION_DOI = "10.5281/zenodo.21865007"
-REPOSITORY_VERSION = "0.8.0"
+REPOSITORY_VERSION = "0.9.0"
 PAPER_FILES = (
     "paper/README.md",
     "paper/paper-charter.md",
@@ -26,6 +26,7 @@ PAPER_FILES = (
     "paper/manuscript-reader.md",
     "paper/manuscript-pressure-test-v0.8.0.md",
     "paper/review-record-v0.8.0.md",
+    "paper/review-record-v0.9.0.md",
     "paper/author-screening-completion-gate.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
@@ -50,8 +51,12 @@ PAPER_FILES = (
     "paper/data/author-screening-queue-v0.7.0.csv",
     "paper/data/author-screening-decisions-v0.8.0.csv",
     "paper/data/author-screening-gate-v0.8.0.json",
+    "paper/data/author-screening-decisions-v0.9.0.csv",
+    "paper/data/author-screening-gate-v0.9.0.json",
     "paper/literature-support-audit-v0.7.0.json",
     "paper/literature-support-audit-v0.7.0.md",
+    "paper/literature-support-audit-v0.9.0.json",
+    "paper/literature-support-audit-v0.9.0.md",
 )
 
 
@@ -104,8 +109,8 @@ def validate_question(failures: list[str]) -> None:
 def validate_bibliography(failures: list[str]) -> None:
     text = (ROOT / "paper/references.bib").read_text(encoding="utf-8")
     entries = re.findall(r"^@\w+\{([^,]+),", text, flags=re.MULTILINE)
-    if len(entries) < 41:
-        fail(f"paper bibliography has {len(entries)} entries; expected at least 41", failures)
+    if len(entries) < 45:
+        fail(f"paper bibliography has {len(entries)} entries; expected at least 45", failures)
     if len(entries) != len(set(entries)):
         fail("duplicate BibTeX keys in paper/references.bib", failures)
     doi_fields = re.findall(r"^\s+doi\s*=", text, flags=re.MULTILINE | re.IGNORECASE)
@@ -128,7 +133,8 @@ def validate_bibliography(failures: list[str]) -> None:
 def validate_generated_paper_artifacts(failures: list[str]) -> None:
     commands = (
         [sys.executable, "scripts/render_reader_manuscript.py", "--check"],
-        [sys.executable, "scripts/validate_author_screening_gate.py", "--check"],
+        [sys.executable, "scripts/validate_author_screening_gate.py", "--check", "--require-complete"],
+        [sys.executable, "scripts/validate_literature_support.py"],
     )
     for command in commands:
         result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, check=False)
@@ -150,7 +156,7 @@ def validate_boundaries(failures: list[str]) -> None:
     if VERSION_DOI not in manuscript:
         fail("v0.6.0 version DOI missing from paper/manuscript.md", failures)
     matrix = (ROOT / "paper/literature-matrix.md").read_text(encoding="utf-8")
-    if "L24" not in matrix or "ScientistOne" not in matrix or "L28" not in matrix or "L41" not in matrix:
+    if "L24" not in matrix or "ScientistOne" not in matrix or "L28" not in matrix or "L41" not in matrix or "L56" not in matrix:
         fail("required close neighbors missing from literature matrix", failures)
     crosswalk = (ROOT / "paper/claim-crosswalk.md").read_text(encoding="utf-8")
     required_crosswalk = (
@@ -161,22 +167,24 @@ def validate_boundaries(failures: list[str]) -> None:
         "`PAPER-C23` | Eligible",
         "`PAPER-C24` | Eligible",
         "`PAPER-C25` | Eligible",
-        "`PAPER-C26` | Ineligible",
+        "`PAPER-C26` | Eligible",
         "`TAE-C23` | Ineligible",
     )
     if any(marker not in crosswalk for marker in required_crosswalk):
         fail("eligible paper claims missing from crosswalk", failures)
     if re.search(r"\bnovel\b", manuscript, flags=re.IGNORECASE):
         fail("manuscript contains prohibited novelty wording", failures)
-    if "Pressure-tested working manuscript, v0.8.0 candidate" not in manuscript:
-        fail("v0.8.0 manuscript status is missing", failures)
+    if "Author-screened working manuscript, v0.9.0 candidate" not in manuscript:
+        fail("v0.9.0 manuscript status is missing", failures)
     if "**Figure 6. Evidence boundaries" not in manuscript:
         fail("Figure 6 caption is missing from the manuscript", failures)
     if "**Table A3. Availability of coding-stability evidence.**" not in manuscript:
         fail("Table A3 is missing from the manuscript", failures)
+    if "**Table 4. Proposal-to-author decision changes.**" not in manuscript:
+        fail("Table 4 is missing from the manuscript", failures)
     gate = (ROOT / "paper/author-screening-completion-gate.md").read_text(encoding="utf-8")
-    if "| Total author gate | 89 | 0 | 89 |" not in gate:
-        fail("author-screening gate does not expose the current 89 open decisions", failures)
+    if "| Total author gate | 89 | 89 | 0 |" not in gate:
+        fail("author-screening gate does not expose the completed 89 decisions", failures)
 
 
 def main() -> int:

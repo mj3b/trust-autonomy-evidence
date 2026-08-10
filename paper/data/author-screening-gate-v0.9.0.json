@@ -1,0 +1,19 @@
+{
+  "version": "0.9.0",
+  "status": "CLOSED",
+  "records": 89,
+  "author_decisions_complete": 89,
+  "author_decisions_open": 0,
+  "proposed_counts": {
+    "exclude-single-component": 77,
+    "retain-close": 12
+  },
+  "author_counts": {
+    "exclude-single-component": 10,
+    "exclude-topic": 20,
+    "retain-background": 32,
+    "retain-close": 27
+  },
+  "final_search_flow_eligible": true,
+  "validation_errors": []
+}

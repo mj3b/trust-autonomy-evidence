@@ -1,16 +1,16 @@
 {
-  "version": "0.8.0",
-  "source_audit": "0.8.0",
+  "version": "0.9.0",
+  "source_audit": "0.9.0",
   "figure_id": "FIG-A3",
   "file_stub": "fig-a3-claim-evidence-integrity",
   "title": "Claim-evidence integrity and conclusion eligibility",
-  "unit_of_analysis": "declared v0.8 claim and audit gate",
+  "unit_of_analysis": "declared v0.9 claim and audit gate",
   "sample": "20 material claims, five evidence gates, and one conclusion-eligibility state",
   "input_files": [
     "evidence/claim-evidence-map.json",
-    "audits/v0.8.0/audit-results.json"
+    "audits/v0.9.0/audit-results.json"
   ],
   "transformation": "Read the five categorical gate states and conclusion-eligibility result for each mapped claim, preserve the states without assigning a numeric score, and render letter labels with shape and one blue accent.",
-  "claim_supported": "Evidence fitness and dependency closure determine whether a traceable claim can enter a conclusion. Independent validity and final screening results remain ineligible under the declared v0.8 gates.",
+  "claim_supported": "Evidence fitness and dependency closure determine whether a traceable claim can enter a conclusion. Final author-screening results are eligible within the declared queue, while independent validity remains ineligible.",
   "prohibited_interpretation": "The matrix supplies no aggregate trust score, source-truth determination, independent reliability estimate, or ranking of claims."
 }

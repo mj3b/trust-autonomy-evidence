@@ -14,7 +14,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.8.0"
+REPOSITORY_VERSION = "0.9.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
 REQUIRED_FILES = (
@@ -132,12 +132,15 @@ REQUIRED_FILES = (
     "figures/v0.7.0-claim-evidence-manifest.json",
     "figures/v0.8.0-manifest.json",
     "figures/v0.8.0-claim-evidence-manifest.json",
+    "figures/v0.9.0-manifest.json",
+    "figures/v0.9.0-claim-evidence-manifest.json",
     "release/v0.3.0-manifest.json",
     "release/v0.4.0-manifest.json",
     "release/v0.5.0-manifest.json",
     "release/v0.6.0-manifest.json",
     "release/v0.7.0-manifest.json",
     "release/v0.8.0-manifest.json",
+    "release/v0.9.0-manifest.json",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -154,6 +157,10 @@ REQUIRED_FILES = (
     "audits/v0.8.0/audit-results.json",
     "audits/v0.8.0/audit-report.md",
     "audits/v0.8.0/exceptions.md",
+    "audits/v0.9.0/audit-plan.md",
+    "audits/v0.9.0/audit-results.json",
+    "audits/v0.9.0/audit-report.md",
+    "audits/v0.9.0/exceptions.md",
     "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
     "assessments/v0.6.0/oko-change-ledger.json",
     "paper/citation-chain-log-v0.6.0.md",
@@ -170,10 +177,15 @@ REQUIRED_FILES = (
     "paper/manuscript-reader.md",
     "paper/manuscript-pressure-test-v0.8.0.md",
     "paper/review-record-v0.8.0.md",
+    "paper/review-record-v0.9.0.md",
     "paper/author-screening-completion-gate.md",
     "paper/data/author-screening-gate-v0.8.0.json",
+    "paper/data/author-screening-decisions-v0.9.0.csv",
+    "paper/data/author-screening-gate-v0.9.0.json",
     "paper/literature-support-audit-v0.7.0.json",
     "paper/literature-support-audit-v0.7.0.md",
+    "paper/literature-support-audit-v0.9.0.json",
+    "paper/literature-support-audit-v0.9.0.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
     "scripts/run_formal_literature_search.py",
@@ -185,6 +197,7 @@ REQUIRED_FILES = (
     "scripts/validate_literature_support.py",
     "scripts/render_reader_manuscript.py",
     "scripts/validate_author_screening_gate.py",
+    "scripts/build_author_screening_decisions_v0_9_0.py",
     "paper/claim-crosswalk.md",
     "paper/scientistone-artifact-pressure-test.md",
     ".github/pull_request_template.md",
@@ -414,7 +427,7 @@ def validate_release_snapshot(failures: list[str]) -> str:
 
 
 def validate_release_candidate(failures: list[str]) -> str:
-    relative = "release/v0.8.0-manifest.json"
+    relative = f"release/v{REPOSITORY_VERSION}-manifest.json"
     path = ROOT / relative
     if not path.is_file():
         fail(f"missing current release manifest: {relative}", failures)
@@ -475,7 +488,7 @@ def validate_figure_set(failures: list[str]) -> str:
     identifiers = [row.get("figure_id") for row in figures]
     stubs = [row.get("file_stub") for row in figures]
     expected_identifiers = ["FIG-1", "FIG-2", "FIG-3", "FIG-4", "FIG-5", "FIG-6", "FIG-A1", "FIG-A2", "FIG-A4"]
-    if register.get("version") != REPOSITORY_VERSION or register.get("source_release") != "0.7.0":
+    if register.get("version") != REPOSITORY_VERSION or register.get("source_release") != "0.8.0":
         fail("figure register version or source release mismatch", failures)
     if identifiers != expected_identifiers:
         fail(f"figure register identifier mismatch: {identifiers}", failures)
@@ -559,6 +572,17 @@ def validate_formal_search(failures: list[str]) -> str:
     return result.stdout.strip()
 
 
+def validate_paper_workspace(failures: list[str]) -> str:
+    result = subprocess.run(
+        [sys.executable, "scripts/validate_paper.py"],
+        cwd=ROOT, text=True, capture_output=True, check=False,
+    )
+    if result.returncode != 0:
+        fail(f"paper workspace failed: {(result.stdout + result.stderr).strip()}", failures)
+        return ""
+    return result.stdout.strip()
+
+
 def main() -> int:
     failures: list[str] = []
     validate_required_files(failures)
@@ -579,6 +603,7 @@ def main() -> int:
     adjudication_result = validate_adjudication(failures)
     literature_result = validate_literature(failures)
     formal_search_result = validate_formal_search(failures)
+    paper_result = validate_paper_workspace(failures)
 
     if failures:
         for failure in failures:
@@ -604,6 +629,8 @@ def main() -> int:
         print(literature_result)
     if formal_search_result:
         print(formal_search_result)
+    if paper_result:
+        print(paper_result)
     print("repository validation: PASS")
     return 0
 

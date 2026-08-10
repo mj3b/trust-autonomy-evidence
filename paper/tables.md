@@ -30,23 +30,33 @@ These tables preserve exact states and counts behind the figures. The submission
 
 *Note.* S = supported; P = partially supported; U = unsupported; I = indeterminate; O = outside scope. The table reports 27 item-level findings from three purposefully selected cases. It supplies no frequency, causal, or population estimate.
 
-## Table 3. Formal search and preliminary screening
+## Table 3. Formal search and final screening state
 
 | Stage | Record class | Count | Status |
 |---|---|---:|---|
 | Retrieval | Direct queries | 184 | Complete for the declared open-index queries |
 | Retrieval | Citation chains | 2,482 | Fourteen of fifteen seed chains resolved |
 | Pooling | Combined records | 2,666 | Before deduplication |
-| Pooling | Deduplicated records | 2,431 | Unit for preliminary triage |
-| Preliminary triage | Retain close | 12 | Author decision required |
-| Preliminary triage | Retain background | 13 | Proposed background set |
-| Preliminary triage | Attention records | 77 | Author decision required |
-| Preliminary triage | Exclude topic | 1,239 | AI-assisted proposal |
-| Preliminary triage | Inaccessible | 1,087 | Substantive screening unresolved |
-| Preliminary triage | Outside cutoff | 3 | Published after the cutoff |
-| Author gate | Open queue | 89 | Twelve close plus 77 attention records |
+| Pooling | Deduplicated records | 2,431 | Unit for screening |
+| Final screening | Retain close | 27 | Confirmed close set |
+| Final screening | Retain background | 45 | Thirteen prior records plus 32 author-confirmed records |
+| Final screening | Exclude single component | 10 | Relevant component without the tested combination |
+| Final screening | Exclude topic | 1,259 | Outside the review question |
+| Final screening | Inaccessible | 1,087 | Abstract absent; substantive screening unresolved |
+| Final screening | Outside cutoff | 3 | Published after the cutoff |
+| Author gate | Completed queue | 89 | All queued decisions recorded |
 
-*Note.* The six preliminary triage classes sum to 2,431. The decisions are AI-assisted proposals. The 89-record author gate remains open. Authenticated database searching also remains open.
+*Note.* The six final screening classes sum to 2,431. Mark Julius Banasihan is the decision owner for the 89-record queue, with disclosed AI assistance. The 1,087 inaccessible records and authenticated database searching remain separate coverage limits.
+
+## Table 4. Proposal-to-author decision changes
+
+| Proposed class | Records | Retain close | Retain background | Exclude topic | Exclude single component |
+|---|---:|---:|---:|---:|---:|
+| Retain close | 12 | 12 | 0 | 0 | 0 |
+| Author attention | 77 | 15 | 32 | 20 | 10 |
+| Total author queue | 89 | 27 | 32 | 20 | 10 |
+
+*Note.* The author confirmed all 12 proposed close records. The 77 attention records produced 15 additional close sources and 32 background sources. These decisions close the declared author gate. They do not resolve the inaccessible-record or authenticated-database gates.
 
 ## Table A1. Versioned correction of the Oko assessment
 
@@ -69,7 +79,7 @@ These tables preserve exact states and counts behind the figures. The submission
 | Figure 2 and Table 2 | Item-level practical-control states | A causal effect or aggregate control score |
 | Figure 3 | Relative event order and public record gaps | A common elapsed-time scale |
 | Figure 4 | Item-level trust-evidence states | A system ranking or aggregate trust score |
-| Figure 5 and Table 3 | Retrieval counts, triage proposals, and the open author gate | A completed systematic review or universal originality |
+| Figure 5 and Tables 3 and 4 | Retrieval counts, final author decisions, and the closed 89-record author gate | A completed systematic review or universal originality |
 | Figure 6 | Counts of four evidence states across six pre-action stages per case | A missingness rate, aggregate control score, reliability estimate, or case ranking |
 | Figure A1 | Prespecified mutation responses | Independent reviewer agreement or field validity |
 | Figure A2 | Artifact lineage and integrity checks | Source truth or completeness |

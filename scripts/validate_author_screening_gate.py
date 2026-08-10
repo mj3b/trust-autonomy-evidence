@@ -13,10 +13,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "paper" / "data" / "author-screening-queue-v0.7.0.csv"
-DECISIONS = ROOT / "paper" / "data" / "author-screening-decisions-v0.8.0.csv"
+DECISIONS = ROOT / "paper" / "data" / "author-screening-decisions-v0.9.0.csv"
 REPORT = ROOT / "paper" / "author-screening-completion-gate.md"
-SUMMARY = ROOT / "paper" / "data" / "author-screening-gate-v0.8.0.json"
+SUMMARY = ROOT / "paper" / "data" / "author-screening-gate-v0.9.0.json"
 EXPECTED_ROWS = 89
+AUTHOR = "Mark Julius Banasihan"
 ALLOWED_DECISIONS = {
     "retain-close",
     "retain-background",
@@ -37,6 +38,11 @@ def read_rows() -> list[dict[str, str]]:
         decision = indexed.get(row["record_key"], {})
         row["author_decision"] = decision.get("author_decision", "").strip()
         row["author_notes"] = decision.get("author_notes", "").strip()
+        row["review_basis"] = decision.get("review_basis", "").strip()
+        row["source_locator"] = decision.get("source_locator", "").strip()
+        row["decision_owner"] = decision.get("decision_owner", "").strip()
+        row["decision_date"] = decision.get("decision_date", "").strip()
+        row["ai_assistance"] = decision.get("ai_assistance", "").strip()
     rows.append({"_decision_ledger_rows": str(len(decision_rows)), "_decision_ledger_keys": "\n".join(indexed)})
     return rows
 
@@ -80,6 +86,35 @@ def inspect(rows: list[dict[str, str]]) -> tuple[list[str], int, int, Counter[st
             "author decisions that depart from proposals require notes: "
             + ", ".join(departures_without_notes)
         )
+    incomplete_provenance = [
+        row["record_key"]
+        for row in rows
+        if row.get("author_decision", "").strip()
+        and any(
+            not row.get(field, "").strip()
+            for field in (
+                "author_notes",
+                "review_basis",
+                "source_locator",
+                "decision_owner",
+                "decision_date",
+                "ai_assistance",
+            )
+        )
+    ]
+    if incomplete_provenance:
+        errors.append(
+            "completed decisions require notes, review basis, source, owner, date, and assistance disclosure: "
+            + ", ".join(incomplete_provenance)
+        )
+    wrong_owner = [
+        row["record_key"]
+        for row in rows
+        if row.get("author_decision", "").strip()
+        and row.get("decision_owner", "").strip() != AUTHOR
+    ]
+    if wrong_owner:
+        errors.append("decision owner mismatch: " + ", ".join(wrong_owner))
     proposed = Counter(row.get("proposed_decision", "").strip() for row in rows)
     author = Counter(row.get("author_decision", "").strip() for row in rows if row.get("author_decision", "").strip())
     completed = sum(author.values())
@@ -106,7 +141,7 @@ def report_text(rows: list[dict[str, str]]) -> str:
         "",
         f"**Status:** {status}",
         "",
-        "Mark Julius Banasihan is the recorded decision owner. AI-assisted proposals remain proposals until the v0.8 decision ledger records his decision. The final search-flow figure is eligible only after every queued record has a valid author decision.",
+        "Mark Julius Banasihan is the recorded decision owner. The ledger discloses AI-assisted title-and-abstract screening, the review basis, the source locator, and the author-accountability boundary for every decision. The final search-flow figure is eligible only after every queued record has a valid and traceable decision.",
         "",
         "## Current state",
         "",
@@ -118,7 +153,7 @@ def report_text(rows: list[dict[str, str]]) -> str:
         "",
         "## Completion conditions",
         "",
-        "1. The v0.8 decision ledger contains one permitted `author_decision` value for every v0.7 queue record.",
+        "1. The v0.9 decision ledger contains one permitted `author_decision` value for every v0.7 queue record.",
         "2. Decisions that depart from the proposal contain a short `author_notes` rationale.",
         "3. Retained close sources receive full-text verification before they support a substantive manuscript claim.",
         "4. The search table and Figure 5 are rebuilt from the author decisions.",
@@ -130,7 +165,12 @@ def report_text(rows: list[dict[str, str]]) -> str:
         "",
         "## Current boundary",
         "",
-        f"The gate is {status.lower()}. Figure 5 remains a preliminary search-flow figure. The repository can report retrieval and proposal counts; it cannot report final screening counts while {open_count} author decisions remain open.",
+        (
+            "The gate is closed. Figure 5 may report final author-screening counts. "
+            "The result remains bounded to the 89-record queue; inaccessible-record review and authenticated-database searching remain separate gates."
+            if status == "CLOSED"
+            else f"The gate is {status.lower()}. Figure 5 remains preliminary while {open_count} author decisions remain open."
+        ),
     ]
     if author:
         lines.extend(["", "## Recorded author decisions", ""])
@@ -146,7 +186,7 @@ def summary_text(rows: list[dict[str, str]]) -> str:
     queue_length = len(rows) - 1
     status = "INVALID" if errors else ("CLOSED" if open_count == 0 else "OPEN")
     summary = {
-        "version": "0.8.0",
+        "version": "0.9.0",
         "status": status,
         "records": queue_length,
         "author_decisions_complete": completed,

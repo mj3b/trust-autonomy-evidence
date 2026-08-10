@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seal the v0.8.0 manuscript pressure-test candidate."""
+"""Seal the v0.9.0 author-screened manuscript candidate."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "release" / "v0.8.0-manifest.json"
+OUTPUT = ROOT / "release" / "v0.9.0-manifest.json"
 
 CORE = (
     "release/v0.3.0-manifest.json",
@@ -17,6 +17,7 @@ CORE = (
     "release/v0.5.0-manifest.json",
     "release/v0.6.0-manifest.json",
     "release/v0.7.0-manifest.json",
+    "release/v0.8.0-manifest.json",
     "README.md",
     "RESEARCH_STATUS.md",
     "CLAIMS.md",
@@ -36,6 +37,7 @@ CORE = (
     "schemas/research-lineage.schema.json",
     "schemas/coe-audit-result.schema.json",
     "schemas/coe-audit-mutations.schema.json",
+    "schemas/literature-support-audit.schema.json",
     "fixtures/coe-audit-mutations.json",
     "research/trust-autonomy-and-evidence.md",
     "research/chain-of-evidence-adaptation.md",
@@ -53,6 +55,10 @@ CORE = (
     "audits/v0.8.0/audit-results.json",
     "audits/v0.8.0/audit-report.md",
     "audits/v0.8.0/exceptions.md",
+    "audits/v0.9.0/audit-plan.md",
+    "audits/v0.9.0/audit-results.json",
+    "audits/v0.9.0/audit-report.md",
+    "audits/v0.9.0/exceptions.md",
     "reports/public-case-reconstruction-v0.6.0.md",
     "reports/oko-evidence-adjudication-v0.6.0.md",
     "reports/figure-methods.md",
@@ -65,6 +71,7 @@ PAPER = (
     "paper/manuscript-reader.md",
     "paper/manuscript-pressure-test-v0.8.0.md",
     "paper/review-record-v0.8.0.md",
+    "paper/review-record-v0.9.0.md",
     "paper/author-screening-completion-gate.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
@@ -79,8 +86,12 @@ PAPER = (
     "paper/data/author-screening-queue-v0.7.0.csv",
     "paper/data/author-screening-decisions-v0.8.0.csv",
     "paper/data/author-screening-gate-v0.8.0.json",
+    "paper/data/author-screening-decisions-v0.9.0.csv",
+    "paper/data/author-screening-gate-v0.9.0.json",
     "paper/literature-support-audit-v0.7.0.json",
     "paper/literature-support-audit-v0.7.0.md",
+    "paper/literature-support-audit-v0.9.0.json",
+    "paper/literature-support-audit-v0.9.0.md",
     "paper/novelty-audit.md",
     "paper/references.bib",
     "paper/claim-evidence-register.md",
@@ -99,6 +110,8 @@ FIGURES = (
     "figures/v0.7.0-claim-evidence-manifest.json",
     "figures/v0.8.0-manifest.json",
     "figures/v0.8.0-claim-evidence-manifest.json",
+    "figures/v0.9.0-manifest.json",
+    "figures/v0.9.0-claim-evidence-manifest.json",
     "figures/specifications/figure-register.json",
     "figures/specifications/selection-decisions.json",
     "figures/specifications/decision-paths.json",
@@ -134,6 +147,7 @@ VALIDATION = (
     "scripts/build_release_manifest.py",
     "scripts/render_reader_manuscript.py",
     "scripts/validate_author_screening_gate.py",
+    "scripts/build_author_screening_decisions_v0_9_0.py",
     "scripts/validate_repository.py",
     "scripts/validate_release_snapshot.py",
     "scripts/validate_paper.py",
@@ -164,7 +178,7 @@ def main() -> int:
             raise FileNotFoundError(relative)
         artifacts.append({"path": relative, "bytes": path.stat().st_size, "sha256": digest(path)})
     result = {
-        "version": "0.8.0",
+        "version": "0.9.0",
         "created": "2026-08-10",
         "hash_algorithm": "SHA-256",
         "artifacts": artifacts,

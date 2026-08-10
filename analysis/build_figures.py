@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the v0.8.0 journal-style publication figures from committed artifacts."""
+"""Build the v0.9.0 journal-style publication figures from committed artifacts."""
 
 from __future__ import annotations
 
@@ -29,8 +29,8 @@ from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import FancyArrowPatch, Rectangle  # noqa: E402
 
 
-FIGURE_SET_VERSION = "0.8.0"
-SOURCE_RELEASE = "0.7.0"
+FIGURE_SET_VERSION = "0.9.0"
+SOURCE_RELEASE = "0.8.0"
 
 CASE_ASSESSMENT_PATHS = (
     "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
@@ -156,6 +156,8 @@ SOURCE_INPUTS = (
     "paper/data/formal-search-v0.7.0.json",
     "paper/data/formal-screening-proposals-v0.7.0.json",
     "paper/data/author-screening-queue-v0.7.0.csv",
+    "paper/data/author-screening-decisions-v0.9.0.csv",
+    "paper/data/author-screening-gate-v0.9.0.json",
 )
 
 
@@ -175,7 +177,7 @@ def configure_style() -> None:
             "figure.facecolor": PAPER,
             "axes.facecolor": PAPER,
             "savefig.facecolor": PAPER,
-            "svg.hashsalt": "trust-autonomy-evidence-figure-set-v0.7.0",
+            "svg.hashsalt": "trust-autonomy-evidence-figure-set-v0.9.0",
         }
     )
 
@@ -198,7 +200,7 @@ def write_csv(path: Path, fieldnames: list[str], rows: list[dict]) -> None:
 
 def save_figure(fig: plt.Figure, output_dir: Path, stub: str) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
-    metadata_version = FIGURE_SET_VERSION if stub == "fig-6-evidence-boundaries" else "0.7"
+    metadata_version = FIGURE_SET_VERSION
     fig.savefig(
         output_dir / f"{stub}.png",
         dpi=220,
@@ -450,12 +452,22 @@ def build_decision_paths(data_dir: Path, figure_dir: Path) -> None:
 def build_formal_search(data_dir: Path, figure_dir: Path) -> None:
     search = read_json("paper/data/formal-search-v0.7.0.json")
     proposals = read_json("paper/data/formal-screening-proposals-v0.7.0.json")
+    gate = read_json("paper/data/author-screening-gate-v0.9.0.json")
     direct = sum(run["record_count"] for run in search["search_runs"].values())
     chain = sum(item["reference_count"] + item["citation_count"] for item in search["citation_chains"].values())
     pooled = search["pooled_record_count"]
     deduplicated = search["deduplicated_record_count"]
-    counts = proposals["counts"]
-    author_queue = counts["retain-close"] + counts["exclude-single-component"]
+    proposal_counts = proposals["counts"]
+    author_counts = gate["author_counts"]
+    author_queue = gate["records"]
+    final_counts = {
+        "retain-close": author_counts["retain-close"],
+        "retain-background": proposal_counts["retain-background"] + author_counts["retain-background"],
+        "exclude-single-component": author_counts["exclude-single-component"],
+        "exclude-topic": proposal_counts["exclude-topic"] + author_counts["exclude-topic"],
+        "inaccessible": proposal_counts["inaccessible"],
+        "exclude-outside-cutoff": proposal_counts["exclude-outside-cutoff"],
+    }
     rows = [
         {"stage": "Direct queries", "decision": "retrieved", "count": direct, "author_attention": "no", "source": "formal-search-v0.7.0.json"},
         {"stage": "Citation chains", "decision": "retrieved", "count": chain, "author_attention": "no", "source": "formal-search-v0.7.0.json"},
@@ -465,14 +477,16 @@ def build_formal_search(data_dir: Path, figure_dir: Path) -> None:
     labels = [
         ("Retain close", "retain-close"),
         ("Retain background", "retain-background"),
-        ("Author attention", "exclude-single-component"),
+        ("Exclude single component", "exclude-single-component"),
         ("Exclude topic", "exclude-topic"),
         ("Inaccessible", "inaccessible"),
         ("Outside cutoff", "exclude-outside-cutoff"),
     ]
-    for label, key in labels:
-        rows.append({"stage": "Preliminary triage", "decision": key, "count": counts[key], "author_attention": "yes" if key in {"retain-close", "exclude-single-component"} else "no", "source": "formal-screening-proposals-v0.7.0.json"})
-    rows.append({"stage": "Author gate", "decision": "open queue", "count": author_queue, "author_attention": "yes", "source": "derived: retain-close plus exclude-single-component"})
+    for _, key in labels:
+        rows.append({"stage": "Preliminary triage", "decision": key, "count": proposal_counts[key], "author_attention": "yes" if key in {"retain-close", "exclude-single-component"} else "no", "source": "formal-screening-proposals-v0.7.0.json"})
+    for _, key in labels:
+        rows.append({"stage": "Final screening", "decision": key, "count": final_counts[key], "author_attention": "complete" if key not in {"inaccessible"} else "separate gate", "source": "derived from author-screening-decisions-v0.9.0.csv and formal-screening-proposals-v0.7.0.json"})
+    rows.append({"stage": "Author gate", "decision": "closed queue", "count": author_queue, "author_attention": "complete", "source": "author-screening-gate-v0.9.0.json"})
     write_csv(data_dir / "fig-5-formal-search-and-screening.csv", ["stage", "decision", "count", "author_attention", "source"], rows)
 
     fig = plt.figure(figsize=(7.25, 4.45))
@@ -490,8 +504,8 @@ def build_formal_search(data_dir: Path, figure_dir: Path) -> None:
 
     right = fig.add_subplot(gs[0, 1])
     y = list(range(len(labels)))
-    values = [counts[key] for _, key in labels]
-    colors = [BLUE if key in {"retain-close", "exclude-single-component"} else MUTED for _, key in labels]
+    values = [final_counts[key] for _, key in labels]
+    colors = [BLUE if key in {"retain-close", "retain-background"} else MUTED for _, key in labels]
     right.set_xscale("log")
     right.hlines(y, 1, values, color=LIGHT, linewidth=1.0, zorder=1)
     right.scatter(values, y, s=42, facecolor=colors, edgecolor=colors, zorder=2)
@@ -505,8 +519,8 @@ def build_formal_search(data_dir: Path, figure_dir: Path) -> None:
     right.tick_params(axis="y", length=0, pad=6)
     right.tick_params(axis="x", labelsize=6.8)
     right.spines[["top", "right", "left"]].set_visible(False)
-    right.text(0.50, 1.02, "AI-assisted preliminary triage", ha="center", va="bottom", fontsize=8.2, weight="semibold", transform=right.transAxes)
-    right.text(0.02, -0.20, f"Open author-decision queue: {author_queue} records", ha="left", va="top", fontsize=7.2, color=BLUE, weight="semibold", transform=right.transAxes)
+    right.text(0.50, 1.02, "Final screening state", ha="center", va="bottom", fontsize=8.2, weight="semibold", transform=right.transAxes)
+    right.text(0.02, -0.20, f"Author gate: {author_queue}/{author_queue} decisions complete", ha="left", va="top", fontsize=7.2, color=BLUE, weight="semibold", transform=right.transAxes)
     fig.subplots_adjust(left=0.04, right=0.96, top=0.91, bottom=0.21)
     save_figure(fig, figure_dir, "fig-5-formal-search-and-screening")
 
@@ -799,14 +813,14 @@ def write_manifest(output_root: Path) -> None:
         "artifacts": [manifest_entry(output_root / relative, relative) for relative in expected_outputs()],
         "inputs": [manifest_entry(ROOT / relative, Path(relative)) for relative in SOURCE_INPUTS],
     }
-    for relative in (Path("figures/manifest.json"), Path("figures/v0.8.0-manifest.json")):
+    for relative in (Path("figures/manifest.json"), Path("figures/v0.9.0-manifest.json")):
         path = output_root / relative
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
 
 def validate_manifest(errors: list[str]) -> None:
-    for relative in (Path("figures/manifest.json"), Path("figures/v0.8.0-manifest.json")):
+    for relative in (Path("figures/manifest.json"), Path("figures/v0.9.0-manifest.json")):
         path = ROOT / relative
         if not path.is_file():
             errors.append(f"{relative.as_posix()} is missing")

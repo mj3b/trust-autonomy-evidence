@@ -53,7 +53,7 @@ Institutional reform & P & S & S \\
 \begin{table}[t]
 \centering
 \begin{threeparttable}
-\caption{Formal search and preliminary screening}
+\caption{Formal search and final screening state}
 \label{tab:formal-search}
 \begin{tabularx}{\linewidth}{l X r l}
 \toprule
@@ -62,20 +62,41 @@ Stage & Record class & Count & Status \\
 Retrieval & Direct queries & 184 & Declared open-index queries complete \\
 Retrieval & Citation chains & 2,482 & Fourteen of fifteen seeds resolved \\
 Pooling & Combined records & 2,666 & Before deduplication \\
-Pooling & Deduplicated records & 2,431 & Unit for preliminary triage \\
+Pooling & Deduplicated records & 2,431 & Unit for screening \\
 \midrule
-Preliminary triage & Retain close & 12 & Author decision required \\
-Preliminary triage & Retain background & 13 & Proposed background set \\
-Preliminary triage & Attention records & 77 & Author decision required \\
-Preliminary triage & Exclude topic & 1,239 & AI-assisted proposal \\
-Preliminary triage & Inaccessible & 1,087 & Substantive screening unresolved \\
-Preliminary triage & Outside cutoff & 3 & Published after cutoff \\
+Final screening & Retain close & 27 & Confirmed close set \\
+Final screening & Retain background & 45 & Thirteen prior plus 32 confirmed \\
+Final screening & Exclude single component & 10 & Relevant component only \\
+Final screening & Exclude topic & 1,259 & Outside the review question \\
+Final screening & Inaccessible & 1,087 & Substantive screening unresolved \\
+Final screening & Outside cutoff & 3 & Published after cutoff \\
 \midrule
-Author gate & Open queue & 89 & Twelve close plus 77 attention records \\
+Author gate & Completed queue & 89 & All decisions recorded \\
 \bottomrule
 \end{tabularx}
 \begin{tablenotes}[flushleft]\footnotesize
-\item The six preliminary triage classes sum to 2,431. The decisions are AI-assisted proposals. The 89-record author gate and authenticated database searching remain open.
+\item The six final screening classes sum to 2,431. Mark Julius Banasihan is the decision owner for the 89-record queue, with disclosed AI assistance. The 1,087 inaccessible records and authenticated database searching remain separate coverage limits.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
+\caption{Proposal-to-author decision changes}
+\label{tab:author-screening-changes}
+\begin{tabular}{l r r r r r}
+\toprule
+Proposed class & Records & Close & Background & Topic & Single component \\
+\midrule
+Retain close & 12 & 12 & 0 & 0 & 0 \\
+Author attention & 77 & 15 & 32 & 20 & 10 \\
+\midrule
+Total author queue & 89 & 27 & 32 & 20 & 10 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item The author confirmed all 12 proposed close records. The 77 attention records produced 15 additional close sources and 32 background sources. These decisions close the declared author gate. They do not resolve the inaccessible-record or authenticated-database gates.
 \end{tablenotes}
 \end{threeparttable}
 \end{table}

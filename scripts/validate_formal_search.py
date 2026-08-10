@@ -192,7 +192,7 @@ def main() -> None:
     print(
         "formal-search validation: PASS "
         f"({len(runs)} queries; {len(chains)} chains; {len(deduplicated):,} records; "
-        f"{len(queue)} author decisions queued)"
+        f"{len(queue)} frozen author-queue records)"
     )
 
 
