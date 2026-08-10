@@ -35,13 +35,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 20826,
-      "sha256": "6ddf3e456e13b56b1fff10feddff710346d30ecc6d4068777d5da3829e5b16bf"
+      "bytes": 20761,
+      "sha256": "dcb7cd1b954f7974b20d1873b7a704edc898b1ecf3f8d557862ba35a9a1f81ea"
     },
     {
       "path": "RESEARCH_STATUS.md",
-      "bytes": 7402,
-      "sha256": "90094c2324998a1d04aa41143cbaebe339ec785771e9c677a24b85ef7273b564"
+      "bytes": 7382,
+      "sha256": "dce46ebe1d14d37033d38090fcf25974ccfa1ad874f5deadf383b704ea8796d8"
     },
     {
       "path": "CLAIMS.md",
@@ -60,8 +60,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 776,
-      "sha256": "9bc3cc246838d34c44ce191fefc09e530942271fe971ba9af090cf723a3dec78"
+      "bytes": 791,
+      "sha256": "ec822ea4929fa95488276b4503e25a1d9e45f0ba5660770d6e0a198b89bb1e72"
     },
     {
       "path": "CHANGELOG.md",
