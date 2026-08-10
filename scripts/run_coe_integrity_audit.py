@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Run the v0.6.0 Chain-of-Evidence integrity audit and negative controls."""
+"""Run the current Chain-of-Evidence integrity audit and negative controls."""
 
 from __future__ import annotations
 
 import argparse
 import copy
+import csv
 import hashlib
 import json
 import sys
@@ -19,9 +20,12 @@ ROOT = Path(__file__).resolve().parents[1]
 CLAIM_MAP_PATH = ROOT / "evidence/claim-evidence-map.json"
 LINEAGE_PATH = ROOT / "evidence/research-lineage.json"
 MUTATIONS_PATH = ROOT / "fixtures/coe-audit-mutations.json"
-RESULT_PATH = ROOT / "audits/v0.6.0/audit-results.json"
-REPORT_PATH = ROOT / "audits/v0.6.0/audit-report.md"
-EXCEPTIONS = ["COE-EX-03", "COE-EX-04"]
+RESULT_PATH = ROOT / "audits/v0.8.0/audit-results.json"
+REPORT_PATH = ROOT / "audits/v0.8.0/audit-report.md"
+AUDIT_VERSION = "0.8.0"
+AUDIT_ID = "TAE-COE-AUDIT-V0.8.0"
+AUDIT_DATE = "2026-08-10"
+EXCEPTIONS = ["COE-EX-03", "COE-EX-04", "COE-EX-05"]
 FITNESS_DIMENSIONS = (
     "directness",
     "contemporaneity",
@@ -100,11 +104,18 @@ def resolve_evidence(evidence: dict[str, Any], manifests: dict[str, set[str]]) -
                 raise ValueError(f"marker not found: {locator}")
             value = locator
         elif locator_type == "csv_cell":
-            row_text, column_index = locator.rsplit("|", 1)
-            matches = [line for line in path.read_text(encoding="utf-8").splitlines() if row_text in line]
+            row_selector, column_name = locator.rsplit("|", 1)
+            criteria = dict(item.split("=", 1) for item in row_selector.split(";") if item)
+            with path.open(encoding="utf-8", newline="") as handle:
+                matches = [
+                    row for row in csv.DictReader(handle)
+                    if all(row.get(key) == expected for key, expected in criteria.items())
+                ]
             if len(matches) != 1:
                 raise ValueError(f"CSV row locator resolved {len(matches)} rows")
-            value = matches[0].split(",")[int(column_index)]
+            if column_name not in matches[0]:
+                raise ValueError(f"CSV column not found: {column_name}")
+            value = matches[0][column_name]
         else:
             raise ValueError(f"unsupported locator type: {locator_type}")
     except (KeyError, IndexError, ValueError, json.JSONDecodeError) as exc:
@@ -339,7 +350,12 @@ def negative_control_results(claim_map: dict[str, Any], suite: dict[str, Any]) -
     return output
 
 
-def check_summary(name: str, claim_results: list[dict[str, Any]], findings: dict[str, list[str]]) -> dict[str, Any]:
+def check_summary(
+    name: str,
+    claim_map: dict[str, Any],
+    claim_results: list[dict[str, Any]],
+    findings: dict[str, list[str]],
+) -> dict[str, Any]:
     check_ids = {
         "score_verification": "COE-I1",
         "specification_violation": "COE-I2",
@@ -348,7 +364,7 @@ def check_summary(name: str, claim_results: list[dict[str, Any]], findings: dict
         "evidence_fitness_and_dependency_closure": "COE-I5",
     }
     if name == "score_verification":
-        tested = sum(1 for claim in load_json(CLAIM_MAP_PATH)["claims"] for evidence in claim["evidence"] if "expected_value" in evidence)
+        tested = sum(1 for claim in claim_map["claims"] for evidence in claim["evidence"] if "expected_value" in evidence)
         indeterminate = 0
     elif name == "specification_violation":
         tested = len(claim_results)
@@ -359,7 +375,11 @@ def check_summary(name: str, claim_results: list[dict[str, Any]], findings: dict
             1 for row in claim_results if "indeterminate" in {row["traceability"], row["integrity"], row["support"]}
         )
     elif name == "method_code_alignment":
-        tested = 3
+        tested = sum(
+            1
+            for claim in claim_map["claims"]
+            if {"method", "implementation"}.issubset({evidence["role"] for evidence in claim["evidence"]})
+        )
         indeterminate = 0
     else:
         tested = len(claim_results)
@@ -400,7 +420,7 @@ def build_result() -> dict[str, Any]:
     findings["specification_violation"] = schema_findings + findings["specification_violation"]
     controls = negative_control_results(claim_map, mutations)
     checks = [
-        check_summary(name, claim_results, findings)
+        check_summary(name, claim_map, claim_results, findings)
         for name in (
             "score_verification",
             "specification_violation",
@@ -413,10 +433,10 @@ def build_result() -> dict[str, Any]:
     hard_fail = any(check["status"] == "fail" for check in checks) or bool(escaped_controls)
     status = "FAIL" if hard_fail else "PASS_WITH_EXCEPTIONS"
     result = {
-        "version": "0.6.0",
-        "audit_id": "TAE-COE-AUDIT-V0.6.0",
-        "audit_date": "2026-08-09",
-        "scope": "Fifteen material claims declared in TAE-COE-V0.6.0, plus a separate 16-proposition literature-support register; independent validity and systematic novelty searching are outside the audit.",
+        "version": AUDIT_VERSION,
+        "audit_id": AUDIT_ID,
+        "audit_date": AUDIT_DATE,
+        "scope": "Twenty material claims declared in TAE-COE-V0.8.0, including the reader manuscript, Figure 6, Table A3, and the author-screening gate. Independent validity, final author screening, and authenticated database coverage remain outside the completed evidence base.",
         "status": status,
         "checks": checks,
         "negative_controls": controls,
@@ -431,7 +451,7 @@ def build_result() -> dict[str, Any]:
 
 def render_report(result: dict[str, Any]) -> str:
     lines = [
-        "# v0.6.0 Chain-of-Evidence Integrity Audit",
+        "# v0.8.0 Chain-of-Evidence Integrity Audit",
         "",
         f"**Audit date:** {result['audit_date']}  ",
         f"**Status:** `{result['status']}`  ",
@@ -439,7 +459,7 @@ def render_report(result: dict[str, Any]) -> str:
         "",
         "## Decision",
         "",
-        "The declared v0.6 claim set passes its executable integrity controls with two published exceptions. The Oko protocol mismatch is resolved through versioned reclassification, and the current sentence-level literature-support audit passes. The result permits bounded artifact and method claims and supplies no independent reliability or originality finding.",
+        "The declared v0.8 claim set passes its executable integrity controls with three published exceptions. The new reader manuscript, Figure 6, Table A3, and author-screening gate resolve to their declared evidence. The open screening gate prevents final literature-screening conclusions. The result permits bounded artifact and method claims and supplies no independent reliability, originality, or completed systematic-search finding.",
         "",
         "## Integrity checks",
         "",
@@ -460,12 +480,13 @@ def render_report(result: dict[str, Any]) -> str:
         lines.append(f"| {row['control_id']} | {row['expected_check']} | {'yes' if row['detected'] else 'no'} |")
     lines.extend([
         "",
-        "All nine controls run on in-memory copies. The committed evidence files remain unchanged.",
+        f"All {len(result['negative_controls'])} controls run on in-memory copies. The committed evidence files remain unchanged.",
         "",
         "## Published exceptions",
         "",
         "- `COE-EX-03`: no independent assessor has reproduced the support or evidence-fitness judgments.",
-        "- `COE-EX-04`: institutional database searching and full citation chaining remain incomplete.",
+        "- `COE-EX-04`: authenticated database searching, inaccessible-record review, and full citation chaining remain incomplete.",
+        "- `COE-EX-05`: all 89 author-screening decisions remain open, so final search-flow conclusions are blocked.",
         "",
         "## Interpretation",
         "",
@@ -500,7 +521,10 @@ def main() -> int:
         REPORT_PATH.write_text(report_text, encoding="utf-8")
 
     detected = sum(1 for row in result["negative_controls"] if row["detected"])
-    print(f"chain-of-evidence audit: {result['status']} ({len(result['claim_results'])} claims; {detected}/9 controls detected)")
+    print(
+        f"chain-of-evidence audit: {result['status']} "
+        f"({len(result['claim_results'])} claims; {detected}/{len(result['negative_controls'])} controls detected)"
+    )
     return 0 if result["status"] != "FAIL" else 1
 
 

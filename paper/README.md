@@ -1,6 +1,6 @@
 # Paper Workspace
 
-This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. Version 0.7.0 publishes the formal open-index search, full review draft, figures, and structured tables as a research checkpoint. Released case packets, assessments, and manifests remain the controlling research record.
+This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. Version 0.8.0 publishes the GitHub-readable manuscript, pressure test, evidence-boundary figure, coding-stability table, author-screening gate, and expanded claim-evidence audit as a research checkpoint. The manuscript remains a working submission candidate. Released case packets, assessments, and manifests remain the controlling research record.
 
 **PR #11 merge commit:** [`a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec`](https://github.com/mj3b/trust-autonomy-evidence/commit/a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec)
 
@@ -15,7 +15,10 @@ This directory develops a methods and comparative-case paper from the repository
 | File | Short description |
 |---|---|
 | [`paper-charter.md`](paper-charter.md) | Fixes the paper type, question, contribution, audience, and claim boundary. |
-| [`manuscript.md`](manuscript.md) | Contains the full v0.4 review draft, including results, discussion, ethics, limitations, and disclosure. |
+| [`manuscript.md`](manuscript.md) | Preserves the auditable manuscript source with Pandoc citation identifiers. |
+| [`manuscript-reader.md`](manuscript-reader.md) | Presents the same manuscript with clickable author-year citations and a rendered reference list for GitHub readers. |
+| [`manuscript-pressure-test-v0.8.0.md`](manuscript-pressure-test-v0.8.0.md) | Records citation, count, claim, coding-stability, ethics, and submission-gate findings and their resolutions. |
+| [`review-record-v0.8.0.md`](review-record-v0.8.0.md) | Records author authorization, reviewed additions, support decisions, and the publication boundary. |
 | [`tables.md`](tables.md) | Preserves exact assessment states, search counts, correction history, captions, and interpretation notes. |
 | [`tables/manuscript-tables.tex`](tables/manuscript-tables.tex) | Provides journal-ready `booktabs` fragments with three horizontal rules and no vertical rules. |
 | [`literature-matrix.md`](literature-matrix.md) | Relates 41 working sources to the proposed contribution and its boundaries. |
@@ -24,6 +27,9 @@ This directory develops a methods and comparative-case paper from the repository
 | [`formal-citation-chain-v0.7.0.md`](formal-citation-chain-v0.7.0.md) | Reports the eight direct queries, fifteen seed chains, second-index checks, errors, and coverage limits. |
 | [`formal-search-screening-v0.7.0.md`](formal-search-screening-v0.7.0.md) | Summarizes preliminary machine triage and the author-confirmation gate. |
 | [`data/author-screening-queue-v0.7.0.csv`](data/author-screening-queue-v0.7.0.csv) | Presents the 12 close-source proposals and 77 attention records for author decisions and notes. |
+| [`data/author-screening-decisions-v0.8.0.csv`](data/author-screening-decisions-v0.8.0.csv) | Records Mark Julius Banasihan's decisions without changing the released v0.7 proposal queue. |
+| [`data/author-screening-gate-v0.8.0.json`](data/author-screening-gate-v0.8.0.json) | Records the computed 89-record gate state used by the claim map and integrity audit. |
+| [`author-screening-completion-gate.md`](author-screening-completion-gate.md) | Shows completed and open author decisions and defines when final search-flow language becomes eligible. |
 | [`citation-chain-log-v0.6.0.md`](citation-chain-log-v0.6.0.md) | Records the index-based citation sample and its limits. |
 | [`literature-support-audit-v0.6.0.md`](literature-support-audit-v0.6.0.md) | Preserves the 16-proposition audit for the earlier introduction and related-work draft. |
 | [`literature-support-audit-v0.6.0.json`](literature-support-audit-v0.6.0.json) | Preserves the earlier manuscript locators and checked bibliography keys. |
@@ -45,4 +51,4 @@ If the manuscript conflicts with a frozen packet or released assessment, the rel
 
 A released assessment label records what the published procedure produced. It does not establish independent validity. The [PR #11 review record](review-record-pr11.md) preserves the Oko mismatch and its v0.6 resolution through reclassification.
 
-The [v0.6 claim crosswalk](claim-crosswalk.md) makes that boundary executable. A failed evidence-fitness gate or open dependency prevents the affected claim from entering a conclusion. The formal open-index search and selected-index citation chains are complete within declared limits. Author-confirmed screening, inaccessible-record review, authenticated databases, disciplinary interfaces, and venue-specific ethics guidance remain open.
+The [v0.8 claim crosswalk](claim-crosswalk.md) makes that boundary executable. A failed evidence-fitness gate or open dependency prevents the affected claim from entering a conclusion. The formal open-index search and selected-index citation chains are complete within declared limits. Author-confirmed screening, inaccessible-record review, authenticated databases, disciplinary interfaces, and venue-specific ethics guidance remain open.

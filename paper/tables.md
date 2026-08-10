@@ -70,9 +70,25 @@ These tables preserve exact states and counts behind the figures. The submission
 | Figure 3 | Relative event order and public record gaps | A common elapsed-time scale |
 | Figure 4 | Item-level trust-evidence states | A system ranking or aggregate trust score |
 | Figure 5 and Table 3 | Retrieval counts, triage proposals, and the open author gate | A completed systematic review or universal originality |
+| Figure 6 | Counts of four evidence states across six pre-action stages per case | A missingness rate, aggregate control score, reliability estimate, or case ranking |
 | Figure A1 | Prespecified mutation responses | Independent reviewer agreement or field validity |
 | Figure A2 | Artifact lineage and integrity checks | Source truth or completeness |
 | Figure A3 | Claim gates and conclusion eligibility | Source truth, independent reliability, or a claim ranking |
 | Figure A4 and Table A1 | A versioned evidence-classification correction | New historical evidence or an error-rate estimate |
 
 *Note.* Each figure has a machine-readable CSV. The figure specifications and methods report the unit of analysis, transformation, supported claim, and prohibited interpretation.
+
+## Table A3. Availability of coding-stability evidence
+
+| Test condition | Oko, 1983 | Patriot ZG710, 2003 | Patriot F/A-18C, 2003 |
+|---|:---:|:---:|:---:|
+| A second coding exists | Yes | No | No |
+| The same source packet was used | Yes | NA | NA |
+| The same evidence rule was used | No | NA | NA |
+| Comparable pre-action stages | 6 | 0 | 0 |
+| Unchanged classifications | 0 | NA | NA |
+| Changed classifications | 6 | NA | NA |
+| Independent second assessor | No | No | No |
+| Reliability claim eligible | No | No | No |
+
+*Note.* Oko's six changes arose when the direct-and-contemporaneous rule was applied to the frozen packet. The comparison records a correction under a changed classification rule. It cannot estimate intra-rater stability or inter-rater reliability. The two Patriot cases have one released coding each.

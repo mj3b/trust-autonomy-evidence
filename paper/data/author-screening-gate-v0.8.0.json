@@ -1,0 +1,14 @@
+{
+  "version": "0.8.0",
+  "status": "OPEN",
+  "records": 89,
+  "author_decisions_complete": 0,
+  "author_decisions_open": 89,
+  "proposed_counts": {
+    "exclude-single-component": 77,
+    "retain-close": 12
+  },
+  "author_counts": {},
+  "final_search_flow_eligible": false,
+  "validation_errors": []
+}

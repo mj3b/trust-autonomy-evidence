@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the v0.7.0 journal-style publication figures from committed artifacts."""
+"""Build the v0.8.0 journal-style publication figures from committed artifacts."""
 
 from __future__ import annotations
 
@@ -29,8 +29,8 @@ from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import FancyArrowPatch, Rectangle  # noqa: E402
 
 
-FIGURE_SET_VERSION = "0.7.0"
-SOURCE_RELEASE = "0.6.0"
+FIGURE_SET_VERSION = "0.8.0"
+SOURCE_RELEASE = "0.7.0"
 
 CASE_ASSESSMENT_PATHS = (
     "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
@@ -53,6 +53,7 @@ CONTROL_FIELDS = (
     "repair",
     "reform",
 )
+PRE_ACTION_FIELDS = CONTROL_FIELDS[:6]
 CONTROL_LABELS = {
     "access": "Access before action",
     "comprehension": "Comprehension",
@@ -129,6 +130,7 @@ FIGURE_STUBS = (
     "fig-3-decision-paths",
     "fig-4-trust-evidence-states",
     "fig-5-formal-search-and-screening",
+    "fig-6-evidence-boundaries",
     "fig-a1-mutation-response",
     "fig-a2-reproducibility-lineage",
     "fig-a4-oko-versioned-correction",
@@ -196,17 +198,18 @@ def write_csv(path: Path, fieldnames: list[str], rows: list[dict]) -> None:
 
 def save_figure(fig: plt.Figure, output_dir: Path, stub: str) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
+    metadata_version = FIGURE_SET_VERSION if stub == "fig-6-evidence-boundaries" else "0.7"
     fig.savefig(
         output_dir / f"{stub}.png",
         dpi=220,
         bbox_inches="tight",
-        metadata={"Software": "Trust, Autonomy, and Evidence v0.7 figure builder"},
+        metadata={"Software": f"Trust, Autonomy, and Evidence v{metadata_version} figure builder"},
     )
     svg_path = output_dir / f"{stub}.svg"
     fig.savefig(
         svg_path,
         bbox_inches="tight",
-        metadata={"Creator": "Trust, Autonomy, and Evidence v0.7 figure builder", "Date": None},
+        metadata={"Creator": f"Trust, Autonomy, and Evidence v{metadata_version} figure builder", "Date": None},
     )
     svg_text = svg_path.read_text(encoding="utf-8")
     svg_path.write_text("\n".join(line.rstrip() for line in svg_text.splitlines()) + "\n", encoding="utf-8")
@@ -508,6 +511,111 @@ def build_formal_search(data_dir: Path, figure_dir: Path) -> None:
     save_figure(fig, figure_dir, "fig-5-formal-search-and-screening")
 
 
+def build_evidence_boundaries(assessments: list[dict], data_dir: Path, figure_dir: Path) -> None:
+    displayed_states = ("supported", "partially_supported", "unsupported", "indeterminate")
+    rows = []
+    for assessment in assessments:
+        findings = assessment["practical_control"]
+        for state in displayed_states:
+            stages = [field for field in PRE_ACTION_FIELDS if findings[field]["state"] == state]
+            rows.append(
+                {
+                    "case_id": assessment["case_id"],
+                    "case_title": assessment["title"],
+                    "state": state,
+                    "count": len(stages),
+                    "stages": ";".join(stages),
+                    "denominator": len(PRE_ACTION_FIELDS),
+                }
+            )
+        outside = [field for field in PRE_ACTION_FIELDS if findings[field]["state"] == "outside_scope"]
+        if outside:
+            raise ValueError(f"pre-action evidence-boundary figure contains outside-scope fields: {outside}")
+    write_csv(
+        data_dir / "fig-6-evidence-boundaries.csv",
+        ["case_id", "case_title", "state", "count", "stages", "denominator"],
+        rows,
+    )
+
+    styles = {
+        "supported": {"color": BLUE, "edgecolor": BLUE, "hatch": "", "text": PAPER},
+        "partially_supported": {"color": MID_BLUE, "edgecolor": BLUE, "hatch": "///", "text": INK},
+        "unsupported": {"color": MUTED, "edgecolor": MUTED, "hatch": "xx", "text": PAPER},
+        "indeterminate": {"color": PAPER, "edgecolor": MUTED, "hatch": "..", "text": INK},
+    }
+    fig, ax = plt.subplots(figsize=(7.25, 3.35))
+    fig.subplots_adjust(left=0.25, right=0.98, top=0.80, bottom=0.22)
+    for y, assessment in enumerate(assessments):
+        left = 0
+        for state in displayed_states:
+            count = sum(
+                assessment["practical_control"][field]["state"] == state
+                for field in PRE_ACTION_FIELDS
+            )
+            if count == 0:
+                continue
+            style = styles[state]
+            ax.barh(
+                y,
+                count,
+                left=left,
+                height=0.58,
+                color=style["color"],
+                edgecolor=style["edgecolor"],
+                hatch=style["hatch"],
+                linewidth=0.8,
+                zorder=2,
+            )
+            ax.text(
+                left + count / 2,
+                y,
+                f"{STATE_CODES[state]} {count}",
+                ha="center",
+                va="center",
+                fontsize=7.3,
+                weight="semibold",
+                color=style["text"],
+                zorder=3,
+            )
+            left += count
+    ax.set_xlim(0, len(PRE_ACTION_FIELDS))
+    ax.set_xticks(range(len(PRE_ACTION_FIELDS) + 1))
+    ax.set_xlabel("Pre-action practical-control stages (six per case)", fontsize=7.6)
+    ax.set_yticks(
+        range(len(assessments)),
+        [CASE_LABELS[item["case_id"]].replace("\n", " ") for item in assessments],
+        fontsize=7.8,
+    )
+    ax.invert_yaxis()
+    ax.grid(axis="x", color=LIGHT, linewidth=0.5, zorder=0)
+    ax.tick_params(axis="y", length=0, pad=8)
+    ax.tick_params(axis="x", labelsize=7.0)
+    ax.spines[["top", "right", "left"]].set_visible(False)
+    legend = [
+        Rectangle(
+            (0, 0),
+            1,
+            1,
+            facecolor=styles[state]["color"],
+            edgecolor=styles[state]["edgecolor"],
+            hatch=styles[state]["hatch"],
+            label=f"{STATE_CODES[state]}  {STATE_LABELS[state]}",
+        )
+        for state in displayed_states
+    ]
+    fig.legend(
+        handles=legend,
+        loc="upper center",
+        bbox_to_anchor=(0.62, 0.97),
+        ncol=4,
+        frameon=False,
+        fontsize=6.9,
+        columnspacing=1.1,
+        handlelength=1.5,
+    )
+    save_figure(fig, figure_dir, "fig-6-evidence-boundaries")
+
+
 def build_mutation_response(data_dir: Path, figure_dir: Path) -> None:
     fixture = read_json("fixtures/mutations/mutations.json")
     results = read_json("assessments/generated-results.json")
@@ -657,6 +765,7 @@ def build_all(output_root: Path) -> None:
     build_decision_paths(data_dir, figure_dir)
     categorical_matrix(assessments, "trust_evidence", TRUST_FIELDS, TRUST_LABELS, "fig-4-trust-evidence-states", data_dir, figure_dir)
     build_formal_search(data_dir, figure_dir)
+    build_evidence_boundaries(assessments, data_dir, figure_dir)
     build_mutation_response(data_dir, figure_dir)
     build_lineage(data_dir, figure_dir)
     build_oko_correction(data_dir, figure_dir)
@@ -690,14 +799,14 @@ def write_manifest(output_root: Path) -> None:
         "artifacts": [manifest_entry(output_root / relative, relative) for relative in expected_outputs()],
         "inputs": [manifest_entry(ROOT / relative, Path(relative)) for relative in SOURCE_INPUTS],
     }
-    for relative in (Path("figures/manifest.json"), Path("figures/v0.7.0-manifest.json")):
+    for relative in (Path("figures/manifest.json"), Path("figures/v0.8.0-manifest.json")):
         path = output_root / relative
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
 
 def validate_manifest(errors: list[str]) -> None:
-    for relative in (Path("figures/manifest.json"), Path("figures/v0.7.0-manifest.json")):
+    for relative in (Path("figures/manifest.json"), Path("figures/v0.8.0-manifest.json")):
         path = ROOT / relative
         if not path.is_file():
             errors.append(f"{relative.as_posix()} is missing")

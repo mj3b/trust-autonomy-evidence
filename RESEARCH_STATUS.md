@@ -1,10 +1,10 @@
 # Research Status
 
-**Version:** 0.7.0
+**Version:** 0.8.0
 
-**Next target:** 0.8.0 author screening and authenticated-search phase
+**Next target:** Close the 89-record author-screening gate
 
-**Status:** Working research repository
+**Status:** Released research checkpoint
 
 **Status date:** 10 August 2026
 
@@ -21,12 +21,12 @@
 | Public-case reconstruction protocol | Frozen cutoff, candidate collections, eligibility rules, screening order, and source-packet contract | Applied without changing the frozen procedure | A later replication reproduces the screening path from preserved inputs |
 | Public-case packets | Three source manifests, assessments, reports, and packet hashes | Demonstrated for selected public evidence | Independent reconstruction tests source sufficiency and classification stability |
 | Public-case interaction checks | Successful intervention, authority without practical force, and missing-evidence boundary | Executable for the three included packets | New case families test additional control interactions |
-| Publication figure set | Five main figures, four appendix figures, nine derived CSV files, SVG and PNG outputs, specifications, and artifact-integrity checks | Released in v0.7.0 | A venue-formatted paper preserves every caption and interpretation boundary |
-| Claim-evidence integrity | Fifteen mapped claims, five gates, five integrity checks, nine negative controls, and two published exceptions | Demonstrated for the declared v0.6.0 scope | Obtain an independent reconstruction and complete institutional database searching |
+| Publication figure set | Six main figures, four appendix figures, ten derived CSV files, SVG and PNG outputs, specifications, and artifact-integrity checks | Released in v0.8.0 | A venue-formatted paper preserves every caption and interpretation boundary |
+| Claim-evidence integrity | Twenty mapped claims, five gates, five integrity checks, fourteen negative controls, and three published exceptions | Demonstrated for the declared v0.8.0 scope | Obtain an independent reconstruction, close author screening, and complete authenticated database searching |
 | Research lineage | Human and software agents, activities, entities, relations, and AI-assistance log | Published with PROV-O-compatible concepts | Add formal PROV-O or RO-Crate serialization if needed by a publication venue |
-| Claim-evidence figure | One journal-style categorical appendix matrix, derived CSV, SVG, PNG, specification, and v0.7 manifest | Demonstrated for the v0.6.0 audit result | The venue-formatted manuscript preserves its no-score boundary |
+| Claim-evidence figure | One journal-style categorical appendix matrix, derived CSV, SVG, PNG, specification, and v0.8 manifest | Demonstrated for the v0.8.0 audit result | The venue-formatted manuscript preserves its no-score boundary |
 | Oko evidence adjudication | Frozen plan, fixed packet, six reclassifications, change ledger, and six negative controls | Demonstrated for the v0.6.0 decision | Independent review tests the judgment and new eligible evidence triggers a versioned reassessment |
-| Practical human control paper | Full v0.4 review draft, 41-source matrix, frozen formal search, selected-index citation chains, preliminary screening proposals, 21-proposition literature audit, structured tables, ethical burden-of-proof argument, and provisional venue selection | Released v0.7 research draft | Author confirms screening; authenticated searches and ethics guidance complete; venue-formatted anonymous package passes review |
+| Practical human control paper | Pressure-tested v0.8.0 manuscript candidate, 41-source matrix, frozen formal search, selected-index citation chains, preliminary screening proposals, 21-proposition literature audit, reader edition, structured tables, ethical burden-of-proof argument, and provisional venue selection | Working manuscript in a released repository checkpoint | Author confirms screening; authenticated searches and ethics guidance complete; venue-formatted anonymous package passes review |
 | Repository validation | Pinned schema dependency, executable script, and CI workflow | Executable for declared repository checks | CI passes on the published commit |
 | Solo-validation suite | 12 synthetic cases, 252 oracle comparisons, 12 mutation tests, and three invariance tests | Demonstrated for committed fixtures | New case families expose additional boundary and interaction failures |
 | Sealed oracle | SHA-256 manifest for cases, mutations, and expected classifications | Demonstrated for v0.2.0 artifacts | A later release preserves explicit migration and re-sealing records |
@@ -35,9 +35,9 @@
 
 ## Research phase
 
-Version 0.7.0 packages the formal open-index search, full methods manuscript, journal-style figure set, structured tables, and current release checks. It preserves the v0.6 Oko correction and integrity audit. The audit result remains `PASS_WITH_EXCEPTIONS`. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, source truth, originality, and harm prevention remain unresolved.
+Version 0.8.0 pressure-tests the manuscript's citations, evidence-boundary language, coding-stability claims, and search-completion state. It preserves the v0.7 formal search and v0.6 Oko correction. The current twenty-claim integrity audit returns `PASS_WITH_EXCEPTIONS`, with all fourteen controlled corruptions detected. Independent validity and final author-screening results remain ineligible. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, source truth, originality, and harm prevention remain unresolved.
 
-The paper workspace records a full v0.4 review draft and audits 21 material literature propositions. The 41-source matrix includes effective-oversight conditions, institutional design, causal human involvement, ScientistOne, evidence-linked argument graphs, traceable governance, and contemporary agent oversight. The formal open-index search returned 2,431 deduplicated records, and selected-seed Semantic Scholar chains are complete within recorded index limits. Five main figures, four appendix figures, and four structured manuscript tables expose relationships, exact states, search counts, and correction history. Machine triage remains preliminary. Authenticated databases, disciplinary interfaces, inaccessible-record review, and author-confirmed decisions remain open, so the manuscript makes no originality finding. The released v0.3.0 assessment remains unchanged as version history.
+The paper workspace records a pressure-tested v0.8.0 candidate and audits 21 material literature propositions. The 41-source matrix includes effective-oversight conditions, institutional design, causal human involvement, ScientistOne, evidence-linked argument graphs, traceable governance, and contemporary agent oversight. The formal open-index search returned 2,431 deduplicated records, and selected-seed Semantic Scholar chains are complete within recorded index limits. Six main figures, four appendix figures, and five structured manuscript tables expose relationships, exact states, search counts, correction history, and the absence of reliability evidence. Machine triage remains preliminary. Authenticated databases, disciplinary interfaces, inaccessible-record review, and 89 author decisions remain open, so the manuscript makes no originality finding. The released v0.3.0 assessment remains unchanged as version history.
 
 ## Next evidence gates
 
