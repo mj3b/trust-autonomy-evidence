@@ -18,6 +18,7 @@ This directory develops a methods and comparative-case paper from the repository
 | [`manuscript.md`](manuscript.md) | Contains the working abstract and section-level manuscript plan. |
 | [`literature-matrix.md`](literature-matrix.md) | Relates 28 working sources to the proposed contribution and its boundaries. |
 | [`literature-search-log.md`](literature-search-log.md) | Records discovery queries, dates, retained candidates, and search limits. |
+| [`formal-literature-search-protocol-v0.7.0.md`](formal-literature-search-protocol-v0.7.0.md) | Freezes the formal search, screening, deduplication, and citation-chain rules before retrieval. |
 | [`citation-chain-log-v0.6.0.md`](citation-chain-log-v0.6.0.md) | Records the index-based citation sample and its limits. |
 | [`literature-support-audit-v0.6.0.md`](literature-support-audit-v0.6.0.md) | Explains the sentence-level support audit for the current draft. |
 | [`literature-support-audit-v0.6.0.json`](literature-support-audit-v0.6.0.json) | Maps 16 manuscript locators to checked bibliography keys. |
