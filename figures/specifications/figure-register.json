@@ -1,6 +1,6 @@
 {
-  "version": "0.8.0",
-  "source_release": "0.7.0",
+  "version": "0.9.0",
+  "source_release": "0.8.0",
   "visual_standard": "Journal width, white background, thin horizontal rules, one blue accent, direct labels, and color-independent state codes. Titles, source notes, uncertainty, and interpretation belong in manuscript captions.",
   "figures": [
     {
@@ -68,17 +68,19 @@
     {
       "figure_id": "FIG-5",
       "file_stub": "fig-5-formal-search-and-screening",
-      "title": "Formal search retrieval and preliminary screening",
+      "title": "Formal search retrieval and final screening state",
       "unit_of_analysis": "deduplicated literature record",
       "sample": "2,431 deduplicated records retrieved through direct queries and citation chains",
       "input_files": [
         "paper/data/formal-search-v0.7.0.json",
         "paper/data/formal-screening-proposals-v0.7.0.json",
-        "paper/data/author-screening-queue-v0.7.0.csv"
+        "paper/data/author-screening-queue-v0.7.0.csv",
+        "paper/data/author-screening-decisions-v0.9.0.csv",
+        "paper/data/author-screening-gate-v0.9.0.json"
       ],
-      "transformation": "Sum direct-query and citation-chain retrieval counts, preserve the pooled and deduplicated totals, plot preliminary screening counts on a declared logarithmic axis, and calculate the open author queue as 12 retain-close plus 77 attention records.",
-      "claim_supported": "The open-index search produced a declared record pool and a visible author-decision gate. Eighty-nine substantive screening decisions remain open.",
-      "prohibited_interpretation": "The preliminary triage is not a completed systematic review, and the search supplies no universal originality claim."
+      "transformation": "Sum direct-query and citation-chain retrieval counts, preserve the pooled and deduplicated totals, apply the 89 author decisions to the queued records, combine those decisions with the previously screened classes, and plot the six final screening classes on a declared logarithmic axis.",
+      "claim_supported": "The open-index search produced a declared record pool, and the author completed all 89 queued screening decisions. The final full-pool classes sum to 2,431.",
+      "prohibited_interpretation": "The closed author queue does not resolve the 1,087 inaccessible records, authenticated databases, disciplinary interfaces, independent review, or universal originality."
     },
     {
       "figure_id": "FIG-6",

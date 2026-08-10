@@ -10,7 +10,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[1]
-AUDIT = ROOT / "paper/literature-support-audit-v0.7.0.json"
+AUDIT = ROOT / "paper/literature-support-audit-v0.9.0.json"
 SCHEMA = ROOT / "schemas/literature-support-audit.schema.json"
 MANUSCRIPT = ROOT / "paper/manuscript.md"
 BIBLIOGRAPHY = ROOT / "paper/references.bib"

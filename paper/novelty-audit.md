@@ -10,9 +10,9 @@ This statement describes the declared search result. Universal originality remai
 
 ## Formal-search state
 
-The frozen v0.7 search returned 2,431 deduplicated records from direct queries and selected-seed citation chains. Twelve records are proposed as close additions. Seventy-seven more records have title-and-abstract overlap requiring author attention. Another 1,087 records lack abstracts and remain inaccessible for substantive screening. Semantic Scholar resolved fourteen of fifteen citation seeds; OpenAlex resolved thirteen and supplied a zero-link record for L12.
+The frozen v0.7 search returned 2,431 deduplicated records from direct queries and selected-seed citation chains. Mark Julius Banasihan completed the 89-record author queue on 10 August 2026. The decisions retain 27 close and 32 background sources, exclude 20 off-topic sources and 10 single-component sources, and close the author gate. Another 1,087 records lack abstracts and remain inaccessible for substantive screening. Semantic Scholar resolved fourteen of fifteen citation seeds; OpenAlex resolved thirteen and supplied a zero-link record for L12.
 
-The machine triage does not close the contribution decision. Mark Julius Banasihan must confirm the close set and the material exclusions. Authenticated Scopus or Web of Science and the declared disciplinary interfaces also remain open.
+The author decisions narrow the contribution further. Recent sources already supply incident-set oversight coding, runnable decision chains, versioned assurance cases, practical-override traces, and architecture-aware audit evidence. Authenticated Scopus or Web of Science, the declared disciplinary interfaces, and inaccessible-record review remain open.
 
 ## Closest prior work
 
@@ -49,10 +49,14 @@ The machine triage does not close the contribution decision. Mark Julius Banasih
 | Alhalangy (2026), L39 | Publisher abstract and methods summary inspected | Selective human review joined to structured audit records | Synthetic design-science evaluation without retrospective incident reconstruction |
 | Moghaddam (2026), L40 | Official arXiv abstract inspected | Evidence-linked formal arguments, validation invariants, and provenance ledger | System-design proposal without the paper's practical-control assessment chain |
 | Lee, Yoon, and Lee (2026), L41 | Publisher page inspected | Pre-design oversight authority, documentation duties, and auditability | Prospective governance framework without historical packet adjudication |
+| Bahidika (2026), L48 | Official full text inspected | Action-level oversight tiers applied to AI Incident Database records with independent-annotation agreement | No released source packets, categorical missingness adjudication, or correction ledger |
+| Surve, Shabtai, and Elovici (2026), L52 | Official abstract and metadata inspected | Audit evidence mapped to assurance constraints with a retrospective Cruise application | Abstract-only review; no frozen contrastive selection or explicit indeterminate-state procedure established |
+| LaPosta (2026), L53 | Official full text inspected | Runnable decision chain with owners, artifacts, rollback, and review gates | Workflow protocol without the paper's historical case packets and correction history |
+| Niazi, Hassani, and Lee (2026), L55 | Publisher full text inspected | Versioned assurance case with claims, evidence, control points, and a practical-override trace | Prospective governance framework without frozen public-case selection and reassessment ledger |
 
 ## Contribution that remains defensible
 
-The paper can position its contribution as a governance-specific integration and domain-adaptation claim. It applies established claim-evidence architecture to a procedure that exposes where a human-control statement is supported, contradicted, unresolved, or unfit for the proposed conclusion in a bounded public record. The contribution resides in the declared combination and the inspectable artifacts, subject to the following limits:
+The paper can position its contribution as a governance-specific integration and domain-adaptation claim. It applies established claim-evidence architecture to a procedure that exposes where a human-control statement is supported, contradicted, unresolved, or unfit for the proposed conclusion in a bounded public record. The completed author review removes one procedural uncertainty. The contribution resides in the declared combination and the inspectable artifacts, subject to the following limits:
 
 - the case strata anticipate the three headline contrasts;
 - one assessor designed and applied the procedure;
@@ -81,4 +85,4 @@ The present review supports this provisional sentence:
 
 > Existing research explains why formal oversight may lack practical force, how investigators can reconstruct human contributions and sociotechnical failure, which records AI incidents require, and how research and assurance claims can be tied to evidence and checked against implementation. This paper examines one governance-specific integration: a frozen public-case procedure with visible selection, explicit missingness, versioned adjudication, claim-specific evidence fitness, conclusion dependency closure, and executable artifact checks.
 
-The word `novel` remains prohibited in the manuscript. The formal open-index search and full Semantic Scholar chains narrow uncertainty. Author-confirmed screening, inaccessible-record review, authenticated multidisciplinary searching, and disciplinary-interface checks remain open.
+The word `novel` remains prohibited in the manuscript. The formal open-index search, selected Semantic Scholar chains, and author-confirmed 89-record screening narrow uncertainty. Inaccessible-record review, authenticated multidisciplinary searching, and disciplinary-interface checks remain open.

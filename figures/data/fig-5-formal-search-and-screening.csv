@@ -9,4 +9,10 @@ Preliminary triage,exclude-single-component,77,yes,formal-screening-proposals-v0
 Preliminary triage,exclude-topic,1239,no,formal-screening-proposals-v0.7.0.json
 Preliminary triage,inaccessible,1087,no,formal-screening-proposals-v0.7.0.json
 Preliminary triage,exclude-outside-cutoff,3,no,formal-screening-proposals-v0.7.0.json
-Author gate,open queue,89,yes,derived: retain-close plus exclude-single-component
+Final screening,retain-close,27,complete,derived from author-screening-decisions-v0.9.0.csv and formal-screening-proposals-v0.7.0.json
+Final screening,retain-background,45,complete,derived from author-screening-decisions-v0.9.0.csv and formal-screening-proposals-v0.7.0.json
+Final screening,exclude-single-component,10,complete,derived from author-screening-decisions-v0.9.0.csv and formal-screening-proposals-v0.7.0.json
+Final screening,exclude-topic,1259,complete,derived from author-screening-decisions-v0.9.0.csv and formal-screening-proposals-v0.7.0.json
+Final screening,inaccessible,1087,separate gate,derived from author-screening-decisions-v0.9.0.csv and formal-screening-proposals-v0.7.0.json
+Final screening,exclude-outside-cutoff,3,complete,derived from author-screening-decisions-v0.9.0.csv and formal-screening-proposals-v0.7.0.json
+Author gate,closed queue,89,complete,author-screening-gate-v0.9.0.json

@@ -8,11 +8,11 @@
 
 **Author:** Mark Julius Banasihan  
 **ORCID:** [0009-0001-8121-2878](https://orcid.org/0009-0001-8121-2878)  
-**Status:** Pressure-tested working manuscript, v0.8.0 candidate
+**Status:** Author-screened working manuscript, v0.9.0 candidate
 
 ## Abstract
 
-Institutions often treat a named human reviewer or approval step as evidence that an automated or autonomous system remains under human control. That inference can fail when the designated person lacks timely information, comprehension, authority, a feasible opportunity to challenge the system, or the ability to affect the outcome. This paper develops a frozen, evidence-traceable procedure for representing formal authority, practical control, and unresolved evidence in bounded public incident records. The protocol fixed the evidence cutoff, candidate collections, search vocabulary, eligibility rules, screening order, three selection strata, and missing-data treatment before candidate screening. It assembled three versioned historical case packets with claim-level provenance, categorical evidence states, and a chain from information access through effect. A protocol-frozen v0.6 adjudication applied the existing direct-and-contemporaneous rule to the Oko packet and reclassified access, comprehension, authority, feasibility, exercise, and effect from supported to partially supported. The current assessment set records partial support across those six Oko stages, supported authority with unsupported practical conditions in ZG710, and supported authority with unresolved practical conditions in F/A-18C. A frozen open-index search produced a provisional close-work set covering effective oversight, institutional design, causal human involvement, traceable governance, and evidence-linked argument graphs. Eighty-nine author decisions and 1,087 inaccessible records keep that search open. The reviewed work bounds the contribution to a governance-specific integration with a visible correction path. Institutions claiming human control bear an ethical burden to preserve evidence of practical force because unsupported attribution can obscure responsibility and exposure to harm. Three retrospective, single-assessor cases supply no population estimate, causal validation, independent-reliability result, or transfer claim for current learned systems.
+Institutions often treat a named human reviewer or approval step as evidence that an automated or autonomous system remains under human control. That inference can fail when the designated person lacks timely information, comprehension, authority, an opportunity to challenge the system, or the ability to affect the outcome. This paper develops a frozen, evidence-traceable procedure for representing formal authority, practical control, and unresolved evidence in bounded public incident records. Before case screening, the protocol fixed the evidence cutoff, candidate collections, eligibility rules, screening order, selection strata, and missing-data treatment. It assembled three versioned historical case packets with claim-level provenance, categorical evidence states, and a chain from information access through effect. A frozen v0.6 reanalysis applied the existing direct-and-contemporaneous rule to Oko and reclassified six pre-action stages from supported to partially supported. The current set records partial support across those Oko stages, supported authority with unsupported practical conditions in ZG710, and supported authority with unresolved conditions in F/A-18C. An open-index search produced 2,431 deduplicated records. Author review retained 27 close and 32 background sources, excluded 30 records, and closed the 89-record author gate. Another 1,087 records lack abstracts. The reviewed work confines the contribution to a governance-specific integration with a visible correction path. Institutions claiming human control bear an ethical burden to preserve evidence of practical force because unsupported attribution can obscure responsibility and exposure to harm. Three retrospective, single-assessor cases supply no population estimate, causal validation, independent-reliability result, or transfer claim for current learned systems.
 
 **Keywords:** human oversight; meaningful human control; AI governance; incident reconstruction; assurance
 
@@ -36,7 +36,7 @@ Five research streams answer parts of that question. Meaningful-human-control sc
 
 The closest prior work sharply limits the present claim. Sterz et al. define effective oversight through sufficient causal power, suitable epistemic access, self-control, and fitting intentions [@sterz2024quest]. Verdiesen, Santoni de Sio, and Dignum place oversight across technical, sociotechnical, and governance layers [@verdiesen2021oversight]. Laux treats overseer competence and incentives as institutional-design problems [@laux2024distrust]. Almada connects human intervention to the information and system conditions needed for contestability [@almada2019intervention]. Douer and Meyer show that causal responsibility can diverge from assigned human functions [@douer2020responsibility].
 
-Prior methods also cover reconstruction and evidence. Dekker reconstructs human contributions inside an event sequence while controlling hindsight [@dekker2002reconstructing]. Pittaras and McGregor classify possible failure causes from incomplete open-source AI incidents [@pittaras2023taxonomic]. ScientistOne supplies claim-level evidence chains and post-hoc integrity checks [@meng2026scientistone]. Moghaddam proposes evidence-linked formal argument graphs with deterministic validation and provenance [@moghaddam2026arguments]. Alhalangy joins selective human review to a structured case-level audit trail in a synthetic institutional study [@alhalangy2026traceable].
+Prior methods also cover reconstruction and evidence. Dekker reconstructs human contributions inside an event sequence while controlling hindsight [@dekker2002reconstructing]. Pittaras and McGregor classify possible failure causes from incomplete open-source AI incidents [@pittaras2023taxonomic]. ScientistOne supplies claim-level evidence chains and post-hoc integrity checks [@meng2026scientistone]. Moghaddam proposes evidence-linked formal argument graphs with deterministic validation and provenance [@moghaddam2026arguments]. Alhalangy joins selective human review to a structured case-level audit trail in a synthetic institutional study [@alhalangy2026traceable]. Recent close sources go further: Bahidika applies oversight tiers to public AI Incident Database records [@bahidika2026accountability], LaPosta publishes a runnable decision-chain protocol [@laposta2026conflict], Niazi, Hassani, and Lee define a versioned assurance case with a practical-override trace [@niazi2026rights], and Surve, Shabtai, and Elovici declare an audit-evidence method with a retrospective Cruise application [@surve2026cedar].
 
 The remaining contribution is one governance-specific integration: protocol fixation before case screening, a visible selection and stopping path, versioned public evidence packets, categorical missingness, a chain from information access through effect, claim-specific evidence fitness, conclusion dependency closure, versioned correction, and executable artifact checks. The formal search records 2,431 deduplicated records and preserves the limits created by inaccessible abstracts, one unresolved citation seed, and unavailable authenticated databases. The paper therefore states a bounded integration claim. Universal originality remains outside the evidence.
 
@@ -154,7 +154,7 @@ The v0.6 Chain-of-Evidence adaptation maps each material claim to exact locators
 
 A v0.7 protocol fixed eight query families, inclusion rules, screening states, deduplication, fifteen citation seeds, and a contribution rejection test before retrieval. Semantic Scholar served as the controlling reproducible index. Every direct-search token and every returned citation page were retrieved. Crossref checked DOI metadata, while OpenAlex compared seed coverage. Publisher, proceedings, preprint, and institutional pages were used to verify the close set.
 
-AI assistance assigned preliminary triage proposals. Mark Julius Banasihan remains the decision owner. An abstract-only record can support a bounded description of the source's declared purpose or model. A wider substantive claim requires checked full text. Authenticated Scopus or Web of Science access and several disciplinary interfaces remain open.
+AI assistance assigned preliminary triage proposals. Mark Julius Banasihan reviewed the 89-record queue and remains accountable for every recorded decision. The ledger records each decision, rationale, review basis, source locator, date, and assistance disclosure. An abstract-only record supports only a bounded description of the source's declared purpose or model. A wider substantive claim requires checked full text. Authenticated Scopus or Web of Science access and several disciplinary interfaces remain open.
 
 ### 3.11 Frozen Oko adjudication
 
@@ -206,9 +206,9 @@ Figure 3 traces each bounded sequence from machine output through human and inst
 
 ### 4.7 Integrity and correction results
 
-The v0.8 integrity audit maps twenty material repository claims. Every declared claim passes traceability, artifact integrity, and human support review. The versioned Oko correction closes the prior protocol-consistency and dependency failure within the declared procedure. Independent validity and final author-screening results remain ineligible. Fourteen negative controls confirm that the audit detects prespecified corruptions. Six Oko adjudication mutations test state, evidence, and dependency records. These results show internal contract behavior. They establish no external validity.
+The v0.9 integrity audit maps twenty material repository claims. Every declared claim passes traceability, artifact integrity, and human support review. The versioned Oko correction closes the prior protocol-consistency and dependency failure within the declared procedure. The completed author ledger makes the final 89-record screening result eligible within its declared boundary. Independent validity, inaccessible-record review, and authenticated-database coverage remain outside the completed evidence base. Fourteen negative controls confirm that the audit detects prespecified corruptions. Six Oko adjudication mutations test state, evidence, and dependency records. These results show internal contract behavior. They establish no external validity.
 
-**Figure A3. Claim-evidence integrity.** The matrix shows the five evidence gates and conclusion eligibility for twenty mapped claims. Independent validity and final author-screening results remain ineligible. It assigns no numeric score.
+**Figure A3. Claim-evidence integrity.** The matrix shows the five evidence gates and conclusion eligibility for twenty mapped claims. Independent validity and search-coverage limits remain visible. It assigns no numeric score.
 
 **Figure A4. Versioned correction of the Oko assessment.** All six pre-action stages move from supported in v0.3.0 to partially supported in v0.6.0. The packet remained fixed. The frozen evidence rule required the correction, and the change supplies no new historical evidence.
 
@@ -227,29 +227,39 @@ The v0.8 integrity audit maps twenty material repository claims. Every declared 
 
 ### 4.8 Formal search result
 
-The eight Semantic Scholar queries returned 184 records. Fourteen resolved seed chains returned 2,482 reference and citation records. L12 returned `404` for both chain endpoints. The combined pool contains 2,431 deduplicated records. Preliminary triage proposes twelve close additions and retains thirteen earlier matrix records found in the pool. Seventy-seven records contain both control and evidence terms and require author attention. Another 1,087 records lack abstracts and remain inaccessible for substantive screening. Three records fall after the publication cutoff.
+The eight Semantic Scholar queries returned 184 records. Fourteen resolved seed chains returned 2,482 reference and citation records. L12 returned `404` for both chain endpoints. The combined pool contains 2,431 deduplicated records. The frozen machine pass proposed 12 close records and placed 77 records in an attention queue. Author review confirmed all 12 proposed close records. The 77 attention records produced 15 additional close sources, 32 background sources, 20 topic exclusions, and 10 single-component exclusions. The final full-pool state therefore contains 27 close records, 45 background records, 1,259 topic exclusions, 10 single-component exclusions, 1,087 inaccessible records, and three records outside the publication cutoff.
 
-Crossref resolved 22 of 25 DOI-bearing retained proposals. OpenAlex resolved thirteen of fifteen citation seeds, including an L12 record with zero indexed links. Different reference and citation counts across indexes show that chain coverage depends on the selected index. The search therefore supports a declared closest-work analysis and a bounded integration statement. It does not support universal originality.
+Crossref resolved 22 of 25 DOI-bearing retained proposals. OpenAlex resolved thirteen of fifteen citation seeds, including an L12 record with zero indexed links. Different reference and citation counts across indexes show that chain coverage depends on the selected index. The completed author queue supports a declared closest-work analysis and a bounded integration statement. The inaccessible records and open database searches prevent a universal originality or systematic-coverage claim.
 
-**Figure 5. Formal search retrieval and preliminary screening.** The left panel traces 184 direct-query records and 2,482 citation-chain records through pooling and deduplication. The right panel reports the six preliminary triage classes on a logarithmic count axis. Blue points identify the 12 retain-close records and 77 attention records in the open author-decision queue. The triage is AI-assisted and remains provisional.
+**Figure 5. Formal search retrieval and final screening state.** The left panel traces 184 direct-query records and 2,482 citation-chain records through pooling and deduplication. The right panel reports the six final screening classes on a logarithmic count axis. Blue points identify the 27 close and 45 background records. The annotation records closure of all 89 author decisions. The 1,087 inaccessible records remain a separate coverage limit.
 
-**Table 3. Formal search and preliminary screening.**
+**Table 3. Formal search and final screening state.**
 
 | Stage | Record class | Count | Status |
 |---|---|---:|---|
 | Retrieval | Direct queries | 184 | Complete for the declared open-index queries |
 | Retrieval | Citation chains | 2,482 | Fourteen of fifteen seed chains resolved |
 | Pooling | Combined records | 2,666 | Before deduplication |
-| Pooling | Deduplicated records | 2,431 | Unit for preliminary triage |
-| Preliminary triage | Retain close | 12 | Author decision required |
-| Preliminary triage | Retain background | 13 | Proposed background set |
-| Preliminary triage | Attention records | 77 | Author decision required |
-| Preliminary triage | Exclude topic | 1,239 | AI-assisted proposal |
-| Preliminary triage | Inaccessible | 1,087 | Substantive screening unresolved |
-| Preliminary triage | Outside cutoff | 3 | Published after the cutoff |
-| Author gate | Open queue | 89 | Twelve close plus 77 attention records |
+| Pooling | Deduplicated records | 2,431 | Unit for screening |
+| Final screening | Retain close | 27 | Confirmed close set |
+| Final screening | Retain background | 45 | Thirteen prior records plus 32 author-confirmed records |
+| Final screening | Exclude single component | 10 | Relevant component without the tested combination |
+| Final screening | Exclude topic | 1,259 | Outside the review question |
+| Final screening | Inaccessible | 1,087 | Abstract absent; substantive screening unresolved |
+| Final screening | Outside cutoff | 3 | Published after the cutoff |
+| Author gate | Completed queue | 89 | All queued decisions recorded |
 
-*Note.* The six preliminary triage classes sum to 2,431. The 89 author decisions and authenticated database searching remain open.
+*Note.* The six final screening classes sum to 2,431. Mark Julius Banasihan is the decision owner for the 89-record queue, with disclosed AI assistance. The 1,087 inaccessible records and authenticated database searching remain separate coverage limits.
+
+**Table 4. Proposal-to-author decision changes.**
+
+| Proposed class | Records | Retain close | Retain background | Exclude topic | Exclude single component |
+|---|---:|---:|---:|---:|---:|
+| Retain close | 12 | 12 | 0 | 0 | 0 |
+| Author attention | 77 | 15 | 32 | 20 | 10 |
+| Total author queue | 89 | 27 | 32 | 20 | 10 |
+
+*Note.* The author confirmed all 12 proposed close records. The 77 attention records produced 15 additional close sources and 32 background sources. These decisions close the declared author gate. They do not resolve the inaccessible-record or authenticated-database gates.
 
 ### 4.9 Evidence boundaries and coding stability
 
@@ -290,7 +300,7 @@ An institution seeking to substantiate practical control should preserve the inf
 
 ### 5.4 Relationship to prior research
 
-The method operationalizes established constructs at the level of a public evidence packet. Tracking, tracing, epistemic access, causal power, institutional design, and contestability define what control may require [@santoni2018meaningful; @sterz2024quest; @laux2024distrust; @almada2019intervention]. Human-factors research explains why monitoring and challenge can fail [@bainbridge1983ironies; @endsley2017autonomy]. Incident analysis identifies the records needed to reconstruct an event [@ezell2025incident; @macrae2022failure]. Assurance and evidence-chain methods structure the path from proposition to evidence and conclusion [@burr2023ethical; @meng2026scientistone; @moghaddam2026arguments]. The repository joins these functions in one versioned assessment path.
+The method operationalizes established constructs at the level of a public evidence packet. Tracking, tracing, epistemic access, causal power, institutional design, and contestability define what control may require [@santoni2018meaningful; @sterz2024quest; @laux2024distrust; @almada2019intervention]. Human-factors research explains why monitoring and challenge can fail [@bainbridge1983ironies; @endsley2017autonomy]. Incident analysis identifies the records needed to reconstruct an event [@ezell2025incident; @macrae2022failure]. Assurance and evidence-chain methods structure the path from proposition to evidence and conclusion [@burr2023ethical; @meng2026scientistone; @moghaddam2026arguments]. Recent close work already supplies AI-incident oversight tiers, runnable decision-chain protocols, versioned assurance cases, and architecture-aware audit evidence [@bahidika2026accountability; @laposta2026conflict; @niazi2026rights; @surve2026cedar]. The remaining contribution concerns the declared combination of a frozen selection path, public case packets, categorical missingness, correction history, evidence fitness, and conclusion closure.
 
 ### 5.5 Use for current AI governance
 
@@ -310,7 +320,7 @@ The evidence is retrospective and public. Classified material, internal logs, co
 
 One assessor designed and applied the method. The study supplies no inter-rater reliability, construct-validity estimate, causal effect, safety effect, legal-sufficiency judgment, or outcome comparison. Artifact tests detect internal inconsistency and prespecified corruption. They do not validate historical interpretation.
 
-The formal search used open indexes and official source pages. Machine triage leaves 77 records for author attention and 1,087 inaccessible records. Authenticated Scopus or Web of Science, IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index remain open. The contribution language is therefore bounded to the declared search and reviewed close set.
+The formal search used open indexes and official source pages. Author review closed the 89-record decision queue. Another 1,087 records lack abstracts, and authenticated Scopus or Web of Science, IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index remain open. The contribution language is therefore bounded to the declared search and reviewed close set.
 
 ## 7. Institutional implications
 
@@ -337,7 +347,7 @@ The result is a method demonstration. Independent assessors, varied case familie
 
 ## Data and materials availability
 
-The repository, versioned releases, packets, assessments, figure data, audit outputs, search files, manuscript tables, and release manifests are available at [github.com/mj3b/trust-autonomy-evidence](https://github.com/mj3b/trust-autonomy-evidence). The v0.6.0 evidence archive has the version DOI [10.5281/zenodo.21865007](https://doi.org/10.5281/zenodo.21865007). The all-versions DOI is [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127). The v0.7.0 archive contains the formal search, full manuscript draft, journal-style figures, and structured tables. Its version DOI remains pending until Zenodo issues the record.
+The repository, versioned releases, packets, assessments, figure data, audit outputs, search files, manuscript tables, and release manifests are available at [github.com/mj3b/trust-autonomy-evidence](https://github.com/mj3b/trust-autonomy-evidence). The v0.6.0 evidence archive has the version DOI [10.5281/zenodo.21865007](https://doi.org/10.5281/zenodo.21865007). The all-versions DOI is [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127). The v0.9.0 release candidate contains the author-screened manuscript, final Figure 5 data, structured tables, and current integrity audit. Its version DOI remains pending.
 
 ## Ethics and publication authority
 
@@ -349,4 +359,4 @@ Mark Julius Banasihan: Conceptualization, methodology, investigation, data curat
 
 ## AI-assistance disclosure
 
-Generative AI tools assisted with literature discovery, metadata organization, preliminary screening proposals, draft development, code generation, figure and consistency checks, and language revision. Mark Julius Banasihan defined the research question and protocols, approved the evidence and assessment decisions, verified the sources used for claims, controlled the repository releases, and remains responsible for the analysis, interpretations, errors, and submitted text. The final disclosure will follow the selected venue's current policy.
+Generative AI tools assisted with literature discovery, metadata organization, preliminary screening proposals, decision-ledger preparation, draft development, code generation, figure and consistency checks, and language revision. Mark Julius Banasihan defined the research question and protocols, reviewed and approved the 89 screening decisions, approved the evidence and assessment decisions, verified the sources used for claims, controlled the repository releases, and remains responsible for the analysis, interpretations, errors, and submitted text. The final disclosure will follow the selected venue's current policy.

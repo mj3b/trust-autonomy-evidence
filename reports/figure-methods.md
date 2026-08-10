@@ -2,7 +2,7 @@
 
 ## Result
 
-The v0.8.0 figure package contains six main figures and four appendix figures. It exposes selection, case states, event sequences, formal-search progress, evidence boundaries, mutation responses, artifact lineage, claim gates, and a versioned correction. Every display has a derived CSV and a declared interpretation boundary.
+The v0.9.0 figure package contains six main figures and four appendix figures. It exposes selection, case states, event sequences, final author-screening state, evidence boundaries, mutation responses, artifact lineage, claim gates, and a versioned correction. Every display has a derived CSV and a declared interpretation boundary.
 
 ## Design rule
 
@@ -12,7 +12,7 @@ The figures report categorical states and counts. They assign no numeric distanc
 
 ## Inputs and transformations
 
-[`analysis/build_figures.py`](../analysis/build_figures.py) reads committed assessments, selection records, mutation results, event and lineage specifications, formal-search files, and the Oko correction ledger. It writes nine CSV files and eighteen image files. [`analysis/build_claim_evidence_figure.py`](../analysis/build_claim_evidence_figure.py) writes the Figure A3 CSV, PNG, SVG, and manifest from the v0.8 audit result.
+[`analysis/build_figures.py`](../analysis/build_figures.py) reads committed assessments, selection records, mutation results, event and lineage specifications, formal-search files, author decisions, and the Oko correction ledger. It writes nine CSV files and eighteen image files. [`analysis/build_claim_evidence_figure.py`](../analysis/build_claim_evidence_figure.py) writes the Figure A3 CSV, PNG, SVG, and manifest from the v0.9 audit result.
 
 The [figure register](../figures/specifications/figure-register.json) records each unit of analysis, sample, inputs, transformation, supported claim, and prohibited interpretation. The builders verify the frozen candidate order, mutation deltas, search totals, and versioned state transitions before rendering.
 
@@ -44,9 +44,9 @@ Fifteen source-linked events place five chronology stages for each case in relat
 
 Thirty-six declared states compare twelve trust-evidence propositions across three purposefully selected cases. Conditional reliability and calibrated uncertainty are unsupported in every packet. Record integrity is indeterminate in every packet. Evidence completeness is unsupported for Oko and F/A-18C and partially supported for ZG710. The figure supports proposition-level comparison and supplies no aggregate trust score or system ranking.
 
-### Figure 5. Formal search retrieval and preliminary screening
+### Figure 5. Formal search retrieval and final screening state
 
-Eight Semantic Scholar direct queries returned 184 records. Fourteen resolved seed chains returned 2,482 reference and citation records. The combined pool contained 2,666 records and 2,431 after deduplication. Preliminary AI-assisted triage proposed 12 retain-close, 13 retain-background, 77 attention, 1,239 topic-exclusion, 1,087 inaccessible, and 3 outside-cutoff records. The right panel uses a declared logarithmic count axis. Blue points identify the 89 records in the open author-decision queue. The display records search progress and supplies no completed-review or universal-originality finding.
+Eight Semantic Scholar direct queries returned 184 records. Fourteen resolved seed chains returned 2,482 reference and citation records. The combined pool contained 2,666 records and 2,431 after deduplication. Mark Julius Banasihan completed the 89-record author queue. The final full-pool state contains 27 close, 45 background, 10 single-component exclusions, 1,259 topic exclusions, 1,087 inaccessible records, and 3 outside-cutoff records. The right panel uses a declared logarithmic count axis. Blue points identify the retained close and background sets. The display supports the final queue result and supplies no completed-review or universal-originality finding.
 
 ### Figure 6. Evidence boundaries across six pre-action practical-control stages
 
@@ -62,7 +62,7 @@ The research lane traces frozen candidate collections through selection, packets
 
 ### Figure A3. Claim-evidence integrity and conclusion eligibility
 
-Six categorical decisions report traceability, integrity, support review, evidence fitness, dependency closure, and conclusion eligibility for twenty material claims. Every claim passes traceability, integrity, and support review. The independent-validity and final author-screening claims fail evidence fitness and remain ineligible. The matrix assigns no aggregate score and supplies no source-truth, independent-reliability, or claim-ranking result.
+Six categorical decisions report traceability, integrity, support review, evidence fitness, dependency closure, and conclusion eligibility for twenty material claims. Every claim passes traceability, integrity, and support review. Final author-screening results are eligible within the declared queue. The independent-validity claim fails evidence fitness and remains ineligible. The matrix assigns no aggregate score and supplies no source-truth, independent-reliability, or claim-ranking result.
 
 ### Figure A4. Versioned correction of the Oko assessment
 
@@ -70,12 +70,12 @@ Six Oko pre-action states move from supported in v0.3.0 to partially supported i
 
 ## Missingness and uncertainty
 
-Figure 2 and Figure 4 preserve indeterminate states where missing public records prevent a factual finding. Figure 3 uses relative sequence because the packets supply no common time scale. Figure 5 separates inaccessible records and an open author gate from completed decisions. Figure 6 preserves partial, unsupported, and indeterminate findings as separate categories. Figure A4 separates a classification change from a change in source evidence.
+Figure 2 and Figure 4 preserve indeterminate states where missing public records prevent a factual finding. Figure 3 uses relative sequence because the packets supply no common time scale. Figure 5 separates inaccessible records and open database coverage from the closed author queue. Figure 6 preserves partial, unsupported, and indeterminate findings as separate categories. Figure A4 separates a classification change from a change in source evidence.
 
 ## Reproducibility check
 
-`python analysis/build_figures.py --check` rebuilds the nine-figure core set in a temporary directory, compares the derived CSV files exactly, verifies PNG and SVG structure and dimensions, and checks the v0.8 manifests. `python analysis/build_claim_evidence_figure.py --check` performs the parallel check for Figure A3. The main repository validator runs both commands.
+`python analysis/build_figures.py --check` rebuilds the nine-figure core set in a temporary directory, compares the derived CSV files exactly, verifies PNG and SVG structure and dimensions, and checks the v0.9 manifests. `python analysis/build_claim_evidence_figure.py --check` performs the parallel check for Figure A3. The main repository validator runs both commands.
 
 ## Claim boundary
 
-Three historical cases, including two cases from one system family and period, cannot estimate population frequency, effect size, causal impact, institutional effectiveness, or transfer to current learned systems. The mutation suite tests an author-designed contract. The formal-search triage remains provisional. These figures expose the present evidence and the limits on each inference.
+Three historical cases, including two cases from one system family and period, cannot estimate population frequency, effect size, causal impact, institutional effectiveness, or transfer to current learned systems. The mutation suite tests an author-designed contract. The final author screen remains bounded by inaccessible records and open database coverage. These figures expose the present evidence and the limits on each inference.

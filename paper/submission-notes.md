@@ -6,7 +6,7 @@
 
 The fit depends on the paper's ethical burden-of-proof argument: an institution that represents a consequential system as human-controlled should preserve evidence capable of testing whether assigned authority had practical force. The journal's current scope explicitly includes human oversight in AI decision pipelines, meaningful oversight beyond nominal involvement, autonomous systems, accountability, and AI governance. The current manuscript now treats that ethical claim as a major contribution.
 
-The choice remains provisional until author-confirmed screening, authenticated database checks, ethics guidance, affiliation wording, and manuscript anonymization are complete. Check the official pages again immediately before submission.
+The choice remains provisional until authenticated database checks, inaccessible-record treatment, ethics guidance, affiliation wording, and manuscript anonymization are complete. Check the official pages again immediately before submission.
 
 ## Paper identity
 
@@ -40,7 +40,7 @@ Check current official venue pages immediately before making a recommendation. D
 
 ## AI and Ethics preparation profile
 
-The current abstract is 248 words and falls within the stated 150 to 250 word range. The five keywords meet the 4 to 6 keyword requirement. The working manuscript includes the required data-availability, author-contribution, ethics, and AI-assistance sections.
+The current abstract is 249 words and falls within the stated 150 to 250 word range. The five keywords meet the 4 to 6 keyword requirement. The working manuscript includes the required data-availability, author-contribution, ethics, and AI-assistance sections.
 
 Before submission:
 
@@ -54,7 +54,7 @@ Before submission:
 
 ## Preprint decision
 
-A preprint may be appropriate after full repository validation, author confirmation of the screening decisions, completion of the authenticated database checks, manuscript-level claim review, and venue-specific ethics and disclosure checks. `PAPER-BLOCKER-01` is resolved in v0.6.0. The v0.7 sentence-level literature audit passes for the current draft. The preprint must link to the version-specific evidence archive and state that it has not completed peer review.
+A preprint may be appropriate after full repository validation, treatment of the inaccessible-record risk, completion of the authenticated database checks, manuscript-level claim review, and venue-specific ethics and disclosure checks. `PAPER-BLOCKER-01` is resolved in v0.6.0. The 89-record author gate is closed, and the v0.9 sentence-level literature audit passes for the current draft. The preprint must link to the version-specific evidence archive and state that it has not completed peer review.
 
 The existing GitHub and Zenodo materials are research artifacts. They are not substitutes for a manuscript-specific archive.
 
@@ -106,5 +106,6 @@ Do not characterize the work as exempt from review until the applicable institut
 1. **Paper v0.1:** charter, abstract, detailed outline, core literature, and claim register.
 2. **Paper v0.2:** PR #11 pressure test, corrected claim boundary, documented novelty audit, complete related work, and methods draft with verified citations.
 3. **Paper v0.3:** results, discussion, limitations, and institutional implications. Completed in the v0.4 working manuscript.
-4. **Paper v0.4:** full manuscript, formal open-index search, selected-index citation chains, literature-support audit, ethics argument, disclosure, and data-availability statement. Current branch state.
-5. **Preprint candidate:** formatted manuscript and manuscript-specific archive.
+4. **Paper v0.4:** full manuscript, formal open-index search, selected-index citation chains, literature-support audit, ethics argument, disclosure, and data-availability statement.
+5. **Paper v0.5:** completed 89-record author screen, final Figure 5, contribution-boundary revision, and v0.9 claim-evidence audit. Current branch state.
+6. **Preprint candidate:** formatted manuscript and manuscript-specific archive.

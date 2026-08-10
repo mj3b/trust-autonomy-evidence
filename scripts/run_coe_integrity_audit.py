@@ -20,12 +20,12 @@ ROOT = Path(__file__).resolve().parents[1]
 CLAIM_MAP_PATH = ROOT / "evidence/claim-evidence-map.json"
 LINEAGE_PATH = ROOT / "evidence/research-lineage.json"
 MUTATIONS_PATH = ROOT / "fixtures/coe-audit-mutations.json"
-RESULT_PATH = ROOT / "audits/v0.8.0/audit-results.json"
-REPORT_PATH = ROOT / "audits/v0.8.0/audit-report.md"
-AUDIT_VERSION = "0.8.0"
-AUDIT_ID = "TAE-COE-AUDIT-V0.8.0"
+RESULT_PATH = ROOT / "audits/v0.9.0/audit-results.json"
+REPORT_PATH = ROOT / "audits/v0.9.0/audit-report.md"
+AUDIT_VERSION = "0.9.0"
+AUDIT_ID = "TAE-COE-AUDIT-V0.9.0"
 AUDIT_DATE = "2026-08-10"
-EXCEPTIONS = ["COE-EX-03", "COE-EX-04", "COE-EX-05"]
+EXCEPTIONS = ["COE-EX-03", "COE-EX-04"]
 FITNESS_DIMENSIONS = (
     "directness",
     "contemporaneity",
@@ -436,7 +436,7 @@ def build_result() -> dict[str, Any]:
         "version": AUDIT_VERSION,
         "audit_id": AUDIT_ID,
         "audit_date": AUDIT_DATE,
-        "scope": "Twenty material claims declared in TAE-COE-V0.8.0, including the reader manuscript, Figure 6, Table A3, and the author-screening gate. Independent validity, final author screening, and authenticated database coverage remain outside the completed evidence base.",
+        "scope": "Twenty material claims declared in TAE-COE-V0.9.0, including the closed author-screening gate and final Figure 5 search-flow result. Independent validity, inaccessible-record review, and authenticated database coverage remain outside the completed evidence base.",
         "status": status,
         "checks": checks,
         "negative_controls": controls,
@@ -451,7 +451,7 @@ def build_result() -> dict[str, Any]:
 
 def render_report(result: dict[str, Any]) -> str:
     lines = [
-        "# v0.8.0 Chain-of-Evidence Integrity Audit",
+        "# v0.9.0 Chain-of-Evidence Integrity Audit",
         "",
         f"**Audit date:** {result['audit_date']}  ",
         f"**Status:** `{result['status']}`  ",
@@ -459,7 +459,7 @@ def render_report(result: dict[str, Any]) -> str:
         "",
         "## Decision",
         "",
-        "The declared v0.8 claim set passes its executable integrity controls with three published exceptions. The new reader manuscript, Figure 6, Table A3, and author-screening gate resolve to their declared evidence. The open screening gate prevents final literature-screening conclusions. The result permits bounded artifact and method claims and supplies no independent reliability, originality, or completed systematic-search finding.",
+        "The declared v0.9 claim set passes its executable integrity controls with two published exceptions. The closed author gate, final Figure 5 data, and manuscript counts resolve to their declared evidence. The result permits bounded author-screening, artifact, and method claims. It supplies no independent reliability, originality, or completed systematic-search finding.",
         "",
         "## Integrity checks",
         "",
@@ -486,7 +486,10 @@ def render_report(result: dict[str, Any]) -> str:
         "",
         "- `COE-EX-03`: no independent assessor has reproduced the support or evidence-fitness judgments.",
         "- `COE-EX-04`: authenticated database searching, inaccessible-record review, and full citation chaining remain incomplete.",
-        "- `COE-EX-05`: all 89 author-screening decisions remain open, so final search-flow conclusions are blocked.",
+        "",
+        "## Closed exception",
+        "",
+        "- `COE-EX-05` closed when Mark Julius Banasihan recorded all 89 author decisions and the final search-flow data were rebuilt from the ledger.",
         "",
         "## Interpretation",
         "",

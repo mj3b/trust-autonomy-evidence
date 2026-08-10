@@ -4,6 +4,21 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
+## 0.9.0, 10 August 2026
+
+Closes the declared author-screening gate and narrows the paper against fifteen additional close sources.
+
+- Records accountable author decisions for all 89 queued records: 27 retain close, 32 retain background, 20 exclude topic, and 10 exclude single component.
+- Preserves the blank v0.8 decision checkpoint and frozen v0.7 proposal queue as version history.
+- Rebuilds Figure 5 from the final screening state and adds Table 4 for proposal-to-author decision changes.
+- Expands the literature matrix from 41 to 56 sources and adds four close sources to the manuscript discussion.
+- Extends the sentence-level literature audit from 21 to 23 registered propositions.
+- Narrows the contribution against incident-set oversight coding, runnable decision chains, audit-visible assurance, versioned assurance cases, and practical-override traces.
+- Updates the 20-claim map so final author-screening counts are eligible within the declared 89-record queue.
+- Closes `COE-EX-05` and reruns the integrity audit with two open exceptions: independent assessment and incomplete search coverage.
+- Rebuilds Figure A3 from the v0.9 audit and preserves its no-score interpretation boundary.
+- Leaves 1,087 inaccessible records, authenticated database searching, disciplinary interfaces, ethics guidance, and independent assessment open.
+
 ## 0.8.0, 10 August 2026
 
 Pressure-tests the manuscript and exposes the remaining submission gates.

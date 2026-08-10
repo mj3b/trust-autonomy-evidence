@@ -1,6 +1,6 @@
 # Publication Figure Set
 
-Version 0.8.0 contains six main figures and four appendix figures. Each figure is derived from committed research artifacts and ships with a CSV, PNG, SVG, specification, caption, and interpretation boundary. The case figures use the v0.6 Oko assessment and the preserved v0.3 Patriot assessments.
+Version 0.9.0 contains six main figures and four appendix figures. Each figure is derived from committed research artifacts and ships with a CSV, PNG, SVG, specification, caption, and interpretation boundary. The case figures use the v0.6 Oko assessment and the preserved v0.3 Patriot assessments.
 
 ## Visual standard
 
@@ -16,7 +16,7 @@ Figures show relationships. The [structured manuscript tables](../paper/tables.m
 | Figure 2 | Compares 27 practical-control states across Oko, Patriot ZG710, and Patriot F/A-18C. | [PNG](generated/fig-2-practical-control-chain.png) · [SVG](generated/fig-2-practical-control-chain.svg) · [data](data/fig-2-practical-control-chain.csv) |
 | Figure 3 | Places 15 source-linked events in relative order and marks the F/A-18C public record gap. | [PNG](generated/fig-3-decision-paths.png) · [SVG](generated/fig-3-decision-paths.svg) · [data](data/fig-3-decision-paths.csv) |
 | Figure 4 | Compares 36 trust-evidence states across the three public cases. | [PNG](generated/fig-4-trust-evidence-states.png) · [SVG](generated/fig-4-trust-evidence-states.svg) · [data](data/fig-4-trust-evidence-states.csv) |
-| Figure 5 | Traces the formal literature search and exposes the 89-record author-decision gate. | [PNG](generated/fig-5-formal-search-and-screening.png) · [SVG](generated/fig-5-formal-search-and-screening.svg) · [data](data/fig-5-formal-search-and-screening.csv) |
+| Figure 5 | Traces the formal literature search and reports the final state after all 89 author decisions. | [PNG](generated/fig-5-formal-search-and-screening.png) · [SVG](generated/fig-5-formal-search-and-screening.svg) · [data](data/fig-5-formal-search-and-screening.csv) |
 | Figure 6 | Shows how supported, partial, unsupported, and indeterminate findings compose the six pre-action stages for each case. | [PNG](generated/fig-6-evidence-boundaries.png) · [SVG](generated/fig-6-evidence-boundaries.svg) · [data](data/fig-6-evidence-boundaries.csv) |
 
 ## Appendix figures
@@ -48,9 +48,9 @@ The figure shows five source-linked events for each case and identifies where hu
 
 The figure reports 36 proposition-level findings. Conditional reliability and calibrated uncertainty are unsupported in every packet. Record integrity is indeterminate in every packet. Evidence completeness is unsupported or partial. These gaps limit the reliance claims available from the packets. The figure supplies no system ranking or aggregate trust score.
 
-### Figure 5. Formal search and preliminary screening
+### Figure 5. Formal search and final screening state
 
-The left panel shows retrieval, pooling, and deduplication. The right panel reports six preliminary triage classes on a declared logarithmic count axis. Blue points identify the 12 retain-close and 77 attention records. Those 89 records require author decisions. The display records research progress and cannot support a completed-review or universal-originality claim.
+The left panel shows retrieval, pooling, and deduplication. The right panel reports six final screening classes on a declared logarithmic count axis. Blue points identify 27 close and 45 background records. The annotation records 89 of 89 author decisions complete. Another 1,087 records lack abstracts, and authenticated databases remain open. The display supports the final queue result and no completed-review or universal-originality claim.
 
 ### Figure 6. Evidence boundaries
 
@@ -66,7 +66,7 @@ The figure traces candidate collections, selection, packets, assessments, derive
 
 ### Figure A3. Claim-evidence integrity
 
-Every declared claim passes traceability, integrity, and support review. Independent validity and final author-screening results fail evidence fitness and remain ineligible. The matrix separates evidence linkage from conclusion eligibility. It calculates no aggregate score and supplies no independent-reliability finding.
+Every declared claim passes traceability, integrity, and support review. Final author-screening results are eligible within the declared queue. Independent validity fails evidence fitness and remains ineligible. The matrix separates evidence linkage from conclusion eligibility. It calculates no aggregate score and supplies no independent-reliability finding.
 
 ### Figure A4. Oko versioned correction
 
@@ -81,7 +81,7 @@ python analysis/build_figures.py --check
 python analysis/build_claim_evidence_figure.py --check
 ```
 
-The core builder checks exact equality for nine CSV files, validates 18 rendered files, and verifies the current v0.8 figure manifests. The claim-evidence builder checks one CSV, two rendered files, and its separate v0.8 manifest. Image bytes can vary across operating systems when plotted data and dimensions remain unchanged.
+The core builder checks exact equality for nine CSV files, validates 18 rendered files, and verifies the current v0.9 figure manifests. The claim-evidence builder checks one CSV, two rendered files, and its separate v0.9 manifest. Image bytes can vary across operating systems when plotted data and dimensions remain unchanged.
 
 [Figure methods](../reports/figure-methods.md) records the formal captions and transformations. [The figure register](specifications/figure-register.json) describes Figures 1 through A2 and A4. [The claim-evidence specification](specifications/claim-evidence-integrity.json) describes Figure A3.
 

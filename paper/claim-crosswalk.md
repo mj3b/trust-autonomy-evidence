@@ -2,9 +2,9 @@
 
 ## Rule
 
-The machine-readable v0.8 claim map governs only the exact prefixed identifiers listed below. Unprefixed IDs in the manuscript claim register are drafting identifiers. A drafting claim does not receive an executable eligibility result unless this crosswalk maps it to a prefixed claim.
+The machine-readable v0.9 claim map governs only the exact prefixed identifiers listed below. Unprefixed IDs in the manuscript claim register are drafting identifiers. A drafting claim does not receive an executable eligibility result unless this crosswalk maps it to a prefixed claim.
 
-| Executable claim | v0.8 audit state | Drafting consequence |
+| Executable claim | v0.9 audit state | Drafting consequence |
 |---|---|---|
 | `PAPER-C02` | Eligible | Describe the frozen selection procedure as a repository record. |
 | `PAPER-C03` | Eligible | Report Oko authority as partially supported and both Patriot authority states as supported in the current assessment set. |
@@ -16,7 +16,7 @@ The machine-readable v0.8 claim map governs only the exact prefixed identifiers 
 | `PAPER-C09` | Eligible | State that the current three-packet set is traceable and protocol-consistent within the declared single-assessor procedure. |
 | `PAPER-C11` | Eligible | Preserve the design limitations in the abstract, results, and conclusion. |
 | `PAPER-C14` | Eligible | State that no located contemporaneous command log or official incident record supports Oko. |
-| `PAPER-C15` | Eligible | State that 21 material literature propositions in the current draft have checked keys, unique locators, review bases, and scope notes. |
+| `PAPER-C15` | Eligible | State that 23 material literature propositions in the current draft have checked keys, unique locators, review bases, and scope notes. |
 | `TAE-C21` | Eligible | Describe the five claim gates as properties of the released method contract. |
 | `TAE-C23` | Ineligible | Make no independent reliability or field-validity claim. |
 | `TAE-C24` | Eligible | State that any failed or indeterminate required gate blocks conclusion eligibility. |
@@ -24,8 +24,8 @@ The machine-readable v0.8 claim map governs only the exact prefixed identifiers 
 | `PAPER-C22` | Eligible | Publish the reader edition as a citation-resolved display derived from the auditable manuscript source. |
 | `PAPER-C23` | Eligible | Report Figure 6 as categorical composition with no score, rate, reliability estimate, or case ranking. |
 | `PAPER-C24` | Eligible | State that the present files supply no eligible coding-stability or inter-rater estimate. |
-| `PAPER-C25` | Eligible | Report the 89-record author gate as 0 complete and 89 open at the v0.8 checkpoint. |
-| `PAPER-C26` | Ineligible | Keep final screening counts and the final search-flow conclusion out of the manuscript until the gate closes. |
+| `PAPER-C25` | Eligible | Report the 89-record author gate as 89 complete and 0 open at the v0.9 checkpoint, with the four author-decision counts. |
+| `PAPER-C26` | Eligible | Report final screening counts and Figure 5 within the 89-record queue boundary. Preserve the open coverage and independence limits. |
 
 ## Planned claims outside the executable map
 
@@ -35,6 +35,6 @@ Drafting claims C01, C10, C12, C13, and C16 through C21 remain subject to their 
 
 - `COE-EX-03` remains open because no independent assessor has reproduced the classifications or evidence-fitness judgments.
 - `COE-EX-04` remains open for inaccessible records, authenticated databases, and citation-chain coverage.
-- `COE-EX-05` remains open because all 89 author-screening decisions remain incomplete.
+- `COE-EX-05` is closed because all 89 author-screening decisions are recorded and the search-flow outputs were rebuilt from the ledger.
 
-The manuscript uses no originality finding and no final author-screening result.
+The manuscript uses no originality finding. It reports the final author-screening result within the declared queue boundary.
