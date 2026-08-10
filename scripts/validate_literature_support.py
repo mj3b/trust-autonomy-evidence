@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the v0.6.0 sentence-level literature-support register."""
+"""Validate the current sentence-level literature-support register."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[1]
-AUDIT = ROOT / "paper/literature-support-audit-v0.6.0.json"
+AUDIT = ROOT / "paper/literature-support-audit-v0.7.0.json"
 SCHEMA = ROOT / "schemas/literature-support-audit.schema.json"
 MANUSCRIPT = ROOT / "paper/manuscript.md"
 BIBLIOGRAPHY = ROOT / "paper/references.bib"
@@ -37,8 +37,8 @@ def main() -> None:
 
     if re.search(r"\bnovel\b", manuscript, flags=re.IGNORECASE):
         failures.append("manuscript contains prohibited novelty wording")
-    if "institutional database" not in manuscript:
-        failures.append("manuscript does not disclose the database-search limit")
+    if "Authenticated Scopus or Web of Science" not in manuscript:
+        failures.append("manuscript does not disclose the authenticated-database limit")
 
     if failures:
         raise SystemExit("literature-support validation: FAIL\n" + "\n".join(failures))

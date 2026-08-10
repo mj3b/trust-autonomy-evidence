@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "Version 0.6.0 is prepared for archival release. Use its version DOI once Zenodo issues the record."
+message: "Version 0.7.0 is prepared for archival release. Use its version DOI once Zenodo issues the record."
 title: "Trust, Autonomy, and Evidence"
 type: software
-version: 0.6.0
-date-released: 2026-08-09
+version: 0.7.0
+date-released: 2026-08-10
 authors:
   - family-names: Banasihan
     given-names: Mark Julius
@@ -11,4 +11,4 @@ authors:
 repository-code: "https://github.com/mj3b/trust-autonomy-evidence"
 url: "https://github.com/mj3b/trust-autonomy-evidence"
 license: Apache-2.0
-abstract: "A research repository defining evidence for justified reliance and practical human control, with synthetic validation, versioned public-case reconstruction, publication figures, claim traceability, and executable integrity audits."
+abstract: "A research repository defining evidence for justified reliance and practical human control, with synthetic validation, versioned public-case reconstruction, a formal literature search, a full methods manuscript, journal-style figures and tables, claim traceability, and executable integrity audits."

@@ -1,6 +1,6 @@
 {
-  "version": "0.1.0",
-  "source_release": "0.3.0",
+  "version": "0.7.0",
+  "source_release": "0.6.0",
   "nodes": [
     {
       "node_id": "collections",
@@ -42,35 +42,35 @@
       "lane": "research",
       "order": 6,
       "title": "Release archive",
-      "detail": "v0.3.0 manifest\nZenodo DOI"
+      "detail": "version manifest\nand archive DOI"
     },
     {
       "node_id": "plot_inputs",
       "lane": "figures",
       "order": 1,
       "title": "Plot inputs",
-      "detail": "Assessments, selection,\nmutations, lineage spec"
+      "detail": "Assessments, search,\nmutations, audit"
     },
     {
       "node_id": "builder",
       "lane": "figures",
       "order": 2,
       "title": "Figure builder",
-      "detail": "build_figures.py\nfixed ordering and palette"
+      "detail": "two builders\nfixed ordering"
     },
     {
       "node_id": "derived",
       "lane": "figures",
       "order": 3,
       "title": "Derived tables",
-      "detail": "6 CSV files\ncell-level provenance"
+      "detail": "9 CSV files\ncell provenance"
     },
     {
       "node_id": "figures",
       "lane": "figures",
       "order": 4,
       "title": "Rendered figures",
-      "detail": "6 SVG and\n6 PNG files"
+      "detail": "9 SVG and\n9 PNG files"
     },
     {
       "node_id": "validation",

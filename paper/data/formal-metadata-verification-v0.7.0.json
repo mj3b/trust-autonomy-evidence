@@ -1,0 +1,2100 @@
+{
+  "schema_version": "1.0",
+  "retrieved_at": "2026-08-10T01:02:12.069990+00:00",
+  "protocol": "paper/formal-literature-search-protocol-v0.7.0.md",
+  "crossref_purpose": "bibliographic verification for DOI-bearing retained proposals",
+  "openalex_purpose": "citation-index coverage comparison for frozen chain seeds",
+  "crossref": {
+    "10.1007/978-3-032-07132-3_11": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1007/978-3-032-07132-3_11",
+        "title": "On the Complexities of Testing for Compliance with Human Oversight Requirements in AI Regulation",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-8165-1803",
+            "authenticated-orcid": false,
+            "given": "Markus",
+            "family": "Langer",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Veronika",
+            "family": "Lazar",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6893-573X",
+            "authenticated-orcid": false,
+            "given": "Kevin",
+            "family": "Baum",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Lecture Notes in Computer Science",
+        "type": "book-chapter",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              11
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1007/978-3-032-07132-3_11"
+      },
+      "request_url": "https://api.crossref.org/works/10.1007%2F978-3-032-07132-3_11"
+    },
+    "10.1007/s00146-023-01777-z": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1007/s00146-023-01777-z",
+        "title": "Institutionalised distrust and human oversight of artificial intelligence: towards a democratic design of AI governance under the European Union AI Act",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-3043-075X",
+            "authenticated-orcid": false,
+            "given": "Johann",
+            "family": "Laux",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "AI &amp; SOCIETY",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              6
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1007/s00146-023-01777-z"
+      },
+      "request_url": "https://api.crossref.org/works/10.1007%2Fs00146-023-01777-z"
+    },
+    "10.1007/s00146-025-02401-y": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1007/s00146-025-02401-y",
+        "title": "What it takes to control AI by design: human learning",
+        "author": [
+          {
+            "given": "Dov",
+            "family": "Te’eni",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Inbal",
+            "family": "Yahav",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "David",
+            "family": "Schwartz",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "AI &amp; SOCIETY",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              24
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1007/s00146-025-02401-y"
+      },
+      "request_url": "https://api.crossref.org/works/10.1007%2Fs00146-025-02401-y"
+    },
+    "10.1007/s11023-020-09532-9": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1007/s11023-020-09532-9",
+        "title": "Accountability and Control Over Autonomous Weapon Systems: A Framework for Comprehensive Human Oversight",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-0296-1844",
+            "authenticated-orcid": false,
+            "given": "Ilse",
+            "family": "Verdiesen",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3940-9885",
+            "authenticated-orcid": false,
+            "given": "Filippo",
+            "family": "Santoni de Sio",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7409-5813",
+            "authenticated-orcid": false,
+            "given": "Virginia",
+            "family": "Dignum",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Minds and Machines",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2020,
+              8,
+              1
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1007/s11023-020-09532-9"
+      },
+      "request_url": "https://api.crossref.org/works/10.1007%2Fs11023-020-09532-9"
+    },
+    "10.1007/s11023-024-09701-0": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1007/s11023-024-09701-0",
+        "title": "Effective Human Oversight of AI-Based Systems: A Signal Detection Perspective on the Detection of Inaccurate and Unfair Outputs",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-8165-1803",
+            "authenticated-orcid": false,
+            "given": "Markus",
+            "family": "Langer",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kevin",
+            "family": "Baum",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nadine",
+            "family": "Schlicker",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Minds and Machines",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              11,
+              5
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1007/s11023-024-09701-0"
+      },
+      "request_url": "https://api.crossref.org/works/10.1007%2Fs11023-024-09701-0"
+    },
+    "10.1007/s11948-025-00554-z": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1007/s11948-025-00554-z",
+        "title": "Principles and Framework for the Operationalisation of Meaningful Human Control Over Autonomous Systems",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-1173-0071",
+            "authenticated-orcid": false,
+            "given": "Simeon C.",
+            "family": "Calvert",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Science and Engineering Ethics",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              24
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1007/s11948-025-00554-z"
+      },
+      "request_url": "https://api.crossref.org/works/10.1007%2Fs11948-025-00554-z"
+    },
+    "10.1007/s43681-022-00167-3": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1007/s43681-022-00167-3",
+        "title": "Meaningful human control: actionable properties for AI system development",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-7531-3154",
+            "authenticated-orcid": false,
+            "given": "Luciano",
+            "family": "Cavalcante Siebert",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Maria Luce",
+            "family": "Lupetti",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Evgeni",
+            "family": "Aizenberg",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Niek",
+            "family": "Beckers",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Arkady",
+            "family": "Zgonnikov",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Herman",
+            "family": "Veluwenkamp",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "David",
+            "family": "Abbink",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Elisa",
+            "family": "Giaccardi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Geert-Jan",
+            "family": "Houben",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Catholijn M.",
+            "family": "Jonker",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jeroen",
+            "family": "van den Hoven",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Deborah",
+            "family": "Forster",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Reginald L.",
+            "family": "Lagendijk",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "AI and Ethics",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              5,
+              18
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1007/s43681-022-00167-3"
+      },
+      "request_url": "https://api.crossref.org/works/10.1007%2Fs43681-022-00167-3"
+    },
+    "10.1007/s43681-024-00489-4": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1007/s43681-024-00489-4",
+        "title": "Human control of AI systems: from supervision to teaming",
+        "author": [
+          {
+            "given": "Andreas",
+            "family": "Tsamados",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Luciano",
+            "family": "Floridi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Mariarosaria",
+            "family": "Taddeo",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "AI and Ethics",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              28
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1007/s43681-024-00489-4"
+      },
+      "request_url": "https://api.crossref.org/works/10.1007%2Fs43681-024-00489-4"
+    },
+    "10.1007/s43681-026-01147-7": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1007/s43681-026-01147-7",
+        "title": "Designing meaningful human oversight in AI",
+        "author": [
+          {
+            "given": "Liming",
+            "family": "Zhu",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Qinghua",
+            "family": "Lu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ming",
+            "family": "Ding",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sung Une",
+            "family": "Lee",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Chen",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "AI and Ethics",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              4
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1007/s43681-026-01147-7"
+      },
+      "request_url": "https://api.crossref.org/works/10.1007%2Fs43681-026-01147-7"
+    },
+    "10.1016/0005-1098(83)90046-8": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1016/0005-1098(83)90046-8",
+        "title": "Ironies of automation",
+        "author": [
+          {
+            "given": "Lisanne",
+            "family": "Bainbridge",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Automatica",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              1983,
+              11
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1016/0005-1098(83)90046-8"
+      },
+      "request_url": "https://api.crossref.org/works/10.1016%2F0005-1098%2883%2990046-8"
+    },
+    "10.1016/j.clsr.2022.105681": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1016/j.clsr.2022.105681",
+        "title": "The flaws of policies requiring human oversight of government algorithms",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-0332-4110",
+            "authenticated-orcid": false,
+            "given": "Ben",
+            "family": "Green",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Computer Law &amp; Security Review",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              7
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1016/j.clsr.2022.105681"
+      },
+      "request_url": "https://api.crossref.org/works/10.1016%2Fj.clsr.2022.105681"
+    },
+    "10.1017/s0963180122000718": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1017/s0963180122000718",
+        "title": "Reflection Machines: Supporting Effective Human Oversight Over Medical Decision Support Systems",
+        "author": [
+          {
+            "given": "Pim",
+            "family": "Haselager",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hanna",
+            "family": "Schraffenberger",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Serge",
+            "family": "Thill",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2992-6563",
+            "authenticated-orcid": false,
+            "given": "Simon",
+            "family": "Fischer",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Pablo",
+            "family": "Lanillos",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sebastiaan",
+            "family": "van de Groes",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Miranda",
+            "family": "van Hooff",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Cambridge Quarterly of Healthcare Ethics",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              1,
+              10
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1017/s0963180122000718"
+      },
+      "request_url": "https://api.crossref.org/works/10.1017%2Fs0963180122000718"
+    },
+    "10.1109/facct71761.2026.00009": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1109/facct71761.2026.00009",
+        "title": "Compliance-by-Construction Argument Graphs: Using Generative AI to Produce Evidence-Linked Formal Arguments for Certification-Grade Accountability",
+        "author": [
+          {
+            "given": "Mahyar Tourchi",
+            "family": "Moghaddam",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "SDU Software Engineering,Odense,Denmark"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "2026 IEEE Workshop on Formal Arguments for CPS Certification (FACCT)",
+        "type": "proceedings-article",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              11
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1109/facct71761.2026.00009"
+      },
+      "request_url": "https://api.crossref.org/works/10.1109%2Ffacct71761.2026.00009"
+    },
+    "10.1109/tase.2020.2965466": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1109/tase.2020.2965466",
+        "title": "The Responsibility Quantification Model of Human Interaction With Automation",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-6690-2897",
+            "authenticated-orcid": false,
+            "given": "Nir",
+            "family": "Douer",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1801-9987",
+            "authenticated-orcid": false,
+            "given": "Joachim",
+            "family": "Meyer",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "IEEE Transactions on Automation Science and Engineering",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2020,
+              4
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1109/tase.2020.2965466"
+      },
+      "request_url": "https://api.crossref.org/works/10.1109%2Ftase.2020.2965466"
+    },
+    "10.1145/3322640.3326699": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1145/3322640.3326699",
+        "title": "Human intervention in automated decision-making",
+        "author": [
+          {
+            "given": "Marco",
+            "family": "Almada",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of São Paulo &amp; Lawgorithm"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Proceedings of the Seventeenth International Conference on Artificial Intelligence and Law",
+        "type": "proceedings-article",
+        "published": {
+          "date-parts": [
+            [
+              2019,
+              6,
+              17
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1145/3322640.3326699"
+      },
+      "request_url": "https://api.crossref.org/works/10.1145%2F3322640.3326699"
+    },
+    "10.1145/3630106.3658957": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1145/3630106.3658957",
+        "title": "A Framework for Assurance Audits of Algorithmic Systems",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0004-8970-4537",
+            "authenticated-orcid": false,
+            "given": "Khoa",
+            "family": "Lam",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "BABL AI Inc., USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5809-8704",
+            "authenticated-orcid": false,
+            "given": "Benjamin",
+            "family": "Lange",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "BABL AI Inc., USA and Ludwig Maximilians University (LMU), Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9573-3332",
+            "authenticated-orcid": false,
+            "given": "Borhane",
+            "family": "Blili-Hamelin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "BABL AI Inc., United States of America and AI Risk and Vulnerability Alliance (ARVA), USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8998-5496",
+            "authenticated-orcid": false,
+            "given": "Jovana",
+            "family": "Davidovic",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "BABL AI Inc., USA and University of Iowa, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6451-9675",
+            "authenticated-orcid": false,
+            "given": "Shea",
+            "family": "Brown",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "BABL AI Inc., USA and University of Iowa, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2963-2573",
+            "authenticated-orcid": false,
+            "given": "Ali",
+            "family": "Hasan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "BABL AI Inc., USA and University of Iowa, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "The 2024 ACM Conference on Fairness, Accountability, and Transparency",
+        "type": "proceedings-article",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              3
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1145/3630106.3658957"
+      },
+      "request_url": "https://api.crossref.org/works/10.1145%2F3630106.3658957"
+    },
+    "10.1145/3630106.3659051": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1145/3630106.3659051",
+        "title": "On the Quest for Effectiveness in Human Oversight: Interdisciplinary Perspectives",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-5365-2198",
+            "authenticated-orcid": false,
+            "given": "Sarah",
+            "family": "Sterz",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Saarland University, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6893-573X",
+            "authenticated-orcid": false,
+            "given": "Kevin",
+            "family": "Baum",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "DFKI, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6897-2506",
+            "authenticated-orcid": false,
+            "given": "Sebastian",
+            "family": "Biewer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Saarland University, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2766-9615",
+            "authenticated-orcid": false,
+            "given": "Holger",
+            "family": "Hermanns",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Saarland University, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-1340-4330",
+            "authenticated-orcid": false,
+            "given": "Anne",
+            "family": "Lauber-Rönsberg",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "TU Dresden, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0005-6749-7669",
+            "authenticated-orcid": false,
+            "given": "Philip",
+            "family": "Meinel",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "TU Dresden, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8165-1803",
+            "authenticated-orcid": false,
+            "given": "Markus",
+            "family": "Langer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Universität Freiburg, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "The 2024 ACM Conference on Fairness Accountability and Transparency",
+        "type": "proceedings-article",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              3
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1145/3630106.3659051"
+      },
+      "request_url": "https://api.crossref.org/works/10.1145%2F3630106.3659051"
+    },
+    "10.1145/3805689.3812402": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1145/3805689.3812402",
+        "title": "Human oversight of agentic systems in practice: Examining the oversight work, challenges, and heuristics of developers using software agents",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0003-7725-5888",
+            "authenticated-orcid": false,
+            "given": "Shipi",
+            "family": "Dhanorkar",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Microsoft, Redmond, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7921-3820",
+            "authenticated-orcid": false,
+            "given": "Samir",
+            "family": "Passi",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Microsoft, Redmond, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3322-3548",
+            "authenticated-orcid": false,
+            "given": "Mihaela",
+            "family": "Vorvoreanu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Microsoft, Redmond, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency",
+        "type": "proceedings-article",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              25
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1145/3805689.3812402"
+      },
+      "request_url": "https://api.crossref.org/works/10.1145%2F3805689.3812402"
+    },
+    "10.1518/hfes.46.1.50_30392": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1518/hfes.46.1.50_30392",
+        "title": "Trust in Automation: Designing for Appropriate Reliance",
+        "author": [
+          {
+            "given": "J. D.",
+            "family": "Lee",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "K. A.",
+            "family": "See",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Human Factors: The Journal of the Human Factors and Ergonomics Society",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2004,
+              1,
+              1
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1518/hfes.46.1.50_30392"
+      },
+      "request_url": "https://api.crossref.org/works/10.1518%2Fhfes.46.1.50_30392"
+    },
+    "10.1609/aaai.v35i17.17817": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.1609/aaai.v35i17.17817",
+        "title": "Preventing Repeated Real World AI Failures by Cataloging Incidents: The AI Incident Database",
+        "author": [
+          {
+            "given": "Sean",
+            "family": "McGregor",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2021,
+              5,
+              18
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.1609/aaai.v35i17.17817"
+      },
+      "request_url": "https://api.crossref.org/works/10.1609%2Faaai.v35i17.17817"
+    },
+    "10.3389/frobt.2018.00015": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.3389/frobt.2018.00015",
+        "title": "Meaningful Human Control over Autonomous Systems: A Philosophical Account",
+        "author": [
+          {
+            "given": "Filippo",
+            "family": "Santoni de Sio",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jeroen",
+            "family": "van den Hoven",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Frontiers in Robotics and AI",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2018,
+              2,
+              28
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.3389/frobt.2018.00015"
+      },
+      "request_url": "https://api.crossref.org/works/10.3389%2Ffrobt.2018.00015"
+    },
+    "10.3390/info17070694": {
+      "status": "resolved",
+      "record": {
+        "doi": "10.3390/info17070694",
+        "title": "Operationalizing Accountable AI Through Traceable Governance Architecture for Institutional Decision Support",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2735-8208",
+            "authenticated-orcid": false,
+            "given": "Abdalilah",
+            "family": "Alhalangy",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Computer Engineering, College of Computer, Qassim University, Buraydah 52361, Saudi Arabia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container_title": "Information",
+        "type": "journal-article",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              16
+            ]
+          ]
+        },
+        "url": "https://doi.org/10.3390/info17070694"
+      },
+      "request_url": "https://api.crossref.org/works/10.3390%2Finfo17070694"
+    },
+    "10.4230/dagrep.15.6.189": {
+      "status": "unresolved",
+      "http_status": 404,
+      "reason": "HTTP Error 404: Not Found",
+      "request_url": "https://api.crossref.org/works/10.4230%2Fdagrep.15.6.189"
+    },
+    "10.48550/arxiv.2603.19213": {
+      "status": "unresolved",
+      "http_status": 404,
+      "reason": "HTTP Error 404: Not Found",
+      "request_url": "https://api.crossref.org/works/10.48550%2Farxiv.2603.19213"
+    },
+    "10.48550/arxiv.2605.16278": {
+      "status": "unresolved",
+      "http_status": 404,
+      "reason": "HTTP Error 404: Not Found",
+      "request_url": "https://api.crossref.org/works/10.48550%2Farxiv.2605.16278"
+    }
+  },
+  "openalex": {
+    "L01": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W2792435043",
+        "doi": "https://doi.org/10.3389/frobt.2018.00015",
+        "title": "Meaningful Human Control over Autonomous Systems: A Philosophical Account",
+        "publication_year": 2018,
+        "cited_by_count": 489,
+        "referenced_works_count": 77,
+        "type": "article",
+        "primary_location": {
+          "id": "doi:10.3389/frobt.2018.00015",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.3389/frobt.2018.00015",
+          "pdf_url": "https://www.frontiersin.org/articles/10.3389/frobt.2018.00015/pdf",
+          "source": {
+            "id": "https://openalex.org/S2595095599",
+            "display_name": "Frontiers in Robotics and AI",
+            "issn_l": "2296-9144",
+            "issn": [
+              "2296-9144"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320527",
+            "host_organization_name": "Frontiers Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320527"
+            ],
+            "host_organization_lineage_names": [
+              "Frontiers Media"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Frontiers in Robotics and AI",
+          "raw_type": "journal-article"
+        }
+      },
+      "seed": "DOI:10.3389/frobt.2018.00015",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.3389%2Ffrobt.2018.00015"
+    },
+    "L02": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W4280654158",
+        "doi": "https://doi.org/10.1007/s43681-022-00167-3",
+        "title": "Meaningful human control: actionable properties for AI system development",
+        "publication_year": 2022,
+        "cited_by_count": 115,
+        "referenced_works_count": 85,
+        "type": "article",
+        "primary_location": {
+          "id": "doi:10.1007/s43681-022-00167-3",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1007/s43681-022-00167-3",
+          "pdf_url": "https://link.springer.com/content/pdf/10.1007/s43681-022-00167-3.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210170699",
+            "display_name": "AI and Ethics",
+            "issn_l": "2730-5953",
+            "issn": [
+              "2730-5953",
+              "2730-5961"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319965",
+            "host_organization_name": "Springer Nature",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "AI and Ethics",
+          "raw_type": "journal-article"
+        }
+      },
+      "seed": "DOI:10.1007/s43681-022-00167-3",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1007%2Fs43681-022-00167-3"
+    },
+    "L04": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W4414472876",
+        "doi": "https://doi.org/10.1007/s11948-025-00554-z",
+        "title": "Principles and Framework for the Operationalisation of Meaningful Human Control Over Autonomous Systems",
+        "publication_year": 2025,
+        "cited_by_count": 5,
+        "referenced_works_count": 52,
+        "type": "article",
+        "primary_location": {
+          "id": "doi:10.1007/s11948-025-00554-z",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1007/s11948-025-00554-z",
+          "pdf_url": "https://link.springer.com/content/pdf/10.1007/s11948-025-00554-z.pdf",
+          "source": {
+            "id": "https://openalex.org/S14881475",
+            "display_name": "Science and Engineering Ethics",
+            "issn_l": "1353-3452",
+            "issn": [
+              "1353-3452",
+              "1471-5546"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319900",
+            "host_organization_name": "Springer Science+Business Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319900",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Science+Business Media",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Science and Engineering Ethics",
+          "raw_type": "journal-article"
+        }
+      },
+      "seed": "DOI:10.1007/s11948-025-00554-z",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1007%2Fs11948-025-00554-z"
+    },
+    "L06": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W7160161627",
+        "doi": "https://doi.org/10.1007/s43681-026-01147-7",
+        "title": "Designing meaningful human oversight in AI",
+        "publication_year": 2026,
+        "cited_by_count": 1,
+        "referenced_works_count": 30,
+        "type": "article",
+        "primary_location": {
+          "id": "doi:10.1007/s43681-026-01147-7",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1007/s43681-026-01147-7",
+          "pdf_url": "https://link.springer.com/content/pdf/10.1007/s43681-026-01147-7.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210170699",
+            "display_name": "AI and Ethics",
+            "issn_l": "2730-5953",
+            "issn": [
+              "2730-5953",
+              "2730-5961"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319965",
+            "host_organization_name": "Springer Nature",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "AI and Ethics",
+          "raw_type": "journal-article"
+        }
+      },
+      "seed": "DOI:10.1007/s43681-026-01147-7",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1007%2Fs43681-026-01147-7"
+    },
+    "L10": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W3200421165",
+        "doi": "https://doi.org/10.1016/j.clsr.2022.105681",
+        "title": "The flaws of policies requiring human oversight of government algorithms",
+        "publication_year": 2022,
+        "cited_by_count": 180,
+        "referenced_works_count": 139,
+        "type": "article",
+        "primary_location": {
+          "id": "doi:10.1016/j.clsr.2022.105681",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1016/j.clsr.2022.105681",
+          "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0267364922000292/pdf",
+          "source": {
+            "id": "https://openalex.org/S4394735566",
+            "display_name": "Computer law & security review",
+            "issn_l": "2212-473X",
+            "issn": [
+              "2212-473X",
+              "2212-4748"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Computer Law &amp; Security Review",
+          "raw_type": "journal-article"
+        }
+      },
+      "seed": "DOI:10.1016/j.clsr.2022.105681",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.clsr.2022.105681"
+    },
+    "L12": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W4415230414",
+        "doi": "https://doi.org/10.1609/aies.v8i1.36596",
+        "title": "Incident Analysis for AI Agents",
+        "publication_year": 2025,
+        "cited_by_count": 0,
+        "referenced_works_count": 0,
+        "type": "conference-paper",
+        "primary_location": {
+          "id": "doi:10.1609/aies.v8i1.36596",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1609/aies.v8i1.36596",
+          "pdf_url": "https://ojs.aaai.org/index.php/AIES/article/download/36596/38734",
+          "source": {
+            "id": "https://openalex.org/S5407048695",
+            "display_name": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
+            "issn_l": "3065-8365",
+            "issn": [
+              "3065-8365"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society",
+          "raw_type": "journal-article"
+        }
+      },
+      "seed": "DOI:10.1609/aies.v8i1.36596",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1609%2Faies.v8i1.36596"
+    },
+    "L14": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W4283388794",
+        "doi": "https://doi.org/10.1007/s43681-022-00178-0",
+        "title": "Ethical assurance: a practical approach to the responsible design, development, and deployment of data-driven technologies",
+        "publication_year": 2022,
+        "cited_by_count": 81,
+        "referenced_works_count": 39,
+        "type": "article",
+        "primary_location": {
+          "id": "doi:10.1007/s43681-022-00178-0",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1007/s43681-022-00178-0",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210170699",
+            "display_name": "AI and Ethics",
+            "issn_l": "2730-5953",
+            "issn": [
+              "2730-5953",
+              "2730-5961"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319965",
+            "host_organization_name": "Springer Nature",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "AI and Ethics",
+          "raw_type": "journal-article"
+        }
+      },
+      "seed": "DOI:10.1007/s43681-022-00178-0",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1007%2Fs43681-022-00178-0"
+    },
+    "L15": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W4411297492",
+        "doi": "https://doi.org/10.1016/j.ress.2025.111311",
+        "title": "Safety assurance of Machine Learning for autonomous systems",
+        "publication_year": 2025,
+        "cited_by_count": 15,
+        "referenced_works_count": 94,
+        "type": "article",
+        "primary_location": {
+          "id": "doi:10.1016/j.ress.2025.111311",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1016/j.ress.2025.111311",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S202403813",
+            "display_name": "Reliability Engineering & System Safety",
+            "issn_l": "0951-8320",
+            "issn": [
+              "0951-8320",
+              "1879-0836"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Reliability Engineering &amp; System Safety",
+          "raw_type": "journal-article"
+        }
+      },
+      "seed": "DOI:10.1016/j.ress.2025.111311",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.ress.2025.111311"
+    },
+    "L16": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W2008045539",
+        "doi": "https://doi.org/10.1016/s0022-4375(02)00032-4",
+        "title": "Reconstructing human contributions to accidents: the new view on error and performance",
+        "publication_year": 2002,
+        "cited_by_count": 319,
+        "referenced_works_count": 30,
+        "type": "article",
+        "primary_location": {
+          "id": "doi:10.1016/s0022-4375(02)00032-4",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1016/s0022-4375(02)00032-4",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S84525459",
+            "display_name": "Journal of Safety Research",
+            "issn_l": "0022-4375",
+            "issn": [
+              "0022-4375",
+              "1879-1247"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of Safety Research",
+          "raw_type": "journal-article"
+        }
+      },
+      "seed": "DOI:10.1016/S0022-4375(02)00032-4",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2FS0022-4375%2802%2900032-4"
+    },
+    "L17": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W3215206150",
+        "doi": "https://doi.org/10.1111/risa.13850",
+        "title": "Learning from the Failure of Autonomous and Intelligent Systems: Accidents, Safety, and Sociotechnical Sources of Risk",
+        "publication_year": 2021,
+        "cited_by_count": 61,
+        "referenced_works_count": 171,
+        "type": "article",
+        "primary_location": {
+          "id": "doi:10.1111/risa.13850",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1111/risa.13850",
+          "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/risa.13850",
+          "source": {
+            "id": "https://openalex.org/S161248890",
+            "display_name": "Risk Analysis",
+            "issn_l": "0272-4332",
+            "issn": [
+              "0272-4332",
+              "1539-6924"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320595",
+            "host_organization_name": "Wiley",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320595"
+            ],
+            "host_organization_lineage_names": [
+              "Wiley"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Risk Analysis",
+          "raw_type": "journal-article"
+        }
+      },
+      "seed": "DOI:10.1111/risa.13850",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1111%2Frisa.13850"
+    },
+    "L24": {
+      "status": "unresolved",
+      "http_status": 404,
+      "reason": "HTTP Error 404: Not Found",
+      "seed": "ARXIV:2605.26340",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Farxiv.org%2Fabs%2F2605.26340"
+    },
+    "L25": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W4404061654",
+        "doi": "https://doi.org/10.1007/s11023-024-09701-0",
+        "title": "Effective Human Oversight of AI-Based Systems: A Signal Detection Perspective on the Detection of Inaccurate and Unfair Outputs",
+        "publication_year": 2024,
+        "cited_by_count": 38,
+        "referenced_works_count": 107,
+        "type": "article",
+        "primary_location": {
+          "id": "doi:10.1007/s11023-024-09701-0",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1007/s11023-024-09701-0",
+          "pdf_url": "https://link.springer.com/content/pdf/10.1007/s11023-024-09701-0.pdf",
+          "source": {
+            "id": "https://openalex.org/S160466889",
+            "display_name": "Minds and Machines",
+            "issn_l": "0924-6495",
+            "issn": [
+              "0924-6495",
+              "1572-8641"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319900",
+            "host_organization_name": "Springer Science+Business Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319900",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Science+Business Media",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Minds and Machines",
+          "raw_type": "journal-article"
+        }
+      },
+      "seed": "DOI:10.1007/s11023-024-09701-0",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1007%2Fs11023-024-09701-0"
+    },
+    "L26": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W4415043110",
+        "doi": "https://doi.org/10.1007/978-3-032-07132-3_11",
+        "title": "On the Complexities of Testing for Compliance with Human Oversight Requirements in AI Regulation",
+        "publication_year": 2025,
+        "cited_by_count": 3,
+        "referenced_works_count": 23,
+        "type": "conference-paper",
+        "primary_location": {
+          "id": "doi:10.1007/978-3-032-07132-3_11",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1007/978-3-032-07132-3_11",
+          "pdf_url": "https://link.springer.com/content/pdf/10.1007/978-3-032-07132-3_11.pdf",
+          "source": {
+            "id": "https://openalex.org/S106296714",
+            "display_name": "Lecture notes in computer science",
+            "issn_l": "0302-9743",
+            "issn": [
+              "0302-9743",
+              "1611-3349"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319900",
+            "host_organization_name": "Springer Science+Business Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319900",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Science+Business Media",
+              "Springer Nature"
+            ],
+            "type": "book series"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Lecture Notes in Computer Science",
+          "raw_type": "book-chapter"
+        }
+      },
+      "seed": "DOI:10.1007/978-3-032-07132-3_11",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1007%2F978-3-032-07132-3_11"
+    },
+    "L27": {
+      "status": "resolved",
+      "record": {
+        "id": "https://openalex.org/W4391335370",
+        "doi": "https://doi.org/10.1145/3630106.3658957",
+        "title": "A Framework for Assurance Audits of Algorithmic Systems",
+        "publication_year": 2024,
+        "cited_by_count": 39,
+        "referenced_works_count": 36,
+        "type": "conference-paper",
+        "primary_location": {
+          "id": "doi:10.1145/3630106.3658957",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1145/3630106.3658957",
+          "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3630106.3658957",
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "The 2024 ACM Conference on Fairness, Accountability, and Transparency",
+          "raw_type": "proceedings-article"
+        }
+      },
+      "seed": "DOI:10.1145/3630106.3658957",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1145%2F3630106.3658957"
+    },
+    "L28": {
+      "status": "unresolved",
+      "http_status": 404,
+      "reason": "HTTP Error 404: Not Found",
+      "seed": "ARXIV:2605.16278",
+      "request_url": "https://api.openalex.org/works/https%3A%2F%2Farxiv.org%2Fabs%2F2605.16278"
+    }
+  }
+}

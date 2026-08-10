@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and validate the v0.6.0 claim-evidence integrity matrix."""
+"""Build and validate the v0.7.0 journal-style claim-evidence matrix."""
 
 from __future__ import annotations
 
@@ -24,15 +24,14 @@ import matplotlib  # noqa: E402
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
-from matplotlib.colors import ListedColormap  # noqa: E402
-from matplotlib.patches import Patch  # noqa: E402
+from matplotlib.lines import Line2D  # noqa: E402
 
 
 STUB = "fig-a3-claim-evidence-integrity"
 CSV_PATH = Path("figures/data") / f"{STUB}.csv"
 PNG_PATH = Path("figures/generated") / f"{STUB}.png"
 SVG_PATH = Path("figures/generated") / f"{STUB}.svg"
-MANIFEST_PATH = Path("figures/v0.6.0-manifest.json")
+MANIFEST_PATH = Path("figures/v0.7.0-claim-evidence-manifest.json")
 INPUTS = (
     Path("analysis/build_claim_evidence_figure.py"),
     Path("figures/specifications/claim-evidence-integrity.json"),
@@ -43,12 +42,11 @@ OUTPUTS = (CSV_PATH, PNG_PATH, SVG_PATH)
 GATES = (
     ("traceability", "Traceability"),
     ("integrity", "Integrity"),
-    ("support", "Support review"),
-    ("evidence_fitness", "Evidence fitness"),
-    ("dependency_closure", "Dependency closure"),
-    ("conclusion_eligible", "Conclusion eligible"),
+    ("support", "Support\nreview"),
+    ("evidence_fitness", "Evidence\nfitness"),
+    ("dependency_closure", "Dependency\nclosure"),
+    ("conclusion_eligible", "Conclusion\neligible"),
 )
-STATE_ORDER = ("pass", "fail", "indeterminate", "outside_scope", "eligible", "blocked")
 STATE_CODE = {"pass": "P", "fail": "F", "indeterminate": "I", "outside_scope": "O", "eligible": "E", "blocked": "B"}
 STATE_LABEL = {
     "pass": "Pass",
@@ -58,14 +56,11 @@ STATE_LABEL = {
     "eligible": "Eligible",
     "blocked": "Ineligible",
 }
-STATE_COLOR = {
-    "pass": "#0072B2",
-    "fail": "#D55E00",
-    "indeterminate": "#8E5AA9",
-    "outside_scope": "#B7B7B7",
-    "eligible": "#009E73",
-    "blocked": "#5A6772",
-}
+INK = "#202124"
+MUTED = "#666B73"
+LIGHT = "#D8DCE2"
+BLUE = "#2F6FB0"
+PAPER = "#FFFFFF"
 
 
 def read_json(relative: Path) -> dict:
@@ -82,10 +77,7 @@ def table_rows() -> list[dict[str, str]]:
     for claim in result["claim_results"]:
         row = {"claim_id": claim["claim_id"]}
         for gate, _ in GATES:
-            if gate == "conclusion_eligible":
-                row[gate] = "eligible" if claim[gate] else "blocked"
-            else:
-                row[gate] = claim[gate]
+            row[gate] = ("eligible" if claim[gate] else "blocked") if gate == "conclusion_eligible" else claim[gate]
         rows.append(row)
     return rows
 
@@ -98,60 +90,63 @@ def write_csv(path: Path, rows: list[dict[str, str]]) -> None:
         writer.writerows(rows)
 
 
+def draw_state(ax: plt.Axes, x: int, y: int, state: str) -> None:
+    if state in {"pass", "eligible"}:
+        ax.scatter(x, y, s=135, marker="o", facecolor=BLUE, edgecolor=BLUE, linewidth=1.0, zorder=3)
+        color = PAPER
+    elif state in {"fail", "blocked"}:
+        ax.scatter(x, y, s=135, marker="X", facecolor=MUTED, edgecolor=MUTED, linewidth=0.8, zorder=3)
+        color = PAPER
+    elif state == "indeterminate":
+        ax.scatter(x, y, s=135, marker="D", facecolor=PAPER, edgecolor=MUTED, linewidth=1.0, zorder=3)
+        color = MUTED
+    else:
+        ax.scatter(x, y, s=120, marker="s", facecolor=PAPER, edgecolor=LIGHT, linewidth=1.0, zorder=3)
+        color = MUTED
+    ax.text(x, y, STATE_CODE[state], ha="center", va="center", color=color, weight="bold", fontsize=6.4, zorder=4)
+
+
 def build_figure(output_root: Path) -> None:
     rows = table_rows()
-    csv_path = output_root / CSV_PATH
-    png_path = output_root / PNG_PATH
-    svg_path = output_root / SVG_PATH
+    csv_path, png_path, svg_path = output_root / CSV_PATH, output_root / PNG_PATH, output_root / SVG_PATH
     write_csv(csv_path, rows)
-
-    values = []
-    states = []
-    for row in rows:
-        row_states = [row[gate] for gate, _ in GATES]
-        states.append(row_states)
-        values.append([STATE_ORDER.index(state) for state in row_states])
 
     plt.rcParams.update({
         "font.family": "DejaVu Sans",
-        "font.size": 10,
-        "text.color": "#17212B",
-        "svg.hashsalt": "trust-autonomy-evidence-coe-v0.6.0",
+        "font.size": 8.5,
+        "text.color": INK,
+        "figure.facecolor": PAPER,
+        "axes.facecolor": PAPER,
+        "savefig.facecolor": PAPER,
+        "svg.hashsalt": "trust-autonomy-evidence-coe-v0.7.0",
     })
-    fig, ax = plt.subplots(figsize=(12.6, 9.5))
-    cmap = ListedColormap([STATE_COLOR[state] for state in STATE_ORDER])
-    ax.imshow(values, aspect="auto", cmap=cmap, vmin=-0.5, vmax=len(STATE_ORDER) - 0.5)
-    ax.set_xticks(range(len(GATES)))
-    ax.set_xticklabels([label for _, label in GATES], fontsize=9.5)
-    ax.tick_params(top=True, labeltop=True, bottom=False, labelbottom=False, length=0, pad=9)
-    ax.set_yticks(range(len(rows)))
-    ax.set_yticklabels([row["claim_id"] for row in rows], fontsize=9.5)
-    ax.tick_params(axis="y", length=0, pad=8)
-    ax.set_xticks([value - 0.5 for value in range(1, len(GATES))], minor=True)
-    ax.set_yticks([value - 0.5 for value in range(1, len(rows))], minor=True)
-    ax.grid(which="minor", color="#FFFFFF", linewidth=1.5)
-    ax.tick_params(which="minor", bottom=False, left=False)
+    fig, ax = plt.subplots(figsize=(7.25, 6.15))
+    fig.subplots_adjust(left=0.14, right=0.99, top=0.84, bottom=0.12)
+    ax.set_xlim(-0.5, len(GATES) - 0.5)
+    ax.set_ylim(len(rows) - 0.5, -0.5)
+    ax.set_xticks(range(len(GATES)), [label for _, label in GATES], fontsize=7.2)
+    ax.tick_params(axis="x", top=True, labeltop=True, bottom=False, labelbottom=False, length=0, pad=7)
+    ax.set_yticks(range(len(rows)), [row["claim_id"] for row in rows], fontsize=7.2)
+    ax.tick_params(axis="y", length=0, pad=6)
+    for y in range(len(rows) + 1):
+        ax.axhline(y - 0.5, color=LIGHT, linewidth=0.5, zorder=0)
+    for x in range(len(GATES) + 1):
+        ax.axvline(x - 0.5, color=LIGHT, linewidth=0.5, zorder=0)
+    for y, row in enumerate(rows):
+        for x, (gate, _) in enumerate(GATES):
+            draw_state(ax, x, y, row[gate])
     for spine in ax.spines.values():
         spine.set_visible(False)
-
-    for y, row_states in enumerate(states):
-        for x, state in enumerate(row_states):
-            text_color = "#17212B" if state == "outside_scope" else "#FFFFFF"
-            ax.text(x, y, STATE_CODE[state], ha="center", va="center", color=text_color, weight="bold", fontsize=9.5)
-
-    fig.subplots_adjust(left=0.16, right=0.98, top=0.78, bottom=0.16)
-    fig.text(0.16, 0.94, "Evidence fitness determines conclusion eligibility", ha="left", va="top", fontsize=17, weight="bold")
-    fig.text(0.16, 0.905, "Fifteen material claims across five evidence gates and one conclusion-eligibility decision", ha="left", va="top", fontsize=10.5, color="#5A6772")
-    fig.text(0.16, 0.865, "The versioned Oko correction closes the prior fitness failure; independent validity remains outside scope.", ha="left", va="top", fontsize=10.5, color="#0072B2", weight="bold")
-
-    legend_states = ("pass", "fail", "indeterminate", "outside_scope", "eligible", "blocked")
-    legend = [Patch(facecolor=STATE_COLOR[state], label=f"{STATE_CODE[state]}  {STATE_LABEL[state]}") for state in legend_states]
-    fig.legend(handles=legend, loc="lower left", bbox_to_anchor=(0.155, 0.07), ncol=3, frameon=False, fontsize=9, columnspacing=1.5)
-    fig.text(0.16, 0.025, "Source: v0.6.0 claim map and integrity audit. States are categorical. No numeric score is calculated.", ha="left", va="bottom", fontsize=8.5, color="#5A6772")
-
+    legend = [
+        Line2D([0], [0], marker="o", color="none", markerfacecolor=BLUE, markeredgecolor=BLUE, markersize=7, label="P/E  Pass or eligible"),
+        Line2D([0], [0], marker="X", color="none", markerfacecolor=MUTED, markeredgecolor=MUTED, markersize=7, label="F/B  Fail or ineligible"),
+        Line2D([0], [0], marker="D", color="none", markerfacecolor=PAPER, markeredgecolor=MUTED, markersize=6.5, label="I  Indeterminate"),
+        Line2D([0], [0], marker="s", color="none", markerfacecolor=PAPER, markeredgecolor=LIGHT, markersize=6.5, label="O  Outside scope"),
+    ]
+    fig.legend(handles=legend, loc="lower center", bbox_to_anchor=(0.56, 0.015), ncol=2, frameon=False, fontsize=6.7, columnspacing=1.2, handletextpad=0.35)
     png_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(png_path, dpi=200, bbox_inches="tight", metadata={"Software": "Trust, Autonomy, and Evidence v0.6 figure builder"})
-    fig.savefig(svg_path, bbox_inches="tight", metadata={"Creator": "Trust, Autonomy, and Evidence v0.6 figure builder", "Date": None})
+    fig.savefig(png_path, dpi=220, bbox_inches="tight", metadata={"Software": "Trust, Autonomy, and Evidence v0.7 figure builder"})
+    fig.savefig(svg_path, bbox_inches="tight", metadata={"Creator": "Trust, Autonomy, and Evidence v0.7 figure builder", "Date": None})
     svg_text = svg_path.read_text(encoding="utf-8")
     svg_path.write_text("\n".join(line.rstrip() for line in svg_text.splitlines()) + "\n", encoding="utf-8")
     plt.close(fig)
@@ -163,7 +158,8 @@ def manifest_entry(path: Path, relative: Path) -> dict:
 
 def write_manifest(output_root: Path) -> None:
     manifest = {
-        "version": "0.6.0",
+        "version": "0.7.0",
+        "source_audit": "0.6.0",
         "figure_id": "FIG-A3",
         "hash_algorithm": "sha256",
         "artifacts": [manifest_entry(output_root / relative, relative) for relative in OUTPUTS],
@@ -186,8 +182,7 @@ def validate() -> list[str]:
     with tempfile.TemporaryDirectory() as temporary:
         rebuilt = Path(temporary)
         build_figure(rebuilt)
-        rebuilt_csv = rebuilt / CSV_PATH
-        if not (ROOT / CSV_PATH).is_file() or (ROOT / CSV_PATH).read_bytes() != rebuilt_csv.read_bytes():
+        if not (ROOT / CSV_PATH).is_file() or (ROOT / CSV_PATH).read_bytes() != (rebuilt / CSV_PATH).read_bytes():
             errors.append(f"{CSV_PATH.as_posix()} differs from regenerated data")
         for relative in (PNG_PATH, SVG_PATH):
             if not (ROOT / relative).is_file():
@@ -202,21 +197,22 @@ def validate() -> list[str]:
             ET.parse(rebuilt / SVG_PATH)
         except (OSError, ET.ParseError) as exc:
             errors.append(f"SVG validation failed: {exc}")
-
     if not (ROOT / MANIFEST_PATH).is_file():
-        errors.append("v0.6 figure manifest is missing")
+        errors.append("v0.7 claim-evidence figure manifest is missing")
         return errors
     manifest = read_json(MANIFEST_PATH)
+    if manifest.get("version") != "0.7.0" or manifest.get("source_audit") != "0.6.0":
+        errors.append("v0.7 claim-evidence figure manifest version metadata mismatch")
     for group, paths in (("artifacts", OUTPUTS), ("inputs", INPUTS)):
         indexed = {row["path"]: row for row in manifest.get(group, [])}
         if set(indexed) != {path.as_posix() for path in paths}:
-            errors.append(f"v0.6 figure manifest {group} path set mismatch")
+            errors.append(f"v0.7 claim-evidence figure manifest {group} path set mismatch")
             continue
         for relative in paths:
             path = ROOT / relative
             row = indexed[relative.as_posix()]
             if not path.is_file() or path.stat().st_size != row["bytes"] or sha256(path) != row["sha256"]:
-                errors.append(f"v0.6 figure manifest mismatch: {relative.as_posix()}")
+                errors.append(f"v0.7 claim-evidence figure manifest mismatch: {relative.as_posix()}")
     return errors
 
 

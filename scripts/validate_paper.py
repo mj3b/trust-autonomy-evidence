@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the unreleased practical human control paper workspace."""
+"""Validate the v0.7.0 practical human control paper workspace."""
 
 from __future__ import annotations
 
@@ -16,12 +16,14 @@ QUESTION = (
     "human authority, practical human control, and unresolved evidence in a bounded "
     "public incident record?"
 )
-VERSION_DOI = "10.5281/zenodo.21863464"
-REPOSITORY_VERSION = "0.6.0"
+VERSION_DOI = "10.5281/zenodo.21865007"
+REPOSITORY_VERSION = "0.7.0"
 PAPER_FILES = (
     "paper/README.md",
     "paper/paper-charter.md",
     "paper/manuscript.md",
+    "paper/tables.md",
+    "paper/tables/manuscript-tables.tex",
     "paper/literature-matrix.md",
     "paper/literature-search-log.md",
     "paper/novelty-audit.md",
@@ -34,6 +36,15 @@ PAPER_FILES = (
     "paper/citation-chain-log-v0.6.0.md",
     "paper/literature-support-audit-v0.6.0.json",
     "paper/literature-support-audit-v0.6.0.md",
+    "paper/formal-literature-search-protocol-v0.7.0.md",
+    "paper/formal-citation-chain-v0.7.0.md",
+    "paper/formal-search-screening-v0.7.0.md",
+    "paper/data/formal-search-v0.7.0.json",
+    "paper/data/formal-screening-proposals-v0.7.0.json",
+    "paper/data/formal-metadata-verification-v0.7.0.json",
+    "paper/data/author-screening-queue-v0.7.0.csv",
+    "paper/literature-support-audit-v0.7.0.json",
+    "paper/literature-support-audit-v0.7.0.md",
 )
 
 
@@ -86,8 +97,8 @@ def validate_question(failures: list[str]) -> None:
 def validate_bibliography(failures: list[str]) -> None:
     text = (ROOT / "paper/references.bib").read_text(encoding="utf-8")
     entries = re.findall(r"^@\w+\{([^,]+),", text, flags=re.MULTILINE)
-    if len(entries) < 28:
-        fail(f"paper bibliography has {len(entries)} entries; expected at least 28", failures)
+    if len(entries) < 41:
+        fail(f"paper bibliography has {len(entries)} entries; expected at least 41", failures)
     if len(entries) != len(set(entries)):
         fail("duplicate BibTeX keys in paper/references.bib", failures)
     doi_fields = re.findall(r"^\s+doi\s*=", text, flags=re.MULTILINE | re.IGNORECASE)
@@ -107,15 +118,15 @@ def validate_boundaries(failures: list[str]) -> None:
         fail("current Oko claim missing from claim register", failures)
     citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
     if f"version: {REPOSITORY_VERSION}" not in citation:
-        fail("CITATION.cff does not identify v0.6.0", failures)
+        fail("CITATION.cff does not identify v0.7.0", failures)
     if VERSION_DOI not in manuscript:
-        fail("v0.5.0 version DOI missing from paper/manuscript.md", failures)
+        fail("v0.6.0 version DOI missing from paper/manuscript.md", failures)
     matrix = (ROOT / "paper/literature-matrix.md").read_text(encoding="utf-8")
-    if "L24" not in matrix or "ScientistOne" not in matrix or "L28" not in matrix:
+    if "L24" not in matrix or "ScientistOne" not in matrix or "L28" not in matrix or "L41" not in matrix:
         fail("required close neighbors missing from literature matrix", failures)
     crosswalk = (ROOT / "paper/claim-crosswalk.md").read_text(encoding="utf-8")
-    if "C04 | Eligible" not in crosswalk or "C09 | Eligible" not in crosswalk or "C15 | Eligible" not in crosswalk:
-        fail("eligible v0.6 paper claims missing from crosswalk", failures)
+    if "C04 | Eligible" not in crosswalk or "C09 | Eligible" not in crosswalk or "C15 | Eligible" not in crosswalk or "C21 | Proposed and bounded" not in crosswalk:
+        fail("eligible paper claims missing from crosswalk", failures)
     if re.search(r"\bnovel\b", manuscript, flags=re.IGNORECASE):
         fail("manuscript contains prohibited novelty wording", failures)
 

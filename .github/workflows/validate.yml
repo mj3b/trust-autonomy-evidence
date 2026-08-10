@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -24,5 +26,5 @@ jobs:
         run: python scripts/validate_repository.py
       - name: Validate paper workspace
         run: python scripts/validate_paper.py
-      - name: Check release manifest regeneration
-        run: python scripts/build_release_manifest.py && git diff --exit-code -- release/v0.6.0-manifest.json
+      - name: Validate frozen v0.6.0 release snapshot
+        run: python scripts/validate_release_snapshot.py

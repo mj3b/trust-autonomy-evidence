@@ -1,0 +1,7 @@
+proposition,prior_version,prior_state,current_version,current_state,evidence_refs,material_gap
+access,0.3.0,supported,0.6.0,partially_supported,O2;O3;O4,"No contemporaneous delivery, interface, or command record was located."
+comprehension,0.3.0,supported,0.6.0,partially_supported,O2;O3;O4,"No contemporaneous reasoning, review, or explanation record was located."
+authority,0.3.0,supported,0.6.0,partially_supported,O2;O3;O4,No contemporaneous delegation or command-procedure record was located.
+feasibility,0.3.0,supported,0.6.0,partially_supported,O2;O3;O4,No contemporaneous timing or operating record was located.
+exercise,0.3.0,supported,0.6.0,partially_supported,O2;O3;O4,No contemporaneous decision or communication log was located.
+effect,0.3.0,supported,0.6.0,partially_supported,O2;O3,"No contemporaneous linked action, stop, or escalation record was located."

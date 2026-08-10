@@ -95,7 +95,7 @@ A manuscript is ready for public preprint review only when:
 2. every bibliographic entry has been checked against a publisher, DOI record, or institutional repository;
 3. the literature search and citation-chaining procedure are documented;
 4. the Oko decision and each assessment transition remain traceable to the frozen v0.6 adjudication;
-5. all six figures rebuild and both repository validators pass;
+5. all nine figures rebuild and both repository validators pass;
 6. the version-specific data and code archive is cited;
 7. the single-assessor design and AI-assisted workflow are disclosed;
 8. the abstract, results, and conclusion use the same claim boundary.
