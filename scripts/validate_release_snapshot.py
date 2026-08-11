@@ -67,6 +67,15 @@ SNAPSHOTS = {
             "paper/literature-support-audit-v0.9.0.md",
         ),
     },
+    "v0.10.0": {
+        "manifest": "release/v0.10.0-manifest.json",
+        "immutable": (
+            "release/v0.10.0-manifest.json",
+            "release/v0.10.0-release-notes.md",
+            "protocols/search-coverage-and-full-text-protocol-v0.10.0.md",
+            "research/agenda-discovery-log-v0.10.0.md",
+        ),
+    },
 }
 
 

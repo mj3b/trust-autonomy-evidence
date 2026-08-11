@@ -4,6 +4,9 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
+- Closes the retained-source full-text gate with 22 verified full-text records, 3 abstract-only records, 2 inaccessible records, and no open decisions.
+- Preserves the published v0.10.0 seal as a tagged snapshot and opens a v0.11.0 working manifest for post-release evidence changes.
+
 ## 0.10.0, 11 August 2026
 
 Freezes the next literature evidence gates after the v0.9 author-screening release.

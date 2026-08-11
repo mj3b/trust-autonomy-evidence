@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seal the v0.10.0 literature evidence-gate release."""
+"""Seal the v0.11.0 retained-source full-text gate candidate."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "release" / "v0.10.0-manifest.json"
+OUTPUT = ROOT / "release" / "v0.11.0-manifest.json"
 
 CORE = (
     "release/v0.3.0-manifest.json",
@@ -19,6 +19,7 @@ CORE = (
     "release/v0.7.0-manifest.json",
     "release/v0.8.0-manifest.json",
     "release/v0.9.0-manifest.json",
+    "release/v0.10.0-manifest.json",
     "release/v0.10.0-release-notes.md",
     "README.md",
     "RESEARCH_STATUS.md",
@@ -188,7 +189,7 @@ def main() -> int:
             raise FileNotFoundError(relative)
         artifacts.append({"path": relative, "bytes": path.stat().st_size, "sha256": digest(path)})
     result = {
-        "version": "0.10.0",
+        "version": "0.11.0",
         "created": "2026-08-11",
         "hash_algorithm": "SHA-256",
         "artifacts": artifacts,
