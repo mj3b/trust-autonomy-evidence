@@ -1,0 +1,37 @@
+{
+  "version": "0.10.0",
+  "status": "OPEN",
+  "decision_owner": "Mark Julius Banasihan",
+  "source_release": "v0.9.0",
+  "gates": {
+    "close_source_full_text": {
+      "status": "OPEN",
+      "records": 27,
+      "verified": 8,
+      "open": 19,
+      "terminal_without_verification": 0,
+      "claim_rule": "Only verified full text may support a proposition that exceeds the abstract."
+    },
+    "inaccessible_record_retrieval": {
+      "status": "OPEN",
+      "records": 1087,
+      "retrieval_rows_complete": 0,
+      "retrieval_rows_open": 1087,
+      "claim_rule": "A completed risk sample estimates residual risk and does not establish exhaustive coverage."
+    },
+    "authenticated_interfaces": {
+      "status": "OPEN",
+      "required_surfaces": 5,
+      "complete": 0,
+      "access_failures": 0,
+      "open": 5,
+      "claim_rule": "An access failure remains a coverage limit and cannot close the originality exception."
+    },
+    "independent_assessment": {
+      "status": "OPEN",
+      "next_cycle": false,
+      "claim_rule": "Internal reproducibility work cannot establish independent reliability or field validity."
+    }
+  },
+  "validation_errors": []
+}

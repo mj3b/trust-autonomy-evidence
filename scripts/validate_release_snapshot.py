@@ -50,6 +50,23 @@ SNAPSHOTS = {
             "paper/literature-support-audit-v0.7.0.md",
         ),
     },
+    "v0.9.0": {
+        "manifest": "release/v0.9.0-manifest.json",
+        "immutable": (
+            "release/v0.9.0-manifest.json",
+            "audits/v0.9.0/audit-plan.md",
+            "audits/v0.9.0/audit-results.json",
+            "audits/v0.9.0/audit-report.md",
+            "audits/v0.9.0/exceptions.md",
+            "figures/v0.9.0-manifest.json",
+            "figures/v0.9.0-claim-evidence-manifest.json",
+            "paper/review-record-v0.9.0.md",
+            "paper/data/author-screening-decisions-v0.9.0.csv",
+            "paper/data/author-screening-gate-v0.9.0.json",
+            "paper/literature-support-audit-v0.9.0.json",
+            "paper/literature-support-audit-v0.9.0.md",
+        ),
+    },
 }
 
 

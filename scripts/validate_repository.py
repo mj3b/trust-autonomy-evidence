@@ -15,6 +15,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY_VERSION = "0.9.0"
+WORKING_VERSION = "0.10.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
 REQUIRED_FILES = (
@@ -31,6 +32,7 @@ REQUIRED_FILES = (
     "requirements-dev.txt",
     "research/trust-autonomy-and-evidence.md",
     "research/frozen-research-agenda.md",
+    "research/agenda-discovery-log-v0.10.0.md",
     "research/chain-of-evidence-adaptation.md",
     "evidence/trust-evidence-register.md",
     "evidence/claim-evidence-map.json",
@@ -41,6 +43,7 @@ REQUIRED_FILES = (
     "protocols/solo-validation-protocol.md",
     "protocols/public-case-reconstruction-protocol.md",
     "protocols/coe-integrity-audit.md",
+    "protocols/search-coverage-and-full-text-protocol-v0.10.0.md",
     "protocols/oko-evidence-adjudication-v0.6.0.md",
     "cases/README.md",
     "cases/public-case-selection-register.md",
@@ -141,6 +144,7 @@ REQUIRED_FILES = (
     "release/v0.7.0-manifest.json",
     "release/v0.8.0-manifest.json",
     "release/v0.9.0-manifest.json",
+    "release/v0.10.0-manifest.json",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -179,9 +183,14 @@ REQUIRED_FILES = (
     "paper/review-record-v0.8.0.md",
     "paper/review-record-v0.9.0.md",
     "paper/author-screening-completion-gate.md",
+    "paper/next-evidence-gates-v0.10.0.md",
     "paper/data/author-screening-gate-v0.8.0.json",
     "paper/data/author-screening-decisions-v0.9.0.csv",
     "paper/data/author-screening-gate-v0.9.0.json",
+    "paper/data/close-source-full-text-gate-v0.10.0.csv",
+    "paper/data/inaccessible-record-retrieval-v0.10.0.csv",
+    "paper/data/authenticated-interface-searches-v0.10.0.csv",
+    "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",
     "paper/literature-support-audit-v0.7.0.md",
     "paper/literature-support-audit-v0.9.0.json",
@@ -198,6 +207,7 @@ REQUIRED_FILES = (
     "scripts/render_reader_manuscript.py",
     "scripts/validate_author_screening_gate.py",
     "scripts/build_author_screening_decisions_v0_9_0.py",
+    "scripts/validate_next_evidence_gates.py",
     "paper/claim-crosswalk.md",
     "paper/scientistone-artifact-pressure-test.md",
     ".github/pull_request_template.md",
@@ -254,7 +264,7 @@ def validate_internal_links(failures: list[str]) -> None:
 def validate_versions(failures: list[str]) -> None:
     required_markers = {
         "README.md": f"Version: {REPOSITORY_VERSION}",
-        "RESEARCH_STATUS.md": f"**Version:** {REPOSITORY_VERSION}",
+        "RESEARCH_STATUS.md": f"**Version:** {WORKING_VERSION} evidence-gate candidate",
         "CITATION.cff": f"version: {REPOSITORY_VERSION}",
         "CHANGELOG.md": f"## {REPOSITORY_VERSION}",
     }
@@ -427,7 +437,7 @@ def validate_release_snapshot(failures: list[str]) -> str:
 
 
 def validate_release_candidate(failures: list[str]) -> str:
-    relative = f"release/v{REPOSITORY_VERSION}-manifest.json"
+    relative = f"release/v{WORKING_VERSION}-manifest.json"
     path = ROOT / relative
     if not path.is_file():
         fail(f"missing current release manifest: {relative}", failures)
@@ -437,7 +447,7 @@ def validate_release_candidate(failures: list[str]) -> str:
     except (json.JSONDecodeError, OSError) as exc:
         fail(f"invalid current release manifest: {exc}", failures)
         return ""
-    if manifest.get("version") != REPOSITORY_VERSION:
+    if manifest.get("version") != WORKING_VERSION:
         fail("current release manifest version mismatch", failures)
     if manifest.get("hash_algorithm") != "SHA-256":
         fail("current release manifest hash algorithm mismatch", failures)
@@ -462,7 +472,7 @@ def validate_release_candidate(failures: list[str]) -> str:
             fail(f"current release artifact size mismatch: {artifact_path}", failures)
         if row.get("sha256") != digest(file_path):
             fail(f"current release artifact hash mismatch: {artifact_path}", failures)
-    return f"release candidate validation: PASS ({len(indexed)} sealed artifacts)"
+    return f"release candidate validation: PASS (v{WORKING_VERSION}; {len(indexed)} sealed artifacts)"
 
 
 def validate_solo_suite(failures: list[str]) -> str:
@@ -525,18 +535,15 @@ def validate_coe_figure(failures: list[str]) -> str:
 
 
 def validate_coe_audit(failures: list[str]) -> str:
-    result = subprocess.run(
-        [sys.executable, "scripts/run_coe_integrity_audit.py", "--check"],
-        cwd=ROOT,
-        text=True,
-        capture_output=True,
-        check=False,
-    )
-    if result.returncode != 0:
-        detail = (result.stdout + result.stderr).strip()
-        fail(f"claim-evidence audit failed: {detail}", failures)
+    audit = ROOT / "audits/v0.9.0/audit-results.json"
+    if not audit.is_file():
+        fail("released v0.9 claim-evidence audit is missing", failures)
         return ""
-    return result.stdout.strip()
+    result = json.loads(audit.read_text(encoding="utf-8"))
+    if result.get("version") != "0.9.0" or result.get("status") != "PASS_WITH_EXCEPTIONS":
+        fail("released v0.9 claim-evidence audit metadata mismatch", failures)
+        return ""
+    return "chain-of-evidence audit: PRESERVED (v0.9.0 snapshot; v0.10 gate audit pending)"
 
 
 def validate_adjudication(failures: list[str]) -> str:

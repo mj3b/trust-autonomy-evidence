@@ -28,6 +28,7 @@ PAPER_FILES = (
     "paper/review-record-v0.8.0.md",
     "paper/review-record-v0.9.0.md",
     "paper/author-screening-completion-gate.md",
+    "paper/next-evidence-gates-v0.10.0.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
     "paper/literature-matrix.md",
@@ -53,6 +54,10 @@ PAPER_FILES = (
     "paper/data/author-screening-gate-v0.8.0.json",
     "paper/data/author-screening-decisions-v0.9.0.csv",
     "paper/data/author-screening-gate-v0.9.0.json",
+    "paper/data/close-source-full-text-gate-v0.10.0.csv",
+    "paper/data/inaccessible-record-retrieval-v0.10.0.csv",
+    "paper/data/authenticated-interface-searches-v0.10.0.csv",
+    "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",
     "paper/literature-support-audit-v0.7.0.md",
     "paper/literature-support-audit-v0.9.0.json",
@@ -134,6 +139,7 @@ def validate_generated_paper_artifacts(failures: list[str]) -> None:
     commands = (
         [sys.executable, "scripts/render_reader_manuscript.py", "--check"],
         [sys.executable, "scripts/validate_author_screening_gate.py", "--check", "--require-complete"],
+        [sys.executable, "scripts/validate_next_evidence_gates.py", "--check"],
         [sys.executable, "scripts/validate_literature_support.py"],
     )
     for command in commands:

@@ -21,7 +21,7 @@ This directory develops a methods and comparative-case paper from the repository
 | [`review-record-v0.8.0.md`](review-record-v0.8.0.md) | Records author authorization, reviewed additions, support decisions, and the publication boundary. |
 | [`tables.md`](tables.md) | Preserves exact assessment states, search counts, correction history, captions, and interpretation notes. |
 | [`tables/manuscript-tables.tex`](tables/manuscript-tables.tex) | Provides journal-ready `booktabs` fragments with three horizontal rules and no vertical rules. |
-| [`literature-matrix.md`](literature-matrix.md) | Relates 41 working sources to the proposed contribution and its boundaries. |
+| [`literature-matrix.md`](literature-matrix.md) | Relates 56 working sources to the proposed contribution and its boundaries. |
 | [`literature-search-log.md`](literature-search-log.md) | Records discovery queries, dates, retained candidates, and search limits. |
 | [`formal-literature-search-protocol-v0.7.0.md`](formal-literature-search-protocol-v0.7.0.md) | Freezes the formal search, screening, deduplication, and citation-chain rules before retrieval. |
 | [`formal-citation-chain-v0.7.0.md`](formal-citation-chain-v0.7.0.md) | Reports the eight direct queries, fifteen seed chains, second-index checks, errors, and coverage limits. |
@@ -33,6 +33,10 @@ This directory develops a methods and comparative-case paper from the repository
 | [`data/author-screening-gate-v0.9.0.json`](data/author-screening-gate-v0.9.0.json) | Records the closed author gate and final decision counts used by Figure 5 and the v0.9 audit. |
 | [`review-record-v0.9.0.md`](review-record-v0.9.0.md) | Records author accountability for the final screening state and its publication boundary. |
 | [`author-screening-completion-gate.md`](author-screening-completion-gate.md) | Shows completed and open author decisions and defines when final search-flow language becomes eligible. |
+| [`next-evidence-gates-v0.10.0.md`](next-evidence-gates-v0.10.0.md) | Reports the full-text, inaccessible-record, authenticated-interface, and independence gate states. |
+| [`data/close-source-full-text-gate-v0.10.0.csv`](data/close-source-full-text-gate-v0.10.0.csv) | Records one full-text state for each of the 27 retained-close sources. |
+| [`data/inaccessible-record-retrieval-v0.10.0.csv`](data/inaccessible-record-retrieval-v0.10.0.csv) | Receives retrieval outcomes and author decisions for the frozen 1,087-record inaccessible population. |
+| [`data/authenticated-interface-searches-v0.10.0.csv`](data/authenticated-interface-searches-v0.10.0.csv) | Tracks the five authenticated and disciplinary-interface searches. |
 | [`citation-chain-log-v0.6.0.md`](citation-chain-log-v0.6.0.md) | Records the index-based citation sample and its limits. |
 | [`literature-support-audit-v0.6.0.md`](literature-support-audit-v0.6.0.md) | Preserves the 16-proposition audit for the earlier introduction and related-work draft. |
 | [`literature-support-audit-v0.6.0.json`](literature-support-audit-v0.6.0.json) | Preserves the earlier manuscript locators and checked bibliography keys. |
@@ -54,4 +58,4 @@ If the manuscript conflicts with a frozen packet or released assessment, the rel
 
 A released assessment label records what the published procedure produced. It does not establish independent validity. The [PR #11 review record](review-record-pr11.md) preserves the Oko mismatch and its v0.6 resolution through reclassification.
 
-The [claim crosswalk](claim-crosswalk.md) makes that boundary executable. A failed evidence-fitness gate or open dependency prevents the affected claim from entering a conclusion. The formal open-index search, selected-index citation chains, and 89-record author queue are complete within declared limits. Inaccessible-record review, authenticated databases, disciplinary interfaces, independent assessment, and venue-specific ethics guidance remain open.
+The [claim crosswalk](claim-crosswalk.md) makes that boundary executable. A failed evidence-fitness gate or open dependency prevents the affected claim from entering a conclusion. The formal open-index search, selected-index citation chains, and 89-record author queue are complete within declared limits. The [v0.10 protocol](../protocols/search-coverage-and-full-text-protocol-v0.10.0.md) now controls the 19 open full-text decisions, 1,087 inaccessible records, and five authenticated or disciplinary interfaces. Independent assessment and venue-specific ethics guidance remain open.
