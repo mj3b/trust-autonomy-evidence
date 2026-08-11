@@ -6,7 +6,7 @@ This log records the searches used to test whether the proposed paper duplicates
 
 ## Current scope
 
-The 8 through 10 August 2026 sessions used exact-phrase queries, publisher pages, proceedings pages, institutional repositories, preprint records, Crossref, OpenAlex, and a frozen Semantic Scholar search. The formal search retrieved every page returned for eight query families and every returned citation page for fourteen resolved seeds. Mark Julius Banasihan completed the 89-record author queue. The search still falls short of a multidisciplinary systematic review because authenticated Scopus or Web of Science access, several disciplinary interfaces, and inaccessible-record review remain open.
+The 8 through 11 August 2026 sessions used exact-phrase queries, publisher pages, proceedings pages, institutional repositories, preprint records, Crossref, OpenAlex, and a frozen Semantic Scholar search. The formal search retrieved every page returned for eight query families and every returned citation page for fourteen resolved seeds. Mark Julius Banasihan completed the 89-record author queue and the 71-record recovered forward-citation queue. The search still falls short of a multidisciplinary systematic review because authenticated Scopus or Web of Science access, several disciplinary interfaces, inaccessible-record retrieval, and proposition review of retained forward sources remain open.
 
 ## Formal v0.7 search
 
@@ -22,6 +22,7 @@ The 8 through 10 August 2026 sessions used exact-phrase queries, publisher pages
 | I02 | 2026-08-09 | Harvard library interface | Interface access attempt | Host did not resolve in the controlled browser session; no search result was claimed. |
 | A01 | 2026-08-10 | Frozen 89-record author queue | Author review of 12 proposed close and 77 attention records | 27 retain close, 32 retain background, 20 exclude topic, and 10 exclude single component. All decisions record a rationale, review basis, source locator, author, date, and assistance disclosure. |
 | R01 | 2026-08-11 | Frozen forward-citation risk stratum | DOI, publisher, repository, proceedings, and preserved-index routes for 102 selected records | 34 full-text, 37 abstract, 26 metadata-only, 3 duplicate, and 2 unavailable outcomes. Seventy-one recovered-content records await author decisions and have no claim permission. |
+| A02 | 2026-08-11 | Frozen 71-record recovered forward-citation queue | Author-authorized, AI-assisted screening under the protocol fixed before decisions | 13 close, 22 background, 11 single-component, and 25 topic decisions. All retained sources have zero proposition permission pending separate review. |
 
 The [formal chain record](formal-citation-chain-v0.7.0.md) reports query strings, counts, errors, and coverage limits. The [screening proposal file](formal-search-screening-v0.7.0.md) separates machine triage from author judgment.
 
@@ -64,4 +65,4 @@ Search results that only used the same words for unrelated technical tasks were 
 
 ## Remaining contribution gate
 
-The open-index retrieval, selected Semantic Scholar citation chains, and 89-record author queue are complete within recorded index limits. The recovery ledger now records 107 of 1,087 inaccessible-record outcomes. Seventy-one recovered forward citations await author screening, and 980 population records still lack an outcome. Scopus or Web of Science, IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index remain open. The manuscript may state its bounded integration and may not state a novelty finding.
+The open-index retrieval, selected Semantic Scholar citation chains, 89-record author queue, and 71-record recovered forward-citation queue are complete within recorded index limits. The recovery ledger records 107 of 1,087 retrieval outcomes, and 980 population records still lack an outcome. Thirteen forward sources await close proposition review, 22 await background review, and one direct-query screening decision remains open. Scopus or Web of Science, IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index remain open. The manuscript may state its bounded integration and may not state an originality finding.

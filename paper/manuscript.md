@@ -8,11 +8,11 @@
 
 **Author:** Mark Julius Banasihan  
 **ORCID:** [0009-0001-8121-2878](https://orcid.org/0009-0001-8121-2878)  
-**Status:** Author-screened working manuscript, v0.9.0 candidate
+**Status:** Author-screened working manuscript, v0.13.0 candidate
 
 ## Abstract
 
-Institutions often treat a named human reviewer or approval step as evidence that an automated or autonomous system remains under human control. That inference can fail when the designated person lacks timely information, comprehension, authority, an opportunity to challenge the system, or the ability to affect the outcome. This paper develops a frozen, evidence-traceable procedure for representing formal authority, practical control, and unresolved evidence in bounded public incident records. Before case screening, the protocol fixed the evidence cutoff, candidate collections, eligibility rules, screening order, selection strata, and missing-data treatment. It assembled three versioned historical case packets with claim-level provenance, categorical evidence states, and a chain from information access through effect. A frozen v0.6 reanalysis applied the existing direct-and-contemporaneous rule to Oko and reclassified six pre-action stages from supported to partially supported. The current set records partial support across those Oko stages, supported authority with unsupported practical conditions in ZG710, and supported authority with unresolved conditions in F/A-18C. An open-index search produced 2,431 deduplicated records. Author review retained 27 close and 32 background sources, excluded 30 records, and closed the 89-record author gate. Another 1,087 records lack abstracts. The reviewed work confines the contribution to a governance-specific integration with a visible correction path. Institutions claiming human control bear an ethical burden to preserve evidence of practical force because unsupported attribution can obscure responsibility and exposure to harm. Three retrospective, single-assessor cases supply no population estimate, causal validation, independent-reliability result, or transfer claim for current learned systems.
+Institutions often treat a named human reviewer or approval step as evidence that an automated or autonomous system remains under human control. That inference can fail when the designated person lacks timely information, comprehension, authority, an opportunity to challenge the system, or the ability to affect the outcome. This paper develops a frozen, evidence-traceable procedure for representing formal authority, practical control, and unresolved evidence in bounded public incident records. Before case screening, the protocol fixed the evidence cutoff, candidate collections, eligibility rules, screening order, selection strata, and missing-data treatment. It assembled three versioned historical case packets with claim-level provenance, categorical evidence states, and a chain from information access through effect. A frozen v0.6 reanalysis applied the existing direct-and-contemporaneous rule to Oko and reclassified six pre-action stages from supported to partially supported. The current set records partial support across those Oko stages, supported authority with unsupported practical conditions in ZG710, and supported authority with unresolved conditions in F/A-18C. An open-index search produced 2,431 deduplicated records. The initial 89-record author gate retained 27 close and 32 background sources and excluded 30 records. A frozen 102-record forward-citation risk sample recovered content for 71 records; screening classified 13 as close, 22 as background, and 36 as exclusions. Retained recovered sources remain outside manuscript propositions pending locator-level review. The reviewed work confines the contribution to a governance-specific integration with a visible correction path. Institutions claiming human control bear an ethical burden to preserve evidence of practical force because unsupported attribution can obscure responsibility and exposure to harm. Three retrospective, single-assessor cases supply no population estimate, causal validation, independent-reliability result, or transfer claim for current learned systems.
 
 **Keywords:** human oversight; meaningful human control; AI governance; incident reconstruction; assurance
 
@@ -154,7 +154,7 @@ The v0.6 Chain-of-Evidence adaptation maps each material claim to exact locators
 
 A v0.7 protocol fixed eight query families, inclusion rules, screening states, deduplication, fifteen citation seeds, and a contribution rejection test before retrieval. Semantic Scholar served as the controlling reproducible index. Every direct-search token and every returned citation page were retrieved. Crossref checked DOI metadata, while OpenAlex compared seed coverage. Publisher, proceedings, preprint, and institutional pages were used to verify the close set.
 
-AI assistance assigned preliminary triage proposals. Mark Julius Banasihan reviewed the 89-record queue and remains accountable for every recorded decision. The ledger records each decision, rationale, review basis, source locator, date, and assistance disclosure. An abstract-only record supports only a bounded description of the source's declared purpose or model. A wider substantive claim requires checked full text. Authenticated Scopus or Web of Science access and several disciplinary interfaces remain open.
+AI assistance assigned preliminary triage proposals. Mark Julius Banasihan reviewed the initial 89-record queue and remains accountable for every recorded decision. A separate frozen protocol governed AI-assisted screening of 71 recovered forward citations under his authorization. Both ledgers record each decision, rationale, review basis, source locator, date, and assistance disclosure. An abstract-only record supports only a bounded description of the source's declared purpose or model. A wider substantive claim requires checked full text and a stable proposition locator. Authenticated Scopus or Web of Science access and several disciplinary interfaces remain open.
 
 ### 3.11 Frozen Oko adjudication
 
@@ -206,7 +206,7 @@ Figure 3 traces each bounded sequence from machine output through human and inst
 
 ### 4.7 Integrity and correction results
 
-The v0.9 integrity audit maps twenty material repository claims. Every declared claim passes traceability, artifact integrity, and human support review. The versioned Oko correction closes the prior protocol-consistency and dependency failure within the declared procedure. The completed author ledger makes the final 89-record screening result eligible within its declared boundary. Independent validity, inaccessible-record review, and authenticated-database coverage remain outside the completed evidence base. Fourteen negative controls confirm that the audit detects prespecified corruptions. Six Oko adjudication mutations test state, evidence, and dependency records. These results show internal contract behavior. They establish no external validity.
+The v0.13 integrity audit maps twenty-eight material repository claims. The versioned Oko correction closes the prior protocol-consistency and dependency failure within the declared procedure. The completed 89-record and 71-record ledgers make their respective screening counts eligible within bounded workflow scopes. Independent validity, proposition review of the newly retained sources, inaccessible-record retrieval, and authenticated-database coverage remain outside the completed evidence base. Twenty-six negative controls confirm that the audit detects prespecified corruptions. Six Oko adjudication mutations test state, evidence, and dependency records. These results show internal contract behavior. They establish no external validity.
 
 **Figure A3. Claim-evidence integrity.** The matrix shows the five evidence gates and conclusion eligibility for twenty mapped claims. Independent validity and search-coverage limits remain visible. It assigns no numeric score.
 
@@ -260,6 +260,26 @@ Crossref resolved 22 of 25 DOI-bearing retained proposals. OpenAlex resolved thi
 | Total author queue | 89 | 27 | 32 | 20 | 10 |
 
 *Note.* The author confirmed all 12 proposed close records. The 77 attention records produced 15 additional close sources and 32 background sources. These decisions close the declared author gate. They do not resolve the inaccessible-record or authenticated-database gates.
+
+#### 4.8.1 Forward-citation risk-sample update
+
+The frozen 102-record forward-citation stratum produced 34 full-text recoveries, 37 abstract recoveries, 26 metadata-only outcomes, three duplicates, and two unavailable outcomes. All 71 records with recovered content received an author-authorized, AI-assisted screening decision under a protocol fixed before those decisions. Thirteen records entered close-source review, 22 entered background review, 11 were excluded as single-component sources, and 25 were excluded as off-topic. Screening decides corpus membership. It grants no proposition permission.
+
+Across the 1,087-record recovery population, the population ledger now contains 107 retrieval outcomes. Seventy-five of 76 recovered-content records have decisions because one direct-query record remains open. The current unresolved class contains 980 records without a retrieval outcome, 26 metadata-only records, two unavailable records, three reconciled duplicates, and the one open direct-query record. These categories preserve the 2,431-record denominator without treating access failure or duplicate detection as a topic exclusion.
+
+**Table 5. Residual-risk retrieval and screening checkpoint.**
+
+| Scope | State | Count | Claim boundary |
+|---|---|---:|---|
+| Forward-citation stratum | Retrieval outcomes recorded | 102 | Complete for the frozen stratum |
+| Forward-citation stratum | Recovered content | 71 | Eligible for screening |
+| Forward-citation stratum | Screening decisions | 71 | 13 close, 22 background, 11 single-component, 25 topic |
+| Forward-citation stratum | Proposition permissions | 0 | Retained sources require locator-level review |
+| Direct-query stratum | Screening decisions | 4 of 5 | One decision remains open |
+| Recovery population | Retrieval outcomes | 107 of 1,087 | 980 retrieval outcomes remain open |
+| Recovery population | Recovered-content decisions | 75 of 76 | One direct-query decision remains open |
+
+*Note.* These counts describe the frozen recovery workflow. They supply no close-source prevalence estimate for the 1,087-record population because 980 retrieval outcomes remain open.
 
 ### 4.9 Evidence boundaries and coding stability
 
@@ -320,7 +340,7 @@ The evidence is retrospective and public. Classified material, internal logs, co
 
 One assessor designed and applied the method. The study supplies no inter-rater reliability, construct-validity estimate, causal effect, safety effect, legal-sufficiency judgment, or outcome comparison. Artifact tests detect internal inconsistency and prespecified corruption. They do not validate historical interpretation.
 
-The formal search used open indexes and official source pages. Author review closed the 89-record decision queue. Another 1,087 records lack abstracts, and authenticated Scopus or Web of Science, IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index remain open. The contribution language is therefore bounded to the declared search and reviewed close set.
+The formal search used open indexes and official source pages. Author review closed the 89-record decision queue and the 71-record recovered forward-citation queue. Another 980 records lack a retrieval outcome, one direct-query screening decision remains open, and authenticated Scopus or Web of Science, IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index remain open. The 13 newly close forward sources have no proposition permission. The contribution language is therefore bounded to the declared search and reviewed source set.
 
 ## 7. Institutional implications
 

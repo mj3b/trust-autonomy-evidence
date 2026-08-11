@@ -29,21 +29,23 @@
         "unavailable": 2
       },
       "recovered_content_requiring_screening": 76,
-      "screening_decisions_complete": 4,
-      "screening_decisions_open": 72,
+      "screening_decisions_complete": 75,
+      "screening_decisions_open": 1,
       "screening_decisions": {
-        "retain-background": 3,
-        "retain-close": 1
+        "exclude-single-component": 11,
+        "exclude-topic": 25,
+        "retain-background": 25,
+        "retain-close": 14
       },
-      "recovered_close_sources": 1,
+      "recovered_close_sources": 14,
       "residual_risk_sample": {
         "status": "FROZEN_BEFORE_RETRIEVAL",
         "selected": 284,
         "sampled_retrieval_complete": 107,
         "sampled_retrieval_open": 177,
         "sampled_screening_required": 76,
-        "sampled_screening_complete": 4,
-        "sampled_screening_open": 72,
+        "sampled_screening_complete": 75,
+        "sampled_screening_open": 1,
         "strata": {
           "forward-citation": 102,
           "backward-reference": 177,
@@ -60,12 +62,18 @@
         "evidence_record": "paper/data/direct-query-retrieval-evidence-v0.11.0.json"
       },
       "forward_citation_tranche": {
-        "status": "RETRIEVAL_COMPLETE_SCREENING_OPEN",
+        "status": "SCREENING_CLOSED_PROPOSITION_REVIEW_OPEN",
         "selected": 102,
         "retrieval_complete": 102,
         "screening_required": 71,
-        "screening_complete": 0,
-        "screening_open": 71,
+        "screening_complete": 71,
+        "screening_open": 0,
+        "screening_decisions": {
+          "exclude-single-component": 11,
+          "exclude-topic": 25,
+          "retain-background": 22,
+          "retain-close": 13
+        },
         "retrieval_outcomes": {
           "abstract-recovered": 37,
           "duplicate": 3,
@@ -74,7 +82,8 @@
           "unavailable": 2
         },
         "evidence_record": "paper/data/forward-citation-retrieval-evidence-v0.12.0.json",
-        "author_queue": "paper/data/forward-citation-author-review-queue-v0.12.0.csv"
+        "author_queue": "paper/data/forward-citation-author-review-queue-v0.12.0.csv",
+        "decision_ledger": "paper/data/forward-citation-author-screening-decisions-v0.13.0.csv"
       },
       "claim_rule": "A completed risk sample estimates residual risk and does not establish exhaustive coverage."
     },

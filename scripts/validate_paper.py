@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the v0.12.0 forward-citation retrieval paper workspace."""
+"""Validate the v0.13.0 forward-citation screening paper workspace."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ QUESTION = (
     "public incident record?"
 )
 VERSION_DOI = "10.5281/zenodo.21865007"
-REPOSITORY_VERSION = "0.12.0"
+REPOSITORY_VERSION = "0.13.0"
 PAPER_FILES = (
     "paper/README.md",
     "paper/paper-charter.md",
@@ -32,6 +32,8 @@ PAPER_FILES = (
     "paper/inaccessible-risk-sample-v0.11.0.md",
     "paper/direct-query-retrieval-tranche-v0.11.0.md",
     "paper/forward-citation-retrieval-tranche-v0.12.0.md",
+    "paper/forward-citation-author-screening-protocol-v0.13.0.md",
+    "paper/forward-citation-author-screening-v0.13.0.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
     "paper/literature-matrix.md",
@@ -64,12 +66,15 @@ PAPER_FILES = (
     "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
     "paper/data/forward-citation-retrieval-evidence-v0.12.0.json",
     "paper/data/forward-citation-author-review-queue-v0.12.0.csv",
+    "paper/data/forward-citation-author-screening-decisions-v0.13.0.csv",
+    "paper/data/forward-citation-author-screening-v0.13.0.json",
     "evidence/human-review-attestation-v0.11.0.json",
     "evidence/human-review-attestation-v0.12.0.json",
+    "evidence/human-review-attestation-v0.13.0.json",
     "evidence/claim-evidence-map.json",
-    "audits/v0.12.0/audit-results.json",
-    "audits/v0.12.0/audit-report.md",
-    "release/v0.12.0-release-notes.md",
+    "audits/v0.13.0/audit-results.json",
+    "audits/v0.13.0/audit-report.md",
+    "release/v0.13.0-release-notes.md",
     "paper/data/authenticated-interface-searches-v0.10.0.csv",
     "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",
@@ -154,6 +159,7 @@ def validate_generated_paper_artifacts(failures: list[str]) -> None:
         [sys.executable, "scripts/render_reader_manuscript.py", "--check"],
         [sys.executable, "scripts/validate_author_screening_gate.py", "--check", "--require-complete"],
         [sys.executable, "scripts/validate_next_evidence_gates.py", "--check"],
+        [sys.executable, "scripts/validate_forward_citation_author_screening_v0_13_0.py"],
         [sys.executable, "scripts/validate_literature_support.py"],
     )
     for command in commands:
@@ -194,14 +200,16 @@ def validate_boundaries(failures: list[str]) -> None:
         fail("eligible paper claims missing from crosswalk", failures)
     if re.search(r"\bnovel\b", manuscript, flags=re.IGNORECASE):
         fail("manuscript contains prohibited novelty wording", failures)
-    if "Author-screened working manuscript, v0.9.0 candidate" not in manuscript:
-        fail("v0.9.0 manuscript status is missing", failures)
+    if "Author-screened working manuscript, v0.13.0 candidate" not in manuscript:
+        fail("v0.13.0 manuscript status is missing", failures)
     if "**Figure 6. Evidence boundaries" not in manuscript:
         fail("Figure 6 caption is missing from the manuscript", failures)
     if "**Table A3. Availability of coding-stability evidence.**" not in manuscript:
         fail("Table A3 is missing from the manuscript", failures)
     if "**Table 4. Proposal-to-author decision changes.**" not in manuscript:
         fail("Table 4 is missing from the manuscript", failures)
+    if "**Table 5. Residual-risk retrieval and screening checkpoint.**" not in manuscript:
+        fail("Table 5 is missing from the manuscript", failures)
     gate = (ROOT / "paper/author-screening-completion-gate.md").read_text(encoding="utf-8")
     if "| Total author gate | 89 | 89 | 0 |" not in gate:
         fail("author-screening gate does not expose the completed 89 decisions", failures)

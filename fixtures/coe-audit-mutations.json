@@ -1,6 +1,6 @@
 {
-  "version": "0.11.0",
-  "suite_id": "TAE-COE-NEGATIVE-CONTROLS-V0.11.0",
+  "version": "0.13.0",
+  "suite_id": "TAE-COE-NEGATIVE-CONTROLS-V0.13.0",
   "controls": [
     {"control_id": "COE-NC-01", "description": "Change one expected assessment state.", "mutation_type": "numeric_mismatch", "target_claim": "PAPER-C03", "expected_check": "score_verification", "parameters": {"evidence_id": "C03-OKO-AUTHORITY", "replacement": "unsupported"}},
     {"control_id": "COE-NC-02", "description": "Replace one evidence path with a missing file.", "mutation_type": "missing_reference", "target_claim": "PAPER-C05", "expected_check": "reference_verification", "parameters": {"evidence_id": "C05-AUTHORITY"}},
@@ -23,6 +23,10 @@
     {"control_id": "COE-NC-19", "description": "Remove the direct-query implementation marker.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C27", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C27-IMPLEMENTATION"}},
     {"control_id": "COE-NC-20", "description": "Replace the synthesis dependency with an unresolved claim.", "mutation_type": "unresolved_dependency", "target_claim": "PAPER-C32", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dependency": "PAPER-C99"}},
     {"control_id": "COE-NC-21", "description": "Replace the verified Zabounidis evidence digest with a stale digest.", "mutation_type": "stale_hash", "target_claim": "PAPER-C30", "expected_check": "reference_verification", "parameters": {"evidence_id": "C30-SOURCE"}},
-    {"control_id": "COE-NC-22", "description": "Add an unsupported bounded term to the direct-query count claim.", "mutation_type": "unsupported_scope_term", "target_claim": "PAPER-C27", "expected_check": "specification_violation", "parameters": {"term": "all"}}
+    {"control_id": "COE-NC-22", "description": "Add an unsupported bounded term to the direct-query count claim.", "mutation_type": "unsupported_scope_term", "target_claim": "PAPER-C27", "expected_check": "specification_violation", "parameters": {"term": "all"}},
+    {"control_id": "COE-NC-23", "description": "Change the completed forward-screening count.", "mutation_type": "numeric_mismatch", "target_claim": "PAPER-C34", "expected_check": "score_verification", "parameters": {"evidence_id": "C34-COMPLETE", "replacement": 70}},
+    {"control_id": "COE-NC-24", "description": "Remove the forward-screening decision ledger reference.", "mutation_type": "missing_reference", "target_claim": "PAPER-C34", "expected_check": "reference_verification", "parameters": {"evidence_id": "C34-LEDGER"}},
+    {"control_id": "COE-NC-25", "description": "Fail completeness for the forward-screening composition claim.", "mutation_type": "fitness_failure", "target_claim": "PAPER-C34", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dimension": "completeness"}},
+    {"control_id": "COE-NC-26", "description": "Remove the implementation marker paired with the forward-screening protocol.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C34", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C34-IMPLEMENTATION"}}
   ]
 }
