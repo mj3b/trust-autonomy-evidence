@@ -12,7 +12,7 @@ The next research cycle addresses support and search coverage before the manuscr
 
 | Gate | Population | Complete | Open | Current state |
 |---|---:|---:|---:|---|
-| Close-source full-text verification | 27 | 8 verified | 19 | `OPEN` |
+| Close-source full-text verification | 27 | 27 terminal | 0 | `CLOSED` |
 | Inaccessible-record retrieval | 1087 | 0 | 1087 | `OPEN` |
 | Authenticated and disciplinary interfaces | 5 | 0 | 5 | `OPEN` |
 | Independent assessment | 1 study | 0 | 1 | `OPEN`, outside this cycle |
@@ -27,4 +27,4 @@ The next research cycle addresses support and search coverage before the manuscr
 
 ## Current finding
 
-The 89-decision author gate resolved screening accountability. It also exposed a second boundary: 8 of 27 retained-close sources have a recorded full-text review basis, leaving 19 open. Search retrieval created a larger unresolved set of 1087 records without abstracts. These are separate evidence problems and require separate ledgers.
+The 89-decision author gate resolved screening accountability. The retained-close full-text gate is now closed with 22 verified sources, 3 abstract-only sources quarantined from stronger use, 0 exclusions after full-text review, and 2 inaccessible sources. Search retrieval created a separate unresolved set of 1087 records without abstracts. These evidence problems remain separate and require separate ledgers.

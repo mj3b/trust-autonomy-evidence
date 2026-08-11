@@ -265,7 +265,11 @@ def inspect() -> tuple[list[str], dict[str, object]]:
             "close_source_full_text": {
                 "status": full_text_status,
                 "records": EXPECTED_CLOSE,
+                "terminal": terminal,
                 "verified": verified,
+                "abstract_only_not_used": states["abstract-only-not-used"],
+                "excluded_after_full_text": states["excluded-after-full-text"],
+                "inaccessible": states["inaccessible"],
                 "open": open_full_text,
                 "terminal_without_verification": terminal - verified,
                 "claim_rule": "Only verified full text may support a proposition that exceeds the abstract.",
@@ -315,7 +319,7 @@ The next research cycle addresses support and search coverage before the manuscr
 
 | Gate | Population | Complete | Open | Current state |
 |---|---:|---:|---:|---|
-| Close-source full-text verification | {full_text['records']} | {full_text['verified']} verified | {full_text['open']} | `{full_text['status']}` |
+| Close-source full-text verification | {full_text['records']} | {full_text['terminal']} terminal | {full_text['open']} | `{full_text['status']}` |
 | Inaccessible-record retrieval | {inaccessible['records']} | {inaccessible['retrieval_rows_complete']} | {inaccessible['retrieval_rows_open']} | `{inaccessible['status']}` |
 | Authenticated and disciplinary interfaces | {interfaces['required_surfaces']} | {interfaces['complete']} | {interfaces['open']} | `{interfaces['status']}` |
 | Independent assessment | 1 study | 0 | 1 | `OPEN`, outside this cycle |
@@ -330,7 +334,7 @@ The next research cycle addresses support and search coverage before the manuscr
 
 ## Current finding
 
-The 89-decision author gate resolved screening accountability. It also exposed a second boundary: {full_text['verified']} of {full_text['records']} retained-close sources have a recorded full-text review basis, leaving {full_text['open']} open. Search retrieval created a larger unresolved set of {inaccessible['records']} records without abstracts. These are separate evidence problems and require separate ledgers.
+The 89-decision author gate resolved screening accountability. The retained-close full-text gate is now closed with {full_text['verified']} verified sources, {full_text['abstract_only_not_used']} abstract-only sources quarantined from stronger use, {full_text['excluded_after_full_text']} exclusions after full-text review, and {full_text['inaccessible']} inaccessible sources. Search retrieval created a separate unresolved set of {inaccessible['records']} records without abstracts. These evidence problems remain separate and require separate ledgers.
 """
 
 
