@@ -2,11 +2,20 @@
 
 All material changes to concepts, claims, protocols, and evidence requirements are recorded here.
 
-## Unreleased
+## 0.11.0, 11 August 2026
 
 - Closes the retained-source full-text gate with 22 verified full-text records, 3 abstract-only records, 2 inaccessible records, and no open decisions.
-- Preserves the published v0.10.0 seal as a tagged snapshot and opens a v0.11.0 working manifest for post-release evidence changes.
+- Preserves the published v0.10.0 seal as a tagged snapshot and seals the v0.11.0 evidence and audit package.
 - Freezes a 284-record residual-risk sample before retrieval, with 102 forward citations, 177 backward references, and 5 direct-query records selected by the declared SHA-256 rule.
+- Records lawful retrieval outcomes for all five direct-query records: three full-text recoveries and two abstract recoveries.
+- Records three background decisions, one close-source decision, and one open author review without converting a rendered PDF into an unsupported screening judgment.
+- Adds route-level retrieval evidence, updates the 60-source literature matrix and novelty audit, and makes retrieval-to-screening agreement executable.
+- Expands the executable claim map from 20 to 26 material claims and preserves the v0.9 map as version history.
+- Records human review of the five direct-query states and six added claims, with explicit AI-assistance limits.
+- Expands the integrity suite from 14 to 22 controlled corruptions and detects all 22.
+- Keeps the proposed cross-domain mechanism conclusion-ineligible because independence and completeness are indeterminate.
+- Publishes four exceptions covering independent assessment, incomplete search coverage, two source limits, and institutional transfer.
+- Seals 171 release artifacts with SHA-256 digests.
 
 ## 0.10.0, 11 August 2026
 

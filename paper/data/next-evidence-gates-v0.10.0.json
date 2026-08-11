@@ -19,19 +19,42 @@
     "inaccessible_record_retrieval": {
       "status": "OPEN",
       "records": 1087,
-      "retrieval_rows_complete": 0,
-      "retrieval_rows_open": 1087,
+      "retrieval_rows_complete": 5,
+      "retrieval_rows_open": 1082,
+      "retrieval_outcomes": {
+        "abstract-recovered": 2,
+        "full-text-recovered": 3
+      },
+      "recovered_content_requiring_screening": 5,
+      "screening_decisions_complete": 4,
+      "screening_decisions_open": 1,
+      "screening_decisions": {
+        "retain-background": 3,
+        "retain-close": 1
+      },
+      "recovered_close_sources": 1,
       "residual_risk_sample": {
         "status": "FROZEN_BEFORE_RETRIEVAL",
         "selected": 284,
-        "sampled_retrieval_complete": 0,
-        "sampled_retrieval_open": 284,
+        "sampled_retrieval_complete": 5,
+        "sampled_retrieval_open": 279,
+        "sampled_screening_required": 5,
+        "sampled_screening_complete": 4,
+        "sampled_screening_open": 1,
         "strata": {
           "forward-citation": 102,
           "backward-reference": 177,
           "direct-query": 5
         },
         "sample_record": "paper/data/inaccessible-risk-sample-v0.11.0.csv"
+      },
+      "direct_query_tranche": {
+        "status": "PARTIAL_SCREENING",
+        "selected": 5,
+        "retrieval_complete": 5,
+        "screening_complete": 4,
+        "screening_open": 1,
+        "evidence_record": "paper/data/direct-query-retrieval-evidence-v0.11.0.json"
       },
       "claim_rule": "A completed risk sample estimates residual risk and does not establish exhaustive coverage."
     },

@@ -10,9 +10,9 @@ This statement describes the declared search result. Universal originality remai
 
 ## Formal-search state
 
-The frozen v0.7 search returned 2,431 deduplicated records from direct queries and selected-seed citation chains. Mark Julius Banasihan completed the 89-record author queue on 10 August 2026. The decisions retain 27 close and 32 background sources, exclude 20 off-topic sources and 10 single-component sources, and close the author gate. Another 1,087 records lack abstracts and remain inaccessible for substantive screening. Semantic Scholar resolved fourteen of fifteen citation seeds; OpenAlex resolved thirteen and supplied a zero-link record for L12.
+The frozen v0.7 search returned 2,431 deduplicated records from direct queries and selected-seed citation chains. Mark Julius Banasihan completed the 89-record author queue on 10 August 2026. The decisions retain 27 close and 32 background sources, exclude 20 off-topic sources and 10 single-component sources, and close the author gate. The search also produced 1,087 inaccessible records. The frozen v0.11 direct-query tranche records retrieval outcomes for five of them and leaves 1,082 without a recorded outcome. Four recovered records have screening decisions: three background and one close. One retrieved legal-research source remains open because the rendered PDF lacked a readable text layer in the retrieval channel. Semantic Scholar resolved fourteen of fifteen citation seeds; OpenAlex resolved thirteen and supplied a zero-link record for L12.
 
-The author decisions narrow the contribution further. Recent sources already supply incident-set oversight coding, runnable decision chains, versioned assurance cases, practical-override traces, and architecture-aware audit evidence. Authenticated Scopus or Web of Science, the declared disciplinary interfaces, and inaccessible-record review remain open.
+The author decisions narrow the contribution further. Recent sources already supply incident-set oversight coding, runnable decision chains, versioned assurance cases, practical-override traces, architecture-aware audit evidence, a human-performance critique of loop labels, and a model-level explanation for interventions that fail through parallel residual paths. Authenticated Scopus or Web of Science, the declared disciplinary interfaces, and 1,082 inaccessible-record retrieval outcomes remain open.
 
 ## Closest prior work
 
@@ -54,6 +54,15 @@ The author decisions narrow the contribution further. Recent sources already sup
 | LaPosta (2026), L53 | Official full text inspected | Runnable decision chain with owners, artifacts, rollback, and review gates | Workflow protocol without the paper's historical case packets and correction history |
 | Niazi, Hassani, and Lee (2026), L55 | Publisher full text inspected | Versioned assurance case with claims, evidence, control points, and a practical-override trace | Prospective governance framework without frozen public-case selection and reassessment ledger |
 
+## Recovered direct-query additions
+
+| Source | Review state on 2026-08-11 | Material overlap | Remaining difference |
+|---|---|---|---|
+| Emery (2019), L57 | Institutional full text inspected | Meaningful human control, algorithmic targeting, distance from lethal action, and practical judgment | Historical and normative dissertation without the integrated evidence procedure |
+| Homayounnejad (2017), L58 | Publisher abstract inspected | Meaningful human control joined to operational precautions and international humanitarian law | Abstract-only legal analysis without public-case evidence adjudication |
+| Zabounidis et al. (2026), L59 | Official full text inspected | Measures whether a human-readable intervention changes an output when a parallel residual path exists | Model-architecture study without institutional or incident reconstruction |
+| Gielas (2025), L60 | Publisher abstract and official issue summary inspected | Human-performance limits on loop labels, human in the mesh, and the Patriot system | Abstract-only review without the paper's selection, evidence-fitness, correction, and audit path |
+
 ## Contribution that remains defensible
 
 The paper can position its contribution as a governance-specific integration and domain-adaptation claim. It applies established claim-evidence architecture to a procedure that exposes where a human-control statement is supported, contradicted, unresolved, or unfit for the proposed conclusion in a bounded public record. The completed author review removes one procedural uncertainty. The contribution resides in the declared combination and the inspectable artifacts, subject to the following limits:
@@ -85,4 +94,4 @@ The present review supports this provisional sentence:
 
 > Existing research explains why formal oversight may lack practical force, how investigators can reconstruct human contributions and sociotechnical failure, which records AI incidents require, and how research and assurance claims can be tied to evidence and checked against implementation. This paper examines one governance-specific integration: a frozen public-case procedure with visible selection, explicit missingness, versioned adjudication, claim-specific evidence fitness, conclusion dependency closure, and executable artifact checks.
 
-The word `novel` remains prohibited in the manuscript. The formal open-index search, selected Semantic Scholar chains, and author-confirmed 89-record screening narrow uncertainty. Inaccessible-record review, authenticated multidisciplinary searching, and disciplinary-interface checks remain open.
+The word `novel` remains prohibited in the manuscript. The formal open-index search, selected Semantic Scholar chains, author-confirmed 89-record screening, and five-record direct-query recovery narrow uncertainty. Another 1,082 retrieval outcomes, one direct-query screening decision, full-text review of Gielas, authenticated multidisciplinary searching, and disciplinary-interface checks remain open.

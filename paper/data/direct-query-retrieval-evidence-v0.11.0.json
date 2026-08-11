@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "tranche": "direct-query",
+  "retrieval_date": "2026-08-11",
+  "status": "PARTIAL_SCREENING",
+  "decision_owner": "Mark Julius Banasihan",
+  "source_sample": "paper/data/inaccessible-risk-sample-v0.11.0.csv",
+  "retrieval_ledger": "paper/data/inaccessible-record-retrieval-v0.10.0.csv",
+  "records": [
+    {
+      "sample_id": "RS-DQ-001",
+      "record_key": "title:war by algorithm giambattista vico and ethics of war in the techno logical era|year:2019",
+      "title": "War by Algorithm: Giambattista Vico and Ethics of War in the Techno-Logical Era",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://escholarship.org/content/qt7kc7d41v/qt7kc7d41v.pdf",
+      "review_basis": "full_text",
+      "screening_decision": "retain-background",
+      "routes_checked": [
+        "Semantic Scholar source record",
+        "UC eScholarship item page",
+        "UC eScholarship institutional PDF"
+      ],
+      "source_evidence": [
+        "The institutional record identifies John Robert Emery, a 2019 UC Irvine political-science dissertation, and a 220-page PDF.",
+        "The abstract and pages 13, 179, and 200-201 discuss meaningful human control, algorithmic targeting, removal from lethal action, and the limits of technical control claims.",
+        "Full-text searches found no audit or protocol procedure equivalent to the repository method."
+      ],
+      "screening_rationale": "The dissertation supplies a material construct and historical mechanism for loss of practical control. It does not disclose the tested integration.",
+      "limits": "The record is a dissertation and does not estimate whether a documentary practical-control procedure is reliable or institutionally effective.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI located and inspected the institutional full text, proposed the bounded screening decision, and recorded page-level support."
+    },
+    {
+      "sample_id": "RS-DQ-002",
+      "record_key": "doi:10.2139/ssrn.3073893",
+      "title": "Ensuring Lethal Autonomous Weapon Systems Comply with International Humanitarian Law",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3073893",
+      "review_basis": "title_and_abstract",
+      "screening_decision": "retain-background",
+      "routes_checked": [
+        "DOI resolver",
+        "SSRN abstract page",
+        "SSRN delivery-PDF locator"
+      ],
+      "source_evidence": [
+        "The SSRN record identifies Maziar Homayounnejad, TLI Think! Paper 85/2017, 69 pages, posted 10 December 2017 and revised 23 January 2018.",
+        "The abstract states that the paper applies distinction, proportionality, precautions, and meaningful human control to lawful LAWS development and use.",
+        "The retrieval surface exposed the abstract and PDF locator, while direct text inspection of the PDF was blocked by the publisher delivery surface."
+      ],
+      "screening_rationale": "The source supplies legal and operational background for meaningful human control. The recovered abstract does not disclose the repository's integrated reconstruction procedure.",
+      "limits": "Only the declared purpose and scope may be used until full text is inspected.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI located the publisher abstract, proposed the bounded screening decision, and recorded the abstract-only limit."
+    },
+    {
+      "sample_id": "RS-DQ-003",
+      "record_key": "title:disentangled concept residual models bridging the interpretability performance gap for incomplete concept sets|year:2026",
+      "title": "Disentangled Concept-Residual Models: Bridging the Interpretability-Performance Gap for Incomplete Concept Sets",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://openreview.net/pdf?id=NKgNizwDa6",
+      "review_basis": "full_text",
+      "screening_decision": "retain-background",
+      "routes_checked": [
+        "Semantic Scholar source record",
+        "OpenReview forum",
+        "OpenReview published TMLR PDF"
+      ],
+      "source_evidence": [
+        "The official record identifies a January 2026 Transactions on Machine Learning Research publication and an 18-page paper.",
+        "The paper defines concept-residual overlap and reports that a corrected human-readable concept can fail to change the output when the residual path retains conflicting information.",
+        "The paper reports intervention and overlap results across five datasets, while its unit of analysis is model architecture rather than a public incident record."
+      ],
+      "screening_rationale": "The source supplies a material causal mechanism: nominal intervenability can fail when a parallel information path defeats the correction. It does not disclose historical case reconstruction, evidence fitness, or conclusion closure.",
+      "limits": "Its model tests do not establish human performance, institutional control, or field effects.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI located and inspected the official full text, proposed the bounded screening decision, and recorded page-level support."
+    },
+    {
+      "sample_id": "RS-DQ-004",
+      "record_key": "title:effective human oversight of genai powered legal research tools|year:",
+      "title": "Effective Human Oversight of GenAI-Powered Legal Research Tools",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://www.aallnet.org/wp-content/uploads/2026/07/LLJ-Vol.-118-No.-3-Forthcoming-Article_Jennings.pdf",
+      "review_basis": "rendered_full_text_unread",
+      "screening_decision": null,
+      "routes_checked": [
+        "Exact-title public search",
+        "Semantic Scholar preserved source record",
+        "American Association of Law Libraries publisher PDF"
+      ],
+      "source_evidence": [
+        "The frozen Semantic Scholar record preserves the AALL PDF locator even though exact-title search returned no matching record.",
+        "The publisher PDF rendered as 20 pages. Its cover identifies Law Library Journal, volume 118, number 3, 2026.",
+        "The retrieval channel did not expose a readable text layer. The source record names B. Mills while the filename names Jennings."
+      ],
+      "screening_rationale": "OPEN: Source access is established. A substantive decision would exceed the readable evidence available in this run.",
+      "limits": "The author must read the rendered paper and resolve the author-name mismatch before assigning a v0.7 screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI recovered and visually verified the publisher PDF, recorded the extraction and metadata limits, and made no substantive screening decision."
+    },
+    {
+      "sample_id": "RS-DQ-005",
+      "record_key": "doi:10.1080/00396338.2025.2534284",
+      "title": "The Loop Is Broken: Why Autonomous-warfare Policy Must Reckon with Human Performance",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://www.tandfonline.com/doi/abs/10.1080/00396338.2025.2534284",
+      "review_basis": "title_and_abstract",
+      "screening_decision": "retain-close",
+      "routes_checked": [
+        "DOI resolver",
+        "Taylor & Francis publisher page",
+        "International Institute for Strategic Studies issue page"
+      ],
+      "source_evidence": [
+        "The publisher record identifies Anna M. Gielas, Survival 67(4), pages 57-66, published online 25 July 2025.",
+        "The abstract argues that human-in-the-loop and meaningful-human-control labels can omit human-performance constraints and proposes a human-in-the-mesh model.",
+        "The publisher keywords and notes identify the Patriot missile-defence system, human control, human-machine interaction, workload, and adaptive automation."
+      ],
+      "screening_rationale": "The source directly overlaps the paper's practical-control mechanism and one case family. It is a close source even though it does not disclose the full repository procedure in the inspected material.",
+      "limits": "The abstract may support a bounded statement about the source's declared model. Full text is required for proposition-specific use beyond that statement.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI located the publisher abstract and official issue summary, proposed the close-source decision, and recorded the full-text limit."
+    }
+  ],
+  "counts": {
+    "records": 5,
+    "full_text_recovered": 3,
+    "abstract_recovered": 2,
+    "screening_complete": 4,
+    "screening_open": 1,
+    "retain_close": 1,
+    "retain_background": 3
+  },
+  "claim_boundary": "This tranche records retrieval and four bounded screening decisions. It does not estimate residual close-source prevalence, close the 284-record sample, establish exhaustive search coverage, or permit claims beyond an inspected abstract or full text."
+}

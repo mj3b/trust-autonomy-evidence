@@ -1,7 +1,9 @@
 # Chain-of-Evidence Integrity Audit
 
-**Protocol version:** 0.5.0  
-**Audit scope:** `TAE-COE-V0.5.0`  
+**Protocol origin:** 0.5.0
+
+**Current audit scope:** `TAE-COE-V0.11.0`
+
 **Decision served:** whether a material claim may enter a conclusion in this repository or its working paper
 
 ## Problem
@@ -10,7 +12,11 @@ A citation, file path, or hash establishes a connection. It does not establish t
 
 ## Unit of analysis
 
-The unit is one declared claim in [`evidence/claim-evidence-map.json`](../evidence/claim-evidence-map.json). The v0.5 audit covers the claims listed in that map. Other repository sentences remain outside this audit unless a later release adds them.
+The unit is one declared claim in [`evidence/claim-evidence-map.json`](../evidence/claim-evidence-map.json). The current audit covers the twenty-six claims listed in that map. Other repository sentences remain outside this audit unless a later release adds them.
+
+## Standing application rule
+
+Exploratory notes may remain outside the claim map while their status is explicit. A data point, source observation, figure, finding, or release statement must enter the claim map before it supports a material conclusion. The five gates then apply. A changed artifact requires a rebuilt map and audit. A failed or indeterminate required gate remains visible and blocks the affected conclusion.
 
 ## Five gates
 
@@ -93,14 +99,15 @@ A control that escapes detection fails the audit.
 
 The executable checks establish internal contract behavior and artifact consistency. Mark Julius Banasihan remains the human reviewer of record for the declared support judgments. AI assistance is recorded in the research activity log. No independent assessor has reproduced the judgments.
 
-## Outputs
+## Current outputs
 
-- [`audits/v0.5.0/audit-results.json`](../audits/v0.5.0/audit-results.json)
-- [`audits/v0.5.0/audit-report.md`](../audits/v0.5.0/audit-report.md)
-- [`audits/v0.5.0/audit-plan.md`](../audits/v0.5.0/audit-plan.md)
-- [`audits/v0.5.0/exceptions.md`](../audits/v0.5.0/exceptions.md)
+- [`audits/v0.11.0/audit-results.json`](../audits/v0.11.0/audit-results.json)
+- [`audits/v0.11.0/audit-report.md`](../audits/v0.11.0/audit-report.md)
+- [`audits/v0.11.0/audit-plan.md`](../audits/v0.11.0/audit-plan.md)
+- [`audits/v0.11.0/exceptions.md`](../audits/v0.11.0/exceptions.md)
+- [`evidence/human-review-attestation-v0.11.0.json`](../evidence/human-review-attestation-v0.11.0.json)
 - [`fixtures/coe-audit-mutations.json`](../fixtures/coe-audit-mutations.json)
 
 ## Claim boundary
 
-Passing the audit means the committed v0.5 controls behaved as declared for the mapped claim set. It supplies no independent reliability estimate, source-truth determination, field-validity finding, or proof that an institution will make a better decision.
+Passing the audit means the committed controls behaved as declared for the mapped claim set. It supplies no independent reliability estimate, source-truth determination, field-validity finding, or proof that an institution will make a better decision.

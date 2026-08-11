@@ -1,6 +1,6 @@
 # Paper Workspace
 
-This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. The v0.10.0 protocol checkpoint preserves the v0.9 author-screened manuscript and freezes the full-text, inaccessible-record, and authenticated-interface gates before new results are known. The manuscript remains a working submission candidate. Released case packets, assessments, and manifests remain the controlling research record.
+This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. Version 0.11.0 records the first direct-query recovery tranche and applies the claim controls introduced in v0.5.0 to its counts, source descriptions, and proposed synthesis. The manuscript remains a working submission candidate. Released case packets, assessments, and manifests remain the controlling research record.
 
 **PR #11 merge commit:** [`a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec`](https://github.com/mj3b/trust-autonomy-evidence/commit/a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec)
 
@@ -21,7 +21,7 @@ This directory develops a methods and comparative-case paper from the repository
 | [`review-record-v0.8.0.md`](review-record-v0.8.0.md) | Records author authorization, reviewed additions, support decisions, and the publication boundary. |
 | [`tables.md`](tables.md) | Preserves exact assessment states, search counts, correction history, captions, and interpretation notes. |
 | [`tables/manuscript-tables.tex`](tables/manuscript-tables.tex) | Provides journal-ready `booktabs` fragments with three horizontal rules and no vertical rules. |
-| [`literature-matrix.md`](literature-matrix.md) | Relates 56 working sources to the proposed contribution and its boundaries. |
+| [`literature-matrix.md`](literature-matrix.md) | Relates 60 working sources to the proposed contribution and its boundaries. |
 | [`literature-search-log.md`](literature-search-log.md) | Records discovery queries, dates, retained candidates, and search limits. |
 | [`formal-literature-search-protocol-v0.7.0.md`](formal-literature-search-protocol-v0.7.0.md) | Freezes the formal search, screening, deduplication, and citation-chain rules before retrieval. |
 | [`formal-citation-chain-v0.7.0.md`](formal-citation-chain-v0.7.0.md) | Reports the eight direct queries, fifteen seed chains, second-index checks, errors, and coverage limits. |
@@ -39,6 +39,11 @@ This directory develops a methods and comparative-case paper from the repository
 | [`inaccessible-risk-sample-v0.11.0.md`](inaccessible-risk-sample-v0.11.0.md) | Explains why the 284-record sample was frozen before retrieval and defines its interpretation boundary. |
 | [`data/inaccessible-risk-sample-v0.11.0.csv`](data/inaccessible-risk-sample-v0.11.0.csv) | Records the 284 selected records with strata, digests, ranks, origins, and source metadata. |
 | [`data/inaccessible-risk-sample-v0.11.0.json`](data/inaccessible-risk-sample-v0.11.0.json) | Stores the population hash, seed, allocation method, counts, sample hash, and claim boundary. |
+| [`direct-query-retrieval-tranche-v0.11.0.md`](direct-query-retrieval-tranche-v0.11.0.md) | Reports five retrieval outcomes, four screening decisions, one open review, and the effect on the paper. |
+| [`data/direct-query-retrieval-evidence-v0.11.0.json`](data/direct-query-retrieval-evidence-v0.11.0.json) | Preserves the checked routes, locators, review bases, source observations, decisions, assistance, and limits. |
+| [`../evidence/human-review-attestation-v0.11.0.json`](../evidence/human-review-attestation-v0.11.0.json) | Records author review of the five direct-query states and six added claims, with AI-assistance limits. |
+| [`../evidence/claim-evidence-map.json`](../evidence/claim-evidence-map.json) | Maps 26 material claims to exact evidence, fitness decisions, dependencies, limits, and reversal conditions. |
+| [`../audits/v0.11.0/audit-report.md`](../audits/v0.11.0/audit-report.md) | Reports the 26-claim audit, 22 detected controls, four exceptions, and the blocked transfer claim. |
 | [`data/authenticated-interface-searches-v0.10.0.csv`](data/authenticated-interface-searches-v0.10.0.csv) | Tracks the five authenticated and disciplinary-interface searches. |
 | [`citation-chain-log-v0.6.0.md`](citation-chain-log-v0.6.0.md) | Records the index-based citation sample and its limits. |
 | [`literature-support-audit-v0.6.0.md`](literature-support-audit-v0.6.0.md) | Preserves the 16-proposition audit for the earlier introduction and related-work draft. |
@@ -61,4 +66,4 @@ If the manuscript conflicts with a frozen packet or released assessment, the rel
 
 A released assessment label records what the published procedure produced. It does not establish independent validity. The [PR #11 review record](review-record-pr11.md) preserves the Oko mismatch and its v0.6 resolution through reclassification.
 
-The [claim crosswalk](claim-crosswalk.md) makes that boundary executable. A failed evidence-fitness gate or open dependency prevents the affected claim from entering a conclusion. The formal open-index search, selected-index citation chains, 89-record author queue, and 27-source retained-close full-text gate are complete within declared limits. The [v0.10 protocol](../protocols/search-coverage-and-full-text-protocol-v0.10.0.md) now controls the 1,087 inaccessible records and five authenticated or disciplinary interfaces. The 284-record residual-risk sample is frozen before retrieval. Independent assessment and venue-specific ethics guidance remain open.
+The [claim crosswalk](claim-crosswalk.md) and [v0.11 audit](../audits/v0.11.0/audit-report.md) make that boundary executable. A failed or indeterminate evidence-fitness gate or open dependency prevents the affected claim from entering a conclusion. The formal open-index search, selected-index citation chains, 89-record author queue, and 27-source retained-close full-text gate are complete within declared limits. The [v0.10 protocol](../protocols/search-coverage-and-full-text-protocol-v0.10.0.md) controls the 1,087-record recovery population and five authenticated or disciplinary interfaces. The 284-record residual-risk sample is frozen. Its direct-query stratum has five retrieval outcomes, four screening decisions, and one open decision. The proposed cross-domain mechanism remains conclusion-ineligible. Independent assessment and venue-specific ethics guidance remain open.

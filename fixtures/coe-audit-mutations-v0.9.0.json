@@ -1,6 +1,6 @@
 {
-  "version": "0.11.0",
-  "suite_id": "TAE-COE-NEGATIVE-CONTROLS-V0.11.0",
+  "version": "0.8.0",
+  "suite_id": "TAE-COE-NEGATIVE-CONTROLS-V0.8.0",
   "controls": [
     {"control_id": "COE-NC-01", "description": "Change one expected assessment state.", "mutation_type": "numeric_mismatch", "target_claim": "PAPER-C03", "expected_check": "score_verification", "parameters": {"evidence_id": "C03-OKO-AUTHORITY", "replacement": "unsupported"}},
     {"control_id": "COE-NC-02", "description": "Replace one evidence path with a missing file.", "mutation_type": "missing_reference", "target_claim": "PAPER-C05", "expected_check": "reference_verification", "parameters": {"evidence_id": "C05-AUTHORITY"}},
@@ -15,14 +15,6 @@
     {"control_id": "COE-NC-11", "description": "Remove the literature-audit reference for the reader edition.", "mutation_type": "missing_reference", "target_claim": "PAPER-C22", "expected_check": "reference_verification", "parameters": {"evidence_id": "C16-LITERATURE-AUDIT"}},
     {"control_id": "COE-NC-12", "description": "Remove the recorded review for the coding-stability table.", "mutation_type": "support_review_removed", "target_claim": "PAPER-C24", "expected_check": "reference_verification", "parameters": {}},
     {"control_id": "COE-NC-13", "description": "Fail completeness for the author-screening gate.", "mutation_type": "fitness_failure", "target_claim": "PAPER-C25", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dimension": "completeness"}},
-    {"control_id": "COE-NC-14", "description": "Remove the implementation marker paired with the screening-gate method.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C25", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C19-VALIDATOR"}},
-    {"control_id": "COE-NC-15", "description": "Change the five-record direct-query count.", "mutation_type": "numeric_mismatch", "target_claim": "PAPER-C27", "expected_check": "score_verification", "parameters": {"evidence_id": "C27-RECORDS", "replacement": 6}},
-    {"control_id": "COE-NC-16", "description": "Remove the Zabounidis source evidence path.", "mutation_type": "missing_reference", "target_claim": "PAPER-C30", "expected_check": "reference_verification", "parameters": {"evidence_id": "C30-SOURCE"}},
-    {"control_id": "COE-NC-17", "description": "Remove the recorded human support review from the Gielas claim.", "mutation_type": "support_review_removed", "target_claim": "PAPER-C31", "expected_check": "reference_verification", "parameters": {}},
-    {"control_id": "COE-NC-18", "description": "Fail completeness for the direct-query count claim.", "mutation_type": "fitness_failure", "target_claim": "PAPER-C27", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dimension": "completeness"}},
-    {"control_id": "COE-NC-19", "description": "Remove the direct-query implementation marker.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C27", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C27-IMPLEMENTATION"}},
-    {"control_id": "COE-NC-20", "description": "Replace the synthesis dependency with an unresolved claim.", "mutation_type": "unresolved_dependency", "target_claim": "PAPER-C32", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dependency": "PAPER-C99"}},
-    {"control_id": "COE-NC-21", "description": "Replace the verified Zabounidis evidence digest with a stale digest.", "mutation_type": "stale_hash", "target_claim": "PAPER-C30", "expected_check": "reference_verification", "parameters": {"evidence_id": "C30-SOURCE"}},
-    {"control_id": "COE-NC-22", "description": "Add an unsupported bounded term to the direct-query count claim.", "mutation_type": "unsupported_scope_term", "target_claim": "PAPER-C27", "expected_check": "specification_violation", "parameters": {"term": "all"}}
+    {"control_id": "COE-NC-14", "description": "Remove the implementation marker paired with the screening-gate method.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C25", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C19-VALIDATOR"}}
   ]
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seal the v0.11.0 retained-source full-text gate candidate."""
+"""Seal the v0.11.0 direct-query retrieval candidate."""
 
 from __future__ import annotations
 
@@ -21,6 +21,7 @@ CORE = (
     "release/v0.9.0-manifest.json",
     "release/v0.10.0-manifest.json",
     "release/v0.10.0-release-notes.md",
+    "release/v0.11.0-release-notes.md",
     "README.md",
     "RESEARCH_STATUS.md",
     "CLAIMS.md",
@@ -43,10 +44,14 @@ CORE = (
     "schemas/coe-audit-mutations.schema.json",
     "schemas/literature-support-audit.schema.json",
     "fixtures/coe-audit-mutations.json",
+    "fixtures/coe-audit-mutations-v0.9.0.json",
     "research/trust-autonomy-and-evidence.md",
     "research/chain-of-evidence-adaptation.md",
     "research/agenda-discovery-log-v0.10.0.md",
+    "research/agenda-discovery-log-v0.11.0.md",
     "evidence/claim-evidence-map.json",
+    "evidence/claim-evidence-map-v0.9.0.json",
+    "evidence/human-review-attestation-v0.11.0.json",
     "evidence/research-lineage.json",
     "evidence/research-activity-log.json",
     "assessments/generated-results.json",
@@ -64,6 +69,10 @@ CORE = (
     "audits/v0.9.0/audit-results.json",
     "audits/v0.9.0/audit-report.md",
     "audits/v0.9.0/exceptions.md",
+    "audits/v0.11.0/audit-plan.md",
+    "audits/v0.11.0/audit-results.json",
+    "audits/v0.11.0/audit-report.md",
+    "audits/v0.11.0/exceptions.md",
     "reports/public-case-reconstruction-v0.6.0.md",
     "reports/oko-evidence-adjudication-v0.6.0.md",
     "reports/figure-methods.md",
@@ -80,6 +89,7 @@ PAPER = (
     "paper/author-screening-completion-gate.md",
     "paper/next-evidence-gates-v0.10.0.md",
     "paper/inaccessible-risk-sample-v0.11.0.md",
+    "paper/direct-query-retrieval-tranche-v0.11.0.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
     "paper/literature-matrix.md",
@@ -99,6 +109,7 @@ PAPER = (
     "paper/data/inaccessible-record-retrieval-v0.10.0.csv",
     "paper/data/inaccessible-risk-sample-v0.11.0.csv",
     "paper/data/inaccessible-risk-sample-v0.11.0.json",
+    "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
     "paper/data/authenticated-interface-searches-v0.10.0.csv",
     "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",
@@ -170,6 +181,7 @@ VALIDATION = (
     "scripts/validate_formal_search.py",
     "scripts/validate_v060_adjudication.py",
     "scripts/run_coe_integrity_audit.py",
+    "scripts/build_v0_11_claim_map.py",
     "scripts/run_formal_literature_search.py",
     "scripts/propose_formal_search_screening.py",
     "scripts/verify_formal_search_metadata.py",

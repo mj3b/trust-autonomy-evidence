@@ -1,7 +1,7 @@
 {
-  "version": "0.11.0",
-  "scope_id": "TAE-COE-V0.11.0",
-  "description": "Material paper and repository claims audited through v0.11.0, including the direct-query retrieval tranche, four bounded source descriptions, and one provisional synthesis.",
+  "version": "0.9.0",
+  "scope_id": "TAE-COE-V0.9.0",
+  "description": "Material paper and repository claims audited through v0.9.0, including the completed author-screening gate and final search-flow result.",
   "claims": [
     {
       "claim_id": "PAPER-C02",
@@ -175,7 +175,7 @@
       "verification_rule": "The validator must contain executable checks for each named internal property and complete successfully for the committed artifacts.",
       "evidence": [
         {"evidence_id": "C08-METHOD", "path": "reports/figure-methods.md", "locator_type": "markdown_heading", "locator": "## Reproducibility check", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "3be256d2b7399a0c4483472f3f2b51ff9b542f39b59a52d410de528866d38861", "content_review": "recorded"},
-        {"evidence_id": "C08-IMPLEMENTATION", "path": "scripts/validate_repository.py", "locator_type": "text_marker", "locator": "validate_case_interactions", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "0f53b4f2734af55211434d09517b83a44862b335e7fa326358b680eca5557bc9", "content_review": "recorded"}
+        {"evidence_id": "C08-IMPLEMENTATION", "path": "scripts/validate_repository.py", "locator_type": "text_marker", "locator": "validate_case_interactions", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "007c033c4d7c6430f921408faab4a0d678b4d6171f119f82f26300bb5413c85e", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The method report names the control and the script implements the checks."},
@@ -227,7 +227,7 @@
       "verification_rule": "The case-set boundary and protocol must exclude each named estimate from the design.",
       "evidence": [
         {"evidence_id": "C11-BOUNDARY", "path": "cases/README.md", "locator_type": "text_marker", "locator": "They do not tell us:", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "19803df1a676f7908554eb890b7de7af11a6f9839d1f94794023c2ebce5adc51", "content_review": "recorded"},
-        {"evidence_id": "C11-LIMITS", "path": "LIMITATIONS.md", "locator_type": "text_marker", "locator": "The repository has no completed multi-case reliability study", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "551d2e6a01e209c5ee394dfd13e0f6f56320329abf2c043fcc7ff12987163d10", "content_review": "recorded"}
+        {"evidence_id": "C11-LIMITS", "path": "LIMITATIONS.md", "locator_type": "text_marker", "locator": "The repository has no completed multi-case reliability study", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "6ff8e7935ea7818ecee89bc5a85cf4bc78b08a7b7aa44547359f4295b06e5526", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The design records directly exclude the named estimates."},
@@ -304,8 +304,8 @@
       "status": "supported",
       "verification_rule": "The protocol and claim-map schema must define all five gates and store their required states.",
       "evidence": [
-        {"evidence_id": "C21-PROTOCOL", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Five gates", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "0a8a35a2bb0f3157f52088daa12d6c7b35b4dd183124eb9baae261ce166b0aa8", "content_review": "recorded"},
-        {"evidence_id": "C21-SCHEMA", "path": "schemas/claim-evidence-map.schema.json", "locator_type": "text_marker", "locator": "dependency_closure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4191ab856cd7dfb14305982530cf7e8d2fd146c879c3998d3bd96d55319692a4", "content_review": "recorded"}
+        {"evidence_id": "C21-PROTOCOL", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Five gates", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "8c1e96e261268eb0328431c43617504280c3a2894450fb5b405d93218fe8ce15", "content_review": "recorded"},
+        {"evidence_id": "C21-SCHEMA", "path": "schemas/claim-evidence-map.schema.json", "locator_type": "text_marker", "locator": "dependency_closure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "12d0b2314c9a82c498517b6297ce13a28b7159f48e40acffe04b006ba4ea3a98", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The protocol defines the gates and the schema stores them."},
@@ -355,8 +355,8 @@
       "status": "supported",
       "verification_rule": "The protocol must state the rule and the audit must recompute eligibility from status, five gates, and dependencies.",
       "evidence": [
-        {"evidence_id": "C24-METHOD", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Conclusion-eligibility rule", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "0a8a35a2bb0f3157f52088daa12d6c7b35b4dd183124eb9baae261ce166b0aa8", "content_review": "recorded"},
-        {"evidence_id": "C24-IMPLEMENTATION", "path": "fixtures/coe-audit-mutations.json", "locator_type": "text_marker", "locator": "fitness_failure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c7a9e0a16d26fef13330e433af4c258044cef29621c26c235f96bec92c2a39d3", "content_review": "recorded"}
+        {"evidence_id": "C24-METHOD", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Conclusion-eligibility rule", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "8c1e96e261268eb0328431c43617504280c3a2894450fb5b405d93218fe8ce15", "content_review": "recorded"},
+        {"evidence_id": "C24-IMPLEMENTATION", "path": "fixtures/coe-audit-mutations.json", "locator_type": "text_marker", "locator": "fitness_failure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "71a808b2cf33843bc14133eb348a1dff08b036d0a6a4e60202f43ea0964e59b0", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The protocol states the rule and the mutation suite tests the failed-fitness branch."},
@@ -544,174 +544,6 @@
       "scope_terms": [],
       "limitations": ["The conclusion covers the 89-record queue and does not resolve inaccessible records, authenticated databases, disciplinary interfaces, or independent screening."],
       "reversal_conditions": ["The gate reopens, a final count changes, or Figure 5 stops resolving from the decision ledger."]
-    },
-    {
-      "claim_id": "PAPER-C27",
-      "claim_text": "The v0.11 direct-query tranche records five retrieval outcomes, four screening decisions, one open decision, three background sources, and one close source.",
-      "claim_class": "numerical",
-      "claim_scope": "paper",
-      "status": "supported",
-      "verification_rule": "The five frozen direct-query keys must agree across the evidence record and population ledger, and the validator must recompute every declared count.",
-      "evidence": [
-        {"evidence_id": "C27-RECORDS", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/counts/records", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": 5},
-        {"evidence_id": "C27-COMPLETE", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/counts/screening_complete", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": 4},
-        {"evidence_id": "C27-OPEN", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/counts/screening_open", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": 1},
-        {"evidence_id": "C27-BACKGROUND", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/counts/retain_background", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": 3},
-        {"evidence_id": "C27-CLOSE", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/counts/retain_close", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": 1},
-        {"evidence_id": "C27-METHOD", "path": "paper/direct-query-retrieval-tranche-v0.11.0.md", "locator_type": "markdown_heading", "locator": "## Evidence path", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "096f29d38a33e8417191fb79e996b839d473b33235dc2b91c6e38169027290a0", "content_review": "recorded"},
-        {"evidence_id": "C27-IMPLEMENTATION", "path": "scripts/validate_next_evidence_gates.py", "locator_type": "text_marker", "locator": "direct-query evidence does not match the frozen direct-query stratum", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "d826f0090591414dc946e6b03d99dcce19919af33fe70685fcb6c1ace2ad4d7a", "content_review": "recorded"},
-        {"evidence_id": "C27-ATTESTATION", "path": "evidence/human-review-attestation-v0.11.0.json", "locator_type": "text_marker", "locator": "PAPER-C27", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "706a445340e555a841ad332c775071f773b0f149d9cfca0d62b8c15281ddfc93", "content_review": "recorded"},
-        {"evidence_id": "C27-LIMIT", "path": "paper/direct-query-retrieval-tranche-v0.11.0.md", "locator_type": "text_marker", "locator": "This tranche establishes five retrieval outcomes, four screening decisions, and one new close-source candidate.", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "096f29d38a33e8417191fb79e996b839d473b33235dc2b91c6e38169027290a0", "content_review": "recorded"}
-      ],
-      "fitness": {
-        "directness": {"state": "pass", "rationale": "The JSON counts and ledger agreement directly establish the five-record workflow state."},
-        "contemporaneity": {"state": "pass", "rationale": "The evidence and attestation are dated for the v0.11 checkpoint."},
-        "independence": {"state": "outside_scope", "rationale": "The claim reports repository state and no independent research judgment."},
-        "completeness": {"state": "pass", "rationale": "Every frozen direct-query key appears once and every recovered record has a decision or OPEN note."},
-        "publication_authority": {"state": "pass", "rationale": "Mark Julius Banasihan is the declared decision owner and release author."}
-      },
-      "dependencies": [],
-      "dependency_closure": "pass",
-      "conclusion_eligible": true,
-      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-11", "attestation_path": "evidence/human-review-attestation-v0.11.0.json", "note": "PAPER-C27: Reviewed as the bounded five-record workflow claim after disclosure of AI assistance and source limits."},
-      "scope_terms": [],
-      "limitations": ["The other 1,082 records have no recorded retrieval outcome, and the five-record stratum supplies no prevalence estimate."],
-      "reversal_conditions": ["A direct-query record, ledger state, screening decision, or recomputed count changes."]
-    },
-    {
-      "claim_id": "PAPER-C28",
-      "claim_text": "Emery's 2019 dissertation discusses meaningful human control, algorithmic targeting, removal from lethal action, and limits on technical control claims.",
-      "claim_class": "citation",
-      "claim_scope": "paper",
-      "status": "supported",
-      "verification_rule": "The exact source observation, retrieval locator, review basis, human attestation, and declared limit must resolve from the v0.11 evidence record.",
-      "evidence": [
-        {"evidence_id": "C28-SOURCE", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/records/0/source_evidence/1", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": "The abstract and pages 13, 179, and 200-201 discuss meaningful human control, algorithmic targeting, removal from lethal action, and the limits of technical control claims."},
-        {"evidence_id": "C28-LOCATOR", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/records/0/retrieval_locator", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded"},
-        {"evidence_id": "C28-ATTESTATION", "path": "evidence/human-review-attestation-v0.11.0.json", "locator_type": "text_marker", "locator": "PAPER-C28", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "706a445340e555a841ad332c775071f773b0f149d9cfca0d62b8c15281ddfc93", "content_review": "recorded"}
-      ],
-      "fitness": {
-        "directness": {"state": "pass", "rationale": "The evidence record identifies exact dissertation pages bearing on the claim."},
-        "contemporaneity": {"state": "outside_scope", "rationale": "The claim describes the publication's declared content and no historical event state."},
-        "independence": {"state": "outside_scope", "rationale": "The claim attributes a bounded statement to one publication and makes no corroborated field finding."},
-        "completeness": {"state": "pass", "rationale": "The claim is confined to the recorded topics on the inspected pages."},
-        "publication_authority": {"state": "pass", "rationale": "The source is a UC Irvine dissertation in the institutional repository."}
-      },
-      "dependencies": [],
-      "dependency_closure": "pass",
-      "conclusion_eligible": true,
-      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-11", "attestation_path": "evidence/human-review-attestation-v0.11.0.json", "note": "PAPER-C28: Reviewed as a bounded description of the recorded dissertation passages."},
-      "scope_terms": [],
-      "limitations": ["The dissertation supplies historical and normative background and no test of the repository method."],
-      "reversal_conditions": ["Inspection shows that the cited pages do not contain the recorded topics or the institutional record changes."]
-    },
-    {
-      "claim_id": "PAPER-C29",
-      "claim_text": "Homayounnejad's abstract applies distinction, proportionality, precautions, and meaningful human control to lawful LAWS development and use.",
-      "claim_class": "citation",
-      "claim_scope": "paper",
-      "status": "supported",
-      "verification_rule": "The exact source observation, retrieval locator, review basis, human attestation, and declared limit must resolve from the v0.11 evidence record.",
-      "evidence": [
-        {"evidence_id": "C29-SOURCE", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/records/1/source_evidence/1", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": "The abstract states that the paper applies distinction, proportionality, precautions, and meaningful human control to lawful LAWS development and use."},
-        {"evidence_id": "C29-LOCATOR", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/records/1/retrieval_locator", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded"},
-        {"evidence_id": "C29-ATTESTATION", "path": "evidence/human-review-attestation-v0.11.0.json", "locator_type": "text_marker", "locator": "PAPER-C29", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "706a445340e555a841ad332c775071f773b0f149d9cfca0d62b8c15281ddfc93", "content_review": "recorded"}
-      ],
-      "fitness": {
-        "directness": {"state": "pass", "rationale": "The publisher abstract directly states the four named legal and control topics."},
-        "contemporaneity": {"state": "outside_scope", "rationale": "The claim describes the publication's declared content and no historical event state."},
-        "independence": {"state": "outside_scope", "rationale": "The claim attributes a bounded statement to one publication and makes no corroborated field finding."},
-        "completeness": {"state": "pass", "rationale": "The claim reports only the declared abstract scope and makes no detailed legal proposition."},
-        "publication_authority": {"state": "pass", "rationale": "SSRN provides the author, paper series, length, and abstract record."}
-      },
-      "dependencies": [],
-      "dependency_closure": "pass",
-      "conclusion_eligible": true,
-      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-11", "attestation_path": "evidence/human-review-attestation-v0.11.0.json", "note": "PAPER-C29: Reviewed as an abstract-bounded description of the paper's declared scope."},
-      "scope_terms": [],
-      "limitations": ["Detailed legal propositions remain ineligible until full text is inspected."],
-      "reversal_conditions": ["The publisher abstract changes or full-text review contradicts the recorded scope description."]
-    },
-    {
-      "claim_id": "PAPER-C30",
-      "claim_text": "Zabounidis et al. report that correcting a human-readable concept can fail to change a model output when a residual path retains conflicting information.",
-      "claim_class": "citation",
-      "claim_scope": "paper",
-      "status": "supported",
-      "verification_rule": "The exact source observation, retrieval locator, review basis, human attestation, and declared limit must resolve from the v0.11 evidence record.",
-      "evidence": [
-        {"evidence_id": "C30-SOURCE", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/records/2/source_evidence/1", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": "The paper defines concept-residual overlap and reports that a corrected human-readable concept can fail to change the output when the residual path retains conflicting information."},
-        {"evidence_id": "C30-LOCATOR", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/records/2/retrieval_locator", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded"},
-        {"evidence_id": "C30-ATTESTATION", "path": "evidence/human-review-attestation-v0.11.0.json", "locator_type": "text_marker", "locator": "PAPER-C30", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "706a445340e555a841ad332c775071f773b0f149d9cfca0d62b8c15281ddfc93", "content_review": "recorded"}
-      ],
-      "fitness": {
-        "directness": {"state": "pass", "rationale": "The official paper directly defines and tests the stated residual-path mechanism."},
-        "contemporaneity": {"state": "outside_scope", "rationale": "The claim describes the publication's declared content and no historical event state."},
-        "independence": {"state": "outside_scope", "rationale": "The claim attributes a bounded statement to one publication and makes no corroborated field finding."},
-        "completeness": {"state": "pass", "rationale": "The claim is confined to the paper's reported model result."},
-        "publication_authority": {"state": "pass", "rationale": "OpenReview identifies the official Transactions on Machine Learning Research publication."}
-      },
-      "dependencies": [],
-      "dependency_closure": "pass",
-      "conclusion_eligible": true,
-      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-11", "attestation_path": "evidence/human-review-attestation-v0.11.0.json", "note": "PAPER-C30: Reviewed as a bounded model-architecture finding from the official full text."},
-      "scope_terms": [],
-      "limitations": ["The study tests model architecture and supplies no institutional or incident-level finding."],
-      "reversal_conditions": ["Official text or correction changes the reported concept-residual intervention result."]
-    },
-    {
-      "claim_id": "PAPER-C31",
-      "claim_text": "Gielas's abstract challenges human-in-the-loop and meaningful-human-control labels, centers human-performance constraints, and proposes a human-in-the-mesh model.",
-      "claim_class": "citation",
-      "claim_scope": "paper",
-      "status": "supported",
-      "verification_rule": "The exact source observation, retrieval locator, review basis, human attestation, and declared limit must resolve from the v0.11 evidence record.",
-      "evidence": [
-        {"evidence_id": "C31-SOURCE", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/records/4/source_evidence/1", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": "The abstract argues that human-in-the-loop and meaningful-human-control labels can omit human-performance constraints and proposes a human-in-the-mesh model."},
-        {"evidence_id": "C31-LOCATOR", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/records/4/retrieval_locator", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded"},
-        {"evidence_id": "C31-ATTESTATION", "path": "evidence/human-review-attestation-v0.11.0.json", "locator_type": "text_marker", "locator": "PAPER-C31", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "706a445340e555a841ad332c775071f773b0f149d9cfca0d62b8c15281ddfc93", "content_review": "recorded"}
-      ],
-      "fitness": {
-        "directness": {"state": "pass", "rationale": "The publisher abstract directly states the critique and proposed model."},
-        "contemporaneity": {"state": "outside_scope", "rationale": "The claim describes the publication's declared content and no historical event state."},
-        "independence": {"state": "outside_scope", "rationale": "The claim attributes a bounded statement to one publication and makes no corroborated field finding."},
-        "completeness": {"state": "pass", "rationale": "The claim remains within the publisher abstract's declared argument."},
-        "publication_authority": {"state": "pass", "rationale": "Taylor & Francis publishes the abstract and IISS publishes the issue record."}
-      },
-      "dependencies": [],
-      "dependency_closure": "pass",
-      "conclusion_eligible": true,
-      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-11", "attestation_path": "evidence/human-review-attestation-v0.11.0.json", "note": "PAPER-C31: Reviewed as an abstract-bounded description of the paper's declared argument."},
-      "scope_terms": [],
-      "limitations": ["Detailed comparison with the Patriot cases remains ineligible until full text is inspected."],
-      "reversal_conditions": ["The publisher abstract changes or full-text review contradicts the recorded argument."]
-    },
-    {
-      "claim_id": "PAPER-C32",
-      "claim_text": "A nominal correction can lose causal force when another information path still determines the output.",
-      "claim_class": "conclusion",
-      "claim_scope": "paper",
-      "status": "provisional",
-      "verification_rule": "The source mechanism must resolve, and institutional use remains blocked until evidence tests whether the same bypass mechanism operates across technical or organizational paths.",
-      "evidence": [
-        {"evidence_id": "C32-SYNTHESIS", "path": "paper/literature-matrix.md", "locator_type": "text_marker", "locator": "6. **Proposed mechanism inference:** A nominal correction can lose causal force when another information path still determines the output.", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "04efb8f959d3ecd88555cd8c1032747b6724eda6c702be0375fd92a2fcb4b2ab", "content_review": "recorded"},
-        {"evidence_id": "C32-SOURCE", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/records/2/source_evidence/1", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": "The paper defines concept-residual overlap and reports that a corrected human-readable concept can fail to change the output when the residual path retains conflicting information."},
-        {"evidence_id": "C32-ATTESTATION", "path": "evidence/human-review-attestation-v0.11.0.json", "locator_type": "text_marker", "locator": "PAPER-C32", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "706a445340e555a841ad332c775071f773b0f149d9cfca0d62b8c15281ddfc93", "content_review": "recorded"}
-      ],
-      "fitness": {
-        "directness": {"state": "pass", "rationale": "The model study directly tests a parallel residual path that can defeat a concept correction."},
-        "contemporaneity": {"state": "outside_scope", "rationale": "The claim is a mechanism synthesis and no historical-event state."},
-        "independence": {"state": "indeterminate", "rationale": "One model-architecture study cannot establish that the mechanism generalizes to institutions."},
-        "completeness": {"state": "indeterminate", "rationale": "No institutional or public-incident test examines parallel technical and organizational paths."},
-        "publication_authority": {"state": "pass", "rationale": "The source is an official Transactions on Machine Learning Research paper."}
-      },
-      "dependencies": ["PAPER-C30"],
-      "dependency_closure": "pass",
-      "conclusion_eligible": false,
-      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-11", "attestation_path": "evidence/human-review-attestation-v0.11.0.json", "note": "PAPER-C32: Reviewed as a proposed synthesis whose transfer gates remain indeterminate."},
-      "scope_terms": [],
-      "limitations": ["The mechanism is established for the studied model architectures and remains untested for institutions or public incidents."],
-      "reversal_conditions": ["Replication fails to reproduce the residual-path result or later evidence supplies a narrower mechanism."]
     }
   ]
 }

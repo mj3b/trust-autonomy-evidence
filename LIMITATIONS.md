@@ -46,9 +46,9 @@ The presence of monitoring, review, appeal, or stop authority does not establish
 
 Hashes, signatures, timestamps, and protected logs can support integrity, attribution, and ordering. They do not establish the truth, completeness, relevance, or fairness of the recorded content.
 
-Version 0.6 audits 15 declared material claims and 16 literature propositions in the current manuscript draft. It does not audit every repository sentence or future manuscript revision. The support and evidence-fitness judgments were reviewed by Mark Julius Banasihan with disclosed AI assistance. No independent assessor has reproduced them. Nine claim-map controls and six adjudication controls show that the committed checks detect their prespecified corruptions. They do not estimate detection performance for unknown errors.
+Version 0.11 audits 26 declared material claims. It does not audit every repository sentence or future manuscript revision. The support and evidence-fitness judgments were reviewed by Mark Julius Banasihan with disclosed AI assistance. No independent assessor has reproduced them. Twenty-two claim-map controls and six adjudication controls show that the committed checks detect their prespecified corruptions. They do not estimate detection performance for unknown errors.
 
-The audit records `PASS_WITH_EXCEPTIONS` because independent assessment is absent and institutional database searching with full citation chaining remains incomplete. The Oko mismatch is resolved through reclassification; the missing historical evidence remains a limitation. This state permits bounded artifact claims and no general reliability, field-validity, or originality conclusion.
+The audit records `PASS_WITH_EXCEPTIONS` because independent assessment is absent, search coverage remains incomplete, two direct-query source limits remain open, and a proposed model-to-institution transfer lacks fit evidence. The Oko mismatch is resolved through reclassification; the missing historical evidence remains a limitation. This state permits bounded artifact and source-description claims and no general reliability, field-validity, originality, or institutional-transfer conclusion.
 
 ## Legal and normative limits
 
