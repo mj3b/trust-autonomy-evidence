@@ -17,6 +17,8 @@ AUTHOR_DECISIONS = ROOT / "paper/data/author-screening-decisions-v0.9.0.csv"
 FORMAL_PROPOSALS = ROOT / "paper/data/formal-screening-proposals-v0.7.0.json"
 FULL_TEXT_LEDGER = ROOT / "paper/data/close-source-full-text-gate-v0.10.0.csv"
 RETRIEVAL_LEDGER = ROOT / "paper/data/inaccessible-record-retrieval-v0.10.0.csv"
+RISK_SAMPLE = ROOT / "paper/data/inaccessible-risk-sample-v0.11.0.csv"
+RISK_SAMPLE_SUMMARY = ROOT / "paper/data/inaccessible-risk-sample-v0.11.0.json"
 INTERFACE_LEDGER = ROOT / "paper/data/authenticated-interface-searches-v0.10.0.csv"
 SUMMARY = ROOT / "paper/data/next-evidence-gates-v0.10.0.json"
 REPORT = ROOT / "paper/next-evidence-gates-v0.10.0.md"
@@ -24,6 +26,12 @@ REPORT = ROOT / "paper/next-evidence-gates-v0.10.0.md"
 AUTHOR = "Mark Julius Banasihan"
 EXPECTED_CLOSE = 27
 EXPECTED_INACCESSIBLE = 1087
+EXPECTED_RISK_SAMPLE = 284
+EXPECTED_RISK_STRATA = {
+    "forward-citation": 102,
+    "backward-reference": 177,
+    "direct-query": 5,
+}
 TERMINAL_FULL_TEXT_STATES = {
     "verified",
     "abstract-only-not-used",
@@ -227,6 +235,32 @@ def inspect() -> tuple[list[str], dict[str, object]]:
         if row["decision_owner"].strip() != AUTHOR:
             errors.append(f'{row["record_key"]}: decision owner must be {AUTHOR}')
 
+    risk_sample = read_csv(RISK_SAMPLE)
+    risk_keys = [row["record_key"] for row in risk_sample]
+    if len(risk_keys) != EXPECTED_RISK_SAMPLE:
+        errors.append(
+            f"risk sample contains {len(risk_keys)} records; expected {EXPECTED_RISK_SAMPLE}"
+        )
+    if len(risk_keys) != len(set(risk_keys)):
+        errors.append("risk sample contains duplicate record keys")
+    unknown_risk_keys = sorted(set(risk_keys) - inaccessible_keys)
+    if unknown_risk_keys:
+        errors.append(f"risk sample contains unknown keys: {unknown_risk_keys}")
+    risk_strata = Counter(row["primary_stratum"] for row in risk_sample)
+    if dict(risk_strata) != EXPECTED_RISK_STRATA:
+        errors.append(
+            f"risk sample stratum allocation mismatch: {dict(risk_strata)}"
+        )
+    if any(row["selection_status"] != "selected-before-retrieval" for row in risk_sample):
+        errors.append("risk sample contains an invalid selection status")
+    risk_summary = json.loads(RISK_SAMPLE_SUMMARY.read_text(encoding="utf-8"))
+    if risk_summary.get("status") != "FROZEN_BEFORE_RETRIEVAL":
+        errors.append("risk sample summary status mismatch")
+    if risk_summary.get("population_size") != EXPECTED_INACCESSIBLE:
+        errors.append("risk sample summary population mismatch")
+    if risk_summary.get("selected_records") != EXPECTED_RISK_SAMPLE:
+        errors.append("risk sample summary selection count mismatch")
+
     interfaces = read_csv(INTERFACE_LEDGER)
     interface_names = [row["surface"] for row in interfaces]
     if len(interface_names) != len(set(interface_names)):
@@ -247,6 +281,7 @@ def inspect() -> tuple[list[str], dict[str, object]]:
     verified = states["verified"]
     open_full_text = states["open"]
     retrieved = len(retrieval)
+    sampled_retrieved = len(set(risk_keys) & set(retrieval_keys))
     interface_counts = Counter(row["status"] for row in interfaces)
     coverage_status = "CLOSED" if retrieved == EXPECTED_INACCESSIBLE else "OPEN"
     interface_status = (
@@ -279,6 +314,14 @@ def inspect() -> tuple[list[str], dict[str, object]]:
                 "records": EXPECTED_INACCESSIBLE,
                 "retrieval_rows_complete": retrieved,
                 "retrieval_rows_open": EXPECTED_INACCESSIBLE - retrieved,
+                "residual_risk_sample": {
+                    "status": "FROZEN_BEFORE_RETRIEVAL",
+                    "selected": EXPECTED_RISK_SAMPLE,
+                    "sampled_retrieval_complete": sampled_retrieved,
+                    "sampled_retrieval_open": EXPECTED_RISK_SAMPLE - sampled_retrieved,
+                    "strata": EXPECTED_RISK_STRATA,
+                    "sample_record": "paper/data/inaccessible-risk-sample-v0.11.0.csv",
+                },
                 "claim_rule": "A completed risk sample estimates residual risk and does not establish exhaustive coverage.",
             },
             "authenticated_interfaces": {
@@ -304,6 +347,7 @@ def report_text(summary: dict[str, object]) -> str:
     gates = summary["gates"]
     full_text = gates["close_source_full_text"]
     inaccessible = gates["inaccessible_record_retrieval"]
+    risk_sample = inaccessible["residual_risk_sample"]
     interfaces = gates["authenticated_interfaces"]
     return f"""# Next Evidence Gates, v0.10.0
 
@@ -323,6 +367,10 @@ The next research cycle addresses support and search coverage before the manuscr
 | Inaccessible-record retrieval | {inaccessible['records']} | {inaccessible['retrieval_rows_complete']} | {inaccessible['retrieval_rows_open']} | `{inaccessible['status']}` |
 | Authenticated and disciplinary interfaces | {interfaces['required_surfaces']} | {interfaces['complete']} | {interfaces['open']} | `{interfaces['status']}` |
 | Independent assessment | 1 study | 0 | 1 | `OPEN`, outside this cycle |
+
+## Residual-risk sample
+
+The sample is frozen before retrieval with {risk_sample['selected']} selected records: {risk_sample['strata']['forward-citation']} forward citations, {risk_sample['strata']['backward-reference']} backward references, and {risk_sample['strata']['direct-query']} direct-query records. Retrieval is complete for {risk_sample['sampled_retrieval_complete']} of {risk_sample['selected']} sampled records. Frozen membership establishes selection lineage. It supplies no retrieval, prevalence, exhaustive-coverage, or originality result.
 
 ## Claim controls
 
@@ -347,7 +395,13 @@ def main() -> int:
 
     if args.initialize:
         initialize_ledgers()
-    required = (FULL_TEXT_LEDGER, RETRIEVAL_LEDGER, INTERFACE_LEDGER)
+    required = (
+        FULL_TEXT_LEDGER,
+        RETRIEVAL_LEDGER,
+        RISK_SAMPLE,
+        RISK_SAMPLE_SUMMARY,
+        INTERFACE_LEDGER,
+    )
     missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
     if missing:
         raise SystemExit("next evidence gates: FAIL\nmissing ledgers: " + ", ".join(missing))

@@ -1,0 +1,45 @@
+{
+  "version": "0.11.0",
+  "status": "FROZEN_BEFORE_RETRIEVAL",
+  "protocol": "protocols/search-coverage-and-full-text-protocol-v0.10.0.md",
+  "selection_date": "2026-08-11",
+  "decision_owner": "Mark Julius Banasihan",
+  "human_responsibility": "Authorized the sampling checkpoint and remains responsible for retrieval, screening, interpretation, and manuscript claims.",
+  "ai_assistance": "Codex drafted the builder and records, computed the deterministic selection, and ran consistency checks under author authorization.",
+  "software_record": "scripts/build_inaccessible_risk_sample_v0_11_0.py",
+  "population_source": "paper/data/formal-screening-proposals-v0.7.0.json",
+  "population_source_sha256": "6d9116947275e5790f17c193e0008be511ed5ff63f0b0902dd2ce92c40ade4e4",
+  "seed": "TAE-v0.10-risk-sample",
+  "digest_rule": "SHA-256 of TAE-v0.10-risk-sample|record_key",
+  "primary_stratum_order": [
+    "forward-citation",
+    "backward-reference",
+    "direct-query"
+  ],
+  "allocation_method": "Hamilton largest-remainder apportionment; equal remainders follow the declared primary-stratum order",
+  "population_size": 1087,
+  "unresolved_at_freeze": 1087,
+  "retrieval_rows_at_freeze": 0,
+  "target_sample_size": 284,
+  "selected_records": 284,
+  "strata": [
+    {
+      "stratum": "forward-citation",
+      "population": 391,
+      "allocation": 102
+    },
+    {
+      "stratum": "backward-reference",
+      "population": 679,
+      "allocation": 177
+    },
+    {
+      "stratum": "direct-query",
+      "population": 17,
+      "allocation": 5
+    }
+  ],
+  "sample_csv": "paper/data/inaccessible-risk-sample-v0.11.0.csv",
+  "sample_csv_sha256": "3580dd82bcd5e077082ac627daef3f44ba7e8cad201a15887f67be5037122d4f",
+  "claim_boundary": "Selection fixes which records receive residual-risk inspection. It supplies no retrieval, screening, prevalence, exhaustive-coverage, or originality result."
+}
