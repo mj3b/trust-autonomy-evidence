@@ -49,6 +49,8 @@ The v0.10.0 release preserves every earlier release artifact and freezes the nex
 
 Post-release work has assigned a terminal state to all 27 retained-close sources: 22 verified full text, 3 abstract-only records, 2 inaccessible records, and no open decisions. This working result closes the first v0.10 evidence gate. It does not change the published v0.10.0 snapshot or resolve the 1,087-record recovery gate.
 
+The v0.11.0 working checkpoint also freezes a 284-record residual-risk sample before retrieval outcomes are known. The sample contains 102 forward citations, 177 backward references, and 5 direct-query records selected by the declared SHA-256 ordering rule. Selection fixes the inspection set; all retrieval and screening results remain open.
+
 ## Featured figure
 
 Figure 2 compares whether assigned human authority became practical control in three historical cases.
@@ -121,6 +123,9 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`paper/author-screening-completion-gate.md`](paper/author-screening-completion-gate.md) | Records progress on the 89 author decisions and controls when final search-flow language becomes eligible. |
 | [`paper/next-evidence-gates-v0.10.0.md`](paper/next-evidence-gates-v0.10.0.md) | Reports the full-text, inaccessible-record, authenticated-interface, and independence gate states. |
 | [`paper/data/close-source-full-text-gate-v0.10.0.csv`](paper/data/close-source-full-text-gate-v0.10.0.csv) | Records one full-text state for each of the 27 retained-close sources. |
+| [`paper/inaccessible-risk-sample-v0.11.0.md`](paper/inaccessible-risk-sample-v0.11.0.md) | Explains the frozen 284-record sample, proportional allocation, reproduction rule, and claim boundary. |
+| [`paper/data/inaccessible-risk-sample-v0.11.0.csv`](paper/data/inaccessible-risk-sample-v0.11.0.csv) | Records each selected key, primary stratum, allocation, digest, rank, origin set, and source metadata. |
+| [`paper/data/inaccessible-risk-sample-v0.11.0.json`](paper/data/inaccessible-risk-sample-v0.11.0.json) | Records the population hash, seed, allocation method, stratum counts, sample hash, and evidence boundary. |
 | [`paper/data/author-screening-gate-v0.8.0.json`](paper/data/author-screening-gate-v0.8.0.json) | Preserves the open author-gate checkpoint published in v0.8.0. |
 | [`paper/data/author-screening-gate-v0.9.0.json`](paper/data/author-screening-gate-v0.9.0.json) | Stores the closed gate, final decision counts, and Figure 5 eligibility state. |
 | [`paper/tables.md`](paper/tables.md) | Publishes compact exact-value tables with captions, notes, and interpretation boundaries. |

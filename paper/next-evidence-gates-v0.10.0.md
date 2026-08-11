@@ -17,6 +17,10 @@ The next research cycle addresses support and search coverage before the manuscr
 | Authenticated and disciplinary interfaces | 5 | 0 | 5 | `OPEN` |
 | Independent assessment | 1 study | 0 | 1 | `OPEN`, outside this cycle |
 
+## Residual-risk sample
+
+The sample is frozen before retrieval with 284 selected records: 102 forward citations, 177 backward references, and 5 direct-query records. Retrieval is complete for 0 of 284 sampled records. Frozen membership establishes selection lineage. It supplies no retrieval, prevalence, exhaustive-coverage, or originality result.
+
 ## Claim controls
 
 1. A title-and-abstract review can support a bounded description of a source's declared purpose, model, or result.

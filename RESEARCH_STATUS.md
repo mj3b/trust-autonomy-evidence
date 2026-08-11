@@ -6,7 +6,7 @@
 
 **Working checkpoint:** 0.11.0 retained-source full-text gate candidate
 
-**Next target:** Address the 1,087 inaccessible records, then complete authenticated-interface coverage
+**Next target:** Retrieve and screen the frozen 284-record risk sample while population-wide recovery continues
 
 **Status:** Published v0.10.0 protocol checkpoint with the retained-source full-text gate closed in the working tree
 
@@ -30,7 +30,7 @@
 | Research lineage | Human and software agents, activities, entities, relations, and AI-assistance log | Published with PROV-O-compatible concepts | Add formal PROV-O or RO-Crate serialization if needed by a publication venue |
 | Claim-evidence figure | One journal-style categorical appendix matrix, derived CSV, SVG, PNG, specification, and v0.9 manifest | Demonstrated for the v0.9.0 audit result | The venue-formatted manuscript preserves its no-score boundary |
 | Oko evidence adjudication | Frozen plan, fixed packet, six reclassifications, change ledger, and six negative controls | Demonstrated for the v0.6.0 decision | Independent review tests the judgment and new eligible evidence triggers a versioned reassessment |
-| Practical human control paper | Author-screened v0.9.0 manuscript candidate, 56-source matrix, frozen formal search, selected-index citation chains, final 89-record decisions, a terminal decision for each of the 27 retained-close sources, 23-proposition literature audit, reader edition, structured tables, ethical burden-of-proof argument, and provisional venue selection | Working manuscript; author and retained-source full-text gates closed | Inaccessible-record review, authenticated searches, and ethics guidance complete; venue-formatted anonymous package passes review |
+| Practical human control paper | Author-screened v0.9.0 manuscript candidate, 56-source matrix, frozen formal search, selected-index citation chains, final 89-record decisions, a terminal decision for each of the 27 retained-close sources, a frozen 284-record risk sample, 23-proposition literature audit, reader edition, structured tables, ethical burden-of-proof argument, and provisional venue selection | Working manuscript; author and retained-source full-text gates closed; risk sample selected | Inaccessible-record review, authenticated searches, and ethics guidance complete; venue-formatted anonymous package passes review |
 | Repository validation | Pinned schema dependency, executable script, and CI workflow | Executable for declared repository checks | CI passes on the published commit |
 | Solo-validation suite | 12 synthetic cases, 252 oracle comparisons, 12 mutation tests, and three invariance tests | Demonstrated for committed fixtures | New case families expose additional boundary and interaction failures |
 | Sealed oracle | SHA-256 manifest for cases, mutations, and expected classifications | Demonstrated for v0.2.0 artifacts | A later release preserves explicit migration and re-sealing records |
@@ -43,11 +43,11 @@ The v0.10.0 release preserves the v0.9 author-screened result and freezes the ne
 
 The paper workspace records an author-screened v0.9.0 candidate and audits 23 material literature propositions. The 56-source matrix includes effective-oversight conditions, institutional design, causal human involvement, ScientistOne, evidence-linked argument graphs, incident-set oversight coding, runnable decision chains, versioned assurance cases, traceable governance, and contemporary agent oversight. The formal open-index search returned 2,431 deduplicated records, and selected-seed Semantic Scholar chains are complete within recorded index limits. Six main figures, four appendix figures, and seven structured manuscript tables expose relationships, exact states, final screening counts, correction history, and the absence of reliability evidence. Authenticated databases, disciplinary interfaces, and 1,087 inaccessible records remain open, so the manuscript makes no originality finding. The released v0.3.0 assessment remains unchanged as version history.
 
-The v0.10 gate record separates screening relevance from claim support. All 27 retained-close sources now have a terminal decision: 22 have a verified full-text review basis, 3 are restricted to abstract-level use, and 2 remain inaccessible after the recorded retrieval paths. The protocol also freezes recovery of the 1,087 inaccessible records, a 284-record residual-risk sample when unresolved records remain, and five authenticated or disciplinary-interface searches. Independent assessment remains open outside this cycle.
+The v0.10 gate record separates screening relevance from claim support. All 27 retained-close sources now have a terminal decision: 22 have a verified full-text review basis, 3 are restricted to abstract-level use, and 2 remain inaccessible after the recorded retrieval paths. The v0.11 working checkpoint freezes the 284-record residual-risk sample while all 1,087 records remain unresolved. Its allocation is 102 forward citations, 177 backward references, and 5 direct-query records. No sampled retrieval result has been entered. Five authenticated or disciplinary-interface searches and independent assessment remain open.
 
 ## Next evidence gates
 
-1. Address the 1,087 inaccessible records with the frozen retrieval and risk-sampling procedure.
+1. Retrieve and screen the frozen 284-record sample while applying the population-wide recovery procedure to all 1,087 inaccessible records.
 2. Complete authenticated Scopus or Web of Science and disciplinary-interface searches.
 3. Obtain applicable ethics guidance and approve affiliation, funding, and competing-interest statements.
 4. Create the anonymous *AI and Ethics* submission package and manuscript-specific archive.

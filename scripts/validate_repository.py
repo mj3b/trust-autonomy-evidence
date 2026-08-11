@@ -187,11 +187,14 @@ REQUIRED_FILES = (
     "paper/review-record-v0.9.0.md",
     "paper/author-screening-completion-gate.md",
     "paper/next-evidence-gates-v0.10.0.md",
+    "paper/inaccessible-risk-sample-v0.11.0.md",
     "paper/data/author-screening-gate-v0.8.0.json",
     "paper/data/author-screening-decisions-v0.9.0.csv",
     "paper/data/author-screening-gate-v0.9.0.json",
     "paper/data/close-source-full-text-gate-v0.10.0.csv",
     "paper/data/inaccessible-record-retrieval-v0.10.0.csv",
+    "paper/data/inaccessible-risk-sample-v0.11.0.csv",
+    "paper/data/inaccessible-risk-sample-v0.11.0.json",
     "paper/data/authenticated-interface-searches-v0.10.0.csv",
     "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",
@@ -211,6 +214,7 @@ REQUIRED_FILES = (
     "scripts/validate_author_screening_gate.py",
     "scripts/build_author_screening_decisions_v0_9_0.py",
     "scripts/validate_next_evidence_gates.py",
+    "scripts/build_inaccessible_risk_sample_v0_11_0.py",
     "paper/claim-crosswalk.md",
     "paper/scientistone-artifact-pressure-test.md",
     ".github/pull_request_template.md",
@@ -593,6 +597,17 @@ def validate_paper_workspace(failures: list[str]) -> str:
     return result.stdout.strip()
 
 
+def validate_inaccessible_risk_sample(failures: list[str]) -> str:
+    result = subprocess.run(
+        [sys.executable, "scripts/build_inaccessible_risk_sample_v0_11_0.py", "--check"],
+        cwd=ROOT, text=True, capture_output=True, check=False,
+    )
+    if result.returncode != 0:
+        fail(f"inaccessible risk sample failed: {(result.stdout + result.stderr).strip()}", failures)
+        return ""
+    return result.stdout.strip()
+
+
 def main() -> int:
     failures: list[str] = []
     validate_required_files(failures)
@@ -613,6 +628,7 @@ def main() -> int:
     adjudication_result = validate_adjudication(failures)
     literature_result = validate_literature(failures)
     formal_search_result = validate_formal_search(failures)
+    risk_sample_result = validate_inaccessible_risk_sample(failures)
     paper_result = validate_paper_workspace(failures)
 
     if failures:
@@ -639,6 +655,8 @@ def main() -> int:
         print(literature_result)
     if formal_search_result:
         print(formal_search_result)
+    if risk_sample_result:
+        print(risk_sample_result)
     if paper_result:
         print(paper_result)
     print("repository validation: PASS")

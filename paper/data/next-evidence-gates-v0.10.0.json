@@ -21,6 +21,18 @@
       "records": 1087,
       "retrieval_rows_complete": 0,
       "retrieval_rows_open": 1087,
+      "residual_risk_sample": {
+        "status": "FROZEN_BEFORE_RETRIEVAL",
+        "selected": 284,
+        "sampled_retrieval_complete": 0,
+        "sampled_retrieval_open": 284,
+        "strata": {
+          "forward-citation": 102,
+          "backward-reference": 177,
+          "direct-query": 5
+        },
+        "sample_record": "paper/data/inaccessible-risk-sample-v0.11.0.csv"
+      },
       "claim_rule": "A completed risk sample estimates residual risk and does not establish exhaustive coverage."
     },
     "authenticated_interfaces": {
