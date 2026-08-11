@@ -1,6 +1,6 @@
 # Paper Workspace
 
-This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. The v0.9.0 working state closes the 89-record author gate, rebuilds Figure 5 from final decisions, expands the close-source map, narrows the contribution, and reruns the claim-evidence audit. The manuscript remains a working submission candidate. Released case packets, assessments, and manifests remain the controlling research record.
+This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. The v0.10.0 protocol checkpoint preserves the v0.9 author-screened manuscript and freezes the full-text, inaccessible-record, and authenticated-interface gates before new results are known. The manuscript remains a working submission candidate. Released case packets, assessments, and manifests remain the controlling research record.
 
 **PR #11 merge commit:** [`a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec`](https://github.com/mj3b/trust-autonomy-evidence/commit/a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec)
 

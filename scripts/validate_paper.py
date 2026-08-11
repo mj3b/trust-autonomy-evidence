@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the v0.9.0 practical human control paper workspace."""
+"""Validate the v0.10.0 protocol-checkpoint paper workspace."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ QUESTION = (
     "public incident record?"
 )
 VERSION_DOI = "10.5281/zenodo.21865007"
-REPOSITORY_VERSION = "0.9.0"
+REPOSITORY_VERSION = "0.10.0"
 PAPER_FILES = (
     "paper/README.md",
     "paper/paper-charter.md",
