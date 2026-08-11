@@ -19,6 +19,7 @@ FULL_TEXT_LEDGER = ROOT / "paper/data/close-source-full-text-gate-v0.10.0.csv"
 RETRIEVAL_LEDGER = ROOT / "paper/data/inaccessible-record-retrieval-v0.10.0.csv"
 RISK_SAMPLE = ROOT / "paper/data/inaccessible-risk-sample-v0.11.0.csv"
 RISK_SAMPLE_SUMMARY = ROOT / "paper/data/inaccessible-risk-sample-v0.11.0.json"
+DIRECT_QUERY_EVIDENCE = ROOT / "paper/data/direct-query-retrieval-evidence-v0.11.0.json"
 INTERFACE_LEDGER = ROOT / "paper/data/authenticated-interface-searches-v0.10.0.csv"
 SUMMARY = ROOT / "paper/data/next-evidence-gates-v0.10.0.json"
 REPORT = ROOT / "paper/next-evidence-gates-v0.10.0.md"
@@ -46,6 +47,15 @@ ALLOWED_RETRIEVAL_OUTCOMES = {
     "duplicate",
     "outside-cutoff",
     "unavailable",
+}
+RECOVERED_CONTENT_OUTCOMES = {"abstract-recovered", "full-text-recovered"}
+ALLOWED_SCREENING_DECISIONS = {
+    "retain-close",
+    "retain-background",
+    "exclude-single-component",
+    "exclude-topic",
+    "exclude-record-type",
+    "inaccessible",
 }
 REQUIRED_INTERFACES = {
     "scopus-or-web-of-science",
@@ -234,6 +244,20 @@ def inspect() -> tuple[list[str], dict[str, object]]:
             errors.append(f'{row["record_key"]}: retrieval row lacks {blank}')
         if row["decision_owner"].strip() != AUTHOR:
             errors.append(f'{row["record_key"]}: decision owner must be {AUTHOR}')
+        screening_decision = row["screening_decision"].strip()
+        if screening_decision and screening_decision not in ALLOWED_SCREENING_DECISIONS:
+            errors.append(
+                f'{row["record_key"]}: invalid screening decision {screening_decision!r}'
+            )
+        if (
+            row["retrieval_outcome"] in RECOVERED_CONTENT_OUTCOMES
+            and not screening_decision
+            and not row["author_notes"].startswith("OPEN:")
+        ):
+            errors.append(
+                f'{row["record_key"]}: recovered content without a screening decision '
+                "must preserve an OPEN note"
+            )
 
     risk_sample = read_csv(RISK_SAMPLE)
     risk_keys = [row["record_key"] for row in risk_sample]
@@ -261,6 +285,70 @@ def inspect() -> tuple[list[str], dict[str, object]]:
     if risk_summary.get("selected_records") != EXPECTED_RISK_SAMPLE:
         errors.append("risk sample summary selection count mismatch")
 
+    direct_query_keys = {
+        row["record_key"] for row in risk_sample if row["primary_stratum"] == "direct-query"
+    }
+    direct_query_evidence = json.loads(DIRECT_QUERY_EVIDENCE.read_text(encoding="utf-8"))
+    evidence_records = direct_query_evidence.get("records", [])
+    evidence_keys = [row.get("record_key", "") for row in evidence_records]
+    if direct_query_evidence.get("status") != "PARTIAL_SCREENING":
+        errors.append("direct-query evidence status mismatch")
+    if len(evidence_keys) != len(set(evidence_keys)):
+        errors.append("direct-query evidence contains duplicate record keys")
+    if set(evidence_keys) != direct_query_keys:
+        errors.append("direct-query evidence does not match the frozen direct-query stratum")
+    evidence_outcomes = Counter(row.get("retrieval_outcome", "") for row in evidence_records)
+    evidence_decisions = Counter(
+        row.get("screening_decision")
+        for row in evidence_records
+        if row.get("screening_decision")
+    )
+    expected_evidence_counts = {
+        "records": len(evidence_records),
+        "full_text_recovered": evidence_outcomes["full-text-recovered"],
+        "abstract_recovered": evidence_outcomes["abstract-recovered"],
+        "screening_complete": sum(evidence_decisions.values()),
+        "screening_open": len(evidence_records) - sum(evidence_decisions.values()),
+        "retain_close": evidence_decisions["retain-close"],
+        "retain_background": evidence_decisions["retain-background"],
+    }
+    if direct_query_evidence.get("counts") != expected_evidence_counts:
+        errors.append("direct-query evidence counts do not match its records")
+    retrieval_by_key = {row["record_key"]: row for row in retrieval}
+    for evidence_row in evidence_records:
+        key = evidence_row.get("record_key", "")
+        evidence_required = (
+            "sample_id",
+            "title",
+            "retrieval_outcome",
+            "retrieval_locator",
+            "review_basis",
+            "screening_rationale",
+            "limits",
+            "decision_owner",
+            "ai_assistance",
+        )
+        evidence_blank = [field for field in evidence_required if not evidence_row.get(field)]
+        if evidence_blank:
+            errors.append(f"{key}: direct-query evidence lacks {evidence_blank}")
+        if not evidence_row.get("routes_checked"):
+            errors.append(f"{key}: direct-query evidence lacks checked routes")
+        if not evidence_row.get("source_evidence"):
+            errors.append(f"{key}: direct-query evidence lacks source observations")
+        ledger_row = retrieval_by_key.get(key)
+        if ledger_row is None:
+            errors.append(f"{key}: direct-query evidence lacks a retrieval-ledger row")
+            continue
+        expected_decision = evidence_row.get("screening_decision") or ""
+        for field, expected in (
+            ("retrieval_outcome", evidence_row.get("retrieval_outcome", "")),
+            ("retrieval_locator", evidence_row.get("retrieval_locator", "")),
+            ("screening_decision", expected_decision),
+            ("decision_owner", evidence_row.get("decision_owner", "")),
+        ):
+            if ledger_row[field] != expected:
+                errors.append(f"{key}: direct-query evidence disagrees with ledger field {field}")
+
     interfaces = read_csv(INTERFACE_LEDGER)
     interface_names = [row["surface"] for row in interfaces]
     if len(interface_names) != len(set(interface_names)):
@@ -281,7 +369,27 @@ def inspect() -> tuple[list[str], dict[str, object]]:
     verified = states["verified"]
     open_full_text = states["open"]
     retrieved = len(retrieval)
+    retrieval_outcomes = Counter(row["retrieval_outcome"] for row in retrieval)
+    recovered_rows = [
+        row for row in retrieval if row["retrieval_outcome"] in RECOVERED_CONTENT_OUTCOMES
+    ]
+    screening_decisions = Counter(
+        row["screening_decision"] for row in recovered_rows if row["screening_decision"]
+    )
+    screening_required = len(recovered_rows)
+    screening_complete = sum(screening_decisions.values())
     sampled_retrieved = len(set(risk_keys) & set(retrieval_keys))
+    sampled_rows = [row for row in retrieval if row["record_key"] in set(risk_keys)]
+    sampled_screening_required = sum(
+        row["retrieval_outcome"] in RECOVERED_CONTENT_OUTCOMES for row in sampled_rows
+    )
+    sampled_screening_complete = sum(
+        row["retrieval_outcome"] in RECOVERED_CONTENT_OUTCOMES
+        and bool(row["screening_decision"])
+        for row in sampled_rows
+    )
+    direct_query_rows = [row for row in retrieval if row["record_key"] in direct_query_keys]
+    direct_query_screening_complete = sum(bool(row["screening_decision"]) for row in direct_query_rows)
     interface_counts = Counter(row["status"] for row in interfaces)
     coverage_status = "CLOSED" if retrieved == EXPECTED_INACCESSIBLE else "OPEN"
     interface_status = (
@@ -314,13 +422,32 @@ def inspect() -> tuple[list[str], dict[str, object]]:
                 "records": EXPECTED_INACCESSIBLE,
                 "retrieval_rows_complete": retrieved,
                 "retrieval_rows_open": EXPECTED_INACCESSIBLE - retrieved,
+                "retrieval_outcomes": dict(sorted(retrieval_outcomes.items())),
+                "recovered_content_requiring_screening": screening_required,
+                "screening_decisions_complete": screening_complete,
+                "screening_decisions_open": screening_required - screening_complete,
+                "screening_decisions": dict(sorted(screening_decisions.items())),
+                "recovered_close_sources": screening_decisions["retain-close"],
                 "residual_risk_sample": {
                     "status": "FROZEN_BEFORE_RETRIEVAL",
                     "selected": EXPECTED_RISK_SAMPLE,
                     "sampled_retrieval_complete": sampled_retrieved,
                     "sampled_retrieval_open": EXPECTED_RISK_SAMPLE - sampled_retrieved,
+                    "sampled_screening_required": sampled_screening_required,
+                    "sampled_screening_complete": sampled_screening_complete,
+                    "sampled_screening_open": (
+                        sampled_screening_required - sampled_screening_complete
+                    ),
                     "strata": EXPECTED_RISK_STRATA,
                     "sample_record": "paper/data/inaccessible-risk-sample-v0.11.0.csv",
+                },
+                "direct_query_tranche": {
+                    "status": "PARTIAL_SCREENING",
+                    "selected": len(direct_query_keys),
+                    "retrieval_complete": len(direct_query_rows),
+                    "screening_complete": direct_query_screening_complete,
+                    "screening_open": len(direct_query_rows) - direct_query_screening_complete,
+                    "evidence_record": "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
                 },
                 "claim_rule": "A completed risk sample estimates residual risk and does not establish exhaustive coverage.",
             },
@@ -348,6 +475,7 @@ def report_text(summary: dict[str, object]) -> str:
     full_text = gates["close_source_full_text"]
     inaccessible = gates["inaccessible_record_retrieval"]
     risk_sample = inaccessible["residual_risk_sample"]
+    direct_query = inaccessible["direct_query_tranche"]
     interfaces = gates["authenticated_interfaces"]
     return f"""# Next Evidence Gates, v0.10.0
 
@@ -370,7 +498,11 @@ The next research cycle addresses support and search coverage before the manuscr
 
 ## Residual-risk sample
 
-The sample is frozen before retrieval with {risk_sample['selected']} selected records: {risk_sample['strata']['forward-citation']} forward citations, {risk_sample['strata']['backward-reference']} backward references, and {risk_sample['strata']['direct-query']} direct-query records. Retrieval is complete for {risk_sample['sampled_retrieval_complete']} of {risk_sample['selected']} sampled records. Frozen membership establishes selection lineage. It supplies no retrieval, prevalence, exhaustive-coverage, or originality result.
+The sample is frozen before retrieval with {risk_sample['selected']} selected records: {risk_sample['strata']['forward-citation']} forward citations, {risk_sample['strata']['backward-reference']} backward references, and {risk_sample['strata']['direct-query']} direct-query records. Retrieval outcomes are recorded for {risk_sample['sampled_retrieval_complete']} of {risk_sample['selected']} sampled records. Recovered content requires screening for {risk_sample['sampled_screening_required']} records; {risk_sample['sampled_screening_complete']} decisions are recorded and {risk_sample['sampled_screening_open']} {'remains' if risk_sample['sampled_screening_open'] == 1 else 'remain'} open. Frozen membership establishes selection lineage. The current partial result supplies no prevalence, exhaustive-coverage, or originality finding.
+
+## Direct-query tranche
+
+The five-record direct-query stratum has {direct_query['retrieval_complete']} retrieval outcomes, {direct_query['screening_complete']} bounded screening decisions, and {direct_query['screening_open']} open decision. One screened record is `retain-close` and remains limited to its abstract until full text is inspected. The [tranche report](direct-query-retrieval-tranche-v0.11.0.md) and [machine-readable evidence record](data/direct-query-retrieval-evidence-v0.11.0.json) preserve the route, basis, decision, and limit for each record.
 
 ## Claim controls
 
@@ -382,7 +514,7 @@ The sample is frozen before retrieval with {risk_sample['selected']} selected re
 
 ## Current finding
 
-The 89-decision author gate resolved screening accountability. The retained-close full-text gate is now closed with {full_text['verified']} verified sources, {full_text['abstract_only_not_used']} abstract-only sources quarantined from stronger use, {full_text['excluded_after_full_text']} exclusions after full-text review, and {full_text['inaccessible']} inaccessible sources. Search retrieval created a separate unresolved set of {inaccessible['records']} records without abstracts. These evidence problems remain separate and require separate ledgers.
+The 89-decision author gate resolved screening accountability. The retained-close full-text gate is now closed with {full_text['verified']} verified sources, {full_text['abstract_only_not_used']} abstract-only sources quarantined from stronger use, {full_text['excluded_after_full_text']} exclusions after full-text review, and {full_text['inaccessible']} inaccessible sources. Gate 2 has recorded {inaccessible['retrieval_rows_complete']} retrieval outcomes and leaves {inaccessible['retrieval_rows_open']} records unresolved. Its recovered content has {inaccessible['screening_decisions_complete']} decisions and {inaccessible['screening_decisions_open']} open decision. The newly recovered close source remains quarantined from claims that exceed its abstract. These evidence problems remain separate and require separate ledgers.
 """
 
 
@@ -400,6 +532,7 @@ def main() -> int:
         RETRIEVAL_LEDGER,
         RISK_SAMPLE,
         RISK_SAMPLE_SUMMARY,
+        DIRECT_QUERY_EVIDENCE,
         INTERFACE_LEDGER,
     )
     missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]

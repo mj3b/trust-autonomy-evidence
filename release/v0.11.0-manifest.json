@@ -50,13 +50,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 23780,
-      "sha256": "3d933f27f7014ad24797fa94960085267a8a1659d8aff155bf782a22672d6ae9"
+      "bytes": 24850,
+      "sha256": "dabaece64eb0d6b7512ab6dfc944f2cb4d6579e38fe1452bc9748a9ee9bc1dc5"
     },
     {
       "path": "RESEARCH_STATUS.md",
-      "bytes": 8296,
-      "sha256": "8c72f87b713a229be525638789285aad1450e20f092b170d55ee96c32da95d6d"
+      "bytes": 8649,
+      "sha256": "4cc2c0e3d0e5af8bb2bcbe2f748845e32f11767e9dcce908bf3ca3aad5f48f15"
     },
     {
       "path": "CLAIMS.md",
@@ -80,8 +80,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 13315,
-      "sha256": "442c40061d977288736bc077875f9a4cfda28da4c017323726ea94413bf06105"
+      "bytes": 13761,
+      "sha256": "05727c79cfccec2439c9972fee22b7c1f225c565be49b0d557078f6e4592c67a"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -172,6 +172,11 @@
       "path": "research/agenda-discovery-log-v0.10.0.md",
       "bytes": 4191,
       "sha256": "9991f72dcfd83cad2e9a09bbf99bf52929ac1cc2e97ea831c40e1915ebb72f39"
+    },
+    {
+      "path": "research/agenda-discovery-log-v0.11.0.md",
+      "bytes": 2573,
+      "sha256": "24483afb6b0660673b0f6b84a30b6f08cf619ecb8b1ca7f500910167827c2d36"
     },
     {
       "path": "evidence/claim-evidence-map.json",
@@ -280,8 +285,8 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 8571,
-      "sha256": "02c9c1d43e47b05efe9e64c0b64c9638a37b2a290d19989614863567b2df6511"
+      "bytes": 9080,
+      "sha256": "5dcce6653621eb54f5172c53be132a6560e089f53189e96385b9c6bce9584281"
     },
     {
       "path": "paper/paper-charter.md",
@@ -320,13 +325,18 @@
     },
     {
       "path": "paper/next-evidence-gates-v0.10.0.md",
-      "bytes": 2099,
-      "sha256": "9541ee48e956ea6001686b4909348afea7c47b8bae04f6e566c94be3e31c1ec7"
+      "bytes": 2824,
+      "sha256": "5335f6936911a0cf2c864517bf8e655bbf3897a3eb0ef771cb396ed14af355b1"
     },
     {
       "path": "paper/inaccessible-risk-sample-v0.11.0.md",
       "bytes": 2450,
       "sha256": "7b79a578bffcd9201443e6e00007dd04c31105182905847662b266af9527b76a"
+    },
+    {
+      "path": "paper/direct-query-retrieval-tranche-v0.11.0.md",
+      "bytes": 4601,
+      "sha256": "096f29d38a33e8417191fb79e996b839d473b33235dc2b91c6e38169027290a0"
     },
     {
       "path": "paper/tables.md",
@@ -340,8 +350,8 @@
     },
     {
       "path": "paper/literature-matrix.md",
-      "bytes": 26426,
-      "sha256": "739c43558bc32c7e09815b8ba6dc8003fdf6c3dc25d612bad5a814fdc4e06e2d"
+      "bytes": 28853,
+      "sha256": "0f01b489a23678f7474169178d71b152ff5b28191175790f6e049614eafa4779"
     },
     {
       "path": "paper/literature-search-log.md",
@@ -410,8 +420,8 @@
     },
     {
       "path": "paper/data/inaccessible-record-retrieval-v0.10.0.csv",
-      "bytes": 124,
-      "sha256": "71c76d2a4329411513c523e446a55cbe85e987dc1881d53581ba929adff28ff4"
+      "bytes": 3688,
+      "sha256": "625c17b85966540132956355d2eb40ba84afb57cb4252c8b910ffb65c3092f59"
     },
     {
       "path": "paper/data/inaccessible-risk-sample-v0.11.0.csv",
@@ -424,14 +434,19 @@
       "sha256": "01c3d0bb268b241c054f659a815db17104cca88f090cec743d0428d957f28af6"
     },
     {
+      "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
+      "bytes": 9114,
+      "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986"
+    },
+    {
       "path": "paper/data/authenticated-interface-searches-v0.10.0.csv",
       "bytes": 638,
       "sha256": "ba8bf6189531c90210a8121b36ecaa44235e64810c4e71f2348f8864823fbc19"
     },
     {
       "path": "paper/data/next-evidence-gates-v0.10.0.json",
-      "bytes": 1697,
-      "sha256": "4a2eb4de66b71903ce16f54a0207e0d85bfb4b65d46e81dff41c6f4289a0924b"
+      "bytes": 2466,
+      "sha256": "25115520b8aec770c39c474377b0420656b10ecd2387561dbf63d076f614451f"
     },
     {
       "path": "paper/literature-support-audit-v0.7.0.json",
@@ -455,8 +470,8 @@
     },
     {
       "path": "paper/novelty-audit.md",
-      "bytes": 11872,
-      "sha256": "43c86f6bd18adbeb1c894143e3e2f3f31604fbc300229eeea0de1fcc2ee23b5e"
+      "bytes": 13551,
+      "sha256": "008441086f203d4fd43aaf9569b96a9684bcca275c0bd8156f304905d688a62a"
     },
     {
       "path": "paper/references.bib",
@@ -465,8 +480,8 @@
     },
     {
       "path": "paper/claim-evidence-register.md",
-      "bytes": 11617,
-      "sha256": "0abb69f95f169aa35c38eda3aaebae7966bba54766b7a4e60d11164acbeca7a9"
+      "bytes": 12322,
+      "sha256": "853664c6c2ee9a9f392d32f4af6870b7c79f098da3fa5c8c97386cd5f5072625"
     },
     {
       "path": "paper/claim-crosswalk.md",
@@ -715,8 +730,8 @@
     },
     {
       "path": "scripts/build_release_manifest.py",
-      "bytes": 7638,
-      "sha256": "68de319ea22bc735ca3abe0c21f823cd582faa938a6b1bedfd47b4b3b7a9d5d6"
+      "bytes": 7796,
+      "sha256": "6d5894ebfed0df8f286ecaeedf0d4e7b50242ab6700481b6e18655e086d874a5"
     },
     {
       "path": "scripts/render_reader_manuscript.py",
@@ -735,8 +750,8 @@
     },
     {
       "path": "scripts/validate_next_evidence_gates.py",
-      "bytes": 19706,
-      "sha256": "65bb14036ae2c9bf03eb9e0ae1dd626cf476a9f1530542ed9d6e770842fdd941"
+      "bytes": 27568,
+      "sha256": "974a27c05dd59fcf93ab85ef7bcd460714df7a301c49433821d2cb1500c83c4a"
     },
     {
       "path": "scripts/build_inaccessible_risk_sample_v0_11_0.py",
@@ -755,8 +770,8 @@
     },
     {
       "path": "scripts/validate_paper.py",
-      "bytes": 9404,
-      "sha256": "4cb7e7649e2a245f92035cb052c14bf3145cb0c7711351d7cad040438c49654d"
+      "bytes": 9682,
+      "sha256": "11f308e3808bd0596144d3961c6a7483aa4a8b1131516408aa6b9be62f7dfea4"
     },
     {
       "path": "scripts/validate_literature_support.py",

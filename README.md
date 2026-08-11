@@ -19,7 +19,7 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 ## Current contribution
 
-[Version 0.10.0](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.10.0) contributes twenty-one connected artifacts:
+[Version 0.10.0](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.10.0) and the v0.11.0 working checkpoint contribute twenty-two connected artifacts:
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
@@ -34,7 +34,7 @@ The project develops an evidence architecture for bounded reliance. It identifie
 11. An executable integrity audit that applies five checks and detects 14 prespecified corruptions without changing the released case packets.
 12. A research-lineage record, activity log, audit report, and claim-evidence matrix that preserve authorship, AI assistance, open exceptions, and conclusion eligibility.
 13. A prereassessment Oko adjudication protocol, frozen evidence universe, six-stage reassessment, and machine-readable change ledger.
-14. A 56-source working literature matrix and sentence-level audit covering the registered literature propositions in the full review draft.
+14. A 60-source working literature matrix and sentence-level audit covering the registered literature propositions in the full review draft.
 15. A frozen formal search containing eight direct queries, fifteen citation seeds, 2,431 deduplicated records, and a closed 89-record author-decision gate.
 16. A full methods manuscript with results, discussion, institutional implications, ethics, limitations, and AI-assistance disclosure.
 17. A structured table package that preserves exact states and counts in Markdown and journal-ready `booktabs` fragments.
@@ -42,14 +42,15 @@ The project develops an evidence architecture for bounded reliance. It identifie
 19. A 27-source full-text ledger that separates eight verified records from nineteen open title-and-abstract reviews.
 20. A frozen recovery and residual-risk protocol for 1,087 inaccessible records, plus accountable logs for five authenticated or disciplinary interfaces.
 21. A research-agenda discovery log and a 154-artifact release seal that preserve the v0.9 audit while the v0.10 gates remain open.
+22. A five-record direct-query retrieval tranche with route-level evidence, four bounded screening decisions, one open author review, and an executable ledger cross-check.
 
-All 252 determinations and 12 original mutation tests pass under the committed contract. The v0.6.0 adjudication detects all six prespecified corruptions. The v0.9 integrity audit maps 20 material claims and detects all 14 prespecified claim-map corruptions. Two exceptions remain: no independent assessment and incomplete literature-search coverage. The author gate is closed at 89 of 89 decisions. Another 1,087 records lack abstracts and remain open. These results establish internal contract behavior and traceability for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, source truth, originality, or improved outcomes.
+All 252 determinations and 12 original mutation tests pass under the committed contract. The v0.6.0 adjudication detects all six prespecified corruptions. The v0.9 integrity audit maps 20 material claims and detects all 14 prespecified claim-map corruptions. Two exceptions remain: no independent assessment and incomplete literature-search coverage. The author gate is closed at 89 of 89 decisions. The inaccessible-record recovery population contains 1,087 records; five direct-query outcomes are recorded and 1,082 retrieval outcomes remain open. These results establish internal contract behavior and traceability for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, source truth, originality, or improved outcomes.
 
 The v0.10.0 release preserves every earlier release artifact and freezes the next evidence checkpoint before new results are known. Eight of the 27 retained-close sources have a recorded full-text review basis, leaving 19 open. The protocol controls those reviews, recovery of the 1,087 inaccessible records, a reproducible residual-risk sample, and five authenticated or disciplinary-interface searches. The earlier case packets, the v0.3.0 Oko assessment, and the released v0.9 claim audit remain unchanged. Independent assessment remains a separate validity question.
 
 Post-release work has assigned a terminal state to all 27 retained-close sources: 22 verified full text, 3 abstract-only records, 2 inaccessible records, and no open decisions. This working result closes the first v0.10 evidence gate. It does not change the published v0.10.0 snapshot or resolve the 1,087-record recovery gate.
 
-The v0.11.0 working checkpoint also freezes a 284-record residual-risk sample before retrieval outcomes are known. The sample contains 102 forward citations, 177 backward references, and 5 direct-query records selected by the declared SHA-256 ordering rule. Selection fixes the inspection set; all retrieval and screening results remain open.
+The v0.11.0 working checkpoint freezes a 284-record residual-risk sample before retrieval outcomes are known. The sample contains 102 forward citations, 177 backward references, and 5 direct-query records selected by the declared SHA-256 ordering rule. The direct-query stratum now has five retrieval outcomes, four screening decisions, and one open author review. The other 279 sampled records remain open.
 
 ## Featured figure
 
@@ -115,6 +116,7 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`research/`](research/) | Contains the main conceptual paper on justified reliance, autonomy, and practical control. |
 | [`research/frozen-research-agenda.md`](research/frozen-research-agenda.md) | Freezes three research topics and one project question for the next public-case cycle. |
 | [`research/agenda-discovery-log-v0.10.0.md`](research/agenda-discovery-log-v0.10.0.md) | Records findings that changed the work sequence while preserving the frozen topics and question. |
+| [`research/agenda-discovery-log-v0.11.0.md`](research/agenda-discovery-log-v0.11.0.md) | Records retrieval findings about inspectability, preserved provenance, parallel intervention paths, and the Patriot-adjacent close source. |
 | [`paper/`](paper/) | Develops the methods paper, formal search, claim register, literature audit, structured tables, references, and publication decisions. |
 | [`paper/manuscript-reader.md`](paper/manuscript-reader.md) | Renders the manuscript's citation identifiers as clickable author-year citations with a reference list. |
 | [`paper/manuscript-pressure-test-v0.8.0.md`](paper/manuscript-pressure-test-v0.8.0.md) | Records citation, count, claim, reliability, ethics, and submission-gate findings. |
@@ -126,6 +128,8 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`paper/inaccessible-risk-sample-v0.11.0.md`](paper/inaccessible-risk-sample-v0.11.0.md) | Explains the frozen 284-record sample, proportional allocation, reproduction rule, and claim boundary. |
 | [`paper/data/inaccessible-risk-sample-v0.11.0.csv`](paper/data/inaccessible-risk-sample-v0.11.0.csv) | Records each selected key, primary stratum, allocation, digest, rank, origin set, and source metadata. |
 | [`paper/data/inaccessible-risk-sample-v0.11.0.json`](paper/data/inaccessible-risk-sample-v0.11.0.json) | Records the population hash, seed, allocation method, stratum counts, sample hash, and evidence boundary. |
+| [`paper/direct-query-retrieval-tranche-v0.11.0.md`](paper/direct-query-retrieval-tranche-v0.11.0.md) | Explains the five direct-query recoveries, four screening decisions, source limits, paper effects, and next action. |
+| [`paper/data/direct-query-retrieval-evidence-v0.11.0.json`](paper/data/direct-query-retrieval-evidence-v0.11.0.json) | Records the route, locator, review basis, source observations, decision, assistance, and limit for each direct-query record. |
 | [`paper/data/author-screening-gate-v0.8.0.json`](paper/data/author-screening-gate-v0.8.0.json) | Preserves the open author-gate checkpoint published in v0.8.0. |
 | [`paper/data/author-screening-gate-v0.9.0.json`](paper/data/author-screening-gate-v0.9.0.json) | Stores the closed gate, final decision counts, and Figure 5 eligibility state. |
 | [`paper/tables.md`](paper/tables.md) | Publishes compact exact-value tables with captions, notes, and interpretation boundaries. |

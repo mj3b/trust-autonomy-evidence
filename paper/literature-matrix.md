@@ -6,7 +6,7 @@ Which prior work most closely addresses the distinction between formal human aut
 
 ## Status
 
-The initial 15-source set was checked against publisher pages, DOI records, conference proceedings, or institutional repositories on 8 August 2026. The PR #11 pressure test added eight near-neighbors. The v0.5 review added ScientistOne. The v0.6 review added four close sources on oversight effectiveness, compliance testing, assurance audits, and oversight architecture. The frozen v0.7 search added thirteen sources through direct queries, citation chaining, and official-source checking. The v0.9 author review adds fifteen close sources from the 77-record attention queue. This matrix is a structured working set. The formal search record discloses its index and screening limits.
+The initial 15-source set was checked against publisher pages, DOI records, conference proceedings, or institutional repositories on 8 August 2026. The PR #11 pressure test added eight near-neighbors. The v0.5 review added ScientistOne. The v0.6 review added four close sources on oversight effectiveness, compliance testing, assurance audits, and oversight architecture. The frozen v0.7 search added thirteen sources through direct queries, citation chaining, and official-source checking. The v0.9 author review adds fifteen close sources from the 77-record attention queue. The v0.11 direct-query recovery adds three background sources and one close source; one retrieved source remains open for author screening. This matrix is a structured working set. The formal search record discloses its index and screening limits.
 
 | ID | Stream and source | What it contributes | Relationship to this paper | Boundary or difference |
 |---|---|---|---|---|
@@ -87,6 +87,15 @@ The initial 15-source set was checked against publisher pages, DOI records, conf
 | L55 | Rights-based assurance: [Niazi, Hassani, and Lee (2026)](https://doi.org/10.3390/automation7030096) | Defines a versioned assurance case linking claims, assumptions, evidence, control points, and a trace that tests practical override. | Is a close neighbor for versioned control evidence and practical-force testing. | It is a prospective governance framework without the paper's frozen public-case selection and correction history. |
 | L56 | Non-delegable decision points: [Lehle and Kaesmayr (2026)](https://doi.org/10.54941/ahfe1008078) | Declares non-delegable human decisions and reproducible per-step audit artifacts for AI-assisted expert work. | Supports the paper's authority and recordkeeping implications. | Title-and-abstract review only; no incident-level evidence adjudication was established. |
 
+## v0.11 direct-query recovery additions
+
+| ID | Stream and source | What it contributes | Relationship to this paper | Boundary or difference |
+|---|---|---|---|---|
+| L57 | Algorithmic-war ethics: [Emery (2019)](https://escholarship.org/uc/item/7kc7d41v) | Traces how algorithmic targeting, quantified risk, and distance from lethal action can displace practical judgment while leaving an ethical-control narrative intact. | Supplies historical and normative background for the difference between assigned responsibility and practical human judgment. | The full dissertation does not disclose the paper's frozen public-evidence assessment procedure. |
+| L58 | LAWS compliance: [Homayounnejad (2017)](https://doi.org/10.2139/ssrn.3073893) | Places meaningful human control inside international-humanitarian-law analysis of distinction, proportionality, precautions, and lawful LAWS use. | Supplies legal background for why earlier command judgment and operational precautions matter when human action is removed from the strike site. | Abstract-only review; detailed propositions require full-text inspection. |
+| L59 | Intervention-path integrity: [Zabounidis et al. (2026)](https://openreview.net/forum?id=NKgNizwDa6) | Shows that a corrected human-readable concept may fail to change a model output when an opaque residual path retains the same information. | Supplies a technical mechanism for distinguishing available intervention from intervention with causal force. | Tests concept-residual model architecture across datasets, not human performance, institutions, or public incident packets. |
+| L60 | Human performance in autonomous warfare: [Gielas (2025)](https://doi.org/10.1080/00396338.2025.2534284) | Challenges vague loop labels, centers operator cognitive readiness, proposes a human-in-the-mesh model, and names the Patriot system. | Is a close comparison for the paper's practical-control mechanism and case-family interpretation. | Abstract-only review. No detailed mechanism comparison is eligible until full text is inspected. |
+
 ## Provisional synthesis
 
 The literature establishes five propositions relevant to the manuscript:
@@ -96,14 +105,15 @@ The literature establishes five propositions relevant to the manuscript:
 3. Human performance under automation is conditional and can degrade when oversight becomes rare, compressed, or poorly supported.
 4. Incident analysis requires records capable of testing alternative causal explanations.
 5. Assurance claims require structured arguments, traceable evidence, assumptions, and uncertainty.
+6. A nominal correction can lose causal force when another information path still determines the output.
 
-The proposed paper's remaining contribution is narrower than PR #11 stated. Prior work already supplies control conditions, causal-role taxonomies, oversight-performance models, institutional-design principles, compliance-testing cautions, retrospective reconstruction, public AI-incident analysis, assurance logic, forensic evidence controls, claim traceability, evidence-linked argument graphs, and oversight architectures. The paper studies one governance-specific integration: a frozen public-case procedure that connects candidate selection, source provenance, categorical missingness, practical-control stages, versioned adjudication, claim-specific evidence fitness, conclusion dependency closure, and executable artifact checks.
+The proposed paper's remaining contribution is narrower than PR #11 stated. Prior work already supplies control conditions, causal-role taxonomies, oversight-performance models, institutional-design principles, compliance-testing cautions, retrospective reconstruction, public AI-incident analysis, assurance logic, forensic evidence controls, claim traceability, evidence-linked argument graphs, oversight architectures, human-performance critiques of loop labels, and model-level tests of intervention-path integrity. The paper studies one governance-specific integration: a frozen public-case procedure that connects candidate selection, source provenance, categorical missingness, practical-control stages, versioned adjudication, claim-specific evidence fitness, conclusion dependency closure, and executable artifact checks.
 
 ## Remaining search gate
 
 The formal open-index search and selected-index citation chains are recorded in [`formal-citation-chain-v0.7.0.md`](formal-citation-chain-v0.7.0.md). The 89-record author queue is complete. Before a contribution claim can be described as the result of a completed multidisciplinary search, the project must still:
 
-- review the inaccessible-record risk created by 1,087 records without abstracts;
+- review the remaining 1,082 records without a recorded retrieval outcome and resolve two direct-query source limits;
 - search Scopus or Web of Science through authenticated access;
 - complete the declared disciplinary-interface log for IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index.
 

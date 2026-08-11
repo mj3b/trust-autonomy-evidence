@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seal the v0.11.0 retained-source full-text gate candidate."""
+"""Seal the v0.11.0 direct-query retrieval candidate."""
 
 from __future__ import annotations
 
@@ -46,6 +46,7 @@ CORE = (
     "research/trust-autonomy-and-evidence.md",
     "research/chain-of-evidence-adaptation.md",
     "research/agenda-discovery-log-v0.10.0.md",
+    "research/agenda-discovery-log-v0.11.0.md",
     "evidence/claim-evidence-map.json",
     "evidence/research-lineage.json",
     "evidence/research-activity-log.json",
@@ -80,6 +81,7 @@ PAPER = (
     "paper/author-screening-completion-gate.md",
     "paper/next-evidence-gates-v0.10.0.md",
     "paper/inaccessible-risk-sample-v0.11.0.md",
+    "paper/direct-query-retrieval-tranche-v0.11.0.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
     "paper/literature-matrix.md",
@@ -99,6 +101,7 @@ PAPER = (
     "paper/data/inaccessible-record-retrieval-v0.10.0.csv",
     "paper/data/inaccessible-risk-sample-v0.11.0.csv",
     "paper/data/inaccessible-risk-sample-v0.11.0.json",
+    "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
     "paper/data/authenticated-interface-searches-v0.10.0.csv",
     "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",
