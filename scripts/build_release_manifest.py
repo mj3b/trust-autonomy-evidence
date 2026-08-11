@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seal the v0.9.0 author-screened manuscript candidate."""
+"""Seal the v0.10.0 literature evidence-gate candidate."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "release" / "v0.9.0-manifest.json"
+OUTPUT = ROOT / "release" / "v0.10.0-manifest.json"
 
 CORE = (
     "release/v0.3.0-manifest.json",
@@ -18,6 +18,7 @@ CORE = (
     "release/v0.6.0-manifest.json",
     "release/v0.7.0-manifest.json",
     "release/v0.8.0-manifest.json",
+    "release/v0.9.0-manifest.json",
     "README.md",
     "RESEARCH_STATUS.md",
     "CLAIMS.md",
@@ -33,6 +34,7 @@ CORE = (
     "protocols/practical-human-control-test.md",
     "protocols/coe-integrity-audit.md",
     "protocols/oko-evidence-adjudication-v0.6.0.md",
+    "protocols/search-coverage-and-full-text-protocol-v0.10.0.md",
     "schemas/claim-evidence-map.schema.json",
     "schemas/research-lineage.schema.json",
     "schemas/coe-audit-result.schema.json",
@@ -41,6 +43,7 @@ CORE = (
     "fixtures/coe-audit-mutations.json",
     "research/trust-autonomy-and-evidence.md",
     "research/chain-of-evidence-adaptation.md",
+    "research/agenda-discovery-log-v0.10.0.md",
     "evidence/claim-evidence-map.json",
     "evidence/research-lineage.json",
     "evidence/research-activity-log.json",
@@ -73,6 +76,7 @@ PAPER = (
     "paper/review-record-v0.8.0.md",
     "paper/review-record-v0.9.0.md",
     "paper/author-screening-completion-gate.md",
+    "paper/next-evidence-gates-v0.10.0.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
     "paper/literature-matrix.md",
@@ -88,6 +92,10 @@ PAPER = (
     "paper/data/author-screening-gate-v0.8.0.json",
     "paper/data/author-screening-decisions-v0.9.0.csv",
     "paper/data/author-screening-gate-v0.9.0.json",
+    "paper/data/close-source-full-text-gate-v0.10.0.csv",
+    "paper/data/inaccessible-record-retrieval-v0.10.0.csv",
+    "paper/data/authenticated-interface-searches-v0.10.0.csv",
+    "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",
     "paper/literature-support-audit-v0.7.0.md",
     "paper/literature-support-audit-v0.9.0.json",
@@ -148,6 +156,7 @@ VALIDATION = (
     "scripts/render_reader_manuscript.py",
     "scripts/validate_author_screening_gate.py",
     "scripts/build_author_screening_decisions_v0_9_0.py",
+    "scripts/validate_next_evidence_gates.py",
     "scripts/validate_repository.py",
     "scripts/validate_release_snapshot.py",
     "scripts/validate_paper.py",
@@ -178,8 +187,8 @@ def main() -> int:
             raise FileNotFoundError(relative)
         artifacts.append({"path": relative, "bytes": path.stat().st_size, "sha256": digest(path)})
     result = {
-        "version": "0.9.0",
-        "created": "2026-08-10",
+        "version": "0.10.0",
+        "created": "2026-08-11",
         "hash_algorithm": "SHA-256",
         "artifacts": artifacts,
     }

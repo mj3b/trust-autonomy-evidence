@@ -44,6 +44,8 @@ All 252 determinations and 12 original mutation tests pass under the committed c
 
 The v0.9.0 release preserves every earlier release artifact. It adds 89 accountable screening decisions, a final Figure 5 search flow, a proposal-to-author decision table, fifteen close-source matrix entries, a narrower contribution boundary, and a rebuilt Figure A3. The earlier case packets and v0.3.0 Oko assessment remain unchanged.
 
+Post-release work has opened the next evidence checkpoint. Eight of the 27 retained-close sources have a recorded full-text review basis, leaving 19 open. A frozen v0.10 protocol now controls those reviews, recovery of the 1,087 inaccessible records, a reproducible residual-risk sample, and five authenticated or disciplinary-interface searches. Independent assessment remains a separate validity question.
+
 ## Featured figure
 
 Figure 2 compares whether assigned human authority became practical control in three historical cases.
@@ -107,12 +109,15 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`GOVERNANCE.md`](GOVERNANCE.md) | Define contribution evidence, review rules, decision authority, and change records. |
 | [`research/`](research/) | Contains the main conceptual paper on justified reliance, autonomy, and practical control. |
 | [`research/frozen-research-agenda.md`](research/frozen-research-agenda.md) | Freezes three research topics and one project question for the next public-case cycle. |
+| [`research/agenda-discovery-log-v0.10.0.md`](research/agenda-discovery-log-v0.10.0.md) | Records findings that changed the work sequence while preserving the frozen topics and question. |
 | [`paper/`](paper/) | Develops the methods paper, formal search, claim register, literature audit, structured tables, references, and publication decisions. |
 | [`paper/manuscript-reader.md`](paper/manuscript-reader.md) | Renders the manuscript's citation identifiers as clickable author-year citations with a reference list. |
 | [`paper/manuscript-pressure-test-v0.8.0.md`](paper/manuscript-pressure-test-v0.8.0.md) | Records citation, count, claim, reliability, ethics, and submission-gate findings. |
 | [`paper/review-record-v0.8.0.md`](paper/review-record-v0.8.0.md) | Records author authorization, reviewed additions, support decisions, and publication limits. |
 | [`paper/review-record-v0.9.0.md`](paper/review-record-v0.9.0.md) | Records the 89 author decisions, contribution decision, source boundary, and remaining search limits. |
 | [`paper/author-screening-completion-gate.md`](paper/author-screening-completion-gate.md) | Records progress on the 89 author decisions and controls when final search-flow language becomes eligible. |
+| [`paper/next-evidence-gates-v0.10.0.md`](paper/next-evidence-gates-v0.10.0.md) | Reports the full-text, inaccessible-record, authenticated-interface, and independence gate states. |
+| [`paper/data/close-source-full-text-gate-v0.10.0.csv`](paper/data/close-source-full-text-gate-v0.10.0.csv) | Records one full-text state for each of the 27 retained-close sources. |
 | [`paper/data/author-screening-gate-v0.8.0.json`](paper/data/author-screening-gate-v0.8.0.json) | Preserves the open author-gate checkpoint published in v0.8.0. |
 | [`paper/data/author-screening-gate-v0.9.0.json`](paper/data/author-screening-gate-v0.9.0.json) | Stores the closed gate, final decision counts, and Figure 5 eligibility state. |
 | [`paper/tables.md`](paper/tables.md) | Publishes compact exact-value tables with captions, notes, and interpretation boundaries. |
@@ -122,6 +127,7 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`evidence/research-lineage.json`](evidence/research-lineage.json) | Records people, software, research activities, artifacts, and relations using PROV-O-compatible concepts. |
 | [`protocols/`](protocols/) | Defines solo validation, independent review, public-case reconstruction, practical control, and claim-evidence integrity procedures. |
 | [`protocols/coe-integrity-audit.md`](protocols/coe-integrity-audit.md) | Defines the five claim gates, four adapted CoE checks, repository-specific closure check, negative controls, and conclusion rule. |
+| [`protocols/search-coverage-and-full-text-protocol-v0.10.0.md`](protocols/search-coverage-and-full-text-protocol-v0.10.0.md) | Freezes full-text verification, inaccessible-record recovery, residual-risk sampling, and authenticated-interface completion rules. |
 | [`protocols/public-case-reconstruction-protocol.md`](protocols/public-case-reconstruction-protocol.md) | Freezes the source cutoff, candidate pools, eligibility rules, screening order, and reconstruction procedure before case selection. |
 | [`cases/`](cases/) | Publishes three case packets, their provenance manifests, assessments, hashes, and admissibility requirements. |
 | [`cases/public-case-selection-register.md`](cases/public-case-selection-register.md) | Preserves the frozen collection hashes and every inclusion or exclusion in screening order. |

@@ -1,14 +1,14 @@
 # Research Status
 
-**Version:** 0.9.0
+**Version:** 0.10.0 evidence-gate candidate
 
 **Latest published version:** 0.9.0
 
-**Next target:** Resolve search-coverage risk from inaccessible records and authenticated databases
+**Next target:** Close or quarantine 19 retained-close sources, then resolve inaccessible-record and authenticated-interface coverage
 
-**Status:** Published author-screened repository checkpoint
+**Status:** Published v0.9.0 checkpoint with v0.10 evidence-gate work in progress
 
-**Status date:** 10 August 2026
+**Status date:** 11 August 2026
 
 ## Current maturity
 
@@ -41,11 +41,13 @@ The v0.9.0 release closes the 89-record author gate while preserving the v0.7 fo
 
 The paper workspace records an author-screened v0.9.0 candidate and audits 23 material literature propositions. The 56-source matrix includes effective-oversight conditions, institutional design, causal human involvement, ScientistOne, evidence-linked argument graphs, incident-set oversight coding, runnable decision chains, versioned assurance cases, traceable governance, and contemporary agent oversight. The formal open-index search returned 2,431 deduplicated records, and selected-seed Semantic Scholar chains are complete within recorded index limits. Six main figures, four appendix figures, and seven structured manuscript tables expose relationships, exact states, final screening counts, correction history, and the absence of reliability evidence. Authenticated databases, disciplinary interfaces, and 1,087 inaccessible records remain open, so the manuscript makes no originality finding. The released v0.3.0 assessment remains unchanged as version history.
 
+The post-release v0.10 gate record separates screening relevance from claim support. The 27 retained-close sources contain 8 records with a full-text review basis and 19 title-and-abstract reviews. The new protocol freezes full-text verification, recovery of the 1,087 inaccessible records, a 284-record residual-risk sample when unresolved records remain, and five authenticated or disciplinary-interface searches. Independent assessment remains open outside this cycle.
+
 ## Next evidence gates
 
-1. Address the 1,087 inaccessible records with a prespecified retrieval and risk-sampling procedure.
-2. Complete authenticated Scopus or Web of Science and disciplinary-interface searches.
-3. Verify full text for every close source that will support a substantive manuscript claim.
+1. Close or quarantine the 19 retained-close sources without a recorded full-text review basis.
+2. Address the 1,087 inaccessible records with the frozen retrieval and risk-sampling procedure.
+3. Complete authenticated Scopus or Web of Science and disciplinary-interface searches.
 4. Obtain applicable ethics guidance and approve affiliation, funding, and competing-interest statements.
 5. Create the anonymous *AI and Ethics* submission package and manuscript-specific archive.
 6. Add a new frozen case family that tests a different institution, sector, and system architecture.

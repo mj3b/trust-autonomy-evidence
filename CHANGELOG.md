@@ -4,6 +4,15 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
+Freezes the next literature evidence gates after the v0.9 author-screening release.
+
+- Separates screening relevance from full-text support and records 8 verified and 19 open sources across the 27 retained-close records.
+- Adds a machine-readable full-text ledger that blocks substantive claim use until a source has a verified locator, reviewer, date, notes, and assistance disclosure.
+- Freezes a recovery procedure for the 1,087 inaccessible records and a reproducible 284-record residual-risk sample when unresolved records remain.
+- Adds accountable logs for Scopus or Web of Science, ACM Digital Library, IEEE Xplore, PhilPapers, and HeinOnline or Harvard HOLLIS.
+- Records eight findings that changed the research sequence while retaining the frozen topics, project question, and released case packets.
+- Adds an executable validator for the full-text, inaccessible-record, and authenticated-interface gates.
+
 ## 0.9.0, 10 August 2026
 
 Closes the declared author-screening gate and narrows the paper against fifteen additional close sources.
