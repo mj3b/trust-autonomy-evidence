@@ -4,6 +4,8 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 
 ## Unreleased
 
+## 0.10.0, 11 August 2026
+
 Freezes the next literature evidence gates after the v0.9 author-screening release.
 
 - Separates screening relevance from full-text support and records 8 verified and 19 open sources across the 27 retained-close records.

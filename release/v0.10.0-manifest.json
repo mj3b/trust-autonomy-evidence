@@ -39,14 +39,19 @@
       "sha256": "4d2f945814fe50a09cd9dc14b22658527fe4ac0a8129a6082329bf52a7599435"
     },
     {
+      "path": "release/v0.10.0-release-notes.md",
+      "bytes": 2012,
+      "sha256": "884664224fe6c1783578e88ef7db2a1f3b60db5aa113a3938caceaa34ed4970d"
+    },
+    {
       "path": "README.md",
-      "bytes": 21991,
-      "sha256": "0afaa66d2c935f14de6c148067f5f61467a198e80c330228b38a6aed3fb72acf"
+      "bytes": 22484,
+      "sha256": "9e025a5156981e96b62cc2da4abae8447046d4934844ed6b4aa3a49245091549"
     },
     {
       "path": "RESEARCH_STATUS.md",
-      "bytes": 7935,
-      "sha256": "f5f21c4af82a7f16794d9f615587ec70067256c72c809ca791368e19a256d788"
+      "bytes": 7813,
+      "sha256": "24952d464f7150738a3c1aaa2edef99b9c998066aba517e45bf2647e494679b8"
     },
     {
       "path": "CLAIMS.md",
@@ -65,13 +70,13 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 791,
-      "sha256": "ec822ea4929fa95488276b4503e25a1d9e45f0ba5660770d6e0a198b89bb1e72"
+      "bytes": 822,
+      "sha256": "01cf605d126ac5362ff80be9e97ead241d73b0b32205b9583ad8db58df09d471"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 12822,
-      "sha256": "b72e525ac82cb6c429514bdaa091969f383fa47ebeca01dff14e4c2eff82235b"
+      "bytes": 12849,
+      "sha256": "e5ed0c623a9b287109ddc3c8c7e8d7aba353adc5c49dfa93b2f0109c7da6375f"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -270,8 +275,8 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 7933,
-      "sha256": "049e96e237219ae8bf989a58e82faca8e745c486307cf19ebb23f3ffafc02745"
+      "bytes": 7931,
+      "sha256": "c294c6a5436e134482116ed5a5aa267968d80c4cdacea7bd0016178a1887a985"
     },
     {
       "path": "paper/paper-charter.md",
@@ -690,8 +695,8 @@
     },
     {
       "path": "scripts/build_release_manifest.py",
-      "bytes": 7338,
-      "sha256": "209e286a09fcb0c6465b84b01a6cc621cf1c557a8e00515e819d0014b149b38f"
+      "bytes": 7376,
+      "sha256": "fbf411b4e704d9613a4483e9df1af5bef1e06d19a126caf846218e1782fd5fbb"
     },
     {
       "path": "scripts/render_reader_manuscript.py",
@@ -715,8 +720,8 @@
     },
     {
       "path": "scripts/validate_repository.py",
-      "bytes": 27476,
-      "sha256": "d1d646ea16fb09d9390dddbc70dbae1f5af5894825107d71ddd45c02842c75fb"
+      "bytes": 27517,
+      "sha256": "35acdccfaba27964b437c462c153bdcd193e010041ec3bfd195df79ec8b9c8c0"
     },
     {
       "path": "scripts/validate_release_snapshot.py",
@@ -725,8 +730,8 @@
     },
     {
       "path": "scripts/validate_paper.py",
-      "bytes": 9406,
-      "sha256": "4a1591771e48f3187b24eb9f808ad7963d386e4d101029a4b2b8d0cd4c22cc09"
+      "bytes": 9404,
+      "sha256": "4cb7e7649e2a245f92035cb052c14bf3145cb0c7711351d7cad040438c49654d"
     },
     {
       "path": "scripts/validate_literature_support.py",

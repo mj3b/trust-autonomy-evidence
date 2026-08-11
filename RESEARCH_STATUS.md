@@ -1,12 +1,12 @@
 # Research Status
 
-**Version:** 0.10.0 evidence-gate candidate
+**Version:** 0.10.0
 
-**Latest published version:** 0.9.0
+**Latest published version:** 0.10.0
 
 **Next target:** Close or quarantine 19 retained-close sources, then resolve inaccessible-record and authenticated-interface coverage
 
-**Status:** Published v0.9.0 checkpoint with v0.10 evidence-gate work in progress
+**Status:** Published evidence-gate protocol checkpoint
 
 **Status date:** 11 August 2026
 
@@ -37,11 +37,11 @@
 
 ## Research phase
 
-The v0.9.0 release closes the 89-record author gate while preserving the v0.7 formal search and v0.6 Oko correction. The current twenty-claim integrity audit returns `PASS_WITH_EXCEPTIONS`, with all fourteen controlled corruptions detected. Final author-screening results are eligible within the declared queue. Independent validity, inaccessible-record review, and authenticated database coverage remain open. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, source truth, originality, and harm prevention remain unresolved.
+The v0.10.0 release preserves the v0.9 author-screened result and freezes the next literature evidence gates before new retrieval and full-text decisions. The released twenty-claim v0.9 integrity audit returns `PASS_WITH_EXCEPTIONS`, with all fourteen controlled corruptions detected. A full v0.10 claim audit remains pending until the new gates advance. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, source truth, originality, and harm prevention remain unresolved.
 
 The paper workspace records an author-screened v0.9.0 candidate and audits 23 material literature propositions. The 56-source matrix includes effective-oversight conditions, institutional design, causal human involvement, ScientistOne, evidence-linked argument graphs, incident-set oversight coding, runnable decision chains, versioned assurance cases, traceable governance, and contemporary agent oversight. The formal open-index search returned 2,431 deduplicated records, and selected-seed Semantic Scholar chains are complete within recorded index limits. Six main figures, four appendix figures, and seven structured manuscript tables expose relationships, exact states, final screening counts, correction history, and the absence of reliability evidence. Authenticated databases, disciplinary interfaces, and 1,087 inaccessible records remain open, so the manuscript makes no originality finding. The released v0.3.0 assessment remains unchanged as version history.
 
-The post-release v0.10 gate record separates screening relevance from claim support. The 27 retained-close sources contain 8 records with a full-text review basis and 19 title-and-abstract reviews. The new protocol freezes full-text verification, recovery of the 1,087 inaccessible records, a 284-record residual-risk sample when unresolved records remain, and five authenticated or disciplinary-interface searches. Independent assessment remains open outside this cycle.
+The v0.10 gate record separates screening relevance from claim support. The 27 retained-close sources contain 8 records with a full-text review basis and 19 title-and-abstract reviews. The protocol freezes full-text verification, recovery of the 1,087 inaccessible records, a 284-record residual-risk sample when unresolved records remain, and five authenticated or disciplinary-interface searches. Independent assessment remains open outside this cycle.
 
 ## Next evidence gates
 

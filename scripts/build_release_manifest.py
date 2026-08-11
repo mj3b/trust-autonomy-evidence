@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seal the v0.10.0 literature evidence-gate candidate."""
+"""Seal the v0.10.0 literature evidence-gate release."""
 
 from __future__ import annotations
 
@@ -19,6 +19,7 @@ CORE = (
     "release/v0.7.0-manifest.json",
     "release/v0.8.0-manifest.json",
     "release/v0.9.0-manifest.json",
+    "release/v0.10.0-release-notes.md",
     "README.md",
     "RESEARCH_STATUS.md",
     "CLAIMS.md",

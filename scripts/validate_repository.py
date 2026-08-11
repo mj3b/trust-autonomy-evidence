@@ -14,8 +14,9 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.9.0"
+REPOSITORY_VERSION = "0.10.0"
 WORKING_VERSION = "0.10.0"
+FIGURE_VERSION = "0.9.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
 REQUIRED_FILES = (
@@ -145,6 +146,7 @@ REQUIRED_FILES = (
     "release/v0.8.0-manifest.json",
     "release/v0.9.0-manifest.json",
     "release/v0.10.0-manifest.json",
+    "release/v0.10.0-release-notes.md",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -264,7 +266,7 @@ def validate_internal_links(failures: list[str]) -> None:
 def validate_versions(failures: list[str]) -> None:
     required_markers = {
         "README.md": f"Version: {REPOSITORY_VERSION}",
-        "RESEARCH_STATUS.md": f"**Version:** {WORKING_VERSION} evidence-gate candidate",
+        "RESEARCH_STATUS.md": f"**Version:** {REPOSITORY_VERSION}",
         "CITATION.cff": f"version: {REPOSITORY_VERSION}",
         "CHANGELOG.md": f"## {REPOSITORY_VERSION}",
     }
@@ -498,7 +500,7 @@ def validate_figure_set(failures: list[str]) -> str:
     identifiers = [row.get("figure_id") for row in figures]
     stubs = [row.get("file_stub") for row in figures]
     expected_identifiers = ["FIG-1", "FIG-2", "FIG-3", "FIG-4", "FIG-5", "FIG-6", "FIG-A1", "FIG-A2", "FIG-A4"]
-    if register.get("version") != REPOSITORY_VERSION or register.get("source_release") != "0.8.0":
+    if register.get("version") != FIGURE_VERSION or register.get("source_release") != "0.8.0":
         fail("figure register version or source release mismatch", failures)
     if identifiers != expected_identifiers:
         fail(f"figure register identifier mismatch: {identifiers}", failures)

@@ -1,7 +1,7 @@
 # Trust, Autonomy, and Evidence
 
 [![Status: Working Research](https://img.shields.io/badge/status-working%20research-5b6cff)](RESEARCH_STATUS.md)
-[![Version: 0.9.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
+[![Version: 0.10.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21841127.svg)](https://doi.org/10.5281/zenodo.21841127)
 [![Validation](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml/badge.svg)](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
@@ -19,7 +19,7 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 ## Current contribution
 
-[Version 0.9.0](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.9.0) contributes eighteen connected artifacts:
+[Version 0.10.0](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.10.0) contributes twenty-one connected artifacts:
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
@@ -39,12 +39,13 @@ The project develops an evidence architecture for bounded reliance. It identifie
 16. A full methods manuscript with results, discussion, institutional implications, ethics, limitations, and AI-assistance disclosure.
 17. A structured table package that preserves exact states and counts in Markdown and journal-ready `booktabs` fragments.
 18. A paper-readiness package that keeps independent assessment, inaccessible-record review, authenticated database coverage, and ethics guidance outside the supported claim set.
+19. A 27-source full-text ledger that separates eight verified records from nineteen open title-and-abstract reviews.
+20. A frozen recovery and residual-risk protocol for 1,087 inaccessible records, plus accountable logs for five authenticated or disciplinary interfaces.
+21. A research-agenda discovery log and a 154-artifact release seal that preserve the v0.9 audit while the v0.10 gates remain open.
 
 All 252 determinations and 12 original mutation tests pass under the committed contract. The v0.6.0 adjudication detects all six prespecified corruptions. The v0.9 integrity audit maps 20 material claims and detects all 14 prespecified claim-map corruptions. Two exceptions remain: no independent assessment and incomplete literature-search coverage. The author gate is closed at 89 of 89 decisions. Another 1,087 records lack abstracts and remain open. These results establish internal contract behavior and traceability for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, source truth, originality, or improved outcomes.
 
-The v0.9.0 release preserves every earlier release artifact. It adds 89 accountable screening decisions, a final Figure 5 search flow, a proposal-to-author decision table, fifteen close-source matrix entries, a narrower contribution boundary, and a rebuilt Figure A3. The earlier case packets and v0.3.0 Oko assessment remain unchanged.
-
-Post-release work has opened the next evidence checkpoint. Eight of the 27 retained-close sources have a recorded full-text review basis, leaving 19 open. A frozen v0.10 protocol now controls those reviews, recovery of the 1,087 inaccessible records, a reproducible residual-risk sample, and five authenticated or disciplinary-interface searches. Independent assessment remains a separate validity question.
+The v0.10.0 release preserves every earlier release artifact and freezes the next evidence checkpoint before new results are known. Eight of the 27 retained-close sources have a recorded full-text review basis, leaving 19 open. The protocol controls those reviews, recovery of the 1,087 inaccessible records, a reproducible residual-risk sample, and five authenticated or disciplinary-interface searches. The earlier case packets, the v0.3.0 Oko assessment, and the released v0.9 claim audit remain unchanged. Independent assessment remains a separate validity question.
 
 ## Featured figure
 
@@ -145,6 +146,7 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`audits/v0.6.0/`](audits/v0.6.0/) | Preserves the earlier 15-claim audit as version history. |
 | [`scripts/`](scripts/) | Contains candidate-search, packet-sealing, release-manifest, repository-validation, paper-validation, and integrity-audit utilities. |
 | [`release/`](release/) | Seals each versioned research package with SHA-256 digests while preserving earlier releases. |
+| [`release/v0.10.0-release-notes.md`](release/v0.10.0-release-notes.md) | Explains why the protocol checkpoint is released before the new evidence gates close. |
 | [`mappings/`](mappings/) | Relates this work to GDI, HIT, CDFI, and CDCF governance artifacts. |
 | [`.github/`](.github/) | Defines automated validation, the pull-request checklist, and structured issue forms. |
 | [`requirements-dev.txt`](requirements-dev.txt) and [`LICENSE`](LICENSE) | Pin the validation dependency and state the Apache-2.0 license. |
@@ -185,11 +187,11 @@ Contributions should identify the proposition being changed, the evidence suppor
 
 ## Citation
 
-Version 0.9.0 is the current release. Its version-specific DOI remains pending. Until that DOI is recorded, use the all-versions DOI and identify v0.9.0 as the repository version used for the author-screened manuscript, figures, tables, claim map, and integrity audit.
+Version 0.10.0 is the current evidence-gate protocol release. Its version-specific DOI remains pending. Until that DOI is recorded, use the all-versions DOI and identify v0.10.0 as the repository version used for the frozen full-text and search-coverage protocol. The manuscript, figures, claim map, and integrity audit remain at their declared earlier versions.
 
-> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.9.0) [Computer software]. Zenodo. Version DOI pending.
+> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.10.0) [Computer software]. Zenodo. Version DOI pending.
 
-The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata in [CITATION.cff](CITATION.cff) identifies v0.9.0. Earlier releases remain available through the Zenodo record history.
+The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version. Machine-readable metadata in [CITATION.cff](CITATION.cff) identifies v0.10.0. Earlier releases remain available through the Zenodo record history.
 
 ## Author
 
