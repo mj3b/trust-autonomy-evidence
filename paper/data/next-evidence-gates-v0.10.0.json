@@ -5,11 +5,15 @@
   "source_release": "v0.9.0",
   "gates": {
     "close_source_full_text": {
-      "status": "OPEN",
+      "status": "CLOSED",
       "records": 27,
-      "verified": 8,
-      "open": 19,
-      "terminal_without_verification": 0,
+      "terminal": 27,
+      "verified": 22,
+      "abstract_only_not_used": 3,
+      "excluded_after_full_text": 0,
+      "inaccessible": 2,
+      "open": 0,
+      "terminal_without_verification": 5,
       "claim_rule": "Only verified full text may support a proposition that exceeds the abstract."
     },
     "inaccessible_record_retrieval": {
