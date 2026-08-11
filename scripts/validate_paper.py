@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the v0.10.0 protocol-checkpoint paper workspace."""
+"""Validate the v0.11.0 direct-query and claim-control paper workspace."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ QUESTION = (
     "public incident record?"
 )
 VERSION_DOI = "10.5281/zenodo.21865007"
-REPOSITORY_VERSION = "0.10.0"
+REPOSITORY_VERSION = "0.11.0"
 PAPER_FILES = (
     "paper/README.md",
     "paper/paper-charter.md",
@@ -61,6 +61,11 @@ PAPER_FILES = (
     "paper/data/inaccessible-risk-sample-v0.11.0.csv",
     "paper/data/inaccessible-risk-sample-v0.11.0.json",
     "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
+    "evidence/human-review-attestation-v0.11.0.json",
+    "evidence/claim-evidence-map.json",
+    "audits/v0.11.0/audit-results.json",
+    "audits/v0.11.0/audit-report.md",
+    "release/v0.11.0-release-notes.md",
     "paper/data/authenticated-interface-searches-v0.10.0.csv",
     "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",

@@ -1,0 +1,78 @@
+{
+  "version": "0.11.0",
+  "attestation_id": "TAE-HUMAN-REVIEW-V0.11.0",
+  "reviewer": "Mark Julius Banasihan",
+  "review_date": "2026-08-11",
+  "authorization_scope": "Implement the v0.11 claim-traceability, evidence-fitness, integrity-audit, pull-request, merge, and release recommendations.",
+  "review_basis": "The reviewer received the five-record results, the declared source-review bases, the proposed screening decisions, the identified metadata and full-text limits, and the audit-gap analysis before authorizing this release work.",
+  "ai_assistance": "Codex performed the recorded source retrieval and inspection, proposed the screening decisions and claim states, drafted the evidence records, and ran the executable checks. Mark Julius Banasihan remains the decision owner.",
+  "screening_decisions": [
+    {
+      "sample_id": "RS-DQ-001",
+      "decision": "retain-background",
+      "support_review": "recorded",
+      "scope": "Bounded working decision based on the recorded full-text evidence summary. This attestation does not represent independent source verification."
+    },
+    {
+      "sample_id": "RS-DQ-002",
+      "decision": "retain-background",
+      "support_review": "recorded",
+      "scope": "Bounded working decision restricted to the publisher abstract. This attestation does not authorize detailed proposition use."
+    },
+    {
+      "sample_id": "RS-DQ-003",
+      "decision": "retain-background",
+      "support_review": "recorded",
+      "scope": "Bounded working decision based on the recorded official full-text evidence summary. Institutional transfer remains unresolved."
+    },
+    {
+      "sample_id": "RS-DQ-004",
+      "decision": null,
+      "support_review": "open",
+      "scope": "The rendered source requires readable-text review and author-identity resolution before a substantive decision."
+    },
+    {
+      "sample_id": "RS-DQ-005",
+      "decision": "retain-close",
+      "support_review": "recorded",
+      "scope": "Bounded working decision restricted to the publisher abstract and official issue summary. Detailed comparison requires full text."
+    }
+  ],
+  "claim_attestations": [
+    {
+      "claim_id": "PAPER-C27",
+      "support_review": "recorded",
+      "scope": "The attestation covers the five-record counts and ledger state."
+    },
+    {
+      "claim_id": "PAPER-C28",
+      "support_review": "recorded",
+      "scope": "The attestation covers the bounded Emery source description recorded from the inspected dissertation."
+    },
+    {
+      "claim_id": "PAPER-C29",
+      "support_review": "recorded",
+      "scope": "The attestation covers the Homayounnejad abstract's declared purpose and scope."
+    },
+    {
+      "claim_id": "PAPER-C30",
+      "support_review": "recorded",
+      "scope": "The attestation covers the bounded Zabounidis et al. model-architecture finding."
+    },
+    {
+      "claim_id": "PAPER-C31",
+      "support_review": "recorded",
+      "scope": "The attestation covers the Gielas abstract's declared argument and model."
+    },
+    {
+      "claim_id": "PAPER-C32",
+      "support_review": "recorded",
+      "scope": "The reviewer accepts the statement as a provisional synthesis. Evidence fitness keeps it outside conclusions about institutions or public incidents."
+    }
+  ],
+  "limits": [
+    "The attestation records accountable author authorization and supplies no independent review.",
+    "AI-assisted source inspection remains disclosed for every new source claim.",
+    "The attestation does not remove abstract-only, unreadable-text, source-truth, transfer, or population limits."
+  ]
+}

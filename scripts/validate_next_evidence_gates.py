@@ -20,6 +20,7 @@ RETRIEVAL_LEDGER = ROOT / "paper/data/inaccessible-record-retrieval-v0.10.0.csv"
 RISK_SAMPLE = ROOT / "paper/data/inaccessible-risk-sample-v0.11.0.csv"
 RISK_SAMPLE_SUMMARY = ROOT / "paper/data/inaccessible-risk-sample-v0.11.0.json"
 DIRECT_QUERY_EVIDENCE = ROOT / "paper/data/direct-query-retrieval-evidence-v0.11.0.json"
+HUMAN_REVIEW_ATTESTATION = ROOT / "evidence/human-review-attestation-v0.11.0.json"
 INTERFACE_LEDGER = ROOT / "paper/data/authenticated-interface-searches-v0.10.0.csv"
 SUMMARY = ROOT / "paper/data/next-evidence-gates-v0.10.0.json"
 REPORT = ROOT / "paper/next-evidence-gates-v0.10.0.md"
@@ -349,6 +350,38 @@ def inspect() -> tuple[list[str], dict[str, object]]:
             if ledger_row[field] != expected:
                 errors.append(f"{key}: direct-query evidence disagrees with ledger field {field}")
 
+    attestation = json.loads(HUMAN_REVIEW_ATTESTATION.read_text(encoding="utf-8"))
+    if attestation.get("version") != "0.11.0" or attestation.get("reviewer") != AUTHOR:
+        errors.append("human-review attestation metadata mismatch")
+    evidence_by_sample = {row.get("sample_id", ""): row for row in evidence_records}
+    decision_attestations = attestation.get("screening_decisions", [])
+    attested_samples = [row.get("sample_id", "") for row in decision_attestations]
+    if len(attested_samples) != len(set(attested_samples)):
+        errors.append("human-review attestation contains duplicate sample identifiers")
+    if set(attested_samples) != set(evidence_by_sample):
+        errors.append(
+            "human-review attestation does not match the five-record direct-query evidence"
+        )
+    for row in decision_attestations:
+        sample_id = row.get("sample_id", "")
+        source = evidence_by_sample.get(sample_id, {})
+        if row.get("decision") != source.get("screening_decision"):
+            errors.append(f"{sample_id}: attested decision disagrees with direct-query evidence")
+        expected_support = "recorded" if source.get("screening_decision") else "open"
+        if row.get("support_review") != expected_support:
+            errors.append(f"{sample_id}: attested support-review state mismatch")
+        if not row.get("scope"):
+            errors.append(f"{sample_id}: attestation lacks a scope statement")
+    claim_attestations = attestation.get("claim_attestations", [])
+    expected_claims = {f"PAPER-C{number}" for number in range(27, 33)}
+    attested_claims = {row.get("claim_id", "") for row in claim_attestations}
+    if attested_claims != expected_claims:
+        errors.append("human-review attestation does not cover PAPER-C27 through PAPER-C32")
+    if any(row.get("support_review") != "recorded" for row in claim_attestations):
+        errors.append("human-review attestation contains an unrecorded v0.11 claim review")
+    if not attestation.get("limits"):
+        errors.append("human-review attestation lacks declared limits")
+
     interfaces = read_csv(INTERFACE_LEDGER)
     interface_names = [row["surface"] for row in interfaces]
     if len(interface_names) != len(set(interface_names)):
@@ -533,6 +566,7 @@ def main() -> int:
         RISK_SAMPLE,
         RISK_SAMPLE_SUMMARY,
         DIRECT_QUERY_EVIDENCE,
+        HUMAN_REVIEW_ATTESTATION,
         INTERFACE_LEDGER,
     )
     missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]

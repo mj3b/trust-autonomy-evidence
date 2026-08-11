@@ -98,14 +98,14 @@ The initial 15-source set was checked against publisher pages, DOI records, conf
 
 ## Provisional synthesis
 
-The literature establishes five propositions relevant to the manuscript:
+The literature supports five propositions and one proposed mechanism inference relevant to the manuscript:
 
 1. Human presence or formal authority is not sufficient for meaningful control.
 2. Practical control depends on system design, human ability, information, context, and institutional arrangements.
 3. Human performance under automation is conditional and can degrade when oversight becomes rare, compressed, or poorly supported.
 4. Incident analysis requires records capable of testing alternative causal explanations.
 5. Assurance claims require structured arguments, traceable evidence, assumptions, and uncertainty.
-6. A nominal correction can lose causal force when another information path still determines the output.
+6. **Proposed mechanism inference:** A nominal correction can lose causal force when another information path still determines the output.
 
 The proposed paper's remaining contribution is narrower than PR #11 stated. Prior work already supplies control conditions, causal-role taxonomies, oversight-performance models, institutional-design principles, compliance-testing cautions, retrospective reconstruction, public AI-incident analysis, assurance logic, forensic evidence controls, claim traceability, evidence-linked argument graphs, oversight architectures, human-performance critiques of loop labels, and model-level tests of intervention-path integrity. The paper studies one governance-specific integration: a frozen public-case procedure that connects candidate selection, source provenance, categorical missingness, practical-control stages, versioned adjudication, claim-specific evidence fitness, conclusion dependency closure, and executable artifact checks.
 

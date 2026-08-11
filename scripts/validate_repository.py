@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import csv
 import hashlib
 import json
 import re
@@ -14,7 +15,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.10.0"
+REPOSITORY_VERSION = "0.11.0"
 WORKING_VERSION = "0.11.0"
 FIGURE_VERSION = "0.9.0"
 PUBLIC_CASE_VERSION = "0.3.0"
@@ -37,6 +38,8 @@ REQUIRED_FILES = (
     "research/chain-of-evidence-adaptation.md",
     "evidence/trust-evidence-register.md",
     "evidence/claim-evidence-map.json",
+    "evidence/claim-evidence-map-v0.9.0.json",
+    "evidence/human-review-attestation-v0.11.0.json",
     "evidence/research-lineage.json",
     "evidence/research-activity-log.json",
     "protocols/independent-review-protocol.md",
@@ -78,6 +81,7 @@ REQUIRED_FILES = (
     "fixtures/synthetic/cases.json",
     "fixtures/mutations/mutations.json",
     "fixtures/coe-audit-mutations.json",
+    "fixtures/coe-audit-mutations-v0.9.0.json",
     "fixtures/adjudication-mutations-v0.6.0.json",
     "oracles/solo-validation-v0.2.0.json",
     "oracles/manifest.json",
@@ -148,10 +152,12 @@ REQUIRED_FILES = (
     "release/v0.10.0-manifest.json",
     "release/v0.10.0-release-notes.md",
     "release/v0.11.0-manifest.json",
+    "release/v0.11.0-release-notes.md",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
     "scripts/run_coe_integrity_audit.py",
+    "scripts/build_v0_11_claim_map.py",
     "audits/v0.5.0/audit-plan.md",
     "audits/v0.5.0/audit-results.json",
     "audits/v0.5.0/audit-report.md",
@@ -168,6 +174,10 @@ REQUIRED_FILES = (
     "audits/v0.9.0/audit-results.json",
     "audits/v0.9.0/audit-report.md",
     "audits/v0.9.0/exceptions.md",
+    "audits/v0.11.0/audit-plan.md",
+    "audits/v0.11.0/audit-results.json",
+    "audits/v0.11.0/audit-report.md",
+    "audits/v0.11.0/exceptions.md",
     "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
     "assessments/v0.6.0/oko-change-ledger.json",
     "paper/citation-chain-log-v0.6.0.md",
@@ -527,30 +537,73 @@ def validate_figure_set(failures: list[str]) -> str:
 
 
 def validate_coe_figure(failures: list[str]) -> str:
-    result = subprocess.run(
-        [sys.executable, "analysis/build_claim_evidence_figure.py", "--check"],
-        cwd=ROOT,
-        text=True,
-        capture_output=True,
-        check=False,
-    )
-    if result.returncode != 0:
-        detail = (result.stdout + result.stderr).strip()
-        fail(f"claim-evidence figure failed: {detail}", failures)
+    manifest_path = ROOT / "figures/v0.9.0-claim-evidence-manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("version") != "0.9.0" or manifest.get("source_audit") != "0.9.0":
+        fail("v0.9 claim-evidence figure metadata mismatch", failures)
         return ""
-    return result.stdout.strip()
+    aliases = {
+        "evidence/claim-evidence-map.json": "evidence/claim-evidence-map-v0.9.0.json",
+    }
+    for section in ("artifacts", "inputs"):
+        for row in manifest.get(section, []):
+            relative = aliases.get(row["path"], row["path"])
+            path = ROOT / relative
+            if (
+                not path.is_file()
+                or path.stat().st_size != row["bytes"]
+                or digest(path) != row["sha256"]
+            ):
+                fail(f"v0.9 claim-evidence figure mismatch: {relative}", failures)
+    with (ROOT / "figures/data/fig-a3-claim-evidence-integrity.csv").open(
+        encoding="utf-8", newline=""
+    ) as handle:
+        rows = list(csv.DictReader(handle))
+    if len(rows) != 20:
+        fail("v0.9 claim-evidence figure must preserve 20 claim rows", failures)
+    return "claim-evidence figure: PRESERVED (v0.9.0; 20 claims)"
 
 
 def validate_coe_audit(failures: list[str]) -> str:
-    audit = ROOT / "audits/v0.9.0/audit-results.json"
-    if not audit.is_file():
+    preserved = ROOT / "audits/v0.9.0/audit-results.json"
+    if not preserved.is_file():
         fail("released v0.9 claim-evidence audit is missing", failures)
         return ""
-    result = json.loads(audit.read_text(encoding="utf-8"))
-    if result.get("version") != "0.9.0" or result.get("status") != "PASS_WITH_EXCEPTIONS":
+    preserved_result = json.loads(preserved.read_text(encoding="utf-8"))
+    if preserved_result.get("version") != "0.9.0" or preserved_result.get("status") != "PASS_WITH_EXCEPTIONS":
         fail("released v0.9 claim-evidence audit metadata mismatch", failures)
         return ""
-    return "chain-of-evidence audit: PRESERVED (v0.9.0 snapshot; v0.10 gate audit pending)"
+
+    for command in (
+        [sys.executable, "scripts/build_v0_11_claim_map.py", "--check"],
+        [sys.executable, "scripts/run_coe_integrity_audit.py", "--check"],
+    ):
+        process = subprocess.run(
+            command, cwd=ROOT, text=True, capture_output=True, check=False,
+        )
+        if process.returncode != 0:
+            detail = (process.stdout + process.stderr).strip()
+            fail(f"current claim-evidence audit failed: {detail}", failures)
+            return ""
+
+    current = json.loads(
+        (ROOT / "audits/v0.11.0/audit-results.json").read_text(encoding="utf-8")
+    )
+    controls = current.get("negative_controls", [])
+    detected = sum(1 for row in controls if row.get("detected"))
+    claims = current.get("claim_results", [])
+    c32 = next((row for row in claims if row.get("claim_id") == "PAPER-C32"), {})
+    if (
+        current.get("version") != "0.11.0"
+        or current.get("status") != "PASS_WITH_EXCEPTIONS"
+        or len(claims) != 26
+        or len(controls) != 22
+        or detected != 22
+        or c32.get("conclusion_eligible") is not False
+    ):
+        fail("current v0.11 claim-evidence audit metadata mismatch", failures)
+        return ""
+    return "chain-of-evidence audit: PASS_WITH_EXCEPTIONS (26 claims; 22/22 controls detected)"
 
 
 def validate_adjudication(failures: list[str]) -> str:

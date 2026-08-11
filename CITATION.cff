@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Version 0.10.0 is the evidence-gate protocol checkpoint. Use the all-versions DOI until the version-specific DOI is recorded."
+message: "Version 0.11.0 is the direct-query evidence and claim-control checkpoint. Use the all-versions DOI until the version-specific DOI is recorded."
 title: "Trust, Autonomy, and Evidence"
 type: software
-version: 0.10.0
+version: 0.11.0
 date-released: 2026-08-11
 authors:
   - family-names: Banasihan

@@ -49,39 +49,44 @@
       "sha256": "884664224fe6c1783578e88ef7db2a1f3b60db5aa113a3938caceaa34ed4970d"
     },
     {
+      "path": "release/v0.11.0-release-notes.md",
+      "bytes": 2746,
+      "sha256": "c0c007b5579292c35c2027c0ae34702df2be43be5fecc1f40ed44eb6285f85c2"
+    },
+    {
       "path": "README.md",
-      "bytes": 24850,
-      "sha256": "dabaece64eb0d6b7512ab6dfc944f2cb4d6579e38fe1452bc9748a9ee9bc1dc5"
+      "bytes": 25692,
+      "sha256": "1f72b79f9d712d33251d6efbd07c9b38e66673e7eea98d08297870c74eb1ed4b"
     },
     {
       "path": "RESEARCH_STATUS.md",
-      "bytes": 8649,
-      "sha256": "4cc2c0e3d0e5af8bb2bcbe2f748845e32f11767e9dcce908bf3ca3aad5f48f15"
+      "bytes": 8638,
+      "sha256": "0613b06df3584e368decaf0ed948001c0a33d54214085f2041aecc1df419d985"
     },
     {
       "path": "CLAIMS.md",
-      "bytes": 7655,
-      "sha256": "c0cca8ea980f54faf08bdb7411ae2d0eaa13645bab608963204e45a68fa82f70"
+      "bytes": 8584,
+      "sha256": "f0ee5aeb2616c5d49f14db0502c032b00df723af4449ec71a385597188cb5610"
     },
     {
       "path": "LIMITATIONS.md",
-      "bytes": 5538,
-      "sha256": "6ff8e7935ea7818ecee89bc5a85cf4bc78b08a7b7aa44547359f4295b06e5526"
+      "bytes": 5590,
+      "sha256": "551d2e6a01e209c5ee394dfd13e0f6f56320329abf2c043fcc7ff12987163d10"
     },
     {
       "path": "SOURCES.md",
-      "bytes": 7763,
-      "sha256": "27919e9c6f479c25c93ea56173d76491c0c2513360c9cd0f87d3e21c713a28fd"
+      "bytes": 7774,
+      "sha256": "8f68bf6c2fd69fde3ef957d023b7fa083c6a5153b6fd5f754622298f82727391"
     },
     {
       "path": "CITATION.cff",
-      "bytes": 822,
-      "sha256": "01cf605d126ac5362ff80be9e97ead241d73b0b32205b9583ad8db58df09d471"
+      "bytes": 839,
+      "sha256": "3d88b6597754ffa27686cd8ac3a2669f3656d0feb4df57aa3f111fdc2cb38f1f"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 13761,
-      "sha256": "05727c79cfccec2439c9972fee22b7c1f225c565be49b0d557078f6e4592c67a"
+      "bytes": 14374,
+      "sha256": "c58e429c3d64d2e0d96540a4512d4908e3e7f05cff5f29a3825f8b142ee0fe10"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -115,8 +120,8 @@
     },
     {
       "path": "protocols/coe-integrity-audit.md",
-      "bytes": 6448,
-      "sha256": "8c1e96e261268eb0328431c43617504280c3a2894450fb5b405d93218fe8ce15"
+      "bytes": 7008,
+      "sha256": "0a8a35a2bb0f3157f52088daa12d6c7b35b4dd183124eb9baae261ce166b0aa8"
     },
     {
       "path": "protocols/oko-evidence-adjudication-v0.6.0.md",
@@ -130,8 +135,8 @@
     },
     {
       "path": "schemas/claim-evidence-map.schema.json",
-      "bytes": 5026,
-      "sha256": "12d0b2314c9a82c498517b6297ce13a28b7159f48e40acffe04b006ba4ea3a98"
+      "bytes": 5055,
+      "sha256": "4191ab856cd7dfb14305982530cf7e8d2fd146c879c3998d3bd96d55319692a4"
     },
     {
       "path": "schemas/research-lineage.schema.json",
@@ -140,13 +145,13 @@
     },
     {
       "path": "schemas/coe-audit-result.schema.json",
-      "bytes": 3338,
-      "sha256": "7caad2a4e8962a368173c6e319787d607d19ccd0e1e48e6431956518d11b43ec"
+      "bytes": 3373,
+      "sha256": "61e213067ba47cc5ffc697c1846060e86504bb4376e9af15f66c7f6a10da0296"
     },
     {
       "path": "schemas/coe-audit-mutations.schema.json",
-      "bytes": 1483,
-      "sha256": "ea0718d0efdbfef3dff71fc87d9e81e94570203a0e5d76cea99d92c7a541ec87"
+      "bytes": 1530,
+      "sha256": "86f168d2490bf2c7fc6fc40a49b94cfc09153e789dab25d6d3fa284c80ca146f"
     },
     {
       "path": "schemas/literature-support-audit.schema.json",
@@ -155,6 +160,11 @@
     },
     {
       "path": "fixtures/coe-audit-mutations.json",
+      "bytes": 5978,
+      "sha256": "c7a9e0a16d26fef13330e433af4c258044cef29621c26c235f96bec92c2a39d3"
+    },
+    {
+      "path": "fixtures/coe-audit-mutations-v0.9.0.json",
       "bytes": 3855,
       "sha256": "71a808b2cf33843bc14133eb348a1dff08b036d0a6a4e60202f43ea0964e59b0"
     },
@@ -180,8 +190,18 @@
     },
     {
       "path": "evidence/claim-evidence-map.json",
+      "bytes": 82623,
+      "sha256": "375af02e92c709e098ce86b3a6f350f31c0bc7327479f167dc17a1d14c057cb9"
+    },
+    {
+      "path": "evidence/claim-evidence-map-v0.9.0.json",
       "bytes": 60529,
       "sha256": "b14c59c4388ad212774821f1f88ed3f746fead304d20ed03e304fdadd3a89950"
+    },
+    {
+      "path": "evidence/human-review-attestation-v0.11.0.json",
+      "bytes": 3600,
+      "sha256": "706a445340e555a841ad332c775071f773b0f149d9cfca0d62b8c15281ddfc93"
     },
     {
       "path": "evidence/research-lineage.json",
@@ -269,6 +289,26 @@
       "sha256": "be1c04191a554408239151a3bb5a3ce57f0a7c0e91598fc4ad23a3cf31ab3dcf"
     },
     {
+      "path": "audits/v0.11.0/audit-plan.md",
+      "bytes": 2074,
+      "sha256": "dd4675d5ed8cfe5a28fc1d71b25f7f5ae274c02f0d1a10af450e308c03a87b13"
+    },
+    {
+      "path": "audits/v0.11.0/audit-results.json",
+      "bytes": 13145,
+      "sha256": "7bfb6d94712ebd2365b80e8f9bddd05e13765b2b0ba9a264f26c0d13d6120686"
+    },
+    {
+      "path": "audits/v0.11.0/audit-report.md",
+      "bytes": 5242,
+      "sha256": "4eacb953433760d886b42c828e16094ee252959bec7f6d163c5526fc02fc19d7"
+    },
+    {
+      "path": "audits/v0.11.0/exceptions.md",
+      "bytes": 2211,
+      "sha256": "be97f77dd071a5e160f0efb3e042c1c0c7763b4e3a85f01621e0e9cdfbc103e4"
+    },
+    {
       "path": "reports/public-case-reconstruction-v0.6.0.md",
       "bytes": 2969,
       "sha256": "8acefe2a734ac78f1487c316b35ae9e8e8b414ffaf7567040dfd1c48bb5b8987"
@@ -285,8 +325,8 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 9080,
-      "sha256": "5dcce6653621eb54f5172c53be132a6560e089f53189e96385b9c6bce9584281"
+      "bytes": 9785,
+      "sha256": "5be8061dda697df121be62c7c88cb0aefe6869e03211d31f5df7a2bf6a5d9a7f"
     },
     {
       "path": "paper/paper-charter.md",
@@ -350,8 +390,8 @@
     },
     {
       "path": "paper/literature-matrix.md",
-      "bytes": 28853,
-      "sha256": "0f01b489a23678f7474169178d71b152ff5b28191175790f6e049614eafa4779"
+      "bytes": 28921,
+      "sha256": "04efb8f959d3ecd88555cd8c1032747b6724eda6c702be0375fd92a2fcb4b2ab"
     },
     {
       "path": "paper/literature-search-log.md",
@@ -480,8 +520,8 @@
     },
     {
       "path": "paper/claim-evidence-register.md",
-      "bytes": 12322,
-      "sha256": "853664c6c2ee9a9f392d32f4af6870b7c79f098da3fa5c8c97386cd5f5072625"
+      "bytes": 13971,
+      "sha256": "b9736ea933a9ac92e4820cf24c925c35d312b20f45632b071f88ac0a61765b05"
     },
     {
       "path": "paper/claim-crosswalk.md",
@@ -730,8 +770,8 @@
     },
     {
       "path": "scripts/build_release_manifest.py",
-      "bytes": 7796,
-      "sha256": "6d5894ebfed0df8f286ecaeedf0d4e7b50242ab6700481b6e18655e086d874a5"
+      "bytes": 8176,
+      "sha256": "49e6d06d6b87a264670594ae39f8f068bfe3b9b4a70b8068eb4723e2286b7dfe"
     },
     {
       "path": "scripts/render_reader_manuscript.py",
@@ -750,8 +790,8 @@
     },
     {
       "path": "scripts/validate_next_evidence_gates.py",
-      "bytes": 27568,
-      "sha256": "974a27c05dd59fcf93ab85ef7bcd460714df7a301c49433821d2cb1500c83c4a"
+      "bytes": 29773,
+      "sha256": "d826f0090591414dc946e6b03d99dcce19919af33fe70685fcb6c1ace2ad4d7a"
     },
     {
       "path": "scripts/build_inaccessible_risk_sample_v0_11_0.py",
@@ -760,8 +800,8 @@
     },
     {
       "path": "scripts/validate_repository.py",
-      "bytes": 28342,
-      "sha256": "3b8de0d82304814bce0df13b509adb54d090d3a78b7c6075cf86d2b3b50cba84"
+      "bytes": 30792,
+      "sha256": "0f53b4f2734af55211434d09517b83a44862b335e7fa326358b680eca5557bc9"
     },
     {
       "path": "scripts/validate_release_snapshot.py",
@@ -770,8 +810,8 @@
     },
     {
       "path": "scripts/validate_paper.py",
-      "bytes": 9682,
-      "sha256": "11f308e3808bd0596144d3961c6a7483aa4a8b1131516408aa6b9be62f7dfea4"
+      "bytes": 9906,
+      "sha256": "fde5e4f0bd65a59ca256329f9561b508f3065ddadc44e61f70b143a03407476d"
     },
     {
       "path": "scripts/validate_literature_support.py",
@@ -790,8 +830,13 @@
     },
     {
       "path": "scripts/run_coe_integrity_audit.py",
-      "bytes": 23744,
-      "sha256": "fb3616b3cde8e6576464046c0fd37ba2339564b76868924ba865d0374b56fd30"
+      "bytes": 24575,
+      "sha256": "afddfe2b2c6dbaf5b7902e4d7b91e0fffd39c4d45b87e8685e96f3f524e3e753"
+    },
+    {
+      "path": "scripts/build_v0_11_claim_map.py",
+      "bytes": 19708,
+      "sha256": "5ed6cd554abe8c7273d20f249b4c4837a6fdad3661a7db3f0751232e1cba0920"
     },
     {
       "path": "scripts/run_formal_literature_search.py",

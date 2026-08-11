@@ -20,12 +20,12 @@ ROOT = Path(__file__).resolve().parents[1]
 CLAIM_MAP_PATH = ROOT / "evidence/claim-evidence-map.json"
 LINEAGE_PATH = ROOT / "evidence/research-lineage.json"
 MUTATIONS_PATH = ROOT / "fixtures/coe-audit-mutations.json"
-RESULT_PATH = ROOT / "audits/v0.9.0/audit-results.json"
-REPORT_PATH = ROOT / "audits/v0.9.0/audit-report.md"
-AUDIT_VERSION = "0.9.0"
-AUDIT_ID = "TAE-COE-AUDIT-V0.9.0"
-AUDIT_DATE = "2026-08-10"
-EXCEPTIONS = ["COE-EX-03", "COE-EX-04"]
+RESULT_PATH = ROOT / "audits/v0.11.0/audit-results.json"
+REPORT_PATH = ROOT / "audits/v0.11.0/audit-report.md"
+AUDIT_VERSION = "0.11.0"
+AUDIT_ID = "TAE-COE-AUDIT-V0.11.0"
+AUDIT_DATE = "2026-08-11"
+EXCEPTIONS = ["COE-EX-03", "COE-EX-04", "COE-EX-06", "COE-EX-07"]
 FITNESS_DIMENSIONS = (
     "directness",
     "contemporaneity",
@@ -363,6 +363,7 @@ def check_summary(
         "method_code_alignment": "COE-I4",
         "evidence_fitness_and_dependency_closure": "COE-I5",
     }
+    failed = len(findings[name])
     if name == "score_verification":
         tested = sum(1 for claim in claim_map["claims"] for evidence in claim["evidence"] if "expected_value" in evidence)
         indeterminate = 0
@@ -371,6 +372,11 @@ def check_summary(
         indeterminate = 0
     elif name == "reference_verification":
         tested = len(claim_results)
+        failed = sum(
+            1
+            for row in claim_results
+            if "fail" in {row["traceability"], row["integrity"], row["support"]}
+        )
         indeterminate = sum(
             1 for row in claim_results if "indeterminate" in {row["traceability"], row["integrity"], row["support"]}
         )
@@ -383,10 +389,14 @@ def check_summary(
         indeterminate = 0
     else:
         tested = len(claim_results)
+        failed = sum(
+            1
+            for row in claim_results
+            if "fail" in {row["evidence_fitness"], row["dependency_closure"]}
+        )
         indeterminate = sum(
             1 for row in claim_results if "indeterminate" in {row["evidence_fitness"], row["dependency_closure"]}
         )
-    failed = len(findings[name])
     expected_exception_check = name in {"reference_verification", "evidence_fitness_and_dependency_closure"}
     status = "pass"
     if failed or indeterminate:
@@ -436,7 +446,7 @@ def build_result() -> dict[str, Any]:
         "version": AUDIT_VERSION,
         "audit_id": AUDIT_ID,
         "audit_date": AUDIT_DATE,
-        "scope": "Twenty material claims declared in TAE-COE-V0.9.0, including the closed author-screening gate and final Figure 5 search-flow result. Independent validity, inaccessible-record review, and authenticated database coverage remain outside the completed evidence base.",
+        "scope": "Twenty-six material claims declared in TAE-COE-V0.11.0, including the five-record direct-query state, four bounded source descriptions, and one provisional synthesis. Independent validity, 1,082 retrieval outcomes, authenticated database coverage, and institutional transfer remain outside the completed evidence base.",
         "status": status,
         "checks": checks,
         "negative_controls": controls,
@@ -451,15 +461,17 @@ def build_result() -> dict[str, Any]:
 
 def render_report(result: dict[str, Any]) -> str:
     lines = [
-        "# v0.9.0 Chain-of-Evidence Integrity Audit",
+        "# v0.11.0 Chain-of-Evidence Integrity Audit",
         "",
-        f"**Audit date:** {result['audit_date']}  ",
-        f"**Status:** `{result['status']}`  ",
+        f"**Audit date:** {result['audit_date']}",
+        "",
+        f"**Status:** `{result['status']}`",
+        "",
         f"**Scope:** {result['scope']}",
         "",
         "## Decision",
         "",
-        "The declared v0.9 claim set passes its executable integrity controls with two published exceptions. The closed author gate, final Figure 5 data, and manuscript counts resolve to their declared evidence. The result permits bounded author-screening, artifact, and method claims. It supplies no independent reliability, originality, or completed systematic-search finding.",
+        "The declared v0.11 claim set passes its executable integrity controls with four published exceptions. The five-record tranche count claim and four bounded source descriptions resolve to their declared evidence. The cross-domain synthesis remains conclusion-ineligible because independence and completeness are indeterminate. The result supplies no independent reliability, originality, institutional-transfer, or completed systematic-search finding.",
         "",
         "## Integrity checks",
         "",
@@ -485,7 +497,9 @@ def render_report(result: dict[str, Any]) -> str:
         "## Published exceptions",
         "",
         "- `COE-EX-03`: no independent assessor has reproduced the support or evidence-fitness judgments.",
-        "- `COE-EX-04`: authenticated database searching, inaccessible-record review, and full citation chaining remain incomplete.",
+        "- `COE-EX-04`: authenticated database searching, 1,082 retrieval outcomes, and the remaining risk-sample records remain incomplete.",
+        "- `COE-EX-06`: RS-DQ-004 remains open because readable text and author identity require resolution; RS-DQ-005 remains restricted to its abstract.",
+        "- `COE-EX-07`: PAPER-C32 remains provisional because one model-architecture study cannot establish institutional or public-incident transfer.",
         "",
         "## Closed exception",
         "",
