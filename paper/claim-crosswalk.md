@@ -2,9 +2,9 @@
 
 ## Rule
 
-The machine-readable v0.9 claim map governs only the exact prefixed identifiers listed below. Unprefixed IDs in the manuscript claim register are drafting identifiers. A drafting claim does not receive an executable eligibility result unless this crosswalk maps it to a prefixed claim.
+The machine-readable v0.12 claim map governs only the exact prefixed identifiers listed below. Unprefixed IDs in the manuscript claim register are drafting identifiers. A drafting claim does not receive an executable eligibility result unless this crosswalk maps it to a prefixed claim.
 
-| Executable claim | v0.9 audit state | Drafting consequence |
+| Executable claim | v0.12 audit state | Drafting consequence |
 |---|---|---|
 | `PAPER-C02` | Eligible | Describe the frozen selection procedure as a repository record. |
 | `PAPER-C03` | Eligible | Report Oko authority as partially supported and both Patriot authority states as supported in the current assessment set. |
@@ -26,6 +26,13 @@ The machine-readable v0.9 claim map governs only the exact prefixed identifiers 
 | `PAPER-C24` | Eligible | State that the present files supply no eligible coding-stability or inter-rater estimate. |
 | `PAPER-C25` | Eligible | Report the 89-record author gate as 89 complete and 0 open at the v0.9 checkpoint, with the four author-decision counts. |
 | `PAPER-C26` | Eligible | Report final screening counts and Figure 5 within the 89-record queue boundary. Preserve the open coverage and independence limits. |
+| `PAPER-C27` | Eligible | Report the five-record direct-query tranche as a retrieval checkpoint: four decisions and one open decision. |
+| `PAPER-C28` | Eligible | Describe Emery's argument within the inspected dissertation and its declared page-level boundaries. |
+| `PAPER-C29` | Eligible | Describe Homayounnejad's position only at the level supported by the recovered abstract. |
+| `PAPER-C30` | Eligible | Describe the residual-path result within Zabounidis et al.'s model-architecture study. |
+| `PAPER-C31` | Eligible | Describe Gielas's argument only at the level supported by the recovered abstract. |
+| `PAPER-C32` | Ineligible | Do not transfer the model residual-path result to institutions or public incidents without independent evidence in the intended setting. |
+| `PAPER-C33` | Ineligible | Keep the 102-record forward-citation counts out of manuscript conclusions. Treat them as a retrieval and author-review checkpoint until Mark Julius Banasihan records support decisions. |
 
 ## Planned claims outside the executable map
 
@@ -34,7 +41,10 @@ Drafting claims C01, C10, C12, C13, and C16 through C21 remain subject to their 
 ## Open exceptions
 
 - `COE-EX-03` remains open because no independent assessor has reproduced the classifications or evidence-fitness judgments.
-- `COE-EX-04` remains open for inaccessible records, authenticated databases, and citation-chain coverage.
+- `COE-EX-04` remains open for 980 unresolved retrieval outcomes, authenticated databases, and full citation-chain coverage.
+- `COE-EX-06` remains open because one direct-query source lacks inspectable text and another is limited to its publisher abstract.
+- `COE-EX-07` remains open because the model-level residual-path result has no institutional or public-incident transfer test.
+- `COE-EX-08` remains open because 71 recovered forward-citation records await author screening and support decisions.
 - `COE-EX-05` is closed because all 89 author-screening decisions are recorded and the search-flow outputs were rebuilt from the ledger.
 
-The manuscript uses no originality finding. It reports the final author-screening result within the declared queue boundary.
+The manuscript uses no originality finding. It reports completed checkpoints within their declared boundaries and excludes the v0.12 forward-citation queue from claim support until the author gate closes.

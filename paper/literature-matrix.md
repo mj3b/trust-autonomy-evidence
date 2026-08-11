@@ -6,7 +6,7 @@ Which prior work most closely addresses the distinction between formal human aut
 
 ## Status
 
-The initial 15-source set was checked against publisher pages, DOI records, conference proceedings, or institutional repositories on 8 August 2026. The PR #11 pressure test added eight near-neighbors. The v0.5 review added ScientistOne. The v0.6 review added four close sources on oversight effectiveness, compliance testing, assurance audits, and oversight architecture. The frozen v0.7 search added thirteen sources through direct queries, citation chaining, and official-source checking. The v0.9 author review adds fifteen close sources from the 77-record attention queue. The v0.11 direct-query recovery adds three background sources and one close source; one retrieved source remains open for author screening. This matrix is a structured working set. The formal search record discloses its index and screening limits.
+The initial 15-source set was checked against publisher pages, DOI records, conference proceedings, or institutional repositories on 8 August 2026. The PR #11 pressure test added eight near-neighbors. The v0.5 review added ScientistOne. The v0.6 review added four close sources on oversight effectiveness, compliance testing, assurance audits, and oversight architecture. The frozen v0.7 search added thirteen sources through direct queries, citation chaining, and official-source checking. The v0.9 author review adds fifteen close sources from the 77-record attention queue. The v0.11 direct-query recovery adds three background sources and one close source; one retrieved source remains open for author screening. The v0.12 forward-citation pass adds no source to this matrix because its 71 recovered-content records await author decisions. This matrix is a structured working set. The formal search record discloses its index and screening limits.
 
 | ID | Stream and source | What it contributes | Relationship to this paper | Boundary or difference |
 |---|---|---|---|---|
@@ -113,7 +113,7 @@ The proposed paper's remaining contribution is narrower than PR #11 stated. Prio
 
 The formal open-index search and selected-index citation chains are recorded in [`formal-citation-chain-v0.7.0.md`](formal-citation-chain-v0.7.0.md). The 89-record author queue is complete. Before a contribution claim can be described as the result of a completed multidisciplinary search, the project must still:
 
-- review the remaining 1,082 records without a recorded retrieval outcome and resolve two direct-query source limits;
+- record decisions for 71 recovered forward citations, review the remaining 980 records without a retrieval outcome, and preserve two direct-query source limits;
 - search Scopus or Web of Science through authenticated access;
 - complete the declared disciplinary-interface log for IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index.
 
