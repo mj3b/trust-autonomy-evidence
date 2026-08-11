@@ -1,0 +1,19 @@
+{
+  "version": "0.12.0",
+  "reviewer": "Mark Julius Banasihan",
+  "date": "2026-08-11",
+  "status": "WORKFLOW_BOUNDARY_RECORDED_SOURCE_REVIEW_PENDING",
+  "statement": "No source in the forward-citation tranche has an author screening decision or permission to support a manuscript claim at this checkpoint.",
+  "scope": {
+    "frozen_records": 102,
+    "retrieval_outcomes_recorded": 102,
+    "recovered_content_awaiting_review": 71,
+    "author_screening_decisions": 0
+  },
+  "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, ledger assembly, and validation. Machine-generated source summaries were not used as claim evidence.",
+  "limits": [
+    "This record identifies the decision owner and preserves the open gate; it is not an attestation that the 102 retrieval outcomes have received human support review.",
+    "Metadata-only and unavailable states are coverage limits and not topic exclusions.",
+    "The tranche supplies no originality, prevalence, reliability, field-validity, or institutional-effect result."
+  ]
+}

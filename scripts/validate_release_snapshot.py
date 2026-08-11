@@ -76,6 +76,23 @@ SNAPSHOTS = {
             "research/agenda-discovery-log-v0.10.0.md",
         ),
     },
+    "v0.11.0": {
+        "manifest": "release/v0.11.0-manifest.json",
+        "immutable": (
+            "release/v0.11.0-manifest.json",
+            "release/v0.11.0-release-notes.md",
+            "audits/v0.11.0/audit-plan.md",
+            "audits/v0.11.0/audit-results.json",
+            "audits/v0.11.0/audit-report.md",
+            "audits/v0.11.0/exceptions.md",
+            "evidence/human-review-attestation-v0.11.0.json",
+            "paper/inaccessible-risk-sample-v0.11.0.md",
+            "paper/direct-query-retrieval-tranche-v0.11.0.md",
+            "paper/data/inaccessible-risk-sample-v0.11.0.csv",
+            "paper/data/inaccessible-risk-sample-v0.11.0.json",
+            "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
+        ),
+    },
 }
 
 

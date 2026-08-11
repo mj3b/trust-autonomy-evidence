@@ -15,8 +15,8 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.11.0"
-WORKING_VERSION = "0.11.0"
+REPOSITORY_VERSION = "0.12.0"
+WORKING_VERSION = "0.12.0"
 FIGURE_VERSION = "0.9.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
@@ -35,11 +35,13 @@ REQUIRED_FILES = (
     "research/trust-autonomy-and-evidence.md",
     "research/frozen-research-agenda.md",
     "research/agenda-discovery-log-v0.10.0.md",
+    "research/agenda-discovery-log-v0.12.0.md",
     "research/chain-of-evidence-adaptation.md",
     "evidence/trust-evidence-register.md",
     "evidence/claim-evidence-map.json",
     "evidence/claim-evidence-map-v0.9.0.json",
     "evidence/human-review-attestation-v0.11.0.json",
+    "evidence/human-review-attestation-v0.12.0.json",
     "evidence/research-lineage.json",
     "evidence/research-activity-log.json",
     "protocols/independent-review-protocol.md",
@@ -153,11 +155,15 @@ REQUIRED_FILES = (
     "release/v0.10.0-release-notes.md",
     "release/v0.11.0-manifest.json",
     "release/v0.11.0-release-notes.md",
+    "release/v0.12.0-manifest.json",
+    "release/v0.12.0-release-notes.md",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
     "scripts/run_coe_integrity_audit.py",
     "scripts/build_v0_11_claim_map.py",
+    "scripts/build_v0_12_claim_map.py",
+    "scripts/build_forward_citation_tranche_v0_12_0.py",
     "audits/v0.5.0/audit-plan.md",
     "audits/v0.5.0/audit-results.json",
     "audits/v0.5.0/audit-report.md",
@@ -178,6 +184,10 @@ REQUIRED_FILES = (
     "audits/v0.11.0/audit-results.json",
     "audits/v0.11.0/audit-report.md",
     "audits/v0.11.0/exceptions.md",
+    "audits/v0.12.0/audit-plan.md",
+    "audits/v0.12.0/audit-results.json",
+    "audits/v0.12.0/audit-report.md",
+    "audits/v0.12.0/exceptions.md",
     "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
     "assessments/v0.6.0/oko-change-ledger.json",
     "paper/citation-chain-log-v0.6.0.md",
@@ -198,6 +208,7 @@ REQUIRED_FILES = (
     "paper/author-screening-completion-gate.md",
     "paper/next-evidence-gates-v0.10.0.md",
     "paper/inaccessible-risk-sample-v0.11.0.md",
+    "paper/forward-citation-retrieval-tranche-v0.12.0.md",
     "paper/data/author-screening-gate-v0.8.0.json",
     "paper/data/author-screening-decisions-v0.9.0.csv",
     "paper/data/author-screening-gate-v0.9.0.json",
@@ -205,6 +216,8 @@ REQUIRED_FILES = (
     "paper/data/inaccessible-record-retrieval-v0.10.0.csv",
     "paper/data/inaccessible-risk-sample-v0.11.0.csv",
     "paper/data/inaccessible-risk-sample-v0.11.0.json",
+    "paper/data/forward-citation-retrieval-evidence-v0.12.0.json",
+    "paper/data/forward-citation-author-review-queue-v0.12.0.csv",
     "paper/data/authenticated-interface-searches-v0.10.0.csv",
     "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",
@@ -575,7 +588,7 @@ def validate_coe_audit(failures: list[str]) -> str:
         return ""
 
     for command in (
-        [sys.executable, "scripts/build_v0_11_claim_map.py", "--check"],
+        [sys.executable, "scripts/build_v0_12_claim_map.py", "--check"],
         [sys.executable, "scripts/run_coe_integrity_audit.py", "--check"],
     ):
         process = subprocess.run(
@@ -587,23 +600,26 @@ def validate_coe_audit(failures: list[str]) -> str:
             return ""
 
     current = json.loads(
-        (ROOT / "audits/v0.11.0/audit-results.json").read_text(encoding="utf-8")
+        (ROOT / "audits/v0.12.0/audit-results.json").read_text(encoding="utf-8")
     )
     controls = current.get("negative_controls", [])
     detected = sum(1 for row in controls if row.get("detected"))
     claims = current.get("claim_results", [])
     c32 = next((row for row in claims if row.get("claim_id") == "PAPER-C32"), {})
+    c33 = next((row for row in claims if row.get("claim_id") == "PAPER-C33"), {})
     if (
-        current.get("version") != "0.11.0"
+        current.get("version") != "0.12.0"
         or current.get("status") != "PASS_WITH_EXCEPTIONS"
-        or len(claims) != 26
+        or len(claims) != 27
         or len(controls) != 22
         or detected != 22
         or c32.get("conclusion_eligible") is not False
+        or c33.get("conclusion_eligible") is not False
+        or c33.get("support") != "indeterminate"
     ):
-        fail("current v0.11 claim-evidence audit metadata mismatch", failures)
+        fail("current v0.12 claim-evidence audit metadata mismatch", failures)
         return ""
-    return "chain-of-evidence audit: PASS_WITH_EXCEPTIONS (26 claims; 22/22 controls detected)"
+    return "chain-of-evidence audit: PASS_WITH_EXCEPTIONS (27 claims; 22/22 controls detected; PAPER-C33 review pending)"
 
 
 def validate_adjudication(failures: list[str]) -> str:

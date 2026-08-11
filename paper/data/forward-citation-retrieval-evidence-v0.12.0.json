@@ -1,0 +1,2274 @@
+{
+  "version": "0.12.0",
+  "status": "RETRIEVAL_COMPLETE_SCREENING_OPEN",
+  "frozen_source": "paper/data/inaccessible-risk-sample-v0.11.0.csv",
+  "stratum": "forward-citation",
+  "decision_owner": "Mark Julius Banasihan",
+  "method_limits": [
+    "Publisher access checks and identifier routes do not establish source truth.",
+    "Recovered abstracts support screening and bounded source descriptions only.",
+    "Recovered full text supports no manuscript claim until author screening and proposition-level support review are recorded.",
+    "Metadata-only and unavailable records remain coverage limits, not topic exclusions.",
+    "This sampled tranche cannot establish exhaustive coverage, prevalence, originality, reliability, or field validity."
+  ],
+  "counts": {
+    "selected": 102,
+    "retrieval_complete": 102,
+    "screening_required": 71,
+    "screening_complete": 0,
+    "screening_open": 71,
+    "outcomes": {
+      "abstract-recovered": 37,
+      "duplicate": 3,
+      "full-text-recovered": 34,
+      "metadata-only": 26,
+      "unavailable": 2
+    }
+  },
+  "records": [
+    {
+      "sample_id": "RS-FC-001",
+      "record_key": "doi:10.1016/j.hrmr.2026.101135",
+      "title": "A meta-analysis on reactions to algorithmic decision-making in human resource management",
+      "year": "2026",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.hrmr.2026.101135",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.hrmr.2026.101135",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-002",
+      "record_key": "doi:10.2139/ssrn.4080050",
+      "title": "Data Justice in Practice: A Guide for Policymakers",
+      "year": "2022",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.2139/ssrn.4080050",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.2139/ssrn.4080050",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-003",
+      "record_key": "doi:10.48550/arxiv.2203.15370",
+      "title": "A Principle-based Ethical Assurance Argument for AI and Autonomous Systems",
+      "year": "2022",
+      "retrieval_outcome": "duplicate",
+      "retrieval_locator": "https://arxiv.org/abs/2203.15370",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.48550/arxiv.2203.15370",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "This arXiv record is the preprint of the published PRAISE article already represented in the formal corpus."
+      ],
+      "review_basis": "identifier_and_version_match",
+      "screening_decision": null,
+      "screening_rationale": "This arXiv record is the preprint of the published PRAISE article already represented in the formal corpus.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-004",
+      "record_key": "doi:10.1007/s13347-023-00605-y",
+      "title": "Correction to: The Responsibility Gap and LAWS: a Critical Mapping of the Debate",
+      "year": "2023",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s13347-023-00605-y",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s13347-023-00605-y",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-005",
+      "record_key": "title:through a different lens applying contemporary systems analysis methods in road safety|year:2012",
+      "title": "Through a different lens: applying contemporary systems analysis methods in road safety",
+      "year": "2012",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://pdfs.semanticscholar.org/5964/09d05f32a271dc12204f8ec9ae930eec9648.pdf",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/f33b3a36131be6e3c7d390b425b34f2c9dfd07ed",
+        "https://pdfs.semanticscholar.org/5964/09d05f32a271dc12204f8ec9ae930eec9648.pdf"
+      ],
+      "source_evidence": [
+        "A direct conference-paper PDF was readable."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-006",
+      "record_key": "doi:10.1016/j.ssci.2026.107161",
+      "title": "Development of a competency framework for healthcare safety investigators: a modified e-Delphi study",
+      "year": "2026",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.ssci.2026.107161",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.ssci.2026.107161",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-007",
+      "record_key": "title:an investigation of the relationship between human and organizational factors in occupational accidents using bayesian network approach a case study in mining accidents|year:2021",
+      "title": "An investigation of the relationship between human and organizational factors in occupational accidents using Bayesian network approach: A case study in mining accidents",
+      "year": "2021",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://scispace.com/papers/an-investigation-of-the-relationship-between-human-and-40snn62po3",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/04f9ebfb0349d470ba376deb8045f68b38140e9a",
+        "https://scispace.com/papers/an-investigation-of-the-relationship-between-human-and-40snn62po3"
+      ],
+      "source_evidence": [
+        "A bibliographic page was found, but no source abstract or full text was verified."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "A bibliographic page was found, but no source abstract or full text was verified.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-008",
+      "record_key": "doi:10.1007/s10676-021-09613-y",
+      "title": "Psychological consequences of legal responsibility misattribution associated with automated vehicles",
+      "year": "2021",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s10676-021-09613-y",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s10676-021-09613-y",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-009",
+      "record_key": "doi:10.1097/qmh.0000000000000065",
+      "title": "Development and Validation of the CPO Scale, a New Instrument for Evaluation of Health Care Improvement Efforts",
+      "year": "2015",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1097/qmh.0000000000000065",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1097/qmh.0000000000000065",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-010",
+      "record_key": "doi:10.48550/arxiv.2603.16663",
+      "title": "When Openclaw Agents Learn from Each Other: Insights from Emergent AI Agent Communities for Human-AI Partnership in Education",
+      "year": "2026",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.48550/arxiv.2603.16663",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.48550/arxiv.2603.16663",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-011",
+      "record_key": "doi:10.1007/s11948-019-00142-y",
+      "title": "Exploring Human Values in the Design of a Web-Based QoL-Instrument for People with Mental Health Problems: A Value Sensitive Design Approach",
+      "year": "2019",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s11948-019-00142-y",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s11948-019-00142-y",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-012",
+      "record_key": "title:artificial intelligence on trial who is responsible when systems fail toward a framework for the ultimate ai accountability owner|year:",
+      "title": "Artificial Intelligence on Trial: Who Is Responsible When Systems Fail? Toward a Framework for the Ultimate AI Accountability Owner",
+      "year": "",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://papers.ssrn.com/sol3/Delivery.cfm/5292184.pdf?abstractid=5292184&mirid=1",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/cbf93cfb5c8d5e7156531de6919c57179c2b998c",
+        "https://papers.ssrn.com/sol3/Delivery.cfm/5292184.pdf?abstractid=5292184&mirid=1"
+      ],
+      "source_evidence": [
+        "The SSRN paper PDF was readable."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-013",
+      "record_key": "doi:10.1016/j.ssci.2026.107228",
+      "title": "Holding the egg: ethical tensions of care in safety-critical technologies",
+      "year": "2026",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.ssci.2026.107228",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.ssci.2026.107228",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-014",
+      "record_key": "doi:10.1007/s43681-024-00594-4",
+      "title": "Lifecycles, pipelines, and value chains: toward a focus on events in responsible artificial intelligence for health",
+      "year": "2024",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s43681-024-00594-4",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s43681-024-00594-4",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-015",
+      "record_key": "doi:10.3389/frobt.2026.1776097",
+      "title": "Robots and AI are not one moral category: why the distinction matters for ethical and conscious systems",
+      "year": "2026",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.3389/frobt.2026.1776097",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.3389/frobt.2026.1776097",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-016",
+      "record_key": "title:a principles based ethical assurance argument for ai and autonomous systems|year:",
+      "title": "A PRINCIPLES-BASED ETHICAL ASSURANCE ARGUMENT FOR AI AND AUTONOMOUS SYSTEMS",
+      "year": "",
+      "retrieval_outcome": "duplicate",
+      "retrieval_locator": "https://link.springer.com/article/10.1007/s43681-023-00297-2",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/30a4076310d37d1d99cc7d2ad9c75805726e03c7",
+        "https://link.springer.com/article/10.1007/s43681-023-00297-2"
+      ],
+      "source_evidence": [
+        "The title resolves to the published PRAISE article already represented in the formal corpus."
+      ],
+      "review_basis": "identifier_and_version_match",
+      "screening_decision": null,
+      "screening_rationale": "The title resolves to the published PRAISE article already represented in the formal corpus.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-017",
+      "record_key": "title:aviate navigate communicate silence voice and situation awareness in aviation safety|year:2014",
+      "title": "Aviate, Navigate, Communicate: Silence, Voice and Situation Awareness in Aviation Safety",
+      "year": "2014",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://researchdiscovery.drexel.edu/esploro/outputs/doctoral/Aviate-Navigate-Communicate-Silence-Voice-and/991014632338104721",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/b3e9b00367f40bb459f85c5eea3e7b776891464b",
+        "https://researchdiscovery.drexel.edu/esploro/outputs/doctoral/Aviate-Navigate-Communicate-Silence-Voice-and/991014632338104721"
+      ],
+      "source_evidence": [
+        "The university record exposed the dissertation abstract and a full-text link."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-018",
+      "record_key": "doi:10.1080/25741136.2026.2627672",
+      "title": "AI Curriculum for media education: insights from academic adaptability and industry relevance in West Bengal, India",
+      "year": "2026",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1080/25741136.2026.2627672",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1080/25741136.2026.2627672",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-019",
+      "record_key": "doi:10.1177/09589287251358069",
+      "title": "How context matters: Human oversight of automated decision-making systems in welfare administration",
+      "year": "2026",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1177/09589287251358069",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1177/09589287251358069",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-020",
+      "record_key": "doi:10.1007/s10111-007-0104-x",
+      "title": "Core task analysis in accident investigation: analysis of maritime accidents in piloting situations",
+      "year": "2009",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s10111-007-0104-x",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s10111-007-0104-x",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-021",
+      "record_key": "doi:10.1007/s00146-024-01869-4",
+      "title": "Surveying Judges about artificial intelligence: profession, judicial adjudication, and legal principles",
+      "year": "2024",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s00146-024-01869-4",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s00146-024-01869-4",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-022",
+      "record_key": "title:wip human ai interactions in real world complex environments using a comprehensive reinforcement learning framework|year:",
+      "title": "WIP: Human-AI interactions in real-world complex environments using a comprehensive reinforcement learning framework",
+      "year": "",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://alaworkshop2023.github.io/papers/ALA2023_paper_56.pdf",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/c6277e0dce2989d1c672498c1306a8b2a2349fd1",
+        "https://alaworkshop2023.github.io/papers/ALA2023_paper_56.pdf"
+      ],
+      "source_evidence": [
+        "The workshop-paper PDF was readable."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-023",
+      "record_key": "doi:10.1007/s11245-025-10355-5",
+      "title": "A Tale of Two Anthropocentric Abstractions: On the Concept of the \u201cHuman\u201d in AI and Environmental Ethics",
+      "year": "2026",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s11245-025-10355-5",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s11245-025-10355-5",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-024",
+      "record_key": "doi:10.1007/s10892-024-09493-6",
+      "title": "Artificial Intelligence and the Future of Work: Mapping the Ethical Issues",
+      "year": "2024",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s10892-024-09493-6",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s10892-024-09493-6",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-025",
+      "record_key": "doi:10.1201/9781315587332",
+      "title": "Human Factors and Ergonomics in Practice : Improving System Performance and Human Well-Being in the Real World",
+      "year": "2016",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1201/9781315587332",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1201/9781315587332",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-026",
+      "record_key": "title:coping with unreliable automation content format form in the design of human automation systems|year:2019",
+      "title": "Coping with unreliable automation : content/format/form in the design of human-automation systems",
+      "year": "2019",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://etheses.bham.ac.uk/id/eprint/9085/7/Morar2019PhD_Redacted.pdf",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/caf81d3fbd5f924469aed04c4d7d01675d6182c6",
+        "https://etheses.bham.ac.uk/id/eprint/9085/7/Morar2019PhD_Redacted.pdf"
+      ],
+      "source_evidence": [
+        "The university thesis PDF was readable."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-027",
+      "record_key": "doi:10.1007/s43681-026-00982-y",
+      "title": "A speculative realist typology of AI fairness: an Object-Oriented Onto-Ethics",
+      "year": "2026",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s43681-026-00982-y",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s43681-026-00982-y",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-028",
+      "record_key": "title:increase human reliability by identifying and evaluating potential and actual roots of maintenance team errors in the power transmission grids|year:2021",
+      "title": "Increase Human Reliability by Identifying and Evaluating Potential and Actual Roots of Maintenance Team Errors in the Power Transmission Grids",
+      "year": "2021",
+      "retrieval_outcome": "unavailable",
+      "retrieval_locator": "https://www.semanticscholar.org/paper/93dacf66b966feac3d9293c9050e60a6e9a93b24",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/93dacf66b966feac3d9293c9050e60a6e9a93b24",
+        "https://www.semanticscholar.org/paper/93dacf66b966feac3d9293c9050e60a6e9a93b24"
+      ],
+      "source_evidence": [
+        "The indexed record did not yield a readable abstract or full text through the checked routes."
+      ],
+      "review_basis": "insufficient_source_content",
+      "screening_decision": null,
+      "screening_rationale": "The indexed record did not yield a readable abstract or full text through the checked routes.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-029",
+      "record_key": "doi:10.1007/978-3-030-02053-8_111",
+      "title": "The Organizational Safety Culture Assessment",
+      "year": "2018",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/978-3-030-02053-8_111",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/978-3-030-02053-8_111",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-030",
+      "record_key": "doi:10.1007/978-3-030-49183-3",
+      "title": "Engineering Psychology and Cognitive Ergonomics. Cognition and Design: 17th International Conference, EPCE 2020, Held as Part of the 22nd HCI International Conference, HCII 2020, Copenhagen, Denmark, July 19\u201324, 2020, Proceedings, Part II",
+      "year": "2020",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1007/978-3-030-49183-3",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/978-3-030-49183-3",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-031",
+      "record_key": "title:designing ai for decision making the importance of trust control and explainability within a government agency|year:",
+      "title": "Designing AI for decision making The importance of trust, control and explainability within a government agency",
+      "year": "",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A1890832",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/314ba2d06dacaaa4b2686ccaa98bab4ba5b44724",
+        "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A1890832"
+      ],
+      "source_evidence": [
+        "The university record exposed the thesis abstract and a full-text link."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-032",
+      "record_key": "doi:10.1016/j.engfailanal.2023.107950",
+      "title": "Cause analysis of secondary explosion accident in Hushan Gold Mine, Shandong Province, China based on HFACS-CM model",
+      "year": "2024",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.engfailanal.2023.107950",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.engfailanal.2023.107950",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-033",
+      "record_key": "title:a principles based ethical assurance argument pattern for ai and autonomous systems|year:2022",
+      "title": "A PRINCIPLES-BASED ETHICAL ASSURANCE ARGUMENT PATTERN FOR AI AND AUTONOMOUS SYSTEMS",
+      "year": "2022",
+      "retrieval_outcome": "duplicate",
+      "retrieval_locator": "https://link.springer.com/article/10.1007/s43681-023-00297-2",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/6a7e30d7ed98bc6cbd77d63931c45eb4b24f02a8",
+        "https://link.springer.com/article/10.1007/s43681-023-00297-2"
+      ],
+      "source_evidence": [
+        "The argument-pattern title is another record for the published PRAISE article."
+      ],
+      "review_basis": "identifier_and_version_match",
+      "screening_decision": null,
+      "screening_rationale": "The argument-pattern title is another record for the published PRAISE article.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-034",
+      "record_key": "doi:10.1007/978-3-319-15982-9_35",
+      "title": "Approaching Human-Robot Interaction with Resilience",
+      "year": "2015",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/978-3-319-15982-9_35",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/978-3-319-15982-9_35",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-035",
+      "record_key": "doi:10.1111/dmj.12070",
+      "title": "Meaning Innovations with Design Support: Towards Transparency and Sustainability in the IT Field",
+      "year": "2021",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.1111/dmj.12070",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1111/dmj.12070",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-036",
+      "record_key": "doi:10.1080/00140139.2010.489966",
+      "title": "Systems-based accident analysis in the led outdoor activity domain: application and evaluation of a risk management framework",
+      "year": "2010",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1080/00140139.2010.489966",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1080/00140139.2010.489966",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-037",
+      "record_key": "doi:10.1002/mp.12800",
+      "title": "Incident learning in radiation oncology: A review.",
+      "year": "2018",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.1002/mp.12800",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1002/mp.12800",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-038",
+      "record_key": "doi:10.1007/s12369-024-01184-4",
+      "title": "Reframing Deception for Human-Centered AI",
+      "year": "2024",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s12369-024-01184-4",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s12369-024-01184-4",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-039",
+      "record_key": "title:data symphony harmonizing the elements of big data and artificial intelligence for enhanced decision making and problem solving|year:",
+      "title": "Data Symphony: Harmonizing the Elements of Big Data and Artificial Intelligence for Enhanced Decision-Making and Problem Solving",
+      "year": "",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://easychair.org/publications/preprint/H8sp/open",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/0b9d98874770f57f9f035928cc358da4114d7901",
+        "https://easychair.org/publications/preprint/H8sp/open"
+      ],
+      "source_evidence": [
+        "The EasyChair preprint page exposed the paper text."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-040",
+      "record_key": "doi:10.1007/s41463-025-00215-0",
+      "title": "Moral Judgment in the Age of Artificial Intelligence: How Humans Perceive Ethical Decisions Made by Machines",
+      "year": "2025",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s41463-025-00215-0",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s41463-025-00215-0",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-041",
+      "record_key": "doi:10.1016/j.aap.2014.09.017",
+      "title": "Bayesian networks for maritime traffic accident prevention: benefits and challenges.",
+      "year": "2014",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.aap.2014.09.017",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.aap.2014.09.017",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-042",
+      "record_key": "doi:10.48550/arxiv.2402.08080",
+      "title": "User Perception of Partially Automated Driving Systems: A Meaningful Human Control Perspective on the Perception among Tesla Users",
+      "year": "2024",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.48550/arxiv.2402.08080",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.48550/arxiv.2402.08080",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-043",
+      "record_key": "doi:10.1007/s44206-025-00241-3",
+      "title": "Addressing Ethical Challenges in Cyberspace Governance: Recommendations for the Digital Sovereignty Era",
+      "year": "2026",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s44206-025-00241-3",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s44206-025-00241-3",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-044",
+      "record_key": "doi:10.1016/j.ssaho.2025.101301",
+      "title": "Using ChatGPT for academic support: Managing cognitive load and enhancing learning efficiency \u2013 A phenomenological approach",
+      "year": "2025",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.ssaho.2025.101301",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.ssaho.2025.101301",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-045",
+      "record_key": "doi:10.1016/j.ssci.2016.12.012",
+      "title": "Situation awareness as a determinant for unsafe actions and subjective risk assessment on offshore attendant vessels",
+      "year": "2017",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.ssci.2016.12.012",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.ssci.2016.12.012",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-046",
+      "record_key": "doi:10.1007/s00146-026-02995-x",
+      "title": "Obsolescence without hostility: optimization, uniformity, and the erosion of human meaning in a post-AI world",
+      "year": "2026",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s00146-026-02995-x",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s00146-026-02995-x",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-047",
+      "record_key": "doi:10.1080/15265161.2026.2690941",
+      "title": "Many Hands, But Who Is In Control? Two Types of Control Gaps in Federated Learning for Healthcare",
+      "year": "2026",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.1080/15265161.2026.2690941",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1080/15265161.2026.2690941",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-048",
+      "record_key": "doi:10.1016/j.medengphy.2009.09.002",
+      "title": "Reducing non-collision injuries in special transportation services by enhanced safety culture.",
+      "year": "2010",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1016/j.medengphy.2009.09.002",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.medengphy.2009.09.002",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-049",
+      "record_key": "doi:10.1097/01.jom.0000085887.16564.3a",
+      "title": "Effects of Firm Size on Risks and Reporting of Elevation Fall Injury in Construction Trades",
+      "year": "2003",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1097/01.jom.0000085887.16564.3a",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1097/01.jom.0000085887.16564.3a",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-050",
+      "record_key": "doi:10.1038/s41585-020-0375-z",
+      "title": "Autonomous surgery in the era of robotic urology: friend or foe of the future surgeon?",
+      "year": "2020",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1038/s41585-020-0375-z",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1038/s41585-020-0375-z",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-051",
+      "record_key": "doi:10.1007/s43681-026-01167-3",
+      "title": "From evaluator to principal: the agentic AI literacy framework (AALF) for delegated autonomy",
+      "year": "2026",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s43681-026-01167-3",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s43681-026-01167-3",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-052",
+      "record_key": "doi:10.1109/cai64502.2025.00121",
+      "title": "Human Oversight Over Autonomous Task Execution in Sandbox Environments",
+      "year": "2025",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1109/cai64502.2025.00121",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1109/cai64502.2025.00121",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-053",
+      "record_key": "doi:10.1007/s13347-026-01150-0",
+      "title": "Digital Vulnerabilities in the Age of AI: A Multi-Level Analysis",
+      "year": "2026",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s13347-026-01150-0",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s13347-026-01150-0",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-054",
+      "record_key": "title:the survey taxonomy and future directions of trustworthy ai a meta decision of strategic decisions|year:2023",
+      "title": "The Survey, Taxonomy, and Future Directions of Trustworthy AI: A Meta Decision of Strategic Decisions",
+      "year": "2023",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://arxiv.org/abs/2306.00380",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/1325c076f6dc5ab710b39d3189a27465e1c1d7e4",
+        "https://arxiv.org/abs/2306.00380"
+      ],
+      "source_evidence": [
+        "The arXiv record exposed the author abstract and full-text link."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-055",
+      "record_key": "doi:10.1007/978-1-4471-5102-9_100031-1",
+      "title": "Surgical Robotics",
+      "year": "2020",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/978-1-4471-5102-9_100031-1",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/978-1-4471-5102-9_100031-1",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-056",
+      "record_key": "doi:10.3233/wor-2012-0018-5282",
+      "title": "Drivers\u2019 safety needs, behavioural adaptations and acceptance of new driving support systems",
+      "year": "2012",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.3233/wor-2012-0018-5282",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.3233/wor-2012-0018-5282",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-057",
+      "record_key": "doi:10.1007/978-3-030-22933-7_6",
+      "title": "Four Perspectives on What Matters for the Ethics of Automated Vehicles",
+      "year": "2019",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/978-3-030-22933-7_6",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/978-3-030-22933-7_6",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-058",
+      "record_key": "title:an evaluation of child protection reform in israel|year:2016",
+      "title": "An Evaluation of Child Protection Reform in Israel",
+      "year": "2016",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://researchonline.lse.ac.uk/134229",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/d682b3267525e6a34f50aa7258c89e7fa3e1005d",
+        "https://researchonline.lse.ac.uk/134229"
+      ],
+      "source_evidence": [
+        "The university record exposed the dissertation abstract and file link."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-059",
+      "record_key": "title:la psicologia de la seguretat laboral com a eina imprescindible en la prevenci de riscos laborals|year:2006",
+      "title": "LA PSICOLOGIA DE LA SEGURETAT LABORAL COM A EINA IMPRESCINDIBLE EN LA PREVENCI\u00d3 DE RISCOS LABORALS",
+      "year": "2006",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://roderic.uv.es/rest/api/core/bitstreams/b58c4a36-4007-4e74-b7cc-c0be02c3da82/content",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/b8129b2e691124a62870978525fd464ef2328473",
+        "https://roderic.uv.es/rest/api/core/bitstreams/b58c4a36-4007-4e74-b7cc-c0be02c3da82/content"
+      ],
+      "source_evidence": [
+        "The institutional-repository PDF was readable."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-060",
+      "record_key": "doi:10.1007/978-3-030-49183-3_16",
+      "title": "Allocation of Moral Decision-Making in Human-Agent Teams: A Pattern Approach",
+      "year": "2020",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/978-3-030-49183-3_16",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/978-3-030-49183-3_16",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-061",
+      "record_key": "title:working towards a meaningful transition of human control over automated driving systems|year:2018",
+      "title": "Working towards a Meaningful Transition of Human Control over Automated Driving Systems",
+      "year": "2018",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://repository.tudelft.nl/file/File_a30c8388-7bbc-45e3-bb15-56a93280d191?preview=1",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/f13dea602a687858933d1fbae2eee2cfc19503fc",
+        "https://repository.tudelft.nl/file/File_a30c8388-7bbc-45e3-bb15-56a93280d191?preview=1"
+      ],
+      "source_evidence": [
+        "The TU Delft conference-paper PDF was readable."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-062",
+      "record_key": "title:about the|year:",
+      "title": "about the",
+      "year": "",
+      "retrieval_outcome": "unavailable",
+      "retrieval_locator": "https://www.semanticscholar.org/paper/b01aaf20ce168b2d650f5a21f087895b9a30ce56",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/b01aaf20ce168b2d650f5a21f087895b9a30ce56",
+        "https://www.semanticscholar.org/paper/b01aaf20ce168b2d650f5a21f087895b9a30ce56"
+      ],
+      "source_evidence": [
+        "The malformed title did not yield enough evidence to identify or screen the record."
+      ],
+      "review_basis": "insufficient_source_content",
+      "screening_decision": null,
+      "screening_rationale": "The malformed title did not yield enough evidence to identify or screen the record.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-063",
+      "record_key": "doi:10.1080/08874417.2025.2600955",
+      "title": "Socio-Technical Machine Learning - Putting the User in Control",
+      "year": "2026",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1080/08874417.2025.2600955",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1080/08874417.2025.2600955",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-064",
+      "record_key": "doi:10.1007/s00146-025-02588-0",
+      "title": "Dignity, conflict proliferation and responsibility: how not to argue against autonomous weapon systems",
+      "year": "2025",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s00146-025-02588-0",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s00146-025-02588-0",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-065",
+      "record_key": "title:attitudes towards road safety and aberrant behaviour of drivers in pakistan|year:2012",
+      "title": "Attitudes towards road safety and aberrant behaviour of drivers in Pakistan",
+      "year": "2012",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://etheses.whiterose.ac.uk/id/eprint/6765/1/589055.pdf",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/23060e84eb88a943b970f114903ef7e862d608a6",
+        "https://etheses.whiterose.ac.uk/id/eprint/6765/1/589055.pdf"
+      ],
+      "source_evidence": [
+        "The university dissertation PDF was readable."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-066",
+      "record_key": "doi:10.1201/b10942-7",
+      "title": "Practical Tools for Creating Safety",
+      "year": "2016",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1201/b10942-7",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1201/b10942-7",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved to a different title, so the source could not support the sampled record."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved to a different title, so the source could not support the sampled record.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-067",
+      "record_key": "doi:10.1016/j.ress.2025.111686",
+      "title": "Development of accident analysis for civil engineering structures an AcciMap diagram for collapsed steel dome structure",
+      "year": "2025",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.ress.2025.111686",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.ress.2025.111686",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-068",
+      "record_key": "doi:10.1016/j.ssci.2012.05.022",
+      "title": "WITHDRAWN: A systems approach to understanding and enhancing disaster response: An Accimap analysis of bushfire response activities",
+      "year": "2012",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.ssci.2012.05.022",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.ssci.2012.05.022",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-069",
+      "record_key": "doi:10.7562/se2017.7.02.06",
+      "title": "USING ABSOLUTE PROBABILITY JUDGEMENT METHOD FOR HUMAN RELIABILITY ASSESSMENT - A CASE STUDY",
+      "year": "2017",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.7562/se2017.7.02.06",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.7562/se2017.7.02.06",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-070",
+      "record_key": "doi:10.2139/ssrn.4772956",
+      "title": "Governing AI Agents",
+      "year": "2024",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.2139/ssrn.4772956",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.2139/ssrn.4772956",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-071",
+      "record_key": "doi:10.1080/10803548.2006.11076690",
+      "title": "Driver Celeration Behavior and the Prediction of Traffic Accidents",
+      "year": "2006",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1080/10803548.2006.11076690",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1080/10803548.2006.11076690",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-072",
+      "record_key": "title:a case study on how the approach to human error guides the incident reporting among nurses in a hospital setting|year:2014",
+      "title": "A case study on how the approach to human error guides the incident reporting among nurses in a hospital setting",
+      "year": "2014",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://www.lunduniversity.lu.se/lup/publication/4318225",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/46b5e679e07903ef75864dacf6e37184e3f6e7a1",
+        "https://www.lunduniversity.lu.se/lup/publication/4318225"
+      ],
+      "source_evidence": [
+        "The university record exposed a substantive abstract and a PDF link."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-073",
+      "record_key": "doi:10.1080/1463922x.2017.1414333",
+      "title": "Where are we on driver distraction? Methods, approaches and recommendations",
+      "year": "2017",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1080/1463922x.2017.1414333",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1080/1463922x.2017.1414333",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-074",
+      "record_key": "doi:10.1016/j.trf.2018.01.019",
+      "title": "New systems-based method to conduct analysis of road traffic accidents",
+      "year": "2018",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.trf.2018.01.019",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.trf.2018.01.019",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-075",
+      "record_key": "doi:10.1093/bjsw/bcw101",
+      "title": "Partnership with Parents in Child Protection: A Systems Approach to Evaluate Reformative Developments in Israel",
+      "year": "2017",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1093/bjsw/bcw101",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1093/bjsw/bcw101",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-076",
+      "record_key": "doi:10.1016/j.aap.2012.06.001",
+      "title": "Distraction-induced driving error: an on-road examination of the errors made by distracted and undistracted drivers.",
+      "year": "2013",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.aap.2012.06.001",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.aap.2012.06.001",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-077",
+      "record_key": "title:ai control and unintended consequences the need for meta values|year:",
+      "title": "AI, Control and Unintended Consequences: The Need for Meta-Values",
+      "year": "",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://pure.tudelft.nl/ws/portalfiles/portal/151937788/2023_ai_control_meta_values.pdf",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/88e2a31fe188a8c71d6cbaf5f19f48b50d841801",
+        "https://pure.tudelft.nl/ws/portalfiles/portal/151937788/2023_ai_control_meta_values.pdf"
+      ],
+      "source_evidence": [
+        "The institutional-repository chapter PDF was readable."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-078",
+      "record_key": "doi:10.1080/10447318.2026.2687131",
+      "title": "Maintain Preference for Autonomous System or Human-Controlled System? The Influence of Trust Conflict and Algorithm Aversion",
+      "year": "2026",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1080/10447318.2026.2687131",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1080/10447318.2026.2687131",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-079",
+      "record_key": "doi:10.1061/(asce)co.1943-7862.0001114",
+      "title": "Rework causation: Emergent theoretical insights and implications for research",
+      "year": "2016",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.1061/(asce)co.1943-7862.0001114",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1061/(asce)co.1943-7862.0001114",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-080",
+      "record_key": "doi:10.1007/s43681-022-00144-w",
+      "title": "\u2018Design-for-responsible\u2019 algorithmic decision-making systems: a question of ethical judgement and human meaningful control",
+      "year": "2022",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s43681-022-00144-w",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s43681-022-00144-w",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-081",
+      "record_key": "doi:10.1016/j.eswa.2013.08.060",
+      "title": "Bayesian network modeling of Port State Control inspection findings and ship accident involvement",
+      "year": "2014",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.eswa.2013.08.060",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.eswa.2013.08.060",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-082",
+      "record_key": "doi:10.1016/j.ssci.2006.07.010",
+      "title": "Assessment of complex sociotechnical systems \u2013 Theoretical issues concerning the use of organizational culture and organizational core task concepts",
+      "year": "2007",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.ssci.2006.07.010",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.ssci.2006.07.010",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-083",
+      "record_key": "title:capacity workload and mental contents exploring the foundations of driver distraction|year:2010",
+      "title": "Capacity, workload and mental contents : exploring the foundations of driver distraction",
+      "year": "2010",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://jyx.jyu.fi/bitstreams/34f414e4-f3ca-4834-958e-918d158628e7/download",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/1328fa303ea7f8b1fafdf2fea55daf9183cb7028",
+        "https://jyx.jyu.fi/bitstreams/34f414e4-f3ca-4834-958e-918d158628e7/download"
+      ],
+      "source_evidence": [
+        "The university dissertation PDF was readable."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-084",
+      "record_key": "doi:10.1016/j.aap.2008.09.004",
+      "title": "Analytical HFACS for investigating human errors in shipping accidents.",
+      "year": "2009",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.aap.2008.09.004",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.aap.2008.09.004",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-085",
+      "record_key": "title:methodological framework for conducting a risk assessment study|year:2009",
+      "title": "METHODOLOGICAL FRAMEWORK FOR CONDUCTING A RISK ASSESSMENT STUDY",
+      "year": "2009",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://www.researchgate.net/publication/242120689_METHODOLOGICAL_FRAMEWORK_FOR_CONDUCTING_A_RISK_ASSESSMENT_STUDY",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/118b3ef6832332727febcd157326235ae4e64ca7",
+        "https://www.researchgate.net/publication/242120689_METHODOLOGICAL_FRAMEWORK_FOR_CONDUCTING_A_RISK_ASSESSMENT_STUDY"
+      ],
+      "source_evidence": [
+        "The indexed full-text page exposed the article text."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-086",
+      "record_key": "doi:10.1201/9781315587332-26",
+      "title": "Becoming a Human Factors/Ergonomics Practitioner",
+      "year": "2016",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1201/9781315587332-26",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1201/9781315587332-26",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route failed at the legacy publisher host and yielded no readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI route failed at the legacy publisher host and yielded no readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-087",
+      "record_key": "doi:10.13031/2013.41957",
+      "title": "Management of safety and quality and the relationship with employee decisions in country grain elevators.",
+      "year": "2012",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.13031/2013.41957",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.13031/2013.41957",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-088",
+      "record_key": "doi:10.4236/blr.2026.172032",
+      "title": "Two Years after the Adoption of the EU AI Act (Regulation (EU) 2024/1689, 13 June 2024): Impacts on Legal Practice through Selected Italian Judgments\u2014Stricter Diligence Obligations and the Concept of Pedagogical Damages",
+      "year": "2026",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.4236/blr.2026.172032",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.4236/blr.2026.172032",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-089",
+      "record_key": "doi:10.1016/j.ssci.2022.105899",
+      "title": "A systems analysis of work-related violence in hospitals: Stakeholders, contributory factors, and leverage points",
+      "year": "2022",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.ssci.2022.105899",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.ssci.2022.105899",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-090",
+      "record_key": "title:decision making in the process of collision avoidance at sea the cognitive aspect|year:2014",
+      "title": "Decision Making in the Process of Collision Avoidance at Sea \u2013 the Cognitive Aspect",
+      "year": "2014",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://dabar.srce.hr/books/pfst%3A2128/show-file/0",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/d5bd27374bd41e3a7fe2f575022333a5b1d6e4f3",
+        "https://dabar.srce.hr/books/pfst%3A2128/show-file/0"
+      ],
+      "source_evidence": [
+        "The proceedings table of contents verified the paper title and page, but no paper text was isolated."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The proceedings table of contents verified the paper title and page, but no paper text was isolated.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-091",
+      "record_key": "title:from human computer interaction to human ai interaction new challenges and opportunities for enabling human centered ai|year:2021",
+      "title": "From Human-Computer Interaction to Human-AI Interaction: New Challenges and Opportunities for Enabling Human-Centered AI",
+      "year": "2021",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://www.semanticscholar.org/paper/977bd3b13f3998bab099d84c22a173d6d2d9303b",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/977bd3b13f3998bab099d84c22a173d6d2d9303b",
+        "https://www.semanticscholar.org/paper/977bd3b13f3998bab099d84c22a173d6d2d9303b"
+      ],
+      "source_evidence": [
+        "The indexed record exposed a substantive author abstract through a secondary route."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-092",
+      "record_key": "title:holistic approach in engineering design controlling risks from accidental hazards in bridge design|year:2015",
+      "title": "Holistic approach in engineering design - controlling risks from accidental hazards in bridge design",
+      "year": "2015",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://lup.lub.lu.se/record/8052270",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/b61cc0a91cab737d8296a92554fe1450d7ddc48d",
+        "https://lup.lub.lu.se/record/8052270"
+      ],
+      "source_evidence": [
+        "The university record exposed the thesis abstract and open manuscript."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-093",
+      "record_key": "doi:10.1016/j.ssci.2016.08.027",
+      "title": "AHP-based analysis of the risk potential of safety incidents: Case study of cranes in the construction industry",
+      "year": "2017",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.ssci.2016.08.027",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.ssci.2016.08.027",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-094",
+      "record_key": "title:characteristics of critical incidents in dynamic positioning|year:2013",
+      "title": "Characteristics of critical incidents in dynamic positioning",
+      "year": "2013",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://www.sintef.no/globalassets/project/hfc/documents/finalmasteroppgave-27.11.pdf",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/dde4fa59743de2b2648fe9dfa3cd0e475bc37436",
+        "https://www.sintef.no/globalassets/project/hfc/documents/finalmasteroppgave-27.11.pdf"
+      ],
+      "source_evidence": [
+        "The thesis PDF was readable."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-095",
+      "record_key": "doi:10.1016/j.jlp.2021.104517",
+      "title": "Analysis of train derailments and collisions to identify leading causes of loss incidents in rail transport of dangerous goods in Canada",
+      "year": "2021",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.jlp.2021.104517",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.jlp.2021.104517",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    },
+    {
+      "sample_id": "RS-FC-096",
+      "record_key": "doi:10.1007/s11668-018-0534-1",
+      "title": "Systems-Based Analysis of China-Tianjin Port Fire and Explosion: A Comparison of HFACS, AcciMap, and STAMP",
+      "year": "2018",
+      "retrieval_outcome": "abstract-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s11668-018-0534-1",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s11668-018-0534-1",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a readable publisher abstract. No proposition may exceed that abstract without a separate full-text check."
+      ],
+      "review_basis": "title_and_abstract",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-097",
+      "record_key": "doi:10.1007/s00146-021-01246-5",
+      "title": "From Blade Runners to Tin Kickers: what the governance of artificial intelligence safety needs to learn from air crash investigators",
+      "year": "2021",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s00146-021-01246-5",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s00146-021-01246-5",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-098",
+      "record_key": "doi:10.1007/s00146-021-01378-8",
+      "title": "Unintentional intentionality: art and design in the age of artificial intelligence",
+      "year": "2022",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.1007/s00146-021-01378-8",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1007/s00146-021-01378-8",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-099",
+      "record_key": "title:the confluence of big data and artificial intelligence unraveling complex patterns and unveiling novel paradigms for transformative knowledge discovery|year:",
+      "title": "The Confluence of Big Data and Artificial Intelligence: Unraveling Complex Patterns and Unveiling Novel Paradigms for Transformative Knowledge Discovery",
+      "year": "",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://easychair.org/publications/preprint/njvZ/open",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/a40fe47a4cf069fb0a824778d374749370d2dc93",
+        "https://easychair.org/publications/preprint/njvZ/open"
+      ],
+      "source_evidence": [
+        "The EasyChair preprint page exposed the paper text."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-100",
+      "record_key": "doi:10.4148/npp.15519",
+      "title": "Unmanned Aircraft Systems in the Cyber Domain",
+      "year": "2019",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://doi.org/10.4148/npp.15519",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.4148/npp.15519",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI route exposed a complete publisher page or a readable full-text file."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-101",
+      "record_key": "title:the role of human factors in led outdoor activity accidents literature review and exploratory analysis|year:2009",
+      "title": "The role of human factors in led outdoor activity accidents: literature review and exploratory analysis",
+      "year": "2009",
+      "retrieval_outcome": "full-text-recovered",
+      "retrieval_locator": "https://outdoorcouncil.asn.au/wp-content/uploads/2016/08/OAI_REPORT_FINAL_VERSION_OCT_15th_2009.pdf",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://www.semanticscholar.org/paper/b4cdd52e7e53d4f643f388b57364ce6e569b3043",
+        "https://outdoorcouncil.asn.au/wp-content/uploads/2016/08/OAI_REPORT_FINAL_VERSION_OCT_15th_2009.pdf"
+      ],
+      "source_evidence": [
+        "The research-report PDF was readable."
+      ],
+      "review_basis": "full_text_route",
+      "screening_decision": null,
+      "screening_rationale": "OPEN: source content recovered; Mark Julius Banasihan must record the screening decision.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No paper claim until author screening is recorded."
+    },
+    {
+      "sample_id": "RS-FC-102",
+      "record_key": "doi:10.1016/j.giq.2024.101982",
+      "title": "Regulating generative AI: The limits of technology-neutral regulatory frameworks. Insights from Italy's intervention on ChatGPT",
+      "year": "2024",
+      "retrieval_outcome": "metadata-only",
+      "retrieval_locator": "https://doi.org/10.1016/j.giq.2024.101982",
+      "retrieval_date": "2026-08-11",
+      "routes_checked": [
+        "https://doi.org/10.1016/j.giq.2024.101982",
+        "publisher or repository landing page"
+      ],
+      "source_evidence": [
+        "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content."
+      ],
+      "review_basis": "metadata_only",
+      "screening_decision": null,
+      "screening_rationale": "The DOI resolved, but the checked publisher route exposed metadata, a purchase page, or an automated access check without readable source content.",
+      "decision_owner": "Mark Julius Banasihan",
+      "ai_assistance": "AI assisted with identifier routing, publisher-page inspection, duplicate detection, and ledger assembly. No machine summary was used as source evidence.",
+      "claim_limit": "No substantive paper claim from this record."
+    }
+  ]
+}

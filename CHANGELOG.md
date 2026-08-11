@@ -2,6 +2,18 @@
 
 All material changes to concepts, claims, protocols, and evidence requirements are recorded here.
 
+## 0.12.0, 11 August 2026
+
+- Records one retrieval outcome for each of the 102 records in the frozen forward-citation stratum.
+- Recovers 34 full texts and 37 abstracts, records 26 metadata-only outcomes, reconciles 3 duplicates, and leaves 2 unavailable.
+- Creates a 71-record author queue with blank decisions and no claim permission.
+- Adds a deterministic builder and validator cross-check for frozen membership, evidence counts, population-ledger agreement, and queue membership.
+- Records two unresolved direct-query source limits without treating access failure as a topic exclusion.
+- Adds `PAPER-C33` to the claim map and keeps its human support gate pending and conclusion eligibility false.
+- Runs the 27-claim integrity audit, detects all 22 existing controlled corruptions, and publishes five exceptions.
+- Updates coverage accounting to 107 of 1,087 retrieval outcomes, leaving 980 open.
+- Preserves the three frozen topics, project question, public cases, and released assessments.
+
 ## 0.11.0, 11 August 2026
 
 - Closes the retained-source full-text gate with 22 verified full-text records, 3 abstract-only records, 2 inaccessible records, and no open decisions.

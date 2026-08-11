@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the v0.11.0 direct-query and claim-control paper workspace."""
+"""Validate the v0.12.0 forward-citation retrieval paper workspace."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ QUESTION = (
     "public incident record?"
 )
 VERSION_DOI = "10.5281/zenodo.21865007"
-REPOSITORY_VERSION = "0.11.0"
+REPOSITORY_VERSION = "0.12.0"
 PAPER_FILES = (
     "paper/README.md",
     "paper/paper-charter.md",
@@ -31,6 +31,7 @@ PAPER_FILES = (
     "paper/next-evidence-gates-v0.10.0.md",
     "paper/inaccessible-risk-sample-v0.11.0.md",
     "paper/direct-query-retrieval-tranche-v0.11.0.md",
+    "paper/forward-citation-retrieval-tranche-v0.12.0.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
     "paper/literature-matrix.md",
@@ -61,11 +62,14 @@ PAPER_FILES = (
     "paper/data/inaccessible-risk-sample-v0.11.0.csv",
     "paper/data/inaccessible-risk-sample-v0.11.0.json",
     "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
+    "paper/data/forward-citation-retrieval-evidence-v0.12.0.json",
+    "paper/data/forward-citation-author-review-queue-v0.12.0.csv",
     "evidence/human-review-attestation-v0.11.0.json",
+    "evidence/human-review-attestation-v0.12.0.json",
     "evidence/claim-evidence-map.json",
-    "audits/v0.11.0/audit-results.json",
-    "audits/v0.11.0/audit-report.md",
-    "release/v0.11.0-release-notes.md",
+    "audits/v0.12.0/audit-results.json",
+    "audits/v0.12.0/audit-report.md",
+    "release/v0.12.0-release-notes.md",
     "paper/data/authenticated-interface-searches-v0.10.0.csv",
     "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",
