@@ -1,0 +1,30 @@
+{
+  "version": "0.13.0",
+  "status": "FORWARD_CITATION_AUTHOR_SCREENING_CLOSED",
+  "frozen_input": "paper/data/forward-citation-author-review-queue-v0.12.0.csv",
+  "frozen_input_sha256": "6626338915c50da8e58e1487d3ef5f523a89421f0b21ae7f16f42b71140817e9",
+  "decision_owner": "Mark Julius Banasihan",
+  "decision_date": "2026-08-11",
+  "assistance_disclosure": "AI-assisted source-content inspection and screening under author authorization; Mark Julius Banasihan retains decision accountability.",
+  "counts": {
+    "queue_records": 71,
+    "decisions_complete": 71,
+    "decisions_open": 0,
+    "retained_for_source_review": 35,
+    "excluded": 36,
+    "decisions": {
+      "exclude-single-component": 11,
+      "exclude-topic": 25,
+      "retain-background": 22,
+      "retain-close": 13
+    },
+    "claim_permission_granted": 0
+  },
+  "claim_rule": "Screening determines corpus membership only. Retained sources require proposition-level review with a stable locator before they may support a manuscript claim.",
+  "limits": [
+    "AI assistance was used under author authorization; this record does not represent independent screening or inter-assessor agreement.",
+    "The 71-record queue is the recovered-content subset of a frozen 102-record forward-citation risk sample.",
+    "The result does not establish exhaustive coverage, originality, prevalence, reliability, field validity, or institutional effects.",
+    "A retained screening decision does not establish that a source supports any manuscript proposition."
+  ]
+}

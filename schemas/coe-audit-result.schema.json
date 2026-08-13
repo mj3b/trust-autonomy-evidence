@@ -6,8 +6,8 @@
   "additionalProperties": false,
   "required": ["version", "audit_id", "audit_date", "scope", "status", "checks", "negative_controls", "exceptions", "claim_results"],
   "properties": {
-    "version": {"enum": ["0.6.0", "0.8.0", "0.9.0", "0.11.0", "0.12.0"]},
-    "audit_id": {"enum": ["TAE-COE-AUDIT-V0.6.0", "TAE-COE-AUDIT-V0.8.0", "TAE-COE-AUDIT-V0.9.0", "TAE-COE-AUDIT-V0.11.0", "TAE-COE-AUDIT-V0.12.0"]},
+    "version": {"enum": ["0.6.0", "0.8.0", "0.9.0", "0.11.0", "0.12.0", "0.13.0"]},
+    "audit_id": {"enum": ["TAE-COE-AUDIT-V0.6.0", "TAE-COE-AUDIT-V0.8.0", "TAE-COE-AUDIT-V0.9.0", "TAE-COE-AUDIT-V0.11.0", "TAE-COE-AUDIT-V0.12.0", "TAE-COE-AUDIT-V0.13.0"]},
     "audit_date": {"type": "string", "format": "date"},
     "scope": {"type": "string", "minLength": 1},
     "status": {"enum": ["PASS", "PASS_WITH_EXCEPTIONS", "FAIL"]},

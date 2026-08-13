@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seal the v0.12.0 forward-citation retrieval candidate."""
+"""Seal the v0.13.0 forward-citation screening candidate."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "release" / "v0.12.0-manifest.json"
+OUTPUT = ROOT / "release" / "v0.13.0-manifest.json"
 
 CORE = (
     "release/v0.3.0-manifest.json",
@@ -21,9 +21,11 @@ CORE = (
     "release/v0.9.0-manifest.json",
     "release/v0.10.0-manifest.json",
     "release/v0.11.0-manifest.json",
+    "release/v0.12.0-manifest.json",
     "release/v0.10.0-release-notes.md",
     "release/v0.11.0-release-notes.md",
     "release/v0.12.0-release-notes.md",
+    "release/v0.13.0-release-notes.md",
     "README.md",
     "RESEARCH_STATUS.md",
     "CLAIMS.md",
@@ -56,6 +58,7 @@ CORE = (
     "evidence/claim-evidence-map-v0.9.0.json",
     "evidence/human-review-attestation-v0.11.0.json",
     "evidence/human-review-attestation-v0.12.0.json",
+    "evidence/human-review-attestation-v0.13.0.json",
     "evidence/research-lineage.json",
     "evidence/research-activity-log.json",
     "assessments/generated-results.json",
@@ -81,6 +84,10 @@ CORE = (
     "audits/v0.12.0/audit-results.json",
     "audits/v0.12.0/audit-report.md",
     "audits/v0.12.0/exceptions.md",
+    "audits/v0.13.0/audit-plan.md",
+    "audits/v0.13.0/audit-results.json",
+    "audits/v0.13.0/audit-report.md",
+    "audits/v0.13.0/exceptions.md",
     "reports/public-case-reconstruction-v0.6.0.md",
     "reports/oko-evidence-adjudication-v0.6.0.md",
     "reports/figure-methods.md",
@@ -99,6 +106,8 @@ PAPER = (
     "paper/inaccessible-risk-sample-v0.11.0.md",
     "paper/direct-query-retrieval-tranche-v0.11.0.md",
     "paper/forward-citation-retrieval-tranche-v0.12.0.md",
+    "paper/forward-citation-author-screening-protocol-v0.13.0.md",
+    "paper/forward-citation-author-screening-v0.13.0.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
     "paper/literature-matrix.md",
@@ -121,6 +130,8 @@ PAPER = (
     "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
     "paper/data/forward-citation-retrieval-evidence-v0.12.0.json",
     "paper/data/forward-citation-author-review-queue-v0.12.0.csv",
+    "paper/data/forward-citation-author-screening-decisions-v0.13.0.csv",
+    "paper/data/forward-citation-author-screening-v0.13.0.json",
     "paper/data/authenticated-interface-searches-v0.10.0.csv",
     "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",
@@ -194,7 +205,10 @@ VALIDATION = (
     "scripts/run_coe_integrity_audit.py",
     "scripts/build_v0_11_claim_map.py",
     "scripts/build_v0_12_claim_map.py",
+    "scripts/build_v0_13_claim_map.py",
     "scripts/build_forward_citation_tranche_v0_12_0.py",
+    "scripts/build_forward_citation_author_screening_v0_13_0.py",
+    "scripts/validate_forward_citation_author_screening_v0_13_0.py",
     "scripts/run_formal_literature_search.py",
     "scripts/propose_formal_search_screening.py",
     "scripts/verify_formal_search_metadata.py",
@@ -218,7 +232,7 @@ def main() -> int:
             raise FileNotFoundError(relative)
         artifacts.append({"path": relative, "bytes": path.stat().st_size, "sha256": digest(path)})
     result = {
-        "version": "0.12.0",
+        "version": "0.13.0",
         "created": "2026-08-11",
         "hash_algorithm": "SHA-256",
         "artifacts": artifacts,

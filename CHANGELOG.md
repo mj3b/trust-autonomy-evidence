@@ -2,6 +2,17 @@
 
 All material changes to concepts, claims, protocols, and evidence requirements are recorded here.
 
+## 0.13.0, 11 August 2026
+
+- Closes the frozen 71-record forward-citation author queue with 13 close, 22 background, 11 single-component, and 25 topic decisions.
+- Preserves the screening protocol, record-level rationales, author identity, review basis, source locator, assistance disclosure, and zero-permission state.
+- Keeps all 35 retained sources outside manuscript propositions until separate locator-level review.
+- Updates the recovery ledger to 107 of 1,087 retrieval outcomes and 75 of 76 recovered-content decisions, with one direct-query decision open.
+- Adds a residual-risk checkpoint table to the manuscript and journal table set.
+- Expands the executable claim map to 28 claims and the mutation suite to 26 controlled corruptions.
+- Detects all 26 corruptions and closes the open forward-screening exception while publishing four remaining exceptions.
+- Leaves 980 retrieval outcomes, authenticated databases, backward-reference retrieval, proposition review, independent assessment, and institutional transfer open.
+
 ## 0.12.0, 11 August 2026
 
 - Records one retrieval outcome for each of the 102 records in the frozen forward-citation stratum.

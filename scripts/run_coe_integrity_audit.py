@@ -20,12 +20,12 @@ ROOT = Path(__file__).resolve().parents[1]
 CLAIM_MAP_PATH = ROOT / "evidence/claim-evidence-map.json"
 LINEAGE_PATH = ROOT / "evidence/research-lineage.json"
 MUTATIONS_PATH = ROOT / "fixtures/coe-audit-mutations.json"
-RESULT_PATH = ROOT / "audits/v0.12.0/audit-results.json"
-REPORT_PATH = ROOT / "audits/v0.12.0/audit-report.md"
-AUDIT_VERSION = "0.12.0"
-AUDIT_ID = "TAE-COE-AUDIT-V0.12.0"
+RESULT_PATH = ROOT / "audits/v0.13.0/audit-results.json"
+REPORT_PATH = ROOT / "audits/v0.13.0/audit-report.md"
+AUDIT_VERSION = "0.13.0"
+AUDIT_ID = "TAE-COE-AUDIT-V0.13.0"
 AUDIT_DATE = "2026-08-11"
-EXCEPTIONS = ["COE-EX-03", "COE-EX-04", "COE-EX-06", "COE-EX-07", "COE-EX-08"]
+EXCEPTIONS = ["COE-EX-03", "COE-EX-04", "COE-EX-06", "COE-EX-07"]
 FITNESS_DIMENSIONS = (
     "directness",
     "contemporaneity",
@@ -446,7 +446,7 @@ def build_result() -> dict[str, Any]:
         "version": AUDIT_VERSION,
         "audit_id": AUDIT_ID,
         "audit_date": AUDIT_DATE,
-        "scope": "Twenty-seven material claims declared in TAE-COE-V0.12.0, including the 102-record forward-citation retrieval state with 71 author decisions open. Independent validity, 980 retrieval outcomes, authenticated database coverage, source review, and institutional transfer remain outside the completed evidence base.",
+        "scope": "Twenty-eight material claims declared in TAE-COE-V0.13.0, including the 102-record forward-citation retrieval state and closed 71-record screening gate. Independent validity, 980 retrieval outcomes, authenticated database coverage, proposition-level review of retained sources, and institutional transfer remain outside the completed evidence base.",
         "status": status,
         "checks": checks,
         "negative_controls": controls,
@@ -461,7 +461,7 @@ def build_result() -> dict[str, Any]:
 
 def render_report(result: dict[str, Any]) -> str:
     lines = [
-        "# v0.12.0 Chain-of-Evidence Integrity Audit",
+        "# v0.13.0 Chain-of-Evidence Integrity Audit",
         "",
         f"**Audit date:** {result['audit_date']}",
         "",
@@ -471,7 +471,7 @@ def render_report(result: dict[str, Any]) -> str:
         "",
         "## Decision",
         "",
-        "The declared v0.12 claim set passes its executable integrity controls with five published exceptions. The 102-record retrieval evidence resolves to the frozen stratum and population ledger. Its human support gate remains pending, so PAPER-C33 stays outside the eligible conclusion set. The cross-domain synthesis also remains ineligible. The result supplies no independent reliability, originality, institutional-transfer, or completed systematic-search finding.",
+        "The declared v0.13 claim set passes its executable integrity controls with four published exceptions. The 102-record retrieval state and all 71 screening decisions resolve to their frozen inputs, ledgers, attestation, and zero-permission rule. PAPER-C33 and PAPER-C34 are eligible only as bounded workflow claims. The cross-domain synthesis remains ineligible. The result supplies no independent reliability, originality, institutional-transfer, or completed systematic-search finding.",
         "",
         "## Integrity checks",
         "",
@@ -500,11 +500,11 @@ def render_report(result: dict[str, Any]) -> str:
         "- `COE-EX-04`: authenticated database searching, 980 retrieval outcomes, and the backward-reference stratum remain incomplete.",
         "- `COE-EX-06`: RS-DQ-004 remains open because readable text and author identity require resolution; RS-DQ-005 remains restricted to its abstract.",
         "- `COE-EX-07`: PAPER-C32 remains provisional because one model-architecture study cannot establish institutional or public-incident transfer.",
-        "- `COE-EX-08`: PAPER-C33 and 71 recovered forward-citation records await author support and screening decisions.",
         "",
         "## Closed exception",
         "",
         "- `COE-EX-05` closed when Mark Julius Banasihan recorded all 89 author decisions and the final search-flow data were rebuilt from the ledger.",
+        "- `COE-EX-08` closed when all 71 recovered forward-citation records received an author-authorized, AI-assisted screening decision and their claim permissions remained closed.",
         "",
         "## Interpretation",
         "",

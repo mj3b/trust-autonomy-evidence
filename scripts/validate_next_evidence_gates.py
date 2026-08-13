@@ -22,6 +22,9 @@ RISK_SAMPLE_SUMMARY = ROOT / "paper/data/inaccessible-risk-sample-v0.11.0.json"
 DIRECT_QUERY_EVIDENCE = ROOT / "paper/data/direct-query-retrieval-evidence-v0.11.0.json"
 FORWARD_CITATION_EVIDENCE = ROOT / "paper/data/forward-citation-retrieval-evidence-v0.12.0.json"
 FORWARD_CITATION_QUEUE = ROOT / "paper/data/forward-citation-author-review-queue-v0.12.0.csv"
+FORWARD_CITATION_DECISIONS = ROOT / "paper/data/forward-citation-author-screening-decisions-v0.13.0.csv"
+FORWARD_CITATION_SCREENING = ROOT / "paper/data/forward-citation-author-screening-v0.13.0.json"
+FORWARD_CITATION_ATTESTATION = ROOT / "evidence/human-review-attestation-v0.13.0.json"
 HUMAN_REVIEW_ATTESTATION = ROOT / "evidence/human-review-attestation-v0.11.0.json"
 INTERFACE_LEDGER = ROOT / "paper/data/authenticated-interface-searches-v0.10.0.csv"
 SUMMARY = ROOT / "paper/data/next-evidence-gates-v0.10.0.json"
@@ -375,15 +378,15 @@ def inspect() -> tuple[list[str], dict[str, object]]:
         row.get("retrieval_outcome") in RECOVERED_CONTENT_OUTCOMES
         for row in forward_records
     )
-    forward_screening_complete = sum(
+    forward_snapshot_screening_complete = sum(
         bool(row.get("screening_decision")) for row in forward_records
     )
     expected_forward_counts = {
         "selected": len(forward_records),
         "retrieval_complete": len(forward_records),
         "screening_required": forward_screening_required,
-        "screening_complete": forward_screening_complete,
-        "screening_open": forward_screening_required - forward_screening_complete,
+        "screening_complete": forward_snapshot_screening_complete,
+        "screening_open": forward_screening_required - forward_snapshot_screening_complete,
         "outcomes": dict(sorted(forward_outcomes.items())),
     }
     if forward_evidence.get("counts") != expected_forward_counts:
@@ -402,12 +405,10 @@ def inspect() -> tuple[list[str], dict[str, object]]:
         if ledger_row is None:
             errors.append(f"{key}: forward-citation evidence lacks a retrieval-ledger row")
             continue
-        expected_decision = evidence_row.get("screening_decision") or ""
         for field, expected in (
             ("retrieval_outcome", evidence_row.get("retrieval_outcome", "")),
             ("retrieval_locator", evidence_row.get("retrieval_locator", "")),
             ("retrieval_date", evidence_row.get("retrieval_date", "")),
-            ("screening_decision", expected_decision),
             ("decision_owner", evidence_row.get("decision_owner", "")),
         ):
             if ledger_row[field] != expected:
@@ -434,6 +435,49 @@ def inspect() -> tuple[list[str], dict[str, object]]:
                 errors.append(f'{row["record_key"]}: pending forward queue row contains a decision')
             if row["claim_permission"] != "none-until-decision":
                 errors.append(f'{row["record_key"]}: pending forward queue row grants claim permission')
+
+    forward_decisions = read_csv(FORWARD_CITATION_DECISIONS)
+    decision_keys = [row["record_key"] for row in forward_decisions]
+    if decision_keys != queue_keys:
+        errors.append("v0.13 forward decisions do not preserve the frozen queue order")
+    forward_decision_counts = Counter(row["author_decision"] for row in forward_decisions)
+    forward_screening_complete = len(forward_decisions)
+    if forward_screening_complete != forward_screening_required:
+        errors.append(
+            f"v0.13 forward screening contains {forward_screening_complete} decisions; "
+            f"expected {forward_screening_required}"
+        )
+    for decision_row in forward_decisions:
+        key = decision_row["record_key"]
+        ledger_row = retrieval_by_key.get(key)
+        if ledger_row is None:
+            errors.append(f"{key}: v0.13 decision lacks a retrieval-ledger row")
+            continue
+        if ledger_row["screening_decision"] != decision_row["author_decision"]:
+            errors.append(f"{key}: v0.13 decision disagrees with population ledger")
+        if decision_row["claim_permission"] not in {
+            "none-until-proposition-review", "none-excluded"
+        }:
+            errors.append(f"{key}: v0.13 decision contains an invalid claim-permission state")
+
+    forward_screening_summary = json.loads(
+        FORWARD_CITATION_SCREENING.read_text(encoding="utf-8")
+    )
+    if forward_screening_summary.get("status") != "FORWARD_CITATION_AUTHOR_SCREENING_CLOSED":
+        errors.append("v0.13 forward-screening summary status mismatch")
+    if forward_screening_summary.get("counts", {}).get("decisions") != dict(
+        sorted(forward_decision_counts.items())
+    ):
+        errors.append("v0.13 forward-screening summary counts mismatch")
+    forward_attestation = json.loads(
+        FORWARD_CITATION_ATTESTATION.read_text(encoding="utf-8")
+    )
+    if (
+        forward_attestation.get("decision_owner") != AUTHOR
+        or forward_attestation.get("scope", {}).get("screening_decisions_complete")
+        != forward_screening_complete
+    ):
+        errors.append("v0.13 forward-screening attestation mismatch")
 
     attestation = json.loads(HUMAN_REVIEW_ATTESTATION.read_text(encoding="utf-8"))
     if attestation.get("version") != "0.11.0" or attestation.get("reviewer") != AUTHOR:
@@ -568,15 +612,17 @@ def inspect() -> tuple[list[str], dict[str, object]]:
                     "evidence_record": "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
                 },
                 "forward_citation_tranche": {
-                    "status": "RETRIEVAL_COMPLETE_SCREENING_OPEN",
+                    "status": "SCREENING_CLOSED_PROPOSITION_REVIEW_OPEN",
                     "selected": len(forward_records),
                     "retrieval_complete": len(forward_records),
                     "screening_required": forward_screening_required,
                     "screening_complete": forward_screening_complete,
                     "screening_open": forward_screening_required - forward_screening_complete,
+                    "screening_decisions": dict(sorted(forward_decision_counts.items())),
                     "retrieval_outcomes": dict(sorted(forward_outcomes.items())),
                     "evidence_record": "paper/data/forward-citation-retrieval-evidence-v0.12.0.json",
                     "author_queue": "paper/data/forward-citation-author-review-queue-v0.12.0.csv",
+                    "decision_ledger": "paper/data/forward-citation-author-screening-decisions-v0.13.0.csv",
                 },
                 "claim_rule": "A completed risk sample estimates residual risk and does not establish exhaustive coverage.",
             },
@@ -636,7 +682,7 @@ The five-record direct-query stratum has {direct_query['retrieval_complete']} re
 
 ## Forward-citation tranche
 
-All {forward_citation['selected']} records in the frozen forward-citation stratum now have a retrieval outcome. The pass recovered full text for {forward_citation['retrieval_outcomes'].get('full-text-recovered', 0)} records and abstracts for {forward_citation['retrieval_outcomes'].get('abstract-recovered', 0)} records. It recorded {forward_citation['retrieval_outcomes'].get('metadata-only', 0)} metadata-only outcomes, {forward_citation['retrieval_outcomes'].get('unavailable', 0)} unavailable outcomes, and {forward_citation['retrieval_outcomes'].get('duplicate', 0)} duplicates. The {forward_citation['screening_required']} recovered-content records remain in the author queue. They have no claim permission until Mark Julius Banasihan records a decision and rationale. Retrieval completion does not establish relevance or claim support.
+All {forward_citation['selected']} records in the frozen forward-citation stratum have a retrieval outcome. The pass recovered full text for {forward_citation['retrieval_outcomes'].get('full-text-recovered', 0)} records and abstracts for {forward_citation['retrieval_outcomes'].get('abstract-recovered', 0)} records. It recorded {forward_citation['retrieval_outcomes'].get('metadata-only', 0)} metadata-only outcomes, {forward_citation['retrieval_outcomes'].get('unavailable', 0)} unavailable outcomes, and {forward_citation['retrieval_outcomes'].get('duplicate', 0)} duplicates. All {forward_citation['screening_required']} recovered-content records now have an author-authorized, AI-assisted screening decision: {forward_citation['screening_decisions'].get('retain-close', 0)} close, {forward_citation['screening_decisions'].get('retain-background', 0)} background, {forward_citation['screening_decisions'].get('exclude-single-component', 0)} single-component exclusions, and {forward_citation['screening_decisions'].get('exclude-topic', 0)} topic exclusions. Screening closes corpus membership for this tranche. The {forward_citation['screening_decisions'].get('retain-close', 0)} close sources still require proposition-level review before they can support manuscript claims.
 
 ## Claim controls
 
@@ -648,7 +694,7 @@ All {forward_citation['selected']} records in the frozen forward-citation stratu
 
 ## Current finding
 
-The 89-decision author gate resolved screening accountability. The retained-close full-text gate is now closed with {full_text['verified']} verified sources, {full_text['abstract_only_not_used']} abstract-only sources quarantined from stronger use, {full_text['excluded_after_full_text']} exclusions after full-text review, and {full_text['inaccessible']} inaccessible sources. Gate 2 has recorded {inaccessible['retrieval_rows_complete']} retrieval outcomes and leaves {inaccessible['retrieval_rows_open']} records unresolved. Its recovered content has {inaccessible['screening_decisions_complete']} decisions and {inaccessible['screening_decisions_open']} open decision. The newly recovered close source remains quarantined from claims that exceed its abstract. These evidence problems remain separate and require separate ledgers.
+The 89-decision author gate resolved the original screening queue. The retained-close full-text gate is closed with {full_text['verified']} verified sources, {full_text['abstract_only_not_used']} abstract-only sources quarantined from stronger use, {full_text['excluded_after_full_text']} exclusions after full-text review, and {full_text['inaccessible']} inaccessible sources. Gate 2 has recorded {inaccessible['retrieval_rows_complete']} retrieval outcomes and leaves {inaccessible['retrieval_rows_open']} records unresolved. Its recovered content has {inaccessible['screening_decisions_complete']} decisions and {inaccessible['screening_decisions_open']} open decision. The {inaccessible['recovered_close_sources']} close sources recovered through this risk sample remain outside manuscript propositions until their separate source-review gates close.
 """
 
 
@@ -669,6 +715,9 @@ def main() -> int:
         DIRECT_QUERY_EVIDENCE,
         FORWARD_CITATION_EVIDENCE,
         FORWARD_CITATION_QUEUE,
+        FORWARD_CITATION_DECISIONS,
+        FORWARD_CITATION_SCREENING,
+        FORWARD_CITATION_ATTESTATION,
         HUMAN_REVIEW_ATTESTATION,
         INTERFACE_LEDGER,
     )

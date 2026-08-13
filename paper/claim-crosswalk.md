@@ -2,9 +2,9 @@
 
 ## Rule
 
-The machine-readable v0.12 claim map governs only the exact prefixed identifiers listed below. Unprefixed IDs in the manuscript claim register are drafting identifiers. A drafting claim does not receive an executable eligibility result unless this crosswalk maps it to a prefixed claim.
+The machine-readable v0.13 claim map governs only the exact prefixed identifiers listed below. Unprefixed IDs in the manuscript claim register are drafting identifiers. A drafting claim does not receive an executable eligibility result unless this crosswalk maps it to a prefixed claim.
 
-| Executable claim | v0.12 audit state | Drafting consequence |
+| Executable claim | v0.13 audit state | Drafting consequence |
 |---|---|---|
 | `PAPER-C02` | Eligible | Describe the frozen selection procedure as a repository record. |
 | `PAPER-C03` | Eligible | Report Oko authority as partially supported and both Patriot authority states as supported in the current assessment set. |
@@ -32,7 +32,8 @@ The machine-readable v0.12 claim map governs only the exact prefixed identifiers
 | `PAPER-C30` | Eligible | Describe the residual-path result within Zabounidis et al.'s model-architecture study. |
 | `PAPER-C31` | Eligible | Describe Gielas's argument only at the level supported by the recovered abstract. |
 | `PAPER-C32` | Ineligible | Do not transfer the model residual-path result to institutions or public incidents without independent evidence in the intended setting. |
-| `PAPER-C33` | Ineligible | Keep the 102-record forward-citation counts out of manuscript conclusions. Treat them as a retrieval and author-review checkpoint until Mark Julius Banasihan records support decisions. |
+| `PAPER-C33` | Eligible | Report the five forward-citation retrieval classes only as a bounded 102-record workflow result. |
+| `PAPER-C34` | Eligible | Report the 71 screening decisions and zero-permission state. Do not use a retained source in a proposition until its separate review gate closes. |
 
 ## Planned claims outside the executable map
 
@@ -44,7 +45,7 @@ Drafting claims C01, C10, C12, C13, and C16 through C21 remain subject to their 
 - `COE-EX-04` remains open for 980 unresolved retrieval outcomes, authenticated databases, and full citation-chain coverage.
 - `COE-EX-06` remains open because one direct-query source lacks inspectable text and another is limited to its publisher abstract.
 - `COE-EX-07` remains open because the model-level residual-path result has no institutional or public-incident transfer test.
-- `COE-EX-08` remains open because 71 recovered forward-citation records await author screening and support decisions.
 - `COE-EX-05` is closed because all 89 author-screening decisions are recorded and the search-flow outputs were rebuilt from the ledger.
+- `COE-EX-08` is closed because all 71 recovered forward-citation records have decisions and none has manuscript claim permission.
 
-The manuscript uses no originality finding. It reports completed checkpoints within their declared boundaries and excludes the v0.12 forward-citation queue from claim support until the author gate closes.
+The manuscript uses no originality finding. It reports completed checkpoints within their declared boundaries and excludes retained v0.13 forward-citation sources from proposition support until their separate review gates close.

@@ -96,6 +96,26 @@ The initial 15-source set was checked against publisher pages, DOI records, conf
 | L59 | Intervention-path integrity: [Zabounidis et al. (2026)](https://openreview.net/forum?id=NKgNizwDa6) | Shows that a corrected human-readable concept may fail to change a model output when an opaque residual path retains the same information. | Supplies a technical mechanism for distinguishing available intervention from intervention with causal force. | Tests concept-residual model architecture across datasets, not human performance, institutions, or public incident packets. |
 | L60 | Human performance in autonomous warfare: [Gielas (2025)](https://doi.org/10.1080/00396338.2025.2534284) | Challenges vague loop labels, centers operator cognitive readiness, proposes a human-in-the-mesh model, and names the Patriot system. | Is a close comparison for the paper's practical-control mechanism and case-family interpretation. | Abstract-only review. No detailed mechanism comparison is eligible until full text is inspected. |
 
+## v0.13 forward close-source review queue
+
+These 13 records passed corpus screening. They are candidates for close-source review, not sources for manuscript propositions. Each must receive a locator-level proposition review before it can enter the checked literature matrix above.
+
+| Sample | Candidate source | Reason for close review | Current permission |
+|---|---|---|---|
+| RS-FC-005 | Salmon et al. (2012), *Through a different lens* | Compares systems-analysis methods for accident reconstruction. | None pending proposition review |
+| RS-FC-020 | Norros and Nuutinen (2009), *Core task analysis in accident investigation* | Connects operator work, task demands, and retrospective accident analysis. | None pending proposition review |
+| RS-FC-036 | Salmon et al. (2010), *Systems-based accident analysis in the led outdoor activity domain* | Applies and evaluates a systems-based accident-analysis framework. | None pending proposition review |
+| RS-FC-042 | Li et al. (2024), *User Perception of Partially Automated Driving Systems* | Applies meaningful-human-control concepts to user experience of partial automation. | None pending proposition review |
+| RS-FC-047 | Kiener (2026), *Many Hands, But Who Is In Control?* | Examines control gaps in a distributed healthcare-learning setting. | None pending proposition review |
+| RS-FC-051 | Karan and Angadi (2026), *From evaluator to principal* | Develops an agentic-AI literacy framework for delegated autonomy. | None pending proposition review |
+| RS-FC-052 | Hossain et al. (2025), *Human Oversight Over Autonomous Task Execution* | Studies oversight of autonomous task execution in sandbox environments. | None pending proposition review |
+| RS-FC-060 | van Diggelen et al. (2020), *Allocation of Moral Decision-Making in Human-Agent Teams* | Addresses allocation of consequential decisions in human-agent teams. | None pending proposition review |
+| RS-FC-061 | Calvert et al. (2018), *Working towards a Meaningful Transition of Human Control* | Examines transition of control in automated driving. | None pending proposition review |
+| RS-FC-070 | Chan et al. (2024), *Governing AI Agents* | Addresses institutional governance of agentic systems. | None pending proposition review |
+| RS-FC-080 | de Sio and Mecacci (2022), *Design-for-responsible algorithmic decision-making systems* | Links ethical judgment, design, and meaningful human control. | None pending proposition review |
+| RS-FC-096 | Chen et al. (2018), *Systems-Based Analysis of China-Tianjin Port Fire and Explosion* | Compares three systems-accident analysis methods. | None pending proposition review |
+| RS-FC-097 | McDermid et al. (2021), *From Blade Runners to Tin Kickers* | Compares AI-safety governance with air-crash investigation. | None pending proposition review |
+
 ## Provisional synthesis
 
 The literature supports five propositions and one proposed mechanism inference relevant to the manuscript:
@@ -113,7 +133,7 @@ The proposed paper's remaining contribution is narrower than PR #11 stated. Prio
 
 The formal open-index search and selected-index citation chains are recorded in [`formal-citation-chain-v0.7.0.md`](formal-citation-chain-v0.7.0.md). The 89-record author queue is complete. Before a contribution claim can be described as the result of a completed multidisciplinary search, the project must still:
 
-- record decisions for 71 recovered forward citations, review the remaining 980 records without a retrieval outcome, and preserve two direct-query source limits;
+- complete proposition review for the 13 close and 22 background forward sources, review the remaining 980 records without a retrieval outcome, resolve the open direct-query decision, and preserve two direct-query source limits;
 - search Scopus or Web of Science through authenticated access;
 - complete the declared disciplinary-interface log for IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index.
 

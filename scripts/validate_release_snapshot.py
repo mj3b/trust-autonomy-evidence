@@ -93,6 +93,21 @@ SNAPSHOTS = {
             "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
         ),
     },
+    "v0.12.0": {
+        "manifest": "release/v0.12.0-manifest.json",
+        "immutable": (
+            "release/v0.12.0-manifest.json",
+            "release/v0.12.0-release-notes.md",
+            "audits/v0.12.0/audit-plan.md",
+            "audits/v0.12.0/audit-results.json",
+            "audits/v0.12.0/audit-report.md",
+            "audits/v0.12.0/exceptions.md",
+            "evidence/human-review-attestation-v0.12.0.json",
+            "paper/forward-citation-retrieval-tranche-v0.12.0.md",
+            "paper/data/forward-citation-retrieval-evidence-v0.12.0.json",
+            "paper/data/forward-citation-author-review-queue-v0.12.0.csv",
+        ),
+    },
 }
 
 

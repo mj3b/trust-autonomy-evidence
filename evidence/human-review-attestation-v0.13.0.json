@@ -1,0 +1,21 @@
+{
+  "version": "0.13.0",
+  "decision_owner": "Mark Julius Banasihan",
+  "date": "2026-08-11",
+  "status": "AUTHOR_AUTHORIZED_AI_ASSISTED_SCREENING_COMPLETE",
+  "statement": "Mark Julius Banasihan authorized AI-assisted inspection and screening of the frozen 71-record forward-citation queue and retains accountability for the recorded corpus decisions.",
+  "scope": {
+    "frozen_queue_records": 71,
+    "screening_decisions_complete": 71,
+    "screening_decisions_open": 0,
+    "retained_for_proposition_review": 35,
+    "manuscript_claim_permissions_granted": 0
+  },
+  "ai_assistance": "AI-assisted source-content inspection and screening under author authorization; Mark Julius Banasihan retains decision accountability.",
+  "limits": [
+    "AI assistance was used under author authorization; this record does not represent independent screening or inter-assessor agreement.",
+    "The 71-record queue is the recovered-content subset of a frozen 102-record forward-citation risk sample.",
+    "The result does not establish exhaustive coverage, originality, prevalence, reliability, field validity, or institutional effects.",
+    "A retained screening decision does not establish that a source supports any manuscript proposition."
+  ]
+}
