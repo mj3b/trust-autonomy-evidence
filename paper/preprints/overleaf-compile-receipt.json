@@ -4,13 +4,13 @@
   "observed_date": "2026-08-18",
   "source_archive": {
     "path": "paper/preprints/preprints-source-v0.15.0.zip",
-    "bytes": 828282,
-    "sha256": "c5ee7fc21b3ace00c8ac4f8573168523ace65554c7ec135caad921d969f03c82"
+    "bytes": 828264,
+    "sha256": "5dfc51b88ac48069455d069e9c3bc5750ef09c53335db31ba5fd4ed548b0a807"
   },
   "compiled_pdf": {
     "path": "paper/preprints/preprints-compiled-v0.15.0.pdf",
-    "bytes": 1106641,
-    "sha256": "5fec073b4fefdcce4adc9ab107975cae07d2a6c728d69f4fd9f79344d602a82d",
+    "bytes": 1099004,
+    "sha256": "c407dc2bd2615094cbaa67e345003e8e35f36a20eb4d019d446e210d5c54767c",
     "pages": 25,
     "producer": "pdfTeX-1.40.27"
   },

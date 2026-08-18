@@ -2,15 +2,15 @@
   "version": "0.15.0",
   "venue": "Preprints.org",
   "archive": "paper/preprints/preprints-source-v0.15.0.zip",
-  "archive_bytes": 828282,
-  "archive_sha256": "c5ee7fc21b3ace00c8ac4f8573168523ace65554c7ec135caad921d969f03c82",
+  "archive_bytes": 828264,
+  "archive_sha256": "5dfc51b88ac48069455d069e9c3bc5750ef09c53335db31ba5fd4ed548b0a807",
   "member_count": 12,
   "members": [
     {
       "archive_path": "main.tex",
       "source_path": "paper/preprints/main.tex",
-      "bytes": 83540,
-      "sha256": "87eb11d0b1ff31d3fe1c5cad6b42d22484271181b07c5f23461b31985d6aa498"
+      "bytes": 83481,
+      "sha256": "b0bdf8af3958144069572ce5403d7ba65c6e8e9d24518b3b1dae5851035e521b"
     },
     {
       "archive_path": "00README.XXX",

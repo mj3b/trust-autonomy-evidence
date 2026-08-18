@@ -2,6 +2,17 @@
 
 All material changes to concepts, claims, protocols, and evidence requirements are recorded here.
 
+## 0.15.0, 18 August 2026
+
+- Preserves the public v0.14.0 Zenodo preprint and identifies its version DOI, `10.5281/zenodo.21926005`.
+- Adds a Preprints.org submission candidate without changing the research question, three case assessments, quantitative findings, or bounded conclusions.
+- Identifies Mark Julius Banasihan as an independent researcher with Node & Norm, preserves both authorized correspondence addresses, and records Harvard University student status separately without claiming University sponsorship or endorsement.
+- Adds venue-aligned author, conflict-of-interest, AI-assistance, data-availability, and version-relationship statements.
+- Synchronizes the repository source with the author-edited Overleaf project and preserves the exact 25-page compiled PDF.
+- Extends the claim map to 35 material claims and keeps the final external submission decision visible as an author gate.
+- Carries the Chain-of-Evidence, evidence-fitness, dependency-closure, controlled-mutation, reference, and method-code checks through the venue package.
+- Does not claim Preprints.org acceptance, peer review, independent reliability, field validity, search completeness, institutional effectiveness, or transfer to current learned systems.
+
 ## 0.14.0, 13 August 2026
 
 - Reviews all 13 forward-citation sources classified close in v0.13 under a frozen proposition-level protocol.
@@ -12,8 +23,8 @@ All material changes to concepts, claims, protocols, and evidence requirements a
 - Expands the Chain-of-Evidence map to 32 claims and the mutation suite to 33 controlled corruptions.
 - Detects all 33 corruptions and publishes four open exceptions covering independence, search coverage, direct-query source limits, and institutional transfer.
 - Carries ScientistOne-inspired lineage through source review, manuscript citation, claim mapping, audit, preprint packaging, and release sealing.
-- Builds a 230-word abstract, LaTeX source, 24-page review PDF, deterministic 12-member arXiv source archive, metadata record, and source manifest.
-- Leaves 980 retrieval outcomes, the 177-record backward-reference stratum, authenticated interfaces, independent assessment, ethics wording, affiliation, license, endorsement, and final arXiv review open.
+- Builds a 230-word abstract, LaTeX source, canonical 25-page review PDF, deterministic 12-member source archive, metadata record, and source manifest.
+- Archives the public preprint on Zenodo under version DOI `10.5281/zenodo.21926005`; leaves 980 retrieval outcomes, the 177-record backward-reference stratum, authenticated interfaces, independent assessment, arXiv endorsement, and external peer review open.
 
 ## 0.13.0, 11 August 2026
 

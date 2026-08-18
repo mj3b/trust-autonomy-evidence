@@ -1,0 +1,150 @@
+{
+  "version": "0.15.0",
+  "created": "2026-08-18",
+  "scope": "venue package, carried-forward evidence controls, and publication metadata",
+  "hash_algorithm": "SHA-256",
+  "artifact_count": 28,
+  "artifacts": [
+    {
+      "path": "release/v0.14.0-manifest.json",
+      "bytes": 41376,
+      "sha256": "9c56e405bf88f3dc5056e7378ffe82c6dc7e695b41733b3aad7cac9d81420811"
+    },
+    {
+      "path": "release/v0.14.0-release-notes.md",
+      "bytes": 3404,
+      "sha256": "36c9d01ad5f803f3691bc7836254b1698b1dedb5eef23b62432bc84038f07198"
+    },
+    {
+      "path": "release/v0.15.0-release-notes.md",
+      "bytes": 2450,
+      "sha256": "770935992f11cdedeee75adf0ee01a7651e218a605e3c57f06c0a5c75d532582"
+    },
+    {
+      "path": "README.md",
+      "bytes": 30700,
+      "sha256": "157c1545a00a3f1acda1d3d0379af9df4fe7794f70f68aac78b8ce7663199d68"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 19127,
+      "sha256": "ad622baffed57a143719ed06be4d70d45a8395210515b89f9cd2e1c00accbb03"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 835,
+      "sha256": "ec3b6a29e35eeabf4694dc1a77e7ebbc895262795eb9c196c6482c3185a1c466"
+    },
+    {
+      "path": "paper/manuscript.md",
+      "bytes": 58853,
+      "sha256": "ae540c69679bb01e94c2fc008312b521f310894449ed207feb58cd7302170540"
+    },
+    {
+      "path": "paper/manuscript-reader.md",
+      "bytes": 74427,
+      "sha256": "25b3bbf275f989d9f301e379299cc84eb1475df545655bb25280f829fc394677"
+    },
+    {
+      "path": "paper/submission-notes.md",
+      "bytes": 8581,
+      "sha256": "de35e7dc2202ab8356aa9b54a895c0f196c0b9ec7490bf58de4a8b5d410e0790"
+    },
+    {
+      "path": "paper/preprints/README.md",
+      "bytes": 2485,
+      "sha256": "c13e3a8437c81a41179a84b6a78e8188bed78e53bb2bbac4254bc5f6bf6c930e"
+    },
+    {
+      "path": "paper/preprints/00README.XXX",
+      "bytes": 261,
+      "sha256": "043eae0080cc5b60d95e9205a16e4a4ba87b54372d35d3e3c1c853a50f8a1666"
+    },
+    {
+      "path": "paper/preprints/metadata.yaml",
+      "bytes": 1392,
+      "sha256": "f14934c477fb27ea60fb8b08901ae17ab78045cff551df5f57ac4508bf17d382"
+    },
+    {
+      "path": "paper/preprints/main.tex",
+      "bytes": 83481,
+      "sha256": "b0bdf8af3958144069572ce5403d7ba65c6e8e9d24518b3b1dae5851035e521b"
+    },
+    {
+      "path": "paper/preprints/source-manifest.json",
+      "bytes": 3373,
+      "sha256": "03bdbf048eed329508c517e92827b5fe3c018125eb8e6b3c181f6cf59071370c"
+    },
+    {
+      "path": "paper/preprints/overleaf-compile-receipt.json",
+      "bytes": 2837,
+      "sha256": "48aaee48128c23905ddcba1003143b5f11fe7a8e96c4831491881211c69eed68"
+    },
+    {
+      "path": "paper/preprints/preprints-source-v0.15.0.zip",
+      "bytes": 828264,
+      "sha256": "5dfc51b88ac48069455d069e9c3bc5750ef09c53335db31ba5fd4ed548b0a807"
+    },
+    {
+      "path": "paper/preprints/preprints-compiled-v0.15.0.pdf",
+      "bytes": 1099004,
+      "sha256": "c407dc2bd2615094cbaa67e345003e8e35f36a20eb4d019d446e210d5c54767c"
+    },
+    {
+      "path": "evidence/claim-evidence-map.json",
+      "bytes": 126422,
+      "sha256": "5057f1763196362264b633d652475f9272b4376bc12221383e1fdbfe9166c0ee"
+    },
+    {
+      "path": "evidence/human-review-attestation-v0.15.0.json",
+      "bytes": 2335,
+      "sha256": "5a8f65e03c868cb0321cf49741eafe80d9f8469ef4e1c6b729e6e900a090eca7"
+    },
+    {
+      "path": "audits/v0.15.0/audit-plan.md",
+      "bytes": 2193,
+      "sha256": "75c47f3e17d4f765cc5238e58da1b9d33b0b65f3ed10b363f01a5f51bd61e21e"
+    },
+    {
+      "path": "audits/v0.15.0/audit-results.json",
+      "bytes": 18310,
+      "sha256": "87008a1a721552025dbfb3937587521af4e76449a03f6015bf17271cfd4176a5"
+    },
+    {
+      "path": "audits/v0.15.0/audit-report.md",
+      "bytes": 7251,
+      "sha256": "5efbfaccb26b3f9e1255ceb76885e596d82cf622f246e7d825c0021b04d16c2d"
+    },
+    {
+      "path": "audits/v0.15.0/exceptions.md",
+      "bytes": 2473,
+      "sha256": "f3bcaca6068325d6289347fed8b052f1e16b4ac9e1a34f94d8ee1194807aa291"
+    },
+    {
+      "path": "scripts/build_v0_15_claim_map.py",
+      "bytes": 10229,
+      "sha256": "bd0a87d38f8d1503e5592823b108446d5670b07d60d8da874e505b4303493ebb"
+    },
+    {
+      "path": "scripts/build_preprints_source_archive.py",
+      "bytes": 2897,
+      "sha256": "237b443a25f4ddece2ace4696672368c44339c54a2236e8d69b45b2b374b4178"
+    },
+    {
+      "path": "scripts/run_coe_integrity_audit.py",
+      "bytes": 25564,
+      "sha256": "42bc967ba8d1d4f0af94873e7eaf85f8c577ce15da0fb85941e868914acc71fd"
+    },
+    {
+      "path": "scripts/validate_preprints_package.py",
+      "bytes": 5231,
+      "sha256": "7849f179f029ef7e4835570d0ad78feb889c5d5743d644e22a8d753ddbcb7d08"
+    },
+    {
+      "path": "scripts/validate_paper.py",
+      "bytes": 13024,
+      "sha256": "d35065e1d5c021ce97cecca3a2fc6de1806c80851bd0825b495acd0a7d2d0386"
+    }
+  ],
+  "boundary": "This focused manifest seals the v0.15 venue checkpoint. Earlier full research snapshots remain governed by their version tags and manifests."
+}

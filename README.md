@@ -19,7 +19,7 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 ## Current contribution
 
-[Version 0.14.0](release/v0.14.0-release-notes.md) contributes connected research, audit, and preprint artifacts, is archived as a public preprint under [Zenodo DOI 10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005), and preserves the [published v0.13.0 screening checkpoint](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.13.0). The v0.14.0 repository changes remain in [draft PR #26](https://github.com/mj3b/trust-autonomy-evidence/pull/26) until merged into `main`:
+[Version 0.15.0](release/v0.15.0-release-notes.md) carries the connected research, audit, and preprint artifacts into a Preprints.org submission candidate. It preserves the public [v0.14.0 Zenodo preprint](https://doi.org/10.5281/zenodo.21926005) and the [published v0.13.0 screening checkpoint](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.13.0). Version 0.15.0 changes publication metadata and packaging, not the research question, case assessments, quantitative findings, or bounded conclusions:
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
@@ -61,7 +61,9 @@ Version 0.12.0 records retrieval outcomes for all 102 forward-citation records. 
 
 The v0.13.0 candidate closes that frozen screening queue with 13 close records, 22 background records, 11 single-component exclusions, and 25 topic exclusions. All 71 decisions record a mechanism-specific rationale, source basis, locator, decision owner, date, assistance disclosure, and claim-permission state. Screening grants no proposition support. The 13 close sources now enter a separate locator-level review gate.
 
-The v0.14.0 candidate closes that locator-level gate. Five sources receive one bounded manuscript permission each, two remain background-only, and six remain quarantined. RS-DQ-004 is close for screening and has zero source-content permission. The candidate also adds the first repository-controlled arXiv source archive and a canonical 25-page Overleaf compilation with zero errors. The single-column presentation uses black body text, dark navy headings and rules, and light gray-blue table headers. All ten figures and seven tables appear before References, and the two preserved PDF paths are byte-identical. Final affiliation, email, license, category, endorsement, ethics wording, arXiv compilation, and submission remain author or platform decisions.
+The v0.14.0 public preprint closes that locator-level gate. Five sources receive one bounded manuscript permission each, two remain background-only, and six remain quarantined. RS-DQ-004 is close for screening and has zero source-content permission. The version also adds the first repository-controlled source archive and a canonical 25-page Overleaf compilation with zero errors. It is archived on Zenodo under version DOI [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005).
+
+The v0.15.0 candidate adapts that same bounded paper for Preprints.org. The title page identifies the author as an independent researcher with Node & Norm, retains both authorized correspondence addresses, and records the Harvard University student relationship separately in the author note. The single-column presentation uses black body text, dark navy headings and rules, and light gray-blue table headers. All ten figures and seven tables appear before References. Preprints.org submission and screening remain external states and are not implied by the repository release.
 
 ## Featured figure
 
@@ -124,6 +126,7 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`CITATION.cff`](CITATION.cff) | Provides machine-readable authorship, release, license, and DOI metadata. |
 | [`CHANGELOG.md`](CHANGELOG.md) | Tracks material changes to concepts, protocols, claims, and evidence requirements. |
 | [`release/v0.14.0-release-notes.md`](release/v0.14.0-release-notes.md) | Explains the v0.14.0 proposition review, preprint package, integrity controls, Zenodo DOI, and open external-validation limits. |
+| [`release/v0.15.0-release-notes.md`](release/v0.15.0-release-notes.md) | Explains the v0.15.0 venue package, author metadata, version relationship, carried-forward evidence controls, and open submission gate. |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`GOVERNANCE.md`](GOVERNANCE.md) | Define contribution evidence, review rules, decision authority, and change records. |
 | [`research/`](research/) | Contains the main conceptual paper on justified reliance, autonomy, and practical control. |
 | [`research/frozen-research-agenda.md`](research/frozen-research-agenda.md) | Freezes three research topics and one project question for the next public-case cycle. |
