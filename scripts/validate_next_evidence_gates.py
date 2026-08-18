@@ -20,11 +20,13 @@ RETRIEVAL_LEDGER = ROOT / "paper/data/inaccessible-record-retrieval-v0.10.0.csv"
 RISK_SAMPLE = ROOT / "paper/data/inaccessible-risk-sample-v0.11.0.csv"
 RISK_SAMPLE_SUMMARY = ROOT / "paper/data/inaccessible-risk-sample-v0.11.0.json"
 DIRECT_QUERY_EVIDENCE = ROOT / "paper/data/direct-query-retrieval-evidence-v0.11.0.json"
+DIRECT_QUERY_RESOLUTION = ROOT / "paper/data/direct-query-resolution-v0.14.0.json"
 FORWARD_CITATION_EVIDENCE = ROOT / "paper/data/forward-citation-retrieval-evidence-v0.12.0.json"
 FORWARD_CITATION_QUEUE = ROOT / "paper/data/forward-citation-author-review-queue-v0.12.0.csv"
 FORWARD_CITATION_DECISIONS = ROOT / "paper/data/forward-citation-author-screening-decisions-v0.13.0.csv"
 FORWARD_CITATION_SCREENING = ROOT / "paper/data/forward-citation-author-screening-v0.13.0.json"
 FORWARD_CITATION_ATTESTATION = ROOT / "evidence/human-review-attestation-v0.13.0.json"
+FORWARD_PROPOSITION_REVIEW = ROOT / "paper/data/forward-citation-proposition-review-v0.14.0.json"
 HUMAN_REVIEW_ATTESTATION = ROOT / "evidence/human-review-attestation-v0.11.0.json"
 INTERFACE_LEDGER = ROOT / "paper/data/authenticated-interface-searches-v0.10.0.csv"
 SUMMARY = ROOT / "paper/data/next-evidence-gates-v0.10.0.json"
@@ -296,6 +298,14 @@ def inspect() -> tuple[list[str], dict[str, object]]:
         row["record_key"] for row in risk_sample if row["primary_stratum"] == "direct-query"
     }
     direct_query_evidence = json.loads(DIRECT_QUERY_EVIDENCE.read_text(encoding="utf-8"))
+    direct_query_resolution = json.loads(DIRECT_QUERY_RESOLUTION.read_text(encoding="utf-8"))
+    if (
+        direct_query_resolution.get("status") != "DIRECT_QUERY_SCREENING_CLOSED"
+        or direct_query_resolution.get("decision") != "retain-close"
+        or direct_query_resolution.get("claim_permission")
+        != "none-until-readable-proposition-review"
+    ):
+        errors.append("v0.14 direct-query resolution metadata mismatch")
     evidence_records = direct_query_evidence.get("records", [])
     evidence_keys = [row.get("record_key", "") for row in evidence_records]
     if direct_query_evidence.get("status") != "PARTIAL_SCREENING":
@@ -347,6 +357,8 @@ def inspect() -> tuple[list[str], dict[str, object]]:
             errors.append(f"{key}: direct-query evidence lacks a retrieval-ledger row")
             continue
         expected_decision = evidence_row.get("screening_decision") or ""
+        if key == direct_query_resolution.get("record_key"):
+            expected_decision = direct_query_resolution.get("decision", "")
         for field, expected in (
             ("retrieval_outcome", evidence_row.get("retrieval_outcome", "")),
             ("retrieval_locator", evidence_row.get("retrieval_locator", "")),
@@ -479,6 +491,22 @@ def inspect() -> tuple[list[str], dict[str, object]]:
     ):
         errors.append("v0.13 forward-screening attestation mismatch")
 
+    proposition_review = json.loads(
+        FORWARD_PROPOSITION_REVIEW.read_text(encoding="utf-8")
+    )
+    proposition_counts = proposition_review.get("counts", {})
+    if (
+        proposition_review.get("status") != "PROPOSITION_REVIEW_CLOSED"
+        or proposition_counts.get("retained_close_sources") != 13
+        or proposition_counts.get("reviewed") != 13
+        or proposition_counts.get("open") != 0
+        or proposition_counts.get("manuscript_use") != 5
+        or proposition_counts.get("background_only") != 2
+        or proposition_counts.get("quarantined") != 6
+        or proposition_counts.get("proposition_permissions") != 5
+    ):
+        errors.append("v0.14 forward proposition-review summary mismatch")
+
     attestation = json.loads(HUMAN_REVIEW_ATTESTATION.read_text(encoding="utf-8"))
     if attestation.get("version") != "0.11.0" or attestation.get("reviewer") != AUTHOR:
         errors.append("human-review attestation metadata mismatch")
@@ -604,15 +632,17 @@ def inspect() -> tuple[list[str], dict[str, object]]:
                     "sample_record": "paper/data/inaccessible-risk-sample-v0.11.0.csv",
                 },
                 "direct_query_tranche": {
-                    "status": "PARTIAL_SCREENING",
+                    "status": "SCREENING_CLOSED_WITH_SOURCE_LIMIT",
                     "selected": len(direct_query_keys),
                     "retrieval_complete": len(direct_query_rows),
                     "screening_complete": direct_query_screening_complete,
                     "screening_open": len(direct_query_rows) - direct_query_screening_complete,
                     "evidence_record": "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
+                    "resolution_overlay": "paper/data/direct-query-resolution-v0.14.0.json",
+                    "proposition_permissions": 0,
                 },
                 "forward_citation_tranche": {
-                    "status": "SCREENING_CLOSED_PROPOSITION_REVIEW_OPEN",
+                    "status": "PROPOSITION_REVIEW_CLOSED",
                     "selected": len(forward_records),
                     "retrieval_complete": len(forward_records),
                     "screening_required": forward_screening_required,
@@ -623,6 +653,8 @@ def inspect() -> tuple[list[str], dict[str, object]]:
                     "evidence_record": "paper/data/forward-citation-retrieval-evidence-v0.12.0.json",
                     "author_queue": "paper/data/forward-citation-author-review-queue-v0.12.0.csv",
                     "decision_ledger": "paper/data/forward-citation-author-screening-decisions-v0.13.0.csv",
+                    "proposition_review": "paper/data/forward-citation-proposition-review-v0.14.0.json",
+                    "proposition_review_counts": proposition_counts,
                 },
                 "claim_rule": "A completed risk sample estimates residual risk and does not establish exhaustive coverage.",
             },
@@ -678,11 +710,11 @@ The sample is frozen before retrieval with {risk_sample['selected']} selected re
 
 ## Direct-query tranche
 
-The five-record direct-query stratum has {direct_query['retrieval_complete']} retrieval outcomes, {direct_query['screening_complete']} bounded screening decisions, and {direct_query['screening_open']} open decision. One screened record is `retain-close` and remains limited to its abstract until full text is inspected. The [tranche report](direct-query-retrieval-tranche-v0.11.0.md) and [machine-readable evidence record](data/direct-query-retrieval-evidence-v0.11.0.json) preserve the route, basis, decision, and limit for each record.
+The five-record direct-query stratum has {direct_query['retrieval_complete']} retrieval outcomes and {direct_query['screening_complete']} bounded screening decisions, with no screening decision open. The v0.14 overlay classifies RS-DQ-004 as close from its title and workflow relevance. Its unreadable text layer and unresolved author-name mismatch grant zero proposition permission. The [tranche report](direct-query-retrieval-tranche-v0.11.0.md), [historical evidence record](data/direct-query-retrieval-evidence-v0.11.0.json), and [resolution overlay](data/direct-query-resolution-v0.14.0.json) preserve the route, basis, decision, and limit.
 
 ## Forward-citation tranche
 
-All {forward_citation['selected']} records in the frozen forward-citation stratum have a retrieval outcome. The pass recovered full text for {forward_citation['retrieval_outcomes'].get('full-text-recovered', 0)} records and abstracts for {forward_citation['retrieval_outcomes'].get('abstract-recovered', 0)} records. It recorded {forward_citation['retrieval_outcomes'].get('metadata-only', 0)} metadata-only outcomes, {forward_citation['retrieval_outcomes'].get('unavailable', 0)} unavailable outcomes, and {forward_citation['retrieval_outcomes'].get('duplicate', 0)} duplicates. All {forward_citation['screening_required']} recovered-content records now have an author-authorized, AI-assisted screening decision: {forward_citation['screening_decisions'].get('retain-close', 0)} close, {forward_citation['screening_decisions'].get('retain-background', 0)} background, {forward_citation['screening_decisions'].get('exclude-single-component', 0)} single-component exclusions, and {forward_citation['screening_decisions'].get('exclude-topic', 0)} topic exclusions. Screening closes corpus membership for this tranche. The {forward_citation['screening_decisions'].get('retain-close', 0)} close sources still require proposition-level review before they can support manuscript claims.
+All {forward_citation['selected']} records in the frozen forward-citation stratum have a retrieval outcome. The pass recovered full text for {forward_citation['retrieval_outcomes'].get('full-text-recovered', 0)} records and abstracts for {forward_citation['retrieval_outcomes'].get('abstract-recovered', 0)} records. It recorded {forward_citation['retrieval_outcomes'].get('metadata-only', 0)} metadata-only outcomes, {forward_citation['retrieval_outcomes'].get('unavailable', 0)} unavailable outcomes, and {forward_citation['retrieval_outcomes'].get('duplicate', 0)} duplicates. All {forward_citation['screening_required']} recovered-content records have an author-authorized, AI-assisted screening decision: {forward_citation['screening_decisions'].get('retain-close', 0)} close, {forward_citation['screening_decisions'].get('retain-background', 0)} background, {forward_citation['screening_decisions'].get('exclude-single-component', 0)} single-component exclusions, and {forward_citation['screening_decisions'].get('exclude-topic', 0)} topic exclusions. All {forward_citation['proposition_review_counts']['retained_close_sources']} close sources then received proposition review. Five receive one locator-bounded manuscript permission each, two remain background-only, and six remain quarantined.
 
 ## Claim controls
 
@@ -694,7 +726,7 @@ All {forward_citation['selected']} records in the frozen forward-citation stratu
 
 ## Current finding
 
-The 89-decision author gate resolved the original screening queue. The retained-close full-text gate is closed with {full_text['verified']} verified sources, {full_text['abstract_only_not_used']} abstract-only sources quarantined from stronger use, {full_text['excluded_after_full_text']} exclusions after full-text review, and {full_text['inaccessible']} inaccessible sources. Gate 2 has recorded {inaccessible['retrieval_rows_complete']} retrieval outcomes and leaves {inaccessible['retrieval_rows_open']} records unresolved. Its recovered content has {inaccessible['screening_decisions_complete']} decisions and {inaccessible['screening_decisions_open']} open decision. The {inaccessible['recovered_close_sources']} close sources recovered through this risk sample remain outside manuscript propositions until their separate source-review gates close.
+The 89-decision author gate resolved the original screening queue. The retained-close full-text gate is closed with {full_text['verified']} verified sources, {full_text['abstract_only_not_used']} abstract-only sources quarantined from stronger use, {full_text['excluded_after_full_text']} exclusions after full-text review, and {full_text['inaccessible']} inaccessible sources. Gate 2 has recorded {inaccessible['retrieval_rows_complete']} retrieval outcomes and leaves {inaccessible['retrieval_rows_open']} records unresolved. Its recovered content has {inaccessible['screening_decisions_complete']} decisions and {inaccessible['screening_decisions_open']} open decisions. Proposition permission remains a separate, stricter gate: five forward-citation propositions pass, while RS-DQ-004 retains zero permission.
 """
 
 
@@ -713,11 +745,13 @@ def main() -> int:
         RISK_SAMPLE,
         RISK_SAMPLE_SUMMARY,
         DIRECT_QUERY_EVIDENCE,
+        DIRECT_QUERY_RESOLUTION,
         FORWARD_CITATION_EVIDENCE,
         FORWARD_CITATION_QUEUE,
         FORWARD_CITATION_DECISIONS,
         FORWARD_CITATION_SCREENING,
         FORWARD_CITATION_ATTESTATION,
+        FORWARD_PROPOSITION_REVIEW,
         HUMAN_REVIEW_ATTESTATION,
         INTERFACE_LEDGER,
     )

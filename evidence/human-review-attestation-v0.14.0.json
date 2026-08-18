@@ -1,0 +1,37 @@
+{
+  "version": "0.14.0",
+  "attestation_id": "TAE-HUMAN-REVIEW-V0.14.0",
+  "reviewer": "Mark Julius Banasihan",
+  "review_date": "2026-08-13",
+  "authorization_scope": "Proceed with the v0.14 preprint work and carry Chain-of-Evidence, ScientistOne-inspired evidence fitness and lineage, the CoE Integrity Audit, mutation controls, and repository validation through the release candidate.",
+  "review_basis": "The author received the proposed next step, granted full authorization to proceed, and then required the CoE, ScientistOne, and CoE Integrity Audit controls to run through the entire workflow.",
+  "ai_assistance": "Codex retrieved and inspected accessible source text, proposed proposition decisions, corrected metadata, drafted the manuscript additions and control artifacts, and ran deterministic checks. Mark Julius Banasihan remains the accountable author and decision owner.",
+  "workflow_attestations": [
+    {
+      "claim_id": "PAPER-C35",
+      "support_review": "recorded",
+      "scope": "All 13 v0.13 close forward-citation sources received a terminal proposition-review decision under the v0.14 protocol."
+    },
+    {
+      "claim_id": "PAPER-C36",
+      "support_review": "recorded",
+      "scope": "Five exact bounded propositions received manuscript permission, two records remain background-only, and six remain quarantined."
+    },
+    {
+      "claim_id": "PAPER-C37",
+      "support_review": "recorded",
+      "scope": "The direct-query overlay closes RS-DQ-004 as close for screening while preserving zero proposition permission."
+    },
+    {
+      "claim_id": "PAPER-C38",
+      "support_review": "recorded",
+      "scope": "The source-comparison claim is limited to the five permitted propositions and their recorded locators and limitations."
+    }
+  ],
+  "limits": [
+    "The attestation records accountable author authorization and supplies no independent source verification or inter-assessor agreement.",
+    "The author did not personally reproduce every AI-assisted retrieval step in this cycle.",
+    "Quarantined sources retain zero proposition permission.",
+    "Authenticated database coverage, 980 retrieval outcomes, the 177-record backward-reference stratum, field validation, and institutional effects remain open."
+  ]
+}

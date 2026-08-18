@@ -1,16 +1,16 @@
 # Research Status
 
-**Version:** 0.13.0
+**Version:** 0.15.0
 
-**Latest published version:** 0.12.0
+**Latest published version:** 0.14.0
 
-**Working checkpoint:** v0.13.0 release candidate
+**Working checkpoint:** v0.15.0 Preprints.org submission candidate
 
-**Next target:** Complete proposition-level review of the 13 newly close forward-citation sources, then process the 177-record backward-reference stratum
+**Next target:** Exact Preprints.org upload review and submitted-file hashes, followed by the 177-record backward-reference stratum
 
-**Status:** Forward-citation screening closed; proposition review, one direct-query decision, and two source limits remain open
+**Status:** Proposition review, author metadata, Overleaf compilation, and repository controls closed; external submission, two source limits, search coverage, and independent assessment remain open
 
-**Status date:** 11 August 2026
+**Status date:** 18 August 2026
 
 ## Current maturity
 
@@ -26,11 +26,11 @@
 | Public-case packets | Three source manifests, assessments, reports, and packet hashes | Demonstrated for selected public evidence | Independent reconstruction tests source sufficiency and classification stability |
 | Public-case interaction checks | Successful intervention, authority without practical force, and missing-evidence boundary | Executable for the three included packets | New case families test additional control interactions |
 | Publication figure set | Six main figures, four appendix figures, ten derived CSV files, SVG and PNG outputs, specifications, and artifact-integrity checks | Released in v0.9.0 | A venue-formatted paper preserves every caption and interpretation boundary |
-| Claim-evidence integrity | Twenty-eight mapped claims, five gates, five integrity checks, twenty-six negative controls, and four published exceptions | Demonstrated for the declared v0.13.0 scope; retained forward sources have no proposition permission | Complete proposition-level source review, an independent reconstruction, authenticated database searching, and a test of the proposed transfer mechanism |
+| Claim-evidence integrity | Thirty-five mapped claims, five gates, five integrity checks, thirty-three negative controls, and declared exceptions | Demonstrated for the declared v0.15.0 scope; the final external submission gate remains open | Complete an independent reconstruction, authenticated database searching, and a test of the proposed transfer mechanism |
 | Research lineage | Human and software agents, activities, entities, relations, and AI-assistance log | Published with PROV-O-compatible concepts | Add formal PROV-O or RO-Crate serialization if needed by a publication venue |
 | Claim-evidence figure | One journal-style categorical appendix matrix, derived CSV, SVG, PNG, specification, and v0.9 manifest | Demonstrated for the v0.9.0 audit result | The venue-formatted manuscript preserves its no-score boundary |
 | Oko evidence adjudication | Frozen plan, fixed packet, six reclassifications, change ledger, and six negative controls | Demonstrated for the v0.6.0 decision | Independent review tests the judgment and new eligible evidence triggers a versioned reassessment |
-| Practical human control paper | Author-screened v0.9.0 manuscript candidate, 60-source matrix, frozen formal search, selected-index citation chains, final 89-record decisions, a terminal decision for each of the 27 initial close sources, a frozen 284-record risk sample, five direct-query outcomes, 102 forward-citation outcomes, 71 completed forward decisions, 23-proposition literature audit, reader edition, structured tables, ethical burden-of-proof argument, and provisional venue selection | Working manuscript; 13 newly close forward sources await proposition review; one direct-query decision and two source limits remain open | Proposition review, backward-reference retrieval, authenticated searches, and ethics guidance complete; venue-formatted anonymous package passes review |
+| Practical human control paper | Proposition-reviewed manuscript, 60-source matrix, frozen formal search, final 89-record decisions, 102 forward-citation outcomes, 71 completed forward decisions, 13 proposition decisions, five direct-query decisions, reader edition, journal-style color tables, 230-word abstract, professional single-column LaTeX source, canonical 25-page PDF, source archive, and venue package | Overleaf compilation and all-17-display placement audit closed with zero errors; v0.14 is public on Zenodo and v0.15 preserves venue metadata and both correspondence addresses | Author reviews the exact external upload and records submitted-file hashes; remaining limitations stay visible |
 | Repository validation | Pinned schema dependency, executable script, and CI workflow | Executable for declared repository checks | CI passes on the published commit |
 | Solo-validation suite | 12 synthetic cases, 252 oracle comparisons, 12 mutation tests, and three invariance tests | Demonstrated for committed fixtures | New case families expose additional boundary and interaction failures |
 | Sealed oracle | SHA-256 manifest for cases, mutations, and expected classifications | Demonstrated for v0.2.0 artifacts | A later release preserves explicit migration and re-sealing records |
@@ -39,20 +39,20 @@
 
 ## Research phase
 
-The v0.13.0 working checkpoint preserves the v0.12 retrieval record and closes the frozen 71-record forward-citation screening gate. The decisions classify 13 records as close, 22 as background, 11 as single-component exclusions, and 25 as topic exclusions. Every retained record remains in `none-until-proposition-review`. The proposed cross-domain mechanism remains conclusion-ineligible. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, source truth, originality, and harm prevention remain unresolved.
+The v0.15.0 working checkpoint preserves the public v0.14 preprint, the v0.13 screening record, and the closed 13-source proposition gate. Five sources have one bounded manuscript permission each, two remain background-only, and six are quarantined. RS-DQ-004 has a terminal close screening decision and zero source-content permission. Version 0.15 changes venue metadata and packaging, not the research question, case assessments, quantitative findings, or bounded conclusions. Independent reliability, population validity, institutional effectiveness, legal sufficiency, safety, source truth, originality, and harm prevention remain unresolved.
 
-The paper workspace records an author-screened v0.9.0 candidate and audits 23 material literature propositions. The 60-source matrix includes effective-oversight conditions, institutional design, causal human involvement, ScientistOne, evidence-linked argument graphs, incident-set oversight coding, runnable decision chains, versioned assurance cases, traceable governance, contemporary agent oversight, intervention-path integrity, and human performance in autonomous warfare. The formal open-index search returned 2,431 deduplicated records, and selected-seed Semantic Scholar chains are complete within recorded index limits. Six main figures, four appendix figures, and seven structured manuscript tables expose relationships, exact states, initial final-screening counts, correction history, and the absence of reliability evidence. Authenticated databases, disciplinary interfaces, 980 retrieval outcomes, one direct-query decision, and proposition review of 13 newly close sources remain open, so the manuscript makes no originality finding. The released v0.3.0 assessment remains unchanged as version history.
+The paper workspace records a proposition-reviewed arXiv candidate. The 60-source matrix includes effective-oversight conditions, institutional design, causal human involvement, ScientistOne, evidence-linked argument graphs, incident-set oversight coding, runnable decision chains, versioned assurance cases, traceable governance, contemporary agent oversight, intervention-path integrity, and human performance in autonomous warfare. The formal open-index search returned 2,431 deduplicated records. Six main figures, four appendix figures, and seven journal-style tables expose relationships, exact states, screening counts, correction history, and the absence of reliability evidence. One canonical 25-page color PDF and a deterministic single-column source archive now preserve the paper presentation. The design uses black body text, dark navy headings and rules, and light gray-blue table headers. The Overleaf build had zero errors, one TeX compatibility warning, and no overfull or underfull box notice. All 17 displays appear before References, their locations are machine-checked, and the two preserved PDF paths are byte-identical. Authenticated databases, disciplinary interfaces, 980 retrieval outcomes, the 177-record backward-reference stratum, author submission decisions, and independent assessment remain open, so the manuscript makes no originality finding. The released v0.3.0 assessment remains unchanged as version history.
 
-The v0.10 gate record separates screening relevance from claim support. All 27 initial close sources have a terminal decision: 22 have a verified full-text review basis, 3 are restricted to abstract-level use, and 2 remain inaccessible after the recorded retrieval paths. Version 0.11.0 froze the 284-record residual-risk sample with 102 forward citations, 177 backward references, and 5 direct-query records. The direct-query stratum has five outcomes and four decisions. The forward-citation stratum has 102 outcomes and 71 decisions. Across both tranches, the population ledger holds 107 of 1,087 required outcomes and 75 of 76 recovered-content decisions. Five authenticated or disciplinary-interface searches and independent assessment remain open.
+The v0.10 gate record separates screening relevance from claim support. All 27 initial close sources have a terminal decision: 22 have a verified full-text review basis, 3 are restricted to abstract-level use, and 2 remain inaccessible after the recorded retrieval paths. Version 0.11.0 froze the 284-record residual-risk sample with 102 forward citations, 177 backward references, and 5 direct-query records. The direct-query stratum has five outcomes and five decisions. The forward-citation stratum has 102 outcomes, 71 screening decisions, and 13 proposition decisions. Across both tranches, the population ledger holds 107 of 1,087 required outcomes and 76 of 76 recovered-content screening decisions. Five authenticated or disciplinary-interface searches and independent assessment remain open.
 
 ## Next evidence gates
 
-1. Perform proposition-level review of the 13 newly close forward-citation sources; add only claims with stable locators and recorded fitness decisions.
-2. Resolve the one open direct-query screening decision and retain the two source limits until lawful full-text access changes.
-3. Retrieve the 177 records in the frozen backward-reference stratum while population-wide recovery continues.
-4. Complete authenticated Scopus or Web of Science and disciplinary-interface searches.
-5. Obtain applicable ethics guidance and approve affiliation, funding, and competing-interest statements.
-6. Create the anonymous *AI and Ethics* submission package and manuscript-specific archive.
+1. Review the exact Preprints.org upload and record the submitted-file hashes before the Submit action.
+2. Preserve the arXiv draft and complete category endorsement if that route resumes.
+3. Maintain the v0.14.0 Zenodo DOI and v0.15.0 repository relationship in every external submission.
+4. Retrieve the 177 records in the frozen backward-reference stratum while population-wide recovery continues.
+5. Complete authenticated Scopus or Web of Science and disciplinary-interface searches.
+6. Create the anonymous *AI and Ethics* submission package after the preprint record is stable.
 7. Add a new frozen case family that tests a different institution, sector, and system architecture.
 8. Run one clean-room implementation when an eligible reviewer becomes available.
 9. Test one prospective or realistically simulated decision in which a failed condition can stop or alter execution.

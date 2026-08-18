@@ -122,6 +122,7 @@ LIGHT = "#D8DCE2"
 PALE = "#F5F6F7"
 BLUE = "#2F6FB0"
 MID_BLUE = "#7FA6CF"
+NAVY = "#0B1F3A"
 PAPER = "#FFFFFF"
 
 FIGURE_STUBS = (
@@ -696,18 +697,18 @@ def build_lineage(data_dir: Path, figure_dir: Path) -> None:
     for node in spec["nodes"]:
         rows.append({"record_type": "node", "node_id": node["node_id"], "lane": node["lane"], "order": node["order"], "title": node["title"], "detail": node["detail"].replace("\n", " | "), "from": "", "to": ""})
     for edge in spec["edges"]:
-        rows.append({"record_type": "edge", "node_id": "", "lane": "", "order": "", "title": "", "detail": "", "from": edge["from"], "to": edge["to"]})
-    write_csv(data_dir / "fig-a2-reproducibility-lineage.csv", ["record_type", "node_id", "lane", "order", "title", "detail", "from", "to"], rows)
+        rows.append({"record_type": "edge", "node_id": "", "lane": "", "order": "", "title": "", "detail": "", "from": edge["from"], "to": edge["to"], "relationship": edge.get("label", "")})
+    write_csv(data_dir / "fig-a2-reproducibility-lineage.csv", ["record_type", "node_id", "lane", "order", "title", "detail", "from", "to", "relationship"], rows)
 
     fig, ax = plt.subplots(figsize=(7.25, 3.65))
     ax.set_axis_off()
     lane_nodes = {lane: sorted([node for node in spec["nodes"] if node["lane"] == lane], key=lambda row: row["order"]) for lane in ("research", "figures")}
     positions: dict[str, tuple[float, float]] = {}
-    sizes = {"research": (0.135, 0.20), "figures": (0.145, 0.20)}
-    lane_y = {"research": 0.60, "figures": 0.18}
+    sizes = {"research": (0.118, 0.205), "figures": (0.142, 0.205)}
+    lane_y = {"research": 0.62, "figures": 0.14}
     for lane, nodes in lane_nodes.items():
         width, height = sizes[lane]
-        left, right = 0.08, 0.98 - width
+        left, right = 0.17, 0.98 - width
         step = (right - left) / (len(nodes) - 1)
         for index, node in enumerate(nodes):
             x, y = left + index * step, lane_y[lane]
@@ -724,8 +725,8 @@ def build_lineage(data_dir: Path, figure_dir: Path) -> None:
                 title_width=13,
                 detail_width=16,
             )
-    ax.text(0.01, 0.70, "RESEARCH", ha="left", va="center", fontsize=6.5, color=BLUE, weight="bold", transform=ax.transAxes)
-    ax.text(0.01, 0.28, "FIGURES", ha="left", va="center", fontsize=6.5, color=MUTED, weight="bold", transform=ax.transAxes)
+    ax.text(0.135, 0.72, "RESEARCH", ha="right", va="center", fontsize=6.6, color=NAVY, weight="bold", transform=ax.transAxes)
+    ax.text(0.135, 0.24, "FIGURE\nPIPELINE", ha="right", va="center", fontsize=6.4, color=MUTED, weight="bold", linespacing=1.0, transform=ax.transAxes)
     lookup = {node["node_id"]: node for node in spec["nodes"]}
     for edge in spec["edges"]:
         start, end = lookup[edge["from"]], lookup[edge["to"]]
@@ -736,7 +737,23 @@ def build_lineage(data_dir: Path, figure_dir: Path) -> None:
         if start["lane"] == end["lane"]:
             arrow(ax, (sx + sw, sy + sh / 2), (ex, ey + eh / 2))
         else:
-            ax.add_patch(FancyArrowPatch((sx + sw / 2, sy), (ex + ew / 2, ey + eh), arrowstyle="-|>", mutation_scale=8, linewidth=0.9, color=BLUE, connectionstyle="arc3,rad=0.10", transform=ax.transAxes, clip_on=False))
+            start_x = sx + sw / 2
+            end_x = ex + ew / 2
+            elbow_y = 0.485
+            ax.plot([start_x, start_x, end_x], [sy, elbow_y, elbow_y], color=NAVY, linewidth=0.9, transform=ax.transAxes, clip_on=False)
+            arrow(ax, (end_x, elbow_y), (end_x, ey + eh), color=NAVY)
+            ax.text(
+                (start_x + end_x) / 2,
+                elbow_y + 0.026,
+                edge.get("label", "Assessment outputs feed figure inputs"),
+                ha="center",
+                va="bottom",
+                fontsize=5.8,
+                color=NAVY,
+                weight="semibold",
+                bbox={"facecolor": PAPER, "edgecolor": "none", "pad": 1.2},
+                transform=ax.transAxes,
+            )
     save_figure(fig, figure_dir, "fig-a2-reproducibility-lineage")
 
 
@@ -813,14 +830,13 @@ def write_manifest(output_root: Path) -> None:
         "artifacts": [manifest_entry(output_root / relative, relative) for relative in expected_outputs()],
         "inputs": [manifest_entry(ROOT / relative, Path(relative)) for relative in SOURCE_INPUTS],
     }
-    for relative in (Path("figures/manifest.json"), Path("figures/v0.9.0-manifest.json")):
-        path = output_root / relative
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    path = output_root / "figures/manifest.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
 
 def validate_manifest(errors: list[str]) -> None:
-    for relative in (Path("figures/manifest.json"), Path("figures/v0.9.0-manifest.json")):
+    for relative in (Path("figures/manifest.json"),):
         path = ROOT / relative
         if not path.is_file():
             errors.append(f"{relative.as_posix()} is missing")

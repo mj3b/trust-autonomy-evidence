@@ -1,7 +1,7 @@
 {
-  "version": "0.5.0",
-  "lineage_id": "TAE-LINEAGE-V0.5.0",
-  "description": "PROV-O-compatible research lineage for the v0.5 claim map and integrity audit. The file declares agents, activities, entities, and relations without claiming full PROV-O or RO-Crate conformance.",
+  "version": "0.14.0",
+  "lineage_id": "TAE-LINEAGE-V0.14.0",
+  "description": "PROV-O-compatible research lineage through the v0.14 proposition review and preprint candidate. The file declares agents, activities, entities, and relations without claiming full PROV-O or RO-Crate conformance.",
   "agents": [
     {
       "agent_id": "AGENT-MJB",
@@ -72,6 +72,36 @@
       "assisting_agents": ["AGENT-CI"],
       "protocol": "audits/v0.5.0/audit-plan.md",
       "status": "open"
+    },
+    {
+      "activity_id": "ACT-V014-PROPOSITION-REVIEW",
+      "activity_type": "source_review",
+      "description": "Review the 13 forward-citation sources classified close and assign bounded proposition permissions, background-only status, or quarantine.",
+      "date": "2026-08-13",
+      "responsible_agent": "AGENT-MJB",
+      "assisting_agents": ["AGENT-AI", "AGENT-CI"],
+      "protocol": "paper/forward-citation-proposition-review-protocol-v0.14.0.md",
+      "status": "completed"
+    },
+    {
+      "activity_id": "ACT-V014-DIRECT-QUERY",
+      "activity_type": "screening",
+      "description": "Close RS-DQ-004 for relevance while preserving unreadable-text and author-identity limits and zero proposition permission.",
+      "date": "2026-08-13",
+      "responsible_agent": "AGENT-MJB",
+      "assisting_agents": ["AGENT-AI", "AGENT-CI"],
+      "protocol": "paper/forward-citation-proposition-review-protocol-v0.14.0.md",
+      "status": "completed"
+    },
+    {
+      "activity_id": "ACT-V014-INTEGRITY",
+      "activity_type": "integrity_audit",
+      "description": "Audit 32 mapped claims and test 33 prespecified corruptions before sealing the v0.14 candidate.",
+      "date": "2026-08-13",
+      "responsible_agent": "AGENT-MJB",
+      "assisting_agents": ["AGENT-AI", "AGENT-CI"],
+      "protocol": "audits/v0.14.0/audit-plan.md",
+      "status": "completed"
     }
   ],
   "entities": [
@@ -83,7 +113,13 @@
     {"entity_id": "ENTITY-CLAIM-MAP", "entity_type": "claim_map", "path": "evidence/claim-evidence-map.json", "version": "0.5.0", "integrity_state": "pending"},
     {"entity_id": "ENTITY-MANUSCRIPT", "entity_type": "manuscript", "path": "paper/manuscript.md", "version": "working", "integrity_state": "pending"},
     {"entity_id": "ENTITY-AUDIT", "entity_type": "audit_result", "path": "audits/v0.5.0/audit-results.json", "version": "0.5.0", "integrity_state": "pending"},
-    {"entity_id": "ENTITY-RELEASE", "entity_type": "release_manifest", "path": "release/v0.5.0-manifest.json", "version": "0.5.0", "integrity_state": "pending"}
+    {"entity_id": "ENTITY-RELEASE", "entity_type": "release_manifest", "path": "release/v0.5.0-manifest.json", "version": "0.5.0", "integrity_state": "release_manifest"},
+    {"entity_id": "ENTITY-V014-PROPOSITION-LEDGER", "entity_type": "selection_record", "path": "paper/data/forward-citation-proposition-review-v0.14.0.csv", "version": "0.14.0", "integrity_state": "verified"},
+    {"entity_id": "ENTITY-V014-DIRECT-RESOLUTION", "entity_type": "selection_record", "path": "paper/data/direct-query-resolution-v0.14.0.json", "version": "0.14.0", "integrity_state": "verified"},
+    {"entity_id": "ENTITY-V014-CLAIM-MAP", "entity_type": "claim_map", "path": "evidence/claim-evidence-map.json", "version": "0.14.0", "integrity_state": "verified"},
+    {"entity_id": "ENTITY-V014-MANUSCRIPT", "entity_type": "manuscript", "path": "paper/manuscript.md", "version": "0.14.0", "integrity_state": "verified"},
+    {"entity_id": "ENTITY-V014-AUDIT", "entity_type": "audit_result", "path": "audits/v0.14.0/audit-results.json", "version": "0.14.0", "integrity_state": "verified"},
+    {"entity_id": "ENTITY-V014-RELEASE", "entity_type": "release_manifest", "path": "release/v0.14.0-manifest.json", "version": "0.14.0", "integrity_state": "pending"}
   ],
   "relations": [
     {"from": "ACT-CASE-ASSESSMENT", "to": "ENTITY-SELECTION", "relation": "used"},
@@ -101,6 +137,16 @@
     {"from": "ENTITY-MANUSCRIPT", "to": "ENTITY-OKO", "relation": "blocked_by"},
     {"from": "ENTITY-AUDIT", "to": "ENTITY-RELEASE", "relation": "included_in"},
     {"from": "ACT-QUESTION-FREEZE", "to": "ENTITY-QUESTION", "relation": "generated"},
-    {"from": "ACT-CLAIM-MAP", "to": "AGENT-MJB", "relation": "attributed_to"}
+    {"from": "ACT-CLAIM-MAP", "to": "AGENT-MJB", "relation": "attributed_to"},
+    {"from": "ACT-V014-PROPOSITION-REVIEW", "to": "ENTITY-V014-PROPOSITION-LEDGER", "relation": "generated"},
+    {"from": "ACT-V014-DIRECT-QUERY", "to": "ENTITY-V014-DIRECT-RESOLUTION", "relation": "generated"},
+    {"from": "ENTITY-V014-MANUSCRIPT", "to": "ENTITY-V014-PROPOSITION-LEDGER", "relation": "informed"},
+    {"from": "ENTITY-V014-CLAIM-MAP", "to": "ENTITY-V014-PROPOSITION-LEDGER", "relation": "derived_from"},
+    {"from": "ENTITY-V014-CLAIM-MAP", "to": "ENTITY-V014-DIRECT-RESOLUTION", "relation": "derived_from"},
+    {"from": "ACT-V014-INTEGRITY", "to": "ENTITY-V014-CLAIM-MAP", "relation": "used"},
+    {"from": "ACT-V014-INTEGRITY", "to": "ENTITY-V014-AUDIT", "relation": "generated"},
+    {"from": "ENTITY-V014-MANUSCRIPT", "to": "ENTITY-V014-AUDIT", "relation": "validated"},
+    {"from": "ENTITY-V014-AUDIT", "to": "ENTITY-V014-RELEASE", "relation": "included_in"},
+    {"from": "ACT-V014-PROPOSITION-REVIEW", "to": "AGENT-MJB", "relation": "attributed_to"}
   ]
 }

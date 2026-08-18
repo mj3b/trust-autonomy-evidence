@@ -2,7 +2,7 @@
 
 **Protocol origin:** 0.5.0
 
-**Current audit scope:** `TAE-COE-V0.11.0`
+**Current audit scope:** `TAE-COE-V0.14.0`
 
 **Decision served:** whether a material claim may enter a conclusion in this repository or its working paper
 
@@ -12,7 +12,7 @@ A citation, file path, or hash establishes a connection. It does not establish t
 
 ## Unit of analysis
 
-The unit is one declared claim in [`evidence/claim-evidence-map.json`](../evidence/claim-evidence-map.json). The current audit covers the twenty-six claims listed in that map. Other repository sentences remain outside this audit unless a later release adds them.
+The unit is one declared claim in [`evidence/claim-evidence-map.json`](../evidence/claim-evidence-map.json). The current audit covers the 32 claims listed in that map. Other repository sentences remain outside this audit unless a later release adds them.
 
 ## Standing application rule
 
@@ -101,11 +101,11 @@ The executable checks establish internal contract behavior and artifact consiste
 
 ## Current outputs
 
-- [`audits/v0.11.0/audit-results.json`](../audits/v0.11.0/audit-results.json)
-- [`audits/v0.11.0/audit-report.md`](../audits/v0.11.0/audit-report.md)
-- [`audits/v0.11.0/audit-plan.md`](../audits/v0.11.0/audit-plan.md)
-- [`audits/v0.11.0/exceptions.md`](../audits/v0.11.0/exceptions.md)
-- [`evidence/human-review-attestation-v0.11.0.json`](../evidence/human-review-attestation-v0.11.0.json)
+- [`audits/v0.14.0/audit-results.json`](../audits/v0.14.0/audit-results.json)
+- [`audits/v0.14.0/audit-report.md`](../audits/v0.14.0/audit-report.md)
+- [`audits/v0.14.0/audit-plan.md`](../audits/v0.14.0/audit-plan.md)
+- [`audits/v0.14.0/exceptions.md`](../audits/v0.14.0/exceptions.md)
+- [`evidence/human-review-attestation-v0.14.0.json`](../evidence/human-review-attestation-v0.14.0.json)
 - [`fixtures/coe-audit-mutations.json`](../fixtures/coe-audit-mutations.json)
 
 ## Claim boundary

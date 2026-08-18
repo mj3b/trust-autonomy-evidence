@@ -62,7 +62,7 @@ Every observed response matched the committed oracle for the 12 controlled mutat
 
 ### Figure A2. Reproducibility lineage
 
-The figure traces candidate collections, selection, packets, assessments, derived tables, rendered figures, and integrity checks. Hashes can detect a changed committed file. This lineage supports reconstruction of the artifact path and makes no source-truth or completeness claim.
+The upper lane traces the research record. The lower lane traces the figure pipeline. The labeled connector runs from Assessments to Plot inputs because recorded assessment states become inputs to the figure builder. Hashes can detect a changed committed file. This lineage supports reconstruction of the artifact path and makes no source-truth or completeness claim.
 
 ### Figure A3. Claim-evidence integrity
 

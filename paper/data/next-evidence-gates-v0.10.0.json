@@ -29,23 +29,23 @@
         "unavailable": 2
       },
       "recovered_content_requiring_screening": 76,
-      "screening_decisions_complete": 75,
-      "screening_decisions_open": 1,
+      "screening_decisions_complete": 76,
+      "screening_decisions_open": 0,
       "screening_decisions": {
         "exclude-single-component": 11,
         "exclude-topic": 25,
         "retain-background": 25,
-        "retain-close": 14
+        "retain-close": 15
       },
-      "recovered_close_sources": 14,
+      "recovered_close_sources": 15,
       "residual_risk_sample": {
         "status": "FROZEN_BEFORE_RETRIEVAL",
         "selected": 284,
         "sampled_retrieval_complete": 107,
         "sampled_retrieval_open": 177,
         "sampled_screening_required": 76,
-        "sampled_screening_complete": 75,
-        "sampled_screening_open": 1,
+        "sampled_screening_complete": 76,
+        "sampled_screening_open": 0,
         "strata": {
           "forward-citation": 102,
           "backward-reference": 177,
@@ -54,15 +54,17 @@
         "sample_record": "paper/data/inaccessible-risk-sample-v0.11.0.csv"
       },
       "direct_query_tranche": {
-        "status": "PARTIAL_SCREENING",
+        "status": "SCREENING_CLOSED_WITH_SOURCE_LIMIT",
         "selected": 5,
         "retrieval_complete": 5,
-        "screening_complete": 4,
-        "screening_open": 1,
-        "evidence_record": "paper/data/direct-query-retrieval-evidence-v0.11.0.json"
+        "screening_complete": 5,
+        "screening_open": 0,
+        "evidence_record": "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
+        "resolution_overlay": "paper/data/direct-query-resolution-v0.14.0.json",
+        "proposition_permissions": 0
       },
       "forward_citation_tranche": {
-        "status": "SCREENING_CLOSED_PROPOSITION_REVIEW_OPEN",
+        "status": "PROPOSITION_REVIEW_CLOSED",
         "selected": 102,
         "retrieval_complete": 102,
         "screening_required": 71,
@@ -83,7 +85,17 @@
         },
         "evidence_record": "paper/data/forward-citation-retrieval-evidence-v0.12.0.json",
         "author_queue": "paper/data/forward-citation-author-review-queue-v0.12.0.csv",
-        "decision_ledger": "paper/data/forward-citation-author-screening-decisions-v0.13.0.csv"
+        "decision_ledger": "paper/data/forward-citation-author-screening-decisions-v0.13.0.csv",
+        "proposition_review": "paper/data/forward-citation-proposition-review-v0.14.0.json",
+        "proposition_review_counts": {
+          "retained_close_sources": 13,
+          "reviewed": 13,
+          "open": 0,
+          "manuscript_use": 5,
+          "background_only": 2,
+          "quarantined": 6,
+          "proposition_permissions": 5
+        }
       },
       "claim_rule": "A completed risk sample estimates residual risk and does not establish exhaustive coverage."
     },

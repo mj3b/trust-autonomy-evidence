@@ -6,8 +6,8 @@
   "additionalProperties": false,
   "required": ["version", "suite_id", "controls"],
   "properties": {
-    "version": {"enum": ["0.5.0", "0.8.0", "0.11.0", "0.13.0"]},
-    "suite_id": {"enum": ["TAE-COE-NEGATIVE-CONTROLS-V0.5.0", "TAE-COE-NEGATIVE-CONTROLS-V0.8.0", "TAE-COE-NEGATIVE-CONTROLS-V0.11.0", "TAE-COE-NEGATIVE-CONTROLS-V0.13.0"]},
+    "version": {"enum": ["0.5.0", "0.8.0", "0.11.0", "0.13.0", "0.14.0"]},
+    "suite_id": {"enum": ["TAE-COE-NEGATIVE-CONTROLS-V0.5.0", "TAE-COE-NEGATIVE-CONTROLS-V0.8.0", "TAE-COE-NEGATIVE-CONTROLS-V0.11.0", "TAE-COE-NEGATIVE-CONTROLS-V0.13.0", "TAE-COE-NEGATIVE-CONTROLS-V0.14.0"]},
     "controls": {
       "type": "array",
       "minItems": 8,

@@ -1,0 +1,63 @@
+{
+  "project_title": "Practical Human Control v0.15.0 - Preprints.org",
+  "project_url": "https://www.overleaf.com/project/6a847868dd161b6c6be9ebf1",
+  "observed_date": "2026-08-18",
+  "source_archive": {
+    "path": "paper/preprints/preprints-source-v0.15.0.zip",
+    "bytes": 828264,
+    "sha256": "5dfc51b88ac48069455d069e9c3bc5750ef09c53335db31ba5fd4ed548b0a807"
+  },
+  "compiled_pdf": {
+    "path": "paper/preprints/preprints-compiled-v0.15.0.pdf",
+    "bytes": 1099004,
+    "sha256": "c407dc2bd2615094cbaa67e345003e8e35f36a20eb4d019d446e210d5c54767c",
+    "pages": 25,
+    "producer": "pdfTeX-1.40.27"
+  },
+  "compile_result": {
+    "errors": 0,
+    "warning_groups": 1,
+    "warnings": [
+      "TeX command-compatibility notice for \\showhyphens; no manuscript-content, reference, float-placement, or box-overflow failure was observed"
+    ]
+  },
+  "visual_review": {
+    "reviewer": "Codex under Mark Julius Banasihan's authorization",
+    "reviewed_pages": [1, 5, 8, 11, 14, 15, 16, 17, 18, 19, 20, 22, 23, 25],
+    "checks": [
+      "page 1 contains the author name, independent Node & Norm affiliation, ORCID, and both authorized correspondence addresses without the student-status and independence-disclaimer lines",
+      "black body text, dark navy navigation, and light gray-blue table headers remain consistent",
+      "figures and tables are legible at full-page scale",
+      "Figure A2 has distinct research and figure-pipeline lanes and a labeled connector from assessments to plot inputs",
+      "Figures A3 and A4, Figures 5 and 6, and Tables 3 through 5 and A3 appear before References",
+      "References begin on page 23 and continue through page 25",
+      "the compact author note on page 22 identifies Node & Norm as the author's independent research initiative, records Harvard University student status, and disclaims University sponsorship or endorsement",
+      "the Zenodo v0.14.0 DOI and the confirmed no-conflicts declaration are present",
+      "no observed clipping, overlap, displaced display after References, or unreadable table"
+    ]
+  },
+  "placement_audit": {
+    "references_page": 23,
+    "display_pages": {
+      "Figure 1.": 7,
+      "Figure 2.": 10,
+      "Figure 3.": 11,
+      "Figure 4.": 12,
+      "Figure 5.": 16,
+      "Figure 6.": 18,
+      "Figure A1.": 13,
+      "Figure A2.": 14,
+      "Figure A3.": 15,
+      "Figure A4.": 16,
+      "Table 1.": 7,
+      "Table 2.": 10,
+      "Table 3.": 17,
+      "Table 4.": 17,
+      "Table 5.": 18,
+      "Table A1.": 14,
+      "Table A3.": 19
+    },
+    "post_references_displays": []
+  },
+  "claim_boundary": "This receipt establishes successful Overleaf compilation and the listed presentation checks. It does not establish Preprints.org acceptance, peer review, independent validity, accessibility conformance, or substantive truth."
+}

@@ -102,19 +102,21 @@ These 13 records passed corpus screening. They are candidates for close-source r
 
 | Sample | Candidate source | Reason for close review | Current permission |
 |---|---|---|---|
-| RS-FC-005 | Salmon et al. (2012), *Through a different lens* | Compares systems-analysis methods for accident reconstruction. | None pending proposition review |
-| RS-FC-020 | Norros and Nuutinen (2009), *Core task analysis in accident investigation* | Connects operator work, task demands, and retrospective accident analysis. | None pending proposition review |
-| RS-FC-036 | Salmon et al. (2010), *Systems-based accident analysis in the led outdoor activity domain* | Applies and evaluates a systems-based accident-analysis framework. | None pending proposition review |
-| RS-FC-042 | Li et al. (2024), *User Perception of Partially Automated Driving Systems* | Applies meaningful-human-control concepts to user experience of partial automation. | None pending proposition review |
-| RS-FC-047 | Kiener (2026), *Many Hands, But Who Is In Control?* | Examines control gaps in a distributed healthcare-learning setting. | None pending proposition review |
-| RS-FC-051 | Karan and Angadi (2026), *From evaluator to principal* | Develops an agentic-AI literacy framework for delegated autonomy. | None pending proposition review |
-| RS-FC-052 | Hossain et al. (2025), *Human Oversight Over Autonomous Task Execution* | Studies oversight of autonomous task execution in sandbox environments. | None pending proposition review |
-| RS-FC-060 | van Diggelen et al. (2020), *Allocation of Moral Decision-Making in Human-Agent Teams* | Addresses allocation of consequential decisions in human-agent teams. | None pending proposition review |
-| RS-FC-061 | Calvert et al. (2018), *Working towards a Meaningful Transition of Human Control* | Examines transition of control in automated driving. | None pending proposition review |
-| RS-FC-070 | Chan et al. (2024), *Governing AI Agents* | Addresses institutional governance of agentic systems. | None pending proposition review |
-| RS-FC-080 | de Sio and Mecacci (2022), *Design-for-responsible algorithmic decision-making systems* | Links ethical judgment, design, and meaningful human control. | None pending proposition review |
-| RS-FC-096 | Chen et al. (2018), *Systems-Based Analysis of China-Tianjin Port Fire and Explosion* | Compares three systems-accident analysis methods. | None pending proposition review |
-| RS-FC-097 | McDermid et al. (2021), *From Blade Runners to Tin Kickers* | Compares AI-safety governance with air-crash investigation. | None pending proposition review |
+| RS-FC-005 | Salmon et al. (2012), *Through a different lens* | Compares three systems-analysis methods for one road-rail reconstruction. | Background only; conference presentation; pp. 15-18 |
+| RS-FC-020 | Nuutinen and Norros (2009), *Core task analysis in accident investigation* | Connects operator work, task demands, and retrospective maritime analysis. | Quarantined; abstract only |
+| RS-FC-036 | Salmon et al. (2010), *Systems-based accident analysis in the led outdoor activity domain* | Applies and evaluates a systems-based accident-analysis framework. | Quarantined; exact article not inspected |
+| RS-FC-042 | Suryana et al. (2024), *User Perception of Partially Automated Driving Systems* | Shows that perceived safety can diverge from reasons-tracking in a secondary analysis of 99 Tesla-user interviews. | Proposition permitted; pp. 5-6; perception study only |
+| RS-FC-047 | Kiener (2026), *Many Hands, But Who Is In Control?* | Examines distributed control in a healthcare-learning setting. | Quarantined; exact article unreadable |
+| RS-FC-051 | Nama (2026), *From evaluator to principal* | Develops an agentic-AI literacy framework for delegated autonomy. | Quarantined; abstract only |
+| RS-FC-052 | Li et al. (2025), *Human Oversight Over Autonomous Task Execution* | Compares direct manipulation with text guidance in a 28-person sandbox study. | Proposition permitted; pp. 663-668; small single-system study |
+| RS-FC-060 | van der Waa et al. (2020), *Allocation of Moral Decision-Making in Human-Agent Teams* | Makes allocation timing, understanding, halt or resume capability, and handover explicit design conditions. | Proposition permitted; pp. 204, 210-215; conceptual patterns |
+| RS-FC-061 | Heikoop and Hagenzieker (2018), *Working towards a Meaningful Transition of Human Control* | Examines transition of control in automated driving. | Background only; literature-based framework |
+| RS-FC-070 | Kolt (2025), *Governing AI Agents* | Explains why monitoring and records can support visibility while speed, opacity, and irreversibility can defeat intervention. | Proposition permitted; pp. 16-17, 32-34, 40-41; legal analysis |
+| RS-FC-080 | de Sio and Mecacci (2022), *Design-for-responsible algorithmic decision-making systems* | Links ethical judgment, design, and meaningful human control. | Quarantined; preview only |
+| RS-FC-096 | Zhang, Jing, and Sun (2018), *Systems-Based Analysis of China-Tianjin Port Fire and Explosion* | Compares three systems-accident methods applied by separate teams to the same official report. | Proposition permitted; pp. 1388, 1395-1398; one report and one accident |
+| RS-FC-097 | Macrae (2023), *From Blade Runners to Tin Kickers* | Connects AI-safety governance with air-crash investigation. | Quarantined; exact text not reliably inspected |
+
+The v0.14 proposition-review ledger is the authority for these permissions. Five sources may support only the bounded propositions recorded there. Two remain background-only. Six are quarantined. A close screening decision alone grants no manuscript claim permission.
 
 ## Provisional synthesis
 

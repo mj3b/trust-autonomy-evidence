@@ -1,0 +1,84 @@
+{
+  "version": "0.15.0",
+  "venue": "Preprints.org",
+  "archive": "paper/preprints/preprints-source-v0.15.0.zip",
+  "archive_bytes": 828264,
+  "archive_sha256": "5dfc51b88ac48069455d069e9c3bc5750ef09c53335db31ba5fd4ed548b0a807",
+  "member_count": 12,
+  "members": [
+    {
+      "archive_path": "main.tex",
+      "source_path": "paper/preprints/main.tex",
+      "bytes": 83481,
+      "sha256": "b0bdf8af3958144069572ce5403d7ba65c6e8e9d24518b3b1dae5851035e521b"
+    },
+    {
+      "archive_path": "00README.XXX",
+      "source_path": "paper/preprints/00README.XXX",
+      "bytes": 261,
+      "sha256": "043eae0080cc5b60d95e9205a16e4a4ba87b54372d35d3e3c1c853a50f8a1666"
+    },
+    {
+      "archive_path": "figures/fig-1-selection-and-stopping.png",
+      "source_path": "figures/generated/fig-1-selection-and-stopping.png",
+      "bytes": 69469,
+      "sha256": "4a51197424a88ae908c47f2b79040b7a608445e1c9983af6927b1df4b72c511a"
+    },
+    {
+      "archive_path": "figures/fig-2-practical-control-chain.png",
+      "source_path": "figures/generated/fig-2-practical-control-chain.png",
+      "bytes": 98859,
+      "sha256": "67532cb90e5e22faf6c17bd3419f4630fa81ab10dbf5d48a79c5be85e830fea8"
+    },
+    {
+      "archive_path": "figures/fig-3-decision-paths.png",
+      "source_path": "figures/generated/fig-3-decision-paths.png",
+      "bytes": 138794,
+      "sha256": "a33e61944466877ba997ac61cefdcc04bab319314079329a733bce4131e414cb"
+    },
+    {
+      "archive_path": "figures/fig-4-trust-evidence-states.png",
+      "source_path": "figures/generated/fig-4-trust-evidence-states.png",
+      "bytes": 121686,
+      "sha256": "01cc8a210ab989cd12e45d6812836c506c5ac627153680a412ffa700c7e94340"
+    },
+    {
+      "archive_path": "figures/fig-5-formal-search-and-screening.png",
+      "source_path": "figures/generated/fig-5-formal-search-and-screening.png",
+      "bytes": 87780,
+      "sha256": "8a01307c6a64bc931ee3dc340045f179ca251cf1d047e2b85ff6cf4f1cd8a49d"
+    },
+    {
+      "archive_path": "figures/fig-6-evidence-boundaries.png",
+      "source_path": "figures/generated/fig-6-evidence-boundaries.png",
+      "bytes": 56801,
+      "sha256": "35dc466f205dd8b60382a5d3bd256f14e981feae5e20e7082938afa130215c0c"
+    },
+    {
+      "archive_path": "figures/fig-a1-mutation-response.png",
+      "source_path": "figures/generated/fig-a1-mutation-response.png",
+      "bytes": 55636,
+      "sha256": "d8deb9efcc9d06e154dc4fc924cc6beb862988a491ddf6c4eddff5875bf0ce8c"
+    },
+    {
+      "archive_path": "figures/fig-a2-reproducibility-lineage.png",
+      "source_path": "figures/generated/fig-a2-reproducibility-lineage.png",
+      "bytes": 86039,
+      "sha256": "79e5d479e2f5ccd54274e52d3e865acb72e0ff092d176c55da9ff8e4a130711c"
+    },
+    {
+      "archive_path": "figures/fig-a3-claim-evidence-integrity.png",
+      "source_path": "figures/generated/fig-a3-claim-evidence-integrity.png",
+      "bytes": 122957,
+      "sha256": "1cd11b16a0f72a62ed324b4a1d631b66f938dd9a79ac0489489e458afcddd18a"
+    },
+    {
+      "archive_path": "figures/fig-a4-oko-versioned-correction.png",
+      "source_path": "figures/generated/fig-a4-oko-versioned-correction.png",
+      "bytes": 65323,
+      "sha256": "b153a34011ff9d551e5bf762f9fbacd8b5c104519dd050da4744107176bcacd8"
+    }
+  ],
+  "prior_preprint_doi": "10.5281/zenodo.21926005",
+  "submission_state": "AUTHOR_CONFIRMATION_REQUIRED"
+}

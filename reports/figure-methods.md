@@ -58,7 +58,7 @@ Twelve controlled mutation tests contain eleven prespecified assessment changes 
 
 ### Figure A2. Reproducibility lineage
 
-The research lane traces frozen candidate collections through selection, packets, assessments, and a version archive. The figure lane traces committed inputs through two builders, nine derived CSV files, eighteen rendered files, and integrity checks. Hashes and declared transformations support ordering and file integrity. Source truth and completeness remain separate propositions.
+The upper lane traces frozen candidate collections through selection, packets, assessments, and a version archive. The lower lane traces committed plot inputs through two builders, nine derived CSV files, eighteen rendered files, and integrity checks. A labeled connector runs from Assessments to Plot inputs because the recorded assessment states become figure-builder inputs. Hashes and declared transformations support ordering and file integrity. Source truth and completeness remain separate propositions.
 
 ### Figure A3. Claim-evidence integrity and conclusion eligibility
 

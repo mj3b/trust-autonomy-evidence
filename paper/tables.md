@@ -65,12 +65,13 @@ These tables preserve exact states and counts behind the figures. The submission
 | Forward-citation stratum | Retrieval outcomes recorded | 102 | Complete for the frozen stratum |
 | Forward-citation stratum | Recovered content | 71 | Eligible for screening |
 | Forward-citation stratum | Screening decisions | 71 | 13 close, 22 background, 11 single-component, 25 topic |
-| Forward-citation stratum | Proposition permissions | 0 | Retained sources require locator-level review |
-| Direct-query stratum | Screening decisions | 4 of 5 | One decision remains open |
+| Forward-citation stratum | Proposition permissions | 5 | Each permission is limited to one locator-bounded proposition |
+| Forward-citation stratum | Background-only or quarantined | 8 | Two background-only; six quarantined |
+| Direct-query stratum | Screening decisions | 5 of 5 | Screening closed; RS-DQ-004 has zero proposition permission |
 | Recovery population | Retrieval outcomes | 107 of 1,087 | 980 retrieval outcomes remain open |
-| Recovery population | Recovered-content decisions | 75 of 76 | One direct-query decision remains open |
+| Recovery population | Recovered-content decisions | 76 of 76 | All recovered content has a screening decision |
 
-*Note.* These counts describe the frozen recovery workflow. They supply no close-source prevalence estimate for the 1,087-record population because 980 retrieval outcomes remain open.
+*Note.* These counts describe the frozen recovery workflow and the v0.14 proposition-review overlay. They supply no close-source prevalence estimate for the 1,087-record population because 980 retrieval outcomes remain open. Proposition permission is narrower than source inclusion and does not establish generalizability.
 
 ## Table A1. Versioned correction of the Oko assessment
 

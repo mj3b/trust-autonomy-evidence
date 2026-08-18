@@ -22,3 +22,9 @@ The public artifact repository supports closer review of Parameter Golf, unweigh
 ## Open verification
 
 The paper and generated-artifacts repository were inspected as prior architecture and as a source of integrity-test examples. Full reproduction of the ScientistOne system and every reported task remains outside this project's scope.
+
+## v0.14 carried-through application
+
+The v0.14 source review applies the architecture through the preprint path. Each manuscript-use proposition now resolves through a stable source locator, exact passage locator, proposition-review decision, evidence-fitness judgment, limitation, reversal condition, bibliography record, manuscript citation, claim-map entry, human-review attestation, integrity-audit result, mutation suite, and release manifest.
+
+The control does not convert AI-assisted retrieval into independent review. Six retained sources remain quarantined because exact text or proposition support is unresolved. RS-DQ-004 is closed for screening while every source-content permission remains closed. Those states are part of the evidence chain.

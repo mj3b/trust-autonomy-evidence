@@ -6,7 +6,7 @@
 
 The fit depends on the paper's ethical burden-of-proof argument: an institution that represents a consequential system as human-controlled should preserve evidence capable of testing whether assigned authority had practical force. The journal's current scope explicitly includes human oversight in AI decision pipelines, meaningful oversight beyond nominal involvement, autonomous systems, accountability, and AI governance. The current manuscript now treats that ethical claim as a major contribution.
 
-The choice remains provisional until authenticated database checks, inaccessible-record treatment, ethics guidance, affiliation wording, and manuscript anonymization are complete. Check the official pages again immediately before submission.
+The journal choice remains provisional. The arXiv candidate can proceed as a bounded preprint while authenticated database coverage and 980 retrieval outcomes remain declared limitations. Journal submission still requires current policy checks, ethics guidance, affiliation wording, and manuscript anonymization.
 
 ## Paper identity
 
@@ -40,7 +40,7 @@ Check current official venue pages immediately before making a recommendation. D
 
 ## AI and Ethics preparation profile
 
-The current abstract is 249 words and falls within the stated 150 to 250 word range. The five keywords meet the 4 to 6 keyword requirement. The working manuscript includes the required data-availability, author-contribution, ethics, and AI-assistance sections.
+The current abstract is 230 words and falls within the stated 150 to 250 word range. The five keywords meet the 4 to 6 keyword requirement. The working manuscript includes data-availability, author-contribution, ethics, and AI-assistance sections.
 
 Before submission:
 
@@ -54,7 +54,18 @@ Before submission:
 
 ## Preprint decision
 
-A preprint may be appropriate after full repository validation, treatment of the inaccessible-record risk, completion of the authenticated database checks, manuscript-level claim review, and venue-specific ethics and disclosure checks. `PAPER-BLOCKER-01` is resolved in v0.6.0. The 89-record author gate is closed, and the v0.9 sentence-level literature audit passes for the current draft. The preprint must link to the version-specific evidence archive and state that it has not completed peer review.
+A bounded arXiv preprint is ready for author review after the v0.14 repository controls pass. `PAPER-BLOCKER-01` is resolved, the 89-record author gate is closed, all 76 recovered-content records have screening decisions, and the 13 close forward-citation sources have proposition decisions. Five exact propositions receive manuscript permission. Two sources remain background-only, six remain quarantined, and RS-DQ-004 has zero proposition permission. The preprint must link to the version-specific evidence archive, state that it has not completed peer review, and preserve the open search and external-validation limits.
+
+The following are author or arXiv decisions and cannot be inferred from repository evidence:
+
+- final affiliation wording;
+- public corresponding-author email;
+- submission license;
+- primary category and any cross-list;
+- endorsement requirements;
+- final public-records ethics wording;
+- acceptance of arXiv's compiled PDF after visual inspection;
+- the Zenodo version DOI for the v0.14 archive.
 
 The existing GitHub and Zenodo materials are research artifacts. They are not substitutes for a manuscript-specific archive.
 
@@ -107,5 +118,6 @@ Do not characterize the work as exempt from review until the applicable institut
 2. **Paper v0.2:** PR #11 pressure test, corrected claim boundary, documented novelty audit, complete related work, and methods draft with verified citations.
 3. **Paper v0.3:** results, discussion, limitations, and institutional implications. Completed in the v0.4 working manuscript.
 4. **Paper v0.4:** full manuscript, formal open-index search, selected-index citation chains, literature-support audit, ethics argument, disclosure, and data-availability statement.
-5. **Paper v0.5:** completed 89-record author screen, final Figure 5, contribution-boundary revision, and v0.9 claim-evidence audit. Current branch state.
-6. **Preprint candidate:** formatted manuscript and manuscript-specific archive.
+5. **Paper v0.5:** completed 89-record author screen, final Figure 5, contribution-boundary revision, and v0.9 claim-evidence audit.
+6. **Paper v0.6:** forward-citation recovery and screening, direct-query recovery, and versioned human-review attestations.
+7. **Preprint candidate, v0.14:** 13-source proposition review, five bounded source permissions, a 230-word abstract, LaTeX source, review PDF, deterministic source archive, source manifest, claim map, mutation controls, and CoE Integrity Audit. Ready for author review; platform fields and arXiv compilation remain open.

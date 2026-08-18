@@ -1,0 +1,24 @@
+{
+  "version": "0.14.0",
+  "status": "DIRECT_QUERY_SCREENING_CLOSED",
+  "source_snapshot": "paper/data/direct-query-retrieval-evidence-v0.11.0.json",
+  "sample_id": "RS-DQ-004",
+  "record_key": "title:effective human oversight of genai powered legal research tools|year:",
+  "title": "Effective Human Oversight of GenAI-Powered Legal Research Tools",
+  "decision": "retain-close",
+  "decision_basis": "title_metadata_and_verified_publisher_pdf_route",
+  "claim_permission": "none-until-readable-proposition-review",
+  "rationale": "The title directly concerns effective human oversight in a consequential GenAI workflow, which is sufficient for a close screening classification. The unreadable text layer and unresolved author-name mismatch block every substantive proposition.",
+  "decision_owner": "Mark Julius Banasihan",
+  "decision_date": "2026-08-13",
+  "ai_assistance": "AI preserved the v0.11 retrieval limit and proposed a conservative relevance decision; Mark Julius Banasihan authorized the recorded decision and retains accountability.",
+  "resulting_counts": {
+    "records": 5,
+    "screening_complete": 5,
+    "screening_open": 0,
+    "retain_close": 2,
+    "retain_background": 3,
+    "proposition_permissions": 0
+  },
+  "boundary": "This overlay closes screening without modifying the released v0.11 artifact. It grants no source-content or manuscript claim permission."
+}

@@ -1,0 +1,12 @@
+This source archive is prepared for arXiv review.
+
+Main source: main.tex
+Figures: figures/*.png
+Author: Mark Julius Banasihan
+ORCID: 0009-0001-8121-2878
+
+The source was generated from the repository reader manuscript. It uses a single-column preprint layout adapted from the Yale arXiv template's long-form structure, without Yale branding or logo. The custom palette uses dark navy (#0B1F3A), black body text, light gray-blue table headers, color-independent figure labels, and booktabs-style tables. Major-section float barriers keep displays with the relevant argument and before References. The approved Overleaf output is synchronized to the canonical preprint PDF. Inspect arXiv's compiled PDF before submission.
+
+Template design reference: Ngoc Bui, The Yale arXiv Paper Template, CC BY-SA 4.0, https://www.overleaf.com/latex/templates/the-yale-arxiv-paper-template/wsmyhmnffgcs. This source uses an independent article implementation and carries no Yale affiliation or endorsement.
+
+The repository and evidence archive are linked in the manuscript. This version is a preprint candidate and has not completed peer review.
