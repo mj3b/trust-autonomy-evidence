@@ -142,8 +142,8 @@
     },
     {
       "path": "scripts/validate_paper.py",
-      "bytes": 13024,
-      "sha256": "d35065e1d5c021ce97cecca3a2fc6de1806c80851bd0825b495acd0a7d2d0386"
+      "bytes": 12942,
+      "sha256": "11b863517eef8a78c75634fa0771fccbb5a051fe869bbd68d96b035234f5a1c6"
     }
   ],
   "boundary": "This focused manifest seals the v0.15 venue checkpoint. Earlier full research snapshots remain governed by their version tags and manifests."

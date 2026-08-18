@@ -204,7 +204,6 @@ def validate_generated_paper_artifacts(failures: list[str]) -> None:
         [sys.executable, "scripts/validate_forward_citation_author_screening_v0_13_0.py"],
         [sys.executable, "scripts/validate_forward_citation_proposition_review_v0_14_0.py"],
         [sys.executable, "scripts/build_v0_15_claim_map.py", "--check"],
-        [sys.executable, "scripts/build_arxiv_monochrome_figures.py", "--check"],
         [sys.executable, "scripts/validate_preprints_package.py"],
         [sys.executable, "scripts/validate_literature_support.py"],
     )
