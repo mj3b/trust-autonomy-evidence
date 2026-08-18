@@ -8,7 +8,7 @@
 
 ## Decision
 
-The declared v0.15 claim set preserves the v0.14 research gates and adds two supported venue-provenance claims. The final-submission claim remains ineligible because conflict confirmation, compiled-PDF inspection, upload review, and exact submitted-file hashes are open. All 33 controlled corruptions remain detected. The result supplies no independent reliability, originality, institutional-transfer, platform-acceptance, peer-review, or completed systematic-search finding.
+The declared v0.15 claim set preserves the v0.14 research gates and adds two supported venue-provenance claims. The author confirmed the conflict declaration on 2026-08-18. The exact source archive compiled in Overleaf with zero errors and received an authorized visual inspection. The final-submission claim remains ineligible because upload review and exact submitted-file hashes are open. All 33 controlled corruptions remain detected. The result supplies no independent reliability, originality, institutional-transfer, platform-acceptance, peer-review, or completed systematic-search finding.
 
 ## Integrity checks
 
@@ -106,7 +106,7 @@ All 33 controls run on in-memory copies. The committed evidence files remain unc
 - `COE-EX-04`: authenticated database searching, 980 retrieval outcomes, and the 177-record backward-reference stratum remain incomplete.
 - `COE-EX-06`: RS-DQ-004 is closed for screening, yet readable text and author identity remain unresolved; RS-DQ-005 remains restricted to its abstract.
 - `COE-EX-07`: PAPER-C32 remains provisional because one model-architecture study cannot establish institutional or public-incident transfer.
-- `COE-EX-10`: PAPER-C41 remains provisional until the author confirms the conflict declaration, inspects the compiled v0.15 PDF, reviews the Preprints.org upload, and freezes the submitted-file hashes.
+- `COE-EX-10`: PAPER-C41 remains provisional until the author reviews the Preprints.org upload and freezes the submitted-file hashes. The conflict declaration, Overleaf compilation, and authorized visual inspection were recorded on 2026-08-18.
 
 ## Closed exception
 

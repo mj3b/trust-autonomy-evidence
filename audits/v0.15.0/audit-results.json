@@ -35,7 +35,6 @@
       "indeterminate": 1,
       "findings": [
         "PAPER-C41/C41-STATE: content review pending",
-        "PAPER-C41/C41-CONFLICT: content review pending",
         "PAPER-C41/C41-GATES: content review pending",
         "PAPER-C41: human support review pending"
       ]

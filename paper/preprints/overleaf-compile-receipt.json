@@ -1,0 +1,62 @@
+{
+  "project_title": "Practical Human Control v0.15.0 - Preprints.org",
+  "project_url": "https://www.overleaf.com/project/6a847868dd161b6c6be9ebf1",
+  "observed_date": "2026-08-18",
+  "source_archive": {
+    "path": "paper/preprints/preprints-source-v0.15.0.zip",
+    "bytes": 828236,
+    "sha256": "f366516277aa026999ab9a161cc94bb21c2a204e578a094c0c68bb25bd0ae0aa"
+  },
+  "compiled_pdf": {
+    "path": "paper/preprints/preprints-compiled-v0.15.0.pdf",
+    "bytes": 1106403,
+    "sha256": "0e684630d8863829ab0bac2da4b7839a2d32a44e4a86fb7c378db5aed4e5d599",
+    "pages": 25,
+    "producer": "pdfTeX-1.40.27"
+  },
+  "compile_result": {
+    "errors": 0,
+    "warning_groups": 1,
+    "warnings": [
+      "TeX command-compatibility notice for \\showhyphens; no manuscript-content, reference, float-placement, or box-overflow failure was observed"
+    ]
+  },
+  "visual_review": {
+    "reviewer": "Codex under Mark Julius Banasihan's authorization",
+    "reviewed_pages": [1, 5, 8, 11, 14, 15, 16, 17, 18, 19, 20, 23, 25],
+    "checks": [
+      "author name, independent Node & Norm affiliation, Harvard University student-status note, and independence disclaimer are readable on page 1",
+      "black body text, dark navy navigation, and light gray-blue table headers remain consistent",
+      "figures and tables are legible at full-page scale",
+      "Figure A2 has distinct research and figure-pipeline lanes and a labeled connector from assessments to plot inputs",
+      "Figures A3 and A4, Figures 5 and 6, and Tables 3 through 5 and A3 appear before References",
+      "References begin on page 23 and continue through page 25",
+      "the Zenodo v0.14.0 DOI and the confirmed no-conflicts declaration are present",
+      "no observed clipping, overlap, displaced display after References, or unreadable table"
+    ]
+  },
+  "placement_audit": {
+    "references_page": 23,
+    "display_pages": {
+      "Figure 1.": 7,
+      "Figure 2.": 10,
+      "Figure 3.": 11,
+      "Figure 4.": 12,
+      "Figure 5.": 16,
+      "Figure 6.": 18,
+      "Figure A1.": 13,
+      "Figure A2.": 14,
+      "Figure A3.": 15,
+      "Figure A4.": 16,
+      "Table 1.": 7,
+      "Table 2.": 10,
+      "Table 3.": 17,
+      "Table 4.": 17,
+      "Table 5.": 18,
+      "Table A1.": 14,
+      "Table A3.": 19
+    },
+    "post_references_displays": []
+  },
+  "claim_boundary": "This receipt establishes successful Overleaf compilation and the listed presentation checks. It does not establish Preprints.org acceptance, peer review, independent validity, accessibility conformance, or substantive truth."
+}

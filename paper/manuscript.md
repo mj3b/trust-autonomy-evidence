@@ -409,4 +409,4 @@ Generative AI tools assisted with literature discovery, metadata organization, p
 
 ## Conflicts of Interest
 
-**AUTHOR CONFIRMATION REQUIRED BEFORE SUBMISSION.** Proposed declaration: The author declares no conflicts of interest.
+The author declares no conflicts of interest.

@@ -126,19 +126,20 @@ def submission_readiness_gate() -> dict[str, Any]:
         "claim_scope": "paper",
         "status": "provisional",
         "verification_rule": (
-            "The conflict declaration, compiled-PDF inspection, prior-version disclosure, repository "
+            "The author-confirmed conflict declaration, compiled-PDF inspection, prior-version disclosure, repository "
             "validation, integrity audit, and exact submitted-file hashes must all close."
         ),
         "evidence": [
-            evidence("C41-STATE", METADATA, "text_marker", 'submission_state: "DRAFT_DO_NOT_SUBMIT"', "limitation", content_review="pending"),
-            evidence("C41-CONFLICT", METADATA, "text_marker", 'conflicts_of_interest: "AUTHOR_CONFIRMATION_REQUIRED"', "limitation", content_review="pending"),
+            evidence("C41-STATE", METADATA, "text_marker", 'submission_state: "COMPILED_DO_NOT_SUBMIT"', "limitation", content_review="pending"),
+            evidence("C41-CONFLICT", METADATA, "text_marker", 'conflicts_of_interest: "The author declares no conflicts of interest."', "limitation", content_review="recorded"),
+            evidence("C41-COMPILE", "paper/preprints/overleaf-compile-receipt.json", "json_pointer", "/visual_review", "method", content_review="recorded"),
             evidence("C41-GATES", PACKAGE_README, "markdown_heading", "## Submission gates", "method", content_review="pending"),
         ],
         "fitness": fitness(
             directness=("pass", "The package exposes each remaining submission gate."),
             contemporaneity=("pass", "The gates describe the current v0.15 submission state."),
             independence=("outside_scope", "Platform screening and peer review remain external to repository readiness."),
-            completeness=("indeterminate", "Conflict confirmation, compiled-PDF inspection, and final submitted-file hashes remain open."),
+            completeness=("indeterminate", "Preprints.org upload review and final submitted-file hashes remain open."),
             publication_authority=("pass", "The author controls the declarations and final submission decision."),
         ),
         "dependencies": ["PAPER-C39", "PAPER-C40"],
@@ -149,11 +150,11 @@ def submission_readiness_gate() -> dict[str, Any]:
             "reviewer": AUTHOR,
             "review_date": None,
             "attestation_path": ATTESTATION,
-            "note": "Identity and prior-version metadata are approved; final submission gates remain open.",
+            "note": "Identity, prior-version metadata, the conflict declaration, Overleaf compilation, and authorized visual inspection are recorded; upload gates remain open.",
         },
         "scope_terms": [],
         "limitations": [
-            "The package has not been compiled as v0.15.0, visually inspected, uploaded to Preprints.org, or submitted."
+            "The package has been compiled and visually inspected but has not been uploaded to or submitted through Preprints.org."
         ],
         "reversal_conditions": [
             "Any declaration, compiled artifact, validation result, archive member, or submission field changes."

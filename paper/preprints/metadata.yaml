@@ -27,5 +27,5 @@ prior_preprint:
 supporting_repository:
   url: "https://github.com/mj3b/trust-autonomy-evidence"
   doi: "10.5281/zenodo.21841127"
-conflicts_of_interest: "AUTHOR_CONFIRMATION_REQUIRED"
-submission_state: "DRAFT_DO_NOT_SUBMIT"
+conflicts_of_interest: "The author declares no conflicts of interest."
+submission_state: "COMPILED_DO_NOT_SUBMIT"

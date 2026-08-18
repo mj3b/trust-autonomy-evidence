@@ -12,7 +12,7 @@ The v0.15 increment preserves all v0.14 research claims and adds three venue cla
 
 1. Confirm that the Zenodo v0.14.0 DOI agrees across manuscript, venue metadata, and package documentation.
 2. Confirm the full author name, ORCID, independent Node & Norm affiliation, Harvard University student-status note, independence disclaimer, and two correspondence addresses.
-3. Preserve the conflict declaration, compiled-PDF inspection, upload review, and submitted-file hashes as open gates.
+3. Record the author-confirmed conflict declaration, Overleaf compilation, and authorized visual inspection; preserve upload review and submitted-file hashes as open gates.
 4. Validate the claim map, lineage record, mutation suite, and audit result against their schemas.
 5. Recompute support, evidence fitness, dependency closure, and conclusion eligibility for all 35 claims.
 6. Run 33 controlled corruptions and confirm that each prespecified check detects its target failure.
@@ -20,7 +20,7 @@ The v0.15 increment preserves all v0.14 research claims and adds three venue cla
 
 ## Decision rule
 
-`PAPER-C41` remains conclusion-ineligible while any final submission gate is open. Repository integrity does not authorize a conflict declaration, establish platform acceptance, or replace author inspection.
+`PAPER-C41` remains conclusion-ineligible while any final submission gate is open. The author confirmed the conflict declaration on 2026-08-18. Repository integrity does not establish platform acceptance or replace author inspection.
 
 ## Preservation rule
 

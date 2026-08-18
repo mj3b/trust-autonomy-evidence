@@ -28,6 +28,8 @@ def main() -> int:
         "metadata.yaml",
         "main.tex",
         "source-manifest.json",
+        "preprints-compiled-v0.15.0.pdf",
+        "overleaf-compile-receipt.json",
         f"preprints-source-v{VERSION}.zip",
     )
     for name in required:
@@ -53,6 +55,7 @@ def main() -> int:
         "10.5281/zenodo.21926005",
         "Preprint candidate v0.15.0",
         "Conflicts of Interest",
+        "The author declares no conflicts of interest.",
     )
     for marker in markers:
         if marker not in tex:
@@ -65,8 +68,8 @@ def main() -> int:
         'student_status: "ALB candidate in Extension Studies, Harvard University"',
         'prior_preprint:',
         'doi: "10.5281/zenodo.21926005"',
-        'conflicts_of_interest: "AUTHOR_CONFIRMATION_REQUIRED"',
-        'submission_state: "DRAFT_DO_NOT_SUBMIT"',
+        'conflicts_of_interest: "The author declares no conflicts of interest."',
+        'submission_state: "COMPILED_DO_NOT_SUBMIT"',
     ):
         if marker not in metadata:
             failures.append(f"metadata marker missing: {marker}")
@@ -88,6 +91,19 @@ def main() -> int:
             if row is None or row.get("sha256") != digest(archive.read(name)):
                 failures.append(f"source member digest mismatch: {name}")
 
+    receipt = json.loads((PACKAGE / "overleaf-compile-receipt.json").read_text(encoding="utf-8"))
+    pdf_path = ROOT / receipt["compiled_pdf"]["path"]
+    if receipt.get("project_url") != "https://www.overleaf.com/project/6a847868dd161b6c6be9ebf1":
+        failures.append("Overleaf project URL mismatch")
+    if receipt["source_archive"].get("sha256") != digest(archive_payload):
+        failures.append("compile receipt source archive SHA-256 mismatch")
+    if not pdf_path.is_file() or receipt["compiled_pdf"].get("sha256") != digest(pdf_path.read_bytes()):
+        failures.append("compiled PDF missing or SHA-256 mismatch")
+    if receipt["compiled_pdf"].get("pages") != 25 or receipt["compile_result"].get("errors") != 0:
+        failures.append("compiled PDF page count or compile error state mismatch")
+    if receipt["placement_audit"].get("post_references_displays") != []:
+        failures.append("a table or figure appears after References")
+
     for command in (
         [sys.executable, "scripts/build_v0_15_claim_map.py", "--check"],
         [sys.executable, "scripts/run_coe_integrity_audit.py", "--check"],
@@ -102,7 +118,7 @@ def main() -> int:
         print(f"Preprints.org package validation: FAIL ({len(failures)} error(s))")
         return 1
 
-    print("Preprints.org package validation: PASS_WITH_OPEN_GATES (35 claims; 33/33 mutations detected; conflict confirmation, compilation, upload review, and submitted-file hashes remain open)")
+    print("Preprints.org package validation: PASS_WITH_OPEN_GATES (35 claims; 33/33 mutations detected; upload review and submitted-file hashes remain open)")
     return 0
 
 

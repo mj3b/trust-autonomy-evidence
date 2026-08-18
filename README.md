@@ -19,7 +19,7 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 ## Current contribution
 
-[Version 0.14.0 candidate](RESEARCH_STATUS.md) contributes connected research, audit, and preprint artifacts and preserves the [published v0.13.0 screening checkpoint](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.13.0):
+[Version 0.14.0](release/v0.14.0-release-notes.md) contributes connected research, audit, and preprint artifacts, is archived as a public preprint under [Zenodo DOI 10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005), and preserves the [published v0.13.0 screening checkpoint](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.13.0). The v0.14.0 repository changes remain in [draft PR #26](https://github.com/mj3b/trust-autonomy-evidence/pull/26) until merged into `main`:
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
@@ -123,6 +123,7 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`SOURCES.md`](SOURCES.md) | Records the standards, papers, and public repositories used by the project. |
 | [`CITATION.cff`](CITATION.cff) | Provides machine-readable authorship, release, license, and DOI metadata. |
 | [`CHANGELOG.md`](CHANGELOG.md) | Tracks material changes to concepts, protocols, claims, and evidence requirements. |
+| [`release/v0.14.0-release-notes.md`](release/v0.14.0-release-notes.md) | Explains the v0.14.0 proposition review, preprint package, integrity controls, Zenodo DOI, and open external-validation limits. |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`GOVERNANCE.md`](GOVERNANCE.md) | Define contribution evidence, review rules, decision authority, and change records. |
 | [`research/`](research/) | Contains the main conceptual paper on justified reliance, autonomy, and practical control. |
 | [`research/frozen-research-agenda.md`](research/frozen-research-agenda.md) | Freezes three research topics and one project question for the next public-case cycle. |

@@ -4,7 +4,7 @@
   "reviewer": "Mark Julius Banasihan",
   "review_date": "2026-08-18",
   "authorization_scope": "Update the manuscript and repository as v0.15.0 for a Preprints.org submission candidate, disclose the Zenodo v0.14.0 record, use Node & Norm as the independent research affiliation, and publish both author-approved correspondence addresses.",
-  "review_basis": "The author approved the venue revision, clarified that the research is being developed under Node & Norm, and authorized use of the Harvard student and personal email addresses.",
+  "review_basis": "The author approved the venue revision, clarified that the research is being developed under Node & Norm, authorized use of the Harvard student and personal email addresses, and confirmed that the author declares no conflicts of interest.",
   "ai_assistance": "Codex prepared the venue metadata, version relationship, source archive, disclosure text, and control extensions. Mark Julius Banasihan remains the accountable author and controls the final declarations and submission.",
   "workflow_attestations": [
     {
@@ -20,13 +20,13 @@
     {
       "claim_id": "PAPER-C41",
       "support_review": "pending",
-      "scope": "Final submission readiness remains open until the author confirms the conflict declaration, inspects the compiled PDF, and approves the exact upload."
+      "scope": "The conflict declaration was confirmed on 2026-08-18. Codex completed an authorized visual inspection of the compiled PDF and recorded its limits. Final submission readiness remains open until the author approves the exact Preprints.org upload."
     }
   ],
   "limits": [
     "Node & Norm is not described as an LLC before incorporation.",
     "The Harvard University student-status note supplies no claim of University sponsorship, supervision, approval, or endorsement.",
     "Preprints.org screening remains external and may reject a manuscript previously archived on another platform.",
-    "The conflict-of-interest declaration and final submitted-file set remain author gates."
+    "The exact Preprints.org upload and final submitted-file set remain author gates."
   ]
 }

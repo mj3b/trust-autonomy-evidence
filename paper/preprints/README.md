@@ -2,7 +2,7 @@
 
 This directory preserves the exact manuscript source, metadata, archive manifest, and later compiled PDF used for the Preprints.org submission candidate.
 
-The package identifies the Zenodo v0.14.0 preprint at [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005). The v0.15.0 revision adds venue-required author metadata, an issued prior-version DOI, a version-relationship statement, an expanded integrity-status statement, a venue-aligned AI-assistance disclosure, and a conflicts-of-interest gate. Node & Norm is the independent research affiliation. Harvard University appears only in an accurate student-status note with an explicit independence disclaimer. The research question, three case assessments, numerical results, and bounded conclusions remain unchanged.
+The package identifies the Zenodo v0.14.0 preprint at [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005). The v0.15.0 revision adds venue-required author metadata, an issued prior-version DOI, a version-relationship statement, an expanded integrity-status statement, a venue-aligned AI-assistance disclosure, and the author-confirmed conflicts-of-interest declaration. Node & Norm is the independent research affiliation. Harvard University appears only in an accurate student-status note with an explicit independence disclaimer. The research question, three case assessments, numerical results, and bounded conclusions remain unchanged.
 
 ## Repository map
 
@@ -12,12 +12,14 @@ The package identifies the Zenodo v0.14.0 preprint at [10.5281/zenodo.21926005](
 | `metadata.yaml` | Author, affiliation, subject, license, DOI, and submission-state record. |
 | `preprints-source-v0.15.0.zip` | Deterministic upload archive containing the LaTeX source and ten figures. |
 | `source-manifest.json` | SHA-256 lineage for the archive and each member. |
+| `preprints-compiled-v0.15.0.pdf` | The 25-page PDF compiled from the exact source archive in a separate Overleaf project. |
+| `overleaf-compile-receipt.json` | Records the Overleaf project, source and output hashes, compile result, representative-page review, display locations, and claim boundary. |
 | `00README.XXX` | Plain-text compiler and version note included in the archive. |
 
 ## Submission gates
 
-1. The author confirms the conflict-of-interest declaration.
-2. The author inspects the compiled PDF.
-3. The author confirms that the Zenodo v0.14.0 relationship is visible to Preprints.org screeners.
-4. Repository validators and the CoE Integrity Audit pass for the frozen v0.15.0 package.
-5. The exact submitted files and their hashes are recorded before the Submit action.
+1. Completed: the author confirmed the declaration, "The author declares no conflicts of interest," on 2026-08-18.
+2. Completed under author authorization: Codex inspected the 25-page Overleaf PDF, including the title page, figures, tables, appendices, and References; the receipt names the reviewer and limits.
+3. Open: the author confirms that the Zenodo v0.14.0 relationship is visible to Preprints.org screeners.
+4. Completed for the compiled candidate: repository validators and the CoE Integrity Audit pass with declared open exceptions.
+5. Open: the exact submitted files and their hashes are recorded before the Submit action.

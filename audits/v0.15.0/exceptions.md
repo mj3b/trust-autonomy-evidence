@@ -28,7 +28,7 @@ RS-DQ-004 has a terminal close screening decision, but its checked PDF lacks rea
 
 **State:** open, submission-limiting
 
-`PAPER-C41` remains provisional. The author has not confirmed the conflict-of-interest declaration, the v0.15 source has not been compiled and visually inspected, the Preprints.org upload has not been reviewed, and the exact submitted-file hashes have not been frozen.
+`PAPER-C41` remains provisional. The author confirmed the conflict-of-interest declaration on 2026-08-18. The exact source archive compiled in Overleaf with zero errors and received an authorized representative-page visual inspection. The Preprints.org upload has not been reviewed, and the exact submitted-file hashes have not been frozen.
 
 ## Closed exceptions
 
