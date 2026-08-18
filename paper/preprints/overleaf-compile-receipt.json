@@ -4,13 +4,13 @@
   "observed_date": "2026-08-18",
   "source_archive": {
     "path": "paper/preprints/preprints-source-v0.15.0.zip",
-    "bytes": 828236,
-    "sha256": "f366516277aa026999ab9a161cc94bb21c2a204e578a094c0c68bb25bd0ae0aa"
+    "bytes": 828282,
+    "sha256": "c5ee7fc21b3ace00c8ac4f8573168523ace65554c7ec135caad921d969f03c82"
   },
   "compiled_pdf": {
     "path": "paper/preprints/preprints-compiled-v0.15.0.pdf",
-    "bytes": 1106403,
-    "sha256": "0e684630d8863829ab0bac2da4b7839a2d32a44e4a86fb7c378db5aed4e5d599",
+    "bytes": 1106641,
+    "sha256": "5fec073b4fefdcce4adc9ab107975cae07d2a6c728d69f4fd9f79344d602a82d",
     "pages": 25,
     "producer": "pdfTeX-1.40.27"
   },
@@ -23,14 +23,15 @@
   },
   "visual_review": {
     "reviewer": "Codex under Mark Julius Banasihan's authorization",
-    "reviewed_pages": [1, 5, 8, 11, 14, 15, 16, 17, 18, 19, 20, 23, 25],
+    "reviewed_pages": [1, 5, 8, 11, 14, 15, 16, 17, 18, 19, 20, 22, 23, 25],
     "checks": [
-      "author name, independent Node & Norm affiliation, Harvard University student-status note, and independence disclaimer are readable on page 1",
+      "page 1 contains the author name, independent Node & Norm affiliation, ORCID, and both authorized correspondence addresses without the student-status and independence-disclaimer lines",
       "black body text, dark navy navigation, and light gray-blue table headers remain consistent",
       "figures and tables are legible at full-page scale",
       "Figure A2 has distinct research and figure-pipeline lanes and a labeled connector from assessments to plot inputs",
       "Figures A3 and A4, Figures 5 and 6, and Tables 3 through 5 and A3 appear before References",
       "References begin on page 23 and continue through page 25",
+      "the compact author note on page 22 identifies Node & Norm as the author's independent research initiative, records Harvard University student status, and disclaims University sponsorship or endorsement",
       "the Zenodo v0.14.0 DOI and the confirmed no-conflicts declaration are present",
       "no observed clipping, overlap, displaced display after References, or unreadable table"
     ]

@@ -9,11 +9,8 @@
 **Author:** Mark Julius Banasihan  
 **ORCID:** [0009-0001-8121-2878](https://orcid.org/0009-0001-8121-2878)  
 **Affiliation:** Independent Researcher, Node & Norm, United States  
-**Student status:** ALB candidate in Extension Studies, Harvard University  
-**Correspondence:** institutional and personal addresses recorded in the venue package  
+**Correspondence:** [mab7898@g.harvard.edu](mailto:mab7898@g.harvard.edu); [markjuliusbanasihan@gmail.com](mailto:markjuliusbanasihan@gmail.com)  
 **Status:** Proposition-reviewed Preprints.org working manuscript, v0.15.0 candidate
-
-This research was conducted independently through Node & Norm. It was not sponsored, supervised, or endorsed by Harvard University and does not represent the University's views.
 
 ## Abstract
 
@@ -398,6 +395,8 @@ The repository, versioned releases, packets, assessments, figure data, audit out
 ## Ethics and publication authority
 
 The study uses public records and contains no participant recruitment, intervention, or direct interaction with living individuals. The repository preserves eligible public-domain and openly licensed material, cites proprietary sources through metadata and limited paraphrase, and excludes personal, confidential, institutionally restricted, and security-sensitive material under the frozen protocol. No institutional determination about human-subjects review has been obtained. The author must check Harvard and venue requirements before submission and must not describe the study as exempt without the applicable determination.
+
+**Author note.** Node & Norm is the author's independent research initiative. Mark Julius Banasihan is an ALB candidate in Extension Studies at Harvard University. This research was conducted independently through Node & Norm, with no Harvard University sponsorship, supervision, endorsement, or representation.
 
 ## Author contributions
 

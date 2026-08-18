@@ -185,7 +185,7 @@ def validate_bibliography(failures: list[str]) -> None:
     if "\\\\&" in text:
         fail("doubled backslash before ampersand in paper/references.bib", failures)
     manuscript = (ROOT / "paper/manuscript.md").read_text(encoding="utf-8")
-    cited = set(re.findall(r"@([A-Za-z0-9_:.+-]+)", manuscript))
+    cited = set(re.findall(r"(?<![A-Za-z0-9._%+-])@([A-Za-z0-9_:.+-]+)", manuscript))
     missing = sorted(cited - set(entries))
     if missing:
         fail(f"unresolved manuscript citation keys: {', '.join(missing)}", failures)

@@ -48,7 +48,7 @@ def main() -> int:
         "Mark Julius Banasihan",
         "0009-0001-8121-2878",
         r"Independent Researcher, Node \& Norm, United States",
-        "ALB candidate in Extension Studies, Harvard University",
+        "ALB candidate in Extension Studies at Harvard University",
         "mab7898@g.harvard.edu",
         "markjuliusbanasihan@gmail.com",
         "no Harvard University sponsorship, supervision, endorsement, or representation",

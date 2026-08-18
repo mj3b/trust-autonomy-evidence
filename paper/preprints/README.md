@@ -2,7 +2,7 @@
 
 This directory preserves the exact manuscript source, metadata, archive manifest, and later compiled PDF used for the Preprints.org submission candidate.
 
-The package identifies the Zenodo v0.14.0 preprint at [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005). The v0.15.0 revision adds venue-required author metadata, an issued prior-version DOI, a version-relationship statement, an expanded integrity-status statement, a venue-aligned AI-assistance disclosure, and the author-confirmed conflicts-of-interest declaration. Node & Norm is the independent research affiliation. Harvard University appears only in an accurate student-status note with an explicit independence disclaimer. The research question, three case assessments, numerical results, and bounded conclusions remain unchanged.
+The package identifies the Zenodo v0.14.0 preprint at [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005). The v0.15.0 revision adds venue-required author metadata, an issued prior-version DOI, a version-relationship statement, an expanded integrity-status statement, a venue-aligned AI-assistance disclosure, and the author-confirmed conflicts-of-interest declaration. The title block identifies Mark Julius Banasihan as an independent researcher with Node & Norm and retains both authorized correspondence addresses. A separate author note identifies Node & Norm as the author's independent research initiative, records Harvard University student status, and disclaims University sponsorship or endorsement. The research question, three case assessments, numerical results, and bounded conclusions remain unchanged.
 
 ## Repository map
 
