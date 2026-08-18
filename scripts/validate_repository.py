@@ -15,8 +15,8 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.14.0"
-WORKING_VERSION = "0.14.0"
+REPOSITORY_VERSION = "0.15.0"
+WORKING_VERSION = "0.15.0"
 FIGURE_VERSION = "0.9.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
@@ -164,6 +164,8 @@ REQUIRED_FILES = (
     "release/v0.13.0-release-notes.md",
     "release/v0.14.0-manifest.json",
     "release/v0.14.0-release-notes.md",
+    "release/v0.15.0-manifest.json",
+    "release/v0.15.0-release-notes.md",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -176,6 +178,7 @@ REQUIRED_FILES = (
     "scripts/build_v0_13_claim_map.py",
     "scripts/build_v0_14_claim_map.py",
     "scripts/build_v0_15_claim_map.py",
+    "scripts/build_v0_15_release_manifest.py",
     "scripts/build_preprints_source_archive.py",
     "scripts/validate_preprints_package.py",
     "scripts/validate_forward_citation_proposition_review_v0_14_0.py",

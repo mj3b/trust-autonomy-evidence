@@ -23,7 +23,7 @@
     {
       "path": "README.md",
       "bytes": 30700,
-      "sha256": "157c1545a00a3f1acda1d3d0379af9df4fe7794f70f68aac78b8ce7663199d68"
+      "sha256": "c47158e2bb7c9667efc25f180687083568ae3ec0b888dde55ec2cdfad159631f"
     },
     {
       "path": "CHANGELOG.md",
@@ -33,7 +33,7 @@
     {
       "path": "CITATION.cff",
       "bytes": 835,
-      "sha256": "ec3b6a29e35eeabf4694dc1a77e7ebbc895262795eb9c196c6482c3185a1c466"
+      "sha256": "d06217b7d442d43e49dab07f064d6523cd436b824b149f017e814258abc4395a"
     },
     {
       "path": "paper/manuscript.md",
@@ -93,7 +93,7 @@
     {
       "path": "evidence/claim-evidence-map.json",
       "bytes": 126422,
-      "sha256": "5057f1763196362264b633d652475f9272b4376bc12221383e1fdbfe9166c0ee"
+      "sha256": "afe7b06f106e8ef62926fd082cedac4c30a5e11ae19d7321a9b2778326f47e53"
     },
     {
       "path": "evidence/human-review-attestation-v0.15.0.json",
@@ -143,7 +143,7 @@
     {
       "path": "scripts/validate_paper.py",
       "bytes": 12942,
-      "sha256": "11b863517eef8a78c75634fa0771fccbb5a051fe869bbd68d96b035234f5a1c6"
+      "sha256": "83f906ebce34092f6911c21c84cb1588577ed2053786e3ec26d994088cb9e913"
     }
   ],
   "boundary": "This focused manifest seals the v0.15 venue checkpoint. Earlier full research snapshots remain governed by their version tags and manifests."

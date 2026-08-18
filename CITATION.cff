@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "Version 0.14.0 is the proposition-reviewed arXiv preprint checkpoint. Use the all-versions DOI until the version-specific DOI is recorded."
+message: "Version 0.15.0 is the Preprints.org submission-candidate checkpoint. Cite the public v0.14.0 preprint through DOI 10.5281/zenodo.21926005."
 title: "Trust, Autonomy, and Evidence"
 type: software
-version: 0.14.0
-date-released: 2026-08-13
+version: 0.15.0
+date-released: 2026-08-18
 authors:
   - family-names: Banasihan
     given-names: Mark Julius
