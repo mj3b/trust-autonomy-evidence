@@ -80,8 +80,8 @@
     },
     {
       "path": "release/v0.14.0-release-notes.md",
-      "bytes": 2813,
-      "sha256": "3519504f7c9e01508fbd5bcd0c8c123ea27fc64e1464a54fe2b520c2f772311d"
+      "bytes": 3319,
+      "sha256": "696cd431fb88ad6c8910b7ec6bd28462373882495102f4eeaf0dd3b61ee62b71"
     },
     {
       "path": "README.md",
@@ -165,8 +165,8 @@
     },
     {
       "path": "schemas/claim-evidence-map.schema.json",
-      "bytes": 5142,
-      "sha256": "6c086c8e478af99dbaef912d23806ea446ca153b20c6dd0a6bef1e2173152618"
+      "bytes": 5171,
+      "sha256": "886bf46ed7050f67fcc1b1da752196d03a7ef81ba34d51da73aaba8572b48e0f"
     },
     {
       "path": "schemas/research-lineage.schema.json",
@@ -175,8 +175,8 @@
     },
     {
       "path": "schemas/coe-audit-result.schema.json",
-      "bytes": 3478,
-      "sha256": "4d188b61818de01ab41e4158f738aea9cff34d46d5aea4e29864978f2f085c4b"
+      "bytes": 3513,
+      "sha256": "f1c89c270ceefc07973a83e942ed5fdfe5eccd69b086d2d8249afd596e85dd9c"
     },
     {
       "path": "schemas/coe-audit-mutations.schema.json",
@@ -225,8 +225,8 @@
     },
     {
       "path": "evidence/claim-evidence-map.json",
-      "bytes": 114349,
-      "sha256": "a8abb9b8a5794b99f3d7ad176d97be5c107c2548b8cadf0ecd6438fae25f97d3"
+      "bytes": 125960,
+      "sha256": "94a5658bfb992357b0b6fa2c19d05bd75cfe99dcb6025c98ee4cbf1db001ae64"
     },
     {
       "path": "evidence/claim-evidence-map-v0.9.0.json",
@@ -445,13 +445,13 @@
     },
     {
       "path": "paper/manuscript.md",
-      "bytes": 57039,
-      "sha256": "463cecf608e5d85bb90cefe74c49525b6f4de5b3f537f62b563b000bb4d6330e"
+      "bytes": 58812,
+      "sha256": "47d251711e935e1f6013923d0c9ad25161ebfdfe0a5245dc5e23bf811e1ed08e"
     },
     {
       "path": "paper/manuscript-reader.md",
-      "bytes": 72613,
-      "sha256": "59cedbb0ba3c83b6e30da91edfb08ac307b873c846b7ceaa1334642fc2d8febe"
+      "bytes": 74386,
+      "sha256": "b67af94836a10404b4af0a0bcd471c0011bb5be0e0af4e36a4958331c91b12d3"
     },
     {
       "path": "paper/manuscript-pressure-test-v0.8.0.md",
@@ -1075,8 +1075,8 @@
     },
     {
       "path": "scripts/validate_repository.py",
-      "bytes": 35477,
-      "sha256": "16cdc28da3a47609a0d31f58c68444b39182030857232f6ffa25c64041517b44"
+      "bytes": 36511,
+      "sha256": "5f161eb9f2cea4aedde6e41a0866d4a35667c18ec84020c2baa5e1373e474604"
     },
     {
       "path": "scripts/validate_release_snapshot.py",
@@ -1085,8 +1085,8 @@
     },
     {
       "path": "scripts/validate_paper.py",
-      "bytes": 12552,
-      "sha256": "03d3c2eaaecf0ece037bbeb367569e35fa4763d16c85ff4d374ff5079386e2e6"
+      "bytes": 13003,
+      "sha256": "52ac288d1035be6d6f92ce065608cd2c37e91172b271c532bc5537cb69e11758"
     },
     {
       "path": "scripts/validate_literature_support.py",
@@ -1105,8 +1105,8 @@
     },
     {
       "path": "scripts/run_coe_integrity_audit.py",
-      "bytes": 25185,
-      "sha256": "8f2d9e146d76a72976e881c1f019c54d6bc8d09792b15b2b673b1c88d9e41c2e"
+      "bytes": 25402,
+      "sha256": "f9281dbeb1155beed69131920b69adb48b23ddc38761e343c8dce217a0474c26"
     },
     {
       "path": "scripts/build_v0_11_claim_map.py",
@@ -1150,8 +1150,8 @@
     },
     {
       "path": "scripts/build_arxiv_preprint.py",
-      "bytes": 28538,
-      "sha256": "d3faf875bc11855b579ec9f4511de4fc78df8c8d2ff95cfe1826e96cd72424bc"
+      "bytes": 29722,
+      "sha256": "0f6da5c1b50181709152356c59a28f54bac869cde0884a581574e934395e5e79"
     },
     {
       "path": "scripts/build_arxiv_monochrome_figures.py",
