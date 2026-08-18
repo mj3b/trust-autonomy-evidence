@@ -15,8 +15,8 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.13.0"
-WORKING_VERSION = "0.13.0"
+REPOSITORY_VERSION = "0.14.0"
+WORKING_VERSION = "0.14.0"
 FIGURE_VERSION = "0.9.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
@@ -43,6 +43,8 @@ REQUIRED_FILES = (
     "evidence/human-review-attestation-v0.11.0.json",
     "evidence/human-review-attestation-v0.12.0.json",
     "evidence/human-review-attestation-v0.13.0.json",
+    "evidence/human-review-attestation-v0.14.0.json",
+    "evidence/human-review-attestation-v0.15.0.json",
     "evidence/research-lineage.json",
     "evidence/research-activity-log.json",
     "protocols/independent-review-protocol.md",
@@ -160,6 +162,8 @@ REQUIRED_FILES = (
     "release/v0.12.0-release-notes.md",
     "release/v0.13.0-manifest.json",
     "release/v0.13.0-release-notes.md",
+    "release/v0.14.0-manifest.json",
+    "release/v0.14.0-release-notes.md",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -170,6 +174,16 @@ REQUIRED_FILES = (
     "scripts/build_forward_citation_author_screening_v0_13_0.py",
     "scripts/validate_forward_citation_author_screening_v0_13_0.py",
     "scripts/build_v0_13_claim_map.py",
+    "scripts/build_v0_14_claim_map.py",
+    "scripts/build_v0_15_claim_map.py",
+    "scripts/build_preprints_source_archive.py",
+    "scripts/validate_preprints_package.py",
+    "scripts/validate_forward_citation_proposition_review_v0_14_0.py",
+    "scripts/build_arxiv_preprint.py",
+    "scripts/build_arxiv_monochrome_figures.py",
+    "scripts/build_arxiv_source_archive.py",
+    "scripts/sync_overleaf_preprint.py",
+    "scripts/validate_arxiv_package.py",
     "audits/v0.5.0/audit-plan.md",
     "audits/v0.5.0/audit-results.json",
     "audits/v0.5.0/audit-report.md",
@@ -198,6 +212,14 @@ REQUIRED_FILES = (
     "audits/v0.13.0/audit-results.json",
     "audits/v0.13.0/audit-report.md",
     "audits/v0.13.0/exceptions.md",
+    "audits/v0.14.0/audit-plan.md",
+    "audits/v0.14.0/audit-results.json",
+    "audits/v0.14.0/audit-report.md",
+    "audits/v0.14.0/exceptions.md",
+    "audits/v0.15.0/audit-plan.md",
+    "audits/v0.15.0/audit-results.json",
+    "audits/v0.15.0/audit-report.md",
+    "audits/v0.15.0/exceptions.md",
     "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
     "assessments/v0.6.0/oko-change-ledger.json",
     "paper/citation-chain-log-v0.6.0.md",
@@ -221,6 +243,9 @@ REQUIRED_FILES = (
     "paper/forward-citation-retrieval-tranche-v0.12.0.md",
     "paper/forward-citation-author-screening-protocol-v0.13.0.md",
     "paper/forward-citation-author-screening-v0.13.0.md",
+    "paper/forward-citation-proposition-review-protocol-v0.14.0.md",
+    "paper/forward-citation-proposition-review-v0.14.0.md",
+    "paper/preprint-readiness-v0.14.0.md",
     "paper/data/author-screening-gate-v0.8.0.json",
     "paper/data/author-screening-decisions-v0.9.0.csv",
     "paper/data/author-screening-gate-v0.9.0.json",
@@ -232,6 +257,9 @@ REQUIRED_FILES = (
     "paper/data/forward-citation-author-review-queue-v0.12.0.csv",
     "paper/data/forward-citation-author-screening-decisions-v0.13.0.csv",
     "paper/data/forward-citation-author-screening-v0.13.0.json",
+    "paper/data/forward-citation-proposition-review-v0.14.0.csv",
+    "paper/data/forward-citation-proposition-review-v0.14.0.json",
+    "paper/data/direct-query-resolution-v0.14.0.json",
     "paper/data/authenticated-interface-searches-v0.10.0.csv",
     "paper/data/next-evidence-gates-v0.10.0.json",
     "paper/literature-support-audit-v0.7.0.json",
@@ -240,6 +268,34 @@ REQUIRED_FILES = (
     "paper/literature-support-audit-v0.9.0.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
+    "paper/arxiv/main.tex",
+    "paper/arxiv/metadata.yaml",
+    "paper/arxiv/README.md",
+    "paper/arxiv/00README.XXX",
+    "paper/arxiv/source-manifest.json",
+    "paper/arxiv/figures-bw-manifest.json",
+    "paper/arxiv/arxiv-source-v0.14.0.zip",
+    "paper/arxiv/preprint-v0.14.0.pdf",
+    "paper/arxiv/overleaf-compiled-v0.14.0.pdf",
+    "paper/arxiv/overleaf-compile-receipt.json",
+    "paper/preprints/README.md",
+    "paper/preprints/00README.XXX",
+    "paper/preprints/metadata.yaml",
+    "paper/preprints/main.tex",
+    "paper/preprints/source-manifest.json",
+    "paper/preprints/preprints-source-v0.15.0.zip",
+    *tuple(f"paper/arxiv/figures-bw/{name}" for name in (
+        "fig-1-selection-and-stopping.png",
+        "fig-2-practical-control-chain.png",
+        "fig-3-decision-paths.png",
+        "fig-4-trust-evidence-states.png",
+        "fig-5-formal-search-and-screening.png",
+        "fig-6-evidence-boundaries.png",
+        "fig-a1-mutation-response.png",
+        "fig-a2-reproducibility-lineage.png",
+        "fig-a3-claim-evidence-integrity.png",
+        "fig-a4-oko-versioned-correction.png",
+    )),
     "scripts/run_formal_literature_search.py",
     "scripts/propose_formal_search_screening.py",
     "scripts/verify_formal_search_metadata.py",
@@ -602,7 +658,7 @@ def validate_coe_audit(failures: list[str]) -> str:
         return ""
 
     for command in (
-        [sys.executable, "scripts/build_v0_13_claim_map.py", "--check"],
+        [sys.executable, "scripts/build_v0_15_claim_map.py", "--check"],
         [sys.executable, "scripts/run_coe_integrity_audit.py", "--check"],
     ):
         process = subprocess.run(
@@ -614,7 +670,7 @@ def validate_coe_audit(failures: list[str]) -> str:
             return ""
 
     current = json.loads(
-        (ROOT / "audits/v0.13.0/audit-results.json").read_text(encoding="utf-8")
+        (ROOT / "audits/v0.15.0/audit-results.json").read_text(encoding="utf-8")
     )
     controls = current.get("negative_controls", [])
     detected = sum(1 for row in controls if row.get("detected"))
@@ -622,20 +678,35 @@ def validate_coe_audit(failures: list[str]) -> str:
     c32 = next((row for row in claims if row.get("claim_id") == "PAPER-C32"), {})
     c33 = next((row for row in claims if row.get("claim_id") == "PAPER-C33"), {})
     c34 = next((row for row in claims if row.get("claim_id") == "PAPER-C34"), {})
+    c35 = next((row for row in claims if row.get("claim_id") == "PAPER-C35"), {})
+    c36 = next((row for row in claims if row.get("claim_id") == "PAPER-C36"), {})
+    c37 = next((row for row in claims if row.get("claim_id") == "PAPER-C37"), {})
+    c38 = next((row for row in claims if row.get("claim_id") == "PAPER-C38"), {})
+    c39 = next((row for row in claims if row.get("claim_id") == "PAPER-C39"), {})
+    c40 = next((row for row in claims if row.get("claim_id") == "PAPER-C40"), {})
+    c41 = next((row for row in claims if row.get("claim_id") == "PAPER-C41"), {})
     if (
-        current.get("version") != "0.13.0"
+        current.get("version") != "0.15.0"
         or current.get("status") != "PASS_WITH_EXCEPTIONS"
-        or len(claims) != 28
-        or len(controls) != 26
-        or detected != 26
+        or len(claims) != 35
+        or len(controls) != 33
+        or detected != 33
         or c32.get("conclusion_eligible") is not False
         or c33.get("conclusion_eligible") is not True
         or c34.get("conclusion_eligible") is not True
         or c34.get("support") != "pass"
+        or c35.get("conclusion_eligible") is not True
+        or c36.get("conclusion_eligible") is not True
+        or c37.get("conclusion_eligible") is not True
+        or c38.get("conclusion_eligible") is not True
+        or c39.get("conclusion_eligible") is not True
+        or c40.get("conclusion_eligible") is not True
+        or c41.get("conclusion_eligible") is not False
+        or c41.get("support") != "indeterminate"
     ):
-        fail("current v0.13 claim-evidence audit metadata mismatch", failures)
+        fail("current v0.15 claim-evidence audit metadata mismatch", failures)
         return ""
-    return "chain-of-evidence audit: PASS_WITH_EXCEPTIONS (28 claims; 26/26 controls detected; forward screening closed)"
+    return "chain-of-evidence audit: PASS_WITH_EXCEPTIONS (35 claims; 33/33 controls detected; final submission gate open)"
 
 
 def validate_adjudication(failures: list[str]) -> str:

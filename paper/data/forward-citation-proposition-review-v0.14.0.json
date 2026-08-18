@@ -1,0 +1,20 @@
+{
+  "version": "0.14.0",
+  "status": "PROPOSITION_REVIEW_CLOSED",
+  "decision_owner": "Mark Julius Banasihan",
+  "decision_date": "2026-08-13",
+  "input_ledger": "paper/data/forward-citation-author-screening-decisions-v0.13.0.csv",
+  "protocol": "paper/forward-citation-proposition-review-protocol-v0.14.0.md",
+  "decision_ledger": "paper/data/forward-citation-proposition-review-v0.14.0.csv",
+  "counts": {
+    "retained_close_sources": 13,
+    "reviewed": 13,
+    "open": 0,
+    "manuscript_use": 5,
+    "background_only": 2,
+    "quarantined": 6,
+    "proposition_permissions": 5
+  },
+  "permitted_sample_ids": ["RS-FC-042", "RS-FC-052", "RS-FC-060", "RS-FC-070", "RS-FC-096"],
+  "boundary": "Permissions apply only to the bounded propositions and passage locators in the decision ledger. They establish no independent verification, search completeness, prevalence, originality, or institutional effect."
+}

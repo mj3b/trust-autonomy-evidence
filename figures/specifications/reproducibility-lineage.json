@@ -90,6 +90,6 @@
     {"from": "builder", "to": "derived"},
     {"from": "derived", "to": "figures"},
     {"from": "figures", "to": "validation"},
-    {"from": "assessments", "to": "plot_inputs"}
+    {"from": "assessments", "to": "plot_inputs", "label": "Assessment outputs feed figure inputs"}
   ]
 }

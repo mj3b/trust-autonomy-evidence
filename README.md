@@ -1,7 +1,7 @@
 # Trust, Autonomy, and Evidence
 
 [![Status: Working Research](https://img.shields.io/badge/status-working%20research-5b6cff)](RESEARCH_STATUS.md)
-[![Version: 0.13.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
+[![Version: 0.14.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21841127.svg)](https://doi.org/10.5281/zenodo.21841127)
 [![Validation](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml/badge.svg)](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
@@ -19,7 +19,7 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 ## Current contribution
 
-[Version 0.13.0 candidate](RESEARCH_STATUS.md) contributes twenty-five connected artifacts and preserves the [published v0.12.0 retrieval checkpoint](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.12.0):
+[Version 0.14.0 candidate](RESEARCH_STATUS.md) contributes connected research, audit, and preprint artifacts and preserves the [published v0.13.0 screening checkpoint](https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.13.0):
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
@@ -30,8 +30,8 @@ The project develops an evidence architecture for bounded reliance. It identifie
 7. Three public evidence packets covering a successful pre-action intervention, formal authority without practical force, and an action sequence whose cause remains indeterminate.
 8. A frozen research agenda focused on practical authority, evidence sufficiency, and interacting control conditions.
 9. A publication figure set containing six main figures, four appendix figures, ten derived data tables, formal captions, reading guides, and artifact-integrity checks.
-10. A machine-readable map connecting 28 material claims to exact evidence locations, human support states, evidence-fitness judgments, dependencies, limitations, and reversal conditions.
-11. An executable integrity audit that applies five checks and detects 26 prespecified corruptions without changing the released case packets.
+10. A machine-readable map connecting 32 material claims to exact evidence locations, human support states, evidence-fitness judgments, dependencies, limitations, and reversal conditions.
+11. An executable integrity audit that applies five checks and detects 33 prespecified corruptions without changing the released case packets.
 12. A research-lineage record, activity log, audit report, and claim-evidence matrix that preserve authorship, AI assistance, open exceptions, and conclusion eligibility.
 13. A prereassessment Oko adjudication protocol, frozen evidence universe, six-stage reassessment, and machine-readable change ledger.
 14. A 60-source working literature matrix and sentence-level audit covering the registered literature propositions in the full review draft.
@@ -42,12 +42,14 @@ The project develops an evidence architecture for bounded reliance. It identifie
 19. A 27-source full-text ledger with 22 verified full-text records, three abstract-only records, two inaccessible records, and no open decisions.
 20. A frozen recovery and residual-risk protocol for 1,087 inaccessible records, plus accountable logs for five authenticated or disciplinary interfaces.
 21. Research-agenda discovery logs and a v0.11 SHA-256 manifest sealing 171 artifacts while preserving earlier audit and protocol checkpoints.
-22. A five-record direct-query retrieval tranche with route-level evidence, four bounded screening decisions, one open author review, and an executable ledger cross-check.
+22. A five-record direct-query retrieval tranche with route-level evidence, five bounded screening decisions, a zero-permission source-content boundary, and an executable ledger cross-check.
 23. A v0.11 human-review attestation and claim-control audit that support five bounded claims, publish four exceptions, and block one proposed transfer claim.
 24. A 102-record forward-citation retrieval tranche, route-level evidence file, 71-record author queue, deterministic builder, and claim gate that blocks all pending records from the manuscript.
 25. A frozen 71-record forward-citation screening protocol, complete decision ledger, author-accountability attestation, proposition-review boundary, and four added negative controls.
+26. A frozen 13-source proposition-review protocol with five bounded manuscript permissions, two background-only decisions, six quarantines, corrected source identities, and seven added negative controls.
+27. An arXiv review package with a 230-word abstract, professional single-column LaTeX source, one canonical 25-page PDF preserved under matching preprint and Overleaf paths, navy-and-black journal styling, ten color figures with grayscale alternatives, deterministic 12-member source archive, metadata, source and compile receipts, and a package validator that checks all 17 display locations before References.
 
-All 252 determinations and 12 original mutation tests pass under the committed contract. The v0.6.0 adjudication detects all six prespecified corruptions. The v0.13 integrity audit maps 28 material claims and detects all 26 prespecified claim-map corruptions. Four exceptions remain: no independent assessment, incomplete literature-search coverage, two direct-query source limits, and untested institutional transfer. The inaccessible-record recovery population contains 1,087 records; 107 outcomes are recorded and 980 remain open. `PAPER-C33` and `PAPER-C34` may support bounded workflow counts. The 35 retained forward-citation records have no proposition permission. These results establish internal contract behavior and traceability for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, source truth, originality, or improved outcomes.
+All 252 determinations and 12 original mutation tests pass under the committed contract. The v0.6.0 adjudication detects all six prespecified corruptions. The v0.14 integrity audit maps 32 material claims and detects all 33 prespecified claim-map corruptions. Four exceptions remain: no independent assessment, incomplete literature-search coverage, two direct-query source limits, and untested institutional transfer. The inaccessible-record recovery population contains 1,087 records; 107 outcomes are recorded and 980 remain open. Five forward-citation sources may support only their recorded propositions, two remain background-only, and six are quarantined. These results establish internal contract behavior and traceability for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, source truth, originality, or improved outcomes.
 
 The v0.10.0 release preserves every earlier release artifact and freezes the next evidence checkpoint before new results are known. Eight of the 27 retained-close sources have a recorded full-text review basis, leaving 19 open. The protocol controls those reviews, recovery of the 1,087 inaccessible records, a reproducible residual-risk sample, and five authenticated or disciplinary-interface searches. The earlier case packets, the v0.3.0 Oko assessment, and the released v0.9 claim audit remain unchanged. Independent assessment remains a separate validity question.
 
@@ -58,6 +60,8 @@ Version 0.11.0 freezes a 284-record residual-risk sample before retrieval outcom
 Version 0.12.0 records retrieval outcomes for all 102 forward-citation records. It recovered full text for 34 records and abstracts for 37, recorded 26 metadata-only outcomes, reconciled 3 duplicates, and left 2 unavailable. The release preserved all 71 recovered-content records outside manuscript claims pending screening.
 
 The v0.13.0 candidate closes that frozen screening queue with 13 close records, 22 background records, 11 single-component exclusions, and 25 topic exclusions. All 71 decisions record a mechanism-specific rationale, source basis, locator, decision owner, date, assistance disclosure, and claim-permission state. Screening grants no proposition support. The 13 close sources now enter a separate locator-level review gate.
+
+The v0.14.0 candidate closes that locator-level gate. Five sources receive one bounded manuscript permission each, two remain background-only, and six remain quarantined. RS-DQ-004 is close for screening and has zero source-content permission. The candidate also adds the first repository-controlled arXiv source archive and a canonical 25-page Overleaf compilation with zero errors. The single-column presentation uses black body text, dark navy headings and rules, and light gray-blue table headers. All ten figures and seven tables appear before References, and the two preserved PDF paths are byte-identical. Final affiliation, email, license, category, endorsement, ethics wording, arXiv compilation, and submission remain author or platform decisions.
 
 ## Featured figure
 

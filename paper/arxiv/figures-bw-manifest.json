@@ -1,0 +1,118 @@
+{
+  "version": "0.14.0",
+  "transformation": "Pillow RGB or RGBA to 8-bit grayscale; no crop, rescale, relabel, or data change",
+  "figure_count": 10,
+  "figures": [
+    {
+      "name": "fig-1-selection-and-stopping.png",
+      "source": "figures/generated/fig-1-selection-and-stopping.png",
+      "source_sha256": "4a51197424a88ae908c47f2b79040b7a608445e1c9983af6927b1df4b72c511a",
+      "output": "paper/arxiv/figures-bw/fig-1-selection-and-stopping.png",
+      "output_sha256": "ed8f7fb173baeb021d61eca5f777d8cb50613a6ebfb099107580f8aad43ed01b",
+      "bytes": 27942,
+      "width": 1280,
+      "height": 577,
+      "mode": "L"
+    },
+    {
+      "name": "fig-2-practical-control-chain.png",
+      "source": "figures/generated/fig-2-practical-control-chain.png",
+      "source_sha256": "67532cb90e5e22faf6c17bd3419f4630fa81ab10dbf5d48a79c5be85e830fea8",
+      "output": "paper/arxiv/figures-bw/fig-2-practical-control-chain.png",
+      "output_sha256": "d99164b695fc21a1e12f6c7ca9a9c27d0d14855e9c7e7a5d584c0e4728162f6a",
+      "bytes": 43250,
+      "width": 1346,
+      "height": 999,
+      "mode": "L"
+    },
+    {
+      "name": "fig-3-decision-paths.png",
+      "source": "figures/generated/fig-3-decision-paths.png",
+      "source_sha256": "a33e61944466877ba997ac61cefdcc04bab319314079329a733bce4131e414cb",
+      "output": "paper/arxiv/figures-bw/fig-3-decision-paths.png",
+      "output_sha256": "15759ee6abd85b4caa46698510373fd53a3397489a51d6e37e807e9dd43a7418",
+      "bytes": 56261,
+      "width": 1603,
+      "height": 1000,
+      "mode": "L"
+    },
+    {
+      "name": "fig-4-trust-evidence-states.png",
+      "source": "figures/generated/fig-4-trust-evidence-states.png",
+      "source_sha256": "01cc8a210ab989cd12e45d6812836c506c5ac627153680a412ffa700c7e94340",
+      "output": "paper/arxiv/figures-bw/fig-4-trust-evidence-states.png",
+      "output_sha256": "552689cebddd7ac325da95a8832af39ea033c70c6f64816440349b2343e093af",
+      "bytes": 52602,
+      "width": 1391,
+      "height": 1180,
+      "mode": "L"
+    },
+    {
+      "name": "fig-5-formal-search-and-screening.png",
+      "source": "figures/generated/fig-5-formal-search-and-screening.png",
+      "source_sha256": "8a01307c6a64bc931ee3dc340045f179ca251cf1d047e2b85ff6cf4f1cd8a49d",
+      "output": "paper/arxiv/figures-bw/fig-5-formal-search-and-screening.png",
+      "output_sha256": "f65988c7c76efa422a4866ab4106741215a81fc5f844d4633850a4cea083d2ba",
+      "bytes": 35824,
+      "width": 1535,
+      "height": 924,
+      "mode": "L"
+    },
+    {
+      "name": "fig-6-evidence-boundaries.png",
+      "source": "figures/generated/fig-6-evidence-boundaries.png",
+      "source_sha256": "35dc466f205dd8b60382a5d3bd256f14e981feae5e20e7082938afa130215c0c",
+      "output": "paper/arxiv/figures-bw/fig-6-evidence-boundaries.png",
+      "output_sha256": "cda261fdfcad6083b39179ca85d4c1f82fa5b7b6de275056ba0221f75b3ecf8d",
+      "bytes": 22224,
+      "width": 1486,
+      "height": 662,
+      "mode": "L"
+    },
+    {
+      "name": "fig-a1-mutation-response.png",
+      "source": "figures/generated/fig-a1-mutation-response.png",
+      "source_sha256": "d8deb9efcc9d06e154dc4fc924cc6beb862988a491ddf6c4eddff5875bf0ce8c",
+      "output": "paper/arxiv/figures-bw/fig-a1-mutation-response.png",
+      "output_sha256": "dc0e7a6cfebd11420bee6a610c67cebd761bf75e3baa8e4dfa5c536ecedf4cf3",
+      "bytes": 23177,
+      "width": 1488,
+      "height": 958,
+      "mode": "L"
+    },
+    {
+      "name": "fig-a2-reproducibility-lineage.png",
+      "source": "figures/generated/fig-a2-reproducibility-lineage.png",
+      "source_sha256": "79e5d479e2f5ccd54274e52d3e865acb72e0ff092d176c55da9ff8e4a130711c",
+      "output": "paper/arxiv/figures-bw/fig-a2-reproducibility-lineage.png",
+      "output_sha256": "0a0a3fbc272d84e64849bcbef71cfedae614cadc0ae7cde378ee12099eea5377",
+      "bytes": 34548,
+      "width": 1280,
+      "height": 662,
+      "mode": "L"
+    },
+    {
+      "name": "fig-a3-claim-evidence-integrity.png",
+      "source": "figures/generated/fig-a3-claim-evidence-integrity.png",
+      "source_sha256": "1cd11b16a0f72a62ed324b4a1d631b66f938dd9a79ac0489489e458afcddd18a",
+      "output": "paper/arxiv/figures-bw/fig-a3-claim-evidence-integrity.png",
+      "output_sha256": "3f9956eb5fe8aed9b44b1efc80decc4ae7b4072095fc4aaff7b6d92bfe386ac5",
+      "bytes": 52710,
+      "width": 1537,
+      "height": 1432,
+      "mode": "L"
+    },
+    {
+      "name": "fig-a4-oko-versioned-correction.png",
+      "source": "figures/generated/fig-a4-oko-versioned-correction.png",
+      "source_sha256": "b153a34011ff9d551e5bf762f9fbacd8b5c104519dd050da4744107176bcacd8",
+      "output": "paper/arxiv/figures-bw/fig-a4-oko-versioned-correction.png",
+      "output_sha256": "f905051083decb04f4ca2bd8f95d9f40c8b0ec0af5c16d9fdbb87bfb1d01876f",
+      "bytes": 26956,
+      "width": 1372,
+      "height": 729,
+      "mode": "L"
+    }
+  ],
+  "boundary": "These are presentation derivatives. The released source figures and underlying data remain unchanged."
+}

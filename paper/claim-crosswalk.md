@@ -34,6 +34,10 @@ The machine-readable v0.13 claim map governs only the exact prefixed identifiers
 | `PAPER-C32` | Ineligible | Do not transfer the model residual-path result to institutions or public incidents without independent evidence in the intended setting. |
 | `PAPER-C33` | Eligible | Report the five forward-citation retrieval classes only as a bounded 102-record workflow result. |
 | `PAPER-C34` | Eligible | Report the 71 screening decisions and zero-permission state. Do not use a retained source in a proposition until its separate review gate closes. |
+| `PAPER-C35` | Eligible | Report that all 13 close forward-citation sources received one terminal proposition-review decision. |
+| `PAPER-C36` | Eligible | Report five bounded manuscript permissions, two background-only sources, and six quarantined sources. Permission does not extend beyond the ledger proposition and locator. |
+| `PAPER-C37` | Eligible | Report that RS-DQ-004 is close for screening and retains zero source-content permission. |
+| `PAPER-C38` | Eligible | Report the three source-specific mechanisms only with their sample, setting, method, and transfer limits. Do not infer a common effect or prevalence. |
 
 ## Planned claims outside the executable map
 
@@ -43,9 +47,10 @@ Drafting claims C01, C10, C12, C13, and C16 through C21 remain subject to their 
 
 - `COE-EX-03` remains open because no independent assessor has reproduced the classifications or evidence-fitness judgments.
 - `COE-EX-04` remains open for 980 unresolved retrieval outcomes, authenticated databases, and full citation-chain coverage.
-- `COE-EX-06` remains open because one direct-query source lacks inspectable text and another is limited to its publisher abstract.
+- `COE-EX-06` remains open because RS-DQ-004 lacks inspectable text and resolved author identity, while RS-DQ-005 is limited to its publisher abstract.
 - `COE-EX-07` remains open because the model-level residual-path result has no institutional or public-incident transfer test.
 - `COE-EX-05` is closed because all 89 author-screening decisions are recorded and the search-flow outputs were rebuilt from the ledger.
 - `COE-EX-08` is closed because all 71 recovered forward-citation records have decisions and none has manuscript claim permission.
+- `COE-EX-09` is closed because all 13 close sources have a proposition decision, five bounded permissions entered the manuscript, and six unresolved sources remain quarantined.
 
-The manuscript uses no originality finding. It reports completed checkpoints within their declared boundaries and excludes retained v0.13 forward-citation sources from proposition support until their separate review gates close.
+The manuscript uses no originality finding. It reports completed checkpoints within their declared boundaries and restricts each permitted v0.14 source claim to the exact proposition, locator, fitness decision, and limitation recorded in the review ledger.

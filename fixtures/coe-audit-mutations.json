@@ -1,6 +1,6 @@
 {
-  "version": "0.13.0",
-  "suite_id": "TAE-COE-NEGATIVE-CONTROLS-V0.13.0",
+  "version": "0.14.0",
+  "suite_id": "TAE-COE-NEGATIVE-CONTROLS-V0.14.0",
   "controls": [
     {"control_id": "COE-NC-01", "description": "Change one expected assessment state.", "mutation_type": "numeric_mismatch", "target_claim": "PAPER-C03", "expected_check": "score_verification", "parameters": {"evidence_id": "C03-OKO-AUTHORITY", "replacement": "unsupported"}},
     {"control_id": "COE-NC-02", "description": "Replace one evidence path with a missing file.", "mutation_type": "missing_reference", "target_claim": "PAPER-C05", "expected_check": "reference_verification", "parameters": {"evidence_id": "C05-AUTHORITY"}},
@@ -27,6 +27,13 @@
     {"control_id": "COE-NC-23", "description": "Change the completed forward-screening count.", "mutation_type": "numeric_mismatch", "target_claim": "PAPER-C34", "expected_check": "score_verification", "parameters": {"evidence_id": "C34-COMPLETE", "replacement": 70}},
     {"control_id": "COE-NC-24", "description": "Remove the forward-screening decision ledger reference.", "mutation_type": "missing_reference", "target_claim": "PAPER-C34", "expected_check": "reference_verification", "parameters": {"evidence_id": "C34-LEDGER"}},
     {"control_id": "COE-NC-25", "description": "Fail completeness for the forward-screening composition claim.", "mutation_type": "fitness_failure", "target_claim": "PAPER-C34", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dimension": "completeness"}},
-    {"control_id": "COE-NC-26", "description": "Remove the implementation marker paired with the forward-screening protocol.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C34", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C34-IMPLEMENTATION"}}
+    {"control_id": "COE-NC-26", "description": "Remove the implementation marker paired with the forward-screening protocol.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C34", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C34-IMPLEMENTATION"}},
+    {"control_id": "COE-NC-27", "description": "Change the completed proposition-review count.", "mutation_type": "numeric_mismatch", "target_claim": "PAPER-C35", "expected_check": "score_verification", "parameters": {"evidence_id": "C35-REVIEWED", "replacement": 12}},
+    {"control_id": "COE-NC-28", "description": "Remove the perception-source proposition from the bounded synthesis.", "mutation_type": "missing_reference", "target_claim": "PAPER-C38", "expected_check": "reference_verification", "parameters": {"evidence_id": "C38-PERCEPTION"}},
+    {"control_id": "COE-NC-29", "description": "Remove recorded human support review from the bounded source synthesis.", "mutation_type": "support_review_removed", "target_claim": "PAPER-C38", "expected_check": "reference_verification", "parameters": {}},
+    {"control_id": "COE-NC-30", "description": "Fail completeness for the proposition-permission composition.", "mutation_type": "fitness_failure", "target_claim": "PAPER-C36", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dimension": "completeness"}},
+    {"control_id": "COE-NC-31", "description": "Remove the implementation marker paired with the proposition-review protocol.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C35", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C35-IMPLEMENTATION"}},
+    {"control_id": "COE-NC-32", "description": "Replace the source-synthesis dependency with an unresolved claim.", "mutation_type": "unresolved_dependency", "target_claim": "PAPER-C38", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dependency": "PAPER-C99"}},
+    {"control_id": "COE-NC-33", "description": "Replace the verified direct-query resolution digest with a stale digest.", "mutation_type": "stale_hash", "target_claim": "PAPER-C37", "expected_check": "reference_verification", "parameters": {"evidence_id": "C37-PERMISSION"}}
   ]
 }

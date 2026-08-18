@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "Version 0.13.0 is the closed forward-citation screening checkpoint. Use the all-versions DOI until the version-specific DOI is recorded."
+message: "Version 0.14.0 is the proposition-reviewed arXiv preprint checkpoint. Use the all-versions DOI until the version-specific DOI is recorded."
 title: "Trust, Autonomy, and Evidence"
 type: software
-version: 0.13.0
-date-released: 2026-08-11
+version: 0.14.0
+date-released: 2026-08-13
 authors:
   - family-names: Banasihan
     given-names: Mark Julius

@@ -1,22 +1,22 @@
-record_type,node_id,lane,order,title,detail,from,to
-node,collections,research,1,Frozen collections,AIID and OECD inputs | SHA-256 recorded,,
-node,candidates,research,2,Candidate search,928 candidate records | frozen vocabulary,,
-node,selection,research,3,Selection register,5 decisions | 3 strata filled,,
-node,packets,research,4,Case packets,3 reports and | source manifests,,
-node,assessments,research,5,Assessments,JSON states and | evidence references,,
-node,archive,research,6,Release archive,version manifest | and archive DOI,,
-node,plot_inputs,figures,1,Plot inputs,"Assessments, search, | mutations, audit",,
-node,builder,figures,2,Figure builder,two builders | fixed ordering,,
-node,derived,figures,3,Derived tables,9 CSV files | cell provenance,,
-node,figures,figures,4,Rendered figures,9 SVG and | 9 PNG files,,
-node,validation,figures,5,Integrity check,CSV equality and | artifact integrity,,
-edge,,,,,,collections,candidates
-edge,,,,,,candidates,selection
-edge,,,,,,selection,packets
-edge,,,,,,packets,assessments
-edge,,,,,,assessments,archive
-edge,,,,,,plot_inputs,builder
-edge,,,,,,builder,derived
-edge,,,,,,derived,figures
-edge,,,,,,figures,validation
-edge,,,,,,assessments,plot_inputs
+record_type,node_id,lane,order,title,detail,from,to,relationship
+node,collections,research,1,Frozen collections,AIID and OECD inputs | SHA-256 recorded,,,
+node,candidates,research,2,Candidate search,928 candidate records | frozen vocabulary,,,
+node,selection,research,3,Selection register,5 decisions | 3 strata filled,,,
+node,packets,research,4,Case packets,3 reports and | source manifests,,,
+node,assessments,research,5,Assessments,JSON states and | evidence references,,,
+node,archive,research,6,Release archive,version manifest | and archive DOI,,,
+node,plot_inputs,figures,1,Plot inputs,"Assessments, search, | mutations, audit",,,
+node,builder,figures,2,Figure builder,two builders | fixed ordering,,,
+node,derived,figures,3,Derived tables,9 CSV files | cell provenance,,,
+node,figures,figures,4,Rendered figures,9 SVG and | 9 PNG files,,,
+node,validation,figures,5,Integrity check,CSV equality and | artifact integrity,,,
+edge,,,,,,collections,candidates,
+edge,,,,,,candidates,selection,
+edge,,,,,,selection,packets,
+edge,,,,,,packets,assessments,
+edge,,,,,,assessments,archive,
+edge,,,,,,plot_inputs,builder,
+edge,,,,,,builder,derived,
+edge,,,,,,derived,figures,
+edge,,,,,,figures,validation,
+edge,,,,,,assessments,plot_inputs,Assessment outputs feed figure inputs

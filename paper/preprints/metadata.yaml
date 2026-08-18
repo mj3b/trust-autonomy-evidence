@@ -1,0 +1,31 @@
+title: "From Formal Authority to Practical Human Control: A traceable method for reconstructing human control in automated decisions"
+version: "0.15.0"
+venue: "Preprints.org"
+article_type: "Article"
+authors:
+  - name: "Mark Julius Banasihan"
+    orcid: "0009-0001-8121-2878"
+    affiliation: "Independent Researcher, Node & Norm, United States"
+    corresponding_email: "mab7898@g.harvard.edu"
+    alternate_email: "markjuliusbanasihan@gmail.com"
+    student_status: "ALB candidate in Extension Studies, Harvard University"
+    affiliation_note: "This research was conducted independently through Node & Norm. It was not sponsored, supervised, or endorsed by Harvard University and does not represent the University's views."
+subject_areas:
+  - "Computer Science and Mathematics"
+  - "Social Sciences"
+keywords:
+  - "human oversight"
+  - "meaningful human control"
+  - "AI governance"
+  - "incident reconstruction"
+  - "assurance"
+license: "CC BY 4.0"
+prior_preprint:
+  platform: "Zenodo"
+  version: "0.14.0"
+  doi: "10.5281/zenodo.21926005"
+supporting_repository:
+  url: "https://github.com/mj3b/trust-autonomy-evidence"
+  doi: "10.5281/zenodo.21841127"
+conflicts_of_interest: "AUTHOR_CONFIRMATION_REQUIRED"
+submission_state: "DRAFT_DO_NOT_SUBMIT"

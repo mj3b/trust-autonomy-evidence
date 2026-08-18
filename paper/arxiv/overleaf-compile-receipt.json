@@ -1,0 +1,63 @@
+{
+  "project_title": "From Formal Authority to Practical Human Control",
+  "project_url": "https://www.overleaf.com/project/6a7e1b42384861803d9c9825",
+  "observed_date": "2026-08-13",
+  "source_archive": {
+    "path": "paper/arxiv/arxiv-source-v0.14.0.zip",
+    "bytes": 828173,
+    "sha256": "3bbee7693c6dec68b5b183d44893e907affa5d9bb94cecb5e628edb4f688b6d3"
+  },
+  "compiled_pdf": {
+    "path": "paper/arxiv/overleaf-compiled-v0.14.0.pdf",
+    "bytes": 1104702,
+    "sha256": "10d6a2a2000826ad07851595fa6a1a666829e556dd35be4bcb576a36e5d04107",
+    "pages": 25,
+    "producer": "pdfTeX-1.40.27"
+  },
+  "compile_result": {
+    "errors": 0,
+    "warning_groups": 1,
+    "warnings": [
+      "TeX command-compatibility notice for \\showhyphens; no overfull or underfull box notice remains"
+    ]
+  },
+  "visual_review": {
+    "reviewed_pages": [1, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 22, 25],
+    "checks": [
+      "professional single-column long-form body",
+      "black body text with navy headings, labels, rules, headers, and links",
+      "captions above tables",
+      "light gray-blue table headers and navy horizontal rules without vertical rules or cell grids",
+      "full-width table and figure legibility",
+      "color figure rendering with redundant labels or patterns",
+      "Figure A2 lane labels remain outside the process boxes and its labeled connector visibly runs from Assessments to Plot inputs",
+      "all ten figures and seven tables appear before References",
+      "canonical preprint is byte-identical to the approved Overleaf output",
+      "no observed clipping, overlap, overfull box, or underfull box"
+    ]
+  },
+  "placement_audit": {
+    "references_page": 22,
+    "display_pages": {
+      "Figure 1.": 7,
+      "Figure 2.": 10,
+      "Figure 3.": 11,
+      "Figure 4.": 12,
+      "Figure 5.": 16,
+      "Figure 6.": 18,
+      "Figure A1.": 13,
+      "Figure A2.": 13,
+      "Figure A3.": 14,
+      "Figure A4.": 15,
+      "Table 1.": 7,
+      "Table 2.": 9,
+      "Table 3.": 15,
+      "Table 4.": 16,
+      "Table 5.": 17,
+      "Table A1.": 12,
+      "Table A3.": 18
+    },
+    "post_references_displays": []
+  },
+  "claim_boundary": "This receipt establishes successful compilation and the listed presentation checks. It does not establish peer review, arXiv acceptance, accessibility conformance, or substantive validity."
+}

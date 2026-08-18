@@ -1,7 +1,7 @@
 {
-  "version": "0.13.0",
-  "scope_id": "TAE-COE-V0.13.0",
-  "description": "Material paper and repository claims audited through v0.13.0, including the closed 71-record forward-citation screening gate and its proposition-review boundary.",
+  "version": "0.15.0",
+  "scope_id": "TAE-COE-V0.15.0",
+  "description": "Material paper and repository claims audited through v0.15.0, including prior-version provenance, venue identity metadata, and an explicit final-submission gate.",
   "claims": [
     {
       "claim_id": "PAPER-C02",
@@ -174,8 +174,8 @@
       "status": "supported",
       "verification_rule": "The validator must contain executable checks for each named internal property and complete successfully for the committed artifacts.",
       "evidence": [
-        {"evidence_id": "C08-METHOD", "path": "reports/figure-methods.md", "locator_type": "markdown_heading", "locator": "## Reproducibility check", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "3be256d2b7399a0c4483472f3f2b51ff9b542f39b59a52d410de528866d38861", "content_review": "recorded"},
-        {"evidence_id": "C08-IMPLEMENTATION", "path": "scripts/validate_repository.py", "locator_type": "text_marker", "locator": "validate_case_interactions", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b1ee2e7aed19b106e0c68ed8f5c3621026edda571154e584dea44e947e82d6a9", "content_review": "recorded"}
+        {"evidence_id": "C08-METHOD", "path": "reports/figure-methods.md", "locator_type": "markdown_heading", "locator": "## Reproducibility check", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c37b0d237dc544351273bd6b5391793ea5f89d82c8008ed08eafa1cef7647ac2", "content_review": "recorded"},
+        {"evidence_id": "C08-IMPLEMENTATION", "path": "scripts/validate_repository.py", "locator_type": "text_marker", "locator": "validate_case_interactions", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5f161eb9f2cea4aedde6e41a0866d4a35667c18ec84020c2baa5e1373e474604", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The method report names the control and the script implements the checks."},
@@ -227,7 +227,7 @@
       "verification_rule": "The case-set boundary and protocol must exclude each named estimate from the design.",
       "evidence": [
         {"evidence_id": "C11-BOUNDARY", "path": "cases/README.md", "locator_type": "text_marker", "locator": "They do not tell us:", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "19803df1a676f7908554eb890b7de7af11a6f9839d1f94794023c2ebce5adc51", "content_review": "recorded"},
-        {"evidence_id": "C11-LIMITS", "path": "LIMITATIONS.md", "locator_type": "text_marker", "locator": "The repository has no completed multi-case reliability study", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "1545175f278f7243d1569d0f1fb3e7df01250d07b162335eaea841ba31f7b028", "content_review": "recorded"}
+        {"evidence_id": "C11-LIMITS", "path": "LIMITATIONS.md", "locator_type": "text_marker", "locator": "The repository has no completed multi-case reliability study", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5a21e549fe85e8f96f0e89daac85ffdacadcc1cbfee57bcd91bf4fae57ad6009", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The design records directly exclude the named estimates."},
@@ -304,8 +304,8 @@
       "status": "supported",
       "verification_rule": "The protocol and claim-map schema must define all five gates and store their required states.",
       "evidence": [
-        {"evidence_id": "C21-PROTOCOL", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Five gates", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "0a8a35a2bb0f3157f52088daa12d6c7b35b4dd183124eb9baae261ce166b0aa8", "content_review": "recorded"},
-        {"evidence_id": "C21-SCHEMA", "path": "schemas/claim-evidence-map.schema.json", "locator_type": "text_marker", "locator": "dependency_closure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b4f0412d1a41f23d9dafe540ed2c31f793ad05ccd6f2d9e5af87197eff78983e", "content_review": "recorded"}
+        {"evidence_id": "C21-PROTOCOL", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Five gates", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4cbe00f5c9b3ec68fa09f2d9db36eaac1646ed1fa366a30c310d073be7d70f21", "content_review": "recorded"},
+        {"evidence_id": "C21-SCHEMA", "path": "schemas/claim-evidence-map.schema.json", "locator_type": "text_marker", "locator": "dependency_closure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "886bf46ed7050f67fcc1b1da752196d03a7ef81ba34d51da73aaba8572b48e0f", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The protocol defines the gates and the schema stores them."},
@@ -355,8 +355,8 @@
       "status": "supported",
       "verification_rule": "The protocol must state the rule and the audit must recompute eligibility from status, five gates, and dependencies.",
       "evidence": [
-        {"evidence_id": "C24-METHOD", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Conclusion-eligibility rule", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "0a8a35a2bb0f3157f52088daa12d6c7b35b4dd183124eb9baae261ce166b0aa8", "content_review": "recorded"},
-        {"evidence_id": "C24-IMPLEMENTATION", "path": "fixtures/coe-audit-mutations.json", "locator_type": "text_marker", "locator": "fitness_failure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "35fbf03ffed55a463f2bb61c7dab5fa4500204ad41f13db32acaa2a5a987d9cd", "content_review": "recorded"}
+        {"evidence_id": "C24-METHOD", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Conclusion-eligibility rule", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4cbe00f5c9b3ec68fa09f2d9db36eaac1646ed1fa366a30c310d073be7d70f21", "content_review": "recorded"},
+        {"evidence_id": "C24-IMPLEMENTATION", "path": "fixtures/coe-audit-mutations.json", "locator_type": "text_marker", "locator": "fitness_failure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "59b3636e31e98c0b85b776491530bdd000f11cd4822b3d9f22a96abf1e64e519", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The protocol states the rule and the mutation suite tests the failed-fitness branch."},
@@ -408,7 +408,7 @@
       "verification_rule": "The literature audit must resolve every registered citation key, the reader file must declare its derivation, and the renderer check must reject unresolved citation syntax.",
       "evidence": [
         {"evidence_id": "C16-LITERATURE-AUDIT", "path": "paper/literature-support-audit-v0.9.0.json", "locator_type": "json_pointer", "locator": "/version", "role": "source", "source_id": null, "expected_value": "0.9.0", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "41dbbbebcc21084b015711e3c129bb40b3428d0271be5f6f0d8a36a0e73a6382", "content_review": "recorded"},
-        {"evidence_id": "C16-READER", "path": "paper/manuscript-reader.md", "locator_type": "text_marker", "locator": "This file converts the manuscript's Pandoc citation keys into clickable author-year citations.", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e8cae86475c7dc2a81048e905f93550dd16a517780e2075eb8121989e8cbd9cb", "content_review": "recorded"},
+        {"evidence_id": "C16-READER", "path": "paper/manuscript-reader.md", "locator_type": "text_marker", "locator": "This file converts the manuscript's Pandoc citation keys into clickable author-year citations.", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b67af94836a10404b4af0a0bcd471c0011bb5be0e0af4e36a4958331c91b12d3", "content_review": "recorded"},
         {"evidence_id": "C16-RENDERER", "path": "scripts/render_reader_manuscript.py", "locator_type": "text_marker", "locator": "reader manuscript still contains an unresolved Pandoc citation", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "54645add37a51637309a0eafa9b4b7043acd871fc8c1e9d251b178dd90f93061", "content_review": "recorded"}
       ],
       "fitness": {
@@ -466,7 +466,7 @@
       "status": "supported",
       "verification_rule": "Table A3 and the pressure test must distinguish rule-change comparison from repeat coding and record the absence of an independent second assessor.",
       "evidence": [
-        {"evidence_id": "C18-TABLE", "path": "paper/tables.md", "locator_type": "markdown_heading", "locator": "## Table A3. Availability of coding-stability evidence", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "dbcb581efee5779447c24e514b7e397e83a53952c7b51e478936b52c3061fd5b", "content_review": "recorded"},
+        {"evidence_id": "C18-TABLE", "path": "paper/tables.md", "locator_type": "markdown_heading", "locator": "## Table A3. Availability of coding-stability evidence", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "2446728b089cb7c0dbaceb650ff5c7e94c1ccdba15be1681334a8da46fbf2213", "content_review": "recorded"},
         {"evidence_id": "C18-PRESSURE-TEST", "path": "paper/manuscript-pressure-test-v0.8.0.md", "locator_type": "text_marker", "locator": "No independent second assessor exists.", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "74afe45f166dffbc92d8160328a293d53a50dd3f7d2ac6ff49ffc63804145489", "content_review": "recorded"},
         {"evidence_id": "C18-LEDGER", "path": "assessments/v0.6.0/oko-change-ledger.json", "locator_type": "json_pointer", "locator": "/dependency_decision/paper_blocker_state", "role": "provenance", "source_id": "TAE-PUB-001", "expected_value": "resolved_by_reclassification", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "2a4f4a166244022e19a446edbd64af0f8b562c75739219bee41508029bedb9d3", "content_review": "recorded"}
       ],
@@ -559,7 +559,7 @@
         {"evidence_id": "C27-BACKGROUND", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/counts/retain_background", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": 3},
         {"evidence_id": "C27-CLOSE", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/counts/retain_close", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": 1},
         {"evidence_id": "C27-METHOD", "path": "paper/direct-query-retrieval-tranche-v0.11.0.md", "locator_type": "markdown_heading", "locator": "## Evidence path", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "096f29d38a33e8417191fb79e996b839d473b33235dc2b91c6e38169027290a0", "content_review": "recorded"},
-        {"evidence_id": "C27-IMPLEMENTATION", "path": "scripts/validate_next_evidence_gates.py", "locator_type": "text_marker", "locator": "direct-query evidence does not match the frozen direct-query stratum", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "0a1f8f5cf7f16d096bd45497a0a0c4fd5abc888fe99bdded8bf7eb817db3b5bd", "content_review": "recorded"},
+        {"evidence_id": "C27-IMPLEMENTATION", "path": "scripts/validate_next_evidence_gates.py", "locator_type": "text_marker", "locator": "direct-query evidence does not match the frozen direct-query stratum", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "9b39d8546c6ca175341e9899b62ad0fd56e62a616889c987aaf8a9c3ce51e0f2", "content_review": "recorded"},
         {"evidence_id": "C27-ATTESTATION", "path": "evidence/human-review-attestation-v0.11.0.json", "locator_type": "text_marker", "locator": "PAPER-C27", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "706a445340e555a841ad332c775071f773b0f149d9cfca0d62b8c15281ddfc93", "content_review": "recorded"},
         {"evidence_id": "C27-LIMIT", "path": "paper/direct-query-retrieval-tranche-v0.11.0.md", "locator_type": "text_marker", "locator": "This tranche establishes five retrieval outcomes, four screening decisions, and one new close-source candidate.", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "096f29d38a33e8417191fb79e996b839d473b33235dc2b91c6e38169027290a0", "content_review": "recorded"}
       ],
@@ -694,7 +694,7 @@
       "status": "provisional",
       "verification_rule": "The source mechanism must resolve, and institutional use remains blocked until evidence tests whether the same bypass mechanism operates across technical or organizational paths.",
       "evidence": [
-        {"evidence_id": "C32-SYNTHESIS", "path": "paper/literature-matrix.md", "locator_type": "text_marker", "locator": "6. **Proposed mechanism inference:** A nominal correction can lose causal force when another information path still determines the output.", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "10e11149fbb03dbadb29afae85b7f65b374ed9c9cf0fb1e48f9473f8c7934892", "content_review": "recorded"},
+        {"evidence_id": "C32-SYNTHESIS", "path": "paper/literature-matrix.md", "locator_type": "text_marker", "locator": "6. **Proposed mechanism inference:** A nominal correction can lose causal force when another information path still determines the output.", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "13b1288e4c403f14991d0b1bc132f0c477a73e61f4a3281ca6b15f008240fac9", "content_review": "recorded"},
         {"evidence_id": "C32-SOURCE", "path": "paper/data/direct-query-retrieval-evidence-v0.11.0.json", "locator_type": "json_pointer", "locator": "/records/2/source_evidence/1", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "28988cff39ef88c57138146fdf4c6dc91404b25761b97d6e44d983a5671ae986", "content_review": "recorded", "expected_value": "The paper defines concept-residual overlap and reports that a corrected human-readable concept can fail to change the output when the residual path retains conflicting information."},
         {"evidence_id": "C32-ATTESTATION", "path": "evidence/human-review-attestation-v0.11.0.json", "locator_type": "text_marker", "locator": "PAPER-C32", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "706a445340e555a841ad332c775071f773b0f149d9cfca0d62b8c15281ddfc93", "content_review": "recorded"}
       ],
@@ -780,6 +780,214 @@
       "scope_terms": [],
       "limitations": ["Screening determines corpus membership only; retained sources require proposition-level review with stable locators.", "The screening pass supplies no independent agreement, exhaustive-coverage, originality, prevalence, field-validity, or institutional-effect result."],
       "reversal_conditions": ["A queue hash, record membership, decision, rationale, permission state, attestation, or recomputed count changes."]
+    },
+    {
+      "claim_id": "PAPER-C35",
+      "claim_text": "All 13 forward-citation sources classified close in v0.13 received one terminal proposition-review decision in v0.14, with zero open decisions.",
+      "claim_class": "numerical",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The review ledger must preserve the frozen 13-source membership and order, contain one terminal decision per source, resolve required fields, and recompute zero open decisions.",
+      "evidence": [
+        {"evidence_id": "C35-RETAINED", "path": "paper/data/forward-citation-proposition-review-v0.14.0.json", "locator_type": "json_pointer", "locator": "/counts/retained_close_sources", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f074c9ab869516735f3aec3422cfcaab3550400cf128bee5dde17b30562ab984", "content_review": "recorded", "expected_value": 13},
+        {"evidence_id": "C35-REVIEWED", "path": "paper/data/forward-citation-proposition-review-v0.14.0.json", "locator_type": "json_pointer", "locator": "/counts/reviewed", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f074c9ab869516735f3aec3422cfcaab3550400cf128bee5dde17b30562ab984", "content_review": "recorded", "expected_value": 13},
+        {"evidence_id": "C35-OPEN", "path": "paper/data/forward-citation-proposition-review-v0.14.0.json", "locator_type": "json_pointer", "locator": "/counts/open", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f074c9ab869516735f3aec3422cfcaab3550400cf128bee5dde17b30562ab984", "content_review": "recorded", "expected_value": 0},
+        {"evidence_id": "C35-LEDGER", "path": "paper/data/forward-citation-proposition-review-v0.14.0.csv", "locator_type": "file", "locator": "", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "6a19f58ff4962dbbf6aaec1fb9a86a0ad3378912e97ad79e4cbd518f6c10bb59", "content_review": "recorded"},
+        {"evidence_id": "C35-METHOD", "path": "paper/forward-citation-proposition-review-protocol-v0.14.0.md", "locator_type": "markdown_heading", "locator": "## Completion conditions", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b8effc10a84ecef81d929de32a8372b1f5872a008eb1b2917a32278c4e3fa97f", "content_review": "recorded"},
+        {"evidence_id": "C35-IMPLEMENTATION", "path": "scripts/validate_forward_citation_proposition_review_v0_14_0.py", "locator_type": "text_marker", "locator": "proposition-review ledger does not preserve frozen close-source membership and order", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "82d03dfd3b92c45eafd1fb96bb262baeab7ca1f99614e4ee3afaee817f5eac80", "content_review": "recorded"},
+        {"evidence_id": "C35-ATTESTATION", "path": "evidence/human-review-attestation-v0.14.0.json", "locator_type": "text_marker", "locator": "PAPER-C35", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "766f3c0052e90c545a7b6d2b7be23c97d20ee3490af3eefc76e2b83a7ce46573", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The frozen input, ordered ledger, and recomputed summary directly establish completion."},
+        "contemporaneity": {"state": "pass", "rationale": "The protocol, decisions, summary, and attestation share the v0.14 review date."},
+        "independence": {"state": "outside_scope", "rationale": "The claim reports an author-owned workflow state and no independent scientific judgment."},
+        "completeness": {"state": "pass", "rationale": "Every frozen close-source identifier appears once with all required fields."},
+        "publication_authority": {"state": "pass", "rationale": "The repository records its own workflow and names the accountable author."}
+      },
+      "dependencies": ["PAPER-C34"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-13", "attestation_path": "evidence/human-review-attestation-v0.14.0.json", "note": "PAPER-C35: Reviewed as the bounded 13-of-13 proposition-review completion claim."},
+      "scope_terms": [{"term": "all", "justification": "All refers only to the 13 sources classified retain-close in the frozen v0.13 forward-citation ledger."}],
+      "limitations": ["Completion establishes a recorded decision for each source and supplies no independent agreement or source-truth finding."],
+      "reversal_conditions": ["Frozen membership, order, required fields, a terminal decision, or recomputed counts change."]
+    },
+    {
+      "claim_id": "PAPER-C36",
+      "claim_text": "The v0.14 review permits five bounded manuscript propositions, retains two sources as background-only, and quarantines six sources.",
+      "claim_class": "numerical",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "Decision counts, permission states, required fitness dimensions, passage locators, bibliography keys, and manuscript citations must agree across the ledger and validator.",
+      "evidence": [
+        {"evidence_id": "C36-MANUSCRIPT", "path": "paper/data/forward-citation-proposition-review-v0.14.0.json", "locator_type": "json_pointer", "locator": "/counts/manuscript_use", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f074c9ab869516735f3aec3422cfcaab3550400cf128bee5dde17b30562ab984", "content_review": "recorded", "expected_value": 5},
+        {"evidence_id": "C36-BACKGROUND", "path": "paper/data/forward-citation-proposition-review-v0.14.0.json", "locator_type": "json_pointer", "locator": "/counts/background_only", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f074c9ab869516735f3aec3422cfcaab3550400cf128bee5dde17b30562ab984", "content_review": "recorded", "expected_value": 2},
+        {"evidence_id": "C36-QUARANTINED", "path": "paper/data/forward-citation-proposition-review-v0.14.0.json", "locator_type": "json_pointer", "locator": "/counts/quarantined", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f074c9ab869516735f3aec3422cfcaab3550400cf128bee5dde17b30562ab984", "content_review": "recorded", "expected_value": 6},
+        {"evidence_id": "C36-PERMISSIONS", "path": "paper/data/forward-citation-proposition-review-v0.14.0.json", "locator_type": "json_pointer", "locator": "/counts/proposition_permissions", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f074c9ab869516735f3aec3422cfcaab3550400cf128bee5dde17b30562ab984", "content_review": "recorded", "expected_value": 5},
+        {"evidence_id": "C36-REPORT", "path": "paper/forward-citation-proposition-review-v0.14.0.md", "locator_type": "markdown_heading", "locator": "## Manuscript-use propositions", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "10bd1b4bc8fe91ca5735b9b2044d2103b0d2ce9998c1566942a96b24e730055f", "content_review": "recorded"},
+        {"evidence_id": "C36-IMPLEMENTATION", "path": "scripts/validate_forward_citation_proposition_review_v0_14_0.py", "locator_type": "text_marker", "locator": "manuscript-use row has a failed or indeterminate required fitness state", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "82d03dfd3b92c45eafd1fb96bb262baeab7ca1f99614e4ee3afaee817f5eac80", "content_review": "recorded"},
+        {"evidence_id": "C36-ATTESTATION", "path": "evidence/human-review-attestation-v0.14.0.json", "locator_type": "text_marker", "locator": "PAPER-C36", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "766f3c0052e90c545a7b6d2b7be23c97d20ee3490af3eefc76e2b83a7ce46573", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The decision summary and row-level validator directly establish the three classes and permissions."},
+        "contemporaneity": {"state": "pass", "rationale": "The decision artifacts share the v0.14 review date."},
+        "independence": {"state": "outside_scope", "rationale": "The claim reports review composition and no independent support judgment."},
+        "completeness": {"state": "pass", "rationale": "Each permitted row has a bounded proposition, stable locator, passage locator, fitness states, limitation, and reversal condition."},
+        "publication_authority": {"state": "pass", "rationale": "The responsible author is identified for each decision and in the attestation."}
+      },
+      "dependencies": ["PAPER-C35"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-13", "attestation_path": "evidence/human-review-attestation-v0.14.0.json", "note": "PAPER-C36: Reviewed as the bounded permission composition for the 13-source gate."},
+      "scope_terms": [],
+      "limitations": ["Permission applies only to the five recorded propositions and does not validate a source beyond its inspected passages."],
+      "reversal_conditions": ["A source decision, permission, fitness state, passage locator, bibliography key, or manuscript citation changes."]
+    },
+    {
+      "claim_id": "PAPER-C37",
+      "claim_text": "The v0.14 overlay closes the fifth direct-query screening decision as retain-close and grants it zero proposition permission.",
+      "claim_class": "documentary_classification",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The overlay must identify RS-DQ-004, preserve the v0.11 snapshot, record retain-close, show zero open screening decisions, and keep claim permission closed.",
+      "evidence": [
+        {"evidence_id": "C37-STATUS", "path": "paper/data/direct-query-resolution-v0.14.0.json", "locator_type": "json_pointer", "locator": "/status", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e4df14383cb2f9c32733cd04957482dd5e6a6fe3d0c3bf1ba258ded71c1e1153", "content_review": "recorded", "expected_value": "DIRECT_QUERY_SCREENING_CLOSED"},
+        {"evidence_id": "C37-DECISION", "path": "paper/data/direct-query-resolution-v0.14.0.json", "locator_type": "json_pointer", "locator": "/decision", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e4df14383cb2f9c32733cd04957482dd5e6a6fe3d0c3bf1ba258ded71c1e1153", "content_review": "recorded", "expected_value": "retain-close"},
+        {"evidence_id": "C37-OPEN", "path": "paper/data/direct-query-resolution-v0.14.0.json", "locator_type": "json_pointer", "locator": "/resulting_counts/screening_open", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e4df14383cb2f9c32733cd04957482dd5e6a6fe3d0c3bf1ba258ded71c1e1153", "content_review": "recorded", "expected_value": 0},
+        {"evidence_id": "C37-PERMISSION", "path": "paper/data/direct-query-resolution-v0.14.0.json", "locator_type": "json_pointer", "locator": "/claim_permission", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e4df14383cb2f9c32733cd04957482dd5e6a6fe3d0c3bf1ba258ded71c1e1153", "content_review": "recorded", "expected_value": "none-until-readable-proposition-review"},
+        {"evidence_id": "C37-IMPLEMENTATION", "path": "scripts/validate_forward_citation_proposition_review_v0_14_0.py", "locator_type": "text_marker", "locator": "direct-query resolution must close screening without proposition permission", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "82d03dfd3b92c45eafd1fb96bb262baeab7ca1f99614e4ee3afaee817f5eac80", "content_review": "recorded"},
+        {"evidence_id": "C37-ATTESTATION", "path": "evidence/human-review-attestation-v0.14.0.json", "locator_type": "text_marker", "locator": "PAPER-C37", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "766f3c0052e90c545a7b6d2b7be23c97d20ee3490af3eefc76e2b83a7ce46573", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The overlay directly records the terminal screening decision and closed permission state."},
+        "contemporaneity": {"state": "pass", "rationale": "The overlay and authorization are dated for v0.14."},
+        "independence": {"state": "outside_scope", "rationale": "The claim concerns screening state and no independent source-content judgment."},
+        "completeness": {"state": "pass", "rationale": "The title-based decision and every unresolved source-content limit remain visible."},
+        "publication_authority": {"state": "pass", "rationale": "The repository author owns the screening decision; the publisher route is preserved without content attribution."}
+      },
+      "dependencies": [],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-13", "attestation_path": "evidence/human-review-attestation-v0.14.0.json", "note": "PAPER-C37: Reviewed as a conservative relevance classification with zero proposition permission."},
+      "scope_terms": [],
+      "limitations": ["Unreadable text and unresolved author identity block every substantive source claim."],
+      "reversal_conditions": ["Readable exact text resolves the author identity or changes the screening relevance decision."]
+    },
+    {
+      "claim_id": "PAPER-C38",
+      "claim_text": "Within five proposition-reviewed sources, perceived safety can diverge from reasons-tracking, feedback mode and latency can limit observed intervention effect, and reconstruction output can depend on analytic method and source completeness.",
+      "claim_class": "conclusion",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "Each component must resolve to its permitted ledger proposition, stable passage locator, manuscript citation, recorded fitness decision, and v0.14 attestation.",
+      "evidence": [
+        {"evidence_id": "C38-PERCEPTION", "path": "paper/data/forward-citation-proposition-review-v0.14.0.csv", "locator_type": "csv_cell", "locator": "sample_id=RS-FC-042|permitted_proposition", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "6a19f58ff4962dbbf6aaec1fb9a86a0ad3378912e97ad79e4cbd518f6c10bb59", "content_review": "recorded", "expected_value": "In a secondary analysis of 99 Tesla-user interviews, perceived safety sometimes coexisted with failures to track driver reasons, while takeover readiness and prior reliable experience shaped perception."},
+        {"evidence_id": "C38-FEEDBACK", "path": "paper/data/forward-citation-proposition-review-v0.14.0.csv", "locator_type": "csv_cell", "locator": "sample_id=RS-FC-052|permitted_proposition", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "6a19f58ff4962dbbf6aaec1fb9a86a0ad3378912e97ad79e4cbd518f6c10bb59", "content_review": "recorded", "expected_value": "In a 28-participant sandbox study, direct manipulation had a higher task-completion rate than text guidance, 83.3 percent versus 61.9 percent, while delayed or ineffective feedback made intervention effects harder for participants to assess."},
+        {"evidence_id": "C38-METHOD", "path": "paper/data/forward-citation-proposition-review-v0.14.0.csv", "locator_type": "csv_cell", "locator": "sample_id=RS-FC-096|permitted_proposition", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "6a19f58ff4962dbbf6aaec1fb9a86a0ad3378912e97ad79e4cbd518f6c10bb59", "content_review": "recorded", "expected_value": "Three analyst teams applied HFACS, AcciMap, and STAMP to the same official report; the methods produced different factor sets, and the authors state that missing report detail can hide material factors."},
+        {"evidence_id": "C38-MANUSCRIPT", "path": "paper/manuscript.md", "locator_type": "text_marker", "locator": "perceived control and formal feedback access can remain separate from demonstrated intervention effect", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "47d251711e935e1f6013923d0c9ad25161ebfdfe0a5245dc5e23bf811e1ed08e", "content_review": "recorded"},
+        {"evidence_id": "C38-ATTESTATION", "path": "evidence/human-review-attestation-v0.14.0.json", "locator_type": "text_marker", "locator": "PAPER-C38", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "766f3c0052e90c545a7b6d2b7be23c97d20ee3490af3eefc76e2b83a7ce46573", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "Each component restates one proposition-reviewed source finding at the same or narrower scope."},
+        "contemporaneity": {"state": "outside_scope", "rationale": "The synthesis concerns present publications and reconstruction method, not a new historical event state."},
+        "independence": {"state": "outside_scope", "rationale": "The claim reports distinct source-specific mechanisms and makes no prevalence or replication claim."},
+        "completeness": {"state": "pass", "rationale": "The synthesis includes the recorded sample, setting, method, and source limits needed for its bounded scope."},
+        "publication_authority": {"state": "pass", "rationale": "Each component resolves to an identified publication and exact review locator."}
+      },
+      "dependencies": ["PAPER-C36"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-13", "attestation_path": "evidence/human-review-attestation-v0.14.0.json", "note": "PAPER-C38: Reviewed as a bounded synthesis of three source-specific mechanisms, with transfer claims excluded."},
+      "scope_terms": [],
+      "limitations": ["The sources differ in domain and method and establish no common effect size, prevalence, causal validation, or institutional transfer."],
+      "reversal_conditions": ["A permitted proposition, passage locator, source limitation, or manuscript wording changes."]
+    },
+    {
+      "claim_id": "PAPER-C39",
+      "claim_text": "The v0.15 venue package identifies the Zenodo v0.14.0 preprint through the issued version DOI 10.5281/zenodo.21926005.",
+      "claim_class": "documentary_classification",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The prior platform, version, DOI, manuscript relationship statement, and package note must resolve to the same frozen record.",
+      "evidence": [
+        {"evidence_id": "C39-METADATA", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "doi: \"10.5281/zenodo.21926005\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73e4c1ecfece31269f5edc64302c52bda7ab7ca61691986cb4a6da0773c1699", "content_review": "recorded"},
+        {"evidence_id": "C39-MANUSCRIPT", "path": "paper/manuscript.md", "locator_type": "text_marker", "locator": "The v0.14.0 preprint was archived on Zenodo", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "47d251711e935e1f6013923d0c9ad25161ebfdfe0a5245dc5e23bf811e1ed08e", "content_review": "recorded"},
+        {"evidence_id": "C39-PACKAGE", "path": "paper/preprints/README.md", "locator_type": "text_marker", "locator": "The package identifies the Zenodo v0.14.0 preprint", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73ca84120939a9a723c8b3144296d37eac2dd49df3c0551eec3e945e76ed5ee", "content_review": "recorded"},
+        {"evidence_id": "C39-ATTESTATION", "path": "evidence/human-review-attestation-v0.15.0.json", "locator_type": "text_marker", "locator": "PAPER-C39", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "dffd071985895754a201cf198df1f37b80c2eb544b1a912654669951d1c44126", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The three package records identify the same version DOI directly."},
+        "contemporaneity": {"state": "pass", "rationale": "The records were created for the v0.15 venue revision."},
+        "independence": {"state": "outside_scope", "rationale": "The claim records repository provenance and makes no independent research judgment."},
+        "completeness": {"state": "pass", "rationale": "Platform, prior version, DOI, and present-version relationship are visible."},
+        "publication_authority": {"state": "pass", "rationale": "Zenodo issued the DOI and the author approved the repository version relationship."}
+      },
+      "dependencies": [],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-18", "attestation_path": "evidence/human-review-attestation-v0.15.0.json", "note": "PAPER-C39: Approved as the public relationship between the frozen Zenodo v0.14.0 record and this venue candidate."},
+      "scope_terms": [],
+      "limitations": ["The relationship statement does not establish that Preprints.org will accept a manuscript previously archived elsewhere."],
+      "reversal_conditions": ["The Zenodo record, version DOI, manuscript relationship statement, or package metadata changes."]
+    },
+    {
+      "claim_id": "PAPER-C40",
+      "claim_text": "The v0.15 venue metadata identifies Mark Julius Banasihan, ORCID 0009-0001-8121-2878, as an independent researcher with Node & Norm, with a specific Harvard University student-status note and two author-approved correspondence addresses.",
+      "claim_class": "documentary_classification",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The full author name, ORCID, Node & Norm affiliation, student status, independence disclaimer, two correspondence addresses, and author attestation must resolve in the venue package.",
+      "evidence": [
+        {"evidence_id": "C40-AUTHOR", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "name: \"Mark Julius Banasihan\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73e4c1ecfece31269f5edc64302c52bda7ab7ca61691986cb4a6da0773c1699", "content_review": "recorded"},
+        {"evidence_id": "C40-ORCID", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "orcid: \"0009-0001-8121-2878\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73e4c1ecfece31269f5edc64302c52bda7ab7ca61691986cb4a6da0773c1699", "content_review": "recorded"},
+        {"evidence_id": "C40-AFFILIATION", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "affiliation: \"Independent Researcher, Node & Norm, United States\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73e4c1ecfece31269f5edc64302c52bda7ab7ca61691986cb4a6da0773c1699", "content_review": "recorded"},
+        {"evidence_id": "C40-CORRESPONDENCE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "corresponding_email: \"mab7898@g.harvard.edu\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73e4c1ecfece31269f5edc64302c52bda7ab7ca61691986cb4a6da0773c1699", "content_review": "recorded"},
+        {"evidence_id": "C40-ALTERNATE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "alternate_email: \"markjuliusbanasihan@gmail.com\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73e4c1ecfece31269f5edc64302c52bda7ab7ca61691986cb4a6da0773c1699", "content_review": "recorded"},
+        {"evidence_id": "C40-STUDENT", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "student_status: \"ALB candidate in Extension Studies, Harvard University\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73e4c1ecfece31269f5edc64302c52bda7ab7ca61691986cb4a6da0773c1699", "content_review": "recorded"},
+        {"evidence_id": "C40-INDEPENDENCE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "It was not sponsored, supervised, or endorsed by Harvard University", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73e4c1ecfece31269f5edc64302c52bda7ab7ca61691986cb4a6da0773c1699", "content_review": "recorded"},
+        {"evidence_id": "C40-ATTESTATION", "path": "evidence/human-review-attestation-v0.15.0.json", "locator_type": "text_marker", "locator": "PAPER-C40", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "dffd071985895754a201cf198df1f37b80c2eb544b1a912654669951d1c44126", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The venue metadata records each identity, affiliation, status, contact, and independence field directly."},
+        "contemporaneity": {"state": "pass", "rationale": "The author confirmed the Node & Norm affiliation and both correspondence addresses on 2026-08-18."},
+        "independence": {"state": "outside_scope", "rationale": "The claim records author-controlled identity metadata."},
+        "completeness": {"state": "pass", "rationale": "The package includes full name, ORCID, independent affiliation, student status, two addresses, and the independence disclaimer."},
+        "publication_authority": {"state": "pass", "rationale": "The author controls the identity declaration and authenticated to Preprints.org through ORCID."}
+      },
+      "dependencies": [],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-18", "attestation_path": "evidence/human-review-attestation-v0.15.0.json", "note": "PAPER-C40: Confirmed Node & Norm as the independent research affiliation and authorized both correspondence addresses."},
+      "scope_terms": [],
+      "limitations": ["Node & Norm is not represented as an LLC before incorporation; the Harvard University statement identifies student status only."],
+      "reversal_conditions": ["The author name, ORCID, affiliation, student status, correspondence addresses, disclaimer, or author direction changes."]
+    },
+    {
+      "claim_id": "PAPER-C41",
+      "claim_text": "The v0.15 Preprints.org package is ready for final submission.",
+      "claim_class": "conclusion",
+      "claim_scope": "paper",
+      "status": "provisional",
+      "verification_rule": "The conflict declaration, compiled-PDF inspection, prior-version disclosure, repository validation, integrity audit, and exact submitted-file hashes must all close.",
+      "evidence": [
+        {"evidence_id": "C41-STATE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "submission_state: \"DRAFT_DO_NOT_SUBMIT\"", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73e4c1ecfece31269f5edc64302c52bda7ab7ca61691986cb4a6da0773c1699", "content_review": "pending"},
+        {"evidence_id": "C41-CONFLICT", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "conflicts_of_interest: \"AUTHOR_CONFIRMATION_REQUIRED\"", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73e4c1ecfece31269f5edc64302c52bda7ab7ca61691986cb4a6da0773c1699", "content_review": "pending"},
+        {"evidence_id": "C41-GATES", "path": "paper/preprints/README.md", "locator_type": "markdown_heading", "locator": "## Submission gates", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b73ca84120939a9a723c8b3144296d37eac2dd49df3c0551eec3e945e76ed5ee", "content_review": "pending"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The package exposes each remaining submission gate."},
+        "contemporaneity": {"state": "pass", "rationale": "The gates describe the current v0.15 submission state."},
+        "independence": {"state": "outside_scope", "rationale": "Platform screening and peer review remain external to repository readiness."},
+        "completeness": {"state": "indeterminate", "rationale": "Conflict confirmation, compiled-PDF inspection, and final submitted-file hashes remain open."},
+        "publication_authority": {"state": "pass", "rationale": "The author controls the declarations and final submission decision."}
+      },
+      "dependencies": ["PAPER-C39", "PAPER-C40"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": false,
+      "human_review": {"status": "pending", "reviewer": "Mark Julius Banasihan", "review_date": null, "attestation_path": "evidence/human-review-attestation-v0.15.0.json", "note": "Identity and prior-version metadata are approved; final submission gates remain open."},
+      "scope_terms": [],
+      "limitations": ["The package has not been compiled as v0.15.0, visually inspected, uploaded to Preprints.org, or submitted."],
+      "reversal_conditions": ["Any declaration, compiled artifact, validation result, archive member, or submission field changes."]
     }
   ]
 }

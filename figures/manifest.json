@@ -40,8 +40,8 @@
     },
     {
       "path": "figures/data/fig-a2-reproducibility-lineage.csv",
-      "bytes": 1203,
-      "sha256": "c8b09fe3f34cd52e8aa7f0da669ee31be365d1fb991a40f3e9aebf5d81503dca"
+      "bytes": 1274,
+      "sha256": "65cdbf4ece8ab00d3832c6f80f5c1a5f824cd151e56c0ebabc3e1f74a82697e0"
     },
     {
       "path": "figures/data/fig-a4-oko-versioned-correction.csv",
@@ -120,13 +120,13 @@
     },
     {
       "path": "figures/generated/fig-a2-reproducibility-lineage.png",
-      "bytes": 86037,
-      "sha256": "8210761c5119c33192ad5986e6a3a0bc61b93ba3bba39e97c71b753036003c18"
+      "bytes": 86039,
+      "sha256": "79e5d479e2f5ccd54274e52d3e865acb72e0ff092d176c55da9ff8e4a130711c"
     },
     {
       "path": "figures/generated/fig-a2-reproducibility-lineage.svg",
-      "bytes": 72389,
-      "sha256": "35b9609075016e7c817e09120ad5ca938daf7abc8ad8c7455e937cd7aefeb029"
+      "bytes": 76072,
+      "sha256": "d293b74da32cbc3e3bf0e43f709adfc8a34b67b5bc25a9d32c173f043cb4e4d8"
     },
     {
       "path": "figures/generated/fig-a4-oko-versioned-correction.png",
@@ -142,8 +142,8 @@
   "inputs": [
     {
       "path": "analysis/build_figures.py",
-      "bytes": 42640,
-      "sha256": "2432dc133d20c9ee6013143a318cea5638eca1aaf96b4c9d6205c9023a5c75aa"
+      "bytes": 43150,
+      "sha256": "520e8f623c3899d57abd53858a7edef0e536ba5f267b08dcd3ff394f14faaf41"
     },
     {
       "path": "figures/specifications/decision-paths.json",
@@ -152,8 +152,8 @@
     },
     {
       "path": "figures/specifications/reproducibility-lineage.json",
-      "bytes": 2431,
-      "sha256": "7c678cdc86862ab36d5b7c6ac698c0d6158c325d4b64228524c0c13cd3e057e2"
+      "bytes": 2481,
+      "sha256": "86993a6a11b256de2f79bbfc8740a2b689f1b81fa6032394dcf0a6f3bc16dffb"
     },
     {
       "path": "figures/specifications/selection-decisions.json",

@@ -2,6 +2,19 @@
 
 All material changes to concepts, claims, protocols, and evidence requirements are recorded here.
 
+## 0.14.0, 13 August 2026
+
+- Reviews all 13 forward-citation sources classified close in v0.13 under a frozen proposition-level protocol.
+- Grants five bounded manuscript permissions, retains two sources as background-only, and quarantines six sources with unresolved text or support.
+- Corrects the source identities for Rohith Nama, Noam Kolt, Carl Macrae, and Zhang, Jing, and Sun.
+- Closes RS-DQ-004 for screening while preserving unreadable-text and author-identity limits and zero proposition permission.
+- Adds five bounded source propositions to the manuscript and preserves their samples, settings, locators, limitations, and reversal conditions.
+- Expands the Chain-of-Evidence map to 32 claims and the mutation suite to 33 controlled corruptions.
+- Detects all 33 corruptions and publishes four open exceptions covering independence, search coverage, direct-query source limits, and institutional transfer.
+- Carries ScientistOne-inspired lineage through source review, manuscript citation, claim mapping, audit, preprint packaging, and release sealing.
+- Builds a 230-word abstract, LaTeX source, 24-page review PDF, deterministic 12-member arXiv source archive, metadata record, and source manifest.
+- Leaves 980 retrieval outcomes, the 177-record backward-reference stratum, authenticated interfaces, independent assessment, ethics wording, affiliation, license, endorsement, and final arXiv review open.
+
 ## 0.13.0, 11 August 2026
 
 - Closes the frozen 71-record forward-citation author queue with 13 close, 22 background, 11 single-component, and 25 topic decisions.
