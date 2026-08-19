@@ -1,63 +1,70 @@
 {
-  "project_title": "Practical Human Control v0.15.0 - Preprints.org",
-  "project_url": "https://www.overleaf.com/project/6a847868dd161b6c6be9ebf1",
-  "observed_date": "2026-08-18",
+  "version": "0.16.0",
+  "project_title": "Practical Human Control v0.16.0",
+  "project_url": "https://www.overleaf.com/project/6a85f94d34743ffc8642a330",
+  "observed_date": "2026-08-19",
   "source_archive": {
-    "path": "paper/preprints/preprints-source-v0.15.0.zip",
-    "bytes": 828264,
-    "sha256": "5dfc51b88ac48069455d069e9c3bc5750ef09c53335db31ba5fd4ed548b0a807"
+    "path": "paper/preprints/preprints-source-v0.16.0.zip",
+    "bytes": 883702,
+    "sha256": "184edde1d5558e84f109ceaf7157c3b213103c85940a9e6351665f1875f97440"
   },
   "compiled_pdf": {
-    "path": "paper/preprints/preprints-compiled-v0.15.0.pdf",
-    "bytes": 1099004,
-    "sha256": "c407dc2bd2615094cbaa67e345003e8e35f36a20eb4d019d446e210d5c54767c",
-    "pages": 25,
-    "producer": "pdfTeX-1.40.27"
+    "downloaded_filename": "Practical_Human_Control_v0_16_0 (1).pdf",
+    "artifact_state": "Overleaf download hashed for this receipt; the separate deterministic Tectonic PDF remains the repository-tracked review artifact",
+    "bytes": 1172472,
+    "sha256": "b7771495aecc060eb395bce1aed2155100085737bde8a1c57c2b37b90c9145d2",
+    "pages": 30,
+    "producer": "xdvipdfmx (20260317)"
+  },
+  "compile_profile": {
+    "compiler": "XeLaTeX",
+    "tex_live": "2026"
   },
   "compile_result": {
     "errors": 0,
     "warning_groups": 1,
     "warnings": [
-      "TeX command-compatibility notice for \\showhyphens; no manuscript-content, reference, float-placement, or box-overflow failure was observed"
+      "The inputenc package is ignored under XeLaTeX; no manuscript-content, reference, float-placement, or box-overflow failure was observed"
     ]
   },
   "visual_review": {
     "reviewer": "Codex under Mark Julius Banasihan's authorization",
-    "reviewed_pages": [1, 5, 8, 11, 14, 15, 16, 17, 18, 19, 20, 22, 23, 25],
+    "reviewed_pages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
     "checks": [
-      "page 1 contains the author name, independent Node & Norm affiliation, ORCID, and both authorized correspondence addresses without the student-status and independence-disclaimer lines",
-      "black body text, dark navy navigation, and light gray-blue table headers remain consistent",
-      "figures and tables are legible at full-page scale",
-      "Figure A2 has distinct research and figure-pipeline lanes and a labeled connector from assessments to plot inputs",
-      "Figures A3 and A4, Figures 5 and 6, and Tables 3 through 5 and A3 appear before References",
-      "References begin on page 23 and continue through page 25",
-      "the compact author note on page 22 identifies Node & Norm as the author's independent research initiative, records Harvard University student status, and disclaims University sponsorship or endorsement",
-      "the Zenodo v0.14.0 DOI and the confirmed no-conflicts declaration are present",
+      "the title page identifies Mark Julius Banasihan, independent research through Node & Norm, and ORCID without overstating institutional sponsorship",
+      "dark navy headings, black body text, light gray-blue table headers, and single-column layout remain consistent",
+      "all ten figures and all listed tables are legible at full-page scale and appear before References",
+      "Figure A2 has distinct research and figure-pipeline lanes and a labeled connector from Assessments to Plot inputs",
+      "References begin on page 27 and continue through page 30",
+      "the Zenodo v0.14.0 prior-version DOI, author note, correspondence addresses, conflict declaration, AI-assistance statement, and data-availability statement remain present",
       "no observed clipping, overlap, displaced display after References, or unreadable table"
     ]
   },
   "placement_audit": {
-    "references_page": 23,
+    "references_page": 27,
     "display_pages": {
       "Figure 1.": 7,
-      "Figure 2.": 10,
-      "Figure 3.": 11,
-      "Figure 4.": 12,
-      "Figure 5.": 16,
-      "Figure 6.": 18,
-      "Figure A1.": 13,
-      "Figure A2.": 14,
-      "Figure A3.": 15,
-      "Figure A4.": 16,
-      "Table 1.": 7,
-      "Table 2.": 10,
-      "Table 3.": 17,
-      "Table 4.": 17,
-      "Table 5.": 18,
-      "Table A1.": 14,
-      "Table A3.": 19
+      "Figure 2.": 11,
+      "Figure 3.": 13,
+      "Figure 4.": 14,
+      "Figure 5.": 20,
+      "Figure 6.": 22,
+      "Figure A1.": 15,
+      "Figure A2.": 16,
+      "Figure A3.": 17,
+      "Figure A4.": 18,
+      "Table 1.": 8,
+      "Table 2.": 8,
+      "Table 3.": 12,
+      "Table 4.": 12,
+      "Table 5.": 20,
+      "Table 6.": 21,
+      "Table 7.": 21,
+      "Table 8.": 25,
+      "Table A1.": 19,
+      "Table A3.": 22
     },
     "post_references_displays": []
   },
-  "claim_boundary": "This receipt establishes successful Overleaf compilation and the listed presentation checks. It does not establish Preprints.org acceptance, peer review, independent validity, accessibility conformance, or substantive truth."
+  "claim_boundary": "This receipt establishes successful v0.16.0 Overleaf compilation, source identity, and the listed presentation checks. It does not establish publication acceptance, peer review, independent validity, accessibility conformance, or substantive truth."
 }

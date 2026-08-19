@@ -23,8 +23,8 @@
   "inputs": [
     {
       "path": "analysis/build_claim_evidence_figure.py",
-      "bytes": 10026,
-      "sha256": "181c8dddf5c42e1571b91facbb826342d23d3e929514dca2310bb63db7d0c5db"
+      "bytes": 10027,
+      "sha256": "3dd9e1d59293bf1fc435374b9687a28ac0b623a9fd663e7c2d7e391d69422347"
     },
     {
       "path": "figures/specifications/claim-evidence-integrity.json",
@@ -34,7 +34,7 @@
     {
       "path": "evidence/claim-evidence-map.json",
       "bytes": 146386,
-      "sha256": "1c41b175698e6c94b5ed43373fb8c736318f17ebfed79451bbd8d26cf0948af9"
+      "sha256": "9179e878ec5ed3fb6f9d7a0203378729f70b1a63a03d09e2fc30cef214a1ef50"
     },
     {
       "path": "audits/v0.16.0/audit-results.json",

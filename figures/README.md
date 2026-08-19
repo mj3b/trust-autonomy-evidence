@@ -1,6 +1,6 @@
 # Publication Figure Set
 
-Version 0.9.0 contains six main figures and four appendix figures. Each figure is derived from committed research artifacts and ships with a CSV, PNG, SVG, specification, caption, and interpretation boundary. The case figures use the v0.6 Oko assessment and the preserved v0.3 Patriot assessments.
+Version 0.16.0 contains six main figures and four appendix figures. Each figure is derived from committed research artifacts and ships with a CSV, PNG, SVG, specification, caption, and interpretation boundary. The case figures use the v0.6 Oko assessment and the preserved v0.3 Patriot assessments. Historical manifests preserve the earlier figure sets.
 
 ## Visual standard
 
@@ -25,7 +25,7 @@ Figures show relationships. The [structured manuscript tables](../paper/tables.m
 |---|---|---|
 | Figure A1 | Maps 12 controlled mutations to 11 state changes and three invariance tests. | [PNG](generated/fig-a1-mutation-response.png) · [SVG](generated/fig-a1-mutation-response.svg) · [data](data/fig-a1-mutation-response.csv) |
 | Figure A2 | Traces research and figure artifacts from frozen inputs through validation. | [PNG](generated/fig-a2-reproducibility-lineage.png) · [SVG](generated/fig-a2-reproducibility-lineage.svg) · [data](data/fig-a2-reproducibility-lineage.csv) |
-| Figure A3 | Shows five claim gates and conclusion eligibility for 20 material claims. | [PNG](generated/fig-a3-claim-evidence-integrity.png) · [SVG](generated/fig-a3-claim-evidence-integrity.svg) · [data](data/fig-a3-claim-evidence-integrity.csv) |
+| Figure A3 | Shows five claim gates and conclusion eligibility for all 40 material v0.16.0 claims. | [PNG](generated/fig-a3-claim-evidence-integrity.png) · [SVG](generated/fig-a3-claim-evidence-integrity.svg) · [data](data/fig-a3-claim-evidence-integrity.csv) |
 | Figure A4 | Shows the six Oko states corrected between v0.3.0 and v0.6.0. | [PNG](generated/fig-a4-oko-versioned-correction.png) · [SVG](generated/fig-a4-oko-versioned-correction.svg) · [data](data/fig-a4-oko-versioned-correction.csv) |
 
 ## Reading guides
@@ -81,7 +81,7 @@ python analysis/build_figures.py --check
 python analysis/build_claim_evidence_figure.py --check
 ```
 
-The core builder checks exact equality for nine CSV files, validates 18 rendered files, and verifies the current v0.9 figure manifests. The claim-evidence builder checks one CSV, two rendered files, and its separate v0.9 manifest. Image bytes can vary across operating systems when plotted data and dimensions remain unchanged.
+The core builder checks exact equality for nine CSV files, validates 18 rendered files, and verifies the current v0.16.0 manifest. The claim-evidence builder checks one CSV, two rendered files, and its separate v0.16.0 manifest. Image bytes can vary across operating systems when plotted data and dimensions remain unchanged.
 
 [Figure methods](../reports/figure-methods.md) records the formal captions and transformations. [The figure register](specifications/figure-register.json) describes Figures 1 through A2 and A4. [The claim-evidence specification](specifications/claim-evidence-integrity.json) describes Figure A3.
 

@@ -1,0 +1,47 @@
+% Trust, Autonomy, and Evidence formula set, v0.16.0
+% Stable identifiers connect these expressions to formula-register-v0.16.0.json.
+
+% TAE-F01: Assessment-state domain
+\[
+s_{c,j}\in\{S,P,U,I,O\}.
+\]
+
+% TAE-F02: Event-control decision rule
+\[
+EventControl(c)=
+\begin{cases}
+FAIL, & \exists j\in R:s_{c,j}=U\\
+UNRESOLVED, & \nexists j\in R:s_{c,j}=U\;\land\;\exists j\in R:s_{c,j}\in\{P,I\}\\
+PASS, & \forall j\in R:s_{c,j}=S.
+\end{cases}
+\]
+
+% TAE-F03: Event-control composition
+\[
+EventControl=Access\land Comprehension\land Authority\land Feasibility\land Exercise\land Propagation.
+\]
+
+% TAE-F04: Accountable-control composition
+\[
+AccountableControl=EventControl\land Correction\land Repair.
+\]
+
+% TAE-F05: Learning-control composition
+\[
+LearningControl=AccountableControl\land Reform.
+\]
+
+% TAE-F06: Intervention-time margin
+\[
+M_t=(t_{commit}-t_{access})-(t_{interpret}+t_{decide}+t_{transmit}+t_{propagate}).
+\]
+
+% TAE-F07: Claim-eligibility rule
+\[
+Eligible(q)=Trace(q)\land Integrity(q)\land Support(q)\land Fitness(q)\land\bigwedge_{d\in Dep(q)}Eligible(d).
+\]
+
+% TAE-F08: Documentary evidence-gap indicator
+\[
+EvidenceGap(c)=\mathbf{1}[HumanControlClaim(c)=1\land EventControl(c)\neq PASS].
+\]

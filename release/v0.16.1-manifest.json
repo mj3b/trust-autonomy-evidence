@@ -1,0 +1,135 @@
+{
+  "version": "0.16.1",
+  "created": "2026-08-19",
+  "scope": "citation, formula, figure-metadata, audit-link, compile-receipt, and validation alignment for the v0.16.0 research package",
+  "hash_algorithm": "SHA-256",
+  "artifact_count": 23,
+  "artifacts": [
+    {
+      "path": "release/v0.16.0-manifest.json",
+      "bytes": 7289,
+      "sha256": "08438ae49fde6f58f0bf36490010b2c1a4d1519ff2662cc64c1bf0483535f282"
+    },
+    {
+      "path": "release/v0.16.1-release-notes.md",
+      "bytes": 2648,
+      "sha256": "6e2132744e5722d8c2ac454dde5042c1ef962fda960cb0e5ae75bae600931244"
+    },
+    {
+      "path": "README.md",
+      "bytes": 33789,
+      "sha256": "0e9832e8df3b2b880533948dfa4ea1c48466c6403ab44aac177918bb341541b1"
+    },
+    {
+      "path": "RESEARCH_STATUS.md",
+      "bytes": 9674,
+      "sha256": "938ff688d88b2ac0daa9aa507a60e485cfcd7a22e7a4584235bff0ebd49be11c"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 21773,
+      "sha256": "5c61412861fa7168adbec9ea696ef485a78c6da069aa880ef0c9e601042e76d6"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 1712,
+      "sha256": "e6d661907bd738433759fee5ba627ac286d6d5b44be28191bc0cb678beafc8e7"
+    },
+    {
+      "path": "formulas/README.md",
+      "bytes": 3306,
+      "sha256": "2506049af3b7cd14f8440cfff60e6cf2a7519cdd943d9303ade27abc65348428"
+    },
+    {
+      "path": "formulas/formula-register-v0.16.0.json",
+      "bytes": 8966,
+      "sha256": "32f314925ca6785ea553066280a41a62bf32796e1892c2f0e8332ddd7d8225a7"
+    },
+    {
+      "path": "formulas/formulas-v0.16.0.tex",
+      "bytes": 1207,
+      "sha256": "b0480e581a2f9505d65d15c757cf5b3cd4e7979f603b3da9561bc991c7a3b706"
+    },
+    {
+      "path": "schemas/formula-register.schema.json",
+      "bytes": 2207,
+      "sha256": "394462e88b6460c80cbaf3670312f2cc4c1b6cd08041c22e9edce3e4d87ef388"
+    },
+    {
+      "path": "evidence/claim-evidence-map.json",
+      "bytes": 146386,
+      "sha256": "9179e878ec5ed3fb6f9d7a0203378729f70b1a63a03d09e2fc30cef214a1ef50"
+    },
+    {
+      "path": "figures/README.md",
+      "bytes": 9288,
+      "sha256": "cd1a4e8e8d68d3ca694d97e721c16cf413afe96a749b438ea3a2d247c13a90ec"
+    },
+    {
+      "path": "figures/manifest.json",
+      "bytes": 8834,
+      "sha256": "42129ad64844f437832ff1c3060eae607636a8f4e58cf30375ad9fa11a79687a"
+    },
+    {
+      "path": "figures/specifications/figure-register.json",
+      "bytes": 9873,
+      "sha256": "79ee2e64b0432c9eb16e63c92a8759ff35330f30bf5aec2716549a90b86ade4c"
+    },
+    {
+      "path": "figures/v0.16.0-claim-evidence-manifest.json",
+      "bytes": 1411,
+      "sha256": "6740f2e8bc448cc56616dcfa6bd9cf87398b3d3c48715b86ba750896716f81b1"
+    },
+    {
+      "path": "analysis/build_figures.py",
+      "bytes": 43201,
+      "sha256": "f9a1eb57e22ec2b9ceaf51c78e4039781699a5e132fc1ea6d2c69bf2cdf55775"
+    },
+    {
+      "path": "analysis/build_claim_evidence_figure.py",
+      "bytes": 10027,
+      "sha256": "3dd9e1d59293bf1fc435374b9687a28ac0b623a9fd663e7c2d7e391d69422347"
+    },
+    {
+      "path": "protocols/coe-integrity-audit.md",
+      "bytes": 7106,
+      "sha256": "42d66be1bb9de6bb4dccfac60b84124c1595daced17ad7385dd212df90436739"
+    },
+    {
+      "path": "paper/preprints/README.md",
+      "bytes": 2579,
+      "sha256": "d742e704e6cc9c293e01002b2351a15808f69e7f9e0cf8f1c13ee9723fe0b38e"
+    },
+    {
+      "path": "paper/preprints/overleaf-compile-receipt.json",
+      "bytes": 3047,
+      "sha256": "4f327fd6ce92ee45acf5d3ea1b2d971fc05932228443c14e801974f88aeb1ed9"
+    },
+    {
+      "path": "paper/preprints/overleaf-compile-receipt-v0.15.0.json",
+      "bytes": 2849,
+      "sha256": "6915427ca6f99a1160496d85a2bafb262141230c00b26cc116260c3566d5cb8f"
+    },
+    {
+      "path": "scripts/build_v0_16_1_release_manifest.py",
+      "bytes": 2762,
+      "sha256": "49dbff03796372e3adee4b6ed4477c88c1a14af8ef4c6ac7990bd0259beb01b6"
+    },
+    {
+      "path": "scripts/validate_repository.py",
+      "bytes": 41088,
+      "sha256": "e722de917ffb4ef29b5005d595c8696724b35dfe471191de7e4f26184132ebba"
+    }
+  ],
+  "inherited_research_result": {
+    "source_release": "0.16.0",
+    "event_control": {
+      "pass": 0,
+      "fail": 2,
+      "unresolved": 1
+    },
+    "claim_count": 40,
+    "mutation_controls_detected": "39/39"
+  },
+  "boundary": "This maintenance manifest seals repository alignment for the v0.16.0 research package. It changes no manuscript claim, case state, case result, or figure interpretation. It does not establish historical truth, independent reliability, external validity, institutional effect, peer review, or publication acceptance."
+}

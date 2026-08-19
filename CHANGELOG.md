@@ -2,6 +2,15 @@
 
 All material changes to concepts, claims, protocols, and evidence requirements are recorded here.
 
+## 0.16.1, 19 August 2026
+
+- Aligns current citation instructions with the v0.16.0 working paper while preserving the v0.14.0 Zenodo DOI as an earlier preprint identifier.
+- Adds an eight-formula register with stable identifiers, plain-language purposes, publication status, source markers, implementation paths, limits, a JSON schema, and reusable LaTeX.
+- Corrects the figure source release to v0.16.0 and the Figure A3 description to 40 material claims.
+- Updates the Chain-of-Evidence protocol to the 40-claim v0.16.0 audit and attestation.
+- Records the 30-page v0.16.0 XeLaTeX Overleaf build and preserves the v0.15.0 receipt as history.
+- Adds executable formula-register validation and seals the maintenance artifacts without changing research claims, case states, case results, or figure interpretations.
+
 ## 0.16.0, 19 August 2026
 
 - Rebuilds the manuscript around the institutional problem, the inference error, the control applied, the evidence required, and the remaining limit.

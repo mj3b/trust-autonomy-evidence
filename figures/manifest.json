@@ -1,6 +1,6 @@
 {
   "version": "0.16.0",
-  "source_release": "0.15.0",
+  "source_release": "0.16.0",
   "hash_algorithm": "sha256",
   "artifacts": [
     {
@@ -56,7 +56,7 @@
     {
       "path": "figures/generated/fig-1-selection-and-stopping.svg",
       "bytes": 43323,
-      "sha256": "3adb21c695ef2e2997abf29002c5228e03b84726a5eba2e468ce501b11b9b36c"
+      "sha256": "cf265182ca03cdd959c9bb32b31c356893b373255d3004c88dfa85699ed30752"
     },
     {
       "path": "figures/generated/fig-2-practical-control-chain.png",
@@ -66,7 +66,7 @@
     {
       "path": "figures/generated/fig-2-practical-control-chain.svg",
       "bytes": 58154,
-      "sha256": "0d59dc6bd1d03bfbe84949a05e74b2b1d590fc1530f087c5e4648f5d9df3b0ab"
+      "sha256": "a17595f4bfbee5a33f1182ba3a2b0a825e888683952371f86a7d5091162ade19"
     },
     {
       "path": "figures/generated/fig-3-decision-paths.png",
@@ -76,7 +76,7 @@
     {
       "path": "figures/generated/fig-3-decision-paths.svg",
       "bytes": 79311,
-      "sha256": "7004e995294817676334d1b2b14214eb974245bebe03587d2ac57fcc26c5fcfa"
+      "sha256": "b01a72ca68c12ef034ca6d2a1509493d91b14777cc014ac2cca19f69282386e7"
     },
     {
       "path": "figures/generated/fig-4-trust-evidence-states.png",
@@ -86,7 +86,7 @@
     {
       "path": "figures/generated/fig-4-trust-evidence-states.svg",
       "bytes": 65937,
-      "sha256": "582f668765ddb7b0bc33ed8b229653d4321985aad2c662631b3315da348ce4b4"
+      "sha256": "c002bda91e7b56a07126a42ae43c6d51ee543ea633bd132257a40ae8a1f45cd2"
     },
     {
       "path": "figures/generated/fig-5-formal-search-and-screening.png",
@@ -96,7 +96,7 @@
     {
       "path": "figures/generated/fig-5-formal-search-and-screening.svg",
       "bytes": 62198,
-      "sha256": "2f582484aa19648edfda7086ef19cdc43331fa853e78f38a9c59cd8f658ffce3"
+      "sha256": "a669b6ff38cc04f21529c212cab66a8f60652b9a751cfd285c0f6333d5851401"
     },
     {
       "path": "figures/generated/fig-6-evidence-boundaries.png",
@@ -106,7 +106,7 @@
     {
       "path": "figures/generated/fig-6-evidence-boundaries.svg",
       "bytes": 109628,
-      "sha256": "74b0002f47fc48adfa5062cdf3a0fd5d1fec3f14fb8f5c9fb0d7304efc1a38ba"
+      "sha256": "179253d889850d35e4a4da7cd810d5135dd413c878c98800f6fea850a96ae2a8"
     },
     {
       "path": "figures/generated/fig-a1-mutation-response.png",
@@ -116,7 +116,7 @@
     {
       "path": "figures/generated/fig-a1-mutation-response.svg",
       "bytes": 45644,
-      "sha256": "fdf2b554fd0390b0e726d315f04ec61cb4b7f757652c5ae31476a28fae428ea6"
+      "sha256": "2ca750d09b144aa3be87970480d53fb942f36de6e596bb4865293a4e5ead1b90"
     },
     {
       "path": "figures/generated/fig-a2-reproducibility-lineage.png",
@@ -126,7 +126,7 @@
     {
       "path": "figures/generated/fig-a2-reproducibility-lineage.svg",
       "bytes": 76073,
-      "sha256": "5fb57a259a21a80612220f431d743769441c6aef1768a4de38e0d19b14816a5f"
+      "sha256": "d6abfd587edc67e8fb28edc64fa2a52e3bdeb7d65c5cab4689f6d5005bf3f8a1"
     },
     {
       "path": "figures/generated/fig-a4-oko-versioned-correction.png",
@@ -136,14 +136,14 @@
     {
       "path": "figures/generated/fig-a4-oko-versioned-correction.svg",
       "bytes": 36565,
-      "sha256": "629fe5af41e0b3c5f0d762ecbeee7aadf0af688c7c207d8f2f3ab4c3f8c3661e"
+      "sha256": "65806bfd3ef0f7d20969583e277099384ec6b8cffb6a67847eb0719bd1b97cee"
     }
   ],
   "inputs": [
     {
       "path": "analysis/build_figures.py",
-      "bytes": 43200,
-      "sha256": "d75b694510de5107e4b94a153b78f2537e9336fc96e503351e4bbb46efa90424"
+      "bytes": 43201,
+      "sha256": "f9a1eb57e22ec2b9ceaf51c78e4039781699a5e132fc1ea6d2c69bf2cdf55775"
     },
     {
       "path": "figures/specifications/decision-paths.json",

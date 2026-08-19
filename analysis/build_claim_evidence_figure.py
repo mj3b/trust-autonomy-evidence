@@ -204,7 +204,7 @@ def validate() -> list[str]:
         except (OSError, ET.ParseError) as exc:
             errors.append(f"SVG validation failed: {exc}")
     if not (ROOT / MANIFEST_PATH).is_file():
-        errors.append("v0.9 claim-evidence figure manifest is missing")
+        errors.append("v0.16 claim-evidence figure manifest is missing")
         return errors
     manifest = read_json(MANIFEST_PATH)
     if manifest.get("version") != "0.16.0" or manifest.get("source_audit") != "0.16.0":

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mj3b/trust-autonomy-evidence/schemas/formula-register.schema.json",
+  "title": "Formula register",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "version", "register_id", "purpose", "formulas"],
+  "properties": {
+    "$schema": {"type": "string", "minLength": 1},
+    "version": {"const": "0.16.0"},
+    "register_id": {"const": "TAE-FORMULAS-V0.16.0"},
+    "purpose": {"type": "string", "minLength": 1},
+    "formulas": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {"$ref": "#/$defs/formula"}
+    }
+  },
+  "$defs": {
+    "source_location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "marker"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "marker": {"type": "string", "minLength": 1}
+      }
+    },
+    "formula": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "formula_id",
+        "name",
+        "publication_status",
+        "calculation_state",
+        "expression_latex",
+        "decision_served",
+        "plain_language",
+        "source_locations",
+        "implementation_paths",
+        "limitations"
+      ],
+      "properties": {
+        "formula_id": {"type": "string", "pattern": "^TAE-F0[1-8]$"},
+        "name": {"type": "string", "minLength": 1},
+        "publication_status": {"enum": ["compiled_paper", "supporting_repository_method"]},
+        "calculation_state": {"enum": ["definition_only", "derived_for_cases", "proposed_uncomputed", "executable_rule"]},
+        "expression_latex": {"type": "string", "minLength": 1},
+        "decision_served": {"type": "string", "minLength": 1},
+        "plain_language": {"type": "string", "minLength": 1},
+        "source_locations": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source_location"}},
+        "implementation_paths": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

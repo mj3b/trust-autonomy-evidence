@@ -1,7 +1,7 @@
 # Trust, Autonomy, and Evidence
 
 [![Status: Working Research](https://img.shields.io/badge/status-working%20research-5b6cff)](RESEARCH_STATUS.md)
-[![Version: 0.16.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
+[![Version: 0.16.1](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21841127.svg)](https://doi.org/10.5281/zenodo.21841127)
 [![Validation](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml/badge.svg)](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
@@ -20,6 +20,8 @@ The project develops an evidence architecture for bounded reliance. It identifie
 ## Current contribution
 
 [Version 0.16.0](release/v0.16.0-release-notes.md) rebuilds the methods paper around the institutional problem and formalizes the case-level decision rule. It preserves the public [v0.14.0 Zenodo preprint](https://doi.org/10.5281/zenodo.21926005), the v0.15.0 venue package, and the released case states. The new result is derived from those states: Oko is unresolved, both Patriot cases fail, and no selected case passes the complete event-control rule.
+
+Version 0.16.1 is a maintenance candidate that aligns the repository citation, formula register, figure metadata, audit protocol links, and Overleaf compile receipt with that v0.16.0 research package. It changes no manuscript claim, case state, case-level result, or figure interpretation.
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
@@ -128,6 +130,8 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`SOURCES.md`](SOURCES.md) | Records the standards, papers, and public repositories used by the project. |
 | [`CITATION.cff`](CITATION.cff) | Provides machine-readable authorship, release, license, and DOI metadata. |
 | [`CHANGELOG.md`](CHANGELOG.md) | Tracks material changes to concepts, protocols, claims, and evidence requirements. |
+| [`release/v0.16.1-release-notes.md`](release/v0.16.1-release-notes.md) | Explains the maintenance alignment, preserved v0.16.0 findings, and version boundary. |
+| [`release/v0.16.1-manifest.json`](release/v0.16.1-manifest.json) | Seals the citation, formula, figure-metadata, audit-link, compile-receipt, and validation corrections with SHA-256 digests. |
 | [`release/v0.14.0-release-notes.md`](release/v0.14.0-release-notes.md) | Explains the v0.14.0 proposition review, preprint package, integrity controls, Zenodo DOI, and open external-validation limits. |
 | [`release/v0.15.0-release-notes.md`](release/v0.15.0-release-notes.md) | Explains the v0.15.0 venue package, author metadata, version relationship, carried-forward evidence controls, and open submission gate. |
 | [`release/v0.16.0-release-notes.md`](release/v0.16.0-release-notes.md) | Explains the manuscript rebuild, formal event-control rule, derived results, integrity controls, and open empirical gates. |
@@ -141,6 +145,7 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`paper/`](paper/) | Develops the methods paper, formal search, claim register, literature audit, structured tables, references, and publication decisions. |
 | [`paper/preprints/preprints-compiled-v0.16.0.pdf`](paper/preprints/preprints-compiled-v0.16.0.pdf) | Provides the 30-page technical review PDF compiled from the exact v0.16.0 source archive. |
 | [`paper/preprints/compile-receipt-v0.16.0.json`](paper/preprints/compile-receipt-v0.16.0.json) | Records compiler identity, source and PDF hashes, page locations, visual inspection, and the remaining author-review gate. |
+| [`paper/preprints/overleaf-compile-receipt.json`](paper/preprints/overleaf-compile-receipt.json) | Records the 30-page v0.16.0 XeLaTeX compilation and full-page visual review in Overleaf. |
 | [`assessments/event-control-results-v0.16.0.json`](assessments/event-control-results-v0.16.0.json) | Stores the deterministic result: zero pass, two fail, and one unresolved case under the formal rule. |
 | [`paper/manuscript-reader.md`](paper/manuscript-reader.md) | Renders the manuscript's citation identifiers as clickable author-year citations with a reference list. |
 | [`paper/manuscript-pressure-test-v0.8.0.md`](paper/manuscript-pressure-test-v0.8.0.md) | Records citation, count, claim, reliability, ethics, and submission-gate findings. |
@@ -161,6 +166,7 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`paper/data/author-screening-gate-v0.9.0.json`](paper/data/author-screening-gate-v0.9.0.json) | Stores the closed gate, final decision counts, and Figure 5 eligibility state. |
 | [`paper/tables.md`](paper/tables.md) | Publishes compact exact-value tables with captions, notes, and interpretation boundaries. |
 | [`paper/tables/manuscript-tables.tex`](paper/tables/manuscript-tables.tex) | Provides journal-style `booktabs` fragments with three horizontal rules and no vertical rules. |
+| [`formulas/`](formulas/) | Maps eight v0.16.0 formulas to their decision purpose, publication status, source locations, implementations, and limits. |
 | [`evidence/`](evidence/) | Contains the trust evidence register, current and preserved claim maps, human-review attestation, research lineage, and AI-assisted activity log. |
 | [`evidence/claim-evidence-map.json`](evidence/claim-evidence-map.json) | Connects 40 material claims to exact locators, five fitness dimensions, dependencies, human review, limits, and reversal conditions. |
 | [`evidence/human-review-attestation-v0.11.0.json`](evidence/human-review-attestation-v0.11.0.json) | Records author review of five direct-query states and six added claims, with the limits of AI assistance. |
@@ -230,11 +236,11 @@ Contributions should identify the proposition being changed, the evidence suppor
 
 ## Citation
 
-Version 0.12.0 is the forward-citation retrieval and open author-gate checkpoint. Its version-specific DOI remains pending. Until that DOI is recorded, use the all-versions DOI and identify v0.12.0 as the repository version used for the 102-record retrieval and 27-claim audit checkpoint.
+The current working paper has no v0.16.0 DOI. Cite the versioned GitHub release so the cited manuscript and research package remain identifiable:
 
-> Banasihan, M. J. (2026). *Trust, Autonomy, and Evidence* (Version v0.12.0) [Computer software]. Zenodo. Version DOI pending.
+> Banasihan, M. J. (2026). *From Formal Authority to Practical Human Control: A traceable method for reconstructing human control in automated decisions* (Version v0.16.0) [Working paper]. GitHub. https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.16.0
 
-The all-versions DOI, [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127), resolves to the newest archived version after Zenodo completes release archiving. Machine-readable metadata in [CITATION.cff](CITATION.cff) identifies v0.12.0. Earlier releases remain available through the Zenodo record history.
+The DOI [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005) identifies the earlier v0.14.0 preprint. The concept DOI [10.5281/zenodo.21841127](https://doi.org/10.5281/zenodo.21841127) identifies archived repository versions. Neither DOI currently identifies the v0.16.0 manuscript. Machine-readable metadata and the preferred paper citation are in [CITATION.cff](CITATION.cff).
 
 ## Author
 
