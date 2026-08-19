@@ -1,14 +1,16 @@
 # Research Status
 
-**Version:** 0.16.0
+**Version:** 0.16.1
 
-**Latest published version:** 0.14.0
+**Latest GitHub release:** 0.16.0
 
-**Working checkpoint:** v0.16.0 manuscript rebuild and formal event-control rule
+**Latest DOI-archived preprint:** 0.14.0
+
+**Working checkpoint:** v0.16.1 repository alignment for the v0.16.0 manuscript and formal event-control rule
 
 **Next target:** Author review of the compiled v0.16.0 paper, followed by one contemporary trace-based case and the remaining literature-retrieval gates
 
-**Status:** Manuscript explanation, formal rule, deterministic results, figures, compilation, placement review, and integrity controls complete; author review, contemporary transfer, search coverage, and independent assessment remain open
+**Status:** Manuscript explanation, formal rule, deterministic results, figures, compilation, placement review, integrity controls, citation alignment, and formula registration complete; author review, contemporary transfer, search coverage, and independent assessment remain open
 
 **Status date:** 19 August 2026
 
@@ -25,10 +27,11 @@
 | Public-case reconstruction protocol | Frozen cutoff, candidate collections, eligibility rules, screening order, and source-packet contract | Applied without changing the frozen procedure | A later replication reproduces the screening path from preserved inputs |
 | Public-case packets | Three source manifests, assessments, reports, and packet hashes | Demonstrated for selected public evidence | Independent reconstruction tests source sufficiency and classification stability |
 | Public-case interaction checks | Successful intervention, authority without practical force, and missing-evidence boundary | Executable for the three included packets | New case families test additional control interactions |
-| Publication figure set | Six main figures, four appendix figures, ten derived CSV files, SVG and PNG outputs, specifications, and artifact-integrity checks | Released in v0.9.0 | A venue-formatted paper preserves every caption and interpretation boundary |
+| Publication figure set | Six main figures, four appendix figures, ten derived CSV files, SVG and PNG outputs, specifications, and artifact-integrity checks | Rebuilt for the v0.16.0 manuscript; earlier sets remain in version history | A venue-formatted paper preserves every caption and interpretation boundary |
 | Claim-evidence integrity | Forty mapped claims, five gates, five integrity checks, thirty-nine negative controls, and declared exceptions | `PASS_WITH_EXCEPTIONS` for the declared v0.16.0 scope; all 39 corruptions detected | Complete an independent reconstruction, authenticated database searching, and a test of the proposed transfer mechanism |
 | Research lineage | Human and software agents, activities, entities, relations, and AI-assistance log | Published with PROV-O-compatible concepts | Add formal PROV-O or RO-Crate serialization if needed by a publication venue |
-| Claim-evidence figure | One journal-style categorical appendix matrix, derived CSV, SVG, PNG, specification, and v0.9 manifest | Demonstrated for the v0.9.0 audit result | The venue-formatted manuscript preserves its no-score boundary |
+| Claim-evidence figure | One journal-style categorical appendix matrix, derived CSV, SVG, PNG, specification, and v0.16 manifest | Demonstrated for the 40-claim v0.16.0 audit result | The venue-formatted manuscript preserves its no-score boundary |
+| Formula register | Eight formulas with stable identifiers, source markers, publication status, implementation paths, and interpretation limits | Registered for the v0.16.0 manuscript and supporting repository method | A later paper version imports any supporting formula it intends to present and preserves the proposed or uncalculated status of timing measures |
 | Oko evidence adjudication | Frozen plan, fixed packet, six reclassifications, change ledger, and six negative controls | Demonstrated for the v0.6.0 decision | Independent review tests the judgment and new eligible evidence triggers a versioned reassessment |
 | Practical human control paper | Proposition-reviewed manuscript, 60-source matrix, frozen formal search, six-stage rule, deterministic case results, reader edition, journal-style figures and tables, LaTeX source, deterministic source archive, and compiled PDF | v0.16.0 technical package complete; full author review pending | Approve the complete v0.16.0 text, then test the method on contemporary traces and with an independent assessor |
 | Repository validation | Pinned schema dependency, executable script, and CI workflow | Executable for declared repository checks | CI passes on the published commit |
@@ -39,7 +42,7 @@
 
 ## Research phase
 
-The v0.16.0 working checkpoint preserves the public v0.14 preprint, the v0.15 venue package, the v0.13 screening record, and the closed 13-source proposition gate. It formalizes the previously implicit case-level decision rule without changing the released packet states. The deterministic result is one unresolved case, two failing cases, and zero passing cases. These results apply only to the three purposively selected packets. Independent reliability, population validity, contemporary-system transfer, institutional effectiveness, legal sufficiency, safety, source truth, universal originality, and harm prevention remain unresolved.
+The v0.16.1 maintenance checkpoint preserves the public v0.14 preprint, the v0.15 venue package, and the complete v0.16.0 manuscript package. It aligns current citation instructions, formulas, figure metadata, audit links, and the Overleaf receipt without changing the released packet states or manuscript findings. The deterministic v0.16.0 result remains one unresolved case, two failing cases, and zero passing cases. These results apply only to the three purposively selected packets. Independent reliability, population validity, contemporary-system transfer, institutional effectiveness, legal sufficiency, safety, source truth, universal originality, and harm prevention remain unresolved.
 
 The paper workspace records a proposition-reviewed v0.16.0 working paper. The 60-source matrix includes effective-oversight conditions, institutional design, causal human involvement, ScientistOne, evidence-linked argument graphs, incident-set oversight coding, runnable decision chains, versioned assurance cases, traceable governance, contemporary agent oversight, intervention-path integrity, and human performance in autonomous warfare. The formal open-index search returned 2,431 deduplicated records. Six main figures, four appendix figures, eight main tables, and two appendix tables expose relationships, exact states, screening counts, correction history, the formal result, and the absence of reliability evidence. The deterministic source archive compiles to a 30-page color PDF with zero errors and no overfull or underfull boxes. All displays appear before References, and the title page, formulas, tables, figures, disclosures, and reference boundary passed representative-page placement review. Authenticated databases, disciplinary interfaces, 980 retrieval outcomes, the 177-record backward-reference stratum, full author review, independent assessment, and contemporary transfer remain open, so the manuscript makes no universal originality or validity claim. The released v0.3.0 assessment remains unchanged as version history.
 

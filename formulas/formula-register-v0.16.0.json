@@ -1,0 +1,191 @@
+{
+  "$schema": "../schemas/formula-register.schema.json",
+  "version": "0.16.0",
+  "register_id": "TAE-FORMULAS-V0.16.0",
+  "purpose": "Preserve the decision served, publication status, source location, implementation, and limits of each v0.16.0 formula.",
+  "formulas": [
+    {
+      "formula_id": "TAE-F01",
+      "name": "Assessment-state domain",
+      "publication_status": "compiled_paper",
+      "calculation_state": "definition_only",
+      "expression_latex": "s_{c,j}\\in\\{S,P,U,I,O\\}",
+      "decision_served": "Identify the allowed categorical state for each case-stage proposition.",
+      "plain_language": "A stage may be supported, partially supported, unsupported, indeterminate, or outside scope.",
+      "source_locations": [
+        {
+          "path": "paper/preprints/main.tex",
+          "marker": "Let the six required states for case $c$"
+        },
+        {
+          "path": "protocols/practical-human-control-test.md",
+          "marker": "s_{c,j}\\in\\{S,P,U,I,O\\}"
+        }
+      ],
+      "implementation_paths": [],
+      "limitations": [
+        "The states are categorical and assign no numeric distance.",
+        "Outside scope cannot remove a conceptually required event-level stage."
+      ]
+    },
+    {
+      "formula_id": "TAE-F02",
+      "name": "Event-control decision rule",
+      "publication_status": "compiled_paper",
+      "calculation_state": "derived_for_cases",
+      "expression_latex": "EventControl(c)=\\begin{cases}FAIL,&\\exists j\\in R:s_{c,j}=U\\\\UNRESOLVED,&\\nexists j\\in R:s_{c,j}=U\\land\\exists j\\in R:s_{c,j}\\in\\{P,I\\}\\\\PASS,&\\forall j\\in R:s_{c,j}=S\\end{cases}",
+      "decision_served": "Classify event-level control for a case from its six required stage states.",
+      "plain_language": "One unsupported stage produces a fail. A partial or indeterminate stage leaves the result unresolved when no stage fails. Every required stage must be supported for a pass.",
+      "source_locations": [
+        {
+          "path": "paper/preprints/main.tex",
+          "marker": "EventControl(c)="
+        },
+        {
+          "path": "protocols/practical-human-control-test.md",
+          "marker": "For the required event-stage set"
+        }
+      ],
+      "implementation_paths": [
+        "analysis/derive_event_control_results.py",
+        "assessments/event-control-results-v0.16.0.json"
+      ],
+      "limitations": [
+        "The rule assigns no aggregate control score or case ranking.",
+        "The released results apply only to the three purposively selected packets."
+      ]
+    },
+    {
+      "formula_id": "TAE-F03",
+      "name": "Event-control composition",
+      "publication_status": "supporting_repository_method",
+      "calculation_state": "definition_only",
+      "expression_latex": "EventControl=Access\\land Comprehension\\land Authority\\land Feasibility\\land Exercise\\land Propagation",
+      "decision_served": "Expose the six conditions that jointly compose event-level control.",
+      "plain_language": "Assigned authority can affect execution only when the full path from information access through execution propagation remains intact.",
+      "source_locations": [
+        {
+          "path": "paper/manuscript.md",
+          "marker": "EventControl=Access\\land Comprehension"
+        }
+      ],
+      "implementation_paths": [],
+      "limitations": [
+        "This composition is a documentary decision rule, not a causal model.",
+        "The compiled v0.16.0 paper states the six-stage logic in prose and the case-level rule rather than displaying this shorthand equation."
+      ]
+    },
+    {
+      "formula_id": "TAE-F04",
+      "name": "Accountable-control composition",
+      "publication_status": "supporting_repository_method",
+      "calculation_state": "definition_only",
+      "expression_latex": "AccountableControl=EventControl\\land Correction\\land Repair",
+      "decision_served": "Separate event-level control from the institution's later ability to correct the record and repair harm.",
+      "plain_language": "Accountable control requires event-level control, correction, and repair.",
+      "source_locations": [
+        {
+          "path": "paper/manuscript.md",
+          "marker": "AccountableControl=EventControl\\land Correction\\land Repair"
+        }
+      ],
+      "implementation_paths": [],
+      "limitations": [
+        "A later correction or repair cannot retroactively establish event-level control.",
+        "The three released case results classify event-level control only."
+      ]
+    },
+    {
+      "formula_id": "TAE-F05",
+      "name": "Learning-control composition",
+      "publication_status": "supporting_repository_method",
+      "calculation_state": "definition_only",
+      "expression_latex": "LearningControl=AccountableControl\\land Reform",
+      "decision_served": "Separate institutional learning from event-level and post-event accountability claims.",
+      "plain_language": "Learning control requires accountable control plus evidence that the institution changed its decision architecture.",
+      "source_locations": [
+        {
+          "path": "paper/manuscript.md",
+          "marker": "LearningControl=AccountableControl\\land Reform"
+        }
+      ],
+      "implementation_paths": [],
+      "limitations": [
+        "A later reform cannot repair the control conditions in an earlier event.",
+        "The formula supplies no estimate of whether a reform reduced later harm."
+      ]
+    },
+    {
+      "formula_id": "TAE-F06",
+      "name": "Intervention-time margin",
+      "publication_status": "compiled_paper",
+      "calculation_state": "proposed_uncomputed",
+      "expression_latex": "M_t=(t_{commit}-t_{access})-(t_{interpret}+t_{decide}+t_{transmit}+t_{propagate})",
+      "decision_served": "Define the timing evidence needed to test whether an intervention could reach execution before commitment.",
+      "plain_language": "Subtract the time required to interpret, decide, transmit, and propagate an intervention from the time available before commitment.",
+      "source_locations": [
+        {
+          "path": "paper/preprints/main.tex",
+          "marker": "M_t=(t_{commit}-t_{access})"
+        },
+        {
+          "path": "protocols/practical-human-control-test.md",
+          "marker": "Proposed timing measure for contemporary records"
+        }
+      ],
+      "implementation_paths": [],
+      "limitations": [
+        "The three historical packets lack complete timestamps, so the project does not calculate this measure for them.",
+        "A nonnegative margin is necessary but does not by itself establish a functioning intervention channel."
+      ]
+    },
+    {
+      "formula_id": "TAE-F07",
+      "name": "Claim-eligibility rule",
+      "publication_status": "supporting_repository_method",
+      "calculation_state": "executable_rule",
+      "expression_latex": "Eligible(q)=Trace(q)\\land Integrity(q)\\land Support(q)\\land Fitness(q)\\land\\bigwedge_{d\\in Dep(q)}Eligible(d)",
+      "decision_served": "Determine whether a mapped claim may enter a conclusion.",
+      "plain_language": "A claim must be traceable, integrity-checked, human-reviewed, fit for its exact scope, and supported by eligible dependencies.",
+      "source_locations": [
+        {
+          "path": "paper/manuscript.md",
+          "marker": "Eligible(q)=Trace(q)\\land Integrity(q)"
+        },
+        {
+          "path": "protocols/coe-integrity-audit.md",
+          "marker": "Conclusion-eligibility rule"
+        }
+      ],
+      "implementation_paths": [
+        "scripts/run_coe_integrity_audit.py",
+        "evidence/claim-evidence-map.json",
+        "audits/v0.16.0/audit-results.json"
+      ],
+      "limitations": [
+        "Passing the rule establishes internal conclusion eligibility under the declared map.",
+        "It does not establish source truth, independent reliability, or external validity."
+      ]
+    },
+    {
+      "formula_id": "TAE-F08",
+      "name": "Documentary evidence-gap indicator",
+      "publication_status": "compiled_paper",
+      "calculation_state": "definition_only",
+      "expression_latex": "EvidenceGap(c)=\\mathbf{1}[HumanControlClaim(c)=1\\land EventControl(c)\\neq PASS]",
+      "decision_served": "Identify a represented human-control claim that lacks complete substantiation under the event-control procedure.",
+      "plain_language": "The indicator is one when a case is represented as human-controlled and its event-control result is fail or unresolved.",
+      "source_locations": [
+        {
+          "path": "paper/preprints/main.tex",
+          "marker": "EvidenceGap(c)=\\mathbf{1}"
+        }
+      ],
+      "implementation_paths": [],
+      "limitations": [
+        "The project has not coded a population of institutional human-control representations.",
+        "The indicator does not establish fault, deliberate misrepresentation, legal liability, unsafe outcome, or prevalence."
+      ]
+    }
+  ]
+}

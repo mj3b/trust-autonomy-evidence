@@ -1,14 +1,34 @@
 cff-version: 1.2.0
-message: "Version 0.16.0 is the manuscript-rebuild checkpoint. Cite the public v0.14.0 preprint through DOI 10.5281/zenodo.21926005 until a later public version is archived."
+message: "For the working paper, cite the preferred v0.16.0 manuscript below. The v0.14.0 DOI identifies an earlier archived preprint and must not be assigned to v0.16.0."
 title: "Trust, Autonomy, and Evidence"
 type: software
-version: 0.16.0
+version: 0.16.1
 date-released: 2026-08-19
 authors:
   - family-names: Banasihan
     given-names: Mark Julius
     orcid: "https://orcid.org/0009-0001-8121-2878"
 repository-code: "https://github.com/mj3b/trust-autonomy-evidence"
-url: "https://github.com/mj3b/trust-autonomy-evidence"
+url: "https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.16.1"
 license: Apache-2.0
 abstract: "A research repository defining evidence for justified reliance and practical human control, with synthetic validation, versioned public-case reconstruction, a formal literature search, a full methods manuscript, journal-style figures and tables, claim traceability, and executable integrity audits."
+identifiers:
+  - type: url
+    value: "https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.16.0"
+    description: "Versioned GitHub release for the v0.16.0 working paper and research package"
+  - type: doi
+    value: "10.5281/zenodo.21926005"
+    description: "Earlier v0.14.0 Zenodo preprint"
+  - type: doi
+    value: "10.5281/zenodo.21841127"
+    description: "Zenodo concept DOI for archived repository versions"
+preferred-citation:
+  type: article
+  title: "From Formal Authority to Practical Human Control: A traceable method for reconstructing human control in automated decisions"
+  version: 0.16.0
+  year: 2026
+  authors:
+    - family-names: Banasihan
+      given-names: Mark Julius
+      orcid: "https://orcid.org/0009-0001-8121-2878"
+  url: "https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.16.0"

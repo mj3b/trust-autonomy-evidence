@@ -30,7 +30,7 @@ from matplotlib.patches import FancyArrowPatch, Rectangle  # noqa: E402
 
 
 FIGURE_SET_VERSION = "0.16.0"
-SOURCE_RELEASE = "0.15.0"
+SOURCE_RELEASE = "0.16.0"
 
 CASE_ASSESSMENT_PATHS = (
     "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
@@ -178,7 +178,7 @@ def configure_style() -> None:
             "figure.facecolor": PAPER,
             "axes.facecolor": PAPER,
             "savefig.facecolor": PAPER,
-            "svg.hashsalt": "trust-autonomy-evidence-figure-set-v0.9.0",
+            "svg.hashsalt": "trust-autonomy-evidence-figure-set-v0.16.0",
         }
     )
 

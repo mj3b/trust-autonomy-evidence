@@ -14,6 +14,8 @@ The package identifies the Zenodo v0.14.0 preprint at [10.5281/zenodo.21926005](
 | `source-manifest.json` | SHA-256 lineage for the archive and each member. |
 | `preprints-compiled-v0.16.0.pdf` | Review PDF compiled from the exact v0.16.0 source archive. |
 | `compile-receipt-v0.16.0.json` | Records source and output hashes, the local Tectonic compile result, representative-page review, display locations, and claim boundary. |
+| `overleaf-compile-receipt.json` | Records the v0.16.0 XeLaTeX build, downloaded PDF hash, all-page visual review, display locations, and claim boundary. |
+| `overleaf-compile-receipt-v0.15.0.json` | Preserves the earlier v0.15.0 Overleaf build as version history. |
 | `00README.XXX` | Plain-text compiler and version note included in the archive. |
 
 ## Submission gates

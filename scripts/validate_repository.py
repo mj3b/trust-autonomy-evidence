@@ -15,8 +15,8 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.16.0"
-WORKING_VERSION = "0.16.0"
+REPOSITORY_VERSION = "0.16.1"
+WORKING_VERSION = "0.16.1"
 FIGURE_VERSION = "0.16.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
@@ -82,6 +82,7 @@ REQUIRED_FILES = (
     "schemas/research-lineage.schema.json",
     "schemas/coe-audit-result.schema.json",
     "schemas/coe-audit-mutations.schema.json",
+    "schemas/formula-register.schema.json",
     "schemas/adjudication-ledger.schema.json",
     "schemas/literature-support-audit.schema.json",
     "fixtures/synthetic/cases.json",
@@ -151,6 +152,9 @@ REQUIRED_FILES = (
     "figures/v0.9.0-manifest.json",
     "figures/v0.9.0-claim-evidence-manifest.json",
     "figures/v0.16.0-claim-evidence-manifest.json",
+    "formulas/README.md",
+    "formulas/formula-register-v0.16.0.json",
+    "formulas/formulas-v0.16.0.tex",
     "release/v0.3.0-manifest.json",
     "release/v0.4.0-manifest.json",
     "release/v0.5.0-manifest.json",
@@ -172,6 +176,8 @@ REQUIRED_FILES = (
     "release/v0.15.0-release-notes.md",
     "release/v0.16.0-manifest.json",
     "release/v0.16.0-release-notes.md",
+    "release/v0.16.1-manifest.json",
+    "release/v0.16.1-release-notes.md",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -186,6 +192,7 @@ REQUIRED_FILES = (
     "scripts/build_v0_15_claim_map.py",
     "scripts/build_v0_16_claim_map.py",
     "scripts/build_v0_16_release_manifest.py",
+    "scripts/build_v0_16_1_release_manifest.py",
     "scripts/build_v0_15_release_manifest.py",
     "scripts/build_preprints_source_archive.py",
     "scripts/validate_preprints_package.py",
@@ -303,6 +310,8 @@ REQUIRED_FILES = (
     "paper/preprints/preprints-source-v0.16.0.zip",
     "paper/preprints/preprints-compiled-v0.16.0.pdf",
     "paper/preprints/compile-receipt-v0.16.0.json",
+    "paper/preprints/overleaf-compile-receipt.json",
+    "paper/preprints/overleaf-compile-receipt-v0.15.0.json",
     *tuple(f"paper/arxiv/figures-bw/{name}" for name in (
         "fig-1-selection-and-stopping.png",
         "fig-2-practical-control-chain.png",
@@ -401,6 +410,53 @@ def validate_claim_ids(failures: list[str]) -> None:
         fail(f"duplicate claim identifiers: {', '.join(duplicates)}", failures)
     if not identifiers:
         fail("no claim identifiers found", failures)
+
+
+def validate_formula_register(failures: list[str]) -> str:
+    register_path = ROOT / "formulas/formula-register-v0.16.0.json"
+    schema_path = ROOT / "schemas/formula-register.schema.json"
+    try:
+        register = json.loads(register_path.read_text(encoding="utf-8"))
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        fail(f"formula register could not be read: {exc}", failures)
+        return ""
+
+    validator = Draft202012Validator(schema)
+    schema_errors = sorted(validator.iter_errors(register), key=lambda error: list(error.path))
+    for error in schema_errors:
+        locator = "/".join(str(part) for part in error.path) or "root"
+        fail(f"formula register schema failure at {locator}: {error.message}", failures)
+    if schema_errors:
+        return ""
+
+    formulas = register["formulas"]
+    identifiers = [row["formula_id"] for row in formulas]
+    expected = [f"TAE-F{number:02d}" for number in range(1, 9)]
+    if identifiers != expected:
+        fail(f"formula register identifier order mismatch: {identifiers}", failures)
+
+    tex = (ROOT / "formulas/formulas-v0.16.0.tex").read_text(encoding="utf-8")
+    for formula in formulas:
+        formula_id = formula["formula_id"]
+        if f"% {formula_id}:" not in tex:
+            fail(f"formula identifier missing from LaTeX set: {formula_id}", failures)
+        for location in formula["source_locations"]:
+            source_path = ROOT / location["path"]
+            if not source_path.is_file():
+                fail(f"formula source is missing for {formula_id}: {location['path']}", failures)
+                continue
+            if location["marker"] not in source_path.read_text(encoding="utf-8"):
+                fail(f"formula source marker is missing for {formula_id}: {location['path']}", failures)
+        for relative in formula["implementation_paths"]:
+            if not (ROOT / relative).is_file():
+                fail(f"formula implementation is missing for {formula_id}: {relative}", failures)
+
+    compiled = sum(row["publication_status"] == "compiled_paper" for row in formulas)
+    supporting = sum(row["publication_status"] == "supporting_repository_method" for row in formulas)
+    if (compiled, supporting) != (4, 4):
+        fail(f"formula publication-status count mismatch: compiled={compiled}, supporting={supporting}", failures)
+    return f"formula register: PASS (v0.16.0; {len(formulas)} formulas; {compiled} compiled-paper, {supporting} supporting)"
 
 
 def validate_public_boundary(failures: list[str]) -> None:
@@ -617,7 +673,7 @@ def validate_figure_set(failures: list[str]) -> str:
     identifiers = [row.get("figure_id") for row in figures]
     stubs = [row.get("file_stub") for row in figures]
     expected_identifiers = ["FIG-1", "FIG-2", "FIG-3", "FIG-4", "FIG-5", "FIG-6", "FIG-A1", "FIG-A2", "FIG-A4"]
-    if register.get("version") != FIGURE_VERSION or register.get("source_release") != "0.15.0":
+    if register.get("version") != FIGURE_VERSION or register.get("source_release") != "0.16.0":
         fail("figure register version or source release mismatch", failures)
     if identifiers != expected_identifiers:
         fail(f"figure register identifier mismatch: {identifiers}", failures)
@@ -810,6 +866,7 @@ def main() -> int:
     validate_internal_links(failures)
     validate_versions(failures)
     validate_claim_ids(failures)
+    formula_result = validate_formula_register(failures)
     validate_public_boundary(failures)
     validate_public_case_schemas(failures)
     validate_packet_hashes(failures)
@@ -836,6 +893,8 @@ def main() -> int:
 
     if release_result:
         print(release_result)
+    if formula_result:
+        print(formula_result)
     if release_candidate_result:
         print(release_candidate_result)
     if solo_result:
