@@ -1,6 +1,8 @@
-# Working-paper source package, v0.16.0
+# Current working paper: v0.16.0
 
-This directory preserves the manuscript source, metadata, deterministic archive, and compiled review PDF for the v0.16.0 working paper.
+The latest paper is [`preprints-compiled-v0.16.0.pdf`](preprints-compiled-v0.16.0.pdf). This directory preserves its manuscript source, metadata, deterministic archive, and compile receipts.
+
+External reviewers should begin with the [`current-paper review guide`](../REVIEW.md), which separates this package from earlier versions and points to the supporting evidence records.
 
 The package identifies the Zenodo v0.14.0 preprint at [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005) and preserves the v0.15.0 venue package as version history. Version 0.16.0 rebuilds the explanation, formalizes the six-stage event-control rule, derives one unresolved and two failing case-level results from the released states, adds a proposed timing margin, and narrows the legacy `effect` field to execution propagation. The title block identifies Mark Julius Banasihan as an independent researcher with Node & Norm and retains both authorized correspondence addresses. A separate author note records Harvard University student status without claiming University sponsorship or endorsement.
 
@@ -15,8 +17,13 @@ The package identifies the Zenodo v0.14.0 preprint at [10.5281/zenodo.21926005](
 | `preprints-compiled-v0.16.0.pdf` | Review PDF compiled from the exact v0.16.0 source archive. |
 | `compile-receipt-v0.16.0.json` | Records source and output hashes, the local Tectonic compile result, representative-page review, display locations, and claim boundary. |
 | `overleaf-compile-receipt.json` | Records the v0.16.0 XeLaTeX build, downloaded PDF hash, all-page visual review, display locations, and claim boundary. |
-| `overleaf-compile-receipt-v0.15.0.json` | Preserves the earlier v0.15.0 Overleaf build as version history. |
 | `00README.XXX` | Plain-text compiler and version note included in the archive. |
+
+The retired v0.15.0 PDF, source archive, and Overleaf receipt are stored in [`../archive/v0.15.0/`](../archive/v0.15.0/). The v0.14.0 Zenodo and arXiv-format package remains in [`../arxiv/`](../arxiv/).
+
+## arXiv handoff
+
+If the arXiv submission returns to an editable state, [`preprints-source-v0.16.0.zip`](preprints-source-v0.16.0.zip) is the current source candidate to upload. The author must review arXiv's compiled PDF and current metadata before final submission. The `paper/arxiv/` source package is v0.14.0 history and should not replace the current paper.
 
 ## Submission gates
 

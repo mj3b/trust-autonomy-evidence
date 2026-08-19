@@ -1,16 +1,16 @@
 # Research Status
 
-**Version:** 0.16.1
+**Version:** 0.16.2
 
-**Latest GitHub release:** 0.16.0
+**Latest GitHub release:** 0.16.1
 
 **Latest DOI-archived preprint:** 0.14.0
 
-**Working checkpoint:** v0.16.1 repository alignment for the v0.16.0 manuscript and formal event-control rule
+**Working checkpoint:** v0.16.2 paper-workspace organization for the v0.16.0 manuscript
 
 **Next target:** Author review of the compiled v0.16.0 paper, followed by one contemporary trace-based case and the remaining literature-retrieval gates
 
-**Status:** Manuscript explanation, formal rule, deterministic results, figures, compilation, placement review, integrity controls, citation alignment, and formula registration complete; author review, contemporary transfer, search coverage, and independent assessment remain open
+**Status:** Manuscript explanation, formal rule, deterministic results, figures, compilation, placement review, integrity controls, citation alignment, formula registration, current-paper navigation, external-review routing, and historical package separation complete; author review, contemporary transfer, search coverage, and independent assessment remain open
 
 **Status date:** 19 August 2026
 
@@ -42,7 +42,7 @@
 
 ## Research phase
 
-The v0.16.1 maintenance checkpoint preserves the public v0.14 preprint, the v0.15 venue package, and the complete v0.16.0 manuscript package. It aligns current citation instructions, formulas, figure metadata, audit links, and the Overleaf receipt without changing the released packet states or manuscript findings. The deterministic v0.16.0 result remains one unresolved case, two failing cases, and zero passing cases. These results apply only to the three purposively selected packets. Independent reliability, population validity, contemporary-system transfer, institutional effectiveness, legal sufficiency, safety, source truth, universal originality, and harm prevention remain unresolved.
+The v0.16.2 maintenance checkpoint keeps the v0.16.0 manuscript package in `paper/preprints/`, moves three retired v0.15.0 delivery files into `paper/archive/v0.15.0/`, and adds a current-paper entry point plus an external-review guide. It also restores the truncated v0.14.0 source archive and two displaced v0.14.0 PDFs from the immutable release tag; the restored digests match the released source manifest and compile receipt. The public v0.14.0 preprint remains in its released arXiv-format directory and under its Zenodo DOI. The deterministic v0.16.0 result remains one unresolved case, two failing cases, and zero passing cases. These results apply only to the three purposively selected packets. Independent reliability, population validity, contemporary-system transfer, institutional effectiveness, legal sufficiency, safety, source truth, universal originality, and harm prevention remain unresolved.
 
 The paper workspace records a proposition-reviewed v0.16.0 working paper. The 60-source matrix includes effective-oversight conditions, institutional design, causal human involvement, ScientistOne, evidence-linked argument graphs, incident-set oversight coding, runnable decision chains, versioned assurance cases, traceable governance, contemporary agent oversight, intervention-path integrity, and human performance in autonomous warfare. The formal open-index search returned 2,431 deduplicated records. Six main figures, four appendix figures, eight main tables, and two appendix tables expose relationships, exact states, screening counts, correction history, the formal result, and the absence of reliability evidence. The deterministic source archive compiles to a 30-page color PDF with zero errors and no overfull or underfull boxes. All displays appear before References, and the title page, formulas, tables, figures, disclosures, and reference boundary passed representative-page placement review. Authenticated databases, disciplinary interfaces, 980 retrieval outcomes, the 177-record backward-reference stratum, full author review, independent assessment, and contemporary transfer remain open, so the manuscript makes no universal originality or validity claim. The released v0.3.0 assessment remains unchanged as version history.
 

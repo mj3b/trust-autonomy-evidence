@@ -2,6 +2,19 @@
 
 This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. Version 0.16.0 rebuilds the explanation, formalizes the event-control decision rule, and derives one unresolved and two failing case-level results without changing the released case states. The v0.14.0 proposition gate remains controlling for source use: five sources have one bounded manuscript permission each, two remain background-only, and six are quarantined. Released case packets, assessments, and manifests remain the controlling research record.
 
+## Start here
+
+| Need | Open |
+|---|---|
+| Read the latest paper | [`preprints/preprints-compiled-v0.16.0.pdf`](preprints/preprints-compiled-v0.16.0.pdf) |
+| Send the paper to a reviewer or arXiv endorser | [`REVIEW.md`](REVIEW.md) |
+| Review the current paper package | [`preprints/README.md`](preprints/README.md) |
+| Edit the current LaTeX source | [`preprints/main.tex`](preprints/main.tex) |
+| Read the GitHub edition | [`manuscript-reader.md`](manuscript-reader.md) |
+| Inspect earlier paper packages | [`archive/README.md`](archive/README.md) |
+
+The current paper version is v0.16.0. Repository maintenance releases may have a later number because they also version documentation, validators, and archive organization.
+
 **PR #11 merge commit:** [`a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec`](https://github.com/mj3b/trust-autonomy-evidence/commit/a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec)
 
 **Base commit:** [`acd9333d55b33f4031c058d21f9662cdb7d47c6f`](https://github.com/mj3b/trust-autonomy-evidence/commit/acd9333d55b33f4031c058d21f9662cdb7d47c6f)
@@ -14,6 +27,7 @@ This directory develops a methods and comparative-case paper from the repository
 
 | File | Short description |
 |---|---|
+| [`REVIEW.md`](REVIEW.md) | Gives a reviewer or arXiv endorser one current PDF, a category-fit summary, supporting evidence paths, and focused review questions. |
 | [`paper-charter.md`](paper-charter.md) | Fixes the paper type, question, contribution, audience, and claim boundary. |
 | [`revision-plan-v0.16.0.md`](revision-plan-v0.16.0.md) | Freezes the reader-first rebuild, formal decision rules, terminology changes, open evidence gates, and rejection conditions. |
 | [`manuscript.md`](manuscript.md) | Preserves the auditable manuscript source with Pandoc citation identifiers. |
@@ -57,6 +71,7 @@ This directory develops a methods and comparative-case paper from the repository
 | [`preprint-readiness-v0.14.0.md`](preprint-readiness-v0.14.0.md) | Separates completed evidence gates from author and arXiv submission decisions. |
 | [`arxiv/`](arxiv/) | Preserves the historical v0.14.0 arXiv-format source, 25-page PDF, archive, metadata, and placement receipt. |
 | [`preprints/`](preprints/) | Contains the v0.16.0 single-column LaTeX source, deterministic archive, 30-page compiled review PDF, metadata, and compile receipt. |
+| [`archive/`](archive/) | Indexes earlier paper packages and stores the retired v0.15.0 venue package. |
 | [`../evidence/human-review-attestation-v0.11.0.json`](../evidence/human-review-attestation-v0.11.0.json) | Records author review of the five direct-query states and six added claims, with AI-assistance limits. |
 | [`../evidence/human-review-attestation-v0.12.0.json`](../evidence/human-review-attestation-v0.12.0.json) | Records the 102-record workflow boundary and states that 71 source reviews remain pending. |
 | [`../evidence/human-review-attestation-v0.13.0.json`](../evidence/human-review-attestation-v0.13.0.json) | Records author authorization, AI assistance, decision accountability, 71 completed decisions, and zero manuscript claim permissions. |

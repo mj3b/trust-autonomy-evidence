@@ -1,7 +1,7 @@
 # Trust, Autonomy, and Evidence
 
 [![Status: Working Research](https://img.shields.io/badge/status-working%20research-5b6cff)](RESEARCH_STATUS.md)
-[![Version: 0.16.1](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
+[![Version: 0.16.2](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21841127.svg)](https://doi.org/10.5281/zenodo.21841127)
 [![Validation](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml/badge.svg)](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
@@ -21,7 +21,7 @@ The project develops an evidence architecture for bounded reliance. It identifie
 
 [Version 0.16.0](release/v0.16.0-release-notes.md) rebuilds the methods paper around the institutional problem and formalizes the case-level decision rule. It preserves the public [v0.14.0 Zenodo preprint](https://doi.org/10.5281/zenodo.21926005), the v0.15.0 venue package, and the released case states. The new result is derived from those states: Oko is unresolved, both Patriot cases fail, and no selected case passes the complete event-control rule.
 
-Version 0.16.1 is a maintenance candidate that aligns the repository citation, formula register, figure metadata, audit protocol links, and Overleaf compile receipt with that v0.16.0 research package. It changes no manuscript claim, case state, case-level result, or figure interpretation.
+Version 0.16.1 aligned the repository citation, formula register, figure metadata, audit protocol links, and Overleaf compile receipt with the v0.16.0 research package. Version 0.16.2 is a maintenance candidate that creates one current-paper entry point, adds an external-review guide, moves the retired v0.15.0 delivery files into a labeled archive, and restores three historical v0.14.0 delivery artifacts to their released hashes. It changes no manuscript claim, case state, case-level result, or figure interpretation.
 
 1. A conceptual model separating trust, trustworthiness, reliance, justified reliance, and calibration.
 2. A six-variable autonomy profile covering goal scope, action authority, temporal horizon, impact radius, oversight distance, and reversibility.
@@ -132,6 +132,8 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`CHANGELOG.md`](CHANGELOG.md) | Tracks material changes to concepts, protocols, claims, and evidence requirements. |
 | [`release/v0.16.1-release-notes.md`](release/v0.16.1-release-notes.md) | Explains the maintenance alignment, preserved v0.16.0 findings, and version boundary. |
 | [`release/v0.16.1-manifest.json`](release/v0.16.1-manifest.json) | Seals the citation, formula, figure-metadata, audit-link, compile-receipt, and validation corrections with SHA-256 digests. |
+| [`release/v0.16.2-release-notes.md`](release/v0.16.2-release-notes.md) | Explains the paper-workspace organization, archive boundary, and preserved v0.16.0 research result. |
+| [`release/v0.16.2-manifest.json`](release/v0.16.2-manifest.json) | Seals the navigation, archived v0.15.0 files, current paper paths, and updated validation controls. |
 | [`release/v0.14.0-release-notes.md`](release/v0.14.0-release-notes.md) | Explains the v0.14.0 proposition review, preprint package, integrity controls, Zenodo DOI, and open external-validation limits. |
 | [`release/v0.15.0-release-notes.md`](release/v0.15.0-release-notes.md) | Explains the v0.15.0 venue package, author metadata, version relationship, carried-forward evidence controls, and open submission gate. |
 | [`release/v0.16.0-release-notes.md`](release/v0.16.0-release-notes.md) | Explains the manuscript rebuild, formal event-control rule, derived results, integrity controls, and open empirical gates. |
@@ -143,6 +145,9 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`research/agenda-discovery-log-v0.11.0.md`](research/agenda-discovery-log-v0.11.0.md) | Records retrieval findings about inspectability, preserved provenance, parallel intervention paths, and the Patriot-adjacent close source. |
 | [`research/agenda-discovery-log-v0.12.0.md`](research/agenda-discovery-log-v0.12.0.md) | Records why retrieval, screening, access, duplicate handling, and independent assessment remain separate gates. |
 | [`paper/`](paper/) | Develops the methods paper, formal search, claim register, literature audit, structured tables, references, and publication decisions. |
+| [`paper/README.md`](paper/README.md) | Provides the single entry point to the latest paper, current source, GitHub edition, and earlier packages. |
+| [`paper/REVIEW.md`](paper/REVIEW.md) | Gives reviewers and prospective arXiv endorsers one current PDF, a category-fit summary, evidence paths, and focused review questions. |
+| [`paper/archive/`](paper/archive/) | Indexes earlier paper packages and stores the retired v0.15.0 delivery files. |
 | [`paper/preprints/preprints-compiled-v0.16.0.pdf`](paper/preprints/preprints-compiled-v0.16.0.pdf) | Provides the 30-page technical review PDF compiled from the exact v0.16.0 source archive. |
 | [`paper/preprints/compile-receipt-v0.16.0.json`](paper/preprints/compile-receipt-v0.16.0.json) | Records compiler identity, source and PDF hashes, page locations, visual inspection, and the remaining author-review gate. |
 | [`paper/preprints/overleaf-compile-receipt.json`](paper/preprints/overleaf-compile-receipt.json) | Records the 30-page v0.16.0 XeLaTeX compilation and full-page visual review in Overleaf. |

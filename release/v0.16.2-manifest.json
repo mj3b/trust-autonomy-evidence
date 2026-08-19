@@ -1,0 +1,155 @@
+{
+  "version": "0.16.2",
+  "created": "2026-08-19",
+  "scope": "paper-workspace navigation, external-review routing, v0.15.0 delivery-package archiving, current-paper labeling, and validation-path updates",
+  "hash_algorithm": "SHA-256",
+  "artifact_count": 27,
+  "artifacts": [
+    {
+      "path": "release/v0.16.1-manifest.json",
+      "bytes": 4612,
+      "sha256": "2732fcafbe26763cdd076b8952276b538936a67d85ae0e8ac118fd7df05b2087"
+    },
+    {
+      "path": "release/v0.16.2-release-notes.md",
+      "bytes": 3111,
+      "sha256": "5d3d245250d00c317ca4f83e70bb45f2a03113f6cdf78dbc7ba65ac37da9bfca"
+    },
+    {
+      "path": "README.md",
+      "bytes": 34817,
+      "sha256": "a144808bc37fc85483a3345c210e2358fea4ea781b25b450ce5addcf0ff81f71"
+    },
+    {
+      "path": "RESEARCH_STATUS.md",
+      "bytes": 9950,
+      "sha256": "51ba975c2584a3f658414d708184c9e52e5570ee77675febb11082d369db9f3f"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 23287,
+      "sha256": "170c1568de97a6e84c70fc58ecda07af3356fe408a5112999421645e1f061f9e"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 1712,
+      "sha256": "aa1eb609016f7efee24e98ba764835b632bc6bf8fbe078b5ab05dc2dcfad60b3"
+    },
+    {
+      "path": "paper/README.md",
+      "bytes": 15523,
+      "sha256": "62c67c78eaa77bab8bcd4eb56efe8b2ac4533eea0014b2119ea865e416ddc216"
+    },
+    {
+      "path": "paper/REVIEW.md",
+      "bytes": 4035,
+      "sha256": "a83f5225145785c53ab1b8fbb8eed841e99794b21c17189f608c195d2ebb27ee"
+    },
+    {
+      "path": "paper/preprints/README.md",
+      "bytes": 3270,
+      "sha256": "791110fb058f258caac29c9c8f65206e11ad0a465e5250ffb37617dd9ff49d91"
+    },
+    {
+      "path": "paper/arxiv/README.md",
+      "bytes": 5354,
+      "sha256": "0c01bc25d546d5fec216ba7cb0f6e6dcca0f76f63361d4e681224699f4ab8cae"
+    },
+    {
+      "path": "paper/arxiv/source-manifest.json",
+      "bytes": 3379,
+      "sha256": "db33b950ccb89153f87cbf6a1c00e3c45c41b59c80da3f92958711d7503d48cb"
+    },
+    {
+      "path": "paper/arxiv/arxiv-source-v0.14.0.zip",
+      "bytes": 828173,
+      "sha256": "3bbee7693c6dec68b5b183d44893e907affa5d9bb94cecb5e628edb4f688b6d3"
+    },
+    {
+      "path": "paper/arxiv/preprint-v0.14.0.pdf",
+      "bytes": 1104702,
+      "sha256": "10d6a2a2000826ad07851595fa6a1a666829e556dd35be4bcb576a36e5d04107"
+    },
+    {
+      "path": "paper/arxiv/overleaf-compiled-v0.14.0.pdf",
+      "bytes": 1104702,
+      "sha256": "10d6a2a2000826ad07851595fa6a1a666829e556dd35be4bcb576a36e5d04107"
+    },
+    {
+      "path": "paper/arxiv/overleaf-compile-receipt.json",
+      "bytes": 2369,
+      "sha256": "ef494ad2a5af90819454843f2f2e2fa6cab60f1a40a5cb0814c0a2a6da1f1801"
+    },
+    {
+      "path": "paper/archive/README.md",
+      "bytes": 1204,
+      "sha256": "053f57ce19c558989ef375d053ab590594385bba4fddd36fd1d45ab69731c0f5"
+    },
+    {
+      "path": "paper/archive/v0.15.0/README.md",
+      "bytes": 930,
+      "sha256": "55222cd5542d4a8103a7684ce10b63bfd0737ceb926dd73d5eb004d60ae082d3"
+    },
+    {
+      "path": "paper/archive/v0.15.0/preprints-compiled-v0.15.0.pdf",
+      "bytes": 1099004,
+      "sha256": "c407dc2bd2615094cbaa67e345003e8e35f36a20eb4d019d446e210d5c54767c"
+    },
+    {
+      "path": "paper/archive/v0.15.0/preprints-source-v0.15.0.zip",
+      "bytes": 828264,
+      "sha256": "5dfc51b88ac48069455d069e9c3bc5750ef09c53335db31ba5fd4ed548b0a807"
+    },
+    {
+      "path": "paper/archive/v0.15.0/overleaf-compile-receipt-v0.15.0.json",
+      "bytes": 2849,
+      "sha256": "6915427ca6f99a1160496d85a2bafb262141230c00b26cc116260c3566d5cb8f"
+    },
+    {
+      "path": "evidence/claim-evidence-map.json",
+      "bytes": 146386,
+      "sha256": "ca45539718ad0017504a3d22ae5463ae7f8502e6754371f0e703523291bedc83"
+    },
+    {
+      "path": "figures/manifest.json",
+      "bytes": 8834,
+      "sha256": "42129ad64844f437832ff1c3060eae607636a8f4e58cf30375ad9fa11a79687a"
+    },
+    {
+      "path": "figures/v0.16.0-claim-evidence-manifest.json",
+      "bytes": 1411,
+      "sha256": "31d2c91c9e6d5b68f5e61d598ebe5b3452417f9e2c88d172152888452187d060"
+    },
+    {
+      "path": "scripts/build_v0_16_2_release_manifest.py",
+      "bytes": 2962,
+      "sha256": "6451cfd1e94b8dff2581c18ed89e5d0f6506b29ae8149acb15e3475683db35fc"
+    },
+    {
+      "path": "scripts/validate_arxiv_package.py",
+      "bytes": 12098,
+      "sha256": "7be5a9ce69c73470a7a414deef226ad8b47fdd1237a3b45541c023dca985eb5c"
+    },
+    {
+      "path": "scripts/validate_paper.py",
+      "bytes": 13698,
+      "sha256": "d430f46a17e919735385709d64f13d10598312d0e5ef4adc2ae75815565c7c7a"
+    },
+    {
+      "path": "scripts/validate_repository.py",
+      "bytes": 41379,
+      "sha256": "2454b31556d77efa06876f435acb4a56a4b1bf4ad990634a4ca8a36ccb2044b8"
+    }
+  ],
+  "inherited_research_result": {
+    "source_release": "0.16.0",
+    "event_control": {
+      "pass": 0,
+      "fail": 2,
+      "unresolved": 1
+    },
+    "claim_count": 40,
+    "mutation_controls_detected": "39/39"
+  },
+  "boundary": "This maintenance manifest seals paper-workspace organization for the v0.16.0 research package. It changes no manuscript claim, case state, case result, figure data, or interpretation boundary. It does not establish historical truth, independent reliability, external validity, institutional effect, peer review, or publication acceptance."
+}

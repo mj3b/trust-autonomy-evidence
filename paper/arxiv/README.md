@@ -1,5 +1,7 @@
 # arXiv Preprint Candidate, v0.14.0
 
+> **Historical package.** The current reviewer copy is v0.16.0. Open the [`current-paper review guide`](../REVIEW.md) before sharing or submitting the paper.
+
 This directory contains the first repository-controlled preprint package for *From Formal Authority to Practical Human Control* by Mark Julius Banasihan.
 
 ## Package map
