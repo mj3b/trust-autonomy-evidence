@@ -17,7 +17,7 @@ Figures show relationships. The [structured manuscript tables](../paper/tables.m
 | Figure 3 | Places 15 source-linked events in relative order and marks the F/A-18C public record gap. | [PNG](generated/fig-3-decision-paths.png) · [SVG](generated/fig-3-decision-paths.svg) · [data](data/fig-3-decision-paths.csv) |
 | Figure 4 | Compares 36 trust-evidence states across the three public cases. | [PNG](generated/fig-4-trust-evidence-states.png) · [SVG](generated/fig-4-trust-evidence-states.svg) · [data](data/fig-4-trust-evidence-states.csv) |
 | Figure 5 | Traces the formal literature search and reports the final state after all 89 author decisions. | [PNG](generated/fig-5-formal-search-and-screening.png) · [SVG](generated/fig-5-formal-search-and-screening.svg) · [data](data/fig-5-formal-search-and-screening.csv) |
-| Figure 6 | Shows how supported, partial, unsupported, and indeterminate findings compose the six pre-action stages for each case. | [PNG](generated/fig-6-evidence-boundaries.png) · [SVG](generated/fig-6-evidence-boundaries.svg) · [data](data/fig-6-evidence-boundaries.csv) |
+| Figure 6 | Shows how supported, partial, unsupported, and indeterminate findings compose the six event-level stages for each case. | [PNG](generated/fig-6-evidence-boundaries.png) · [SVG](generated/fig-6-evidence-boundaries.svg) · [data](data/fig-6-evidence-boundaries.csv) |
 
 ## Appendix figures
 
@@ -36,9 +36,9 @@ The figure shows 928 preserved candidate records, five completed decisions, thre
 
 ### Figure 2. Practical-control states
 
-Each column contains evidence about a formal human role. The states elsewhere in the chain differ. Oko carries partial support from access through effect. ZG710 carries supported authority alongside unsupported comprehension, feasible challenge, exercised challenge, and effect. F/A-18C carries supported authority and leaves comprehension, feasible challenge, and exercised challenge unresolved.
+Each column contains evidence about a formal human role. The states elsewhere in the chain differ. Oko carries partial support from access through execution propagation. ZG710 carries supported authority alongside unsupported comprehension, feasible challenge, exercised challenge, and execution propagation. F/A-18C carries supported authority, leaves comprehension, feasible challenge, and exercised challenge unresolved, and has unsupported execution propagation.
 
-This pattern supports one bounded conclusion: authority requires a separate evidence path to information, understanding, opportunity, action, and effect. The figure supplies no causal estimate and no claim about how often these states occur.
+This pattern supports one bounded conclusion: authority requires a separate evidence path to information, understanding, opportunity, action, and execution propagation. Under the v0.16.0 rule, Oko is unresolved and both Patriot cases fail. The figure supplies no causal estimate and no claim about how often these states occur.
 
 ### Figure 3. Bounded decision paths
 
@@ -54,7 +54,7 @@ The left panel shows retrieval, pooling, and deduplication. The right panel repo
 
 ### Figure 6. Evidence boundaries
 
-Each bar contains six pre-action findings. Oko contains six partially supported findings. ZG710 contains one supported, one partially supported, and four unsupported findings. F/A-18C contains one supported, one partially supported, one unsupported, and three indeterminate findings. Partial support records some evidence with a material gap. Indeterminate records insufficient evidence for a decision. The counts assign no numeric distance among states and supply no missingness rate, reliability estimate, aggregate control score, or case ranking.
+Each bar contains six event-level findings. Oko contains six partially supported findings. ZG710 contains one supported, one partially supported, and four unsupported findings. F/A-18C contains one supported, one partially supported, one unsupported, and three indeterminate findings. Partial support records some evidence with a material gap. Indeterminate records insufficient evidence for a decision. The counts assign no numeric distance among states and supply no missingness rate, reliability estimate, aggregate control score, or case ranking.
 
 ### Figure A1. Mutation response
 
@@ -70,7 +70,7 @@ Every declared claim passes traceability, integrity, and support review. Final a
 
 ### Figure A4. Oko versioned correction
 
-All six Oko pre-action states move from supported to partially supported. The packet did not change. The v0.6 adjudication applied a stricter rule fixed before reassessment. The figure records a method-driven correction and adds no historical evidence.
+All six Oko event-level states move from supported to partially supported. The packet did not change. The v0.6 adjudication applied a stricter rule fixed before reassessment. The figure records a method-driven correction and adds no historical evidence.
 
 ## Regeneration
 

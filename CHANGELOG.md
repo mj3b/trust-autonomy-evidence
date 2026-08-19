@@ -2,6 +2,21 @@
 
 All material changes to concepts, claims, protocols, and evidence requirements are recorded here.
 
+## 0.16.0, 19 August 2026
+
+- Rebuilds the manuscript around the institutional problem, the inference error, the control applied, the evidence required, and the remaining limit.
+- Rewrites the abstract to report the research question, six-stage method, three case-level results, search boundary, contribution, consequence, and limitations in plain language.
+- Formalizes a six-stage event-control rule that requires information access, comprehension capacity, intervention authority, intervention feasibility, exercised judgment, and execution propagation.
+- Derives case-level results deterministically from released assessment states: Oko is unresolved, Patriot ZG710 fails, Patriot F/A-18C fails, and no selected case passes.
+- Replaces the reader-facing term `protective effect` with `execution propagation` while preserving the legacy machine-readable field `effect` and excluding beneficial-outcome or counterfactual-effect interpretations.
+- Adds construct-derivation, authority-versus-event-control, and institutional-interpretation tables.
+- Adds a proposed timing-margin equation for future systems and explicitly records that the historical packets lack the inputs needed to calculate it.
+- Updates Figures 2, 6, A3, and A4 and their reading guides; Figure A3 now reports all 40 mapped claims.
+- Expands the Chain-of-Evidence map to 40 claims and the negative-control suite to 39 controlled corruptions; detects all 39 with declared exceptions.
+- Compiles the exact deterministic source archive to a 30-page review PDF with zero errors, no overfull or underfull boxes, and no display after References.
+- Records the Preprints.org decline as an external venue state without inferring which screening criterion controlled the decision.
+- Preserves the v0.14.0 Zenodo preprint and v0.15.0 venue package as version history.
+
 ## 0.15.0, 18 August 2026
 
 - Preserves the public v0.14.0 Zenodo preprint and identifies its version DOI, `10.5281/zenodo.21926005`.

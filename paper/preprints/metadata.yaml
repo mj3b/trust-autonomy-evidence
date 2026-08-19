@@ -1,6 +1,6 @@
 title: "From Formal Authority to Practical Human Control: A traceable method for reconstructing human control in automated decisions"
-version: "0.15.0"
-venue: "Preprints.org"
+version: "0.16.0"
+venue: "Unsubmitted working paper"
 article_type: "Article"
 authors:
   - name: "Mark Julius Banasihan"
@@ -28,4 +28,4 @@ supporting_repository:
   url: "https://github.com/mj3b/trust-autonomy-evidence"
   doi: "10.5281/zenodo.21841127"
 conflicts_of_interest: "The author declares no conflicts of interest."
-submission_state: "COMPILED_DO_NOT_SUBMIT"
+submission_state: "AUTHOR_REVIEW_REQUIRED"

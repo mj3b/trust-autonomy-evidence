@@ -15,9 +15,9 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.15.0"
-WORKING_VERSION = "0.15.0"
-FIGURE_VERSION = "0.9.0"
+REPOSITORY_VERSION = "0.16.0"
+WORKING_VERSION = "0.16.0"
+FIGURE_VERSION = "0.16.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
 REQUIRED_FILES = (
@@ -45,6 +45,7 @@ REQUIRED_FILES = (
     "evidence/human-review-attestation-v0.13.0.json",
     "evidence/human-review-attestation-v0.14.0.json",
     "evidence/human-review-attestation-v0.15.0.json",
+    "evidence/human-review-attestation-v0.16.0.json",
     "evidence/research-lineage.json",
     "evidence/research-activity-log.json",
     "protocols/independent-review-protocol.md",
@@ -94,7 +95,9 @@ REQUIRED_FILES = (
     "analysis/run_solo_validation.py",
     "analysis/build_figures.py",
     "analysis/build_claim_evidence_figure.py",
+    "analysis/derive_event_control_results.py",
     "assessments/generated-results.json",
+    "assessments/event-control-results-v0.16.0.json",
     "reports/solo-validation-v0.2.0.md",
     "reports/public-case-reconstruction-v0.3.0.md",
     "reports/figure-methods.md",
@@ -147,6 +150,7 @@ REQUIRED_FILES = (
     "figures/v0.8.0-claim-evidence-manifest.json",
     "figures/v0.9.0-manifest.json",
     "figures/v0.9.0-claim-evidence-manifest.json",
+    "figures/v0.16.0-claim-evidence-manifest.json",
     "release/v0.3.0-manifest.json",
     "release/v0.4.0-manifest.json",
     "release/v0.5.0-manifest.json",
@@ -166,6 +170,8 @@ REQUIRED_FILES = (
     "release/v0.14.0-release-notes.md",
     "release/v0.15.0-manifest.json",
     "release/v0.15.0-release-notes.md",
+    "release/v0.16.0-manifest.json",
+    "release/v0.16.0-release-notes.md",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -178,6 +184,8 @@ REQUIRED_FILES = (
     "scripts/build_v0_13_claim_map.py",
     "scripts/build_v0_14_claim_map.py",
     "scripts/build_v0_15_claim_map.py",
+    "scripts/build_v0_16_claim_map.py",
+    "scripts/build_v0_16_release_manifest.py",
     "scripts/build_v0_15_release_manifest.py",
     "scripts/build_preprints_source_archive.py",
     "scripts/validate_preprints_package.py",
@@ -223,6 +231,10 @@ REQUIRED_FILES = (
     "audits/v0.15.0/audit-results.json",
     "audits/v0.15.0/audit-report.md",
     "audits/v0.15.0/exceptions.md",
+    "audits/v0.16.0/audit-plan.md",
+    "audits/v0.16.0/audit-results.json",
+    "audits/v0.16.0/audit-report.md",
+    "audits/v0.16.0/exceptions.md",
     "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
     "assessments/v0.6.0/oko-change-ledger.json",
     "paper/citation-chain-log-v0.6.0.md",
@@ -249,6 +261,7 @@ REQUIRED_FILES = (
     "paper/forward-citation-proposition-review-protocol-v0.14.0.md",
     "paper/forward-citation-proposition-review-v0.14.0.md",
     "paper/preprint-readiness-v0.14.0.md",
+    "paper/revision-plan-v0.16.0.md",
     "paper/data/author-screening-gate-v0.8.0.json",
     "paper/data/author-screening-decisions-v0.9.0.csv",
     "paper/data/author-screening-gate-v0.9.0.json",
@@ -287,6 +300,9 @@ REQUIRED_FILES = (
     "paper/preprints/main.tex",
     "paper/preprints/source-manifest.json",
     "paper/preprints/preprints-source-v0.15.0.zip",
+    "paper/preprints/preprints-source-v0.16.0.zip",
+    "paper/preprints/preprints-compiled-v0.16.0.pdf",
+    "paper/preprints/compile-receipt-v0.16.0.json",
     *tuple(f"paper/arxiv/figures-bw/{name}" for name in (
         "fig-1-selection-and-stopping.png",
         "fig-2-practical-control-chain.png",
@@ -601,7 +617,7 @@ def validate_figure_set(failures: list[str]) -> str:
     identifiers = [row.get("figure_id") for row in figures]
     stubs = [row.get("file_stub") for row in figures]
     expected_identifiers = ["FIG-1", "FIG-2", "FIG-3", "FIG-4", "FIG-5", "FIG-6", "FIG-A1", "FIG-A2", "FIG-A4"]
-    if register.get("version") != FIGURE_VERSION or register.get("source_release") != "0.8.0":
+    if register.get("version") != FIGURE_VERSION or register.get("source_release") != "0.15.0":
         fail("figure register version or source release mismatch", failures)
     if identifiers != expected_identifiers:
         fail(f"figure register identifier mismatch: {identifiers}", failures)
@@ -623,31 +639,35 @@ def validate_figure_set(failures: list[str]) -> str:
 
 
 def validate_coe_figure(failures: list[str]) -> str:
-    manifest_path = ROOT / "figures/v0.9.0-claim-evidence-manifest.json"
+    manifest_path = ROOT / "figures/v0.16.0-claim-evidence-manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest.get("version") != "0.9.0" or manifest.get("source_audit") != "0.9.0":
-        fail("v0.9 claim-evidence figure metadata mismatch", failures)
+    if manifest.get("version") != "0.16.0" or manifest.get("source_audit") != "0.16.0":
+        fail("v0.16 claim-evidence figure metadata mismatch", failures)
         return ""
-    aliases = {
-        "evidence/claim-evidence-map.json": "evidence/claim-evidence-map-v0.9.0.json",
-    }
     for section in ("artifacts", "inputs"):
         for row in manifest.get(section, []):
-            relative = aliases.get(row["path"], row["path"])
+            relative = row["path"]
             path = ROOT / relative
             if (
                 not path.is_file()
                 or path.stat().st_size != row["bytes"]
                 or digest(path) != row["sha256"]
             ):
-                fail(f"v0.9 claim-evidence figure mismatch: {relative}", failures)
+                fail(f"v0.16 claim-evidence figure mismatch: {relative}", failures)
     with (ROOT / "figures/data/fig-a3-claim-evidence-integrity.csv").open(
         encoding="utf-8", newline=""
     ) as handle:
         rows = list(csv.DictReader(handle))
-    if len(rows) != 20:
-        fail("v0.9 claim-evidence figure must preserve 20 claim rows", failures)
-    return "claim-evidence figure: PRESERVED (v0.9.0; 20 claims)"
+    if len(rows) != 40:
+        fail("v0.16 claim-evidence figure must contain 40 claim rows", failures)
+    process = subprocess.run(
+        [sys.executable, "analysis/build_claim_evidence_figure.py", "--check"],
+        cwd=ROOT, text=True, capture_output=True, check=False,
+    )
+    if process.returncode != 0:
+        fail(f"v0.16 claim-evidence figure rebuild failed: {(process.stdout + process.stderr).strip()}", failures)
+        return ""
+    return "claim-evidence figure: PASS (v0.16.0; 40 claims)"
 
 
 def validate_coe_audit(failures: list[str]) -> str:
@@ -661,7 +681,7 @@ def validate_coe_audit(failures: list[str]) -> str:
         return ""
 
     for command in (
-        [sys.executable, "scripts/build_v0_15_claim_map.py", "--check"],
+        [sys.executable, "scripts/build_v0_16_claim_map.py", "--check"],
         [sys.executable, "scripts/run_coe_integrity_audit.py", "--check"],
     ):
         process = subprocess.run(
@@ -673,7 +693,7 @@ def validate_coe_audit(failures: list[str]) -> str:
             return ""
 
     current = json.loads(
-        (ROOT / "audits/v0.15.0/audit-results.json").read_text(encoding="utf-8")
+        (ROOT / "audits/v0.16.0/audit-results.json").read_text(encoding="utf-8")
     )
     controls = current.get("negative_controls", [])
     detected = sum(1 for row in controls if row.get("detected"))
@@ -688,12 +708,17 @@ def validate_coe_audit(failures: list[str]) -> str:
     c39 = next((row for row in claims if row.get("claim_id") == "PAPER-C39"), {})
     c40 = next((row for row in claims if row.get("claim_id") == "PAPER-C40"), {})
     c41 = next((row for row in claims if row.get("claim_id") == "PAPER-C41"), {})
+    c42 = next((row for row in claims if row.get("claim_id") == "PAPER-C42"), {})
+    c43 = next((row for row in claims if row.get("claim_id") == "PAPER-C43"), {})
+    c44 = next((row for row in claims if row.get("claim_id") == "PAPER-C44"), {})
+    c45 = next((row for row in claims if row.get("claim_id") == "PAPER-C45"), {})
+    c46 = next((row for row in claims if row.get("claim_id") == "PAPER-C46"), {})
     if (
-        current.get("version") != "0.15.0"
+        current.get("version") != "0.16.0"
         or current.get("status") != "PASS_WITH_EXCEPTIONS"
-        or len(claims) != 35
-        or len(controls) != 33
-        or detected != 33
+        or len(claims) != 40
+        or len(controls) != 39
+        or detected != 39
         or c32.get("conclusion_eligible") is not False
         or c33.get("conclusion_eligible") is not True
         or c34.get("conclusion_eligible") is not True
@@ -706,10 +731,11 @@ def validate_coe_audit(failures: list[str]) -> str:
         or c40.get("conclusion_eligible") is not True
         or c41.get("conclusion_eligible") is not False
         or c41.get("support") != "indeterminate"
+        or any(row.get("conclusion_eligible") is not True for row in (c42, c43, c44, c45, c46))
     ):
-        fail("current v0.15 claim-evidence audit metadata mismatch", failures)
+        fail("current v0.16 claim-evidence audit metadata mismatch", failures)
         return ""
-    return "chain-of-evidence audit: PASS_WITH_EXCEPTIONS (35 claims; 33/33 controls detected; final submission gate open)"
+    return "chain-of-evidence audit: PASS_WITH_EXCEPTIONS (40 claims; 39/39 controls detected)"
 
 
 def validate_adjudication(failures: list[str]) -> str:

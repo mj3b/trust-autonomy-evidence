@@ -20,11 +20,11 @@ ROOT = Path(__file__).resolve().parents[1]
 CLAIM_MAP_PATH = ROOT / "evidence/claim-evidence-map.json"
 LINEAGE_PATH = ROOT / "evidence/research-lineage.json"
 MUTATIONS_PATH = ROOT / "fixtures/coe-audit-mutations.json"
-RESULT_PATH = ROOT / "audits/v0.15.0/audit-results.json"
-REPORT_PATH = ROOT / "audits/v0.15.0/audit-report.md"
-AUDIT_VERSION = "0.15.0"
-AUDIT_ID = "TAE-COE-AUDIT-V0.15.0"
-AUDIT_DATE = "2026-08-18"
+RESULT_PATH = ROOT / "audits/v0.16.0/audit-results.json"
+REPORT_PATH = ROOT / "audits/v0.16.0/audit-report.md"
+AUDIT_VERSION = "0.16.0"
+AUDIT_ID = "TAE-COE-AUDIT-V0.16.0"
+AUDIT_DATE = "2026-08-19"
 EXCEPTIONS = ["COE-EX-03", "COE-EX-04", "COE-EX-06", "COE-EX-07", "COE-EX-10"]
 FITNESS_DIMENSIONS = (
     "directness",
@@ -446,7 +446,7 @@ def build_result() -> dict[str, Any]:
         "version": AUDIT_VERSION,
         "audit_id": AUDIT_ID,
         "audit_date": AUDIT_DATE,
-        "scope": "Thirty-five material claims declared in TAE-COE-V0.15.0, including the closed v0.14 research claims, the Zenodo prior-version trace, independent Node & Norm author metadata, a specific Harvard University student-status note, and an open final-submission gate. Independent validity, 980 retrieval outcomes, authenticated database coverage, the 177-record backward-reference stratum, institutional transfer, platform acceptance, and peer review remain outside the completed evidence base.",
+        "scope": "Forty material claims declared in TAE-COE-V0.16.0, including the formal six-stage rule, deterministic case-level results, bounded no-pass conclusion, proposed timing margin, and execution-propagation terminology. Independent validity, 980 retrieval outcomes, authenticated database coverage, the 177-record backward-reference stratum, contemporary-system transfer, platform acceptance, and peer review remain outside the completed evidence base.",
         "status": status,
         "checks": checks,
         "negative_controls": controls,
@@ -461,7 +461,7 @@ def build_result() -> dict[str, Any]:
 
 def render_report(result: dict[str, Any]) -> str:
     lines = [
-        "# v0.15.0 Chain-of-Evidence Integrity Audit",
+        "# v0.16.0 Chain-of-Evidence Integrity Audit",
         "",
         f"**Audit date:** {result['audit_date']}",
         "",
@@ -471,7 +471,7 @@ def render_report(result: dict[str, Any]) -> str:
         "",
         "## Decision",
         "",
-        "The declared v0.15 claim set preserves the v0.14 research gates and adds two supported venue-provenance claims. The author confirmed the conflict declaration on 2026-08-18. The exact source archive compiled in Overleaf with zero errors and received an authorized visual inspection. The final-submission claim remains ineligible because upload review and exact submitted-file hashes are open. All 33 controlled corruptions remain detected. The result supplies no independent reliability, originality, institutional-transfer, platform-acceptance, peer-review, or completed systematic-search finding.",
+        "The declared v0.16 claim set preserves the earlier research gates and adds five author-reviewed manuscript claims. The formal rule and deterministic builder derive one unresolved case, two failing cases, and zero passing cases from the released assessment states. The timing margin remains a proposal because the historical packets lack the required timestamps. The earlier Preprints.org readiness claim remains ineligible, and the venue subsequently declined the submission. All 39 controlled corruptions must remain detected. The result supplies no independent reliability, universal originality, contemporary-system transfer, platform acceptance, peer-review, or completed systematic-search finding.",
         "",
         "## Integrity checks",
         "",
@@ -500,7 +500,7 @@ def render_report(result: dict[str, Any]) -> str:
         "- `COE-EX-04`: authenticated database searching, 980 retrieval outcomes, and the 177-record backward-reference stratum remain incomplete.",
         "- `COE-EX-06`: RS-DQ-004 is closed for screening, yet readable text and author identity remain unresolved; RS-DQ-005 remains restricted to its abstract.",
         "- `COE-EX-07`: PAPER-C32 remains provisional because one model-architecture study cannot establish institutional or public-incident transfer.",
-        "- `COE-EX-10`: PAPER-C41 remains provisional until the author reviews the Preprints.org upload and freezes the submitted-file hashes. The conflict declaration, Overleaf compilation, and authorized visual inspection were recorded on 2026-08-18.",
+        "- `COE-EX-10`: PAPER-C41 remains a historical, conclusion-ineligible v0.15 readiness claim. Preprints.org declined submission 229011 on 2026-08-18; the repository does not treat venue acceptance as an integrity result.",
         "",
         "## Closed exception",
         "",

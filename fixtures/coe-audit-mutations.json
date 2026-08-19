@@ -1,6 +1,6 @@
 {
-  "version": "0.14.0",
-  "suite_id": "TAE-COE-NEGATIVE-CONTROLS-V0.14.0",
+  "version": "0.16.0",
+  "suite_id": "TAE-COE-NEGATIVE-CONTROLS-V0.16.0",
   "controls": [
     {"control_id": "COE-NC-01", "description": "Change one expected assessment state.", "mutation_type": "numeric_mismatch", "target_claim": "PAPER-C03", "expected_check": "score_verification", "parameters": {"evidence_id": "C03-OKO-AUTHORITY", "replacement": "unsupported"}},
     {"control_id": "COE-NC-02", "description": "Replace one evidence path with a missing file.", "mutation_type": "missing_reference", "target_claim": "PAPER-C05", "expected_check": "reference_verification", "parameters": {"evidence_id": "C05-AUTHORITY"}},
@@ -34,6 +34,12 @@
     {"control_id": "COE-NC-30", "description": "Fail completeness for the proposition-permission composition.", "mutation_type": "fitness_failure", "target_claim": "PAPER-C36", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dimension": "completeness"}},
     {"control_id": "COE-NC-31", "description": "Remove the implementation marker paired with the proposition-review protocol.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C35", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C35-IMPLEMENTATION"}},
     {"control_id": "COE-NC-32", "description": "Replace the source-synthesis dependency with an unresolved claim.", "mutation_type": "unresolved_dependency", "target_claim": "PAPER-C38", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dependency": "PAPER-C99"}},
-    {"control_id": "COE-NC-33", "description": "Replace the verified direct-query resolution digest with a stale digest.", "mutation_type": "stale_hash", "target_claim": "PAPER-C37", "expected_check": "reference_verification", "parameters": {"evidence_id": "C37-PERMISSION"}}
+    {"control_id": "COE-NC-33", "description": "Replace the verified direct-query resolution digest with a stale digest.", "mutation_type": "stale_hash", "target_claim": "PAPER-C37", "expected_check": "reference_verification", "parameters": {"evidence_id": "C37-PERMISSION"}},
+    {"control_id": "COE-NC-34", "description": "Change the derived event-control fail count.", "mutation_type": "numeric_mismatch", "target_claim": "PAPER-C43", "expected_check": "score_verification", "parameters": {"evidence_id": "C43-FAIL-COUNT", "replacement": 1}},
+    {"control_id": "COE-NC-35", "description": "Remove the formal event-control protocol reference.", "mutation_type": "missing_reference", "target_claim": "PAPER-C42", "expected_check": "reference_verification", "parameters": {"evidence_id": "C42-PROTOCOL"}},
+    {"control_id": "COE-NC-36", "description": "Remove the implementation marker paired with the event-control rule.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C42", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C42-IMPLEMENTATION"}},
+    {"control_id": "COE-NC-37", "description": "Replace the no-pass conclusion dependencies with an unresolved claim.", "mutation_type": "unresolved_dependency", "target_claim": "PAPER-C44", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dependency": "PAPER-C99"}},
+    {"control_id": "COE-NC-38", "description": "Remove the recorded human review for the proposed timing measure.", "mutation_type": "support_review_removed", "target_claim": "PAPER-C45", "expected_check": "reference_verification", "parameters": {}},
+    {"control_id": "COE-NC-39", "description": "Remove the execution-propagation figure-builder reference.", "mutation_type": "missing_reference", "target_claim": "PAPER-C46", "expected_check": "reference_verification", "parameters": {"evidence_id": "C46-FIGURE"}}
   ]
 }

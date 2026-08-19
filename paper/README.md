@@ -1,6 +1,6 @@
 # Paper Workspace
 
-This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. The v0.14.0 working checkpoint closes proposition review for all 13 close forward-citation sources. Five sources have one bounded manuscript proposition permission each, two remain background-only, and six are quarantined. The fifth direct-query screening decision is closed with zero source-content permission. Released case packets, assessments, and manifests remain the controlling research record.
+This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. Version 0.16.0 rebuilds the explanation, formalizes the event-control decision rule, and derives one unresolved and two failing case-level results without changing the released case states. The v0.14.0 proposition gate remains controlling for source use: five sources have one bounded manuscript permission each, two remain background-only, and six are quarantined. Released case packets, assessments, and manifests remain the controlling research record.
 
 **PR #11 merge commit:** [`a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec`](https://github.com/mj3b/trust-autonomy-evidence/commit/a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec)
 
@@ -15,6 +15,7 @@ This directory develops a methods and comparative-case paper from the repository
 | File | Short description |
 |---|---|
 | [`paper-charter.md`](paper-charter.md) | Fixes the paper type, question, contribution, audience, and claim boundary. |
+| [`revision-plan-v0.16.0.md`](revision-plan-v0.16.0.md) | Freezes the reader-first rebuild, formal decision rules, terminology changes, open evidence gates, and rejection conditions. |
 | [`manuscript.md`](manuscript.md) | Preserves the auditable manuscript source with Pandoc citation identifiers. |
 | [`manuscript-reader.md`](manuscript-reader.md) | Presents the same manuscript with clickable author-year citations and a rendered reference list for GitHub readers. |
 | [`manuscript-pressure-test-v0.8.0.md`](manuscript-pressure-test-v0.8.0.md) | Records citation, count, claim, coding-stability, ethics, and submission-gate findings and their resolutions. |
@@ -54,14 +55,16 @@ This directory develops a methods and comparative-case paper from the repository
 | [`forward-citation-proposition-review-v0.14.0.md`](forward-citation-proposition-review-v0.14.0.md) | Explains the permitted propositions, corrected identities, controls, and remaining boundary. |
 | [`data/direct-query-resolution-v0.14.0.json`](data/direct-query-resolution-v0.14.0.json) | Closes RS-DQ-004 for screening while preserving zero source-content permission. |
 | [`preprint-readiness-v0.14.0.md`](preprint-readiness-v0.14.0.md) | Separates completed evidence gates from author and arXiv submission decisions. |
-| [`arxiv/`](arxiv/) | Contains the professional single-column LaTeX source, canonical 25-page PDF under matching preprint and Overleaf paths, deterministic source archive, metadata, source-to-output receipts, and all-17-display placement checks. |
+| [`arxiv/`](arxiv/) | Preserves the historical v0.14.0 arXiv-format source, 25-page PDF, archive, metadata, and placement receipt. |
+| [`preprints/`](preprints/) | Contains the v0.16.0 single-column LaTeX source, deterministic archive, 30-page compiled review PDF, metadata, and compile receipt. |
 | [`../evidence/human-review-attestation-v0.11.0.json`](../evidence/human-review-attestation-v0.11.0.json) | Records author review of the five direct-query states and six added claims, with AI-assistance limits. |
 | [`../evidence/human-review-attestation-v0.12.0.json`](../evidence/human-review-attestation-v0.12.0.json) | Records the 102-record workflow boundary and states that 71 source reviews remain pending. |
 | [`../evidence/human-review-attestation-v0.13.0.json`](../evidence/human-review-attestation-v0.13.0.json) | Records author authorization, AI assistance, decision accountability, 71 completed decisions, and zero manuscript claim permissions. |
 | [`../evidence/human-review-attestation-v0.14.0.json`](../evidence/human-review-attestation-v0.14.0.json) | Records author authorization and accountability for the proposition, direct-query, claim, audit, and preprint workflow. |
-| [`../evidence/claim-evidence-map.json`](../evidence/claim-evidence-map.json) | Maps 28 material claims to exact evidence, fitness decisions, dependencies, limits, and reversal conditions. |
+| [`../evidence/claim-evidence-map.json`](../evidence/claim-evidence-map.json) | Maps 40 material claims to exact evidence, fitness decisions, dependencies, limits, and reversal conditions. |
 | [`../audits/v0.13.0/audit-report.md`](../audits/v0.13.0/audit-report.md) | Reports the 28-claim audit, 26 detected controls, four exceptions, and the proposition-review boundary. |
 | [`../audits/v0.14.0/audit-report.md`](../audits/v0.14.0/audit-report.md) | Reports the 32-claim audit, 33 detected controls, five bounded source permissions, and four open exceptions. |
+| [`../audits/v0.16.0/audit-report.md`](../audits/v0.16.0/audit-report.md) | Reports the 40-claim audit, 39 detected controls, and the remaining independent-validity and coverage exceptions. |
 | [`data/authenticated-interface-searches-v0.10.0.csv`](data/authenticated-interface-searches-v0.10.0.csv) | Tracks the five authenticated and disciplinary-interface searches. |
 | [`citation-chain-log-v0.6.0.md`](citation-chain-log-v0.6.0.md) | Records the index-based citation sample and its limits. |
 | [`literature-support-audit-v0.6.0.md`](literature-support-audit-v0.6.0.md) | Preserves the 16-proposition audit for the earlier introduction and related-work draft. |

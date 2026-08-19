@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the v0.9.0 journal-style publication figures from committed artifacts."""
+"""Build the v0.16.0 journal-style publication figures from committed artifacts."""
 
 from __future__ import annotations
 
@@ -29,8 +29,8 @@ from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import FancyArrowPatch, Rectangle  # noqa: E402
 
 
-FIGURE_SET_VERSION = "0.9.0"
-SOURCE_RELEASE = "0.8.0"
+FIGURE_SET_VERSION = "0.16.0"
+SOURCE_RELEASE = "0.15.0"
 
 CASE_ASSESSMENT_PATHS = (
     "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
@@ -53,14 +53,14 @@ CONTROL_FIELDS = (
     "repair",
     "reform",
 )
-PRE_ACTION_FIELDS = CONTROL_FIELDS[:6]
+EVENT_CONTROL_FIELDS = CONTROL_FIELDS[:6]
 CONTROL_LABELS = {
-    "access": "Access before action",
-    "comprehension": "Comprehension",
-    "authority": "Formal authority",
-    "feasibility": "Feasible challenge",
-    "exercise": "Exercised challenge",
-    "effect": "Protective effect",
+    "access": "Information access",
+    "comprehension": "Comprehension capacity",
+    "authority": "Intervention authority",
+    "feasibility": "Intervention feasibility",
+    "exercise": "Exercised judgment",
+    "effect": "Execution propagation",
     "correction": "Correction",
     "repair": "Repair",
     "reform": "Institutional reform",
@@ -532,7 +532,7 @@ def build_evidence_boundaries(assessments: list[dict], data_dir: Path, figure_di
     for assessment in assessments:
         findings = assessment["practical_control"]
         for state in displayed_states:
-            stages = [field for field in PRE_ACTION_FIELDS if findings[field]["state"] == state]
+            stages = [field for field in EVENT_CONTROL_FIELDS if findings[field]["state"] == state]
             rows.append(
                 {
                     "case_id": assessment["case_id"],
@@ -540,12 +540,12 @@ def build_evidence_boundaries(assessments: list[dict], data_dir: Path, figure_di
                     "state": state,
                     "count": len(stages),
                     "stages": ";".join(stages),
-                    "denominator": len(PRE_ACTION_FIELDS),
+                    "denominator": len(EVENT_CONTROL_FIELDS),
                 }
             )
-        outside = [field for field in PRE_ACTION_FIELDS if findings[field]["state"] == "outside_scope"]
+        outside = [field for field in EVENT_CONTROL_FIELDS if findings[field]["state"] == "outside_scope"]
         if outside:
-            raise ValueError(f"pre-action evidence-boundary figure contains outside-scope fields: {outside}")
+            raise ValueError(f"event-control evidence-boundary figure contains outside-scope fields: {outside}")
     write_csv(
         data_dir / "fig-6-evidence-boundaries.csv",
         ["case_id", "case_title", "state", "count", "stages", "denominator"],
@@ -565,7 +565,7 @@ def build_evidence_boundaries(assessments: list[dict], data_dir: Path, figure_di
         for state in displayed_states:
             count = sum(
                 assessment["practical_control"][field]["state"] == state
-                for field in PRE_ACTION_FIELDS
+                for field in EVENT_CONTROL_FIELDS
             )
             if count == 0:
                 continue
@@ -593,9 +593,9 @@ def build_evidence_boundaries(assessments: list[dict], data_dir: Path, figure_di
                 zorder=3,
             )
             left += count
-    ax.set_xlim(0, len(PRE_ACTION_FIELDS))
-    ax.set_xticks(range(len(PRE_ACTION_FIELDS) + 1))
-    ax.set_xlabel("Pre-action practical-control stages (six per case)", fontsize=7.6)
+    ax.set_xlim(0, len(EVENT_CONTROL_FIELDS))
+    ax.set_xticks(range(len(EVENT_CONTROL_FIELDS) + 1))
+    ax.set_xlabel("Event-level practical-control stages (six per case)", fontsize=7.6)
     ax.set_yticks(
         range(len(assessments)),
         [CASE_LABELS[item["case_id"]].replace("\n", " ") for item in assessments],

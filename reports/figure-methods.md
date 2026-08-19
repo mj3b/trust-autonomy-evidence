@@ -24,15 +24,15 @@ The AI Incident Database input contained 1,607 incident records and 7,452 report
 
 ### Figure 2. Practical-control states across three public cases
 
-Twenty-seven declared states compare nine practical-control propositions across three purposefully selected public cases. Oko is partially supported across the six stages from access through effect under the v0.6 adjudication. Patriot ZG710 supports authority while comprehension, feasibility, exercise, and effect are unsupported. Patriot F/A-18C supports authority while comprehension, feasibility, and exercise remain indeterminate. S = supported; P = partially supported; U = unsupported; I = indeterminate; O = outside scope. The figure supplies no frequency, effect-size, causal, reliability, or population estimate.
+Twenty-seven declared states compare nine practical-control propositions across three purposefully selected public cases. Oko is partially supported across the six stages from access through execution propagation under the v0.6 adjudication. Patriot ZG710 supports authority while comprehension, feasibility, exercise, and execution propagation are unsupported. Patriot F/A-18C supports authority while comprehension, feasibility, and exercise remain indeterminate and execution propagation is unsupported. S = supported; P = partially supported; U = unsupported; I = indeterminate; O = outside scope. The figure supplies no frequency, effect-size, causal, reliability, or population estimate.
 
 #### Derivation of the central lesson
 
-1. Extract the six pre-action states for each case: access, comprehension, authority, feasibility, exercise, and effect.
+1. Extract the six event-level states for each case: access, comprehension, authority, feasibility, exercise, and execution propagation. The machine-readable field for the last stage remains `effect`.
 2. Compare authority. It is partially supported in Oko and supported in both Patriot packets.
-3. Compare the other stages. Oko carries partial support across all six. ZG710 carries partial access and unsupported comprehension, feasibility, exercise, and effect. F/A-18C carries partial access, unresolved comprehension, feasibility, and exercise, and an unsupported effect.
+3. Compare the other stages. Oko carries partial support across all six. ZG710 carries partial access and unsupported comprehension, feasibility, exercise, and execution propagation. F/A-18C carries partial access, unresolved comprehension, feasibility, and exercise, and unsupported execution propagation.
 4. Keep unsupported and indeterminate separate. ZG710 contains evidence against several conditions. F/A-18C lacks enough public evidence to decide several conditions.
-5. State the bounded inference. Authority evidence does not determine the other practical-control stages in these packets. Each stage needs its own evidence path connecting information, understanding, permission, opportunity, action, and effect.
+5. State the bounded inference. Authority evidence does not determine the other practical-control stages in these packets. Each stage needs its own evidence path connecting information, understanding, permission, opportunity, action, and execution propagation.
 
 This comparison does not isolate a causal effect, estimate a population relationship, or assign equal weight to every condition in another setting.
 
@@ -48,9 +48,9 @@ Thirty-six declared states compare twelve trust-evidence propositions across thr
 
 Eight Semantic Scholar direct queries returned 184 records. Fourteen resolved seed chains returned 2,482 reference and citation records. The combined pool contained 2,666 records and 2,431 after deduplication. Mark Julius Banasihan completed the 89-record author queue. The final full-pool state contains 27 close, 45 background, 10 single-component exclusions, 1,259 topic exclusions, 1,087 inaccessible records, and 3 outside-cutoff records. The right panel uses a declared logarithmic count axis. Blue points identify the retained close and background sets. The display supports the final queue result and supplies no completed-review or universal-originality finding.
 
-### Figure 6. Evidence boundaries across six pre-action practical-control stages
+### Figure 6. Evidence boundaries across six event-level practical-control stages
 
-Eighteen categorical findings cover six pre-action stages in each of three purposefully selected cases. Oko contains six partially supported findings. ZG710 contains one supported, one partially supported, and four unsupported findings. F/A-18C contains one supported, one partially supported, one unsupported, and three indeterminate findings. The stacked bars preserve the four categories. They assign no numeric distance among states and supply no missingness rate, reliability estimate, aggregate control score, or case ranking.
+Eighteen categorical findings cover six event-level stages in each of three purposefully selected cases. Oko contains six partially supported findings. ZG710 contains one supported, one partially supported, and four unsupported findings. F/A-18C contains one supported, one partially supported, one unsupported, and three indeterminate findings. The stacked bars preserve the four categories. They assign no numeric distance among states and supply no missingness rate, reliability estimate, aggregate control score, or case ranking.
 
 ### Figure A1. Prespecified mutation responses
 
@@ -66,7 +66,7 @@ Six categorical decisions report traceability, integrity, support review, eviden
 
 ### Figure A4. Versioned correction of the Oko assessment
 
-Six Oko pre-action states move from supported in v0.3.0 to partially supported in v0.6.0. The source packet remained fixed. The v0.6 protocol, frozen before reassessment, required direct and contemporaneous evidence for a supported state. The display records a method-driven correction and supplies no new historical evidence or error-frequency estimate.
+Six Oko event-level states move from supported in v0.3.0 to partially supported in v0.6.0. The source packet remained fixed. The v0.6 protocol, frozen before reassessment, required direct and contemporaneous evidence for a supported state. The display records a method-driven correction and supplies no new historical evidence or error-frequency estimate.
 
 ## Missingness and uncertainty
 

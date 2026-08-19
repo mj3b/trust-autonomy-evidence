@@ -1,7 +1,7 @@
 {
-  "version": "0.15.0",
-  "scope_id": "TAE-COE-V0.15.0",
-  "description": "Material paper and repository claims audited through v0.15.0, including prior-version provenance, venue identity metadata, and an explicit final-submission gate.",
+  "version": "0.16.0",
+  "scope_id": "TAE-COE-V0.16.0",
+  "description": "Material paper and repository claims audited through v0.16.0, including the formal event-control rule, deterministic case-level results, bounded no-pass conclusion, proposed timing margin, and execution-propagation terminology.",
   "claims": [
     {
       "claim_id": "PAPER-C02",
@@ -174,8 +174,8 @@
       "status": "supported",
       "verification_rule": "The validator must contain executable checks for each named internal property and complete successfully for the committed artifacts.",
       "evidence": [
-        {"evidence_id": "C08-METHOD", "path": "reports/figure-methods.md", "locator_type": "markdown_heading", "locator": "## Reproducibility check", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c37b0d237dc544351273bd6b5391793ea5f89d82c8008ed08eafa1cef7647ac2", "content_review": "recorded"},
-        {"evidence_id": "C08-IMPLEMENTATION", "path": "scripts/validate_repository.py", "locator_type": "text_marker", "locator": "validate_case_interactions", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "a6ad768453e2c853238a6f04892b4136550493d4f9701c6d7dfdef40d0120084", "content_review": "recorded"}
+        {"evidence_id": "C08-METHOD", "path": "reports/figure-methods.md", "locator_type": "markdown_heading", "locator": "## Reproducibility check", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "0d5b4cf1b7cefc3955ccda5712e9dc2ee480317beb0fc108a80dbc8359316e2f", "content_review": "recorded"},
+        {"evidence_id": "C08-IMPLEMENTATION", "path": "scripts/validate_repository.py", "locator_type": "text_marker", "locator": "validate_case_interactions", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "0c16861148100848187f86492f36ddf39027154dce74c66c638df4a45c86e9a5", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The method report names the control and the script implements the checks."},
@@ -305,7 +305,7 @@
       "verification_rule": "The protocol and claim-map schema must define all five gates and store their required states.",
       "evidence": [
         {"evidence_id": "C21-PROTOCOL", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Five gates", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4cbe00f5c9b3ec68fa09f2d9db36eaac1646ed1fa366a30c310d073be7d70f21", "content_review": "recorded"},
-        {"evidence_id": "C21-SCHEMA", "path": "schemas/claim-evidence-map.schema.json", "locator_type": "text_marker", "locator": "dependency_closure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "886bf46ed7050f67fcc1b1da752196d03a7ef81ba34d51da73aaba8572b48e0f", "content_review": "recorded"}
+        {"evidence_id": "C21-SCHEMA", "path": "schemas/claim-evidence-map.schema.json", "locator_type": "text_marker", "locator": "dependency_closure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "30c1d7c42774378b14786e7dd8fd6ce78629dcac3275868d8894d548279a9f8a", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The protocol defines the gates and the schema stores them."},
@@ -356,7 +356,7 @@
       "verification_rule": "The protocol must state the rule and the audit must recompute eligibility from status, five gates, and dependencies.",
       "evidence": [
         {"evidence_id": "C24-METHOD", "path": "protocols/coe-integrity-audit.md", "locator_type": "markdown_heading", "locator": "## Conclusion-eligibility rule", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4cbe00f5c9b3ec68fa09f2d9db36eaac1646ed1fa366a30c310d073be7d70f21", "content_review": "recorded"},
-        {"evidence_id": "C24-IMPLEMENTATION", "path": "fixtures/coe-audit-mutations.json", "locator_type": "text_marker", "locator": "fitness_failure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "59b3636e31e98c0b85b776491530bdd000f11cd4822b3d9f22a96abf1e64e519", "content_review": "recorded"}
+        {"evidence_id": "C24-IMPLEMENTATION", "path": "fixtures/coe-audit-mutations.json", "locator_type": "text_marker", "locator": "fitness_failure", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5b4e4c7b8b423a5117d3e532f003a56a322ec36e21dce429818bcc651ec94a3a", "content_review": "recorded"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The protocol states the rule and the mutation suite tests the failed-fitness branch."},
@@ -408,7 +408,7 @@
       "verification_rule": "The literature audit must resolve every registered citation key, the reader file must declare its derivation, and the renderer check must reject unresolved citation syntax.",
       "evidence": [
         {"evidence_id": "C16-LITERATURE-AUDIT", "path": "paper/literature-support-audit-v0.9.0.json", "locator_type": "json_pointer", "locator": "/version", "role": "source", "source_id": null, "expected_value": "0.9.0", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "41dbbbebcc21084b015711e3c129bb40b3428d0271be5f6f0d8a36a0e73a6382", "content_review": "recorded"},
-        {"evidence_id": "C16-READER", "path": "paper/manuscript-reader.md", "locator_type": "text_marker", "locator": "This file converts the manuscript's Pandoc citation keys into clickable author-year citations.", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "25b3bbf275f989d9f301e379299cc84eb1475df545655bb25280f829fc394677", "content_review": "recorded"},
+        {"evidence_id": "C16-READER", "path": "paper/manuscript-reader.md", "locator_type": "text_marker", "locator": "This file converts the manuscript's Pandoc citation keys into clickable author-year citations.", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "9f4f67d77fe0d8f0b4730d04e8cf410365e3c2dcb69492b555edf7d0c1b1ecdb", "content_review": "recorded"},
         {"evidence_id": "C16-RENDERER", "path": "scripts/render_reader_manuscript.py", "locator_type": "text_marker", "locator": "reader manuscript still contains an unresolved Pandoc citation", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "54645add37a51637309a0eafa9b4b7043acd871fc8c1e9d251b178dd90f93061", "content_review": "recorded"}
       ],
       "fitness": {
@@ -466,7 +466,7 @@
       "status": "supported",
       "verification_rule": "Table A3 and the pressure test must distinguish rule-change comparison from repeat coding and record the absence of an independent second assessor.",
       "evidence": [
-        {"evidence_id": "C18-TABLE", "path": "paper/tables.md", "locator_type": "markdown_heading", "locator": "## Table A3. Availability of coding-stability evidence", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "2446728b089cb7c0dbaceb650ff5c7e94c1ccdba15be1681334a8da46fbf2213", "content_review": "recorded"},
+        {"evidence_id": "C18-TABLE", "path": "paper/tables.md", "locator_type": "markdown_heading", "locator": "## Table A3. Availability of coding-stability evidence", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "52b690db3b041b098b98a4b9c4bb86e03d29e5d91f141f1a1497b21ac9518a40", "content_review": "recorded"},
         {"evidence_id": "C18-PRESSURE-TEST", "path": "paper/manuscript-pressure-test-v0.8.0.md", "locator_type": "text_marker", "locator": "No independent second assessor exists.", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "74afe45f166dffbc92d8160328a293d53a50dd3f7d2ac6ff49ffc63804145489", "content_review": "recorded"},
         {"evidence_id": "C18-LEDGER", "path": "assessments/v0.6.0/oko-change-ledger.json", "locator_type": "json_pointer", "locator": "/dependency_decision/paper_blocker_state", "role": "provenance", "source_id": "TAE-PUB-001", "expected_value": "resolved_by_reclassification", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "2a4f4a166244022e19a446edbd64af0f8b562c75739219bee41508029bedb9d3", "content_review": "recorded"}
       ],
@@ -884,7 +884,7 @@
         {"evidence_id": "C38-PERCEPTION", "path": "paper/data/forward-citation-proposition-review-v0.14.0.csv", "locator_type": "csv_cell", "locator": "sample_id=RS-FC-042|permitted_proposition", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "6a19f58ff4962dbbf6aaec1fb9a86a0ad3378912e97ad79e4cbd518f6c10bb59", "content_review": "recorded", "expected_value": "In a secondary analysis of 99 Tesla-user interviews, perceived safety sometimes coexisted with failures to track driver reasons, while takeover readiness and prior reliable experience shaped perception."},
         {"evidence_id": "C38-FEEDBACK", "path": "paper/data/forward-citation-proposition-review-v0.14.0.csv", "locator_type": "csv_cell", "locator": "sample_id=RS-FC-052|permitted_proposition", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "6a19f58ff4962dbbf6aaec1fb9a86a0ad3378912e97ad79e4cbd518f6c10bb59", "content_review": "recorded", "expected_value": "In a 28-participant sandbox study, direct manipulation had a higher task-completion rate than text guidance, 83.3 percent versus 61.9 percent, while delayed or ineffective feedback made intervention effects harder for participants to assess."},
         {"evidence_id": "C38-METHOD", "path": "paper/data/forward-citation-proposition-review-v0.14.0.csv", "locator_type": "csv_cell", "locator": "sample_id=RS-FC-096|permitted_proposition", "role": "source", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "6a19f58ff4962dbbf6aaec1fb9a86a0ad3378912e97ad79e4cbd518f6c10bb59", "content_review": "recorded", "expected_value": "Three analyst teams applied HFACS, AcciMap, and STAMP to the same official report; the methods produced different factor sets, and the authors state that missing report detail can hide material factors."},
-        {"evidence_id": "C38-MANUSCRIPT", "path": "paper/manuscript.md", "locator_type": "text_marker", "locator": "perceived control and formal feedback access can remain separate from demonstrated intervention effect", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "ae540c69679bb01e94c2fc008312b521f310894449ed207feb58cd7302170540", "content_review": "recorded"},
+        {"evidence_id": "C38-MANUSCRIPT", "path": "paper/manuscript.md", "locator_type": "text_marker", "locator": "perceived control and formal feedback access can remain separate from demonstrated intervention effect", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5f91fe38ca2c96107ab521dd0b3697aa4b826fd512da43abe7493911a7eb0d0b", "content_review": "recorded"},
         {"evidence_id": "C38-ATTESTATION", "path": "evidence/human-review-attestation-v0.14.0.json", "locator_type": "text_marker", "locator": "PAPER-C38", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "766f3c0052e90c545a7b6d2b7be23c97d20ee3490af3eefc76e2b83a7ce46573", "content_review": "recorded"}
       ],
       "fitness": {
@@ -910,9 +910,9 @@
       "status": "supported",
       "verification_rule": "The prior platform, version, DOI, manuscript relationship statement, and package note must resolve to the same frozen record.",
       "evidence": [
-        {"evidence_id": "C39-METADATA", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "doi: \"10.5281/zenodo.21926005\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f14934c477fb27ea60fb8b08901ae17ab78045cff551df5f57ac4508bf17d382", "content_review": "recorded"},
-        {"evidence_id": "C39-MANUSCRIPT", "path": "paper/manuscript.md", "locator_type": "text_marker", "locator": "The v0.14.0 preprint was archived on Zenodo", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "ae540c69679bb01e94c2fc008312b521f310894449ed207feb58cd7302170540", "content_review": "recorded"},
-        {"evidence_id": "C39-PACKAGE", "path": "paper/preprints/README.md", "locator_type": "text_marker", "locator": "The package identifies the Zenodo v0.14.0 preprint", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c13e3a8437c81a41179a84b6a78e8188bed78e53bb2bbac4254bc5f6bf6c930e", "content_review": "recorded"},
+        {"evidence_id": "C39-METADATA", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "doi: \"10.5281/zenodo.21926005\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "39e9fe0909cf1d17abc5555fbf365c0629eb290bc77a4548bc97ef37f9c09210", "content_review": "recorded"},
+        {"evidence_id": "C39-MANUSCRIPT", "path": "paper/manuscript.md", "locator_type": "text_marker", "locator": "The v0.14.0 preprint was archived on Zenodo", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5f91fe38ca2c96107ab521dd0b3697aa4b826fd512da43abe7493911a7eb0d0b", "content_review": "recorded"},
+        {"evidence_id": "C39-PACKAGE", "path": "paper/preprints/README.md", "locator_type": "text_marker", "locator": "The package identifies the Zenodo v0.14.0 preprint", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "744800e10702a0e045fa1e1023f240b64ffed63577615eedbe117c1b5979f431", "content_review": "recorded"},
         {"evidence_id": "C39-ATTESTATION", "path": "evidence/human-review-attestation-v0.15.0.json", "locator_type": "text_marker", "locator": "PAPER-C39", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5a8f65e03c868cb0321cf49741eafe80d9f8469ef4e1c6b729e6e900a090eca7", "content_review": "recorded"}
       ],
       "fitness": {
@@ -938,13 +938,13 @@
       "status": "supported",
       "verification_rule": "The full author name, ORCID, Node & Norm affiliation, student status, independence disclaimer, two correspondence addresses, and author attestation must resolve in the venue package.",
       "evidence": [
-        {"evidence_id": "C40-AUTHOR", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "name: \"Mark Julius Banasihan\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f14934c477fb27ea60fb8b08901ae17ab78045cff551df5f57ac4508bf17d382", "content_review": "recorded"},
-        {"evidence_id": "C40-ORCID", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "orcid: \"0009-0001-8121-2878\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f14934c477fb27ea60fb8b08901ae17ab78045cff551df5f57ac4508bf17d382", "content_review": "recorded"},
-        {"evidence_id": "C40-AFFILIATION", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "affiliation: \"Independent Researcher, Node & Norm, United States\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f14934c477fb27ea60fb8b08901ae17ab78045cff551df5f57ac4508bf17d382", "content_review": "recorded"},
-        {"evidence_id": "C40-CORRESPONDENCE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "corresponding_email: \"mab7898@g.harvard.edu\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f14934c477fb27ea60fb8b08901ae17ab78045cff551df5f57ac4508bf17d382", "content_review": "recorded"},
-        {"evidence_id": "C40-ALTERNATE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "alternate_email: \"markjuliusbanasihan@gmail.com\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f14934c477fb27ea60fb8b08901ae17ab78045cff551df5f57ac4508bf17d382", "content_review": "recorded"},
-        {"evidence_id": "C40-STUDENT", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "student_status: \"ALB candidate in Extension Studies, Harvard University\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f14934c477fb27ea60fb8b08901ae17ab78045cff551df5f57ac4508bf17d382", "content_review": "recorded"},
-        {"evidence_id": "C40-INDEPENDENCE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "It was not sponsored, supervised, or endorsed by Harvard University", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f14934c477fb27ea60fb8b08901ae17ab78045cff551df5f57ac4508bf17d382", "content_review": "recorded"},
+        {"evidence_id": "C40-AUTHOR", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "name: \"Mark Julius Banasihan\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "39e9fe0909cf1d17abc5555fbf365c0629eb290bc77a4548bc97ef37f9c09210", "content_review": "recorded"},
+        {"evidence_id": "C40-ORCID", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "orcid: \"0009-0001-8121-2878\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "39e9fe0909cf1d17abc5555fbf365c0629eb290bc77a4548bc97ef37f9c09210", "content_review": "recorded"},
+        {"evidence_id": "C40-AFFILIATION", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "affiliation: \"Independent Researcher, Node & Norm, United States\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "39e9fe0909cf1d17abc5555fbf365c0629eb290bc77a4548bc97ef37f9c09210", "content_review": "recorded"},
+        {"evidence_id": "C40-CORRESPONDENCE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "corresponding_email: \"mab7898@g.harvard.edu\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "39e9fe0909cf1d17abc5555fbf365c0629eb290bc77a4548bc97ef37f9c09210", "content_review": "recorded"},
+        {"evidence_id": "C40-ALTERNATE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "alternate_email: \"markjuliusbanasihan@gmail.com\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "39e9fe0909cf1d17abc5555fbf365c0629eb290bc77a4548bc97ef37f9c09210", "content_review": "recorded"},
+        {"evidence_id": "C40-STUDENT", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "student_status: \"ALB candidate in Extension Studies, Harvard University\"", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "39e9fe0909cf1d17abc5555fbf365c0629eb290bc77a4548bc97ef37f9c09210", "content_review": "recorded"},
+        {"evidence_id": "C40-INDEPENDENCE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "It was not sponsored, supervised, or endorsed by Harvard University", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "39e9fe0909cf1d17abc5555fbf365c0629eb290bc77a4548bc97ef37f9c09210", "content_review": "recorded"},
         {"evidence_id": "C40-ATTESTATION", "path": "evidence/human-review-attestation-v0.15.0.json", "locator_type": "text_marker", "locator": "PAPER-C40", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5a8f65e03c868cb0321cf49741eafe80d9f8469ef4e1c6b729e6e900a090eca7", "content_review": "recorded"}
       ],
       "fitness": {
@@ -970,10 +970,10 @@
       "status": "provisional",
       "verification_rule": "The author-confirmed conflict declaration, compiled-PDF inspection, prior-version disclosure, repository validation, integrity audit, and exact submitted-file hashes must all close.",
       "evidence": [
-        {"evidence_id": "C41-STATE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "submission_state: \"COMPILED_DO_NOT_SUBMIT\"", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f14934c477fb27ea60fb8b08901ae17ab78045cff551df5f57ac4508bf17d382", "content_review": "pending"},
-        {"evidence_id": "C41-CONFLICT", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "conflicts_of_interest: \"The author declares no conflicts of interest.\"", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "f14934c477fb27ea60fb8b08901ae17ab78045cff551df5f57ac4508bf17d382", "content_review": "recorded"},
+        {"evidence_id": "C41-STATE", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "submission_state: \"COMPILED_DO_NOT_SUBMIT\"", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "39e9fe0909cf1d17abc5555fbf365c0629eb290bc77a4548bc97ef37f9c09210", "content_review": "pending"},
+        {"evidence_id": "C41-CONFLICT", "path": "paper/preprints/metadata.yaml", "locator_type": "text_marker", "locator": "conflicts_of_interest: \"The author declares no conflicts of interest.\"", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "39e9fe0909cf1d17abc5555fbf365c0629eb290bc77a4548bc97ef37f9c09210", "content_review": "recorded"},
         {"evidence_id": "C41-COMPILE", "path": "paper/preprints/overleaf-compile-receipt.json", "locator_type": "json_pointer", "locator": "/visual_review", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "48aaee48128c23905ddcba1003143b5f11fe7a8e96c4831491881211c69eed68", "content_review": "recorded"},
-        {"evidence_id": "C41-GATES", "path": "paper/preprints/README.md", "locator_type": "markdown_heading", "locator": "## Submission gates", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c13e3a8437c81a41179a84b6a78e8188bed78e53bb2bbac4254bc5f6bf6c930e", "content_review": "pending"}
+        {"evidence_id": "C41-GATES", "path": "paper/preprints/README.md", "locator_type": "markdown_heading", "locator": "## Submission gates", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "744800e10702a0e045fa1e1023f240b64ffed63577615eedbe117c1b5979f431", "content_review": "pending"}
       ],
       "fitness": {
         "directness": {"state": "pass", "rationale": "The package exposes each remaining submission gate."},
@@ -989,6 +989,152 @@
       "scope_terms": [],
       "limitations": ["The package has been compiled and visually inspected but has not been uploaded to or submitted through Preprints.org."],
       "reversal_conditions": ["Any declaration, compiled artifact, validation result, archive member, or submission field changes."]
+    },
+    {
+      "claim_id": "PAPER-C42",
+      "claim_text": "The v0.16.0 method requires six event-level stages and declares deterministic pass, fail, and unresolved case-level rules.",
+      "claim_class": "methodological",
+      "claim_scope": "method",
+      "status": "supported",
+      "verification_rule": "The protocol, revision plan, manuscript, result builder, and author attestation must agree on all six required fields and all three result rules.",
+      "evidence": [
+        {"evidence_id": "C42-PROTOCOL", "path": "protocols/practical-human-control-test.md", "locator_type": "text_marker", "locator": "EventControl(c)", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "db9d2ce220c910911e7188f4e9b0c57c8865dc250531dc0a92aec71be7c12f87", "content_review": "recorded"},
+        {"evidence_id": "C42-PLAN", "path": "paper/revision-plan-v0.16.0.md", "locator_type": "text_marker", "locator": "Execution propagation", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "d170ae3fcc7614c6f623612c7f858b22f26a5180c910131a5cee71cbc5247f30", "content_review": "recorded"},
+        {"evidence_id": "C42-MANUSCRIPT", "path": "paper/manuscript.md", "locator_type": "text_marker", "locator": "EventControl(c)=", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5f91fe38ca2c96107ab521dd0b3697aa4b826fd512da43abe7493911a7eb0d0b", "content_review": "recorded"},
+        {"evidence_id": "C42-IMPLEMENTATION", "path": "analysis/derive_event_control_results.py", "locator_type": "text_marker", "locator": "def classify", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "05fc95e4fe0c69c7a4d0c7509dbee4c646fa41d86068acf83d822fb62ef15bbc", "content_review": "recorded"},
+        {"evidence_id": "C42-ATTESTATION", "path": "evidence/human-review-attestation-v0.16.0.json", "locator_type": "text_marker", "locator": "PAPER-C42", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c29f566a07f38b20ea3b8c4a90c4c33986a2fc825c5794390688e839eb8531ed", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim resolves directly to the declared protocol, released states, deterministic derivation, or manuscript boundary."},
+        "contemporaneity": {"state": "pass", "rationale": "The evidence records the current v0.16.0 rule and derivation from preserved earlier assessments."},
+        "independence": {"state": "outside_scope", "rationale": "This is an author-designed method and deterministic repository derivation; independent assessment remains a declared open gate."},
+        "completeness": {"state": "pass", "rationale": "All required stages, result branches, and the outside-scope prohibition are visible."},
+        "publication_authority": {"state": "pass", "rationale": "The accountable author authorized the v0.16.0 revision and its bounded interpretation."}
+      },
+      "dependencies": [],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-19", "attestation_path": "evidence/human-review-attestation-v0.16.0.json", "note": "PAPER-C42: Approved as the formal v0.16.0 decision rule."},
+      "scope_terms": [{"term": "required", "justification": "The six fields are required by the declared event-control construct."}],
+      "limitations": ["The rule is a proposed documentary construct and has no independent reliability or construct-validity estimate."],
+      "reversal_conditions": ["Any required field, result branch, state definition, or case-boundary rule changes."]
+    },
+    {
+      "claim_id": "PAPER-C43",
+      "claim_text": "Applying the v0.16.0 rule to the released states derives Oko as unresolved and both Patriot cases as fail.",
+      "claim_class": "numerical",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The deterministic output must contain one unresolved and two fail results, with exact case identifiers and released source assessments.",
+      "evidence": [
+        {"evidence_id": "C43-OKO", "path": "assessments/event-control-results-v0.16.0.json", "locator_type": "json_pointer", "locator": "/cases/0/result", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e6bd4971fbdb993b3a4f6b14fa132e8503c1ac0a0e11534860329fb672f2f414", "content_review": "recorded", "expected_value": "unresolved"},
+        {"evidence_id": "C43-ZG710", "path": "assessments/event-control-results-v0.16.0.json", "locator_type": "json_pointer", "locator": "/cases/1/result", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e6bd4971fbdb993b3a4f6b14fa132e8503c1ac0a0e11534860329fb672f2f414", "content_review": "recorded", "expected_value": "fail"},
+        {"evidence_id": "C43-FA18", "path": "assessments/event-control-results-v0.16.0.json", "locator_type": "json_pointer", "locator": "/cases/2/result", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e6bd4971fbdb993b3a4f6b14fa132e8503c1ac0a0e11534860329fb672f2f414", "content_review": "recorded", "expected_value": "fail"},
+        {"evidence_id": "C43-FAIL-COUNT", "path": "assessments/event-control-results-v0.16.0.json", "locator_type": "json_pointer", "locator": "/result_counts/fail", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e6bd4971fbdb993b3a4f6b14fa132e8503c1ac0a0e11534860329fb672f2f414", "content_review": "recorded", "expected_value": 2},
+        {"evidence_id": "C43-UNRESOLVED-COUNT", "path": "assessments/event-control-results-v0.16.0.json", "locator_type": "json_pointer", "locator": "/result_counts/unresolved", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e6bd4971fbdb993b3a4f6b14fa132e8503c1ac0a0e11534860329fb672f2f414", "content_review": "recorded", "expected_value": 1},
+        {"evidence_id": "C43-IMPLEMENTATION", "path": "analysis/derive_event_control_results.py", "locator_type": "text_marker", "locator": "source_assessment", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "05fc95e4fe0c69c7a4d0c7509dbee4c646fa41d86068acf83d822fb62ef15bbc", "content_review": "recorded"},
+        {"evidence_id": "C43-ATTESTATION", "path": "evidence/human-review-attestation-v0.16.0.json", "locator_type": "text_marker", "locator": "PAPER-C43", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c29f566a07f38b20ea3b8c4a90c4c33986a2fc825c5794390688e839eb8531ed", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim resolves directly to the declared protocol, released states, deterministic derivation, or manuscript boundary."},
+        "contemporaneity": {"state": "pass", "rationale": "The evidence records the current v0.16.0 rule and derivation from preserved earlier assessments."},
+        "independence": {"state": "outside_scope", "rationale": "This is an author-designed method and deterministic repository derivation; independent assessment remains a declared open gate."},
+        "completeness": {"state": "pass", "rationale": "All three cases, source paths, six states per case, and result counts are preserved in the output."},
+        "publication_authority": {"state": "pass", "rationale": "The accountable author authorized the v0.16.0 revision and its bounded interpretation."}
+      },
+      "dependencies": ["PAPER-C42"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-19", "attestation_path": "evidence/human-review-attestation-v0.16.0.json", "note": "PAPER-C43: Approved as a deterministic derivation from released assessment states."},
+      "scope_terms": [],
+      "limitations": ["The derivation inherits the single-assessor and public-record limits of the underlying states."],
+      "reversal_conditions": ["A released assessment state or the v0.16.0 case-level rule changes."]
+    },
+    {
+      "claim_id": "PAPER-C44",
+      "claim_text": "No case in the three-packet selected set passes the complete event-control rule.",
+      "claim_class": "conclusion",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The deterministic pass count must equal zero, the manuscript must state the bounded conclusion, and rule and result dependencies must close.",
+      "evidence": [
+        {"evidence_id": "C44-PASS-COUNT", "path": "assessments/event-control-results-v0.16.0.json", "locator_type": "json_pointer", "locator": "/result_counts/pass", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e6bd4971fbdb993b3a4f6b14fa132e8503c1ac0a0e11534860329fb672f2f414", "content_review": "recorded", "expected_value": 0},
+        {"evidence_id": "C44-MANUSCRIPT", "path": "paper/manuscript.md", "locator_type": "text_marker", "locator": "no case passed the complete event-control rule", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5f91fe38ca2c96107ab521dd0b3697aa4b826fd512da43abe7493911a7eb0d0b", "content_review": "recorded"},
+        {"evidence_id": "C44-LIMIT", "path": "assessments/event-control-results-v0.16.0.json", "locator_type": "json_pointer", "locator": "/interpretation_limit", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e6bd4971fbdb993b3a4f6b14fa132e8503c1ac0a0e11534860329fb672f2f414", "content_review": "recorded"},
+        {"evidence_id": "C44-ATTESTATION", "path": "evidence/human-review-attestation-v0.16.0.json", "locator_type": "text_marker", "locator": "PAPER-C44", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c29f566a07f38b20ea3b8c4a90c4c33986a2fc825c5794390688e839eb8531ed", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim resolves directly to the declared protocol, released states, deterministic derivation, or manuscript boundary."},
+        "contemporaneity": {"state": "pass", "rationale": "The evidence records the current v0.16.0 rule and derivation from preserved earlier assessments."},
+        "independence": {"state": "outside_scope", "rationale": "This is an author-designed method and deterministic repository derivation; independent assessment remains a declared open gate."},
+        "completeness": {"state": "pass", "rationale": "The three-case denominator and interpretation limit are explicit."},
+        "publication_authority": {"state": "pass", "rationale": "The accountable author authorized the v0.16.0 revision and its bounded interpretation."}
+      },
+      "dependencies": ["PAPER-C42", "PAPER-C43"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-19", "attestation_path": "evidence/human-review-attestation-v0.16.0.json", "note": "PAPER-C44: Approved only for the three purposively selected packets."},
+      "scope_terms": [],
+      "limitations": ["The conclusion supplies no prevalence, comparison-group, or current-system estimate."],
+      "reversal_conditions": ["The selected set, an underlying state, or the event-control decision rule changes."]
+    },
+    {
+      "claim_id": "PAPER-C45",
+      "claim_text": "The v0.16.0 timing margin is a proposed prospective measure and cannot be calculated from the three historical packets.",
+      "claim_class": "methodological",
+      "claim_scope": "method",
+      "status": "supported",
+      "verification_rule": "The protocol and manuscript must state the same equation, positive-margin interpretation, missing-input rule, and historical-data limit.",
+      "evidence": [
+        {"evidence_id": "C45-PROTOCOL", "path": "protocols/practical-human-control-test.md", "locator_type": "text_marker", "locator": "M_t=(t_{commit}-t_{access})-(t_{interpret}+t_{decide}+t_{transmit}+t_{propagate})", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "db9d2ce220c910911e7188f4e9b0c57c8865dc250531dc0a92aec71be7c12f87", "content_review": "recorded"},
+        {"evidence_id": "C45-MANUSCRIPT", "path": "paper/manuscript.md", "locator_type": "text_marker", "locator": "The three historical packets lack the complete timing inputs", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5f91fe38ca2c96107ab521dd0b3697aa4b826fd512da43abe7493911a7eb0d0b", "content_review": "recorded"},
+        {"evidence_id": "C45-LATEX", "path": "paper/preprints/main.tex", "locator_type": "text_marker", "locator": "t_{propagate}", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "bb991dfce5bffdf31ac1cac51da58aa48d745225e805bc4eea43d7367063e2e8", "content_review": "recorded"},
+        {"evidence_id": "C45-ATTESTATION", "path": "evidence/human-review-attestation-v0.16.0.json", "locator_type": "text_marker", "locator": "PAPER-C45", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c29f566a07f38b20ea3b8c4a90c4c33986a2fc825c5794390688e839eb8531ed", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim resolves directly to the declared protocol, released states, deterministic derivation, or manuscript boundary."},
+        "contemporaneity": {"state": "pass", "rationale": "The evidence records the current v0.16.0 rule and derivation from preserved earlier assessments."},
+        "independence": {"state": "outside_scope", "rationale": "This is an author-designed method and deterministic repository derivation; independent assessment remains a declared open gate."},
+        "completeness": {"state": "pass", "rationale": "The equation, interpretation, missing-input treatment, and nonapplication to historical cases are explicit."},
+        "publication_authority": {"state": "pass", "rationale": "The accountable author authorized the v0.16.0 revision and its bounded interpretation."}
+      },
+      "dependencies": ["PAPER-C42"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-19", "attestation_path": "evidence/human-review-attestation-v0.16.0.json", "note": "PAPER-C45: Approved as a proposed measure, not an observed historical result."},
+      "scope_terms": [],
+      "limitations": ["The measure has not been validated against observed reviewer performance or present learned systems."],
+      "reversal_conditions": ["The equation, interpretation, timestamp definitions, or historical-data availability changes."]
+    },
+    {
+      "claim_id": "PAPER-C46",
+      "claim_text": "The manuscript uses execution propagation for the released effect field and excludes beneficial-outcome and counterfactual-effect interpretations.",
+      "claim_class": "documentary_classification",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The protocol, manuscript, table register, figure builder, LaTeX source, and attestation must preserve the alias and its interpretation limit.",
+      "evidence": [
+        {"evidence_id": "C46-PROTOCOL", "path": "protocols/practical-human-control-test.md", "locator_type": "text_marker", "locator": "The released machine-readable assessments through v0.15 use the field name `effect`", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "db9d2ce220c910911e7188f4e9b0c57c8865dc250531dc0a92aec71be7c12f87", "content_review": "recorded"},
+        {"evidence_id": "C46-MANUSCRIPT", "path": "paper/manuscript.md", "locator_type": "text_marker", "locator": "A counterfactual causal effect and a beneficial outcome require separate evidence", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "5f91fe38ca2c96107ab521dd0b3697aa4b826fd512da43abe7493911a7eb0d0b", "content_review": "recorded"},
+        {"evidence_id": "C46-TABLES", "path": "paper/tables.md", "locator_type": "text_marker", "locator": "The released assessment JSON uses the field name `effect`", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "52b690db3b041b098b98a4b9c4bb86e03d29e5d91f141f1a1497b21ac9518a40", "content_review": "recorded"},
+        {"evidence_id": "C46-FIGURE", "path": "analysis/build_figures.py", "locator_type": "text_marker", "locator": "\"effect\": \"Execution propagation\"", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "d75b694510de5107e4b94a153b78f2537e9336fc96e503351e4bbb46efa90424", "content_review": "recorded"},
+        {"evidence_id": "C46-LATEX", "path": "paper/preprints/main.tex", "locator_type": "text_marker", "locator": "Execution propagation", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "bb991dfce5bffdf31ac1cac51da58aa48d745225e805bc4eea43d7367063e2e8", "content_review": "recorded"},
+        {"evidence_id": "C46-ATTESTATION", "path": "evidence/human-review-attestation-v0.16.0.json", "locator_type": "text_marker", "locator": "PAPER-C46", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "c29f566a07f38b20ea3b8c4a90c4c33986a2fc825c5794390688e839eb8531ed", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim resolves directly to the declared protocol, released states, deterministic derivation, or manuscript boundary."},
+        "contemporaneity": {"state": "pass", "rationale": "The evidence records the current v0.16.0 rule and derivation from preserved earlier assessments."},
+        "independence": {"state": "outside_scope", "rationale": "This is an author-designed method and deterministic repository derivation; independent assessment remains a declared open gate."},
+        "completeness": {"state": "pass", "rationale": "The machine field, reader-facing term, and prohibited interpretations are all declared."},
+        "publication_authority": {"state": "pass", "rationale": "The accountable author authorized the v0.16.0 revision and its bounded interpretation."}
+      },
+      "dependencies": ["PAPER-C42"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-08-19", "attestation_path": "evidence/human-review-attestation-v0.16.0.json", "note": "PAPER-C46: Approved as the bounded interpretation of the legacy machine-readable field."},
+      "scope_terms": [],
+      "limitations": ["Renaming the reader-facing term does not change the released historical assessment states."],
+      "reversal_conditions": ["The field semantics, manuscript terminology, or prohibited interpretation changes."]
     }
   ]
 }

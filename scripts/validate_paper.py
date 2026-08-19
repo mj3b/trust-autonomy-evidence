@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the v0.15.0 proposition-reviewed venue paper workspace."""
+"""Validate the v0.16.0 proposition-reviewed working-paper workspace."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ QUESTION = (
     "public incident record?"
 )
 VERSION_DOI = "10.5281/zenodo.21865007"
-REPOSITORY_VERSION = "0.15.0"
+REPOSITORY_VERSION = "0.16.0"
 PAPER_FILES = (
     "paper/README.md",
     "paper/paper-charter.md",
@@ -37,6 +37,7 @@ PAPER_FILES = (
     "paper/forward-citation-proposition-review-protocol-v0.14.0.md",
     "paper/forward-citation-proposition-review-v0.14.0.md",
     "paper/preprint-readiness-v0.14.0.md",
+    "paper/revision-plan-v0.16.0.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
     "paper/literature-matrix.md",
@@ -79,6 +80,7 @@ PAPER_FILES = (
     "evidence/human-review-attestation-v0.13.0.json",
     "evidence/human-review-attestation-v0.14.0.json",
     "evidence/human-review-attestation-v0.15.0.json",
+    "evidence/human-review-attestation-v0.16.0.json",
     "evidence/claim-evidence-map.json",
     "audits/v0.14.0/audit-plan.md",
     "audits/v0.14.0/audit-results.json",
@@ -88,6 +90,10 @@ PAPER_FILES = (
     "audits/v0.15.0/audit-results.json",
     "audits/v0.15.0/audit-report.md",
     "audits/v0.15.0/exceptions.md",
+    "audits/v0.16.0/audit-plan.md",
+    "audits/v0.16.0/audit-results.json",
+    "audits/v0.16.0/audit-report.md",
+    "audits/v0.16.0/exceptions.md",
     "release/v0.14.0-release-notes.md",
     "paper/arxiv/main.tex",
     "paper/arxiv/metadata.yaml",
@@ -105,6 +111,7 @@ PAPER_FILES = (
     "paper/preprints/main.tex",
     "paper/preprints/source-manifest.json",
     "paper/preprints/preprints-source-v0.15.0.zip",
+    "paper/preprints/preprints-source-v0.16.0.zip",
     *tuple(f"paper/arxiv/figures-bw/{name}" for name in (
         "fig-1-selection-and-stopping.png",
         "fig-2-practical-control-chain.png",
@@ -203,7 +210,8 @@ def validate_generated_paper_artifacts(failures: list[str]) -> None:
         [sys.executable, "scripts/validate_next_evidence_gates.py", "--check"],
         [sys.executable, "scripts/validate_forward_citation_author_screening_v0_13_0.py"],
         [sys.executable, "scripts/validate_forward_citation_proposition_review_v0_14_0.py"],
-        [sys.executable, "scripts/build_v0_15_claim_map.py", "--check"],
+        [sys.executable, "analysis/derive_event_control_results.py", "--check"],
+        [sys.executable, "scripts/build_v0_16_claim_map.py", "--check"],
         [sys.executable, "scripts/validate_preprints_package.py"],
         [sys.executable, "scripts/validate_literature_support.py"],
     )
@@ -249,16 +257,18 @@ def validate_boundaries(failures: list[str]) -> None:
         fail("eligible paper claims missing from crosswalk", failures)
     if re.search(r"\bnovel\b", manuscript, flags=re.IGNORECASE):
         fail("manuscript contains prohibited novelty wording", failures)
-    if "Proposition-reviewed Preprints.org working manuscript, v0.15.0 candidate" not in manuscript:
-        fail("v0.15.0 manuscript status is missing", failures)
+    if "Proposition-reviewed working manuscript, v0.16.0 rebuild" not in manuscript:
+        fail("v0.16.0 manuscript status is missing", failures)
     if "**Figure 6. Evidence boundaries" not in manuscript:
         fail("Figure 6 caption is missing from the manuscript", failures)
     if "**Table A3. Availability of coding-stability evidence.**" not in manuscript:
         fail("Table A3 is missing from the manuscript", failures)
-    if "**Table 4. Proposal-to-author decision changes.**" not in manuscript:
+    if "**Table 4. Formal authority compared with event-level practical control.**" not in manuscript:
         fail("Table 4 is missing from the manuscript", failures)
-    if "**Table 5. Residual-risk retrieval and screening checkpoint.**" not in manuscript:
-        fail("Table 5 is missing from the manuscript", failures)
+    if "**Table 6. Proposal-to-author decision changes.**" not in manuscript:
+        fail("Table 6 is missing from the manuscript", failures)
+    if "**Table 7. Residual-risk retrieval and screening checkpoint.**" not in manuscript:
+        fail("Table 7 is missing from the manuscript", failures)
     gate = (ROOT / "paper/author-screening-completion-gate.md").read_text(encoding="utf-8")
     if "| Total author gate | 89 | 89 | 0 |" not in gate:
         fail("author-screening gate does not expose the completed 89 decisions", failures)

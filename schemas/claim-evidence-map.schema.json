@@ -6,8 +6,8 @@
   "additionalProperties": false,
   "required": ["version", "scope_id", "description", "claims"],
   "properties": {
-    "version": {"enum": ["0.6.0", "0.8.0", "0.9.0", "0.11.0", "0.12.0", "0.13.0", "0.14.0", "0.15.0"]},
-    "scope_id": {"enum": ["TAE-COE-V0.6.0", "TAE-COE-V0.8.0", "TAE-COE-V0.9.0", "TAE-COE-V0.11.0", "TAE-COE-V0.12.0", "TAE-COE-V0.13.0", "TAE-COE-V0.14.0", "TAE-COE-V0.15.0"]},
+    "version": {"enum": ["0.6.0", "0.8.0", "0.9.0", "0.11.0", "0.12.0", "0.13.0", "0.14.0", "0.15.0", "0.16.0"]},
+    "scope_id": {"enum": ["TAE-COE-V0.6.0", "TAE-COE-V0.8.0", "TAE-COE-V0.9.0", "TAE-COE-V0.11.0", "TAE-COE-V0.12.0", "TAE-COE-V0.13.0", "TAE-COE-V0.14.0", "TAE-COE-V0.15.0", "TAE-COE-V0.16.0"]},
     "description": {"type": "string", "minLength": 1},
     "claims": {
       "type": "array",
