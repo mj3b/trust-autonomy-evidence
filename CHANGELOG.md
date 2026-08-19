@@ -2,6 +2,20 @@
 
 All material changes to concepts, claims, protocols, and evidence requirements are recorded here.
 
+## 0.16.2, 19 August 2026
+
+- Adds a six-link start section to `paper/README.md`, with the v0.16.0 PDF listed first.
+- Adds `paper/REVIEW.md` as the review and arXiv-endorsement landing page, with one current PDF, a category-fit summary, a version guide, supporting evidence paths, and focused review questions.
+- Labels `paper/preprints/` as the current v0.16.0 working-paper package.
+- Labels `paper/arxiv/` as the historical v0.14.0 package and directs readers to the current review guide.
+- Restores the truncated v0.14.0 source archive and the two displaced v0.14.0 PDFs from the immutable release tag; their SHA-256 digests again match the released source manifest and compile receipt.
+- Corrects the v0.14.0 package validator so its abstract and marker checks read the frozen historical LaTeX source instead of the current v0.16.0 manuscript.
+- Moves the retired v0.15.0 PDF, source archive, and historical Overleaf receipt into `paper/archive/v0.15.0/`.
+- Adds an archive index that distinguishes the current v0.16.0 paper, retired v0.15.0 venue package, and public v0.14.0 Zenodo preprint.
+- Keeps versioned research protocols, screening ledgers, evidence tables, and review records in the main workspace because current validation and claim lineage still use them.
+- Updates repository and paper validation paths while preserving released tags and manifests as the authority for historical locations.
+- Changes no manuscript claim, case state, case-level result, figure data, or interpretation boundary.
+
 ## 0.16.1, 19 August 2026
 
 - Aligns current citation instructions with the v0.16.0 working paper while preserving the v0.14.0 Zenodo DOI as an earlier preprint identifier.

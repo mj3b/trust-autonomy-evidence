@@ -2,14 +2,14 @@ cff-version: 1.2.0
 message: "For the working paper, cite the preferred v0.16.0 manuscript below. The v0.14.0 DOI identifies an earlier archived preprint and must not be assigned to v0.16.0."
 title: "Trust, Autonomy, and Evidence"
 type: software
-version: 0.16.1
+version: 0.16.2
 date-released: 2026-08-19
 authors:
   - family-names: Banasihan
     given-names: Mark Julius
     orcid: "https://orcid.org/0009-0001-8121-2878"
 repository-code: "https://github.com/mj3b/trust-autonomy-evidence"
-url: "https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.16.1"
+url: "https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.16.2"
 license: Apache-2.0
 abstract: "A research repository defining evidence for justified reliance and practical human control, with synthetic validation, versioned public-case reconstruction, a formal literature search, a full methods manuscript, journal-style figures and tables, claim traceability, and executable integrity audits."
 identifiers:

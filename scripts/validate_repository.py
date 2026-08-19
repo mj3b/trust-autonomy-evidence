@@ -15,8 +15,8 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.16.1"
-WORKING_VERSION = "0.16.1"
+REPOSITORY_VERSION = "0.16.2"
+WORKING_VERSION = "0.16.2"
 FIGURE_VERSION = "0.16.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
@@ -178,6 +178,8 @@ REQUIRED_FILES = (
     "release/v0.16.0-release-notes.md",
     "release/v0.16.1-manifest.json",
     "release/v0.16.1-release-notes.md",
+    "release/v0.16.2-manifest.json",
+    "release/v0.16.2-release-notes.md",
     "scripts/build_public_case_candidates.py",
     "scripts/seal_public_case_packets.py",
     "scripts/build_release_manifest.py",
@@ -193,6 +195,7 @@ REQUIRED_FILES = (
     "scripts/build_v0_16_claim_map.py",
     "scripts/build_v0_16_release_manifest.py",
     "scripts/build_v0_16_1_release_manifest.py",
+    "scripts/build_v0_16_2_release_manifest.py",
     "scripts/build_v0_15_release_manifest.py",
     "scripts/build_preprints_source_archive.py",
     "scripts/validate_preprints_package.py",
@@ -291,6 +294,7 @@ REQUIRED_FILES = (
     "paper/literature-support-audit-v0.9.0.md",
     "paper/tables.md",
     "paper/tables/manuscript-tables.tex",
+    "paper/REVIEW.md",
     "paper/arxiv/main.tex",
     "paper/arxiv/metadata.yaml",
     "paper/arxiv/README.md",
@@ -306,12 +310,15 @@ REQUIRED_FILES = (
     "paper/preprints/metadata.yaml",
     "paper/preprints/main.tex",
     "paper/preprints/source-manifest.json",
-    "paper/preprints/preprints-source-v0.15.0.zip",
+    "paper/archive/README.md",
+    "paper/archive/v0.15.0/README.md",
+    "paper/archive/v0.15.0/preprints-source-v0.15.0.zip",
+    "paper/archive/v0.15.0/preprints-compiled-v0.15.0.pdf",
     "paper/preprints/preprints-source-v0.16.0.zip",
     "paper/preprints/preprints-compiled-v0.16.0.pdf",
     "paper/preprints/compile-receipt-v0.16.0.json",
     "paper/preprints/overleaf-compile-receipt.json",
-    "paper/preprints/overleaf-compile-receipt-v0.15.0.json",
+    "paper/archive/v0.15.0/overleaf-compile-receipt-v0.15.0.json",
     *tuple(f"paper/arxiv/figures-bw/{name}" for name in (
         "fig-1-selection-and-stopping.png",
         "fig-2-practical-control-chain.png",

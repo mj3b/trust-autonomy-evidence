@@ -78,22 +78,31 @@ def main() -> int:
     if proposition.returncode:
         errors.append("proposition-review validator failed: " + (proposition.stdout + proposition.stderr).strip())
 
-    manuscript = (ROOT / "paper/manuscript.md").read_text(encoding="utf-8")
-    abstract = manuscript.split("## Abstract\n\n", 1)[1].split("\n\n**Keywords:**", 1)[0]
-    abstract_words = len(re.findall(r"\b[\w'-]+\b", abstract))
+    tex = (ARXIV / "main.tex").read_text(encoding="utf-8")
+    abstract_match = re.search(
+        r"\\begin\{TAEAbstractBox\}.*?\\small\s*\n(.*?)\n\\textbf\{Keywords:",
+        tex,
+        flags=re.DOTALL,
+    )
+    if abstract_match is None:
+        abstract_words = 0
+        errors.append("historical LaTeX abstract could not be located")
+    else:
+        abstract_text = re.sub(r"\\[A-Za-z]+(?:\[[^]]*\])?", " ", abstract_match.group(1))
+        abstract_text = re.sub(r"[{}~]", " ", abstract_text)
+        abstract_words = len(re.findall(r"\b[\w'-]+\b", abstract_text))
     if not 150 <= abstract_words <= 250:
         errors.append(f"abstract contains {abstract_words} words; expected 150 to 250")
     for marker in (
         AUTHOR,
         ORCID,
-        "Proposition-reviewed arXiv working manuscript, v0.14.0 candidate",
-        "Five forward sources have one bounded proposition permission each",
+        "Preprint candidate v0.14.0",
+        "Five received bounded manuscript permission",
         "All 76 recovered-content records have a screening decision",
     ):
-        if marker not in manuscript:
-            errors.append(f"manuscript marker missing: {marker}")
+        if marker not in tex:
+            errors.append(f"historical LaTeX marker missing: {marker}")
 
-    tex = (ARXIV / "main.tex").read_text(encoding="utf-8")
     for marker in (
         r"\documentclass[11pt]{article}",
         r"\usepackage{XCharter}",
@@ -251,7 +260,7 @@ def main() -> int:
         return 1
     print(
         "arXiv package validation: PASS "
-        f"(230-word abstract; {review_page_count}-page canonical preprint; "
+        f"({abstract_words}-word abstract; {review_page_count}-page canonical preprint; "
         f"{overleaf_page_count}-page matching Overleaf build; single-column navy template; "
         f"10 color figures; 17 placement checks; {manifest['member_count']} source members)"
     )
