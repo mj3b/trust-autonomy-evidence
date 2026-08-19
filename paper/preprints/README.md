@@ -1,25 +1,25 @@
-# Preprints.org submission package, v0.15.0
+# Working-paper source package, v0.16.0
 
-This directory preserves the exact manuscript source, metadata, archive manifest, and later compiled PDF used for the Preprints.org submission candidate.
+This directory preserves the manuscript source, metadata, deterministic archive, and compiled review PDF for the v0.16.0 working paper.
 
-The package identifies the Zenodo v0.14.0 preprint at [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005). The v0.15.0 revision adds venue-required author metadata, an issued prior-version DOI, a version-relationship statement, an expanded integrity-status statement, a venue-aligned AI-assistance disclosure, and the author-confirmed conflicts-of-interest declaration. The title block identifies Mark Julius Banasihan as an independent researcher with Node & Norm and retains both authorized correspondence addresses. A separate author note identifies Node & Norm as the author's independent research initiative, records Harvard University student status, and disclaims University sponsorship or endorsement. The research question, three case assessments, numerical results, and bounded conclusions remain unchanged.
+The package identifies the Zenodo v0.14.0 preprint at [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005) and preserves the v0.15.0 venue package as version history. Version 0.16.0 rebuilds the explanation, formalizes the six-stage event-control rule, derives one unresolved and two failing case-level results from the released states, adds a proposed timing margin, and narrows the legacy `effect` field to execution propagation. The title block identifies Mark Julius Banasihan as an independent researcher with Node & Norm and retains both authorized correspondence addresses. A separate author note records Harvard University student status without claiming University sponsorship or endorsement.
 
 ## Repository map
 
 | File | Purpose |
 |---|---|
-| `main.tex` | Self-contained LaTeX manuscript submitted for compilation. |
+| `main.tex` | Self-contained LaTeX working paper. |
 | `metadata.yaml` | Author, affiliation, subject, license, DOI, and submission-state record. |
-| `preprints-source-v0.15.0.zip` | Deterministic upload archive containing the LaTeX source and ten figures. |
+| `preprints-source-v0.16.0.zip` | Deterministic review archive containing the LaTeX source and ten figures. |
 | `source-manifest.json` | SHA-256 lineage for the archive and each member. |
-| `preprints-compiled-v0.15.0.pdf` | The 25-page PDF compiled from the exact source archive in a separate Overleaf project. |
-| `overleaf-compile-receipt.json` | Records the Overleaf project, source and output hashes, compile result, representative-page review, display locations, and claim boundary. |
+| `preprints-compiled-v0.16.0.pdf` | Review PDF compiled from the exact v0.16.0 source archive. |
+| `compile-receipt-v0.16.0.json` | Records source and output hashes, the local Tectonic compile result, representative-page review, display locations, and claim boundary. |
 | `00README.XXX` | Plain-text compiler and version note included in the archive. |
 
 ## Submission gates
 
-1. Completed: the author confirmed the declaration, "The author declares no conflicts of interest," on 2026-08-18.
-2. Completed under author authorization: Codex inspected the 25-page Overleaf PDF, including the title page, figures, tables, appendices, and References; the receipt names the reviewer and limits.
-3. Open: the author confirms that the Zenodo v0.14.0 relationship is visible to Preprints.org screeners.
-4. Completed for the compiled candidate: repository validators and the CoE Integrity Audit pass with declared open exceptions.
-5. Open: the exact submitted files and their hashes are recorded before the Submit action.
+1. Completed: the v0.16.0 manuscript, figures, tables, formal rule, and deterministic result builder agree.
+2. Completed: the Chain-of-Evidence map covers 40 claims and all 39 controlled corruptions are detected.
+3. Completed: the exact source archive compiled without errors, the log contains no overfull or underfull boxes, and representative pages received a visual placement inspection.
+4. Open until author review: Mark Julius Banasihan reviews the full revision and approves any external submission target.
+5. Open for stronger research claims: independent assessment, present-system transfer, remaining retrieval, and authenticated database gates.

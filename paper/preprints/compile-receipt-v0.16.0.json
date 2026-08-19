@@ -1,0 +1,61 @@
+{
+  "version": "0.16.0",
+  "compiled_at_utc": "2026-08-19T18:17:24Z",
+  "compiler": {
+    "name": "Tectonic",
+    "version": "0.17.0",
+    "source": "official GitHub release binary"
+  },
+  "source_archive": {
+    "path": "paper/preprints/preprints-source-v0.16.0.zip",
+    "bytes": 883702,
+    "sha256": "184edde1d5558e84f109ceaf7157c3b213103c85940a9e6351665f1875f97440"
+  },
+  "compiled_pdf": {
+    "path": "paper/preprints/preprints-compiled-v0.16.0.pdf",
+    "bytes": 1128563,
+    "sha256": "43296fc97fdb70e55e8668d66536e2e0787bcdbd330921b23d034f759f50244f",
+    "pages": 30,
+    "page_size": "US Letter",
+    "pdf_version": "1.5"
+  },
+  "compile_result": {
+    "errors": 0,
+    "overfull_or_underfull_boxes": 0,
+    "warnings": 149,
+    "warning_boundary": "The log warnings concern font requests and substitutions. No undefined references, missing files, overfull boxes, underfull boxes, or compile errors were detected."
+  },
+  "placement_audit": {
+    "references_start_page": 27,
+    "display_pages": {
+      "Figure 1": 7,
+      "Table 1": 7,
+      "Table 2": 8,
+      "Figure 2": 11,
+      "Table 3": 12,
+      "Table 4": 12,
+      "Figure 3": 13,
+      "Figure 4": 14,
+      "Figure A1": 15,
+      "Figure A2": 16,
+      "Figure A3": 17,
+      "Figure A4": 18,
+      "Table A1": 19,
+      "Figure 5": 20,
+      "Table 5": 20,
+      "Table 6": 21,
+      "Table 7": 21,
+      "Figure 6": 22,
+      "Table A3": 22,
+      "Table 8": 25
+    },
+    "post_references_displays": []
+  },
+  "visual_review": {
+    "representative_pages": [1, 7, 8, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 25, 27, 30],
+    "technical_result": "PASS",
+    "author_review": "OPEN",
+    "notes": "The rendered title page, formulas, tables, all ten figures, disclosure sections, and reference boundary were inspected. Figure and table ordering follows the manuscript sequence, and no display appears after References."
+  },
+  "claim_boundary": "Successful compilation and visual placement review establish source-output consistency and readable artifact layout. They do not establish the truth of historical claims, independent assessor agreement, external validity, or publication acceptance."
+}

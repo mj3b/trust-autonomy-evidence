@@ -4,6 +4,30 @@
 \begin{table}[t]
 \centering
 \begin{threeparttable}
+\caption{Derivation of the event-level practical-control chain}
+\label{tab:construct-derivation}
+\footnotesize
+\begin{tabularx}{\linewidth}{l X X X}
+\toprule
+Stage & Why required & Minimum record & Error prevented \\
+\midrule
+Information access & Judgment cannot use information the person never received. & Timestamped delivery, interface, or access record. & Treating post-action notice as review. \\
+Comprehension capacity & Delivery does not establish capacity to interpret. & Training, explanation, test, or reasoning record. & Treating visibility as understanding. \\
+Intervention authority & Control requires a right to change the decision. & Delegation, procedure, or permission record. & Treating responsibility as permission. \\
+Intervention feasibility & A formal right may be unusable under actual conditions. & Timing, staffing, latency, access, or workload record. & Treating theoretical authority as usable authority. \\
+Exercised judgment & Available control does not establish that judgment occurred. & Approve, reject, modify, stop, or escalate record. & Inferring action from a role assignment. \\
+Execution propagation & A judgment that never reaches execution cannot control the event. & Linked system or institutional execution record. & Inferring operational change from an unexecuted judgment. \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]\footnotesize
+\item The released assessment JSON uses \texttt{effect} for execution propagation. The manuscript term avoids implying that the change was beneficial or caused the final outcome.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
 \caption{Assessment-state decision rules}
 \label{tab:state-rules}
 \begin{tabularx}{\linewidth}{l c X}
@@ -32,12 +56,12 @@ Outside scope & O & The stage does not apply within the declared case boundary, 
 \toprule
 Stage & Oko, 1983 & ZG710, 2003 & F/A-18C, 2003 \\
 \midrule
-Access before action & P & P & P \\
-Comprehension & P & U & I \\
-Formal authority & P & S & S \\
-Feasible challenge & P & U & I \\
-Exercised challenge & P & U & I \\
-Protective effect & P & U & U \\
+Information access & P & P & P \\
+Comprehension capacity & P & U & I \\
+Intervention authority & P & S & S \\
+Intervention feasibility & P & U & I \\
+Exercised judgment & P & U & I \\
+Execution propagation & P & U & U \\
 \midrule
 Correction & O & O & O \\
 Repair & O & U & U \\
@@ -45,7 +69,27 @@ Institutional reform & P & S & S \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}[flushleft]\footnotesize
-\item S = supported; P = partially supported; U = unsupported; I = indeterminate; O = outside scope. The table reports 27 item-level findings from three purposefully selected cases. It supplies no frequency, causal, or population estimate.
+\item S = supported; P = partially supported; U = unsupported; I = indeterminate; O = outside scope. The first six rows determine the event-control result. Correction, repair, and institutional reform describe post-event response and do not alter that result. The table reports 27 item-level findings from three purposefully selected cases and supplies no frequency, causal, or population estimate.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
+\caption{Formal authority compared with event-level practical control}
+\label{tab:authority-event-control}
+\begin{tabularx}{\linewidth}{l c c X}
+\toprule
+Case & Authority & Event control & Reason \\
+\midrule
+Oko, 1983 & P & Unresolved & All six required stages are partially supported. \\
+Patriot ZG710, 2003 & S & Fail & Four required stages are unsupported. \\
+Patriot F/A-18C, 2003 & S & Fail & Execution propagation is unsupported; three stages are indeterminate. \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]\footnotesize
+\item Supported authority establishes one required condition and cannot substitute for the other five. Results are derived from released states under the v0.16.0 rule.
 \end{tablenotes}
 \end{threeparttable}
 \end{table}
@@ -135,12 +179,12 @@ Recovery population & Recovered-content decisions & 76 of 76 & Screening complet
 \toprule
 Stage & v0.3.0 & v0.6.0 & Material gap recorded in v0.6.0 \\
 \midrule
-Access before action & S & P & No contemporaneous delivery, interface, or command record was located. \\
-Comprehension & S & P & No contemporaneous reasoning, review, or explanation record was located. \\
-Formal authority & S & P & No contemporaneous delegation or command-procedure record was located. \\
-Feasible challenge & S & P & No contemporaneous timing or operating record was located. \\
-Exercised challenge & S & P & No contemporaneous decision or communication log was located. \\
-Protective effect & S & P & No contemporaneous linked action, stop, or escalation record was located. \\
+Information access & S & P & No contemporaneous delivery, interface, or command record was located. \\
+Comprehension capacity & S & P & No contemporaneous reasoning, review, or explanation record was located. \\
+Intervention authority & S & P & No contemporaneous delegation or command-procedure record was located. \\
+Intervention feasibility & S & P & No contemporaneous timing or operating record was located. \\
+Exercised judgment & S & P & No contemporaneous decision or communication log was located. \\
+Execution propagation & S & P & No contemporaneous linked action, stop, or escalation record was located. \\
 \bottomrule
 \end{tabularx}
 \begin{tablenotes}[flushleft]\footnotesize
@@ -161,7 +205,7 @@ Test condition & Oko, 1983 & ZG710, 2003 & F/A-18C, 2003 \\
 A second coding exists & Yes & No & No \\
 The same source packet was used & Yes & NA & NA \\
 The same evidence rule was used & No & NA & NA \\
-Comparable pre-action stages & 6 & 0 & 0 \\
+Comparable event-level stages & 6 & 0 & 0 \\
 Unchanged classifications & 0 & NA & NA \\
 Changed classifications & 6 & NA & NA \\
 Independent second assessor & No & No & No \\

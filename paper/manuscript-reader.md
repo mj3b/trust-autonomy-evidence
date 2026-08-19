@@ -8,27 +8,33 @@
 **ORCID:** [0009-0001-8121-2878](https://orcid.org/0009-0001-8121-2878)  
 **Affiliation:** Independent Researcher, Node & Norm, United States  
 **Correspondence:** [mab7898@g.harvard.edu](mailto:mab7898@g.harvard.edu); [markjuliusbanasihan@gmail.com](mailto:markjuliusbanasihan@gmail.com)  
-**Status:** Proposition-reviewed Preprints.org working manuscript, v0.15.0 candidate
+**Status:** Proposition-reviewed working manuscript, v0.16.0 rebuild
 
 ## Abstract
 
-Institutions often treat a named reviewer or approval step as evidence that an automated system remains under human control. That inference can fail when the person lacks timely information, comprehension, authority, an opportunity to challenge the system, or the ability to affect the outcome. This paper develops a frozen, evidence-traceable procedure for representing formal authority, practical control, and unresolved evidence in bounded public incident records. Before case screening, the protocol fixed the evidence cutoff, candidate collections, eligibility rules, screening order, selection strata, and missing-data treatment. Three versioned historical case packets record claim-level provenance, categorical evidence states, and a chain from information access through effect. A frozen reanalysis changed six Oko pre-action stages from supported to partially supported. The current assessments record partial support across those Oko stages, supported authority with unsupported practical conditions in Patriot ZG710, and supported authority with unresolved conditions in the Patriot F/A-18C case. An open-index search produced 2,431 deduplicated records. Author screening and forward-citation review yielded five bounded source propositions for manuscript use, two background-only sources, and six quarantined sources. The contribution is a governance-specific integration with a visible correction path. Institutions claiming human control bear an ethical burden to preserve evidence of practical force because unsupported attribution can obscure responsibility and exposure to harm. Three retrospective, single-assessor cases supply no population estimate, causal validation, independent-reliability result, or transfer claim for current learned systems.
+Institutions often treat a named reviewer or approval step as proof that an automated decision remained under human control. That proof can fail when the person lacked usable information, comprehension capacity, intervention authority, sufficient time, or an effective path for changing execution. This study asks what evidence an investigator would need to distinguish assigned authority from practical human control in one consequential decision.
+
+The study introduces a frozen, evidence-traceable reconstruction procedure. It preserves case selection, source provenance, missing evidence, assessment changes, and claim dependencies. Six event-level conditions are evaluated separately: information access, comprehension capacity, intervention authority, intervention feasibility, exercised judgment, and execution propagation. Evidence is classified as supported, partially supported, unsupported, or indeterminate, preventing missing records from becoming factual findings.
+
+The procedure was applied to three purposively selected historical cases representing contrasting evidence conditions. Under the direct-and-contemporaneous evidence rule, none supported the complete practical-control conclusion. Reassessment changed all six Oko event-level stages from supported to partially supported. The two Patriot cases retained evidence of formal human authority while producing unsupported or unresolved findings elsewhere in the practical-control chain.
+
+An open-index search produced 2,431 deduplicated records and located prior research addressing each component separately. Within the reviewed source set, no source supplied the complete reconstruction-and-audit procedure. This remains a bounded search result. The three retrospective, single-assessor cases provide no prevalence estimate, independent-reliability result, causal validation, or transfer finding for present learned systems. The study proposes the records institutions should preserve when human control is used to justify deployment, assign responsibility, or explain a consequential automated decision.
 
 **Keywords:** human oversight; meaningful human control; AI governance; incident reconstruction; assurance
 
-## Resolved evidence decision
+## Correction result carried into this study
 
-`PAPER-BLOCKER-01` identified a mismatch between Oko's released v0.3 supported states and the protocol's direct-and-contemporaneous evidence rule. The [v0.6 adjudication protocol](../protocols/oko-evidence-adjudication-v0.6.0.md) was frozen before reassessment. The resulting [change ledger](../assessments/v0.6.0/oko-change-ledger.json) records six transitions to partially supported and preserves v0.3.0 as release history. Missing contemporaneous records remain a limitation.
+An earlier Oko assessment classified six event-level stages as supported even though the packet relied on retrospective accounts and lacked contemporaneous command records. I froze a reassessment rule before recoding the case. Applying that rule changed all six stages to partially supported. The earlier assessment remains preserved, and the change ledger records what changed and why. This correction demonstrates one function of the method: a later review can narrow a claim without erasing the research history.
 
 ## 1. Introduction
 
 ### 1.1 The institutional problem
 
-An approval step proves that an institution assigned a role. It does not show that the person received the relevant information, understood the system's limits, could challenge the proposed action in time, exercised that authority, or changed the outcome. A human-control claim therefore contains several empirical propositions that a signature or job title cannot establish by itself.
+An approval step identifies who was assigned responsibility. Practical control requires additional evidence: the person received usable information, could interpret the system's output and limits, held intervention rights, had enough time and institutional support to act, exercised judgment, and propagated a change into execution. A signature or job title establishes none of those conditions by itself.
 
 Human-factors research explains the mechanism. Automation can leave people responsible for rare or abnormal conditions after routine system operation has reduced their preparation for those conditions ([Bainbridge, 1983](https://doi.org/10.1016/0005-1098(83)90046-8)). Situation awareness and intervention performance depend on what the person can perceive, understand, and project under the operating conditions ([Endsley, 2017](https://doi.org/10.1177/0018720816681350)). Trust affects reliance through the interaction of the person, system, task, and context ([Lee & See, 2004](https://doi.org/10.1518/hfes.46.1.50_30392)). Formal authority can remain intact as these operational conditions deteriorate.
 
-The same problem appears in policy. Green finds that government rules often require human oversight without establishing that the designated people can perform the intended review ([Green, 2022](https://doi.org/10.1016/j.clsr.2022.105681)). Zhu et al. separate AI operative agency from human evaluative agency and identify verification, contestation, and substitution as oversight mechanisms ([Zhu et al., 2026](https://doi.org/10.1007/s43681-026-01147-7)). These accounts direct attention to a documentary question: what evidence would justify reliance on an institutional claim that human authority had practical force in one consequential decision?
+The same problem appears in policy. Green finds that government rules often require human oversight without establishing that designated people can perform the intended review ([Green, 2022](https://doi.org/10.1016/j.clsr.2022.105681)). Zhu et al. separate AI operative agency from human evaluative agency and identify verification, contestation, and substitution as oversight mechanisms ([Zhu et al., 2026](https://doi.org/10.1007/s43681-026-01147-7)). When an institution uses a human-control claim to justify deployment or assign responsibility, missing evidence can place responsibility on a person who lacked practical power and can preserve a safeguard that never worked. This study therefore asks a documentary question: what evidence would justify reliance on an institutional claim that human authority had practical force in one consequential decision?
 
 ### 1.2 Research gap
 
@@ -38,19 +44,23 @@ The closest prior work sharply limits the present claim. Sterz et al. define eff
 
 Prior methods also cover reconstruction and evidence. Dekker reconstructs human contributions inside an event sequence while controlling hindsight ([Dekker, 2002](https://doi.org/10.1016/S0022-4375(02)00032-4)). Pittaras and McGregor classify possible failure causes from incomplete open-source AI incidents ([Pittaras & McGregor, 2023](https://ceur-ws.org/Vol-3381/17.pdf)). ScientistOne supplies claim-level evidence chains and post-hoc integrity checks ([Meng et al., 2026](https://doi.org/10.48550/arXiv.2605.26340)). Moghaddam proposes evidence-linked formal argument graphs with deterministic validation and provenance ([Moghaddam, 2026](https://doi.org/10.48550/arXiv.2604.04103)). Alhalangy joins selective human review to a structured case-level audit trail in a synthetic institutional study ([Alhalangy, 2026](https://doi.org/10.3390/info17070694)). Recent close sources go further: Bahidika applies oversight tiers to public AI Incident Database records ([Bahidika, 2026](https://doi.org/10.14569/IJACSA.2026.0170502)), LaPosta publishes a runnable decision-chain protocol ([LaPosta, 2026](https://doi.org/10.1609/aaaiss.v8i1.42543)), Niazi, Hassani, and Lee define a versioned assurance case with a practical-override trace ([Niazi et al., 2026](https://doi.org/10.3390/automation7030096)), and Surve, Shabtai, and Elovici declare an audit-evidence method with a retrospective Cruise application ([Surve et al., 2026](https://doi.org/10.48550/arXiv.2606.21276)).
 
-The remaining contribution is one governance-specific integration: protocol fixation before case screening, a visible selection and stopping path, versioned public evidence packets, categorical missingness, a chain from information access through effect, claim-specific evidence fitness, conclusion dependency closure, versioned correction, and executable artifact checks. The formal search records 2,431 deduplicated records and preserves the limits created by inaccessible abstracts, one unresolved citation seed, and unavailable authenticated databases. The paper therefore states a bounded integration claim. Universal originality remains outside the evidence.
+Prior research explains the conditions of effective oversight, the reconstruction of human action, the analysis of incomplete incident records, and the connection between claims and evidence. The unresolved problem is procedural. An investigator still needs one method for determining whether a specific institutional claim of human control is supported, contradicted, or unresolved in the surviving record.
+
+This study connects the required steps into one inspectable path. The reader can see how a case was selected, which records entered the packet, what each record supports, where evidence is missing, whether human action propagated into execution, which conclusions depend on those findings, and how a later correction changed the result. Each component prevents a different inference failure. Frozen selection constrains outcome-informed case choice. Categorical missingness protects an unknown condition from becoming a negative factual finding. Evidence fitness prevents citation presence from standing in for adequate support. Dependency closure prevents a conclusion from surviving after a required claim fails. Versioned correction prevents revision from erasing the prior record.
+
+The formal search records 2,431 deduplicated records. Within the sources that received full-text or proposition-level review, no source supplied this complete reconstruction-and-audit procedure. Another 980 retrieval outcomes and several authenticated database searches remain open. The closest-work finding therefore applies only to the reviewed source set.
 
 ### 1.3 Research question and contribution
 
 > How can a frozen, evidence-traceable assessment procedure represent formal human authority, practical human control, and unresolved evidence in a bounded public incident record?
 
-The paper proposes a documentary assessment procedure. It defines a bounded action sequence, fixes the case-selection and missing-data rules, assembles a versioned evidence packet, assigns provenance to material statements, and evaluates six pre-action conditions: access, comprehension, authority, feasible challenge, exercised challenge, and effect. An explicit indeterminate state prevents missing records from becoming negative factual findings. A correction ledger preserves earlier outputs when a later adjudication changes a state.
+The study proposes a documentary assessment procedure. It defines a bounded action sequence, fixes the case-selection and missing-data rules, assembles a versioned evidence packet, assigns provenance to material statements, and evaluates six event-level conditions: information access, comprehension capacity, intervention authority, intervention feasibility, exercised judgment, and execution propagation. An explicit indeterminate state prevents missing records from becoming negative factual findings. A correction ledger preserves earlier outputs when a later adjudication changes a state.
 
 The three cases demonstrate that procedure under contrastive evidence conditions. They do not test prevalence, classification accuracy, independent reliability, causal effects, or transfer to current learned systems. The institutional output is a proposed record set that a reviewer would need before relying on a practical-control claim. The ethical proposition is narrower: an institution that represents a decision as human-controlled should preserve evidence capable of testing whether the assigned authority had practical force.
 
 ### 1.4 Paper structure
 
-Section 2 locates the procedure in meaningful-human-control, human-factors, oversight, incident-analysis, reconstruction, and assurance research. Section 3 defines the frozen method, artifact controls, literature search, and transfer boundary. Section 4 reports the released assessment and search results. Sections 5 through 7 separate interpretation, limitations, and proposed institutional record requirements.
+Section 2 explains which parts of the problem prior research already solves. Section 3 derives the six-stage chain and explains the inference error prevented by each control. Section 4 reports what changed when the procedure was applied to three historical packets. Sections 5 through 7 explain the institutional consequence, evidence limits, and records required to substantiate a human-control claim.
 
 ## 2. Related work
 
@@ -102,15 +112,15 @@ The contribution is methodological and bounded. It asks how a reader can inspect
 
 ### 3.1 Study design
 
-This is a retrospective, purposefully selected, single-assessor methods study. The unit of analysis is one bounded machine-mediated decision or action sequence. The method assesses documentary support for a practical-control proposition within that boundary. It does not assess personal blame, legal liability, or moral character.
+This is a retrospective, purposively selected, single-assessor methods study. I chose a method demonstration because the first research problem concerns representation: can one public record distinguish assigned authority, practical control, and unresolved evidence without converting missing records into findings? The unit of analysis is one bounded machine-mediated decision or action sequence. The procedure assesses documentary support for a practical-control proposition within that boundary. Personal blame, legal liability, moral character, and population frequency remain outside the study.
 
 ### 3.2 System inclusion and transfer boundary
 
-The frozen protocol used a functional and historically neutral system boundary. A case qualified when an identifiable machine-based system generated an inference, classification, recommendation, communication, decision, or action that affected a person, institution, digital setting, or physical setting. Oko concerns a rule-based early-warning inference. The Patriot cases concern automated detection, tracking, classification, and engagement support. These systems differ materially from present learned models and agents. Transfer therefore depends on shared mechanisms such as time compression, information dependence, intervention rights, and causal effect.
+The frozen protocol used a functional and historically neutral system boundary. A case qualified when an identifiable machine-based system generated an inference, classification, recommendation, communication, decision, or action that affected a person, institution, digital setting, or physical setting. Oko concerns a rule-based early-warning inference. The Patriot cases concern automated detection, tracking, classification, and engagement support. These systems differ materially from present learned models and agents. Their value lies in inspectable mechanisms: time compression, information dependence, intervention rights, and the path from human judgment to execution. A future contemporary application must test whether those mechanisms transfer.
 
 ### 3.3 Protocol freeze and evidence cutoff
 
-The public-case protocol and empty selection register reached `main` at commit `180ddda1d70f0ee36faaf8875e839bbc99cbbec2`. The evidence cutoff was 6 August 2026 at 23:59:59 UTC. The protocol fixed the candidate collections, eighteen search terms, six eligibility conditions, exclusion rules, chronological screening order, three strata, first-eligible rule, and missing-data treatment. Candidate screening began after the freeze commit.
+Knowing an outcome can influence case selection and interpretation. I therefore fixed the public-case protocol and empty selection register before screening. They reached `main` at commit `180ddda1d70f0ee36faaf8875e839bbc99cbbec2`. The evidence cutoff was 6 August 2026 at 23:59:59 UTC. The protocol fixed the candidate collections, eighteen search terms, six eligibility conditions, exclusion rules, chronological screening order, three strata, first-eligible rule, and missing-data treatment. The freeze constrains later choice; it supplies no independent protection against bias in the original design.
 
 ### 3.4 Candidate collections and search
 
@@ -120,21 +130,34 @@ The candidate pool came from two public collections. The AI Incident Database sn
 
 An eligible case required an identifiable system output or action, a bounded sequence, two reports from different authors or organizations, one primary or official record, lawful citation and analysis, and compliance with the evidence cutoff. The incomplete-evidence stratum allowed two independent secondary reports after a documented unsuccessful search for an official record. Benchmark demonstrations, unbounded performance reports, single-source events, private-evidence dependencies, rights conflicts, duplicates, and post-cutoff evidence were excluded.
 
-Candidates were deduplicated, sorted by event date and collection identifier, and screened until the first eligible case filled each of three strata: pre-action intervention, incomplete or conflicting evidence, and authority without practical force. Screening stopped after five candidates. The strata anticipate the headline contrasts. The case set therefore demonstrates procedure execution under those conditions and supplies no independent discrimination test.
+Candidates were deduplicated, sorted by event date and collection identifier, and screened until the first eligible case filled each of three frozen strata: intervention before irreversible action, incomplete or conflicting evidence, and authority without practical force. The released selection register calls the first stratum `pre-action intervention`; this manuscript uses `event-level control` for the wider six-stage construct. Screening stopped after five candidates. The strata anticipate the headline contrasts. The case set therefore demonstrates procedure execution under those conditions and supplies no independent discrimination test.
 
 **Figure 1. Frozen selection and stopping.** The figure shows the chronological decisions for the five screened candidates and the point at which all three strata were filled.
 
 ### 3.6 Versioned evidence packets
 
-Each selected case packet defines the action boundary and chronology; lists title, issuer, author, dates, URLs, source class, and preservation state; records unavailable evidence; labels material statements; states publication-rights limits; and preserves hashes for locally stored files. Remote-only sources are cited with metadata and retrieval information. The packet manifest proves the bytes preserved in the repository at that version. It makes no claim about later remote content or source truth.
+A reconstruction can change silently when a source disappears, a file is replaced, or a later account enters the evidence set. Each selected case therefore receives a versioned packet. The packet defines the action boundary and chronology; lists title, issuer, author, dates, URLs, source class, and preservation state; records unavailable evidence; labels material statements; states publication-rights limits; and preserves hashes for locally stored files. Remote-only sources are cited with metadata and retrieval information. The packet manifest proves which bytes the assessment used. It supplies no determination that a source is true.
 
-### 3.7 Assessment contract
+### 3.7 Construct derivation and assessment contract
 
-The assessment contract records six autonomy variables, twelve trust-evidence propositions, and nine practical-control stages. The current paper compares six pre-action stages: access, comprehension, authority, feasibility, exercise, and effect. Every stage receives one categorical state: supported, partially supported, unsupported, indeterminate, or outside scope. Material statements receive one provenance label: direct record, source claim, assessor inference, or unresolved.
+The six event-level stages came from a causal question: what must remain true for assigned authority to change execution? The chain begins when the person receives information and ends when an intervention propagates into the system or institutional action. A broken required stage blocks the wider event-control proposition. Table 1 shows how prior constructs become documentary questions and why each stage is needed.
 
-A bounded practical-force conclusion requires supported findings for access, authority, feasibility, exercise, and effect. Correction and repair are required for a wider institutional-accountability conclusion. Reform requires longitudinal evidence.
+**Table 1. Derivation of the event-level practical-control chain.**
 
-**Table 1. Assessment-state decision rules.**
+| Stage | Prior construct | Why it enters the chain | Minimum observable evidence | Error prevented |
+|---|---|---|---|---|
+| Information access | Epistemic access and situation awareness ([Sterz et al., 2024](https://doi.org/10.1145/3630106.3659051); [Endsley, 2017](https://doi.org/10.1177/0018720816681350)) | Judgment cannot act on information the person never received | Timestamped delivery, interface, or access record | Treating post-action information as pre-action review |
+| Comprehension capacity | Situation awareness, competence, and system understanding ([Endsley, 2017](https://doi.org/10.1177/0018720816681350); [Green, 2022](https://doi.org/10.1016/j.clsr.2022.105681)) | Information has practical value only when the assigned person could interpret the output, limits, uncertainty, and alternatives | Role-appropriate materials plus evidence that they were usable under the operating conditions | Treating exposure to an output as usable understanding |
+| Intervention authority | Causal power, delegation, and contestability ([Sterz et al., 2024](https://doi.org/10.1145/3630106.3659051); [Almada, 2019](https://doi.org/10.1145/3322640.3326699)) | The person needs enforceable rights to approve, reject, modify, stop, or escalate | Named delegation and functioning control rights | Treating an advisory role as decision authority |
+| Intervention feasibility | Workload, timing, access, and institutional support ([Bainbridge, 1983](https://doi.org/10.1016/0005-1098(83)90046-8); [McDermid, 2019](https://www.york.ac.uk/assuring-autonomy/news/blog/human-control-ai-autonomy/)) | Formal rights lose practical force when operating conditions defeat their use | Sufficient time, staffing, access, and response path | Treating ceremonial authority as an available intervention |
+| Exercised judgment | Corrective oversight and active review ([Baum & Laux, 2026](https://doi.org/10.48550/arXiv.2603.19213); [Green, 2022](https://doi.org/10.1016/j.clsr.2022.105681)) | Assigned authority does not establish that judgment occurred | Contemporaneous decision, challenge, or escalation record | Treating automatic approval as active review |
+| Execution propagation | Causal power and intervention effect ([Sterz et al., 2024](https://doi.org/10.1145/3630106.3659051); [Douer & Meyer, 2020](https://doi.org/10.1109/TASE.2020.2965466)) | A changed review record can coexist with unchanged execution | Linked stop, modification, escalation, or downstream state change | Treating a recorded intervention as operationally effective |
+
+The released machine-readable field named `effect` is interpreted here as execution propagation. This wording limits the finding to a linked change in execution. A counterfactual causal effect and a beneficial outcome require separate evidence.
+
+The assessment contract also records six autonomy variables, twelve trust-evidence propositions, and three post-event stages: correction, repair, and reform. Every stage receives one categorical state: supported, partially supported, unsupported, indeterminate, or outside scope. Material statements receive one provenance label: direct record, source claim, assessor inference, or unresolved.
+
+**Table 2. Assessment-state decision rules.**
 
 | State | Code | Decision rule |
 |---|:---:|---|
@@ -146,15 +169,64 @@ A bounded practical-force conclusion requires supported findings for access, aut
 
 *Note.* A missing record produces an indeterminate state unless the protocol or case design establishes that the record should exist. The states are categorical. No numeric distance or aggregate score is assigned.
 
+For case (c) and stage (j), the state is:
+
+\[
+s_{c,j}\in\{S,P,U,I,O\}.
+\]
+
+Let (R) contain information access, comprehension capacity, intervention authority, intervention feasibility, exercised judgment, and execution propagation. The event-level rule is:
+
+\[
+EventControl(c)=
+\begin{cases}
+FAIL, & \exists j\in R:s_{c,j}=U\\
+UNRESOLVED, & \nexists j\in R:s_{c,j}=U\;\land\;\exists j\in R:s_{c,j}\in\{P,I\}\\
+PASS, & \forall j\in R:s_{c,j}=S.
+\end{cases}
+\]
+
+In plain language, one unsupported required stage makes the event-control proposition fail. When no stage is unsupported, a partial or indeterminate stage leaves the proposition unresolved. Every stage must be supported for a pass. The rule assigns no score and creates no ranking among cases.
+
+Event control, institutional accountability, and institutional learning are separate propositions:
+
+\[
+EventControl=Access\land Comprehension\land Authority\land Feasibility\land Exercise\land Propagation,
+\]
+
+\[
+AccountableControl=EventControl\land Correction\land Repair,
+\]
+
+\[
+LearningControl=AccountableControl\land Reform.
+\]
+
+A later correction or reform cannot retroactively establish event-level control. These stages answer what the institution could do after the decision and whether the decision architecture changed.
+
+For a contemporary packet with complete timestamps, the proposed intervention-time margin is:
+
+\[
+M_t=(t_{commit}-t_{access})-(t_{interpret}+t_{decide}+t_{transmit}+t_{propagate}).
+\]
+
+A nonnegative margin and a functioning intervention channel support timing feasibility. The three historical packets lack the complete timing inputs needed to calculate this measure. The formula defines a future measurement requirement and produces no new historical result.
+
 ### 3.8 Missing evidence and inference
 
-Missing public evidence produces an indeterminate state unless the packet establishes that a required record should exist and eligible evidence shows the condition was absent. This rule blocks a common inference error in retrospective work: converting an unavailable log, display, inquiry, or internal record into a finding that the underlying condition failed. The report separates what a source states, what a preserved record directly shows, what the assessor infers, and what remains unresolved.
+Missing public evidence produces an indeterminate state unless the packet establishes that a required record should exist and eligible evidence shows the condition was absent. This rule blocks a common inference error in retrospective work: converting an unavailable log, display, inquiry, or internal record into a finding that the underlying condition failed. Unsupported and indeterminate therefore lead to different institutional conclusions. The first records evidence that a required condition was absent or contradicted. The second records an evidence deficit. The report separates what a source states, what a preserved record directly shows, what the assessor infers, and what remains unresolved.
 
 ### 3.9 Artifact and consistency controls
 
-Repository checks validate schemas, packet hashes, selection invariants, cross-case interactions, derived figure data, release manifests, and prespecified mutations. These checks reproduce declared transformations and detect internal contradictions. They do not reproduce the assessor's historical judgments.
+Traceable evidence can still support an overbroad claim, and a correct claim can become inconsistent with its data during revision. Repository checks therefore validate schemas, packet hashes, selection invariants, cross-case interactions, derived figure data, release manifests, and prespecified mutations. These checks reproduce declared transformations and detect internal contradictions. They do not reproduce the assessor's historical judgments.
 
-The v0.6 Chain-of-Evidence adaptation maps each material claim to exact locators, records a human support attestation, and tests directness, contemporaneity, independence, completeness, and publication authority. A dependency graph controls which claims may enter a conclusion. The integrity audit adapts ScientistOne's score verification, specification-violation, reference-verification, and method-code-alignment checks, then adds evidence-fitness and dependency-closure checks. A separate literature-support register maps material manuscript sentences to checked references.
+The Chain-of-Evidence adaptation maps each material claim to exact locators, records a human support attestation, and tests directness, contemporaneity, independence, completeness, and publication authority. A dependency graph controls which claims may enter a conclusion. For material claim (q):
+
+\[
+Eligible(q)=Trace(q)\land Integrity(q)\land Support(q)\land Fitness(q)\land\bigwedge_{d\in Dep(q)}Eligible(d).
+\]
+
+The formula means that a conclusion cannot remain eligible after a required supporting claim fails or becomes unresolved. The integrity audit adapts ScientistOne's score verification, specification-violation, reference-verification, and method-code-alignment checks, then adds evidence-fitness and dependency-closure checks. A separate literature-support register maps material manuscript sentences to checked references.
 
 ### 3.10 Formal literature search
 
@@ -164,47 +236,59 @@ AI assistance assigned preliminary triage proposals. Mark Julius Banasihan revie
 
 ### 3.11 Frozen Oko adjudication
 
-The v0.6 adjudication asked which states follow when the existing definitions are applied to the frozen Oko packet. It admitted no new historical source. The evidence cutoff, packet, six stage questions, state rules, and dependency rule were fixed before reassessment. Retrospective first-person testimony directly supports what a participant later reported. Its publication date prevents it from satisfying the contemporaneous-record requirement for a supported 1983 state. The v0.3.0 assessment remains preserved. A separate ledger records each v0.6 change.
+The Oko correction tests whether a released conclusion can be narrowed without erasing the earlier record. The v0.6 adjudication admitted no new historical source. The evidence cutoff, packet, six stage questions, state rules, and dependency rule were fixed before reassessment. Retrospective first-person testimony directly supports what a participant later reported. Its publication date prevents it from satisfying the contemporaneous-record requirement for a supported 1983 state. The v0.3.0 assessment remains preserved. A separate ledger records each v0.6 change.
 
 ## 4. Results
 
 ### 4.1 Selection result
 
-The search preserved 928 candidate records. Five candidates were screened in chronological order. Two were excluded: one lacked two independent reports of a bounded autonomous action, and one lacked a bounded action sequence. AIID-27 filled pre-action intervention, AIID-444 filled authority without practical force, and AIID-445 filled incomplete or conflicting evidence. Screening then stopped. The remaining 923 candidates carry no exclusion decision.
+The search preserved 928 candidate records. Five candidates were screened in chronological order. Two were excluded: one lacked two independent reports of a bounded autonomous action, and one lacked a bounded action sequence. AIID-27 filled the frozen `pre-action intervention` selection stratum, AIID-444 filled authority without practical force, and AIID-445 filled incomplete or conflicting evidence. Screening then stopped. The remaining 923 candidates carry no exclusion decision.
 
 ### 4.2 Oko, 1983
 
-The v0.3.0 release classified access, comprehension, authority, feasibility, exercise, and effect as supported. The frozen v0.6 adjudication classifies all six as partially supported. The packet contains retrospective participant accounts and an independent retrospective reconstruction. It contains no located contemporaneous Soviet command log, official incident record, or investigation file. The correction aligns the state labels with the evidence rule and preserves the missing historical record as a limitation. The packet supports a bounded account of what later sources report. It supplies no sole-cause finding for the ultimate outcome.
+The v0.3.0 release classified information access, comprehension capacity, intervention authority, intervention feasibility, exercised judgment, and execution propagation as supported. The frozen v0.6 adjudication classifies all six as partially supported. The packet contains retrospective participant accounts and an independent retrospective reconstruction. It contains no located contemporaneous Soviet command log, official incident record, or investigation file. The correction aligns the state labels with the evidence rule and preserves the missing historical record as a limitation. Under the categorical event-control rule, Oko remains unresolved because every required stage is partially supported. The packet supports a bounded account of what later sources report. It supplies no sole-cause finding for the ultimate outcome.
 
 ### 4.3 Patriot ZG710, 2003
 
-The ZG710 packet supports formal engagement authority. It records a decision window of about one minute, incomplete communication, restricted access to the wider air picture, training that emphasized trust in the system, and identification weaknesses. Within the packet, comprehension, feasible challenge, exercised challenge, and protective effect are unsupported. The assessment addresses the practical-control chain. It assigns no individual legal or moral responsibility.
+The ZG710 packet supports formal engagement authority. It records a decision window of about one minute, incomplete communication, restricted access to the wider air picture, training that emphasized trust in the system, and identification weaknesses. Within the packet, comprehension capacity, intervention feasibility, exercised judgment, and execution propagation are unsupported. The event-control proposition therefore fails under the categorical rule even though formal authority is supported. The assessment addresses the practical-control chain. It assigns no individual legal or moral responsibility.
 
 ### 4.4 Patriot F/A-18C, 2003
 
-The F/A-18C packet supports the detection-to-engagement sequence and formal authority. The full inquiry, system logs, operator displays, and classified technical report were unavailable. Access is partially supported; comprehension, feasibility, and exercised challenge are indeterminate; effect is unsupported because the engagement proceeded and the aircraft was lost. The unresolved states preserve the difference between a missing public record and evidence that a condition failed.
+The F/A-18C packet supports the detection-to-engagement sequence and formal authority. The full inquiry, system logs, operator displays, and classified technical report were unavailable. Information access is partially supported; comprehension capacity, intervention feasibility, and exercised judgment are indeterminate; execution propagation is unsupported because the engagement proceeded and the aircraft was lost. The event-control proposition fails because one required stage is unsupported. The indeterminate stages separately preserve what the public record cannot resolve.
 
 ### 4.5 Cross-case practical-control chain
 
-Figure 2 compares the six pre-action stages. Oko carries partial support across the chain. ZG710 carries supported authority, partial access, and unsupported comprehension, feasibility, exercise, and effect. F/A-18C carries supported authority, partial access, indeterminate comprehension, feasibility, and exercise, and unsupported effect.
+Figure 2 compares the six event-level stages. Oko carries partial support across the chain. ZG710 carries supported authority, partial access, and unsupported comprehension, feasibility, exercise, and propagation. F/A-18C carries supported authority, partial access, indeterminate comprehension, feasibility, and exercise, and unsupported propagation.
 
-**Figure 2. Practical-control chain.** The result shows that assigned authority can coexist with different states for information, understanding, opportunity, action, and effect. The comparison reports the procedure's output for purposefully selected cases. It supplies no frequency estimate.
+**Figure 2. Practical-control chain.** The first six rows determine the event-control result; the final three record post-event response. Assigned authority can coexist with different states for information, understanding, opportunity, action, and execution propagation. The comparison reports the procedure's output for purposively selected cases and supplies no frequency estimate.
 
-**Table 2. Practical-control states across three public cases.**
+**Table 3. Practical-control states across three public cases.**
 
 | Stage | Oko, 1983 | Patriot ZG710, 2003 | Patriot F/A-18C, 2003 |
 |---|:---:|:---:|:---:|
-| Access before action | P | P | P |
-| Comprehension | P | U | I |
-| Formal authority | P | S | S |
-| Feasible challenge | P | U | I |
-| Exercised challenge | P | U | I |
-| Protective effect | P | U | U |
+| Information access | P | P | P |
+| Comprehension capacity | P | U | I |
+| Intervention authority | P | S | S |
+| Intervention feasibility | P | U | I |
+| Exercised judgment | P | U | I |
+| Execution propagation | P | U | U |
 | Correction | O | O | O |
 | Repair | O | U | U |
 | Institutional reform | P | S | S |
 
-*Note.* S = supported; P = partially supported; U = unsupported; I = indeterminate; O = outside scope. The table reports 27 item-level findings. It supplies no frequency, causal, or population estimate.
+*Note.* S = supported; P = partially supported; U = unsupported; I = indeterminate; O = outside scope. The first six rows determine the event-control result. Correction, repair, and institutional reform describe post-event response and do not alter that result. The table reports 27 item-level findings and supplies no frequency, causal, or population estimate.
+
+The formal-authority comparison exposes the decision consequence of the full chain. A role assignment would preserve supported authority in both Patriot cases. The event-level procedure reaches a failing result in both because other required stages are unsupported. Oko remains unresolved because retrospective evidence partially supports each stage and satisfies none at the supported level.
+
+**Table 4. Formal authority compared with event-level practical control.**
+
+| Case | Formal-authority state | Event-control result | Why the wider result differs | Institutional meaning |
+|---|:---:|:---:|---|---|
+| Oko, 1983 | P | Unresolved | Every required stage is partially supported under the direct-and-contemporaneous rule | The surviving record cannot substantiate the complete practical-control claim |
+| Patriot ZG710, 2003 | S | Fail | Comprehension, feasibility, exercise, and propagation are unsupported | Assigned authority lacked documented practical force in the bounded decision |
+| Patriot F/A-18C, 2003 | S | Fail | Propagation is unsupported; access is partial; comprehension, feasibility, and exercise remain indeterminate | Formal authority survives while the wider control claim fails and several mechanisms remain unresolved |
+
+*Note.* These three cases were selected to expose contrasting evidence conditions. The two failing results and one unresolved result describe this purposive set. They estimate no population rate.
 
 ### 4.6 Decision paths and trust-evidence states
 
@@ -222,20 +306,20 @@ The v0.14 integrity audit maps 32 material repository claims. The versioned Oko 
 
 **Figure A2. Reproducibility lineage.** The upper lane traces the research record from frozen collections to the release archive. The lower lane traces the figure pipeline from plot inputs to integrity checking. The labeled connector runs from Assessments to Plot inputs because recorded assessment states become inputs to the figure builder. The diagram shows which transformations can be repeated from preserved artifacts and where human judgment remains necessary. Artifact lineage supplies no independent reproduction of the research conclusions.
 
-**Figure A3. Claim-evidence integrity.** The matrix shows the five evidence gates and conclusion eligibility for twenty mapped claims. Independent validity and search-coverage limits remain visible. It assigns no numeric score.
+**Figure A3. Claim-evidence integrity.** The matrix shows five evidence gates and conclusion eligibility for forty mapped claims. Independent validity and search-coverage limits remain visible. It assigns no numeric score.
 
-**Figure A4. Versioned correction of the Oko assessment.** All six pre-action stages move from supported in v0.3.0 to partially supported in v0.6.0. The packet remained fixed. The frozen evidence rule required the correction, and the change supplies no new historical evidence.
+**Figure A4. Versioned correction of the Oko assessment.** All six event-level stages move from supported in v0.3.0 to partially supported in v0.6.0. The packet remained fixed. The frozen evidence rule required the correction, and the change supplies no new historical evidence.
 
 **Table A1. Oko correction record.**
 
 | Stage | v0.3.0 | v0.6.0 | Material gap recorded in v0.6.0 |
 |---|:---:|:---:|---|
-| Access before action | S | P | No contemporaneous delivery, interface, or command record was located. |
-| Comprehension | S | P | No contemporaneous reasoning, review, or explanation record was located. |
-| Formal authority | S | P | No contemporaneous delegation or command-procedure record was located. |
-| Feasible challenge | S | P | No contemporaneous timing or operating record was located. |
-| Exercised challenge | S | P | No contemporaneous decision or communication log was located. |
-| Protective effect | S | P | No contemporaneous linked action, stop, or escalation record was located. |
+| Information access | S | P | No contemporaneous delivery, interface, or command record was located. |
+| Comprehension capacity | S | P | No contemporaneous reasoning, review, or explanation record was located. |
+| Intervention authority | S | P | No contemporaneous delegation or command-procedure record was located. |
+| Intervention feasibility | S | P | No contemporaneous timing or operating record was located. |
+| Exercised judgment | S | P | No contemporaneous decision or communication log was located. |
+| Execution propagation | S | P | No contemporaneous linked action, stop, or escalation record was located. |
 
 *Note.* The v0.6.0 adjudication applied a protocol frozen before reassessment and admitted no new historical source.
 
@@ -247,7 +331,7 @@ Crossref resolved 22 of 25 DOI-bearing retained proposals. OpenAlex resolved thi
 
 **Figure 5. Formal search retrieval and final screening state.** The left panel traces 184 direct-query records and 2,482 citation-chain records through pooling and deduplication. The right panel reports the six final screening classes on a logarithmic count axis. Blue points identify the 27 close and 45 background records. The annotation records closure of all 89 author decisions. The 1,087 inaccessible records remain a separate coverage limit.
 
-**Table 3. Formal search and final screening state.**
+**Table 5. Formal search and final screening state.**
 
 | Stage | Record class | Count | Status |
 |---|---|---:|---|
@@ -265,7 +349,7 @@ Crossref resolved 22 of 25 DOI-bearing retained proposals. OpenAlex resolved thi
 
 *Note.* The six final screening classes sum to 2,431. Mark Julius Banasihan is the decision owner for the 89-record queue, with disclosed AI assistance. The 1,087 inaccessible records and authenticated database searching remain separate coverage limits.
 
-**Table 4. Proposal-to-author decision changes.**
+**Table 6. Proposal-to-author decision changes.**
 
 | Proposed class | Records | Retain close | Retain background | Exclude topic | Exclude single component |
 |---|---:|---:|---:|---:|---:|
@@ -281,7 +365,7 @@ The frozen 102-record forward-citation stratum produced 34 full-text recoveries,
 
 Across the 1,087-record recovery population, the population ledger contains 107 retrieval outcomes. All 76 recovered-content records have a screening decision after a v0.14 overlay closed RS-DQ-004 as close on title, metadata, and a verified publisher-PDF route. Its unreadable text layer and unresolved author identity preserve zero proposition permission. The unresolved retrieval class contains 980 records without an outcome, 26 metadata-only records, two unavailable records, and three reconciled duplicates. These categories preserve the 2,431-record denominator without treating access failure or duplicate detection as a topic exclusion.
 
-**Table 5. Residual-risk retrieval and screening checkpoint.**
+**Table 7. Residual-risk retrieval and screening checkpoint.**
 
 | Scope | State | Count | Claim boundary |
 |---|---|---:|---|
@@ -298,9 +382,9 @@ Across the 1,087-record recovery population, the population ledger contains 107 
 
 ### 4.9 Evidence boundaries and coding stability
 
-The six pre-action propositions produce eighteen categorical findings across the three selected packets. Oko contains six partially supported findings. ZG710 contains one supported, one partially supported, and four unsupported findings. F/A-18C contains one supported, one partially supported, one unsupported, and three indeterminate findings. These counts describe the assessment output. They assign no distance among states and no aggregate control score.
+The six event-level propositions produce eighteen categorical findings across the three selected packets. Oko contains six partially supported findings. ZG710 contains one supported, one partially supported, and four unsupported findings. F/A-18C contains one supported, one partially supported, one unsupported, and three indeterminate findings. These counts describe the assessment output. They assign no distance among states and no aggregate control score.
 
-**Figure 6. Evidence boundaries across six pre-action practical-control stages.** Each horizontal bar contains the six findings for one case. Partial support records some supporting evidence with a material gap. Indeterminate records insufficient evidence for a decision. Unsupported records evidence against the condition or evidence that the condition was absent. The display makes the public-record constraint visible and supplies no missingness rate, reliability estimate, or case ranking.
+**Figure 6. Evidence boundaries across six event-level practical-control stages.** Each horizontal bar contains the six findings for one case. Partial support records some supporting evidence with a material gap. Indeterminate records insufficient evidence for a decision. Unsupported records evidence against the condition or evidence that the condition was absent. The display makes the public-record constraint visible and supplies no missingness rate, reliability estimate, or case ranking.
 
 **Table A3. Availability of coding-stability evidence.**
 
@@ -309,7 +393,7 @@ The six pre-action propositions produce eighteen categorical findings across the
 | A second coding exists | Yes | No | No |
 | The same source packet was used | Yes | NA | NA |
 | The same evidence rule was used | No | NA | NA |
-| Comparable pre-action stages | 6 | 0 | 0 |
+| Comparable event-level stages | 6 | 0 | 0 |
 | Unchanged classifications | 0 | NA | NA |
 | Changed classifications | 6 | NA | NA |
 | Independent second assessor | No | No | No |
@@ -321,29 +405,39 @@ The six pre-action propositions produce eighteen categorical findings across the
 
 ### 5.1 Formal authority and practical force
 
-Formal authority answers one question: who was permitted to approve, reject, modify, stop, or escalate? Practical control asks whether that permission had causal force in the bounded decision. Causal force depends on a connected chain. The person must receive relevant information, interpret it, retain intervention rights, have a feasible opportunity to act, exercise judgment, and affect execution. A break at any required stage makes the wider practical-force conclusion ineligible under this protocol.
+Formal authority answers one question: who was permitted to approve, reject, modify, stop, or escalate? Practical control asks whether that permission reached execution in the bounded decision. The path requires usable information, comprehension capacity, intervention rights, a feasible opportunity to act, exercised judgment, and execution propagation. A break at any required stage blocks the wider event-control claim.
 
-The cross-case result illustrates the mechanism. Both Patriot packets support formal authority. ZG710 records absent practical conditions in the available evidence, while F/A-18C leaves several conditions unresolved. Oko's retrospective accounts support the reported sequence only partially under the direct-and-contemporaneous rule. The figure therefore turns “human in the loop” into testable documentary propositions.
+The cross-case result shows why the distinction matters. Both Patriot packets support formal authority. Both fail the event-control rule because execution propagation is unsupported, and ZG710 contains three additional unsupported required stages. Oko remains unresolved because retrospective accounts provide partial support without the contemporaneous records required for supported states. A role assignment and practical control therefore produce different documentary conclusions in the same case.
 
 ### 5.2 The evidentiary function of an indeterminate state
 
-Public incident records are shaped by classification, litigation, institutional disclosure, journalism, preservation, and time. A missing operator display or inquiry file can block a judgment about comprehension or feasibility. It cannot establish that the operator lacked comprehension or opportunity. The indeterminate state holds that boundary. It also makes the missing record visible as a research result and a recordkeeping requirement.
+Public incident records are shaped by classification, litigation, institutional disclosure, journalism, preservation, and time. A missing operator display or inquiry file can block a judgment about comprehension or feasibility. It supplies no evidence that the operator lacked comprehension or opportunity. The indeterminate state preserves that boundary. It also turns the missing record into an explicit result and a recordkeeping requirement. This matters for responsibility: an investigator should not attribute failure to a person when the record cannot establish what information or intervention opportunity the person had.
 
-### 5.3 Records institutions would need
+### 5.3 Consequence of an untested human-control claim
 
-An institution seeking to substantiate practical control should preserve the information shown to the reviewer, timestamps, system state, uncertainty and known gaps, independent evidence, authority, available interventions, action taken, execution changes, and downstream effect. These records let an investigator test the chain after an incident and let an assurance team test it before deployment. Their presence supports inspectability. Safe, lawful, or beneficial outcomes require separate evidence.
+Human-control language can justify deployment, reassure affected people, and assign responsibility after harm. Each use depends on an empirical premise: the designated person had practical power over the decision. When the evidence cannot support that premise, the institution can count an ineffective safeguard as functioning, place responsibility on someone who lacked practical power, or preserve the same failure mechanism in later deployments.
+
+Let `HumanControlClaim(c)` indicate that an institution represents case (c) as human-controlled. The documentary evidence gap is:
+
+\[
+EvidenceGap(c)=1[HumanControlClaim(c)=1\land EventControl(c)\neq PASS].
+\]
+
+The formula identifies a claim that lacks complete substantiation under the procedure. A failing result records at least one unsupported required condition. An unresolved result records partial or missing evidence without an unsupported required condition. Neither result establishes personal fault, deliberate misrepresentation, legal liability, or an unsafe outcome.
 
 ### 5.4 Relationship to prior research
 
-The method operationalizes established constructs at the level of a public evidence packet. Tracking, tracing, epistemic access, causal power, institutional design, and contestability define what control may require ([Santoni de Sio & van den Hoven, 2018](https://doi.org/10.3389/frobt.2018.00015); [Sterz et al., 2024](https://doi.org/10.1145/3630106.3659051); [Laux, 2024](https://doi.org/10.1007/s00146-023-01777-z); [Almada, 2019](https://doi.org/10.1145/3322640.3326699)). Human-factors research explains why monitoring and challenge can fail ([Bainbridge, 1983](https://doi.org/10.1016/0005-1098(83)90046-8); [Endsley, 2017](https://doi.org/10.1177/0018720816681350)). Incident analysis identifies the records needed to reconstruct an event ([Ezell et al., 2025](https://doi.org/10.1609/aies.v8i1.36596); [Macrae, 2022](https://doi.org/10.1111/risa.13850)). Assurance and evidence-chain methods structure the path from proposition to evidence and conclusion ([Burr & Leslie, 2023](https://doi.org/10.1007/s43681-022-00178-0); [Meng et al., 2026](https://doi.org/10.48550/arXiv.2605.26340); [Moghaddam, 2026](https://doi.org/10.48550/arXiv.2604.04103)). Recent close work already supplies AI-incident oversight tiers, runnable decision-chain protocols, versioned assurance cases, and architecture-aware audit evidence ([Bahidika, 2026](https://doi.org/10.14569/IJACSA.2026.0170502); [LaPosta, 2026](https://doi.org/10.1609/aaaiss.v8i1.42543); [Niazi et al., 2026](https://doi.org/10.3390/automation7030096); [Surve et al., 2026](https://doi.org/10.48550/arXiv.2606.21276)). The remaining contribution concerns the declared combination of a frozen selection path, public case packets, categorical missingness, correction history, evidence fitness, and conclusion closure.
+The method operationalizes established constructs at the level of a public evidence packet. Tracking, tracing, epistemic access, causal power, institutional design, and contestability define what control may require ([Santoni de Sio & van den Hoven, 2018](https://doi.org/10.3389/frobt.2018.00015); [Sterz et al., 2024](https://doi.org/10.1145/3630106.3659051); [Laux, 2024](https://doi.org/10.1007/s00146-023-01777-z); [Almada, 2019](https://doi.org/10.1145/3322640.3326699)). Human-factors research explains why monitoring and challenge can fail ([Bainbridge, 1983](https://doi.org/10.1016/0005-1098(83)90046-8); [Endsley, 2017](https://doi.org/10.1177/0018720816681350)). Incident analysis identifies the records needed to reconstruct an event ([Ezell et al., 2025](https://doi.org/10.1609/aies.v8i1.36596); [Macrae, 2022](https://doi.org/10.1111/risa.13850)). Assurance and evidence-chain methods structure the path from proposition to evidence and conclusion ([Burr & Leslie, 2023](https://doi.org/10.1007/s43681-022-00178-0); [Meng et al., 2026](https://doi.org/10.48550/arXiv.2605.26340); [Moghaddam, 2026](https://doi.org/10.48550/arXiv.2604.04103)). Recent close work already supplies AI-incident oversight tiers, runnable decision-chain protocols, versioned assurance cases, and architecture-aware audit evidence ([Bahidika, 2026](https://doi.org/10.14569/IJACSA.2026.0170502); [LaPosta, 2026](https://doi.org/10.1609/aaaiss.v8i1.42543); [Niazi et al., 2026](https://doi.org/10.3390/automation7030096); [Surve et al., 2026](https://doi.org/10.48550/arXiv.2606.21276)).
+
+The contribution lies in what the connected procedure lets an investigator decide. The investigator can distinguish assigned authority from event-level control, evidence of failure from missing evidence, a linked execution change from an outcome claim, and a current conclusion from the earlier version it corrected. Within the reviewed source set, no prior source supplies that complete reconstruction-and-audit path. Open retrieval and authenticated-database gates bound this closest-work finding.
 
 ### 5.5 Use for current AI governance
 
-Contemporary systems can share the mechanisms tested here even when their architecture differs. Agentic software may compress review time, distribute actions across tools, obscure intermediate system state, or leave a reviewer with nominal stop authority. Dhanorkar, Passi, and Vorvoreanu show that developers already perform several forms of agent oversight work ([Dhanorkar et al., 2026](https://doi.org/10.1145/3805689.3812402)). Alhalangy and Lee, Yoon, and Lee show how escalation and record duties can enter prospective governance design ([Alhalangy, 2026](https://doi.org/10.3390/info17070694); [Lee et al., 2026](https://doi.org/10.3390/systems14070849)). Future work can apply the frozen chain to contemporary agent traces, appeals, high-stakes recommendations, and tool-mediated actions. Each application requires a new protocol and evidence boundary.
+Contemporary systems can share the mechanisms tested here even when their architecture differs. Agentic software may compress review time, distribute actions across tools, obscure intermediate system state, or leave a reviewer with nominal stop authority. Dhanorkar, Passi, and Vorvoreanu show that developers already perform several forms of agent oversight work ([Dhanorkar et al., 2026](https://doi.org/10.1145/3805689.3812402)). Alhalangy and Lee, Yoon, and Lee show how escalation and record duties can enter prospective governance design ([Alhalangy, 2026](https://doi.org/10.3390/info17070694); [Lee et al., 2026](https://doi.org/10.3390/systems14070849)). The proposed timing margin and execution-propagation test translate the historical method into measurable requirements for contemporary logs. A new protocol must apply them to a present learned or agentic system before the paper can claim transfer.
 
 ### 5.6 Ethical burden of proof
 
-Human-control language can distribute responsibility, reassure affected people, and justify deployment. Those functions create an ethical burden of proof. An institution should preserve evidence capable of testing the practical-control chain when it represents a consequential system as human-controlled. The burden concerns the institution's claim and records. It does not presume individual fault.
+Human-control language can distribute responsibility, reassure affected people, and justify deployment. Those functions create an ethical burden of proof. An institution should preserve evidence capable of testing the practical-control chain when it represents a consequential system as human-controlled. The burden concerns the institution's claim and records. It presumes no individual fault.
 
 This position follows from the risk of nominal oversight. A role assignment can place responsibility on a person who lacks information, capacity, opportunity, or causal power ([Green, 2022](https://doi.org/10.1016/j.clsr.2022.105681); [Sterz et al., 2024](https://doi.org/10.1145/3630106.3659051); [Douer & Meyer, 2020](https://doi.org/10.1109/TASE.2020.2965466)). Institutional design should anticipate human fallibility and incentives ([Laux, 2024](https://doi.org/10.1007/s00146-023-01777-z)). The proposed record set lets affected people, investigators, and oversight bodies examine whether responsibility was attached to practical authority. It guarantees no safe or just outcome.
 
@@ -359,7 +453,16 @@ The formal search used open indexes and official source pages. Author review clo
 
 ## 7. Institutional implications
 
-An assurance team, regulator, deployer, or incident investigator can use the practical-control chain as a proposed evidence request. Before relying on a human-control claim, the reviewer should ask for:
+An assurance team, regulator, deployer, or incident investigator can use the practical-control chain as a proposed evidence request. The classification determines what the institution may say about the bounded decision.
+
+| Result | Evidentiary meaning | Institutional consequence |
+|---|---|---|
+| Pass | Every required event-level stage is supported | The available record supports the bounded practical-control claim |
+| Fail | At least one required event-level stage is unsupported | The institution should identify the failed condition and avoid relying on practical control as a safeguard for that decision |
+| Unresolved | No required stage is unsupported, and at least one is partial or indeterminate | The institution lacks enough evidence to substantiate the complete practical-control claim |
+| Outside scope | A separately justified case boundary excludes a nonrequired proposition | The excluded proposition cannot support a conclusion beyond that boundary |
+
+Before relying on a human-control claim, the reviewer should ask for:
 
 1. the exact information and system output shown to the named person;
 2. timestamps connecting output, review, action, and irreversible commitment;
@@ -369,22 +472,26 @@ An assurance team, regulator, deployer, or incident investigator can use the pra
 6. staffing, workload, latency, access, and institutional conditions that affected feasibility;
 7. the contemporaneous decision, challenge, or escalation record;
 8. evidence that the intervention propagated into execution;
-9. appeal, correction, repair, and reform records when the claim extends beyond pre-action control;
+9. appeal, correction, repair, and reform records when the claim extends beyond event-level control;
 10. missing, inaccessible, or deleted records and the retention rule that governed them.
 
-This proposed request converts a general assurance statement into inspectable propositions. It proves no legal compliance, safety, fairness, or accountability outcome by itself.
+This proposed request converts a general assurance statement into inspectable propositions. It supplies no legal-compliance, safety, fairness, or accountability-outcome finding by itself.
 
 ## 8. Conclusion
 
-An institution cannot substantiate practical human control through a named reviewer or approval step alone. The claim requires evidence that the person received and understood relevant information, held authority, could act in time, exercised judgment, and affected execution. This requirement carries an ethical burden of proof when human-control language assigns responsibility or reassures people exposed to a consequential system. The frozen method produced traceable, bounded distinctions across three public packets and exposed where the historical record could not support a finding. Its versioned correction path also showed how a released claim can be narrowed without erasing the earlier record.
+An institution substantiates practical human control by showing that the designated person received usable information, had comprehension capacity and intervention authority, could act in time, exercised judgment, and propagated a change into execution. A named reviewer establishes assigned responsibility alone. The additional evidence matters when human-control language justifies deployment, assigns responsibility, or reassures people exposed to a consequential system.
+
+The frozen method converted that broad institutional claim into six testable propositions. Across three purposively selected historical packets, no case passed the complete event-control rule. Oko remained unresolved after six classifications were narrowed to partially supported. Both Patriot cases retained supported formal authority and failed the wider event-control rule. These results demonstrate the documentary distinction; they estimate no population frequency.
+
+The correction history shows why research provenance belongs inside the method. A released conclusion was narrowed, the original record remained visible, and every dependent claim could be reconsidered. Institutions need the same discipline when a human-control claim supports deployment or responsibility allocation.
 
 The result is a method demonstration. Independent assessors, varied case families, contemporary system traces, and prospective decision studies are needed before the method can support reliability, validity, or institutional-effect claims.
 
 ## Version relationship and integrity status
 
-The v0.14.0 preprint was archived on Zenodo under the version DOI [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005). This v0.15.0 candidate identifies that earlier record, supplies venue-required author and disclosure metadata, replaces the pending archive reference with the issued DOI, and preserves the same research question, case assessments, quantitative counts, and bounded conclusions. The repository's version history remains the authority for changes to data, claims, code, figures, and audit results.
+The v0.14.0 preprint was archived on Zenodo under the version DOI [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005). Version 0.15.0 added venue metadata and submission disclosures. This v0.16.0 working paper rebuilds the explanation and formalizes the event-control decision rule. It preserves the released packet states and search counts, while deriving the previously unstated case-level results: Oko is unresolved, both Patriot cases fail, and no selected case passes. The repository's version history remains the authority for changes to data, claims, code, figures, and audit results.
 
-The v0.14.0 integrity audit mapped 32 material claims to evidence, applied 33 controlled mutations, and detected all 33 corrupted conditions. These results test whether declared repository controls respond to seeded errors. They do not establish the truth of every historical claim, independent assessor agreement, population validity, or transfer to present AI systems.
+The v0.14.0 integrity audit mapped 32 material claims to evidence, applied 33 controlled mutations, and detected all 33 corrupted conditions. The v0.16.0 audit extends those controls to the formal rule, its derived case results, the proposed timing measure, and manuscript terminology. These tests ask whether declared repository controls respond to seeded or detectable inconsistencies. They do not establish the truth of every historical claim, independent assessor agreement, population validity, or transfer to present AI systems.
 
 ## Data and materials availability
 

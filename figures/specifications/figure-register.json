@@ -1,6 +1,6 @@
 {
-  "version": "0.9.0",
-  "source_release": "0.8.0",
+  "version": "0.16.0",
+  "source_release": "0.15.0",
   "visual_standard": "Journal width, white background, thin horizontal rules, one blue accent, direct labels, and color-independent state codes. Titles, source notes, uncertainty, and interpretation belong in manuscript captions.",
   "figures": [
     {
@@ -31,7 +31,7 @@
         "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json"
       ],
       "transformation": "Extract each practical_control state in protocol order and render the declared categorical state without assigning a numeric score.",
-      "claim_supported": "The current assessment set separates authority evidence from the conditions that give authority practical force. The strict v0.6.0 rule classifies the retrospective Oko evidence as partial across every pre-action stage.",
+      "claim_supported": "The current assessment set separates authority evidence from the conditions that give authority practical force. The strict v0.6.0 rule classifies the retrospective Oko evidence as partial across every event-level stage.",
       "prohibited_interpretation": "The matrix supplies no frequency, effect-size, causal, reliability, or population estimate."
     },
     {
@@ -85,15 +85,15 @@
     {
       "figure_id": "FIG-6",
       "file_stub": "fig-6-evidence-boundaries",
-      "title": "Evidence boundaries across six pre-action practical-control stages",
-      "unit_of_analysis": "categorical pre-action practical-control finding within a public case",
-      "sample": "18 declared states from 6 pre-action propositions across 3 purposefully selected cases",
+      "title": "Evidence boundaries across six event-level practical-control stages",
+      "unit_of_analysis": "categorical event-level practical-control finding within a public case",
+      "sample": "18 declared states from 6 event-level propositions across 3 purposefully selected cases",
       "input_files": [
         "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
         "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
         "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json"
       ],
-      "transformation": "Count supported, partially supported, unsupported, and indeterminate classifications across the six pre-action fields for each case and render the four counts as a six-cell stacked bar.",
+      "transformation": "Count supported, partially supported, unsupported, and indeterminate classifications across the six event-level fields for each case and render the four counts as a six-cell stacked bar.",
       "claim_supported": "The assessment output separates supporting evidence with a material gap, evidence against a condition, and insufficient evidence for a decision.",
       "prohibited_interpretation": "The counts supply no missingness rate, numeric distance among states, aggregate control score, reliability estimate, or case ranking."
     },
@@ -138,7 +138,7 @@
         "protocols/oko-evidence-adjudication-v0.6.0.md"
       ],
       "transformation": "Read each prior and current state from the correction ledger and draw the recorded version transition without changing the source packet.",
-      "claim_supported": "All six Oko pre-action states moved from supported to partially supported when the frozen direct-and-contemporaneous rule was applied to the existing packet.",
+      "claim_supported": "All six Oko event-level states moved from supported to partially supported when the frozen direct-and-contemporaneous rule was applied to the existing packet.",
       "prohibited_interpretation": "The figure records a method-driven correction. It supplies no new historical evidence and no estimate of error frequency."
     }
   ]

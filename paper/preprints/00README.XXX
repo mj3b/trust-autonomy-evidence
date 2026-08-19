@@ -1,6 +1,6 @@
-Preprints.org submission source for v0.15.0.
+Working-paper source for v0.16.0.
 Main source: main.tex
 Figures: figures/*.png
 Prior preprint record: https://doi.org/10.5281/zenodo.21926005
 License: CC BY 4.0
-The author must inspect the compiled PDF and confirm all declarations before submission.
+Version 0.16.0 adds the formal event-control rule and derived case-level results. The exact archive compiles without errors and has passed technical placement review. The author must read the complete PDF and confirm all declarations before any external submission.

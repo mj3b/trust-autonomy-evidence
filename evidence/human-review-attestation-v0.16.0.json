@@ -1,0 +1,42 @@
+{
+  "version": "0.16.0",
+  "attestation_id": "TAE-HUMAN-REVIEW-V0.16.0",
+  "reviewer": "Mark Julius Banasihan",
+  "review_date": "2026-08-19",
+  "authorization_scope": "Rebuild the manuscript as v0.16.0, including the abstract, plain-language rationale, formal event-control rule, justified formulas, explanatory tables, synchronized figures, and Chain-of-Evidence integrity controls.",
+  "review_basis": "The author authorized a coherent full-paper rebuild and instructed that claim traceability, evidence fitness, ScientistOne-inspired lineage, and the CoE Integrity Audit continue through the revision.",
+  "ai_assistance": "Codex drafted the revision specification, manuscript language, formulas, tables, figure terminology, deterministic result builder, claim-map extension, audit updates, and validation changes. Mark Julius Banasihan remains the accountable author and must review the full revision before external submission.",
+  "workflow_attestations": [
+    {
+      "claim_id": "PAPER-C42",
+      "support_review": "recorded",
+      "scope": "The v0.16.0 protocol requires six event-level stages and applies the declared pass, fail, and unresolved rule."
+    },
+    {
+      "claim_id": "PAPER-C43",
+      "support_review": "recorded",
+      "scope": "The deterministic builder derives Oko as unresolved and both Patriot cases as fail from the released assessment states."
+    },
+    {
+      "claim_id": "PAPER-C44",
+      "support_review": "recorded",
+      "scope": "No selected case passes the complete event-control rule; this conclusion is bounded to three purposively selected packets."
+    },
+    {
+      "claim_id": "PAPER-C45",
+      "support_review": "recorded",
+      "scope": "The timing-margin equation is a proposed prospective measure and is not reported as a historical result."
+    },
+    {
+      "claim_id": "PAPER-C46",
+      "support_review": "recorded",
+      "scope": "The manuscript interprets the released JSON field named effect as execution propagation and does not convert it into a beneficial-outcome or counterfactual-effect claim."
+    }
+  ],
+  "limits": [
+    "The attestation records author authorization and does not supply independent peer review.",
+    "The historical packets do not contain enough timestamps to calculate the proposed timing margin.",
+    "The three selected cases support a method demonstration and no prevalence estimate.",
+    "Contemporary learned-system transfer, inter-rater reliability, construct validity, legal sufficiency, safety, and institutional effects remain untested."
+  ]
+}

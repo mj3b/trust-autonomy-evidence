@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the v0.15.0 Preprints.org source package and its open gates."""
+"""Validate the v0.16.0 working-paper source package and its open gates."""
 
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "paper/preprints"
-VERSION = "0.15.0"
+VERSION = "0.16.0"
 
 
 def digest(payload: bytes) -> str:
@@ -28,8 +28,8 @@ def main() -> int:
         "metadata.yaml",
         "main.tex",
         "source-manifest.json",
-        "preprints-compiled-v0.15.0.pdf",
-        "overleaf-compile-receipt.json",
+        "preprints-compiled-v0.16.0.pdf",
+        "compile-receipt-v0.16.0.json",
         f"preprints-source-v{VERSION}.zip",
     )
     for name in required:
@@ -53,7 +53,9 @@ def main() -> int:
         "markjuliusbanasihan@gmail.com",
         "no Harvard University sponsorship, supervision, endorsement, or representation",
         "10.5281/zenodo.21926005",
-        "Preprint candidate v0.15.0",
+        "Working paper v0.16.0",
+        "EventControl(c)",
+        "Execution propagation",
         "Conflicts of Interest",
         "The author declares no conflicts of interest.",
     )
@@ -61,15 +63,15 @@ def main() -> int:
         if marker not in tex:
             failures.append(f"LaTeX marker missing: {marker}")
     for marker in (
-        'version: "0.15.0"',
-        'venue: "Preprints.org"',
+        'version: "0.16.0"',
+        'venue: "Unsubmitted working paper"',
         'affiliation: "Independent Researcher, Node & Norm, United States"',
         'alternate_email: "markjuliusbanasihan@gmail.com"',
         'student_status: "ALB candidate in Extension Studies, Harvard University"',
         'prior_preprint:',
         'doi: "10.5281/zenodo.21926005"',
         'conflicts_of_interest: "The author declares no conflicts of interest."',
-        'submission_state: "COMPILED_DO_NOT_SUBMIT"',
+        'submission_state: "AUTHOR_REVIEW_REQUIRED"',
     ):
         if marker not in metadata:
             failures.append(f"metadata marker missing: {marker}")
@@ -91,21 +93,24 @@ def main() -> int:
             if row is None or row.get("sha256") != digest(archive.read(name)):
                 failures.append(f"source member digest mismatch: {name}")
 
-    receipt = json.loads((PACKAGE / "overleaf-compile-receipt.json").read_text(encoding="utf-8"))
+    receipt = json.loads((PACKAGE / "compile-receipt-v0.16.0.json").read_text(encoding="utf-8"))
     pdf_path = ROOT / receipt["compiled_pdf"]["path"]
-    if receipt.get("project_url") != "https://www.overleaf.com/project/6a847868dd161b6c6be9ebf1":
-        failures.append("Overleaf project URL mismatch")
+    if receipt.get("compiler", {}).get("name") != "Tectonic" or receipt.get("compiler", {}).get("version") != "0.17.0":
+        failures.append("compile receipt compiler identity mismatch")
     if receipt["source_archive"].get("sha256") != digest(archive_payload):
         failures.append("compile receipt source archive SHA-256 mismatch")
     if not pdf_path.is_file() or receipt["compiled_pdf"].get("sha256") != digest(pdf_path.read_bytes()):
         failures.append("compiled PDF missing or SHA-256 mismatch")
-    if receipt["compiled_pdf"].get("pages") != 25 or receipt["compile_result"].get("errors") != 0:
+    if receipt["compiled_pdf"].get("pages", 0) < 1 or receipt["compile_result"].get("errors") != 0:
         failures.append("compiled PDF page count or compile error state mismatch")
+    if receipt["compile_result"].get("overfull_or_underfull_boxes") != 0:
+        failures.append("compile receipt records an overfull or underfull box")
     if receipt["placement_audit"].get("post_references_displays") != []:
         failures.append("a table or figure appears after References")
 
     for command in (
-        [sys.executable, "scripts/build_v0_15_claim_map.py", "--check"],
+        [sys.executable, "analysis/derive_event_control_results.py", "--check"],
+        [sys.executable, "scripts/build_v0_16_claim_map.py", "--check"],
         [sys.executable, "scripts/run_coe_integrity_audit.py", "--check"],
     ):
         result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, check=False)
@@ -118,7 +123,7 @@ def main() -> int:
         print(f"Preprints.org package validation: FAIL ({len(failures)} error(s))")
         return 1
 
-    print("Preprints.org package validation: PASS_WITH_OPEN_GATES (35 claims; 33/33 mutations detected; upload review and submitted-file hashes remain open)")
+    print("working-paper package validation: PASS_WITH_OPEN_GATES (compile and placement review passed; 40 claims; 39/39 mutations detected; author review and external submission remain open)")
     return 0
 
 

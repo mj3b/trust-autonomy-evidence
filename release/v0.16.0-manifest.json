@@ -1,0 +1,216 @@
+{
+  "version": "0.16.0",
+  "created": "2026-08-19",
+  "scope": "explanatory manuscript rebuild, formal event-control rule, derived case results, current figures, and integrity controls",
+  "hash_algorithm": "SHA-256",
+  "artifact_count": 39,
+  "artifacts": [
+    {
+      "path": "release/v0.15.0-manifest.json",
+      "bytes": 5010,
+      "sha256": "8f4904b649b6fd856950fbdd901dcd79d00d5f9dd079b50f16acb51a8b9014a6"
+    },
+    {
+      "path": "release/v0.16.0-release-notes.md",
+      "bytes": 4414,
+      "sha256": "50002a64e7c8927ec72c8034eb9bd8b1a1d036842340b9bf185e5fdcb3773975"
+    },
+    {
+      "path": "README.md",
+      "bytes": 32725,
+      "sha256": "343886af4d05823b1ce13829e87b60b151eb749754957256c13bc1ca7cb51464"
+    },
+    {
+      "path": "RESEARCH_STATUS.md",
+      "bytes": 9074,
+      "sha256": "fe6e71c23922d84caf891cea1d651659f27ff630d3cd758af74ed50b3e1f686e"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 20958,
+      "sha256": "51fb842cf83fc18d9132710c8fa53d674cd818b4dfa6b327315152dc1486121c"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 860,
+      "sha256": "3a096b25bcfacaa01fe5d977ef800af373418d2b9e5132d91c3c9da18cb73bef"
+    },
+    {
+      "path": "paper/revision-plan-v0.16.0.md",
+      "bytes": 5557,
+      "sha256": "d170ae3fcc7614c6f623612c7f858b22f26a5180c910131a5cee71cbc5247f30"
+    },
+    {
+      "path": "paper/manuscript.md",
+      "bytes": 70938,
+      "sha256": "5f91fe38ca2c96107ab521dd0b3697aa4b826fd512da43abe7493911a7eb0d0b"
+    },
+    {
+      "path": "paper/manuscript-reader.md",
+      "bytes": 87043,
+      "sha256": "9f4f67d77fe0d8f0b4730d04e8cf410365e3c2dcb69492b555edf7d0c1b1ecdb"
+    },
+    {
+      "path": "paper/tables.md",
+      "bytes": 11073,
+      "sha256": "52b690db3b041b098b98a4b9c4bb86e03d29e5d91f141f1a1497b21ac9518a40"
+    },
+    {
+      "path": "paper/tables/manuscript-tables.tex",
+      "bytes": 10451,
+      "sha256": "31d77f44b88b280366c30acc69a6251dfe7208d717f539bb3d94758508818c32"
+    },
+    {
+      "path": "protocols/practical-human-control-test.md",
+      "bytes": 6396,
+      "sha256": "db9d2ce220c910911e7188f4e9b0c57c8865dc250531dc0a92aec71be7c12f87"
+    },
+    {
+      "path": "paper/preprints/README.md",
+      "bytes": 2311,
+      "sha256": "744800e10702a0e045fa1e1023f240b64ffed63577615eedbe117c1b5979f431"
+    },
+    {
+      "path": "paper/preprints/00README.XXX",
+      "bytes": 427,
+      "sha256": "69ee287b0a28334440c13625b51754366e732d649bb5c9140494fb893ffe14e6"
+    },
+    {
+      "path": "paper/preprints/metadata.yaml",
+      "bytes": 1404,
+      "sha256": "39e9fe0909cf1d17abc5555fbf365c0629eb290bc77a4548bc97ef37f9c09210"
+    },
+    {
+      "path": "paper/preprints/main.tex",
+      "bytes": 92914,
+      "sha256": "bb991dfce5bffdf31ac1cac51da58aa48d745225e805bc4eea43d7367063e2e8"
+    },
+    {
+      "path": "paper/preprints/source-manifest.json",
+      "bytes": 3380,
+      "sha256": "11002b463f957c49f79cb2a6b622a3dd9d979c668f536d365f09adb22414eec6"
+    },
+    {
+      "path": "paper/preprints/preprints-source-v0.16.0.zip",
+      "bytes": 883702,
+      "sha256": "184edde1d5558e84f109ceaf7157c3b213103c85940a9e6351665f1875f97440"
+    },
+    {
+      "path": "paper/preprints/preprints-compiled-v0.16.0.pdf",
+      "bytes": 1128563,
+      "sha256": "43296fc97fdb70e55e8668d66536e2e0787bcdbd330921b23d034f759f50244f"
+    },
+    {
+      "path": "paper/preprints/compile-receipt-v0.16.0.json",
+      "bytes": 2184,
+      "sha256": "845e44ce7624520879a0b29b537c400a0a87e6b0f76e997d6f7b9cb391c5a4c9"
+    },
+    {
+      "path": "assessments/event-control-results-v0.16.0.json",
+      "bytes": 2555,
+      "sha256": "e6bd4971fbdb993b3a4f6b14fa132e8503c1ac0a0e11534860329fb672f2f414"
+    },
+    {
+      "path": "analysis/derive_event_control_results.py",
+      "bytes": 3440,
+      "sha256": "05fc95e4fe0c69c7a4d0c7509dbee4c646fa41d86068acf83d822fb62ef15bbc"
+    },
+    {
+      "path": "evidence/claim-evidence-map.json",
+      "bytes": 146386,
+      "sha256": "1c41b175698e6c94b5ed43373fb8c736318f17ebfed79451bbd8d26cf0948af9"
+    },
+    {
+      "path": "evidence/human-review-attestation-v0.16.0.json",
+      "bytes": 2554,
+      "sha256": "c29f566a07f38b20ea3b8c4a90c4c33986a2fc825c5794390688e839eb8531ed"
+    },
+    {
+      "path": "fixtures/coe-audit-mutations.json",
+      "bytes": 10676,
+      "sha256": "5b4e4c7b8b423a5117d3e532f003a56a322ec36e21dce429818bcc651ec94a3a"
+    },
+    {
+      "path": "audits/v0.16.0/audit-plan.md",
+      "bytes": 2510,
+      "sha256": "3e1234ce18316879248f821f58a89d9994a56200836714444eb189174a91cb1f"
+    },
+    {
+      "path": "audits/v0.16.0/audit-results.json",
+      "bytes": 21087,
+      "sha256": "03c8d8f0877249bab85a988edcae0f07858efe7b008c2e1243443e3566685afb"
+    },
+    {
+      "path": "audits/v0.16.0/audit-report.md",
+      "bytes": 7856,
+      "sha256": "9c90d50374dedf5a43e800946f9c84c9dc78f27661bb35e88b261714d0ea90e7"
+    },
+    {
+      "path": "audits/v0.16.0/exceptions.md",
+      "bytes": 2608,
+      "sha256": "9dc26537b6368e9aae67908f944dab145f1f48ebe98c850673debdbd46fbbb65"
+    },
+    {
+      "path": "figures/manifest.json",
+      "bytes": 8834,
+      "sha256": "fea0c638bcb6993c3911894c65d7320a68ed1033078f4ea2984d2ef96e0b82ca"
+    },
+    {
+      "path": "figures/specifications/figure-register.json",
+      "bytes": 9873,
+      "sha256": "41bdea3ff29fe36e1cad4538bd910ab731cca6cd6fc1f403f1bbd47a50554484"
+    },
+    {
+      "path": "figures/v0.16.0-claim-evidence-manifest.json",
+      "bytes": 1411,
+      "sha256": "c06531a2b501a752a7b3d6033a14431535f207a2e4a73c0dd170ec9828e3b7f1"
+    },
+    {
+      "path": "scripts/build_v0_16_claim_map.py",
+      "bytes": 12105,
+      "sha256": "b75b22a9000be4cf0f7356d554c51407be932e2f32cc133c03d522fef5b0de1a"
+    },
+    {
+      "path": "scripts/build_v0_16_release_manifest.py",
+      "bytes": 3379,
+      "sha256": "cf884a98898ab18c91c96e9f4d5857259a742422880839f99d6e166d996d3572"
+    },
+    {
+      "path": "scripts/build_preprints_source_archive.py",
+      "bytes": 2903,
+      "sha256": "982a9711b8b2afc8f0ed6160afcf6353c2de60aeea44b31670304df12bdf06be"
+    },
+    {
+      "path": "scripts/run_coe_integrity_audit.py",
+      "bytes": 25603,
+      "sha256": "7e35eea7297ef328b45b35dfcbe0dcb943ff35706c1648d5afc6b4a5f1935ed1"
+    },
+    {
+      "path": "scripts/validate_preprints_package.py",
+      "bytes": 5602,
+      "sha256": "e1b97de1c616d6330a756adfb429eb5e29de90bc51bb128963f1e42fd5e46113"
+    },
+    {
+      "path": "scripts/validate_paper.py",
+      "bytes": 13472,
+      "sha256": "3be3921c4dd1b6f576684f52c52fb976d023edcaa6bfc4b7412068e47e01750e"
+    },
+    {
+      "path": "scripts/validate_repository.py",
+      "bytes": 38044,
+      "sha256": "0c16861148100848187f86492f36ddf39027154dce74c66c638df4a45c86e9a5"
+    }
+  ],
+  "result": {
+    "event_control": {
+      "pass": 0,
+      "fail": 2,
+      "unresolved": 1
+    },
+    "claim_count": 40,
+    "mutation_controls_detected": "39/39",
+    "compile_errors": 0,
+    "post_references_displays": 0
+  },
+  "boundary": "This focused manifest seals the v0.16 manuscript-rebuild checkpoint. It establishes artifact identity, declared derivations, and control response. It does not establish historical truth, independent reliability, external validity, institutional effect, or publication acceptance."
+}

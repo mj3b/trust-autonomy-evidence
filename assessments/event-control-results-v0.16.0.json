@@ -1,0 +1,91 @@
+{
+  "version": "0.16.0",
+  "rule_id": "TAE-EVENT-CONTROL-V0.16.0",
+  "required_fields": [
+    "access",
+    "comprehension",
+    "authority",
+    "feasibility",
+    "exercise",
+    "effect"
+  ],
+  "decision_rule": {
+    "pass": "all six required states are supported",
+    "fail": "at least one required state is unsupported",
+    "unresolved": "no required state is unsupported and at least one is partially supported or indeterminate"
+  },
+  "cases": [
+    {
+      "case_id": "TAE-PUB-001",
+      "source_assessment": "assessments/v0.6.0/TAE-PUB-001-oko-1983.json",
+      "required_states": {
+        "access": "partially_supported",
+        "comprehension": "partially_supported",
+        "authority": "partially_supported",
+        "feasibility": "partially_supported",
+        "exercise": "partially_supported",
+        "effect": "partially_supported"
+      },
+      "result": "unresolved",
+      "unsupported_stages": [],
+      "unresolved_stages": [
+        "access",
+        "comprehension",
+        "authority",
+        "feasibility",
+        "exercise",
+        "effect"
+      ]
+    },
+    {
+      "case_id": "TAE-PUB-002",
+      "source_assessment": "cases/TAE-PUB-002-patriot-zg710-2003/assessment.json",
+      "required_states": {
+        "access": "partially_supported",
+        "comprehension": "unsupported",
+        "authority": "supported",
+        "feasibility": "unsupported",
+        "exercise": "unsupported",
+        "effect": "unsupported"
+      },
+      "result": "fail",
+      "unsupported_stages": [
+        "comprehension",
+        "feasibility",
+        "exercise",
+        "effect"
+      ],
+      "unresolved_stages": [
+        "access"
+      ]
+    },
+    {
+      "case_id": "TAE-PUB-003",
+      "source_assessment": "cases/TAE-PUB-003-patriot-fa18-2003/assessment.json",
+      "required_states": {
+        "access": "partially_supported",
+        "comprehension": "indeterminate",
+        "authority": "supported",
+        "feasibility": "indeterminate",
+        "exercise": "indeterminate",
+        "effect": "unsupported"
+      },
+      "result": "fail",
+      "unsupported_stages": [
+        "effect"
+      ],
+      "unresolved_stages": [
+        "access",
+        "comprehension",
+        "feasibility",
+        "exercise"
+      ]
+    }
+  ],
+  "result_counts": {
+    "pass": 0,
+    "fail": 2,
+    "unresolved": 1
+  },
+  "interpretation_limit": "These results apply only to the three purposively selected packets. They are not prevalence, causal, reliability, safety, legal, or contemporary-system transfer estimates."
+}

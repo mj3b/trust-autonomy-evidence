@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the deterministic Preprints.org v0.15.0 LaTeX source archive."""
+"""Build the deterministic v0.16.0 LaTeX working-paper source archive."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "paper/preprints"
-VERSION = "0.15.0"
+VERSION = "0.16.0"
 OUTPUT = PACKAGE / f"preprints-source-v{VERSION}.zip"
 MANIFEST = PACKAGE / "source-manifest.json"
 FIGURE_NAMES = (
@@ -63,14 +63,14 @@ def build() -> tuple[bytes, dict[str, object]]:
     payload = buffer.getvalue()
     manifest = {
         "version": VERSION,
-        "venue": "Preprints.org",
+        "venue": "Unsubmitted working paper",
         "archive": str(OUTPUT.relative_to(ROOT)),
         "archive_bytes": len(payload),
         "archive_sha256": sha256(payload),
         "member_count": len(member_rows),
         "members": member_rows,
         "prior_preprint_doi": "10.5281/zenodo.21926005",
-        "submission_state": "AUTHOR_CONFIRMATION_REQUIRED",
+        "submission_state": "AUTHOR_REVIEW_REQUIRED",
     }
     return payload, manifest
 
@@ -80,7 +80,7 @@ def main() -> int:
     PACKAGE.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_bytes(payload)
     MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    print(f"Preprints.org source archive: built {manifest['member_count']} members")
+    print(f"working-paper source archive: built {manifest['member_count']} members")
     return 0
 
 

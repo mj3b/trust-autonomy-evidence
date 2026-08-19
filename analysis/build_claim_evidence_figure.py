@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and validate the v0.9.0 journal-style claim-evidence matrix."""
+"""Build and validate the v0.16.0 journal-style claim-evidence matrix."""
 
 from __future__ import annotations
 
@@ -31,12 +31,12 @@ STUB = "fig-a3-claim-evidence-integrity"
 CSV_PATH = Path("figures/data") / f"{STUB}.csv"
 PNG_PATH = Path("figures/generated") / f"{STUB}.png"
 SVG_PATH = Path("figures/generated") / f"{STUB}.svg"
-MANIFEST_PATH = Path("figures/v0.9.0-claim-evidence-manifest.json")
+MANIFEST_PATH = Path("figures/v0.16.0-claim-evidence-manifest.json")
 INPUTS = (
     Path("analysis/build_claim_evidence_figure.py"),
     Path("figures/specifications/claim-evidence-integrity.json"),
     Path("evidence/claim-evidence-map.json"),
-    Path("audits/v0.9.0/audit-results.json"),
+    Path("audits/v0.16.0/audit-results.json"),
 )
 OUTPUTS = (CSV_PATH, PNG_PATH, SVG_PATH)
 GATES = (
@@ -72,7 +72,7 @@ def sha256(path: Path) -> str:
 
 
 def table_rows() -> list[dict[str, str]]:
-    result = read_json(Path("audits/v0.9.0/audit-results.json"))
+    result = read_json(Path("audits/v0.16.0/audit-results.json"))
     rows = []
     for claim in result["claim_results"]:
         row = {"claim_id": claim["claim_id"]}
@@ -124,15 +124,15 @@ def build_figure(output_root: Path) -> None:
         "figure.facecolor": PAPER,
         "axes.facecolor": PAPER,
         "savefig.facecolor": PAPER,
-        "svg.hashsalt": "trust-autonomy-evidence-coe-v0.9.0",
+        "svg.hashsalt": "trust-autonomy-evidence-coe-v0.16.0",
     })
-    fig, ax = plt.subplots(figsize=(7.25, 7.35))
+    fig, ax = plt.subplots(figsize=(7.25, 10.8))
     fig.subplots_adjust(left=0.14, right=0.99, top=0.84, bottom=0.12)
     ax.set_xlim(-0.5, len(GATES) - 0.5)
     ax.set_ylim(len(rows) - 0.5, -0.5)
     ax.set_xticks(range(len(GATES)), [label for _, label in GATES], fontsize=7.2)
     ax.tick_params(axis="x", top=True, labeltop=True, bottom=False, labelbottom=False, length=0, pad=7)
-    ax.set_yticks(range(len(rows)), [row["claim_id"] for row in rows], fontsize=7.2)
+    ax.set_yticks(range(len(rows)), [row["claim_id"] for row in rows], fontsize=5.9)
     ax.tick_params(axis="y", length=0, pad=6)
     for y in range(len(rows) + 1):
         ax.axhline(y - 0.5, color=LIGHT, linewidth=0.5, zorder=0)
@@ -151,8 +151,8 @@ def build_figure(output_root: Path) -> None:
     ]
     fig.legend(handles=legend, loc="lower center", bbox_to_anchor=(0.56, 0.015), ncol=2, frameon=False, fontsize=6.7, columnspacing=1.2, handletextpad=0.35)
     png_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(png_path, dpi=220, bbox_inches="tight", metadata={"Software": "Trust, Autonomy, and Evidence v0.9 figure builder"})
-    fig.savefig(svg_path, bbox_inches="tight", metadata={"Creator": "Trust, Autonomy, and Evidence v0.9 figure builder", "Date": None})
+    fig.savefig(png_path, dpi=220, bbox_inches="tight", metadata={"Software": "Trust, Autonomy, and Evidence v0.16 figure builder"})
+    fig.savefig(svg_path, bbox_inches="tight", metadata={"Creator": "Trust, Autonomy, and Evidence v0.16 figure builder", "Date": None})
     svg_text = svg_path.read_text(encoding="utf-8")
     svg_path.write_text("\n".join(line.rstrip() for line in svg_text.splitlines()) + "\n", encoding="utf-8")
     plt.close(fig)
@@ -164,8 +164,8 @@ def manifest_entry(path: Path, relative: Path) -> dict:
 
 def write_manifest(output_root: Path) -> None:
     manifest = {
-        "version": "0.9.0",
-        "source_audit": "0.9.0",
+        "version": "0.16.0",
+        "source_audit": "0.16.0",
         "figure_id": "FIG-A3",
         "hash_algorithm": "sha256",
         "artifacts": [manifest_entry(output_root / relative, relative) for relative in OUTPUTS],
@@ -207,18 +207,18 @@ def validate() -> list[str]:
         errors.append("v0.9 claim-evidence figure manifest is missing")
         return errors
     manifest = read_json(MANIFEST_PATH)
-    if manifest.get("version") != "0.9.0" or manifest.get("source_audit") != "0.9.0":
-        errors.append("v0.9 claim-evidence figure manifest version metadata mismatch")
+    if manifest.get("version") != "0.16.0" or manifest.get("source_audit") != "0.16.0":
+        errors.append("v0.16 claim-evidence figure manifest version metadata mismatch")
     for group, paths in (("artifacts", OUTPUTS), ("inputs", INPUTS)):
         indexed = {row["path"]: row for row in manifest.get(group, [])}
         if set(indexed) != {path.as_posix() for path in paths}:
-            errors.append(f"v0.9 claim-evidence figure manifest {group} path set mismatch")
+            errors.append(f"v0.16 claim-evidence figure manifest {group} path set mismatch")
             continue
         for relative in paths:
             path = ROOT / relative
             row = indexed[relative.as_posix()]
             if not path.is_file() or path.stat().st_size != row["bytes"] or sha256(path) != row["sha256"]:
-                errors.append(f"v0.9 claim-evidence figure manifest mismatch: {relative.as_posix()}")
+                errors.append(f"v0.16 claim-evidence figure manifest mismatch: {relative.as_posix()}")
     return errors
 
 
