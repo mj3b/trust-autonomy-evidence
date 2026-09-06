@@ -1,0 +1,24 @@
+{
+  "version": "0.17.0",
+  "attestation_id": "TAE-HUMAN-REVIEW-V0.17.0",
+  "reviewer": "Mark Julius Banasihan",
+  "review_date": "2026-09-05",
+  "decision": "APPROVE_BOUNDED_MANUSCRIPT_INCLUSION",
+  "scope": "The v0.17.0 policy and standards crosswalk, prospective regulatory-sandbox design, related manuscript section, and their stated claim boundaries.",
+  "review_basis": "The accountable author reviewed the two-page reading copy, the reported pressure-test findings, and the proposed manuscript use, then instructed that the material be added to the current preprint as v0.17.0.",
+  "approved_claims": [
+    "PAPER-C47",
+    "PAPER-C48",
+    "PAPER-C49",
+    "PAPER-C50",
+    "PAPER-C51"
+  ],
+  "boundaries": [
+    "The source review is limited to eight named official-source records and their recorded locators.",
+    "The crosswalk describes research relevance and supplies no legal interpretation, compliance finding, ISO conformity decision, or certification claim.",
+    "The sandbox design is a proposed validation protocol and has not been applied by a sandbox authority, system provider, participant group, or independent assessor.",
+    "The United States instruments are possible application sites and do not change the historical case results."
+  ],
+  "assistance_disclosure": "Generative AI assisted with source discovery, proposition extraction, crosswalk drafting, integrity controls, manuscript drafting, and pressure testing. Mark Julius Banasihan authorized the bounded manuscript inclusion and remains accountable for the submitted text.",
+  "independent_review": "No independent legal, regulatory, standards-conformity, peer, or field-validity review is claimed."
+}

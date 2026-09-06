@@ -1,7 +1,7 @@
 # Trust, Autonomy, and Evidence
 
 [![Status: Working Research](https://img.shields.io/badge/status-working%20research-5b6cff)](RESEARCH_STATUS.md)
-[![Version: 0.16.2](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
+[![Version: 0.17.0](https://img.shields.io/github/v/release/mj3b/trust-autonomy-evidence?display_name=tag&label=release)](https://github.com/mj3b/trust-autonomy-evidence/releases)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21841127.svg)](https://doi.org/10.5281/zenodo.21841127)
 [![Validation](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml/badge.svg)](https://github.com/mj3b/trust-autonomy-evidence/actions/workflows/validate.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
@@ -18,6 +18,8 @@ This repository asks:
 The project develops an evidence architecture for bounded reliance. It identifies the object of reliance, the action being permitted, the governing conditions, and the records an independent reviewer would need to inspect.
 
 ## Current contribution
+
+[Version 0.17.0](release/v0.17.0-release-notes.md) adds a bounded bridge from the six-stage reconstruction method to selected public policy and standards sources. It shows which practical-control questions the EU AI Act, NIST AI RMF, ISO/IEC 42001 public overview, and selected United States rules can motivate, while preserving the distinction between an organizational requirement and proof that control worked in a particular event. The release proposes an EU AI Act Article 57 sandbox as a future test setting. It does not claim legal compliance, ISO conformity, policy effectiveness, or validated transfer.
 
 [Version 0.16.0](release/v0.16.0-release-notes.md) rebuilds the methods paper around the institutional problem and formalizes the case-level decision rule. It preserves the public [v0.14.0 Zenodo preprint](https://doi.org/10.5281/zenodo.21926005), the v0.15.0 venue package, and the released case states. The new result is derived from those states: Oko is unresolved, both Patriot cases fail, and no selected case passes the complete event-control rule.
 
@@ -51,6 +53,7 @@ Version 0.16.1 aligned the repository citation, formula register, figure metadat
 26. A frozen 13-source proposition-review protocol with five bounded manuscript permissions, two background-only decisions, six quarantines, corrected source identities, and seven added negative controls.
 27. A professional single-column LaTeX package with navy-and-black journal styling, ten color figures, structured tables, a deterministic 12-member source archive, metadata, source lineage, and explicit compilation and author-review gates.
 28. A formal case-level rule, a deterministic result builder, a proposed timing margin, construct-derivation and institutional-interpretation tables, and an evidence-controlled manuscript rebuild.
+29. A five-claim, eight-source policy crosswalk with author attestation, nine detected mutations, a prospective regulatory-sandbox design, and an arXiv-ready v0.17.0 preprint package.
 
 All 252 determinations and 12 original mutation tests pass under the committed contract. The v0.6.0 adjudication detects all six prespecified corruptions. The v0.16 integrity audit maps 40 material claims and detects all 39 prespecified claim-map corruptions. Five exceptions remain: no independent assessment, incomplete literature-search coverage, two direct-query source limits, untested contemporary transfer, and external venue status. The inaccessible-record recovery population contains 1,087 records; 107 outcomes are recorded and 980 remain open. Five forward-citation sources may support only their recorded propositions, two remain background-only, and six are quarantined. These results establish internal contract behavior and traceability for the included artifacts. They do not establish independent reliability, field validity, institutional effectiveness, source truth, universal originality, or improved outcomes.
 
@@ -130,6 +133,8 @@ The matrix uses categorical states and letter labels so color is not the only si
 | [`SOURCES.md`](SOURCES.md) | Records the standards, papers, and public repositories used by the project. |
 | [`CITATION.cff`](CITATION.cff) | Provides machine-readable authorship, release, license, and DOI metadata. |
 | [`CHANGELOG.md`](CHANGELOG.md) | Tracks material changes to concepts, protocols, claims, and evidence requirements. |
+| [`release/v0.17.0-release-notes.md`](release/v0.17.0-release-notes.md) | Explains the bounded policy crosswalk, prospective validation design, preprint package, integrity results, and claim limits. |
+| [`release/v0.17.0-manifest.json`](release/v0.17.0-manifest.json) | Seals the v0.17.0 manuscript, source package, compiled PDF, policy evidence, attestation, mutations, and audit artifacts. |
 | [`release/v0.16.1-release-notes.md`](release/v0.16.1-release-notes.md) | Explains the maintenance alignment, preserved v0.16.0 findings, and version boundary. |
 | [`release/v0.16.1-manifest.json`](release/v0.16.1-manifest.json) | Seals the citation, formula, figure-metadata, audit-link, compile-receipt, and validation corrections with SHA-256 digests. |
 | [`release/v0.16.2-release-notes.md`](release/v0.16.2-release-notes.md) | Explains the paper-workspace organization, archive boundary, and preserved v0.16.0 research result. |

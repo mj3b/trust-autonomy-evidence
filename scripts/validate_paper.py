@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the v0.16.0 proposition-reviewed working-paper workspace."""
+"""Validate the v0.17.0 proposition-reviewed preprint workspace."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ QUESTION = (
     "public incident record?"
 )
 VERSION_DOI = "10.5281/zenodo.21865007"
-REPOSITORY_VERSION = "0.16.0"
+REPOSITORY_VERSION = "0.17.0"
 PAPER_FILES = (
     "paper/README.md",
     "paper/paper-charter.md",
@@ -216,7 +216,8 @@ def validate_generated_paper_artifacts(failures: list[str]) -> None:
         [sys.executable, "scripts/validate_forward_citation_author_screening_v0_13_0.py"],
         [sys.executable, "scripts/validate_forward_citation_proposition_review_v0_14_0.py"],
         [sys.executable, "analysis/derive_event_control_results.py", "--check"],
-        [sys.executable, "scripts/build_v0_16_claim_map.py", "--check"],
+        [sys.executable, "scripts/build_v0_17_policy_claim_map.py", "--check"],
+        [sys.executable, "scripts/run_policy_integrity_audit_v0_17_0.py", "--check"],
         [sys.executable, "scripts/validate_preprints_package.py"],
         [sys.executable, "scripts/validate_literature_support.py"],
     )

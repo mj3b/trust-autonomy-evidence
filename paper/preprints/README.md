@@ -1,34 +1,36 @@
-# Current working paper: v0.16.0
+# Current preprint: v0.17.0
 
-The latest paper is [`preprints-compiled-v0.16.0.pdf`](preprints-compiled-v0.16.0.pdf). This directory preserves its manuscript source, metadata, deterministic archive, and compile receipts.
+The latest paper is [`preprints-compiled-v0.17.0.pdf`](preprints-compiled-v0.17.0.pdf). This directory preserves its manuscript source, metadata, deterministic source archive, and compile evidence.
 
-External reviewers should begin with the [`current-paper review guide`](../REVIEW.md), which separates this package from earlier versions and points to the supporting evidence records.
+External reviewers should begin with the [`current-paper review guide`](../REVIEW.md), which identifies the current paper and its supporting records.
 
-The package identifies the Zenodo v0.14.0 preprint at [10.5281/zenodo.21926005](https://doi.org/10.5281/zenodo.21926005) and preserves the v0.15.0 venue package as version history. Version 0.16.0 rebuilds the explanation, formalizes the six-stage event-control rule, derives one unresolved and two failing case-level results from the released states, adds a proposed timing margin, and narrows the legacy `effect` field to execution propagation. The title block identifies Mark Julius Banasihan as an independent researcher with Node & Norm and retains both authorized correspondence addresses. A separate author note records Harvard University student status without claiming University sponsorship or endorsement.
+Version 0.17.0 preserves the three released historical case results from v0.16.0. It adds a bounded official-source crosswalk for selected EU, NIST, ISO, New York City, California, Colorado, and Illinois instruments; a proposed EU AI Act Article 57 sandbox study; and a four-phase path from protocol executability to institutional-outcome research. These additions establish research relevance and prospective study design. They supply no legal advice, compliance finding, ISO conformity decision, field-validation result, or change to a historical case state.
+
+The title block identifies Mark Julius Banasihan with Node & Norm and lists `markjuliusbanasihan@gmail.com` as the correspondence address. The metadata records Harvard University student status separately from the paper affiliation and states that Harvard University did not sponsor, supervise, or endorse the research.
 
 ## Repository map
 
 | File | Purpose |
 |---|---|
-| `main.tex` | Self-contained LaTeX working paper. |
-| `metadata.yaml` | Author, affiliation, subject, license, DOI, and submission-state record. |
-| `preprints-source-v0.16.0.zip` | Deterministic review archive containing the LaTeX source and ten figures. |
-| `source-manifest.json` | SHA-256 lineage for the archive and each member. |
-| `preprints-compiled-v0.16.0.pdf` | Review PDF compiled from the exact v0.16.0 source archive. |
-| `compile-receipt-v0.16.0.json` | Records source and output hashes, the local Tectonic compile result, representative-page review, display locations, and claim boundary. |
-| `overleaf-compile-receipt.json` | Records the v0.16.0 XeLaTeX build, downloaded PDF hash, all-page visual review, display locations, and claim boundary. |
+| `main.tex` | Self-contained v0.17.0 LaTeX preprint. |
+| `metadata.yaml` | Author, affiliation, subject, license, prior DOI, and submission-state record. |
+| `preprints-source-v0.17.0.zip` | Deterministic arXiv source archive containing the LaTeX source and ten figures. |
+| `source-manifest-v0.17.0.json` | SHA-256 lineage for the archive and each of its twelve members. |
+| `preprints-compiled-v0.17.0.pdf` | Thirty-page review PDF compiled from the v0.17.0 source. |
+| `compile-receipt-v0.17.0.json` | Records source and PDF identity, compiler result, page count, layout checks, and review boundary. |
 | `00README.XXX` | Plain-text compiler and version note included in the archive. |
 
-The retired v0.15.0 PDF, source archive, and Overleaf receipt are stored in [`../archive/v0.15.0/`](../archive/v0.15.0/). The v0.14.0 Zenodo and arXiv-format package remains in [`../arxiv/`](../arxiv/).
+The v0.16.0 files in this directory preserve the immediate predecessor. The retired v0.15.0 package is stored in [`../archive/v0.15.0/`](../archive/v0.15.0/). The v0.14.0 Zenodo and earlier arXiv-format package remains in [`../arxiv/`](../arxiv/).
 
 ## arXiv handoff
 
-If the arXiv submission returns to an editable state, [`preprints-source-v0.16.0.zip`](preprints-source-v0.16.0.zip) is the current source candidate to upload. The author must review arXiv's compiled PDF and current metadata before final submission. The `paper/arxiv/` source package is v0.14.0 history and should not replace the current paper.
+Upload [`preprints-source-v0.17.0.zip`](preprints-source-v0.17.0.zip) to the editable arXiv submission. Review arXiv's compiled PDF and metadata before final submission. The package under `paper/arxiv/` is v0.14.0 history and should not replace this source.
 
 ## Submission gates
 
-1. Completed: the v0.16.0 manuscript, figures, tables, formal rule, and deterministic result builder agree.
-2. Completed: the Chain-of-Evidence map covers 40 claims and all 39 controlled corruptions are detected.
-3. Completed: the exact source archive compiled without errors, the log contains no overfull or underfull boxes, and representative pages received a visual placement inspection.
-4. Open until author review: Mark Julius Banasihan reviews the full revision and approves any external submission target.
-5. Open for stronger research claims: independent assessment, present-system transfer, remaining retrieval, and authenticated database gates.
+1. Completed: the v0.17.0 manuscript, figures, tables, formal rule, and historical results agree.
+2. Completed: the v0.16.0 base audit covers 40 claims and detects all 39 seeded corruptions.
+3. Completed: the v0.17.0 extension maps five bounded claims to eight official-source records and detects all nine seeded corruptions.
+4. Completed: the exact v0.17.0 source compiles in Overleaf to 30 pages with zero errors and zero overflow notices. The only compiler notice states that XeLaTeX ignores the redundant UTF-8 input package.
+5. Completed: Mark Julius Banasihan approved the bounded v0.17.0 manuscript inclusion.
+6. Open for stronger research claims: independent assessment, present-system transfer, remaining retrieval, authenticated database searching, construct validity, and field application.

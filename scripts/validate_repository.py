@@ -15,8 +15,8 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_VERSION = "0.16.2"
-WORKING_VERSION = "0.16.2"
+REPOSITORY_VERSION = "0.17.0"
+WORKING_VERSION = "0.17.0"
 FIGURE_VERSION = "0.16.0"
 PUBLIC_CASE_VERSION = "0.3.0"
 
@@ -744,8 +744,8 @@ def validate_coe_audit(failures: list[str]) -> str:
         return ""
 
     for command in (
-        [sys.executable, "scripts/build_v0_16_claim_map.py", "--check"],
-        [sys.executable, "scripts/run_coe_integrity_audit.py", "--check"],
+        [sys.executable, "scripts/build_v0_17_policy_claim_map.py", "--check"],
+        [sys.executable, "scripts/run_policy_integrity_audit_v0_17_0.py", "--check"],
     ):
         process = subprocess.run(
             command, cwd=ROOT, text=True, capture_output=True, check=False,
@@ -798,7 +798,22 @@ def validate_coe_audit(failures: list[str]) -> str:
     ):
         fail("current v0.16 claim-evidence audit metadata mismatch", failures)
         return ""
-    return "chain-of-evidence audit: PASS_WITH_EXCEPTIONS (40 claims; 39/39 controls detected)"
+    policy = json.loads(
+        (ROOT / "audits/v0.17.0-policy-crosswalk/audit-results.json").read_text(encoding="utf-8")
+    )
+    policy_controls = policy.get("negative_controls", [])
+    policy_claims = policy.get("claim_results", [])
+    if (
+        policy.get("version") != "0.17.0"
+        or policy.get("status") != "PASS_WITH_EXCEPTIONS"
+        or len(policy_claims) != 5
+        or len(policy_controls) != 9
+        or sum(1 for row in policy_controls if row.get("detected")) != 9
+        or any(row.get("conclusion_eligible") is not True for row in policy_claims)
+    ):
+        fail("current v0.17 policy claim-evidence audit metadata mismatch", failures)
+        return ""
+    return "chain-of-evidence audits: PASS_WITH_EXCEPTIONS (v0.16 preserved: 40 claims and 39/39 controls; v0.17 policy extension: 5 claims and 9/9 controls)"
 
 
 def validate_adjudication(failures: list[str]) -> str:

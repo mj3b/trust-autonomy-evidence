@@ -1,0 +1,154 @@
+{
+  "version": "0.17.0",
+  "scope_id": "TAE-COE-V0.17.0",
+  "description": "Five bounded claims governing the targeted policy crosswalk, prospective regulatory-sandbox protocol, and v0.17.0 manuscript section. The accountable author's inclusion decision is recorded; legal compliance and field-validation claims remain excluded.",
+  "claims": [
+    {
+      "claim_id": "PAPER-C47",
+      "claim_text": "The v0.17.0 targeted policy review contains eight official-source records and preserves a use limit for each record.",
+      "claim_class": "numerical",
+      "claim_scope": "repository",
+      "status": "supported",
+      "verification_rule": "The source-count field must equal eight, every record must contain a permitted-use statement and limit, and the bounded author review must resolve to the v0.17.0 attestation.",
+      "evidence": [
+        {"evidence_id": "C47-COUNT", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/source_count", "role": "numeric", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded", "expected_value": 8},
+        {"evidence_id": "C47-LIMIT", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/global_limits/0", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C47-ATTESTATION", "path": "evidence/human-review-attestation-v0.17.0.json", "locator_type": "text_marker", "locator": "APPROVE_BOUNDED_MANUSCRIPT_INCLUSION", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4efa9c418080eec541a492fafc1e3f9d5fbf72df7e4867b387157505bccdc42d", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim resolves to a named proposition and locator in the targeted official-source review."},
+        "contemporaneity": {"state": "pass", "rationale": "The review date and instrument state are recorded as 5 September 2026."},
+        "independence": {"state": "pass", "rationale": "The proposition is taken from the issuing authority's official public source."},
+        "completeness": {"state": "pass", "rationale": "All eight selected records are represented; the selection is targeted and does not claim legal completeness."},
+        "publication_authority": {"state": "pass", "rationale": "The cited page or enacted text is published by the issuing public authority."}
+      },
+      "dependencies": [],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-09-05", "attestation_path": "evidence/human-review-attestation-v0.17.0.json", "note": "PAPER-C47: Approved the eight-record ledger for the bounded use stated in the attestation."},
+      "scope_terms": [{"term": "all", "justification": "All refers to the eight records selected for this targeted crosswalk."}],
+      "limitations": ["The count describes the repository ledger and supplies no claim about the completeness of legal research."],
+      "reversal_conditions": ["The source ledger contains a different number of records or a record lacks its use boundary."]
+    },
+    {
+      "claim_id": "PAPER-C48",
+      "claim_text": "The reviewed text of EU AI Act Article 14 addresses understanding, automation-bias awareness, interpretation, override, reversal, intervention, and stopping for human oversight of high-risk AI systems.",
+      "claim_class": "citation",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The official Article 14 locator, bounded proposition, crosswalk mapping, and legal-sufficiency limit must resolve without a compliance claim.",
+      "evidence": [
+        {"evidence_id": "C48-SOURCE", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/records/0/observed_proposition", "role": "source", "source_id": "POL-EU-AIA-14", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C48-CROSSWALK", "path": "paper/policy-and-standards-crosswalk-v0.17.0.md", "locator_type": "text_marker", "locator": "EU AI Act, Article 14", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b26a0ec27c6c129034bee3f3dca0bcc5ce076a95cf6d26c99d1d4eb4a32d6cf2", "content_review": "recorded"},
+        {"evidence_id": "C48-LATEX", "path": "paper/preprints/main.tex", "locator_type": "text_marker", "locator": "Governance instruments can require human oversight", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e1b2df10d7df76da28f1db1e36c1bb43192f1e8ef879574290b1d50e77717da2", "content_review": "recorded"},
+        {"evidence_id": "C48-LIMIT", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/records/0/limits", "role": "limitation", "source_id": "POL-EU-AIA-14", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C48-ATTESTATION", "path": "evidence/human-review-attestation-v0.17.0.json", "locator_type": "text_marker", "locator": "PAPER-C48", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4efa9c418080eec541a492fafc1e3f9d5fbf72df7e4867b387157505bccdc42d", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim resolves to a named proposition and locator in the targeted official-source review."},
+        "contemporaneity": {"state": "pass", "rationale": "The review date and instrument state are recorded as 5 September 2026."},
+        "independence": {"state": "pass", "rationale": "The proposition is taken from the issuing authority's official public source."},
+        "completeness": {"state": "pass", "rationale": "The claim is limited to the cited Article 14 oversight capabilities."},
+        "publication_authority": {"state": "pass", "rationale": "The cited page or enacted text is published by the issuing public authority."}
+      },
+      "dependencies": ["PAPER-C47"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-09-05", "attestation_path": "evidence/human-review-attestation-v0.17.0.json", "note": "PAPER-C48: Approved the bounded Article 14 proposition and manuscript mapping."},
+      "scope_terms": [],
+      "limitations": ["The claim supplies no legal interpretation or finding that the method satisfies Article 14."],
+      "reversal_conditions": ["The official text changes or the cited capabilities do not appear at the recorded locator."]
+    },
+    {
+      "claim_id": "PAPER-C49",
+      "claim_text": "EU AI Act Article 57 supplies a plausible prospective setting for testing the six-stage method under a protocol fixed before observed outcomes.",
+      "claim_class": "methodological",
+      "claim_scope": "method",
+      "status": "supported",
+      "verification_rule": "The Article 57 source proposition, proposed protocol, six-stage method, and validator must agree on the bounded sandbox use and its untested status.",
+      "evidence": [
+        {"evidence_id": "C49-SOURCE", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/records/1/observed_proposition", "role": "source", "source_id": "POL-EU-AIA-57", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C49-METHOD", "path": "protocols/regulatory-sandbox-validation-protocol-v0.17.0.md", "locator_type": "text_marker", "locator": "Can a preregistered six-stage evidence protocol", "role": "method", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "0e6a0570ad4ab311aa8fd5e7e3a4fa07c60d2688946e144d98e318ece6cc22f8", "content_review": "recorded"},
+        {"evidence_id": "C49-LATEX", "path": "paper/preprints/main.tex", "locator_type": "text_marker", "locator": "Regulatory sandboxes as the next empirical setting", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e1b2df10d7df76da28f1db1e36c1bb43192f1e8ef879574290b1d50e77717da2", "content_review": "recorded"},
+        {"evidence_id": "C49-IMPLEMENTATION", "path": "scripts/validate_policy_crosswalk_v0_17_0.py", "locator_type": "text_marker", "locator": "EXPECTED_STAGES", "role": "implementation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b13c3afdf78f44146b5d7f77dc523326c3080d85491822cde7ee08267c397f13", "content_review": "recorded"},
+        {"evidence_id": "C49-LIMIT", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/records/1/limits", "role": "limitation", "source_id": "POL-EU-AIA-57", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C49-ATTESTATION", "path": "evidence/human-review-attestation-v0.17.0.json", "locator_type": "text_marker", "locator": "PAPER-C49", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4efa9c418080eec541a492fafc1e3f9d5fbf72df7e4867b387157505bccdc42d", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim resolves to a named proposition and locator in the targeted official-source review."},
+        "contemporaneity": {"state": "pass", "rationale": "The review date and instrument state are recorded as 5 September 2026."},
+        "independence": {"state": "pass", "rationale": "The proposition is taken from the issuing authority's official public source."},
+        "completeness": {"state": "pass", "rationale": "The legal proposition and the author's proposed research use are separated and both boundaries are recorded."},
+        "publication_authority": {"state": "pass", "rationale": "The cited page or enacted text is published by the issuing public authority."}
+      },
+      "dependencies": ["PAPER-C47", "PAPER-C48"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-09-05", "attestation_path": "evidence/human-review-attestation-v0.17.0.json", "note": "PAPER-C49: Approved the sandbox design as a proposed validation setting with no field-validation claim."},
+      "scope_terms": [],
+      "limitations": ["No sandbox authority or independent assessor has accepted or applied the protocol.", "Participant or protected operational data require the applicable ethics determination and data authority before collection."],
+      "reversal_conditions": ["Article 57 no longer supports the recorded setting or the prospective protocol changes its six required stages."]
+    },
+    {
+      "claim_id": "PAPER-C50",
+      "claim_text": "The reviewed NIST AI RMF outcomes and ISO/IEC 42001 public overview support a bounded organization-to-event comparison without a compliance or certification finding.",
+      "claim_class": "citation",
+      "claim_scope": "paper",
+      "status": "supported",
+      "verification_rule": "The NIST and ISO propositions, locators, public-source limits, and crosswalk mappings must resolve; certification and legal-sufficiency language must remain excluded.",
+      "evidence": [
+        {"evidence_id": "C50-NIST", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/records/2/observed_proposition", "role": "source", "source_id": "POL-NIST-AI-RMF-CORE", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C50-ISO", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/records/3/observed_proposition", "role": "source", "source_id": "POL-ISO-IEC-42001", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C50-CROSSWALK", "path": "paper/policy-and-standards-crosswalk-v0.17.0.md", "locator_type": "text_marker", "locator": "A possible evidence layer connecting management controls", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b26a0ec27c6c129034bee3f3dca0bcc5ce076a95cf6d26c99d1d4eb4a32d6cf2", "content_review": "recorded"},
+        {"evidence_id": "C50-LATEX", "path": "paper/preprints/main.tex", "locator_type": "text_marker", "locator": "NIST AI RMF outcomes GOVERN 2.1", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e1b2df10d7df76da28f1db1e36c1bb43192f1e8ef879574290b1d50e77717da2", "content_review": "recorded"},
+        {"evidence_id": "C50-LIMIT", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/records/3/limits", "role": "limitation", "source_id": "POL-ISO-IEC-42001", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C50-ATTESTATION", "path": "evidence/human-review-attestation-v0.17.0.json", "locator_type": "text_marker", "locator": "PAPER-C50", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4efa9c418080eec541a492fafc1e3f9d5fbf72df7e4867b387157505bccdc42d", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim resolves to a named proposition and locator in the targeted official-source review."},
+        "contemporaneity": {"state": "pass", "rationale": "The review date and instrument state are recorded as 5 September 2026."},
+        "independence": {"state": "pass", "rationale": "The proposition is taken from the issuing authority's official public source."},
+        "completeness": {"state": "pass", "rationale": "NIST use is limited to three cited outcomes; ISO use is limited to the official public overview."},
+        "publication_authority": {"state": "pass", "rationale": "The cited page or enacted text is published by the issuing public authority."}
+      },
+      "dependencies": ["PAPER-C47"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-09-05", "attestation_path": "evidence/human-review-attestation-v0.17.0.json", "note": "PAPER-C50: Approved the NIST and ISO comparison within the recorded public-source limits."},
+      "scope_terms": [],
+      "limitations": ["The full licensed ISO standard was not reviewed, and the NIST AI RMF is voluntary and under revision."],
+      "reversal_conditions": ["The cited NIST outcomes or ISO public overview change materially, or the manuscript asserts conformity or compliance."]
+    },
+    {
+      "claim_id": "PAPER-C51",
+      "claim_text": "The reviewed New York City, California, Colorado, and Illinois materials are reserved as applied-policy sites and do not change the historical case results.",
+      "claim_class": "documentary_classification",
+      "claim_scope": "repository",
+      "status": "supported",
+      "verification_rule": "All four official-source records must resolve, Chicago must remain within the Illinois entry absent a selected municipal source, and the crosswalk must prohibit transfer into the historical results.",
+      "evidence": [
+        {"evidence_id": "C51-NYC", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/records/4/observed_proposition", "role": "source", "source_id": "POL-NYC-LL144", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C51-CA", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/records/5/observed_proposition", "role": "source", "source_id": "POL-CA-ADMT", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C51-CO", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/records/6/observed_proposition", "role": "source", "source_id": "POL-CO-ADMT", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C51-IL", "path": "paper/data/policy-and-standards-source-review-v0.17.0.json", "locator_type": "json_pointer", "locator": "/records/7/observed_proposition", "role": "source", "source_id": "POL-IL-HB3773", "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64", "content_review": "recorded"},
+        {"evidence_id": "C51-BOUNDARY", "path": "paper/policy-and-standards-crosswalk-v0.17.0.md", "locator_type": "text_marker", "locator": "They do not change the historical case results", "role": "limitation", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "b26a0ec27c6c129034bee3f3dca0bcc5ce076a95cf6d26c99d1d4eb4a32d6cf2", "content_review": "recorded"},
+        {"evidence_id": "C51-LATEX", "path": "paper/preprints/main.tex", "locator_type": "text_marker", "locator": "United States application boundaries", "role": "conclusion", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "e1b2df10d7df76da28f1db1e36c1bb43192f1e8ef879574290b1d50e77717da2", "content_review": "recorded"},
+        {"evidence_id": "C51-ATTESTATION", "path": "evidence/human-review-attestation-v0.17.0.json", "locator_type": "text_marker", "locator": "PAPER-C51", "role": "provenance", "source_id": null, "run_type": "not_applicable", "integrity_state": "verified", "sha256": "4efa9c418080eec541a492fafc1e3f9d5fbf72df7e4867b387157505bccdc42d", "content_review": "recorded"}
+      ],
+      "fitness": {
+        "directness": {"state": "pass", "rationale": "The claim resolves to a named proposition and locator in the targeted official-source review."},
+        "contemporaneity": {"state": "pass", "rationale": "The review date and instrument state are recorded as 5 September 2026."},
+        "independence": {"state": "pass", "rationale": "The proposition is taken from the issuing authority's official public source."},
+        "completeness": {"state": "pass", "rationale": "The claim covers only the four named applied-policy entries and preserves each source-specific limit."},
+        "publication_authority": {"state": "pass", "rationale": "The cited page or enacted text is published by the issuing public authority."}
+      },
+      "dependencies": ["PAPER-C47"],
+      "dependency_closure": "pass",
+      "conclusion_eligible": true,
+      "human_review": {"status": "recorded", "reviewer": "Mark Julius Banasihan", "review_date": "2026-09-05", "attestation_path": "evidence/human-review-attestation-v0.17.0.json", "note": "PAPER-C51: Approved the four possible application sites while preserving later jurisdiction-specific review."},
+      "scope_terms": [{"term": "all", "justification": "All refers to the four selected United States applied-policy records."}],
+      "limitations": ["The entry supplies no legal advice, compliance finding, municipal Chicago conclusion, or event-level assessment."],
+      "reversal_conditions": ["A cited instrument changes, a separate Chicago instrument is selected, or a jurisdiction enters a case-level analysis."]
+    }
+  ]
+}

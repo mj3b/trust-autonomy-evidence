@@ -31,7 +31,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{\small\color{TAENavy} Practical Human Control}
-\rhead{\small\color{TAENavy} Working paper v0.16.0}
+\rhead{\small\color{TAENavy} Preprint v0.17.0}
 \cfoot{\thepage}
 \setlength{\headheight}{14pt}
 \setlength{\parindent}{0pt}
@@ -44,32 +44,40 @@
 \captionsetup{font=small,labelfont={bf,color=TAENavy},labelsep=period,justification=raggedright,singlelinecheck=false}
 \newtcolorbox{TAETitleBox}{colback=TAEPaleNavy,colframe=TAENavy,boxrule=0.8pt,arc=2mm,left=12pt,right=12pt,top=14pt,bottom=14pt}
 \newtcolorbox{TAEAbstractBox}{colback=white,colframe=TAENavyMid,boxrule=0.45pt,arc=1.5mm,left=12pt,right=12pt,top=9pt,bottom=9pt}
-\begin{document}
-\begin{TAETitleBox}
+\newenvironment{TAEReferences}{%
+  \begin{list}{}{%
+    \renewcommand{\makelabel}[1]{}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\leftmargin}{0.5in}%
+    \setlength{\itemindent}{-0.5in}%
+    \setlength{\itemsep}{0.45em}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{0.25em}%
+  }%
+}{\end{list}}
+\begin{document}\thispagestyle{plain}
+
 \begin{center}
 {\LARGE\bfseries\color{TAENavy} From Formal Authority to Practical Human Control\par}
 \vspace{0.45em}
 {\large A traceable method for reconstructing human control in automated decisions\par}
-\vspace{1.0em}
-{\normalsize\bfseries Mark Julius Banasihan\par}
-{\small Independent Researcher, Node \& Norm, United States\par}
-{\small ORCID: \href{https://orcid.org/0009-0001-8121-2878}{0009-0001-8121-2878}\par}
-{\small Correspondence: \href{mailto:mab7898@g.harvard.edu}{mab7898@g.harvard.edu}; \href{mailto:markjuliusbanasihan@gmail.com}{markjuliusbanasihan@gmail.com}\par}
-\vspace{0.75em}
+\vspace{0.45em}
+{\large\bfseries Mark Julius Banasihan\textsuperscript{*}\par}\vspace{-0.25em}{\normalsize \textsuperscript{*}Node \& Norm\par}\vspace{-0.25em}{\normalsize corresponding author: \href{mailto:markjuliusbanasihan@gmail.com}{markjuliusbanasihan@gmail.com}\par}
+
+\vspace{0.35em}
 \end{center}
-\end{TAETitleBox}
-\vspace{0.75em}
+
+\vspace{0.35em}
 \begin{TAEAbstractBox}
 {\small\textbf{Abstract}\par\medskip}
 \small
-Institutions often treat a named reviewer or approval step as proof that an automated decision remained under human control. That proof can fail when the person lacked usable information, comprehension capacity, intervention authority, sufficient time, or an effective path for changing execution. This study asks what evidence an investigator would need to distinguish assigned authority from practical human control in one consequential decision. A protocol fixed case selection, evidence rules, and missing-data treatment before screening. It then tested six connected stages: information access, comprehension capacity, intervention authority, intervention feasibility, exercised judgment, and execution propagation. Three versioned historical case packets were assessed with categorical states that separate contradiction from missing evidence. None passed the complete event-control rule. Oko remained unresolved because all six stages were only partially supported. Patriot ZG710 failed because four required stages were unsupported. Patriot F/A-18C failed because execution propagation was unsupported while three other stages remained indeterminate. A formal open-index search produced 2,431 deduplicated records; the reviewed subset identified no prior method combining the same selection, packet, missingness, correction, evidence-fitness, dependency, and executable-integrity controls. This is a bounded methods result. Three purposively selected, retrospective, single-assessor cases establish no prevalence, causal effect, independent reliability, or transfer to present learned systems. The method matters because an unsupported human-control claim can conceal an ineffective safeguard and assign responsibility to a person who lacked practical power.
+Institutions often treat a named reviewer or approval step as proof that an automated decision remained under human control. That proof can fail when the person lacked usable information, comprehension capacity, intervention authority, sufficient time, or an effective path for changing execution. This study asks what evidence an investigator would need to distinguish assigned authority from practical human control in one consequential decision. A protocol fixed case selection, evidence rules, and missing-data treatment before screening. It then tested six connected stages: information access, comprehension capacity, intervention authority, intervention feasibility, exercised judgment, and execution propagation. Three versioned historical case packets were assessed with categorical states that separate contradiction from missing evidence. None passed the complete event-control rule. Oko remained unresolved because all six stages were only partially supported. Patriot ZG710 failed because four required stages were unsupported. Patriot F/A-18C failed because execution propagation was unsupported while three other stages remained indeterminate. A formal open-index search produced 2,431 deduplicated records; the reviewed subset identified no prior method combining the same selection, packet, missingness, correction, evidence-fitness, dependency, and executable-integrity controls. A targeted official-source crosswalk maps selected oversight provisions to the six-stage chain and proposes an EU AI Act Article 57 sandbox as a prospective validation setting. This is a bounded methods result. Three purposively selected, retrospective, single-assessor cases establish no prevalence, causal effect, independent reliability, or transfer to present learned systems. The method matters because an unsupported human-control claim can conceal an ineffective safeguard and assign responsibility to a person who lacked practical power.
 \small
-\textbf{Keywords:} human oversight; meaningful human control; AI governance; incident reconstruction; assurance
+\par\medskip\noindent\textbf{Keywords:} human oversight; meaningful human control; AI governance; incident reconstruction; assurance
 \end{TAEAbstractBox}
 \FloatBarrier
-\section*{Correction result carried into this study}
-An earlier release classified all six Oko stages as supported even though the packet relied on retrospective accounts and lacked contemporaneous operational records. A reassessment rule was fixed before recoding. Applying it changed all six states to partially supported, preserved the original release, and recorded each change in a public ledger. This correction matters because a traceable method must narrow its own claim when the evidence does not satisfy its rule.
-\FloatBarrier
+
 \section*{1. Introduction}
 \subsection*{1.1 The institutional problem}
 An approval step proves that an institution assigned a role. It does not show that the person received the relevant information, understood the system's limits, could challenge the proposed action in time, exercised that authority, or changed execution. A human-control claim therefore contains several empirical propositions that a signature or job title cannot establish by itself. If an institution treats the role assignment as proof, it can count an ineffective safeguard as functioning and place responsibility on someone who lacked practical power.
@@ -89,7 +97,7 @@ How can a frozen, evidence-traceable assessment procedure represent formal human
 The paper proposes a documentary assessment procedure. It defines a bounded action sequence, fixes the case-selection and missing-data rules, assembles a versioned evidence packet, assigns provenance to material statements, and evaluates six event-level conditions: information access, comprehension capacity, intervention authority, intervention feasibility, exercised judgment, and execution propagation. An explicit indeterminate state prevents missing records from becoming negative factual findings. A correction ledger preserves earlier outputs when a later adjudication changes a state.
 The three cases demonstrate that procedure under contrastive evidence conditions. They do not test prevalence, classification accuracy, independent reliability, causal effects, or transfer to current learned systems. The institutional output is a proposed record set that a reviewer would need before relying on a practical-control claim. The ethical proposition is narrower: an institution that represents a decision as human-controlled should preserve evidence capable of testing whether the assigned authority had practical force.
 \subsection*{1.4 Paper structure}
-Section 2 locates the procedure in meaningful-human-control, human-factors, oversight, incident-analysis, reconstruction, and assurance research. Section 3 defines the frozen method, artifact controls, literature search, and transfer boundary. Section 4 reports the released assessment and search results. Sections 5 through 7 separate interpretation, limitations, and proposed institutional record requirements.
+Section 2 locates the procedure in meaningful-human-control, human-factors, oversight, incident-analysis, reconstruction, and assurance research. Section 3 defines the frozen method, artifact controls, literature search, and transfer boundary. Section 4 reports the released assessment and search results. Section 5 interprets the findings. Section 6 maps the method to selected governance instruments and defines a prospective validation path. Sections 7 and 8 state the limits and proposed institutional record requirements.
 \FloatBarrier
 \section*{2. Related work}
 \subsection*{2.1 Meaningful human control}
@@ -195,7 +203,7 @@ For a prospective system with complete timestamps, the available intervention ma
 \[
 M_t=(t_{commit}-t_{access})-(t_{interpret}+t_{decide}+t_{transmit}+t_{propagate}).
 \]
-A positive margin is necessary for a feasible intervention under the proposed measure. Missing inputs produce an indeterminate timing result. The historical packets do not contain enough timestamps to calculate $M_t$.
+A nonnegative margin is necessary for a feasible intervention under the proposed measure. Here, $t_{commit}$ and $t_{access}$ are event timestamps. The terms $t_{interpret}$, $t_{decide}$, $t_{transmit}$, and $t_{propagate}$ are elapsed durations expressed in the same unit. Missing inputs produce an indeterminate timing result. The historical packets do not contain enough timestamps to calculate $M_t$.
 \subsection*{3.8 Missing evidence and inference}
 Missing public evidence produces an indeterminate state unless the packet establishes that a required record should exist and eligible evidence shows the condition was absent. Unsupported means evidence contradicts a condition or shows its absence. Indeterminate means the record cannot decide. This distinction blocks a common inference error in retrospective work: converting an unavailable log, display, inquiry, or internal record into a negative factual finding. The report separates what a source states, what a preserved record directly shows, what the assessor infers, and what remains unresolved.
 \subsection*{3.9 Artifact and consistency controls}
@@ -459,17 +467,53 @@ Contemporary systems can share the mechanisms tested here even when their archit
 Human-control language can distribute responsibility, reassure affected people, and justify deployment. Those functions create an ethical burden of proof. An institution should preserve evidence capable of testing the practical-control chain when it represents a consequential system as human-controlled. The burden concerns the institution's claim and records. It does not presume individual fault.
 This position follows from the risk of nominal oversight. A role assignment can place responsibility on a person who lacks information, capacity, opportunity, or causal power (\href{https://doi.org/10.1016/j.clsr.2022.105681}{Green, 2022}; \href{https://doi.org/10.1145/3630106.3659051}{Sterz et al., 2024}; \href{https://doi.org/10.1109/TASE.2020.2965466}{Douer \& Meyer, 2020}). Institutional design should anticipate human fallibility and incentives (\href{https://doi.org/10.1007/s00146-023-01777-z}{Laux, 2024}). The proposed record set lets affected people, investigators, and oversight bodies examine whether responsibility was attached to practical authority. It guarantees no safe or just outcome.
 \FloatBarrier
-\section*{6. Limitations}
+\section*{6. Regulatory relevance and prospective validation}
+\subsection*{6.1 From assigned oversight to event evidence}
+Governance instruments can require human oversight while leaving the evidentiary status of a particular decision unresolved. The reviewed text of EU AI Act Article 14 addresses understanding of system capabilities and limits, awareness of automation bias, interpretation of output, authority to disregard or reverse output, intervention, and stopping (\href{https://eur-lex.europa.eu/eli/reg/2024/1689/oj}{European Parliament and Council, 2024}). Those capabilities correspond most directly to comprehension capacity and intervention authority, with information and feasibility as related prerequisites. Article 14 does not establish that a person received the necessary information in one event, exercised judgment, or propagated a change into execution. The six-stage procedure treats those as separate event-level questions.
+
+NIST AI RMF outcomes GOVERN 2.1, MAP 3.4, and MAP 3.5 address documented roles, assessed operator proficiency, and defined human-oversight processes (\href{https://airc.nist.gov/airmf-resources/airmf/5-sec-core/}{NIST, 2023}). The ISO/IEC 42001:2023 public overview describes an organizational management system concerned with governance, risk, traceability, transparency, reliability, and improvement (\href{https://www.iso.org/standard/42001}{ISO and IEC, 2023}). These organization-level provisions can determine which records should exist. The practical-control procedure asks whether those arrangements had evidentiary force in a bounded event. Table 8 states the relationship and preserves the conclusion boundary.
+
+\begin{table}[!htbp]
+\centering
+\caption*{\textcolor{TAENavy}{\textbf{Table 8.}} Relationship between selected governance instruments and the event-level method.}
+\footnotesize
+\arrayrulecolor{TAENavy}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+\rowcolor{TAEPaleNavy}
+\textcolor{TAENavy}{\textbf{Instrument}} & \textcolor{TAENavy}{\textbf{Reviewed function}} & \textcolor{TAENavy}{\textbf{Research use}} \\
+\midrule
+EU AI Act, Article 14 & Understanding limits, automation-bias awareness, interpretation, override, intervention, and stopping & Test selected capabilities, then record information delivery, opportunity, exercised judgment, and propagation separately. \\
+EU AI Act, Article 57 & Controlled development, testing, and validation under regulatory supervision & Capture the intervention path prospectively before the record becomes incomplete. \\
+NIST AI RMF Core & Documented roles, assessed proficiency, and defined oversight processes & Connect organization-level arrangements to event-level evidence requests. \\
+ISO/IEC 42001 public overview & AI management-system governance, risk, traceability, transparency, reliability, and improvement & Place event evidence inside an organizational control system without making a conformity or certification claim. \\
+\bottomrule
+\end{tabularx}
+\arrayrulecolor{black}
+\par\vspace{2pt}\footnotesize\textit{Note.} The mappings describe a research use of selected official provisions and public summaries. They provide no legal-compliance, legal-sufficiency, or certification finding.
+\end{table}
+
+\subsection*{6.2 Regulatory sandboxes as the next empirical setting}
+EU AI Act Article 57 provides for controlled environments in which AI systems can be developed, tested, and validated under regulatory supervision, with attention to risks and mitigation effectiveness (\href{https://eur-lex.europa.eu/eli/reg/2024/1689/oj}{European Parliament and Council, 2024}). That setting can address the main limit of historical reconstruction: the study can fix the decision boundary and classification rule before outcomes are visible, then preserve the interface state, system version, operator role, intervention controls, timestamps, contemporaneous judgment, and downstream execution record as the event occurs.
+
+The evidence claim should expand through four study phases. First, controlled conditions with known differences test whether the procedure and artifact pipeline behave as specified. Second, a blinded assessor applies the frozen packet and classification form; this permits a reliability estimate after the sample, missing-data treatment, statistic, and adjudication rule are fixed. Third, construct and criterion validity require sampling across the intended systems and tasks and comparison with an external criterion that was not produced from the six-stage labels. Fourth, institutional-outcome studies examine associations with correction, harm prevention, accountability, or another defined outcome. A causal claim requires a design that identifies causal effects.
+
+Participant recruitment or protected operational data require the applicable research-ethics determination, sandbox authority, lawful processing and publication authority, consent or waiver basis, and a data minimization, security, retention, and deletion plan before collection. A solo synthetic rehearsal can establish protocol executability after a recorded determination that it uses no participant data or protected operational records. It cannot establish independent reliability, construct validity, or institutional effects.
+
+\subsection*{6.3 United States application boundaries}
+New York City Local Law 144, California regulations for automated decisionmaking, Colorado's consequential-decision framework, and Illinois Public Act 103-0804 address different combinations of audit information, notice, access, opt-out rights, discrimination, and accountability. The repository crosswalk reserves them as possible application sites. Each site requires a newly frozen decision boundary, evidence packet, and jurisdiction-specific review. These instruments change no historical case result and supply no finding that a regulated organization has practical human control.
+\FloatBarrier
+\section*{7. Limitations}
 The design has several limits. The three strata were defined around the headline contrasts, and screening stopped after five candidates. The selected set demonstrates the procedure under those anticipated conditions. It estimates no prevalence and provides no independent classification test. Two cases concern one system family and operating period. Oko and Patriot differ materially from present learned systems.
 The evidence is retrospective and public. Classified material, internal logs, complete displays, and some inquiry records were unavailable. Some cited content remains remote-only. Oko relies on later participant accounts and lacks a located contemporaneous command record. Source agreement can reflect shared dependence on an earlier account. Packet hashes prove preservation of stored bytes and do not prove source truth.
 One assessor designed and applied the method. The study supplies no inter-rater reliability, construct-validity estimate, causal effect, safety effect, legal-sufficiency judgment, or outcome comparison. Artifact tests detect internal inconsistency and prespecified corruption. They do not validate historical interpretation.
 The formal search used open indexes and official source pages. Author review closed the 89-record decision queue, the 71-record recovered forward-citation queue, the 13-source proposition gate, and the fifth direct-query screening decision. Another 980 records lack a retrieval outcome, and authenticated Scopus or Web of Science, IEEE Xplore, ACM Digital Library, PhilPapers, and HeinOnline or an equivalent legal index remain open. Five forward sources have one bounded proposition permission each, two remain background-only, and six are quarantined. RS-DQ-004 has zero source-content permission. The contribution language is therefore bounded to the declared search and reviewed source set.
 \FloatBarrier
-\section*{7. Institutional implications}
+\section*{8. Institutional implications}
 An assurance team, regulator, deployer, or incident investigator can use the practical-control chain as a proposed evidence request. The classification determines what the institution may say about the bounded decision.
 \begin{table}[!htbp]
 \centering
-\caption*{\textcolor{TAENavy}{\textbf{Table 8.}} Institutional interpretation of the case-level result.}
+\caption*{\textcolor{TAENavy}{\textbf{Table 9.}} Institutional interpretation of the case-level result.}
 \footnotesize
 \arrayrulecolor{TAENavy}
 \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.33\textwidth}>{\raggedright\arraybackslash}X@{}}
@@ -501,7 +545,7 @@ Before relying on a human-control claim, the reviewer should ask for:
 \end{enumerate}
 This proposed request converts a general assurance statement into inspectable propositions. It supplies no legal-compliance, safety, fairness, or accountability-outcome finding by itself.
 \FloatBarrier
-\section*{8. Conclusion}
+\section*{9. Conclusion}
 An institution substantiates practical human control by showing that the designated person received usable information, had comprehension capacity and intervention authority, could act in time, exercised judgment, and propagated a change into execution. A named reviewer establishes assigned responsibility alone. The additional evidence matters when human-control language justifies deployment, assigns responsibility, or reassures people exposed to a consequential system.
 
 The frozen method converted that broad institutional claim into six testable propositions. Across three purposively selected historical packets, no case passed the complete event-control rule. Oko remained unresolved after six classifications were narrowed to partially supported. Both Patriot cases retained supported formal authority and failed the wider event-control rule. These results demonstrate the documentary distinction; they estimate no population frequency.
@@ -511,8 +555,8 @@ The correction history shows why research provenance belongs inside the method. 
 The result is a method demonstration. Independent assessors, varied case families, contemporary system traces, and prospective decision studies are needed before the method can support reliability, validity, or institutional-effect claims.
 \FloatBarrier
 \section*{Version relationship and integrity status}
-The v0.14.0 preprint was archived on Zenodo under the version DOI \href{https://doi.org/10.5281/zenodo.21926005}{10.5281/zenodo.21926005}. Version 0.15.0 added venue metadata and submission disclosures. This v0.16.0 working paper rebuilds the explanation and formalizes the event-control decision rule. It preserves the released packet states and search counts, while deriving the previously unstated case-level results: Oko is unresolved, both Patriot cases fail, and no selected case passes. The repository's version history remains the authority for changes to data, claims, code, figures, and audit results.
-The v0.14.0 integrity audit mapped 32 material claims to evidence, applied 33 controlled mutations, and detected all 33 corrupted conditions. The v0.16.0 audit extends those controls to the formal rule, its derived case results, the proposed timing measure, and manuscript terminology. These tests ask whether declared repository controls respond to seeded or detectable inconsistencies. They do not establish the truth of every historical claim, independent assessor agreement, population validity, or transfer to present AI systems.
+The v0.14.0 preprint was archived on Zenodo under the version DOI \href{https://doi.org/10.5281/zenodo.21926005}{10.5281/zenodo.21926005}. Version 0.15.0 added venue metadata and submission disclosures. Version 0.16.0 rebuilt the explanation, formalized the event-control decision rule, and derived the previously unstated case-level results: Oko is unresolved, both Patriot cases fail, and no selected case passes. This v0.17.0 preprint adds the bounded policy crosswalk and prospective validation design. It preserves the released packet states, case results, and search counts. The repository's version history remains the authority for changes to data, claims, code, figures, and audit results.
+The v0.14.0 integrity audit mapped 32 material claims to evidence, applied 33 controlled mutations, and detected all 33 corrupted conditions. The v0.16.0 audit extended those controls to the formal rule, its derived case results, the proposed timing measure, and manuscript terminology. The v0.17.0 extension maps five policy and prospective-design claims to eight official-source records and applies nine controlled mutations, including removal of the manuscript's sandbox-section locator. These tests ask whether declared repository controls respond to seeded or detectable inconsistencies. They do not establish the truth of every historical claim, independent assessor agreement, legal compliance, population validity, or transfer to present AI systems.
 \FloatBarrier
 \section*{Data and materials availability}
 The repository, versioned releases, packets, assessments, figure data, audit outputs, search files, manuscript tables, and release manifests are available at \href{https://github.com/mj3b/trust-autonomy-evidence}{github.com/mj3b/trust-autonomy-evidence}. The v0.6.0 evidence archive has the version DOI \href{https://doi.org/10.5281/zenodo.21865007}{10.5281/zenodo.21865007}. The repository's all-versions DOI is \href{https://doi.org/10.5281/zenodo.21841127}{10.5281/zenodo.21841127}. The v0.14.0 preprint, including the proposition ledger, corrected source identities, 32-claim audit, 33 mutation controls, LaTeX source, and review PDF, has the version DOI \href{https://doi.org/10.5281/zenodo.21926005}{10.5281/zenodo.21926005}.
@@ -531,7 +575,7 @@ Generative AI tools assisted with literature discovery, metadata organization, p
 The author declares no conflicts of interest.
 \FloatBarrier
 \section*{References}
-\begin{itemize}[leftmargin=*]
+\begin{TAEReferences}
 \item Abdalilah Alhalangy. (2026). \href{https://doi.org/10.3390/info17070694}{Operationalizing Accountable AI Through Traceable Governance Architecture for Institutional Decision Support}. \emph{Information}, 17(7), 694.
 \item Marco Almada. (2019). \href{https://doi.org/10.1145/3322640.3326699}{Human Intervention in Automated Decision-Making: Toward the Construction of Contestable Systems}. \emph{Proceedings of the Seventeenth International Conference on Artificial Intelligence and Law}, 2-11.
 \item Saar Alon-Barkat and Madalina Busuioc. (2023). \href{https://doi.org/10.1093/jopart/muac007}{Human-AI Interactions in Public Sector Decision Making: Automation Bias and Selective Adherence to Algorithmic Advice}. \emph{Journal of Public Administration Research and Theory}, 33(1), 153-169.
@@ -545,13 +589,15 @@ The author declares no conflicts of interest.
 \item Shipi Dhanorkar, Samir Passi, and Mihaela Vorvoreanu. (2026). \href{https://doi.org/10.1145/3805689.3812402}{Human Oversight of Agentic Systems in Practice: Examining the Oversight Work, Challenges, and Heuristics of Developers Using Software Agents}. \emph{Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency}.
 \item Nir Douer and Joachim Meyer. (2020). \href{https://doi.org/10.1109/TASE.2020.2965466}{The Responsibility Quantification Model of Human Interaction With Automation}. \emph{IEEE Transactions on Automation Science and Engineering}, 17(2), 1044-1060.
 \item Mica R. Endsley. (2017). \href{https://doi.org/10.1177/0018720816681350}{From Here to Autonomy: Lessons Learned from Human-Automation Research}. \emph{Human Factors}, 59(1), 5-27.
+\item European Parliament and Council of the European Union. (2024). \href{https://eur-lex.europa.eu/eli/reg/2024/1689/oj}{Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence}, Articles 14 and 57. \emph{Official Journal of the European Union}.
 \item Carson Ezell, Xavier Roberts-Gaal, and Alan Chan. (2025). \href{https://doi.org/10.1609/aies.v8i1.36596}{Incident Analysis for AI Agents}. \emph{Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society}, 8(1), 865-878.
 \item Ben Green. (2022). \href{https://doi.org/10.1016/j.clsr.2022.105681}{The Flaws of Policies Requiring Human Oversight of Government Algorithms}. \emph{Computer Law \& Security Review}, 45, 105681.
 \item Pim Haselager, Hanna Schraffenberger, Serge Thill, Simon Fischer, Pablo Lanillos, Sebastiaan van de Groes, and Miranda van Hooff. (2023). \href{https://doi.org/10.1017/S0963180122000718}{Reflection Machines: Supporting Effective Human Oversight Over Medical Decision Support Systems}. \emph{Cambridge Quarterly of Healthcare Ethics}, 32(4), 552-567.
+\item International Organization for Standardization and International Electrotechnical Commission. (2023). \href{https://www.iso.org/standard/42001}{ISO/IEC 42001:2023, Information technology, Artificial intelligence, Management system}.
 \item Noam Kolt. (2025). \href{https://arxiv.org/abs/2501.07913}{Governing AI Agents}.
-\item Paul LaPosta. (2026). \href{https://doi.org/10.1609/aaaiss.v8i1.42543}{Conflict as Telemetry for Illegible AI: Governing LLM Agent Workflows}. \emph{AAAI Spring Symposia}.
 \item Khoa Lam, Benjamin Lange, Borhane Blili-Hamelin, Jovana Davidovic, Shea Brown, and Ali Hasan. (2024). \href{https://doi.org/10.1145/3630106.3658957}{A Framework for Assurance Audits of Algorithmic Systems}. \emph{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency}, 1078-1092.
 \item Markus Langer, Kevin Baum, and Nadine Schlicker. (2024). \href{https://doi.org/10.1007/s11023-024-09701-0}{Effective Human Oversight of AI-Based Systems: A Signal Detection Perspective on the Detection of Inaccurate and Unfair Outputs}. \emph{Minds and Machines}, 35(1).
+\item Paul LaPosta. (2026). \href{https://doi.org/10.1609/aaaiss.v8i1.42543}{Conflict as Telemetry for Illegible AI: Governing LLM Agent Workflows}. \emph{AAAI Spring Symposia}.
 \item Johann Laux. (2024). \href{https://doi.org/10.1007/s00146-023-01777-z}{Institutionalised Distrust and Human Oversight of Artificial Intelligence: Towards a Democratic Design of AI Governance Under the European Union AI Act}. \emph{AI \& Society}, 39(6), 2853-2866.
 \item Lidaw Fabrice Ledjaki, Yuan-Chen Chang, Mohamed Loutis, and Esma Aimeur. (2026). \href{https://doi.org/10.1145/3774905.3795469}{Prompt Scene Investigation: Uncovering the Evidence in LLMs}. \emph{Companion Proceedings of the ACM Web Conference 2026}, 284-290.
 \item John D. Lee and Katrina A. See. (2004). \href{https://doi.org/10.1518/hfes.46.1.50_30392}{Trust in Automation: Designing for Appropriate Reliance}. \emph{Human Factors}, 46(1), 50-80.
@@ -563,6 +609,7 @@ The author declares no conflicts of interest.
 \item Sean McGregor. (2021). \href{https://doi.org/10.1609/aaai.v35i17.17817}{Preventing Repeated Real World AI Failures by Cataloging Incidents: The AI Incident Database}. \emph{Proceedings of the AAAI Conference on Artificial Intelligence}, 35(17), 15458-15463.
 \item Rui Meng, Bhavana Dalvi Mishra, Jiefeng Chen, Chun-Liang Li, Palash Goyal, Mihir Parmar, Yiwen Song, Yale Song, Rajarishi Sinha, Parthasarathy Ranganathan, Burak Gokturk, Jinsung Yoon, and Tomas Pfister. (2026). \href{https://doi.org/10.48550/arXiv.2605.26340}{ScientistOne: Towards Human-Level Autonomous Research via Chain-of-Evidence}.
 \item Mahyar Tourchi Moghaddam. (2026). \href{https://doi.org/10.48550/arXiv.2604.04103}{Compliance-by-Construction Argument Graphs: Using Generative AI to Produce Evidence-Linked Formal Arguments for Certification-Grade Accountability}.
+\item National Institute of Standards and Technology. (2023). \href{https://airc.nist.gov/airmf-resources/airmf/5-sec-core/}{Artificial Intelligence Risk Management Framework Core}, GOVERN 2.1, MAP 3.4, and MAP 3.5.
 \item M. Niazi, Hossein Hassani, and Madison Lee. (2026). \href{https://doi.org/10.3390/automation7030096}{Rights-Based AI in Cyber-Physical Systems: A Governance Framework for Socio-Technical Resilience and Trust}. \emph{Automation}, 7(3), 96.
 \item Kevin Paeth, Daniel Atherton, Nikiforos Pittaras, Heather Frase, and Sean McGregor. (2025). \href{https://doi.org/10.1609/aaai.v39i28.35163}{Lessons for Editors of AI Incidents from the AI Incident Database}. \emph{Proceedings of the AAAI Conference on Artificial Intelligence}, 39(28), 28946-28953.
 \item Colin Paterson, Richard David Hawkins, Chiara Picardi, Yan Jia, Radu Calinescu, and Ibrahim Habli. (2025). \href{https://doi.org/10.1016/j.ress.2025.111311}{Safety Assurance of Machine Learning for Autonomous Systems}. \emph{Reliability Engineering \& System Safety}, 264(Part A), 111311.
@@ -574,11 +621,11 @@ The author declares no conflicts of interest.
 \item Lucas Elbert Suryana, Sina Nordhoff, Simeon C. Calvert, Arkady Zgonnikov, and Bart van Arem. (2024). \href{https://doi.org/10.48550/arXiv.2402.08080}{User Perception of Partially Automated Driving Systems: A Meaningful Human Control Perspective on the Perception among Tesla Users}.
 \item Dov Te'eni, Inbal Yahav, and David Schwartz. (2025). \href{https://doi.org/10.1007/s00146-025-02401-y}{What It Takes to Control AI by Design: Human Learning}. \emph{AI \& Society}.
 \item Andreas Tsamados, Luciano Floridi, and Mariarosaria Taddeo. (2025). \href{https://doi.org/10.1007/s43681-024-00489-4}{Human Control of AI Systems: From Supervision to Teaming}. \emph{AI and Ethics}, 5(2), 1535-1548.
+\item Jasper van der Waa, Jurriaan van Diggelen, Luciano Cavalcante Siebert, Mark Neerincx, and Catholijn Jonker. (2020). \href{https://doi.org/10.1007/978-3-030-49183-3_16}{Allocation of Moral Decision-Making in Human-Agent Teams: A Pattern Approach}. \emph{Engineering Psychology and Cognitive Ergonomics. Cognition and Design}, 203-220.
 \item Ilse Verdiesen, Filippo Santoni de Sio, and Virginia Dignum. (2021). \href{https://doi.org/10.1007/s11023-020-09532-9}{Accountability and Control Over Autonomous Weapon Systems: A Framework for Comprehensive Human Oversight}. \emph{Minds and Machines}, 31, 137-163.
 \item Kevin Wei and Lennart Heim. (2026). \href{https://doi.org/10.1609/aaai.v40i44.41139}{Designing Incident Reporting Systems for Harms from General-Purpose AI}. \emph{Proceedings of the AAAI Conference on Artificial Intelligence}, 40(44), 38016-38029.
 \item Yuyuan Zhang, Limin Jing, and Chengyang Sun. (2018). \href{https://doi.org/10.1007/s11668-018-0534-1}{Systems-Based Analysis of China-Tianjin Port Fire and Explosion: A Comparison of HFACS, AcciMap, and STAMP}. \emph{Journal of Failure Analysis and Prevention}, 18(6), 1386-1400.
 \item Liming Zhu, Qinghua Lu, Ming Ding, Sung Une Lee, and Chen Wang. (2026). \href{https://doi.org/10.1007/s43681-026-01147-7}{Designing Meaningful Human Oversight in AI}. \emph{AI and Ethics}, 6, 286.
-\item Jasper van der Waa, Jurriaan van Diggelen, Luciano Cavalcante Siebert, Mark Neerincx, and Catholijn Jonker. (2020). \href{https://doi.org/10.1007/978-3-030-49183-3_16}{Allocation of Moral Decision-Making in Human-Agent Teams: A Pattern Approach}. \emph{Engineering Psychology and Cognitive Ergonomics. Cognition and Design}, 203-220.
-\end{itemize}
+\end{TAEReferences}
 \FloatBarrier
 \end{document}
