@@ -1,18 +1,18 @@
 # Research Status
 
-**Version:** 0.16.2
+**Version:** 0.17.0
 
-**Latest GitHub release:** 0.16.1
+**Latest GitHub release:** 0.16.2; v0.17.0 release candidate sealed locally
 
 **Latest DOI-archived preprint:** 0.14.0
 
-**Working checkpoint:** v0.16.2 paper-workspace organization for the v0.16.0 manuscript
+**Working checkpoint:** v0.17.0 regulatory crosswalk and arXiv-ready preprint package
 
-**Next target:** Author review of the compiled v0.16.0 paper, followed by one contemporary trace-based case and the remaining literature-retrieval gates
+**Next target:** Update the existing arXiv submission, then test the method prospectively on one contemporary trace-based case or regulatory-sandbox exercise
 
-**Status:** Manuscript explanation, formal rule, deterministic results, figures, compilation, placement review, integrity controls, citation alignment, formula registration, current-paper navigation, external-review routing, and historical package separation complete; author review, contemporary transfer, search coverage, and independent assessment remain open
+**Status:** v0.17.0 preprint, official-source policy crosswalk, prospective Article 57 sandbox design, human review attestation, executable integrity controls, source archive, compilation, and reference-format verification complete; contemporary transfer, search coverage, legal interpretation, ISO conformity assessment, and independent assessment remain open
 
-**Status date:** 19 August 2026
+**Status date:** 6 September 2026
 
 ## Current maturity
 
@@ -41,6 +41,8 @@
 | Outcome validity | No comparative outcome evidence | Unresolved | Comparative evidence links use of the architecture to declared outcomes |
 
 ## Research phase
+
+Version 0.17.0 adds a bounded official-source crosswalk without changing the three historical case results. It maps selected EU AI Act Articles 14 and 57, NIST AI RMF functions, the public ISO/IEC 42001 overview, and selected United States oversight rules to the six-stage practical-control chain. The crosswalk distinguishes organization-level requirements from evidence that a person exercised practical control in one event. It proposes an Article 57 regulatory sandbox as a future validation setting and makes no legal-compliance, ISO-conformity, or policy-effectiveness claim. Five new claims are linked to eight official sources, reviewed by the author, and tested with nine controlled mutations. All nine corruptions are detected within the declared scope. The exact XeLaTeX source compiles in Overleaf to a 30-page preprint whose references are alphabetical, bullet-free, and formatted with a 0.5-inch hanging indent.
 
 The v0.16.2 maintenance checkpoint keeps the v0.16.0 manuscript package in `paper/preprints/`, moves three retired v0.15.0 delivery files into `paper/archive/v0.15.0/`, and adds a current-paper entry point plus an external-review guide. It also restores the truncated v0.14.0 source archive and two displaced v0.14.0 PDFs from the immutable release tag; the restored digests match the released source manifest and compile receipt. The public v0.14.0 preprint remains in its released arXiv-format directory and under its Zenodo DOI. The deterministic v0.16.0 result remains one unresolved case, two failing cases, and zero passing cases. These results apply only to the three purposively selected packets. Independent reliability, population validity, contemporary-system transfer, institutional effectiveness, legal sufficiency, safety, source truth, universal originality, and harm prevention remain unresolved.
 

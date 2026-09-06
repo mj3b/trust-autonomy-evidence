@@ -1,19 +1,19 @@
 # Paper Workspace
 
-This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. Version 0.16.0 rebuilds the explanation, formalizes the event-control decision rule, and derives one unresolved and two failing case-level results without changing the released case states. The v0.14.0 proposition gate remains controlling for source use: five sources have one bounded manuscript permission each, two remain background-only, and six are quarantined. Released case packets, assessments, and manifests remain the controlling research record.
+This directory develops a methods and comparative-case paper from the repository's frozen public-case evidence. Version 0.17.0 preserves the v0.16.0 event-control rule and its one unresolved and two failing case-level results. It adds a bounded policy crosswalk and a prospective EU AI Act Article 57 sandbox study design. The v0.14.0 proposition gate remains controlling for literature-source use: five sources have one bounded manuscript permission each, two remain background-only, and six are quarantined. Released case packets, assessments, and manifests remain the controlling historical research record.
 
 ## Start here
 
 | Need | Open |
 |---|---|
-| Read the latest paper | [`preprints/preprints-compiled-v0.16.0.pdf`](preprints/preprints-compiled-v0.16.0.pdf) |
+| Read the latest paper | [`preprints/preprints-compiled-v0.17.0.pdf`](preprints/preprints-compiled-v0.17.0.pdf) |
 | Send the paper to a reviewer or arXiv endorser | [`REVIEW.md`](REVIEW.md) |
 | Review the current paper package | [`preprints/README.md`](preprints/README.md) |
 | Edit the current LaTeX source | [`preprints/main.tex`](preprints/main.tex) |
 | Read the GitHub edition | [`manuscript-reader.md`](manuscript-reader.md) |
 | Inspect earlier paper packages | [`archive/README.md`](archive/README.md) |
 
-The current paper version is v0.16.0. Repository maintenance releases may have a later number because they also version documentation, validators, and archive organization.
+The current paper version is v0.17.0.
 
 **PR #11 merge commit:** [`a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec`](https://github.com/mj3b/trust-autonomy-evidence/commit/a2a8db7a5a63fe09a2cdb48cb648c013c0d110ec)
 
@@ -70,7 +70,9 @@ The current paper version is v0.16.0. Repository maintenance releases may have a
 | [`data/direct-query-resolution-v0.14.0.json`](data/direct-query-resolution-v0.14.0.json) | Closes RS-DQ-004 for screening while preserving zero source-content permission. |
 | [`preprint-readiness-v0.14.0.md`](preprint-readiness-v0.14.0.md) | Separates completed evidence gates from author and arXiv submission decisions. |
 | [`arxiv/`](arxiv/) | Preserves the historical v0.14.0 arXiv-format source, 25-page PDF, archive, metadata, and placement receipt. |
-| [`preprints/`](preprints/) | Contains the v0.16.0 single-column LaTeX source, deterministic archive, 30-page compiled review PDF, metadata, and compile receipt. |
+| [`preprints/`](preprints/) | Contains the v0.17.0 single-column LaTeX source, deterministic archive, 30-page compiled review PDF, metadata, and compile receipt. |
+| [`policy-and-standards-crosswalk-v0.17.0.md`](policy-and-standards-crosswalk-v0.17.0.md) | Maps eight selected official-source records to the six-stage method and records the legal and evidentiary limits. |
+| [`drafts/v0.17.0/`](drafts/v0.17.0/) | Preserves the regulatory-section review copy and its manuscript-use boundary. |
 | [`archive/`](archive/) | Indexes earlier paper packages and stores the retired v0.15.0 venue package. |
 | [`../evidence/human-review-attestation-v0.11.0.json`](../evidence/human-review-attestation-v0.11.0.json) | Records author review of the five direct-query states and six added claims, with AI-assistance limits. |
 | [`../evidence/human-review-attestation-v0.12.0.json`](../evidence/human-review-attestation-v0.12.0.json) | Records the 102-record workflow boundary and states that 71 source reviews remain pending. |
@@ -80,6 +82,7 @@ The current paper version is v0.16.0. Repository maintenance releases may have a
 | [`../audits/v0.13.0/audit-report.md`](../audits/v0.13.0/audit-report.md) | Reports the 28-claim audit, 26 detected controls, four exceptions, and the proposition-review boundary. |
 | [`../audits/v0.14.0/audit-report.md`](../audits/v0.14.0/audit-report.md) | Reports the 32-claim audit, 33 detected controls, five bounded source permissions, and four open exceptions. |
 | [`../audits/v0.16.0/audit-report.md`](../audits/v0.16.0/audit-report.md) | Reports the 40-claim audit, 39 detected controls, and the remaining independent-validity and coverage exceptions. |
+| [`../audits/v0.17.0-policy-crosswalk/audit-report.md`](../audits/v0.17.0-policy-crosswalk/audit-report.md) | Reports the five-claim policy-extension audit, nine detected controls, and the remaining legal-completeness and field-validation exceptions. |
 | [`data/authenticated-interface-searches-v0.10.0.csv`](data/authenticated-interface-searches-v0.10.0.csv) | Tracks the five authenticated and disciplinary-interface searches. |
 | [`citation-chain-log-v0.6.0.md`](citation-chain-log-v0.6.0.md) | Records the index-based citation sample and its limits. |
 | [`literature-support-audit-v0.6.0.md`](literature-support-audit-v0.6.0.md) | Preserves the 16-proposition audit for the earlier introduction and related-work draft. |

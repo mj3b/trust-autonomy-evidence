@@ -1,0 +1,195 @@
+{
+  "version": "0.17.0",
+  "review_id": "TAE-POLICY-SOURCE-REVIEW-V0.17.0",
+  "status": "AUTHOR_APPROVED_BOUNDED_MANUSCRIPT_USE",
+  "decision_owner": "Mark Julius Banasihan",
+  "preparation_date": "2026-09-05",
+  "review_method": "Direct review of the named official pages on 5 September 2026. The ledger records the displayed source version and locator. External page content is not vendored, so later URL or text changes require re-review.",
+  "source_count": 8,
+  "scope": "Targeted review of official public sources selected to test the institutional relevance of the practical-human-control method. This is not a complete legal survey or a compliance determination.",
+  "records": [
+    {
+      "source_id": "POL-EU-AIA-14",
+      "jurisdiction": "European Union",
+      "instrument": "Regulation (EU) 2024/1689, Article 14",
+      "issuer": "European Parliament and Council of the European Union",
+      "official_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "locator": "Article 14(1)-(5), Human oversight",
+      "accessed_on": "2026-09-05",
+      "source_version": "Canonical Official Journal ELI page; EUR-Lex displayed a current consolidated version dated 27 July 2026 at review time.",
+      "observed_proposition": "For high-risk AI systems, Article 14 addresses effective oversight, understanding of capacities and limitations, awareness of automation bias, interpretation of output, authority to disregard or reverse output, and the ability to intervene or stop the system.",
+      "permitted_use": "Support a bounded correspondence between Article 14 oversight capabilities and selected stages of the practical-control chain while preserving separate event-level questions for information delivery, opportunity, exercised judgment, and propagation.",
+      "fitness": {
+        "directness": "pass",
+        "contemporaneity": "pass",
+        "independence": "pass",
+        "completeness": "pass_for_cited_provision",
+        "publication_authority": "pass"
+      },
+      "limits": "The record supports a description of Article 14. It supplies no legal interpretation, compliance finding, or evidence that the repository method satisfies the Regulation.",
+      "human_review": "recorded",
+      "human_review_basis": "evidence/human-review-attestation-v0.17.0.json"
+    },
+    {
+      "source_id": "POL-EU-AIA-57",
+      "jurisdiction": "European Union",
+      "instrument": "Regulation (EU) 2024/1689, Article 57",
+      "issuer": "European Parliament and Council of the European Union",
+      "official_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "locator": "Article 57(1)-(6), AI regulatory sandboxes",
+      "accessed_on": "2026-09-05",
+      "source_version": "Canonical Official Journal ELI page; EUR-Lex displayed a current consolidated version dated 27 July 2026 at review time.",
+      "observed_proposition": "Article 57 provides for controlled environments in which AI systems can be developed, tested, and validated under regulatory supervision, including attention to risks, mitigation measures, and their effectiveness.",
+      "permitted_use": "Support the choice of a regulatory sandbox as a prospective setting for testing the practical-control method.",
+      "fitness": {
+        "directness": "pass",
+        "contemporaneity": "pass",
+        "independence": "pass",
+        "completeness": "pass_for_cited_provision",
+        "publication_authority": "pass"
+      },
+      "limits": "The source establishes the sandbox framework. The proposed validation design remains an author inference and has not been accepted by a sandbox authority.",
+      "human_review": "recorded",
+      "human_review_basis": "evidence/human-review-attestation-v0.17.0.json"
+    },
+    {
+      "source_id": "POL-NIST-AI-RMF-CORE",
+      "jurisdiction": "United States",
+      "instrument": "NIST AI Risk Management Framework Core",
+      "issuer": "National Institute of Standards and Technology",
+      "official_url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "locator": "GOVERN 2.1; MAP 3.4; MAP 3.5",
+      "accessed_on": "2026-09-05",
+      "source_version": "AI RMF 1.0 Core as displayed by the NIST AI Resource Center; NIST reported that revision was in progress.",
+      "observed_proposition": "The cited outcomes address documented roles and communication lines, defined and assessed operator proficiency, and defined and assessed human-oversight processes.",
+      "permitted_use": "Describe how the practical-control method could convert organization-level oversight expectations into event-level evidence requests.",
+      "fitness": {
+        "directness": "pass",
+        "contemporaneity": "pass",
+        "independence": "pass",
+        "completeness": "pass_for_cited_outcomes",
+        "publication_authority": "pass"
+      },
+      "limits": "The AI RMF is voluntary and is being revised. The reviewed outcomes do not validate this repository's method.",
+      "human_review": "recorded",
+      "human_review_basis": "evidence/human-review-attestation-v0.17.0.json"
+    },
+    {
+      "source_id": "POL-ISO-IEC-42001",
+      "jurisdiction": "International",
+      "instrument": "ISO/IEC 42001:2023",
+      "issuer": "International Organization for Standardization and International Electrotechnical Commission",
+      "official_url": "https://www.iso.org/standard/42001",
+      "locator": "Official public standard overview",
+      "accessed_on": "2026-09-05",
+      "source_version": "ISO/IEC 42001:2023, edition 1, published December 2023; official public overview only.",
+      "observed_proposition": "The public overview describes requirements for an AI management system and identifies governance, risk management, traceability, transparency, reliability, and continual improvement as organizational concerns.",
+      "permitted_use": "Describe the proposed event-level method as a possible evidence layer within an organization-level management system.",
+      "fitness": {
+        "directness": "pass",
+        "contemporaneity": "pass",
+        "independence": "pass",
+        "completeness": "limited_to_public_overview",
+        "publication_authority": "pass"
+      },
+      "limits": "The full standard was not reviewed under a licensed copy. No clause-level interpretation, conformity, certification, or legal-sufficiency claim is permitted.",
+      "human_review": "recorded",
+      "human_review_basis": "evidence/human-review-attestation-v0.17.0.json"
+    },
+    {
+      "source_id": "POL-NYC-LL144",
+      "jurisdiction": "New York City",
+      "instrument": "Local Law 144 of 2021 and implementing rules",
+      "issuer": "New York City Department of Consumer and Worker Protection",
+      "official_url": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+      "locator": "Automated Employment Decision Tools overview",
+      "accessed_on": "2026-09-05",
+      "source_version": "New York City Department of Consumer and Worker Protection overview displaying enforcement from 5 July 2023.",
+      "observed_proposition": "The official overview conditions covered use of an automated employment decision tool on a recent bias audit, public availability of audit information, and notices to candidates or employees.",
+      "permitted_use": "Show that audit and notice duties address evidence and disclosure while leaving the event-level practical-control question available for separate testing.",
+      "fitness": {
+        "directness": "pass",
+        "contemporaneity": "pass",
+        "independence": "pass",
+        "completeness": "pass_for_official_overview",
+        "publication_authority": "pass"
+      },
+      "limits": "The review covers the official overview and supplies no employment-law advice or determination about a particular tool or employer.",
+      "human_review": "recorded",
+      "human_review_basis": "evidence/human-review-attestation-v0.17.0.json"
+    },
+    {
+      "source_id": "POL-CA-ADMT",
+      "jurisdiction": "California",
+      "instrument": "California Consumer Privacy Act regulations concerning automated decisionmaking technology",
+      "issuer": "California Privacy Protection Agency",
+      "official_url": "https://cppa.ca.gov/regulations/ccpa_updates.html",
+      "supporting_url": "https://cppa.ca.gov/announcements/2025/20250923.html",
+      "locator": "Final rulemaking overview; 23 September 2025 adoption announcement",
+      "accessed_on": "2026-09-05",
+      "source_version": "Final rulemaking overview for regulations approved 22 September 2025, paired with the official adoption announcement for the ADMT compliance date.",
+      "observed_proposition": "The final rulemaking overview identifies access and opt-out rights for covered uses of automated decisionmaking technology. The adoption announcement states that businesses using ADMT for significant decisions must begin compliance with the ADMT requirements on 1 January 2027.",
+      "permitted_use": "Map access and opt-out rights to information access and intervention authority as a future applied-policy question.",
+      "fitness": {
+        "directness": "pass",
+        "contemporaneity": "pass",
+        "independence": "pass",
+        "completeness": "pass_for_official_announcement",
+        "publication_authority": "pass"
+      },
+      "limits": "The effective compliance date remains prospective at the review date. The record supplies no case-level practical-control finding.",
+      "human_review": "recorded",
+      "human_review_basis": "evidence/human-review-attestation-v0.17.0.json"
+    },
+    {
+      "source_id": "POL-CO-ADMT",
+      "jurisdiction": "Colorado",
+      "instrument": "Colorado automated decisionmaking technology law and rulemaking",
+      "issuer": "Colorado Department of Law",
+      "official_url": "https://coag.gov/ai/",
+      "locator": "Artificial Intelligence and automated decisionmaking technology overview",
+      "accessed_on": "2026-09-05",
+      "source_version": "Colorado Department of Law page describing Senate Bill 26-189 and proposed rules filed 11 August 2026.",
+      "observed_proposition": "The official page states that the 2024 framework was repealed and reenacted in 2026, that the new law takes effect on 1 January 2027, and that implementing rules remained under development at the review date.",
+      "permitted_use": "Identify Colorado as a future validation setting whose detailed crosswalk must wait for final rules.",
+      "fitness": {
+        "directness": "pass",
+        "contemporaneity": "pass",
+        "independence": "pass",
+        "completeness": "limited_during_rulemaking",
+        "publication_authority": "pass"
+      },
+      "limits": "The framework was still changing at the review date. Detailed legal mapping and compliance conclusions are blocked until the controlling text is fixed and reviewed.",
+      "human_review": "recorded",
+      "human_review_basis": "evidence/human-review-attestation-v0.17.0.json"
+    },
+    {
+      "source_id": "POL-IL-HB3773",
+      "jurisdiction": "Illinois, including covered activity in Chicago",
+      "instrument": "Public Act 103-0804, enacted from HB 3773",
+      "issuer": "Illinois General Assembly",
+      "official_url": "https://www.ilga.gov/documents/legislation/103/HB/PDF/10300HB3773lv.pdf",
+      "locator": "Enrolled text amending the Illinois Human Rights Act; effective 1 January 2026",
+      "accessed_on": "2026-09-05",
+      "source_version": "HB 3773 enrolled text enacted as Public Act 103-0804, effective 1 January 2026.",
+      "observed_proposition": "The enacted text addresses discriminatory employment uses of artificial intelligence and employer notice when artificial intelligence is used for covered employment purposes.",
+      "permitted_use": "Identify a state-level employment governance application. Chicago remains a location within the Illinois scope unless a separate municipal instrument is selected and reviewed.",
+      "fitness": {
+        "directness": "pass",
+        "contemporaneity": "pass",
+        "independence": "pass",
+        "completeness": "pass_for_enacted_text",
+        "publication_authority": "pass"
+      },
+      "limits": "No separate Chicago human-oversight requirement was evaluated. The source supplies no legal advice or event-level control finding.",
+      "human_review": "recorded",
+      "human_review_basis": "evidence/human-review-attestation-v0.17.0.json"
+    }
+  ],
+  "global_limits": [
+    "The accountable author approved bounded manuscript use on 5 September 2026; the review basis is preserved in evidence/human-review-attestation-v0.17.0.json.",
+    "The review covers named provisions and official summaries, not every obligation, exception, amendment, guidance document, or judicial interpretation.",
+    "The crosswalk supplies no claim of legal compliance, ISO conformity, certification, regulatory acceptance, or field validity.",
+    "Kevin Baum's private message identifies a possible application and is not used as evidence for a research claim."
+  ]
+}

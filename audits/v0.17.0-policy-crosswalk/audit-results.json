@@ -1,0 +1,175 @@
+{
+  "version": "0.17.0",
+  "audit_id": "TAE-COE-AUDIT-V0.17.0",
+  "audit_date": "2026-09-05",
+  "scope": "Five bounded claims governing the targeted policy and standards crosswalk, the proposed EU AI Act regulatory-sandbox validation protocol, and their v0.17.0 manuscript use. The v0.16.0 historical findings remain unchanged.",
+  "status": "PASS_WITH_EXCEPTIONS",
+  "checks": [
+    {
+      "check_id": "COE-I1",
+      "name": "score_verification",
+      "status": "pass",
+      "tested": 1,
+      "passed": 1,
+      "failed": 0,
+      "indeterminate": 0,
+      "findings": []
+    },
+    {
+      "check_id": "COE-I2",
+      "name": "specification_violation",
+      "status": "pass",
+      "tested": 5,
+      "passed": 5,
+      "failed": 0,
+      "indeterminate": 0,
+      "findings": []
+    },
+    {
+      "check_id": "COE-I3",
+      "name": "reference_verification",
+      "status": "pass",
+      "tested": 5,
+      "passed": 5,
+      "failed": 0,
+      "indeterminate": 0,
+      "findings": []
+    },
+    {
+      "check_id": "COE-I4",
+      "name": "method_code_alignment",
+      "status": "pass",
+      "tested": 1,
+      "passed": 1,
+      "failed": 0,
+      "indeterminate": 0,
+      "findings": []
+    },
+    {
+      "check_id": "COE-I5",
+      "name": "evidence_fitness_and_dependency_closure",
+      "status": "pass",
+      "tested": 5,
+      "passed": 5,
+      "failed": 0,
+      "indeterminate": 0,
+      "findings": []
+    }
+  ],
+  "negative_controls": [
+    {
+      "control_id": "COE-NC-01",
+      "expected_check": "score_verification",
+      "detected": true,
+      "observed_check": "score_verification",
+      "message": "PAPER-C47/C47-COUNT: expected 7, observed 8"
+    },
+    {
+      "control_id": "COE-NC-02",
+      "expected_check": "reference_verification",
+      "detected": true,
+      "observed_check": "reference_verification",
+      "message": "PAPER-C48/C48-SOURCE: missing file"
+    },
+    {
+      "control_id": "COE-NC-03",
+      "expected_check": "reference_verification",
+      "detected": true,
+      "observed_check": "reference_verification",
+      "message": "PAPER-C49/C49-SOURCE: integrity failure"
+    },
+    {
+      "control_id": "COE-NC-04",
+      "expected_check": "evidence_fitness_and_dependency_closure",
+      "detected": true,
+      "observed_check": "evidence_fitness_and_dependency_closure",
+      "message": "PAPER-C50: evidence fitness is fail"
+    },
+    {
+      "control_id": "COE-NC-05",
+      "expected_check": "method_code_alignment",
+      "detected": true,
+      "observed_check": "method_code_alignment",
+      "message": "PAPER-C49: method or implementation marker does not resolve"
+    },
+    {
+      "control_id": "COE-NC-06",
+      "expected_check": "evidence_fitness_and_dependency_closure",
+      "detected": true,
+      "observed_check": "evidence_fitness_and_dependency_closure",
+      "message": "PAPER-C51: unresolved dependencies PAPER-C99"
+    },
+    {
+      "control_id": "COE-NC-07",
+      "expected_check": "specification_violation",
+      "detected": true,
+      "observed_check": "specification_violation",
+      "message": "PAPER-C48: guarantees lacks a scope justification"
+    },
+    {
+      "control_id": "COE-NC-08",
+      "expected_check": "reference_verification",
+      "detected": true,
+      "observed_check": "reference_verification",
+      "message": "PAPER-C51/C51-BOUNDARY: missing file"
+    },
+    {
+      "control_id": "COE-NC-09",
+      "expected_check": "reference_verification",
+      "detected": true,
+      "observed_check": "reference_verification",
+      "message": "PAPER-C49/C49-LATEX: missing file"
+    }
+  ],
+  "exceptions": [
+    "COE-EX-12",
+    "COE-EX-13"
+  ],
+  "claim_results": [
+    {
+      "claim_id": "PAPER-C47",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C48",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C49",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C50",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    },
+    {
+      "claim_id": "PAPER-C51",
+      "traceability": "pass",
+      "integrity": "pass",
+      "support": "pass",
+      "evidence_fitness": "pass",
+      "dependency_closure": "pass",
+      "conclusion_eligible": true
+    }
+  ]
+}

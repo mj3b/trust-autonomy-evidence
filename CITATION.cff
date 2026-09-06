@@ -1,21 +1,21 @@
 cff-version: 1.2.0
-message: "For the working paper, cite the preferred v0.16.0 manuscript below. The v0.14.0 DOI identifies an earlier archived preprint and must not be assigned to v0.16.0."
+message: "For the current preprint, cite the preferred v0.17.0 manuscript below. The v0.14.0 DOI identifies an earlier archived preprint and must not be assigned to v0.17.0."
 title: "Trust, Autonomy, and Evidence"
 type: software
-version: 0.16.2
-date-released: 2026-08-19
+version: 0.17.0
+date-released: 2026-09-06
 authors:
   - family-names: Banasihan
     given-names: Mark Julius
     orcid: "https://orcid.org/0009-0001-8121-2878"
 repository-code: "https://github.com/mj3b/trust-autonomy-evidence"
-url: "https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.16.2"
+url: "https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.17.0"
 license: Apache-2.0
 abstract: "A research repository defining evidence for justified reliance and practical human control, with synthetic validation, versioned public-case reconstruction, a formal literature search, a full methods manuscript, journal-style figures and tables, claim traceability, and executable integrity audits."
 identifiers:
   - type: url
-    value: "https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.16.0"
-    description: "Versioned GitHub release for the v0.16.0 working paper and research package"
+    value: "https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.17.0"
+    description: "Versioned GitHub release for the v0.17.0 preprint and research package"
   - type: doi
     value: "10.5281/zenodo.21926005"
     description: "Earlier v0.14.0 Zenodo preprint"
@@ -25,10 +25,10 @@ identifiers:
 preferred-citation:
   type: article
   title: "From Formal Authority to Practical Human Control: A traceable method for reconstructing human control in automated decisions"
-  version: 0.16.0
+  version: 0.17.0
   year: 2026
   authors:
     - family-names: Banasihan
       given-names: Mark Julius
       orcid: "https://orcid.org/0009-0001-8121-2878"
-  url: "https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.16.0"
+  url: "https://github.com/mj3b/trust-autonomy-evidence/releases/tag/v0.17.0"

@@ -1,0 +1,40 @@
+{
+  "version": "0.17.0",
+  "compiled_at_utc": "2026-09-06T17:51:00Z",
+  "compiler": {
+    "name": "XeLaTeX on Overleaf",
+    "producer": "xdvipdfmx (20260317)"
+  },
+  "source_archive": {
+    "path": "paper/preprints/preprints-source-v0.17.0.zip",
+    "bytes": 885411,
+    "sha256": "840a08784753cbc569e506bcd71bfc577fe43dddfef1dcedce934572213a4be9"
+  },
+  "compiled_pdf": {
+    "path": "paper/preprints/preprints-compiled-v0.17.0.pdf",
+    "bytes": 1178718,
+    "sha256": "d7609d47f4f92629c58d400e3222b29026a6a152de7da1ec79ad7239a1b4b4ee",
+    "pages": 30,
+    "page_size": "US Letter",
+    "pdf_version": "1.7"
+  },
+  "compile_result": {
+    "errors": 0,
+    "overfull_or_underfull_boxes": 0,
+    "overleaf_log_badge": 1,
+    "warning_boundary": "The visible Overleaf log badge records one non-blocking warning. The project compiled successfully with all source files and figures present."
+  },
+  "placement_audit": {
+    "references_start_page": 27,
+    "post_references_displays": [],
+    "reference_order": "alphabetical by first named author or institutional author",
+    "reference_format": "bullet-free entries with 0.5-inch hanging indentation"
+  },
+  "visual_review": {
+    "representative_pages": [1, 7, 11, 15, 20, 23, 24, 25, 27, 28, 30],
+    "technical_result": "PASS",
+    "author_review": "APPROVED",
+    "notes": "The rendered title page, abstract and keyword spacing, formulas, tables, ten figures, policy crosswalk, disclosures, and reference pages were inspected. References are alphabetical, bullet-free, and visibly use hanging indentation."
+  },
+  "claim_boundary": "Successful compilation and visual review establish source-output consistency and readable layout. They do not establish historical truth, independent agreement, legal compliance, ISO conformity, external validity, or publication acceptance."
+}

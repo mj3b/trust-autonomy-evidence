@@ -1,0 +1,15 @@
+{
+  "version": "0.17.0",
+  "suite_id": "TAE-COE-NEGATIVE-CONTROLS-V0.17.0",
+  "controls": [
+    {"control_id": "COE-NC-01", "description": "Change the expected official-source count.", "mutation_type": "numeric_mismatch", "target_claim": "PAPER-C47", "expected_check": "score_verification", "parameters": {"evidence_id": "C47-COUNT", "replacement": 7}},
+    {"control_id": "COE-NC-02", "description": "Replace the Article 14 source ledger with a missing file.", "mutation_type": "missing_reference", "target_claim": "PAPER-C48", "expected_check": "reference_verification", "parameters": {"evidence_id": "C48-SOURCE"}},
+    {"control_id": "COE-NC-03", "description": "Replace the Article 57 source digest with a stale digest.", "mutation_type": "stale_hash", "target_claim": "PAPER-C49", "expected_check": "reference_verification", "parameters": {"evidence_id": "C49-SOURCE"}},
+    {"control_id": "COE-NC-04", "description": "Fail the completeness decision for the NIST and ISO comparison.", "mutation_type": "fitness_failure", "target_claim": "PAPER-C50", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dimension": "completeness"}},
+    {"control_id": "COE-NC-05", "description": "Remove the validator marker paired with the sandbox method.", "mutation_type": "method_marker_removed", "target_claim": "PAPER-C49", "expected_check": "method_code_alignment", "parameters": {"evidence_id": "C49-IMPLEMENTATION"}},
+    {"control_id": "COE-NC-06", "description": "Replace the United States crosswalk dependency with an unresolved claim.", "mutation_type": "unresolved_dependency", "target_claim": "PAPER-C51", "expected_check": "evidence_fitness_and_dependency_closure", "parameters": {"dependency": "PAPER-C99"}},
+    {"control_id": "COE-NC-07", "description": "Add an unjustified guarantees term to the Article 14 claim.", "mutation_type": "unsupported_scope_term", "target_claim": "PAPER-C48", "expected_check": "specification_violation", "parameters": {"term": "guarantees"}},
+    {"control_id": "COE-NC-08", "description": "Remove the policy boundary reference from the United States comparison.", "mutation_type": "missing_reference", "target_claim": "PAPER-C51", "expected_check": "reference_verification", "parameters": {"evidence_id": "C51-BOUNDARY"}},
+    {"control_id": "COE-NC-09", "description": "Remove the integrated sandbox-section locator from the manuscript evidence path.", "mutation_type": "missing_reference", "target_claim": "PAPER-C49", "expected_check": "reference_verification", "parameters": {"evidence_id": "C49-LATEX"}}
+  ]
+}

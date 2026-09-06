@@ -2,6 +2,16 @@
 
 All material changes to concepts, claims, protocols, and evidence requirements are recorded here.
 
+## 0.17.0, 6 September 2026
+
+- Adds a bounded official-source crosswalk covering EU AI Act Articles 14 and 57, selected NIST AI RMF functions, the public ISO/IEC 42001 overview, and selected United States oversight rules.
+- Separates organization-level policy requirements from event-level evidence that practical human control occurred.
+- Adds a prospective Article 57 regulatory-sandbox design as a future validation setting, with no claim of legal compliance, ISO conformity, policy effectiveness, or validated transfer.
+- Adds five policy-crosswalk claims, eight official-source review records, a human-review attestation, and nine controlled mutations; all nine corruptions are detected within the declared scope.
+- Updates the manuscript, reviewer guide, metadata, citation record, source archive, and compiled PDF to v0.17.0 while preserving all three released case results.
+- Labels the manuscript as a preprint, keeps references alphabetical, removes list bullets, and applies a 0.5-inch hanging indent to every reference entry.
+- Seals the exact 30-page Overleaf XeLaTeX output and the deterministic 12-member arXiv source archive with SHA-256 digests.
+
 ## 0.16.2, 19 August 2026
 
 - Adds a six-link start section to `paper/README.md`, with the v0.16.0 PDF listed first.

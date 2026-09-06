@@ -1,10 +1,10 @@
 # Review the Current Paper
 
-The current reviewer copy is **v0.16.0**:
+The current reviewer copy is **v0.17.0**:
 
-**[Open the 30-page review PDF](preprints/preprints-compiled-v0.16.0.pdf)**
+**[Open the 30-page review PDF](preprints/preprints-compiled-v0.17.0.pdf)**
 
-This PDF is the version to send to an external reviewer or prospective arXiv endorser. It contains the rebuilt explanation, six-stage event-control rule, three case results, current tables and figures, limitations, and author disclosures.
+This PDF is the version to send to an external reviewer. It contains the six-stage event-control rule, three historical case results, current tables and figures, a bounded regulatory crosswalk, a proposed Article 57 sandbox validation design, limitations, and author disclosures.
 
 ## For an arXiv endorser
 
@@ -21,12 +21,12 @@ An endorsement request should include the arXiv endorsement code, this PDF, the 
 
 | Location | Meaning | Use for current review? |
 |---|---|---|
-| [`preprints/preprints-compiled-v0.16.0.pdf`](preprints/preprints-compiled-v0.16.0.pdf) | Current paper | Yes |
+| [`preprints/preprints-compiled-v0.17.0.pdf`](preprints/preprints-compiled-v0.17.0.pdf) | Current paper | Yes |
 | [`preprints/`](preprints/) | Current source, metadata, archive, and compile records | Yes, when source or provenance is relevant |
 | [`arxiv/`](arxiv/) | Historical v0.14.0 arXiv-format package | No |
 | [`archive/`](archive/) | Retired delivery packages | No |
 
-The paper version and repository version answer different questions. The paper remains v0.16.0 because its claims and results have not changed. Later repository releases organize files, repair metadata, and strengthen validation around that paper.
+Version 0.17.0 changes the paper's policy relevance and prospective validation sections. It preserves the v0.16.0 historical case states and case-level results.
 
 ## Evidence for a deeper review
 
@@ -38,6 +38,8 @@ The PDF is sufficient for a first reading. These records support a closer review
 | Inspect the formal decision rule and case-level outputs | [`../assessments/event-control-results-v0.16.0.json`](../assessments/event-control-results-v0.16.0.json) |
 | Trace material claims to their evidence | [`../evidence/claim-evidence-map.json`](../evidence/claim-evidence-map.json) |
 | Inspect the integrity-audit result and exceptions | [`../audits/v0.16.0/audit-report.md`](../audits/v0.16.0/audit-report.md) |
+| Inspect the policy-extension evidence map and audit | [`../evidence/policy-claim-evidence-map-v0.17.0.json`](../evidence/policy-claim-evidence-map-v0.17.0.json) and [`../audits/v0.17.0-policy-crosswalk/audit-report.md`](../audits/v0.17.0-policy-crosswalk/audit-report.md) |
+| Inspect the prospective sandbox protocol | [`../protocols/regulatory-sandbox-validation-protocol-v0.17.0.md`](../protocols/regulatory-sandbox-validation-protocol-v0.17.0.md) |
 | Review the declared contribution and limits | [`paper-charter.md`](paper-charter.md) |
 | Inspect the rebuild decisions | [`revision-plan-v0.16.0.md`](revision-plan-v0.16.0.md) |
 

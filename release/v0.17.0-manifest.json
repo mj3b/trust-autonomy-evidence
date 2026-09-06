@@ -1,0 +1,183 @@
+{
+  "version": "0.17.0",
+  "created": "2026-09-06",
+  "scope": "bounded policy crosswalk, prospective regulatory-sandbox design, integrity controls, and arXiv-ready preprint package",
+  "hash_algorithm": "SHA-256",
+  "artifact_count": 33,
+  "artifacts": [
+    {
+      "path": "release/v0.17.0-release-notes.md",
+      "bytes": 2439,
+      "sha256": "f369d6785e2d5bf45b00dad00fff62239e52d560803f6108d911cabcb3974a97"
+    },
+    {
+      "path": "README.md",
+      "bytes": 36009,
+      "sha256": "37e96579cea1fcbfff5c7f98c1b4bd55d22f2d64417f8974f3f1ab4e15e1b729"
+    },
+    {
+      "path": "RESEARCH_STATUS.md",
+      "bytes": 10922,
+      "sha256": "62a1561fa87226772f25364dc2dd6e060b5af5958b91d1bfc899d47fcd4a3128"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 24451,
+      "sha256": "068e6971e541c0ea6004e77f57d338040df2208538d50ee17eb0f5f3a8661391"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 1710,
+      "sha256": "c81d607a3a073474f1bcfdca116be6079aa58582c4548c1d4ce851137690bd2f"
+    },
+    {
+      "path": "paper/README.md",
+      "bytes": 16015,
+      "sha256": "f262fdcecde3d8b312838153faa005429d291b64d3afd0288e6cfd939cf24657"
+    },
+    {
+      "path": "paper/REVIEW.md",
+      "bytes": 4443,
+      "sha256": "e6d6a671e58ff670c014242f174ea2554437ec1a3ee2a575983ac9eb3ad7b355"
+    },
+    {
+      "path": "paper/policy-and-standards-crosswalk-v0.17.0.md",
+      "bytes": 7725,
+      "sha256": "b26a0ec27c6c129034bee3f3dca0bcc5ce076a95cf6d26c99d1d4eb4a32d6cf2"
+    },
+    {
+      "path": "paper/data/policy-and-standards-source-review-v0.17.0.json",
+      "bytes": 13029,
+      "sha256": "4b9d269e1a1abfe416ffb7cae2f87f77e5a9e738e09ec8c7711e41a583428e64"
+    },
+    {
+      "path": "paper/drafts/v0.17.0/README.md",
+      "bytes": 1169,
+      "sha256": "7cb4f1fce5124608d85f63527b74eaa8801fd5cc2abfff2641489abf88f9cbc3"
+    },
+    {
+      "path": "paper/drafts/v0.17.0/regulatory-section.tex",
+      "bytes": 5349,
+      "sha256": "4825aa60ea64a0e2e668add9b982f1fc5036b305c3d0d762202ff4161da48e62"
+    },
+    {
+      "path": "paper/drafts/v0.17.0/regulatory-section-review.pdf",
+      "bytes": 8348,
+      "sha256": "7f70ecf825ae5c3620ee9322e26fe1e61a1788dbb9b099124575908d4036dc2a"
+    },
+    {
+      "path": "paper/preprints/README.md",
+      "bytes": 3349,
+      "sha256": "943623388916aaae4284f4376d8782ef1b7387c216acb6734703b0fb4ae93bcf"
+    },
+    {
+      "path": "paper/preprints/00README.XXX",
+      "bytes": 415,
+      "sha256": "25a806744ed877f0e163873bdd0554caa33f5a12cdfaf66c663fcff76ca926d8"
+    },
+    {
+      "path": "paper/preprints/main.tex",
+      "bytes": 100156,
+      "sha256": "e1b2df10d7df76da28f1db1e36c1bb43192f1e8ef879574290b1d50e77717da2"
+    },
+    {
+      "path": "paper/preprints/metadata.yaml",
+      "bytes": 1309,
+      "sha256": "7c9ada2709accb55ee17c6b8fd94150f5274f9dc37b9d8e8fe004b04b01cf199"
+    },
+    {
+      "path": "paper/preprints/source-manifest-v0.17.0.json",
+      "bytes": 3403,
+      "sha256": "9999ea1d017867aa687745f8c36169f1e5a4255a749bf91e5469608f70c5daec"
+    },
+    {
+      "path": "paper/preprints/compile-receipt-v0.17.0.json",
+      "bytes": 1833,
+      "sha256": "9f4f7a4f45da065848d861e62ff2a54dd231327c41cf07c02f2c2d61ed0e07a6"
+    },
+    {
+      "path": "paper/preprints/preprints-source-v0.17.0.zip",
+      "bytes": 885411,
+      "sha256": "840a08784753cbc569e506bcd71bfc577fe43dddfef1dcedce934572213a4be9"
+    },
+    {
+      "path": "paper/preprints/preprints-compiled-v0.17.0.pdf",
+      "bytes": 1178718,
+      "sha256": "d7609d47f4f92629c58d400e3222b29026a6a152de7da1ec79ad7239a1b4b4ee"
+    },
+    {
+      "path": "evidence/policy-claim-evidence-map-v0.17.0.json",
+      "bytes": 21109,
+      "sha256": "8f18a4d6512f7d51e466e911ebdb9e7c1e4cf97619bdbcd032dec4a6473ccb73"
+    },
+    {
+      "path": "evidence/human-review-attestation-v0.17.0.json",
+      "bytes": 1690,
+      "sha256": "4efa9c418080eec541a492fafc1e3f9d5fbf72df7e4867b387157505bccdc42d"
+    },
+    {
+      "path": "fixtures/policy-crosswalk-mutations-v0.17.0.json",
+      "bytes": 2579,
+      "sha256": "aa2e3ca6339068b7c2a8755f95029d0a66827dcf19202990d0b06fb74632c58d"
+    },
+    {
+      "path": "audits/v0.17.0-policy-crosswalk/audit-plan.md",
+      "bytes": 1159,
+      "sha256": "e0a154959f717435841f8fe00f76b1b9dc8316b3157eeea5ceef98d7063584be"
+    },
+    {
+      "path": "audits/v0.17.0-policy-crosswalk/audit-report.md",
+      "bytes": 2770,
+      "sha256": "51de311753a03c90f46522fa2983961098301bf96f5f76566a121779b2351e41"
+    },
+    {
+      "path": "audits/v0.17.0-policy-crosswalk/audit-results.json",
+      "bytes": 4845,
+      "sha256": "9e453a10bfe8f7352d4af47709a1c4a591d6696e136129931d1a5020e16a0744"
+    },
+    {
+      "path": "audits/v0.17.0-policy-crosswalk/exceptions.md",
+      "bytes": 547,
+      "sha256": "b7f91ac3f4a77d7177442e2bbb33c1366bdc99d34a07a0d3ecdad33ed7d1b076"
+    },
+    {
+      "path": "scripts/build_policy_review_pdf_v0_17_0.py",
+      "bytes": 14881,
+      "sha256": "832890fb88b84422b17b943e838abe1fd072604ed119d26c723d6a5e5d15ba9e"
+    },
+    {
+      "path": "scripts/build_v0_17_policy_claim_map.py",
+      "bytes": 13097,
+      "sha256": "929e2d06cc5ac1c2008d6df53aaf664e6d89cec4c84738277016b5ceffad8369"
+    },
+    {
+      "path": "scripts/build_v0_17_preprint_package.py",
+      "bytes": 2862,
+      "sha256": "912ff6623d8263b3d50d4af77c4757a9e4827a5286f852c79df623af59794e78"
+    },
+    {
+      "path": "scripts/run_policy_integrity_audit_v0_17_0.py",
+      "bytes": 8232,
+      "sha256": "69bef1b0ef2a6d569d9f996ff1dc2b5a1283e8ce6bedbe393099462dce96df77"
+    },
+    {
+      "path": "scripts/validate_policy_crosswalk_v0_17_0.py",
+      "bytes": 8747,
+      "sha256": "b13c3afdf78f44146b5d7f77dc523326c3080d85491822cde7ee08267c397f13"
+    },
+    {
+      "path": "scripts/build_v0_17_release_manifest.py",
+      "bytes": 3192,
+      "sha256": "7df78621eba5b82fba895eac8e8ffa05aaf922865e21ce7c9860adfa023e029a"
+    }
+  ],
+  "result": {
+    "policy_claims": 5,
+    "official_sources": 8,
+    "controlled_mutations": 9,
+    "detected_mutations": 9,
+    "compiled_pages": 30,
+    "case_results_changed": false
+  },
+  "claim_boundary": "The manifest establishes artifact identity and declared control results. It does not establish legal compliance, ISO conformity, source truth, independent reliability, external validity, or publication acceptance."
+}
